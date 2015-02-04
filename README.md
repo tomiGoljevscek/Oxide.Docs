@@ -14,7 +14,8 @@ You're going to need:
 ### Setup
 
  1. Fork this repository on GitHub.
- 2. Clone *your forked repository* (not our original one) with `git clone https://github.com/YOURUSERNAME/Docs.git`
+ 2. Clone *your forked repository* (not our original one)
+    `git clone https://github.com/YOURUSERNAME/Docs.git`
  3. Open up the Ruby command console.
  3. Type `cd Docs` in the Ruby console.
  4. Install all dependencies: `bundle install`
