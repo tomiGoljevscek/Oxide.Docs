@@ -348,9 +348,9 @@ We need an example here
 
 ## Creating a timer
 
-Sometimes you come across a situation which only a timer can fix. Timers are great for delaying code, allowing it to be run later.
+Sometimes you come across a situation which only a timer can fix. Timers are great for delaying code, allowing it to be run later. The following sections will show you the various timer types, and how to use them properly.
 
-### timer.Once
+## timer.Once
 
 > Basic example of timer.Once
 
@@ -398,7 +398,7 @@ We need an example here
 
 Executes the specified function once after the specified delay.
 
-### timer.Repeat
+## timer.Repeat
 
 > Basic example of timer.Repeat
 
@@ -422,7 +422,7 @@ We need an example here
 
 Executes the specified function every "delay" seconds. If "repeats" is specified, the function will only be called "repeats" times.
 
-### timer.NextFrame
+## timer.NextFrame
 
 > Basic example of timer.NextFrame
 
@@ -444,7 +444,7 @@ We need an example here
 
 Executes the specified function at the next frame.
 
-### timer.Chain
+## timer.Chain
 
 > Basic example of timer.Chain
 
@@ -515,6 +515,8 @@ We need an example here
 It's always a good habit to stop all timers when your plugin is unloaded; do this by destroying the instance of the timer.
 
 Timers can be used anywhere in your plugin, not just in the Unload function. Just make sure to always destroy them, as you wouldn't want a bunch of timers piling up and slowing down someone's server!
+
+Placeholder text
 
 # Web Requests
 
@@ -673,10 +675,10 @@ Placeholder text
 
 # Compiling Source
 
-While you don't need to compile your own Oxide builds, you can! We recommend using one of the [official release builds](http://forum.rustoxide.com/download/) though.
+While we recommend using one of the [official release builds](http://forum.rustoxide.com/download/), you can compile your own builds if you'd like.
 
- 1. Clone the git repository locally.
+ 1. Clone the git repository locally using `git clone https://github.com/OxideMod/Oxide.git`
  2. Open the solution in Visual Studio (2013 is recommended, but it should work on earlier versions).
- 3. Compile the project. If you get errors, it probably means you're missing .NET framework.
+ 3. Build the project using the solution. If you get errors, it probably means you're missing .NET framework.
 
 <aside class="warning">Keep in mind that only official builds are supported by the Oxide team and community.</aside>
