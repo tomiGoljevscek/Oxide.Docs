@@ -629,47 +629,239 @@ Placeholder text
 
 # Rust Functions
 
-``` lua
-rust.BroadcastChat(name, message, userid)
-```
-
-``` lua
-rust.SendChatMessage(player, name, message, userid)
-```
-
-``` lua
-rust.QuoteSafe(message)
-```
-
-``` lua
-rust.UserIDFromConnection(connection)
-```
-
-``` lua
-rust.UserIDFromDeployedItem(deployeditem)
-```
-
-``` lua
-rust.UserIDFromPlayer(player)
-```
-
-``` lua
-rust.UserIDsFromBuildingPrivlidge(buildingpriv)
-```
-
-``` lua
-rust.RunServerCommand(command, args)
-```
-
-``` lua
-rust.ForcePlayerPosition(player, x, y, z)
-```
-
-``` lua
-rust.PrivateBindingFlag()
-```
-
 There are a few functions that have been added to wrap Rust functions, creating aliases of sorts to make your life easier during initial coding as well as during upgrades.
+
+Placeholder text
+
+## BroadcastChat
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+## SendChatMessage
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+## QuoteSafe
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+## UserIDFromConnection
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+Placeholder text
+
+## UserIDFromDeployedItem
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+Placeholder text
+
+## UserIDFromPlayer
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+Placeholder text
+
+## UserIDsFromBuildingPrivlidge
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+Placeholder text
+
+## RunServerCommand
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+Placeholder text
+
+## ForcePlayerPosition
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
+
+Placeholder text
+
+Placeholder text
+
+## PrivateBindingFlag
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+Placeholder text
 
 Placeholder text
 
@@ -678,7 +870,7 @@ Placeholder text
 While we recommend using one of the [official release builds](http://forum.rustoxide.com/download/), you can compile your own builds if you'd like.
 
  1. Clone the git repository locally using `git clone https://github.com/OxideMod/Oxide.git`
- 2. Open the solution in Visual Studio (2013 is recommended, but it should work on earlier versions).
+ 2. Open the solution in Visual Studio (2013 is recommended, but it should work with other versions).
  3. Build the project using the solution. If you get errors, it probably means you're missing .NET framework.
 
 <aside class="warning">Keep in mind that only official builds are supported by the Oxide team and community.</aside>
