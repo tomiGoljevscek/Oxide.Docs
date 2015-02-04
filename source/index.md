@@ -46,12 +46,18 @@ The current official extensions are listed below:
  * Oxide.Ext.Rust - _Provides support for the Rust Experimental server_
  * Oxide.Ext.Unity - _Provides support for Unity games_
 
-As an example to what kind of extensions may be used in the future, here is a non-exhaustive list of possibilities:
+Third-party, unofficial extensions available:
+
+ * [Oxide.Ext.RustWeb](http://forum.rustoxide.com/resources/768/) - _A lightweight web server for the Rust Experimental server_
+ * [dcodeIO.RustWeb.dll](http://forum.rustoxide.com/resources/768/) - _Provides generation of map images, and live map_
+
+Examples of what extensions may be available in the future:
 
  * Oxide.Ext.IRC - _Allows plugins to access an IRC server_
  * Oxide.Ext.MySQL - _Allows plugins to access a MySQL database_
  * Oxide.Ext.SQLite - _Allows plugins to access a SQLite database_
  * Oxide.Ext.WebServer - _Allows the game server to also host a web server_
+ * Oxide.Ext.SevenDaysToDie - _Provides support for the 7 Days to Die server_
 
 # API Hooks
 
@@ -247,15 +253,7 @@ As an example to what kind of extensions may be used in the future, here is a no
 
 # Configurations
 
-# Data Tables
-
-# Timers
-
-## Creating a timer
-
-Sometimes you come across a situation which only a timer can fix. Timers are great for delaying code, allowing it to be run later.
-
-### timer.Once
+## Creating a configuration
 
 ``` csharp
 We need an example here
@@ -266,8 +264,131 @@ We need an example here
 ```
 
 ``` lua
-self.broadcastTimer = timer.Once(3, function()
+PLUGIN.Title = "Title of Plugin"
+PLUGIN.Version = V(0, 0, 1)
+PLUGIN.Description = "Plugin description"
+PLUGIN.Author = "Your Name"
+PLUGIN.HasConfig = true
+
+function PLUGIN:Init()
+    self:LoadDefaultConfig()
+end
+
+function PLUGIN:LoadDefaultConfig()
+    self.Config.ShowJoinMessage = true
+    self.Config.ShowLeaveMessage = true
+    self.Config.Messages = {}
+    self.Config.Messages.Join = "Welcome to this server"
+    self.Config.Messages.Leave = "Goodbye"
+    self:SaveConfig()
+end
+```
+
+``` python
+We need an example here
+```
+
+## Saving a configuration
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+# Data Tables
+
+## Creating a data table
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+## Saving a Data Table
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+We need an example here
+```
+
+``` python
+We need an example here
+```
+
+# Timers
+
+## Creating a timer
+
+Sometimes you come across a situation which only a timer can fix. Timers are great for delaying code, allowing it to be run later.
+
+### timer.Once
+
+> Basic example of timer.Once
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+self.BroadcastTimer = timer.Once(3, function()
     rust.BroadcastChat("SERVER", "Hello world!")
+end)
+```
+
+``` python
+We need an example here
+```
+
+> Example of timer.Once with a table
+
+``` csharp
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+self.TimersList = {}
+self.TimersList["Notice1"] = timer.Once(3, function()
+    rust.BroadcastChat("SERVER", "This is the Notice 1 every 3 seconds")
+end)
+self.TimersList["Notice2"] = timer.Once(10, function()
+    rust.BroadcastChat("SERVER", "This is the Notice 2 every 10 seconds")
 end)
 ```
 
@@ -279,6 +400,8 @@ Executes the specified function once after the specified delay.
 
 ### timer.Repeat
 
+> Basic example of timer.Repeat
+
 ``` csharp
 We need an example here
 ```
@@ -288,7 +411,7 @@ We need an example here
 ```
 
 ``` lua
-self.broadcastTimer = timer.Repeat(10, 0, function()
+self.BroadcastTimer = timer.Repeat(10, 0, function()
     rust.BroadcastChat("SERVER", "Hello world!")
 end)
 ```
@@ -300,6 +423,8 @@ We need an example here
 Executes the specified function every "delay" seconds. If "repeats" is specified, the function will only be called "repeats" times.
 
 ### timer.NextFrame
+
+> Basic example of timer.NextFrame
 
 ``` csharp
 We need an example here
@@ -321,6 +446,8 @@ Executes the specified function at the next frame.
 
 ### timer.Chain
 
+> Basic example of timer.Chain
+
 ``` csharp
 We need an example here
 ```
@@ -341,6 +468,8 @@ Executes a chain of delayed functions. Each number in the argument list delays t
 
 ## Destroying a timer
 
+> Basic example in Unload
+
 ``` c#
 We need an example here
 ```
@@ -351,8 +480,30 @@ We need an example here
 
 ``` lua
 function PLUGIN:Unload()
-    if broadcastTimer then
-        broadcastTimer:Destroy()
+    if self.BroadcastTimer then
+        self.BroadcastTimer:Destroy()
+    end
+end
+```
+
+``` python
+We need an example here
+```
+
+> Example in Unload with a table
+
+``` c#
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+function PLUGIN:Unload()
+    for key, value in pairs(self.TimersList) do
+        self.TimersList[key]:Destroy()
     end
 end
 ```
@@ -371,7 +522,31 @@ Sends a HTTP web request to the specified URL. Returns true if the web request w
 
 ## Get method
 
+This uses the raw connection to a web page as you would on your browser.
+
 Returns true/false
+
+``` c#
+We need an example here
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", function(code, response)
+    if response == nil or code ~= 200 then 
+        print("Couldn't get an answer from Google!") 
+        return 
+    end
+    print("Google answered: " .. tostring(response))
+end, self.Object)
+```
+
+``` python
+We need an example here
+```
 
 ## Post method
 
@@ -448,6 +623,8 @@ Another option is to use the name of the color. This is easier to understand but
 
 _Source: [http://docs.unity3d.com/Manual/StyledText.html](http://docs.unity3d.com/Manual/StyledText.html)_
 
+Placeholder text
+
 # Rust Functions
 
 ``` lua
@@ -492,8 +669,7 @@ rust.PrivateBindingFlag()
 
 There are a few functions that have been added to wrap Rust functions, creating aliases of sorts to make your life easier during initial coding as well as during upgrades.
 
-Placeholder text.
-
+Placeholder text
 
 # Compiling Source
 
