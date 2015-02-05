@@ -1,7 +1,7 @@
 rvm: 2.0.0
 
 script: bundle exec rake build
-after_success: bundle exec rake publish
+after_success: bundle exec rake publish ALLOW_DIRTY=true
 
 notifications:
   # Disable build status email notifications, until the issue with forks is fixed
