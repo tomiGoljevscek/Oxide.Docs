@@ -5,7 +5,11 @@ There are a few functions that have been added to wrap Rust functions, creating 
 ## BroadcastChat
 
 ``` csharp
-We need an example here
+void OnPlayerInit(BasePlayer player)
+{
+    var message = string.Format("{0} has joined the server", player.displayName);
+    rust.BroadcastChat({ message });
+}
 ```
 
 ``` javascript
@@ -13,14 +17,18 @@ We need an example here
 ```
 
 ``` lua
-We need an example here
+function PLUGIN:OnPlayerInit(player)
+    rust.BroadcastChat(player.diplayName .. " has joined the server")
+end
 ```
 
 ``` python
 We need an example here
 ```
 
-Placeholder text
+Sends a chat message to all players. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
+
+**Usage:** `rust.BroadcastChat(name, message, userid)`
 
 ## SendChatMessage
 
@@ -28,7 +36,7 @@ Placeholder text
 void OnPlayerSpawn(BasePlayer player)
 {
     var message = "You've respawned from a terrible death";
-    rust.SendChatMessage({ player, "SERVER", message });
+    rust.SendChatMessage({ player, message });
 }
 ```
 
@@ -46,9 +54,9 @@ end
 We need an example here
 ```
 
-**Usage:** `rust.SendChatMessage(player, name, message, userid)`
+Sends a chat message to specified player. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
 
-Sends a message to specified player. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
+**Usage:** `rust.SendChatMessage(player, name, message, userid)`
 
 ## QuoteSafe
 
@@ -69,9 +77,9 @@ rust.QuoteSafe("Use /kick \"playername\" to kick player")
 We need an example here
 ```
 
-**Usage:** rust.QuoteSafe(message)
-
 Used to safely save text or send a message that contains quotation marks.
+
+**Usage:** `rust.QuoteSafe(message)`
 
 ## UserIDFromConnection
 
@@ -91,32 +99,18 @@ We need an example here
 We need an example here
 ```
 
-**Usage:** rust.UserIdFromConnection(connection)
+Gets the user ID (64-bit SteamID) of a player from their connection.
 
-## UserIDFromDeployedItem
-
-``` csharp
-We need an example here
-```
-
-``` javascript
-We need an example here
-```
-
-``` lua
-We need an example here
-```
-
-``` python
-We need an example here
-```
-
-**Usage:** rust.UserIDFromDeployedItem(deployeditem)
+**Usage:** `rust.UserIdFromConnection(connection)`
 
 ## UserIDFromPlayer
 
 ``` csharp
-We need an example here
+[ChatCommand("steamid")]
+void cmdChatSteamid(BasePlayer player, string command, string[] args)
+{
+    SendReply(player, "SERVER", "Your SteamID is: " + player.userID.ToString());
+}
 ```
 
 ``` javascript
@@ -124,14 +118,57 @@ We need an example here
 ```
 
 ``` lua
-We need an example here
+function PLUGIN:Init()
+    command.AddChatCommand("steamid",  self.Object, "cmdSteamId")
+end
+
+function PLUGIN:cmdSteamId(player, command, arg)
+    rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " .. rust.UserIDFromPlayer(player))
+end
 ```
 
 ``` python
 We need an example here
 ```
 
-**Usage:** rust.UserIDFromPlayer(player)
+Gets the user ID (64-bit SteamID) of an online player.
+
+**Usage:** `rust.UserIDFromPlayer(player)`
+
+## UserIDFromDeployedItem
+
+``` csharp
+object CanClientLogin(Network.Connection connection)
+{
+    var playerid = connection.userid.ToString();
+    if (playerid == "76175462486136042")
+    {
+        return "Sorry, you are not allowed on this server!"
+    }
+    return null;
+}
+```
+
+``` javascript
+We need an example here
+```
+
+``` lua
+function PLUGIN:CanClientLogin(connection)
+    local playerid = rust.UserIDFromConnection(connection)
+    if playerid == "76175462486136042" then
+        return "Sorry, you are not allowed on this server!"
+    end
+end
+```
+
+``` python
+We need an example here
+```
+
+Gets the owner ID (64-bit SteamID) of a deployed item.
+
+**Usage:** `rust.UserIDFromDeployedItem(deployeditem)`
 
 ## UserIDsFromBuildingPrivlidge
 
@@ -151,7 +188,9 @@ We need an example here
 We need an example here
 ```
 
-Placeholder text
+Gets the user ID (64-bit SteamID) of players that have access to a Tool Cupboard.  Yes, the typo is intentional.
+
+**Usage:** `rust.UserIDsFromBuildingPrivlidge(buildingpriv)`
 
 ## RunServerCommand
 
@@ -164,19 +203,30 @@ We need an example here
 ```
 
 ``` lua
-We need an example here
+rust.RunServerCommand("server.hostname", "New Server Name")
 ```
 
 ``` python
 We need an example here
 ```
 
-Placeholder text
+Run a server command.
+
+**Usage:** `rust.RunServerCommand(command, args)`
 
 ## ForcePlayerPosition
 
 ``` csharp
-We need an example here
+void ForcePlayerPosition(BasePlayer player, string x, string y, string z)
+{
+    Vector3 destination = new UnityEngine.Vector3();
+    destination.x = x;
+    destination.y = y;
+    destination.z = z;
+    player.transform.position = destination;
+    player.ClientRPC(null, player, "ForcePositionTo", new object[] { destination });
+    player.TransformChanged();
+}
 ```
 
 ``` javascript
@@ -184,14 +234,16 @@ We need an example here
 ```
 
 ``` lua
-We need an example here
+rust.ForcePlayerPosition(player, x, y, z)
 ```
 
 ``` python
 We need an example here
 ```
 
-Placeholder text
+Teleports a player to specified coordinates/position.
+
+**Usage:** `rust.ForcePlayerPosition(player, x, y, z)`
 
 ## PrivateBindingFlag
 
@@ -211,4 +263,6 @@ We need an example here
 We need an example here
 ```
 
-Placeholder text
+Used to get/set private methods, fields, and properties.
+
+**Usage:** `rust.PrivateBindingFlag()`
