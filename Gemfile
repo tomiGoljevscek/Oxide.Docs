@@ -2,22 +2,22 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "rouge", "1.7.2"
+gem "rouge", "1.8.0"
 
 gem "middleman", "~>3.3.0"
 
-# For syntax highlighting
+# Syntax highlighting
 gem "middleman-syntax"
 
-# Plugin for middleman to generate Github pages
+# GitHub pages deployment
 gem 'middleman-gh-pages'
 
-# Live-reloading plugin
-gem "middleman-livereload", "~> 3.3.0"
+# Live-reloading
+gem "middleman-livereload", "~> 3.4.2"
 
 gem 'redcarpet', '~> 3.2.1'
 
-# For faster file watcher updates on Windows:
+# Faster file watcher updates on Windows
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Cross-templating language block fix for Ruby 1.8
