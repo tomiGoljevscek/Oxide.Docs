@@ -3,7 +3,13 @@ rvm: 2.0.0
 script: bundle exec rake publish ALLOW_DIRTY=true
 
 notifications:
-  # Disable build status email notifications, until the issue with forks is fixed
   email: false
-  # IRC notification
   irc: "chat.freenode.net#oxidemod"
+
+env:
+  global:
+    - GIT_COMMITTER_NAME=Travis
+    - GIT_COMMITTER_EMAIL=travis@travis-ci.org
+    - GIT_AUTHOR_NAME=Travis
+    - GIT_AUTHOR_EMAIL=travis@travis-ci.org
+    - secure: "dOdEOS/01TV2inXo5WjQs5iFmHTYtElPWncy8AZfVn1oV5K7dbQViuQrFDQQ0YryeYM01fcUDtLMQtEtzFqYIEvp/+LRsOSp2scgayJoi4kli1TM5EIbtY8DO3ly1+HsjklH2y0xW81WLsKWbQHMSAOSsq2jWOKqSwzkBkpDjGc="
