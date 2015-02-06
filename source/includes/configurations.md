@@ -3,18 +3,14 @@
 ## Creating a configuration
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-PLUGIN.Title = "Title of Plugin"
-PLUGIN.Version = V(0, 0, 1)
-PLUGIN.Description = "Plugin description"
-PLUGIN.Author = "Your Name"
 PLUGIN.HasConfig = true
 
 function PLUGIN:Init()
@@ -32,27 +28,27 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
-Placeholder text
+Since many users won't want to (or can't) edit the plugin directly to change the default configuration, it's best to offer to offer them a configuration file that can easily be edited without worrying about messing up the plugin.
 
 ## Saving a configuration
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Placeholder text

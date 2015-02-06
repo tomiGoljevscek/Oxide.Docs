@@ -9,11 +9,11 @@ Sometimes you come across a situation which only a timer can fix. Timers are gre
 > Basic example of timer.Once
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -23,17 +23,17 @@ end)
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 > Example of timer.Once with a table
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -47,7 +47,7 @@ end)
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Executes the specified function once after the specified delay.
@@ -57,11 +57,11 @@ Executes the specified function once after the specified delay.
 > Basic example of timer.Repeat
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -71,7 +71,7 @@ end)
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Executes the specified function every "delay" seconds. If "repeats" is specified, the function will only be called "repeats" times.
@@ -81,19 +81,19 @@ Executes the specified function every "delay" seconds. If "repeats" is specified
 > Basic example of timer.NextFrame
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Executes the specified function at the next frame.
@@ -103,19 +103,19 @@ Executes the specified function at the next frame.
 > Basic example of timer.Chain
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Executes a chain of delayed functions. Each number in the argument list delays the timer chain by n more seconds, and each function in the argument list gets called after the previous delays in the chain have passed.
@@ -124,12 +124,12 @@ Executes a chain of delayed functions. Each number in the argument list delays t
 
 > Basic example in Unload
 
-``` c#
-We need an example here
+``` csharp
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -141,17 +141,17 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 > Example in Unload with a table
 
-``` c#
-We need an example here
+``` csharp
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -163,7 +163,7 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 It's always a good habit to stop all timers when your plugin is unloaded; do this by destroying the instance of the timer.

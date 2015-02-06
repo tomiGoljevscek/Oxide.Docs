@@ -3,35 +3,35 @@
 ## Creating a data table
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 ## Saving a Data Table
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```

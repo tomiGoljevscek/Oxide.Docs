@@ -8,12 +8,12 @@ This uses the raw connection to a web page as you would on your browser.
 
 Returns true/false
 
-``` c#
-We need an example here
+``` csharp
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -27,9 +27,25 @@ end, self.Object)
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 ## Post method
 
 Returns true/false
+
+``` csharp
+We need a CSharp example here
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```

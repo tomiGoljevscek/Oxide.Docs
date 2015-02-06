@@ -13,7 +13,7 @@ void OnPlayerInit(BasePlayer player)
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -23,12 +23,12 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Sends a chat message to all players. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
 
-**Usage:** `rust.BroadcastChat(name, message, userid)`
+`rust.BroadcastChat(name, message, userid)`
 
 ## SendChatMessage
 
@@ -41,7 +41,7 @@ void OnPlayerSpawn(BasePlayer player)
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -51,12 +51,12 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Sends a chat message to specified player. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
 
-**Usage:** `rust.SendChatMessage(player, name, message, userid)`
+`rust.SendChatMessage(player, name, message, userid)`
 
 ## QuoteSafe
 
@@ -66,7 +66,7 @@ message.QuoteSafe();
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -74,34 +74,37 @@ rust.QuoteSafe("Use /kick \"playername\" to kick player")
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Used to safely save text or send a message that contains quotation marks.
 
-**Usage:** `rust.QuoteSafe(message)`
+`rust.QuoteSafe(message)`
 
 ## UserIDFromConnection
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+function PLUGIN:OnPlayerConnected(packet)
+    local connection = packet.connection
+    rust.BroadcastChat(connection.username .. " connected (" .. rust.UserIDFromConnection(connection) .. ")")
+end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
-Gets the user ID (64-bit SteamID) of a player from their connection.
+Gets the user ID (64-bit SteamID) of a player from their connection. This is mainly used for performing actions when a player connects to a server, or during the login process.
 
-**Usage:** `rust.UserIdFromConnection(connection)`
+`rust.UserIdFromConnection(connection)`
 
 ## UserIDFromPlayer
 
@@ -114,7 +117,7 @@ void cmdChatSteamid(BasePlayer player, string command, string[] args)
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -128,12 +131,12 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Gets the user ID (64-bit SteamID) of an online player.
 
-**Usage:** `rust.UserIDFromPlayer(player)`
+`rust.UserIDFromPlayer(player)`
 
 ## UserIDFromDeployedItem
 
@@ -150,7 +153,7 @@ object CanClientLogin(Network.Connection connection)
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -163,43 +166,43 @@ end
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Gets the owner ID (64-bit SteamID) of a deployed item.
 
-**Usage:** `rust.UserIDFromDeployedItem(deployeditem)`
+`rust.UserIDFromDeployedItem(deployeditem)`
 
 ## UserIDsFromBuildingPrivlidge
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
-Gets the user ID (64-bit SteamID) of players that have access to a Tool Cupboard.  Yes, the typo is intentional.
+Gets the user ID (64-bit SteamID) of players that have access to a Tool Cupboard. Yes, the typo in the function name is intentional.
 
-**Usage:** `rust.UserIDsFromBuildingPrivlidge(buildingpriv)`
+`rust.UserIDsFromBuildingPrivlidge(buildingpriv)`
 
 ## RunServerCommand
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -207,12 +210,12 @@ rust.RunServerCommand("server.hostname", "New Server Name")
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
-Run a server command.
+Runs a server command.
 
-**Usage:** `rust.RunServerCommand(command, args)`
+`rust.RunServerCommand(command, args)`
 
 ## ForcePlayerPosition
 
@@ -230,7 +233,7 @@ void ForcePlayerPosition(BasePlayer player, string x, string y, string z)
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
@@ -238,31 +241,31 @@ rust.ForcePlayerPosition(player, x, y, z)
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Teleports a player to specified coordinates/position.
 
-**Usage:** `rust.ForcePlayerPosition(player, x, y, z)`
+`rust.ForcePlayerPosition(player, x, y, z)`
 
 ## PrivateBindingFlag
 
 ``` csharp
-We need an example here
+We need a CSharp example here
 ```
 
 ``` javascript
-We need an example here
+We need a JavaScript example here
 ```
 
 ``` lua
-We need an example here
+We need a Lua example here
 ```
 
 ``` python
-We need an example here
+We need a Python example here
 ```
 
 Used to get/set private methods, fields, and properties.
 
-**Usage:** `rust.PrivateBindingFlag()`
+`rust.PrivateBindingFlag()`
