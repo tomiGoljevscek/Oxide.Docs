@@ -4,10 +4,6 @@ Sends a HTTP web request to the specified URL. Returns true if the web request w
 
 ## Get method
 
-This uses the raw connection to a web page as you would on your browser.
-
-Returns true/false
-
 ``` csharp
 We need a CSharp example here
 ```
@@ -30,9 +26,11 @@ end, self.Object)
 We need a Python example here
 ```
 
-## Post method
+This uses the raw connection to a web page as you would on your browser.
 
 Returns true/false
+
+## Post method
 
 ``` csharp
 We need a CSharp example here
@@ -49,3 +47,5 @@ We need a Lua example here
 ``` python
 We need a Python example here
 ```
+
+Returns true/false
