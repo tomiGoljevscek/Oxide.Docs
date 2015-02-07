@@ -11,6 +11,7 @@ includes:
   - introduction
   - getting_started
   - api_hooks
+  - commands
   - configurations
   - data_tables
   - timers
