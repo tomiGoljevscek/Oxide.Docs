@@ -9,6 +9,7 @@ language_tabs:
 
 includes:
   - introduction
+  - getting_started
   - api_hooks
   - configurations
   - data_tables
