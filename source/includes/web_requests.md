@@ -19,7 +19,7 @@ webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", function(cod
         return 
     end
     print("Google answered: " .. tostring(response))
-end, self.Object)
+end, self.Plugin)
 ```
 
 ``` python

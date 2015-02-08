@@ -104,7 +104,7 @@ We need a Python example here
 
 Gets the user ID (64-bit SteamID) of a player from their connection. This is mainly used for performing actions when a player connects to a server, or during the login process.
 
-`rust.UserIdFromConnection(connection)`
+`rust.UserIDFromConnection(connection)`
 
 ## UserIDFromPlayer
 
