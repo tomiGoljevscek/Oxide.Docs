@@ -13,7 +13,9 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+this.BroadcastTimer = timer.Once(3, function() {
+    rust.BroadcastChat("SERVER", "Hello world!");
+}, this.Plugin);
 ```
 
 ``` lua
@@ -23,7 +25,9 @@ end)
 ```
 
 ``` python
-We need a Python example here
+def my_callback_func():
+    rust.BroadcastChat("SERVER", "Hello world!")
+self.BroadcastTimer = timer.Once(3, Action(my_callback_func), self.Plugin)
 ```
 
 > Example of timer.Once with a table
@@ -61,7 +65,9 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+this.BroadcastTimer = timer.Repeat(10, 0, function() {
+    rust.BroadcastChat("SERVER", "Hello world!");
+}, this.Plugin);
 ```
 
 ``` lua
@@ -71,7 +77,9 @@ end)
 ```
 
 ``` python
-We need a Python example here
+def my_callback_func():
+    rust.BroadcastChat("SERVER", "Hello world!")
+self.BroadcastTimer = timer.Repeat(10, 0, Action(my_callback_func), self.Plugin)
 ```
 
 Executes the specified function every "delay" seconds. If "repeats" is specified, the function will only be called "repeats" times.
@@ -129,7 +137,11 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+Unload : function() {}
+    if (this.BroadcastTimer) {
+        this.BroadcastTimer.Destroy();
+    }
+}
 ```
 
 ``` lua
@@ -141,7 +153,9 @@ end
 ```
 
 ``` python
-We need a Python example here
+def Unload(self):
+    if self.BroadcastTimer:
+        self.BroadcastTimer.Destroy()
 ```
 
 > Example in Unload with a table

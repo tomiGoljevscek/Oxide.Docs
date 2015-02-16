@@ -5,7 +5,14 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+var PluginName = {
+    Title : "Title of Plugin",
+    Version : V(0, 1, 0),
+    Description : "Plugin description",
+    Author : "Nogrod",
+    Url : "http://forum.rustoxide.com/resources/681/",
+    ResourceId : 681
+}
 ```
 
 ``` lua
@@ -20,7 +27,14 @@ PLUGIN.ResourceId = 681
 ```
 
 ``` python
-We need a Python example here
+class PluginName:
+    def __init__(self):
+        self.Title = "Title of Plugin"
+        self.Version = V(0, 1, 0)
+        self.Description = "Plugin description"
+        self.Author = "Your Name"
+        self.Url = "http://forum.rustoxide.com/resources/681/"
+        self.ResourceId = 681
 ```
 
 Every plugin has to start somewhere, and this is it. The most important part of every plugin is the required Title, Version, Description, and Author variables. These are the bare minimum that every plugin needs, else it will not load and you'll have some unhappy users!

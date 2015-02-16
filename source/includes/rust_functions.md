@@ -13,7 +13,9 @@ void OnPlayerInit(BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerInit : function(player) {
+    rust.BroadcastChat(player.diplayName + " has joined the server");
+}
 ```
 
 ``` lua
@@ -23,7 +25,8 @@ end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerInit(self, player):
+    rust.BroadcastChat(player.diplayName + " has joined the server")
 ```
 
 Sends a chat message to all players. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
@@ -41,7 +44,9 @@ void OnPlayerSpawn(BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerSpawn : function(player) {
+    rust.SendChatMessage(player, "SERVER", "You've respawned from a terrible death");
+}
 ```
 
 ``` lua
@@ -51,7 +56,8 @@ end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerSpawn(self, player):
+    rust.SendChatMessage(player, "SERVER", "You've respawned from a terrible death")
 ```
 
 Sends a chat message to specified player. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
@@ -66,7 +72,7 @@ message.QuoteSafe();
 ```
 
 ``` javascript
-We need a JavaScript example here
+rust.QuoteSafe("Use /kick \"playername\" to kick player");
 ```
 
 ``` lua
@@ -74,7 +80,7 @@ rust.QuoteSafe("Use /kick \"playername\" to kick player")
 ```
 
 ``` python
-We need a Python example here
+rust.QuoteSafe("Use /kick \"playername\" to kick player")
 ```
 
 Used to safely save text or send a message that contains quotation marks.
@@ -88,7 +94,10 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerConnected : function(packet) {
+    var connection = packet.connection;
+    rust.BroadcastChat(connection.username + " connected (" + rust.UserIDFromConnection(connection) + ")");
+}
 ```
 
 ``` lua
@@ -99,7 +108,9 @@ end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerConnected(self, packet):
+    connection = packet.connection
+    rust.BroadcastChat(connection.username + " connected (" + rust.UserIDFromConnection(connection) + ")")
 ```
 
 Gets the user ID (64-bit SteamID) of a player from their connection. This is mainly used for performing actions when a player connects to a server, or during the login process.
@@ -117,7 +128,12 @@ void cmdChatSteamid(BasePlayer player, string command, string[] args)
 ```
 
 ``` javascript
-We need a JavaScript example here
+Init : function() {
+    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
+},
+cmdSteamId : function(player, command, arg) {
+    rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " + rust.UserIDFromPlayer(player));
+}
 ```
 
 ``` lua
@@ -131,7 +147,10 @@ end
 ```
 
 ``` python
-We need a Python example here
+def Init(self):
+    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+def cmdSteamId(self, player, command, arg):
+    rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " + rust.UserIDFromPlayer(player))
 ```
 
 Gets the user ID (64-bit SteamID) of an online player.

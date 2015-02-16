@@ -9,7 +9,13 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", function(code, response) {
+    if (response == null || code != 200) {
+        print("Couldn't get an answer from Google!");
+        return
+    }
+    print("Google answered: " + response);
+}.bind(this), this.Plugin);
 ```
 
 ``` lua
@@ -23,7 +29,13 @@ end, self.Plugin)
 ```
 
 ``` python
-We need a Python example here
+from System import Action, Int32, String
+def response_handler(code, response):
+    if response == None or code != 200:
+        print "Couldn't get an answer from Google!" 
+        return 
+    print "Google answered: " + response
+webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", Action[Int32,String](response_handler), self.Plugin);
 ```
 
 This uses the raw connection to a web page as you would on your browser.
