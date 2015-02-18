@@ -140,7 +140,6 @@ cmdSteamId : function(player, command, arg) {
 function PLUGIN:Init()
     command.AddChatCommand("steamid",  self.Object, "cmdSteamId")
 end
-
 function PLUGIN:cmdSteamId(player, command, arg)
     rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " .. rust.UserIDFromPlayer(player))
 end
@@ -156,41 +155,6 @@ def cmdSteamId(self, player, command, arg):
 Gets the user ID (64-bit SteamID) of an online player.
 
 `rust.UserIDFromPlayer(player)`
-
-## UserIDFromDeployedItem
-
-``` csharp
-object CanClientLogin(Network.Connection connection)
-{
-    var playerid = connection.userid.ToString();
-    if (playerid == "76175462486136042")
-    {
-        return "Sorry, you are not allowed on this server!"
-    }
-    return null;
-}
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` lua
-function PLUGIN:CanClientLogin(connection)
-    local playerid = rust.UserIDFromConnection(connection)
-    if playerid == "76175462486136042" then
-        return "Sorry, you are not allowed on this server!"
-    end
-end
-```
-
-``` python
-We need a Python example here
-```
-
-Gets the owner ID (64-bit SteamID) of a deployed item.
-
-`rust.UserIDFromDeployedItem(deployeditem)`
 
 ## UserIDsFromBuildingPrivlidge
 
