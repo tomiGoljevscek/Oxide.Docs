@@ -42,6 +42,16 @@
  * No return behavior
  * Called after the server startup has been completed and is awaiting connections
 
+### OnServerSave()
+ * Called from Assembly-CSharp/SaveRestore
+ * No return behavior
+ * Is called before the server saves and rotates the .sav files
+
+### OnServerQuit()
+ * Called from Assembly-CSharp/ConsoleGlobal
+ * No return behavior
+ * Is called before the server starts the shutdown sequence
+
 ### OnTick()
  * Called from Assembly-CSharp/ServerMgr.DoTick
  * No return behavior
@@ -133,9 +143,9 @@
 
 ### OnEntityAttacked(UnityEngine/Monobehavior entity, Assembly-CSharp/HitInfo hitinfo)
  * Called from multiple places, each entity's attack handler basically
- * Returning non-null value overrides default server behavior (useful for godmode etc)
+ * Returning non-null value overrides default server behavior (useful for godmode etc.)
  * Alternatively, modify the hitinfo object to change the damage
- * It should be ok to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
+ * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
  * hitinfo has all kinds of useful things in it, such as hitinfo.Weapon, hitinfo.damageAmount or hitinfo.damageType
  * Currently implemented for: BasePlayer, BaseAnimal
 
@@ -149,12 +159,12 @@
 ### OnEntityEnter(Assembly-CSharp/TriggerBase triggerbase, Assembly-CSharp/BaseEntity entity)
  * Called from Assembly-CSharp/TriggerBase
  * No return behavior
- * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc)
+ * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
 
 ### OnEntityLeave(Assembly-CSharp/TriggerBase triggerbase, Assembly-CSharp/BaseEntity entity)
  * Called from Assembly-CSharp/TriggerBase
  * No return behavior
- * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc)
+ * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
 
 ## Item hooks
 
@@ -180,6 +190,11 @@
  * Called right after an item was removed from a container
  * The entire stack has to be removed for this to be called, not just a little bit
 
+### OnConsumableUse(Assembly-CSharp/Item item)
+ * Called from Assembly-CSharp/Item
+ * No return behavior
+ * Is called right after a consumable item is used
+
 ### OnGather(Assembly-CSharp/ResourceDispenser dispenser, Assembly-CSharp/BaseEntity entity, Assembly-CSharp/Item item)
  * Assembly-CSharp/ResourceDispenser
  * No return behavior
@@ -202,4 +217,4 @@
 ### OnEntityBuilt(Assembly-CSharp/BasePlayer player, UnityEngine/GameObject gameobject)
  * Called from Assembly-CSharp/Item.Modules.Planner
  * No return behavior
- * Called when any structure is built (walls, ceilings, stairs, etc)
+ * Called when any structure is built (walls, ceilings, stairs, etc.)
