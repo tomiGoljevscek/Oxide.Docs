@@ -26,19 +26,18 @@ The current official extensions are listed below:
  * Oxide.Ext.CSharp - _Allows raw [CSharp plugins](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)) to be loaded_
  * Oxide.Ext.JavaScript - _Allows [JavaScript](http://en.wikipedia.org/wiki/JavaScript) plugins to be loaded_
  * Oxide.Ext.Lua - _Allows [Lua](http://www.lua.org/) plugins to be loaded_
+ * Oxide.Ext.MySql - _Allows plugins to access a [MySQL](http://www.mysql.com/) database_
  * Oxide.Ext.Python - _Allows [Python](http://en.wikipedia.org/wiki/Python_(programming_language)) plugins to be loaded_
  * Oxide.Ext.Rust - _Provides support for the [Rust](http://playrust.com/) Experimental server_
+ * Oxide.Ext.SevenDays - _Provides support for the [7 Days to Die](http://7daystodie.com/) server_
+ * Oxide.Ext.SQLite - _Allows plugins to access a [SQLite](http://www.sqlite.org/) database_
  * Oxide.Ext.Unity - _Provides support for [Unity](http://unity3d.com/) games_
 
 Third-party, unofficial extensions available:
 
- * [Oxide.Ext.RustWeb](http://forum.rustoxide.com/resources/768/) - _A lightweight web server for the Rust Experimental server_
- * [dcodeIO.RustWeb.dll](http://forum.rustoxide.com/resources/768/) - _Provides generation of map images, and live map_
+ * [Oxide.Ext.RustIO.dll](http://forum.rustoxide.com/resources/768/) - _Provides generation of map images, lightweight web server, and live map_
 
 Examples of what extensions may be available in the future:
 
  * Oxide.Ext.IRC - _Allows plugins to access an IRC server_
- * Oxide.Ext.MySQL - _Allows plugins to access a [MySQL](http://www.mysql.com/) database_
- * Oxide.Ext.SQLite - _Allows plugins to access a [SQLite](http://www.sqlite.org/) database_
  * Oxide.Ext.Updater - _Allows for automatic plugin checking and updating_
- * Oxide.Ext.SevenDaysToDie - _Provides support for the [7 Days to Die](http://7daystodie.com/) server_
