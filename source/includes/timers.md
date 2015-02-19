@@ -106,28 +106,6 @@ We need a Python example here
 
 Executes the specified function at the next frame.
 
-## timer.Chain
-
-> Basic example of timer.Chain
-
-``` csharp
-We need a CSharp example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` python
-We need a Python example here
-```
-
-Executes a chain of delayed functions. Each number in the argument list delays the timer chain by n more seconds, and each function in the argument list gets called after the previous delays in the chain have passed.
-
 ## Destroying a timer
 
 > Basic example in Unload
