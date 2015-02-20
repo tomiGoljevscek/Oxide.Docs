@@ -21,7 +21,7 @@ this.BroadcastTimer = timer.Once(3, function() {
 ``` lua
 self.BroadcastTimer = timer.Once(3, function()
     rust.BroadcastChat("SERVER", "Hello world!")
-end)
+end, self.Plugin)
 ```
 
 ``` python
@@ -47,7 +47,7 @@ self.TimersList["Notice1"] = timer.Once(3, function()
 end)
 self.TimersList["Notice2"] = timer.Once(10, function()
     rust.BroadcastChat("SERVER", "This is the Notice 2 every 10 seconds")
-end)
+end, self.Plugin)
 ```
 
 ``` python
@@ -73,7 +73,7 @@ this.BroadcastTimer = timer.Repeat(10, 0, function() {
 ``` lua
 self.BroadcastTimer = timer.Repeat(10, 0, function()
     rust.BroadcastChat("SERVER", "Hello world!")
-end)
+end, self.Plugin)
 ```
 
 ``` python
@@ -115,25 +115,20 @@ We need a CSharp example here
 ```
 
 ``` javascript
-Unload : function() {}
-    if (this.BroadcastTimer) {
-        this.BroadcastTimer.Destroy();
-    }
+if (this.BroadcastTimer) {
+    this.BroadcastTimer.Destroy();
 }
 ```
 
 ``` lua
-function PLUGIN:Unload()
-    if self.BroadcastTimer then
-        self.BroadcastTimer:Destroy()
-    end
+if self.BroadcastTimer then
+    self.BroadcastTimer:Destroy()
 end
 ```
 
 ``` python
-def Unload(self):
-    if self.BroadcastTimer:
-        self.BroadcastTimer.Destroy()
+if self.BroadcastTimer:
+    self.BroadcastTimer.Destroy()
 ```
 
 > Example in Unload with a table
@@ -147,10 +142,8 @@ We need a JavaScript example here
 ```
 
 ``` lua
-function PLUGIN:Unload()
-    for key, value in pairs(self.TimersList) do
-        self.TimersList[key]:Destroy()
-    end
+for key, value in pairs(self.TimersList) do
+    self.TimersList[key]:Destroy()
 end
 ```
 
@@ -158,6 +151,4 @@ end
 We need a Python example here
 ```
 
-It's always a good habit to stop all timers when your plugin is unloaded; do this by destroying the instance of the timer.
-
-Timers can be used anywhere in your plugin, not just in the Unload function. Just make sure to always destroy them, as you wouldn't want a bunch of timers piling up and slowing down someone's server!
+If you need to stop a timer, you can do so by destroying the instance of the timer. When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
