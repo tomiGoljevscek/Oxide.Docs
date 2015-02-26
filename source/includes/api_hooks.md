@@ -37,6 +37,11 @@
  * No return behavior
  * Add tags to the list, they will be concat'd at the end
 
+### OnTerrainInitialized()
+ * Called from Assembly-CSharp/InitializePVT.Apply
+ * No return behavior
+ * Is called after the terrain generation process has completed
+
 ### OnServerInitialized()
  * Called from Assembly-CSharp/ServerMgr
  * No return behavior
