@@ -219,7 +219,7 @@
  * Called from Assembly-CSharp/KeyLock
  * Returning true will allow door key usage, nothing will by default will allow door key usage, returning anything else will reject door key usage
 
-### OnEntityBuilt(Assembly-CSharp/BasePlayer player, UnityEngine/GameObject gameobject)
+### OnEntityBuilt(Assembly-CSharp/Planner planner, UnityEngine/GameObject gameobject)
  * Called from Assembly-CSharp/Item.Modules.Planner
  * No return behavior
  * Called when any structure is built (walls, ceilings, stairs, etc.)
