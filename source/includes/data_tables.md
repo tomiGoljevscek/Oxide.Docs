@@ -13,7 +13,7 @@ Init: function() {
 
 var dataTable
 LoadDataFiles: function() {
-    dataTable = datafile.GetDataTable("plugin-datafile") || {};
+    dataTable = datafile.GetDataTable("pluginName") || {};
 }
 ```
 
@@ -24,7 +24,7 @@ end
 
 local dataTable
 function PLUGIN:LoadDataFiles()
-    dataTable = datafile.GetDataTable("plugin-datafile") or {}
+    dataTable = datafile.GetDataTable("pluginName") or {}
 end
 ```
 
@@ -41,7 +41,7 @@ We need a CSharp example here
 
 ``` javascript
 SaveDataFiles: function() {
-    datafile.SaveDataTable("plugin-datafile");
+    datafile.SaveDataTable("pluginName");
 }
 
 cmdTest: function(player, cmd, args) {
@@ -53,7 +53,7 @@ cmdTest: function(player, cmd, args) {
 
 ``` lua
 function PLUGIN:SaveDataFiles()
-    datafile.SaveDataTable("plugin-datafile")
+    datafile.SaveDataTable("pluginName")
 end
 
 function PLUGIN:cmdTest(player, cmd, args)
