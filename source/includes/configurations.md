@@ -7,7 +7,21 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+var PluginName = {
+    HasConfig: true,
+    Init: function() {
+        this.LoadDefaultConfig();
+    },
+    LoadDefaultConfig: function() {
+        this.Config.ShowJoinMessage = true;
+        this.Config.ShowLeaveMessage = true;
+        this.Config.Messages = {};
+        this.Config.Messages.Join = "Welcome to this server";
+        this.Config.Messages.Leave = "Goodbye";
+        this:SaveConfig();
+    }
+
+}
 ```
 
 ``` lua
@@ -40,15 +54,29 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+cmdTest: function(player, cmd, args) {
+    if (this.Config.ShowJoinMessage == true) {
+        this.Config.ShowJoinMessage = false;
+    } else {
+        this.Config.ShowJoinMessage = true;
+    }
+    this:SaveConfig();
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:cmdTest(player, cmd, args)
+    if self.Config.ShowJoinMessage == true then
+        self.Config.ShowJoinMessage = false
+    else
+        self.Config.ShowJoinMessage = true
+    end
+    self:SaveConfig()
+end
 ```
 
 ``` python
 We need a Python example here
 ```
 
-Placeholder text
+You can change and save config entries by simply assigning the new values and calling the save function
