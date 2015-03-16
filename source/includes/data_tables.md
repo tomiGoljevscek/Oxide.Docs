@@ -7,16 +7,31 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+Init: function() {
+    this:LoadDataFiles();
+}
+
+var dataTable
+LoadDataFiles: function() {
+    dataTable = datafile.GetDataTable("pluginName") || {};
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:Init()
+    self:LoadDataFiles()
+end
+
+local dataTable
+function PLUGIN:LoadDataFiles()
+    dataTable = datafile.GetDataTable("pluginName") or {}
+end
 ```
 
 ``` python
 We need a Python example here
 ```
+To store plugin related data to use in your plugin, you want to create a data file.
 
 ## Saving a Data Table
 
@@ -25,11 +40,27 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+SaveDataFiles: function() {
+    datafile.SaveDataTable("pluginName");
+}
+
+cmdTest: function(player, cmd, args) {
+    var name = player.displayName;
+    dataTable[name] = true;
+    this:SaveDataFiles();
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:SaveDataFiles()
+    datafile.SaveDataTable("pluginName")
+end
+
+function PLUGIN:cmdTest(player, cmd, args)
+    local name = player.displayName
+    dataTable[name] = true
+    self:SaveDataFiles()
+end
 ```
 
 ``` python

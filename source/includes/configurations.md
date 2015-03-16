@@ -7,7 +7,21 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+var PluginName = {
+    HasConfig: true,
+    Init: function() {
+        this.LoadDefaultConfig();
+    },
+    LoadDefaultConfig: function() {
+        this.Config.ShowJoinMessage = this.Config.ShowJoinMessage || "true";
+        this.Config.ShowLeaveMessage = this.Config.ShowLeaveMessage || "true";
+        this.Config.Messages = this.Config.Messages || {};
+        this.Config.Messages.Join = this.Config.Messages.Join || "Welcome to this server";
+        this.Config.Messages.Leave = this.Config.Messages.Leave || "Goodbye";
+        this:SaveConfig();
+    }
+
+}
 ```
 
 ``` lua
@@ -18,11 +32,11 @@ function PLUGIN:Init()
 end
 
 function PLUGIN:LoadDefaultConfig()
-    self.Config.ShowJoinMessage = true
-    self.Config.ShowLeaveMessage = true
-    self.Config.Messages = {}
-    self.Config.Messages.Join = "Welcome to this server"
-    self.Config.Messages.Leave = "Goodbye"
+    self.Config.ShowJoinMessage = self.Config.ShowJoinMessage or "true"
+    self.Config.ShowLeaveMessage = self.Config.ShowLeaveMessage or "true"
+    self.Config.Messages = self.Config.Messages or {}
+    self.Config.Messages.Join = self.Config.Messages.Join or "Welcome to this server"
+    self.Config.Messages.Leave = self.Config.Messages.Leave or "Goodbye"
     self:SaveConfig()
 end
 ```
@@ -40,15 +54,29 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+cmdTest: function(player, cmd, args) {
+    if (this.Config.ShowJoinMessage == "true") {
+        this.Config.ShowJoinMessage = "false";
+    } else {
+        this.Config.ShowJoinMessage = "true";
+    }
+    this:SaveConfig();
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:cmdTest(player, cmd, args)
+    if self.Config.ShowJoinMessage == "true" then
+        self.Config.ShowJoinMessage = "false"
+    else
+        self.Config.ShowJoinMessage = "true"
+    end
+    self:SaveConfig()
+end
 ```
 
 ``` python
 We need a Python example here
 ```
 
-Placeholder text
+You can change and save config entries by simply assigning the new values and calling the save function.
