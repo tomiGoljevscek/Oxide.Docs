@@ -63,7 +63,7 @@
 
 ## Entity hooks
 
-### OnEntitySpawn(Entity entity)
+### OnEntitySpawned(Entity entity)
  * Called from Assembly-CSharp/??
  * Help! This is missing a description!
 
