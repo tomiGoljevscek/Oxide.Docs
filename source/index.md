@@ -12,6 +12,8 @@ includes:
   - getting_started
   - rust_api_hooks
   - rust_functions
+  - sevendays_api_hooks
+  - sevendays_functions
   - commands
   - configurations
   - data_tables
