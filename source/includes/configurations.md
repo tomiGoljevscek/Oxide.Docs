@@ -9,9 +9,11 @@ We need a CSharp example here
 ``` javascript
 var PluginName = {
     HasConfig: true,
+
     Init: function() {
         this.LoadDefaultConfig();
     },
+
     LoadDefaultConfig: function() {
         this.Config.ShowJoinMessage = this.Config.ShowJoinMessage || "true";
         this.Config.ShowLeaveMessage = this.Config.ShowLeaveMessage || "true";
@@ -20,7 +22,6 @@ var PluginName = {
         this.Config.Messages.Leave = this.Config.Messages.Leave || "Goodbye";
         this:SaveConfig();
     }
-
 }
 ```
 
@@ -79,4 +80,4 @@ end
 We need a Python example here
 ```
 
-You can change and save config entries by simply assigning the new values and calling the save function.
+You can change and save configuration entries by simply assigning the new values and calling the save function.

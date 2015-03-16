@@ -1,7 +1,16 @@
 # Getting Started
 
 ``` csharp
-We need a CSharp example here
+// Reference: Oxide.Ext.Rust
+
+namespace Oxide.Plugins
+{
+    [Info("Title of Plugin", "Your Name", "0.1.0", ResourceId = 681)]
+    public class PluginName : RustPlugin
+    {
+        // This is where your plugin will do its magic
+    }
+}
 ```
 
 ``` javascript
@@ -9,8 +18,8 @@ var PluginName = {
     Title : "Title of Plugin",
     Version : V(0, 1, 0),
     Description : "Plugin description",
-    Author : "Nogrod",
-    Url : "http://forum.rustoxide.com/resources/681/",
+    Author : "Your Name",
+    Url : "http://oxidemod.org/resources/681/",
     ResourceId : 681
 }
 ```
@@ -20,9 +29,7 @@ PLUGIN.Title = "Title of Plugin"
 PLUGIN.Version = V(0, 1, 0)
 PLUGIN.Description = "Plugin description"
 PLUGIN.Author = "Your Name"
-
-
-PLUGIN.Url = "http://forum.rustoxide.com/resources/681/"
+PLUGIN.Url = "http://oxidemod.org/resources/681/"
 PLUGIN.ResourceId = 681
 ```
 
@@ -33,7 +40,7 @@ class PluginName:
         self.Version = V(0, 1, 0)
         self.Description = "Plugin description"
         self.Author = "Your Name"
-        self.Url = "http://forum.rustoxide.com/resources/681/"
+        self.Url = "http://oxidemod.org/resources/681/"
         self.ResourceId = 681
 ```
 

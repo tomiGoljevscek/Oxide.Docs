@@ -1,4 +1,4 @@
-# API Hooks
+# Rust API Hooks
 
 ## Plugin hooks
 
@@ -52,174 +52,191 @@
  * No return behavior
  * Is called before the server saves and rotates the .sav files
 
-### OnServerQuit()
+### OnServerShutdown()
  * Called from Assembly-CSharp/ConsoleGlobal
  * No return behavior
  * Is called before the server starts the shutdown sequence
+ * This should generally not be used by plugins, instead use the Unload hook
+ * This is the direct replacement to OnServerQuit, which has since been removed
 
 ### OnTick()
  * Called from Assembly-CSharp/ServerMgr.DoTick
  * No return behavior
  * Called every tick (defined by the tickrate of the server?)
 
-### OnRunCommand(Facepunch/ConsoleSystem.Arg arg)
- * Called from Facepunch/ConsoleSystem.Run, Facepunch/ConsoleSystem.RunUnrestricted and Facepunch/ConsoleSystem.ClientRun
+### OnRunCommand(ConsoleSystem.Arg arg)
+ * Called from Assembly-CSharp/ConsoleSystem.Run_Internal, Assembly-CSharp/ConsoleSystem.Run_Unrestricted, and Assembly-CSharp/ConsoleSystem.SystemRealm_Normal
  * Return true to override Rust's command handling system
  * Useful for intercepting commands before they get to their intended target (like chat.say)
  * Used by RustCore to implement chat commands
 
 ## Player hooks
 
-### OnUserApprove(Facepunch/Network.Connection connection)
+### OnUserApprove(Network.Connection connection)
  * Called from Assembly-CSharp/ConnectionAuth.OnNewConnection
  * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
  * Used by RustCore and abstracted into CanClientLogin
 
-### CanClientLogin(Facepunch/Network.Connection connection)
+### CanClientLogin(Network.Connection connection)
  * Called from RustCore.OnUserApprove
  * Returning true will allow the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
  * Returning a string will use the string as the error message
+
+### OnPlayerConnected(Network.Message packet)
+ * Called from Assembly-CSharp/ServerMgr
+ * No return behavior
+ * Called before the player object is created, but after the player has been approved to join the game
+ * Can get the connection from packet.connection
+
+### OnPlayerDisconnected(BasePlayer player)
+ * Called from Assembly-CSharp/ServerMgr
+ * No return behavior
+ * Called before the player object is created, but after the player has been approved to join the game
+
+### OnPlayerInit(BasePlayer player)
+ * Called from Assembly-CSharp/BasePlayer
+ * No return behavior
+ * Called when the player is initialising (after they've connected, before they wake up)
 
 ### OnFindSpawnPoint()
  * Called from Assembly-CSharp/ServerMgr
  * Return a Assembly-CSharp/BasePlayer.SpawnPoint object to use that spawnpoint
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
 
-### OnPlayerConnected(Facepunch/Network.Message packet)
- * Called from Assembly-CSharp/ServerMgr
- * No return behavior
- * Called before the player object is created, but after the player has been approved to join the game
- * Can get the connection from packet.connection
-
-### OnPlayerInit(Assembly-CSharp/BasePlayer player)
- * Called from Assembly-CSharp/BasePlayer
- * No return behavior
- * Called when the player is initialising (after they've connected, before they wake up)
-
-### OnPlayerSpawn(Assembly-CSharp/BasePlayer player, Facepunch/Network.Connection connection)
+### OnPlayerSpawn(BasePlayer player, Network.Connection connection)
  * Called when the player spawns (specifically when they click the "Respawn" button)
  * No return behavior
  * ONLY called when the player is transitioning from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerSpawn ever triggering for them
 
-### OnPlayerChat(Assembly-CSharp/chat.say arg)
+### OnPlayerChat(chat.say arg)
  * Called from Assembly-CSharp/chat.say
  * Returning a non-null value overrides default behavior of chat, not commands
 
-### OnRunPlayerMetabolism(Assembly-CSharp/PlayerMetabolism metabolism)
+### OnRunPlayerMetabolism(PlayerMetabolism metabolism)
  * Called before a metabolism update occurs for the specified player
  * Returning true cancels the update
- * Metabolism update consists of managing the player's temperature, health etc
+ * Metabolism update consists of managing the player's temperature, health etc.
  * You can use this to turn off or change certain aspects of the metabolism, either by editing values before returning, or taking complete control of the method
  * Access the player object using metabolism:GetComponent("BasePlayer")
 
-### OnPlayerAttack(Assembly-CSharp/BasePlayer attacker, Assembly-CSharp/HitInfo hitinfo)
+### OnPlayerAttack(BasePlayer attacker, HitInfo hitInfo)
  * Called from Assembly-CSharp/BasePlayer
  * Returning true cancels the attack
  * Useful for modifying an attack before it goes out
- * hitinfo.HitEntity should be the entity that this attack would hit
+ * hitInfo.HitEntity should be the entity that this attack would hit
 
-### OnPlayerLoot(Assembly-CSharp/PlayerLoot lootinventory, Assembly-CSharp/BaseEntity targetentity)
+### OnPlayerLoot(PlayerLoot lootInventory, BaseEntity targetEntity)
  * Called from Assembly-CSharp/PlayerLoot
  * No return behavior
  * Called when the player starts looting an entity
 
-### OnPlayerLoot(Assembly-CSharp/PlayerLoot lootinventory, Assembly-CSharp/BasePlayer targetplayer)
+### OnPlayerLoot(PlayerLoot lootInventory, BasePlayer targetPlayer)
  * Called from Assembly-CSharp/PlayerLoot
  * No return behavior
  * Called when the player starts looting another player
 
-### OnPlayerLoot(Assembly-CSharp/PlayerLoot lootinventory, Assembly-CSharp/Item targetitem)
+### OnPlayerLoot(PlayerLoot lootInventory, Item targetItem)
  * Called from Assembly-CSharp/PlayerLoot
  * No return behavior
  * Called when the player starts looting an item
 
-### OnPlayerDisconnected(Assembly-CSharp/BasePlayer player)
- * Called from Assembly-CSharp/ServerMgr
- * No return behavior
- * Called before the player object is created, but after the player has been approved to join the game
-
 ## Entity hooks
 
-### OnEntitySpawn(UnityEngine/Monobehavior entity)
+### OnEntitySpawn(Monobehaviour entity)
  * Called from Assembly-CSharp/BaseNetworkable
  * No return behavior
- * Called when any networked entity is spawned (including trees)
+ * Called when any networked entity spawns (including trees)
 
-### OnEntityAttacked(UnityEngine/Monobehavior entity, Assembly-CSharp/HitInfo hitinfo)
+### OnEntityAttacked(Monobehaviour entity, HitInfo hitInfo)
  * Called from multiple places, each entity's attack handler basically
  * Returning non-null value overrides default server behavior (useful for godmode etc.)
- * Alternatively, modify the hitinfo object to change the damage
+ * Alternatively, modify the hitInfo object to change the damage
  * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
- * hitinfo has all kinds of useful things in it, such as hitinfo.Weapon, hitinfo.damageAmount or hitinfo.damageType
+ * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
  * Currently implemented for: BasePlayer, BaseAnimal
 
-### OnEntityDeath(UnityEngine/Monobehavior entity, Assembly-CSharp/HitInfo hitinfo)
+### OnEntityDeath(Monobehaviour entity, HitInfo hitInfo)
  * Called from multiple places, each entity's death handler basically
  * No return behavior
- * hitinfo might be null, check it before use
- * Editing hitinfo probably has no effect
+ * hitInfo might be null, check it before use
+ * Editing hitInfo probably has no effect
  * Currently implemented for: BasePlayer, BaseAnimal
 
-### OnEntityEnter(Assembly-CSharp/TriggerBase triggerbase, Assembly-CSharp/BaseEntity entity)
+### OnEntityEnter(TriggerBase triggerBase, BaseEntity entity)
  * Called from Assembly-CSharp/TriggerBase
  * No return behavior
  * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
 
-### OnEntityLeave(Assembly-CSharp/TriggerBase triggerbase, Assembly-CSharp/BaseEntity entity)
+### OnEntityLeave(TriggerBase triggerBase, BaseEntity entity)
  * Called from Assembly-CSharp/TriggerBase
  * No return behavior
  * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
 
 ## Item hooks
 
-### OnItemCraft(Assembly-CSharp/ItemCraftTask item)
+### OnItemCraft(ItemCraftTask item)
  * Called from Assembly-CSharp/ItemCrafter
  * Return a Assembly-CSharp/ItemCraftTask object to modify behavior
  * Called right after an item has started crafting
 
-### OnItemDeployed(Assembly-CSharp/Deployer deployer, Assembly-CSharp/BaseEntity deployedentity)
+### OnItemDeployed(Deployer deployer, BaseEntity deployedEntity)
  * Assembly-CSharp/Deployer
  * No return behavior
  * Called right after an item has been deployed
 
-### OnItemAddedToContainer(Assembly-CSharp/ItemContainer container, Assembly-CSharp/Item item)
+### OnItemAddedToContainer(ItemContainer container, Item item)
  * Called from Assembly-CSharp/ItemContainer
  * No return behavior
  * Called right after an item was added to a container
  * An entire stack has to be created, not just adding more wood to a wood stack for example
 
-### OnItemRemovedFromContainer(Assembly-CSharp/ItemContainer container, Assembly-CSharp/Item item)
+### OnItemRemovedFromContainer(ItemContainer container, Item item)
  * Called from Assembly-CSharp/ItemContainer
  * No return behavior
  * Called right after an item was removed from a container
  * The entire stack has to be removed for this to be called, not just a little bit
 
-### OnConsumableUse(Assembly-CSharp/Item item)
+### OnConsumableUse(Item item)
  * Called from Assembly-CSharp/Item
  * No return behavior
  * Is called right after a consumable item is used
 
-### OnGather(Assembly-CSharp/ResourceDispenser dispenser, Assembly-CSharp/BaseEntity entity, Assembly-CSharp/Item item)
+### OnGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
  * Assembly-CSharp/ResourceDispenser
  * No return behavior
  * Called before the player is given items from a resource
 
 ## Structure hooks
 
-### CanOpenDoor(Assembly-CSharp/BasePlayer player, Assembly-CSharp/BaseLock door)
+### CanOpenDoor(BasePlayer player, BaseLock lock)
  * Called from Assembly-CSharp/BaseLock
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-### CanOpenDoor(Assembly-CSharp/BasePlayer player, Assembly-CSharp/CodeLock code)
+### CanOpenDoor(BasePlayer player, CodeLock codeLock)
  * Called from Assembly-CSharp/CodeLock
- * Returning true will allow door code usage, nothing will by default will allow door code usage, returning anything else will reject door code usage
+ * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-### CanOpenDoor(Assembly-CSharp/BasePlayer player, Assembly-CSharp/KeyLock key)
+### CanOpenDoor(BasePlayer player, KeyLock keyLock)
  * Called from Assembly-CSharp/KeyLock
- * Returning true will allow door key usage, nothing will by default will allow door key usage, returning anything else will reject door key usage
+ * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-### OnEntityBuilt(Assembly-CSharp/Planner planner, UnityEngine/GameObject gameobject)
+### OnEntityBuilt(Planner planner, UnityEngine/GameObject gameObject)
  * Called from Assembly-CSharp/Item.Modules.Planner
  * No return behavior
  * Called when any structure is built (walls, ceilings, stairs, etc.)
+
+### OnBuildingBlockUpgrade(BuildingBlock buildingBlock, BuildingGrade.Enum grade, BaseEntity.RPCMessage message)
+ * Called from Assembly-CSharp/BuildingBlock
+ * Returning a BuildingGrade.Enum grade will change the grade that will be upgraded to
+ * Called when a player upgrades the grade of a BuildingBlock
+
+### OnBuildingBlockRotate(BuildingBlock buildingBlock, BaseEntity.RPCMessage message)
+ * Called from Assembly-CSharp/BuildingBlock
+ * No return behavior
+ * Called when a player rotates a BuildingBlock
+
+### OnBuildingBlockDemolish(BuildingBlock buildingBlock, BaseEntity.RPCMessage message)
+ * Called from Assembly-CSharp/BuildingBlock
+ * Return true to cancel
+ * Called when a player selects DemolishImmediate from the BuildingBlock menu

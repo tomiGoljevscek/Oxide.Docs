@@ -35,7 +35,7 @@ The current official extensions are listed below:
 
 Third-party, unofficial extensions available:
 
- * [Oxide.Ext.RustIO.dll](http://forum.rustoxide.com/resources/768/) - _Provides generation of map images, lightweight web server, and live map_
+ * [Oxide.Ext.RustIO.dll](http://oxidemod.org/resources/768/) - _Provides generation of map images, lightweight web server, and live map_
 
 Examples of what extensions may be available in the future:
 
