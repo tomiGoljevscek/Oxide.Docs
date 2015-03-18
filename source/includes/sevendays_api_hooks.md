@@ -23,56 +23,55 @@
 ## General hooks
 
 ### OnInitLogging()
- * Called from Assembly-CSharp/??
  * No return behavior
  * Used internally by Oxide to start Unity logging
 
 ### OnServerInitialized()
- * Called from Assembly-CSharp/??
+ * Called from ConnectionManager.OnServerInitialized
  * No return behavior
  * Called after the server startup has been completed and is awaiting connections
 
 ### OnServerSave()
- * Called from Assembly-CSharp/??
+ * Called from GameManager.SavePlayerData and GameManager.SaveWorld
  * No return behavior
  * Is called before the server saves world and player data
 
 ### OnServerQuit()
- * Called from Assembly-CSharp/??
+ * Called from GameManager.OnApplicationQuit
  * No return behavior
  * Is called before the server starts the shutdown sequence
  * This should generally not be used by plugins, instead use the Unload hook
 
-### OnRunCommand(ConsoleCommand command, String arg, String[] args)
- * Called from Assembly-CSharp/??
+### OnRunCommand(ConsoleSdtd console, ConsoleCommand command, String[] args)
+ * Called from ConsoleSdtd.ExecuteRemoteCmdInternal
  * Help! This is missing a description!
 
 ## Player hooks
 
 ### OnPlayerConnected(ClientInfo client)
- * Called from Assembly-CSharp/??
+ * Called from GameManager.md0013
  * Help! This is missing a description!
 
 ### OnPlayerDisconnected(ClientInfo client)
- * Called from Assembly-CSharp/??
+ * Called from ConnectionManager.RemovePlayer
  * Help! This is missing a description!
 
 ### OnPlayerChat(string message, int team, string playerName)
- * Called from Assembly-CSharp/??
+ * Called from GameManager.SendChatMessage
  * Help! This is missing a description!
 
 ## Entity hooks
 
 ### OnEntitySpawned(Entity entity)
- * Called from Assembly-CSharp/??
+ * Called from World.SpawnEntityInWorld
  * Help! This is missing a description!
 
 ### OnEntityHurt(cl0006 entity, DamageSource source)
- * Called from Assembly-CSharp/??
+ * Called from cl0006.DamageEntity
  * Help! This is missing a description!
 
 ### OnEntityDeath(cl0006 entity)
- * Called from Assembly-CSharp/??
+ * Called from cl0006.OnEntityDeath and EntityCar.OnEntityDeath
  * Help! This is missing a description!
 
 ## Item hooks
