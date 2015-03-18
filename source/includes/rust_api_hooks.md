@@ -109,7 +109,7 @@
  * ONLY called when the player is transitioning from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerSpawn ever triggering for them
 
-### OnPlayerChat(chat.say arg)
+### OnPlayerChat(ConsoleSystem.Arg arg)
  * Called from Assembly-CSharp/chat.say
  * Returning a non-null value overrides default behavior of chat, not commands
 
