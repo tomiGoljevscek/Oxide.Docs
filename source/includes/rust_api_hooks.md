@@ -40,7 +40,7 @@
 ### OnTerrainInitialized()
  * Called from Assembly-CSharp/InitializePVT.Apply
  * No return behavior
- * Is called after the terrain generation process has completed
+ * Called after the terrain generation process has completed
 
 ### OnServerInitialized()
  * Called from Assembly-CSharp/ServerMgr
@@ -50,12 +50,12 @@
 ### OnServerSave()
  * Called from Assembly-CSharp/SaveRestore
  * No return behavior
- * Is called before the server saves and rotates the .sav files
+ * Called before the server saves and rotates the .sav files
 
 ### OnServerShutdown()
  * Called from Assembly-CSharp/ConsoleGlobal
  * No return behavior
- * Is called before the server starts the shutdown sequence
+ * Called before the server starts the shutdown sequence
  * This should generally not be used by plugins, instead use the Unload hook
  * This is the direct replacement to OnServerQuit, which has since been removed
 
@@ -103,11 +103,11 @@
  * Return a Assembly-CSharp/BasePlayer.SpawnPoint object to use that spawnpoint
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
 
-### OnPlayerSpawn(BasePlayer player, Network.Connection connection)
+### OnPlayerRespawned(BasePlayer player, Network.Connection connection)
  * Called when the player spawns (specifically when they click the "Respawn" button)
  * No return behavior
- * ONLY called when the player is transitioning from dead to not-dead, so not when they're waking up
- * This means it's possible for a player to connect and disconnect from a server without OnPlayerSpawn ever triggering for them
+ * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
+ * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
 
 ### OnPlayerChat(ConsoleSystem.Arg arg)
  * Called from Assembly-CSharp/chat.say
@@ -143,12 +143,12 @@
 
 ## Entity hooks
 
-### OnEntitySpawn(Monobehaviour entity)
+### OnEntitySpawned(BaseNetworkable entity)
  * Called from Assembly-CSharp/BaseNetworkable
  * No return behavior
- * Called when any networked entity spawns (including trees)
+ * Called after any networked entity has spawned (including trees)
 
-### OnEntityAttacked(Monobehaviour entity, HitInfo hitInfo)
+### OnEntityAttacked(BaseCombatEntity entity, HitInfo hitInfo)
  * Called from multiple places, each entity's attack handler basically
  * Returning non-null value overrides default server behavior (useful for godmode etc.)
  * Alternatively, modify the hitInfo object to change the damage
@@ -156,7 +156,7 @@
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
  * Currently implemented for: BasePlayer, BaseAnimal
 
-### OnEntityDeath(Monobehaviour entity, HitInfo hitInfo)
+### OnEntityDeath(BaseCombatEntity entity, HitInfo hitInfo)
  * Called from multiple places, each entity's death handler basically
  * No return behavior
  * hitInfo might be null, check it before use
@@ -200,7 +200,7 @@
 ### OnConsumableUse(Item item)
  * Called from Assembly-CSharp/Item
  * No return behavior
- * Is called right after a consumable item is used
+ * Called right after a consumable item is used
 
 ### OnGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
  * Assembly-CSharp/ResourceDispenser
