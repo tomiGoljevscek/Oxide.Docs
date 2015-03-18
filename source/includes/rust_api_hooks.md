@@ -143,6 +143,11 @@
  * No return behavior
  * Called when the player starts looting an item
 
+### OnPlayerInput(BasePlayer player, InputState input)
+ * Called from BasePlayer.OnReceiveTick
+ * No return behavior
+ * Called when input is received from a connected client
+
 ## Entity hooks
 
 ### OnEntitySpawned(BaseNetworkable entity)
@@ -203,6 +208,11 @@
  * Called from Item.UseOneItem
  * No return behavior
  * Called right after a consumable item is used
+
+### OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
+ * Called from BaseOven.ConsumeFuel
+ * No return behavior
+ * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
 
 ### OnGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
  * Called from ResourceDispenser.GiveResourceFromItem
