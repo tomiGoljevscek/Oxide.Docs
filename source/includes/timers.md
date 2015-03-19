@@ -13,13 +13,13 @@ We need a CSharp example here
 ```
 
 ``` javascript
-this.BroadcastTimer = timer.Once(3, function() {
+timer.Once(3, function() {
     rust.BroadcastChat("SERVER", "Hello world!");
 }, this.Plugin);
 ```
 
 ``` lua
-self.BroadcastTimer = timer.Once(3, function()
+timer.Once(3, function()
     rust.BroadcastChat("SERVER", "Hello world!")
 end, self.Plugin)
 ```
@@ -27,7 +27,7 @@ end, self.Plugin)
 ``` python
 def my_callback_func():
     rust.BroadcastChat("SERVER", "Hello world!")
-self.BroadcastTimer = timer.Once(3, Action(my_callback_func), self.Plugin)
+timer.Once(3, Action(my_callback_func), self.Plugin)
 ```
 
 > Example of timer.Once with a table
@@ -41,11 +41,11 @@ We need a JavaScript example here
 ```
 
 ``` lua
-self.TimersList = {}
-self.TimersList["Notice1"] = timer.Once(3, function()
+local timersVariable = {}
+timersVariable["Notice1"] = timer.Once(3, function()
     rust.BroadcastChat("SERVER", "This is the Notice 1 every 3 seconds")
 end)
-self.TimersList["Notice2"] = timer.Once(10, function()
+timersVariable["Notice2"] = timer.Once(10, function()
     rust.BroadcastChat("SERVER", "This is the Notice 2 every 10 seconds")
 end, self.Plugin)
 ```
@@ -65,13 +65,13 @@ We need a CSharp example here
 ```
 
 ``` javascript
-this.BroadcastTimer = timer.Repeat(10, 0, function() {
+timer.Repeat(10, 0, function() {
     rust.BroadcastChat("SERVER", "Hello world!");
 }, this.Plugin);
 ```
 
 ``` lua
-self.BroadcastTimer = timer.Repeat(10, 0, function()
+timer.Repeat(10, 0, function()
     rust.BroadcastChat("SERVER", "Hello world!")
 end, self.Plugin)
 ```
@@ -79,7 +79,7 @@ end, self.Plugin)
 ``` python
 def my_callback_func():
     rust.BroadcastChat("SERVER", "Hello world!")
-self.BroadcastTimer = timer.Repeat(10, 0, Action(my_callback_func), self.Plugin)
+timer.Repeat(10, 0, Action(my_callback_func), self.Plugin)
 ```
 
 Executes the specified function every "delay" seconds. If "repeats" is specified, the function will only be called "repeats" times.
@@ -115,20 +115,20 @@ We need a CSharp example here
 ```
 
 ``` javascript
-if (this.BroadcastTimer) {
-    this.BroadcastTimer.Destroy();
+if (timerVariable) {
+    timerVariable.Destroy();
 }
 ```
 
 ``` lua
-if self.BroadcastTimer then
-    self.BroadcastTimer:Destroy()
+if timerVariable then
+    timerVariable:Destroy()
 end
 ```
 
 ``` python
-if self.BroadcastTimer:
-    self.BroadcastTimer.Destroy()
+if timerVariable:
+    timerVariable.Destroy()
 ```
 
 > Example in Unload with a table
@@ -142,8 +142,8 @@ We need a JavaScript example here
 ```
 
 ``` lua
-for key, value in pairs(self.TimersList) do
-    self.TimersList[key]:Destroy()
+for key, value in pairs(timersVariable) do
+    timersVariable[key]:Destroy()
 end
 ```
 
