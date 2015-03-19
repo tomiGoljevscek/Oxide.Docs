@@ -17,6 +17,7 @@ includes:
   - commands
   - configurations
   - data_tables
+  - permissions
   - timers
   - web_requests
   - styling_messages
@@ -24,7 +25,7 @@ includes:
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>
-  - <a href='https://github.com/OxideMod/Oxide'>View Oxide source on GitHub</a>
+  - <a href='https://github.com/OxideMod/Oxide'>View the source on GitHub</a>
   - <a href='https://github.com/tripit/slate'>Documentation powered by Slate</a>
 
 search: true
