@@ -8,11 +8,16 @@ oxide.reload
 
 oxide.unload
 
-oxide.version
+oxide.version (or version)
 
-version
+oxide.grant
+
+oxide.revoke
+
+oxide.group
+
+oxide.usergroup
 
 ## Chat commands
 
 ## Console commands
-

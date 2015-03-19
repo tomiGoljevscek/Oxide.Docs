@@ -9,7 +9,7 @@ We need a CSharp example here
 ```
 
 ``` javascript
-webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", function(code, response) {
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response) {
     if (response == null || code != 200) {
         print("Couldn't get an answer from Google!");
         return
@@ -19,7 +19,7 @@ webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", function(cod
 ```
 
 ``` lua
-webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", function(code, response)
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response)
     if response == nil or code ~= 200 then 
         print("Couldn't get an answer from Google!") 
         return 
@@ -35,7 +35,7 @@ def response_handler(code, response):
         print "Couldn't get an answer from Google!" 
         return 
     print "Google answered: " + response
-webrequests.EnqueueGet("http://www.google.com/search?q=rust+oxide", Action[Int32,String](response_handler), self.Plugin);
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", Action[Int32,String](response_handler), self.Plugin);
 ```
 
 This uses the raw connection to a web page as you would on your browser.

@@ -23,7 +23,7 @@ The core is highly abstracted and loosely coupled, and could be used to mod any 
 
 The current official extensions are listed below:
 
- * Oxide.Ext.CSharp - _Allows raw [CSharp plugins](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)) to be loaded_
+ * Oxide.Ext.CSharp - _Allows raw [CSharp](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)) plugins to be loaded_
  * Oxide.Ext.JavaScript - _Allows [JavaScript](http://en.wikipedia.org/wiki/JavaScript) plugins to be loaded_
  * Oxide.Ext.Lua - _Allows [Lua](http://www.lua.org/) plugins to be loaded_
  * Oxide.Ext.MySql - _Allows plugins to access a [MySQL](http://www.mysql.com/) database_
