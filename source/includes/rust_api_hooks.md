@@ -103,7 +103,7 @@
  * Return a BasePlayer.SpawnPoint object to use that spawnpoint
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
 
-### OnPlayerRespawned(BasePlayer player, Network.Connection connection)
+### OnPlayerRespawned(BasePlayer player)
  * Called from BasePlayer.Respawn
  * Called when the player spawns (specifically when they click the "Respawn" button)
  * No return behavior
