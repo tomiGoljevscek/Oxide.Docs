@@ -6,8 +6,6 @@ script: bundle exec rake travis
 notifications:
   # Disable build status email notifications, until the issue with forks is fixed
   email: false
-  # IRC notification
-  irc: "chat.freenode.net#oxidemod"
 
 # Environmental system variables
 env:
