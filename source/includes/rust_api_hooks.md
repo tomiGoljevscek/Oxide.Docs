@@ -233,8 +233,8 @@
  * Called from KeyLock.OnTryToOpen and KeyLock.OnTryToClose
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-### OnEntityBuilt(Planner planner, UnityEngine/GameObject gameObject)
- * Called from Item.Modules.Planner
+### OnEntityBuilt(Planner planner, Construction component)
+ * Called from Planner.DoBuild
  * No return behavior
  * Called when any structure is built (walls, ceilings, stairs, etc.)
 
