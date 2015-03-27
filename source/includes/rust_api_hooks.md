@@ -161,14 +161,12 @@
  * Alternatively, modify the hitInfo object to change the damage
  * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
- * Currently implemented for: BasePlayer, BaseAnimal
 
 ### OnEntityDeath(BaseCombatEntity entity, HitInfo hitInfo)
  * Called from BaseCombatEntity.Die
  * No return behavior
  * hitInfo might be null, check it before use
- * Editing hitInfo probably has no effect
- * Currently implemented for: BasePlayer, BaseAnimal
+ * Editing hitInfo has no effect because the death has already happened
 
 ### OnEntityEnter(TriggerBase triggerBase, BaseEntity entity)
  * Called from TriggerBase.OnEntityEnter
@@ -219,6 +217,23 @@
  * No return behavior
  * Called before the player is given items from a resource
 
+## Signs Hooks
+
+### CanUpdateSign(Signage sign, BasePlayer player)
+ * Called from Signage.CanUpdateSign
+ * Return true or false to override Rust's check
+ * Called before the player changes the text on a sign or locks it
+ 
+### OnSignLocked(Signage sign, BasePlayer player)
+ * Called from Signage.LockSign
+ * No return behavior
+ * Called after the player has locked a sign
+ 
+### OnSignUpdated(Signage sign, BasePlayer player, string text)
+ * Called from Signage.UpdateSign
+ * No return behavior
+ * Called after the player has changed the text on a sign
+ 
 ## Structure hooks
 
 ### CanOpenDoor(BasePlayer player, BaseLock lock)
