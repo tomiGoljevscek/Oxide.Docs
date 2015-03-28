@@ -6,6 +6,10 @@ script: bundle exec rake travis
 notifications:
   # Disable build status email notifications, until the issue with forks is fixed
   email: false
+  # Slack (oxidemod.slack.com)
+  slack:
+    rooms:
+      secure: "Vi8wb0QxgwyRjpQ2LXiK30pBI61REVGNbiF+0AgxFMUNmEUozgPXSRPm+GLmayB7fofaw8heh13DBiQnOvhibvLGsBtrbdgzfYdRkB9vgF9VhoLk7E7G8ohxrnKNoNuJTsOC6hBhT6TAQPtvFG4ehe1HI+OGHecTxX8uFPURNmA="
 
 # Environmental system variables
 env:
