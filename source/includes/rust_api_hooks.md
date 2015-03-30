@@ -147,6 +147,11 @@
  * Called from BasePlayer.OnReceiveTick
  * No return behavior
  * Called when input is received from a connected client
+ 
+### OnPlayerSleepEnded(BasePlayer player)
+ * Called from BasePlayer.EndSleeping()
+ * No return behavior
+ * Called when a player awakes
 
 ## Entity hooks
 
@@ -155,7 +160,7 @@
  * No return behavior
  * Called after any networked entity has spawned (including trees)
 
-### OnEntityAttacked(BaseCombatEntity entity, HitInfo hitInfo)
+### OnEntityTakeDamage(BaseCombatEntity entity, HitInfo hitInfo)
  * Called from BaseCombatEntity.Hurt
  * Returning non-null value overrides default server behavior (useful for godmode etc.)
  * Alternatively, modify the hitInfo object to change the damage
@@ -216,6 +221,11 @@
  * Called from ResourceDispenser.GiveResourceFromItem
  * No return behavior
  * Called before the player is given items from a resource
+ 
+### OnLoseCondition(Item item, ref float amount)
+ * Called from Item.LoseCondition
+ * No return behavior
+ * Called right before the condition of the item is modified
 
 ## Signs Hooks
 
