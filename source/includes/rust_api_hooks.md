@@ -155,7 +155,7 @@
  * No return behavior
  * Called after any networked entity has spawned (including trees)
 
-### OnEntityAttacked(BaseCombatEntity entity, HitInfo hitInfo)
+### OnEntityTakeDamage(BaseCombatEntity entity, HitInfo hitInfo)
  * Called from BaseCombatEntity.Hurt
  * Returning non-null value overrides default server behavior (useful for godmode etc.)
  * Alternatively, modify the hitInfo object to change the damage
