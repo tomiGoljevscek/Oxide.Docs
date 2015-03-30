@@ -147,6 +147,11 @@
  * Called from BasePlayer.OnReceiveTick
  * No return behavior
  * Called when input is received from a connected client
+ 
+### OnPlayerSleepEnded(BasePlayer player)
+ * Called from BasePlayer.EndSleeping()
+ * No return behavior
+ * Called when a player awakes
 
 ## Entity hooks
 
