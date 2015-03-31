@@ -183,6 +183,11 @@
  * No return behavior
  * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
 
+### OnEntityGroundMissing(BaseEntity entity)
+ * Called from DestroyOnGroundMissing.OnGroundMissing
+ * Returning non-null value ovverides default server behavior
+ * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
+ 
 ## Item hooks
 
 ### OnItemCraft(ItemCraftTask item)
