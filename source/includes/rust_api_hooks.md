@@ -91,7 +91,7 @@
 ### OnPlayerDisconnected(BasePlayer player)
  * Called from BasePlayer.OnDisconnected
  * No return behavior
- * Called before the player object is created, but after the player has been approved to join the game
+ * Called after the player has disconnected from the server
 
 ### OnPlayerInit(BasePlayer player)
  * Called from BasePlayer.PlayerInit
@@ -105,8 +105,8 @@
 
 ### OnPlayerRespawned(BasePlayer player)
  * Called from BasePlayer.Respawn
- * Called when the player spawns (specifically when they click the "Respawn" button)
  * No return behavior
+ * Called when the player spawns (specifically when they click the "Respawn" button)
  * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
 
@@ -153,6 +153,16 @@
  * No return behavior
  * Called when a player awakes
 
+### OnItemCraft(ItemCraftTask item)
+ * Called from ItemCrafter.CraftItem
+ * Return a ItemCraftTask object to modify behavior
+ * Called right after an item has started crafting
+
+### OnGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
+ * Called from ResourceDispenser.GiveResourceFromItem
+ * No return behavior
+ * Called before the player is given items from a resource
+
 ## Entity hooks
 
 ### OnEntitySpawned(BaseNetworkable entity)
@@ -190,11 +200,6 @@
  
 ## Item hooks
 
-### OnItemCraft(ItemCraftTask item)
- * Called from ItemCrafter.CraftItem
- * Return a ItemCraftTask object to modify behavior
- * Called right after an item has started crafting
-
 ### OnItemDeployed(Deployer deployer, BaseEntity deployedEntity)
  * Called from Deployer.DoDeploy_Regular and Deployer.DoDeploy_Slot
  * No return behavior
@@ -221,11 +226,6 @@
  * Called from BaseOven.ConsumeFuel
  * No return behavior
  * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
-
-### OnGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
- * Called from ResourceDispenser.GiveResourceFromItem
- * No return behavior
- * Called before the player is given items from a resource
  
 ### OnLoseCondition(Item item, ref float amount)
  * Called from Item.LoseCondition

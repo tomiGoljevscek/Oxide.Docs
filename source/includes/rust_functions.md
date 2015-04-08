@@ -138,7 +138,7 @@ cmdSteamId : function(player, command, arg) {
 
 ``` lua
 function PLUGIN:Init()
-    command.AddChatCommand("steamid",  self.Object, "cmdSteamId")
+    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
 end
 function PLUGIN:cmdSteamId(player, command, arg)
     rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " .. rust.UserIDFromPlayer(player))
