@@ -14,19 +14,19 @@ void OnPlayerConnected(NetUser netuser)
 
 ``` javascript
 OnPlayerConnected : function(netuser) {
-    rust.BroadcastChat(netuser.diplayName + " has joined the server");
+    rust.BroadcastChat(netuser.displayName + " has joined the server");
 }
 ```
 
 ``` lua
 function PLUGIN:OnPlayerConnected(netuser)
-    rust.BroadcastChat(netuser.diplayName .. " has joined the server")
+    rust.BroadcastChat(netuser.displayName .. " has joined the server")
 end
 ```
 
 ``` python
 def OnPlayerConnected(self, netuser):
-    rust.BroadcastChat(netuser.diplayName + " has joined the server")
+    rust.BroadcastChat(netuser.displayName + " has joined the server")
 ```
 
 Sends a chat message to all players.
@@ -45,19 +45,19 @@ void OnPlayerConnected(NetUser netuser)
 
 ``` javascript
 OnPlayerConnected : function(netuser) {
-    rust.BroadcastConsole(netuser.diplayName + " has joined the server");
+    rust.BroadcastConsole(netuser.displayName + " has joined the server");
 }
 ```
 
 ``` lua
 function PLUGIN:OnPlayerConnected(netuser)
-    rust.BroadcastConsole(netuser.diplayName .. " has joined the server")
+    rust.BroadcastConsole(netuser.displayName .. " has joined the server")
 end
 ```
 
 ``` python
 def OnPlayerConnected(self, netuser):
-    rust.BroadcastConsole(netuser.diplayName + " has joined the server")
+    rust.BroadcastConsole(netuser.displayName + " has joined the server")
 ```
 
 Prints a message to all players' in-game console

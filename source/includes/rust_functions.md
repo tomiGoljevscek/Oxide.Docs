@@ -14,19 +14,19 @@ void OnPlayerInit(BasePlayer player)
 
 ``` javascript
 OnPlayerInit : function(player) {
-    rust.BroadcastChat(player.diplayName + " has joined the server");
+    rust.BroadcastChat(player.displayName + " has joined the server");
 }
 ```
 
 ``` lua
 function PLUGIN:OnPlayerInit(player)
-    rust.BroadcastChat(player.diplayName .. " has joined the server")
+    rust.BroadcastChat(player.displayName .. " has joined the server")
 end
 ```
 
 ``` python
 def OnPlayerInit(self, player):
-    rust.BroadcastChat(player.diplayName + " has joined the server")
+    rust.BroadcastChat(player.displayName + " has joined the server")
 ```
 
 Sends a chat message to all players. The optional userid argument is used for the avatar in the chat, with 0 the default and Rust logo.
