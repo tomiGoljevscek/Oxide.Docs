@@ -10,35 +10,10 @@
  \ \ /\ / / _ \| '__| |/ _` |
   \ V  V / (_) | |  | | (_| |
    \_/\_/ \___/|_|  |_|\__,_|
-
-
-So you want to develop plugins for Oxide?
-
-We'll show you how to get started, along with sample code!
 ```
 
-Oxide is a complete rewrite of the popular, original Oxide mod for the game Rust. Oxide has a focus on modularity and extensibility.
+Oxide is a complete rewrite of the popular, original Oxide API and Lua plugin framework. Previously only available for the legacy Rust game, Oxide now supports numerous games. Oxide's focus is on modularity and extensibility. The core is highly abstracted and loosely coupled, and could be used to mod any game that uses the .NET Framework.
 
-The core is highly abstracted and loosely coupled, and could be used to mod any game that uses .NET such as 7 Days to Die, The Forest, Space Engineers, and more. Support for games, plugin languages, and other functionality is added via extensions. When loading, Oxide 2 scans the binary folder for DLL extensions. Extension filenames are formatted as `Oxide.Ext.Name.dll`.
+Plugins can currently be developed for the games [Reign of Kings](http://www.reignofkings.net/), [Rust](http://playrust.com/) (Experimental), [Rust Legacy](http://playrust.com/), and [7 Days to Die](http://7daystodie.com/), with support for more on the way! Oxide provides multiple programming languages to develop plugins for each game: [CSharp](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)), [JavaScript](http://en.wikipedia.org/wiki/JavaScript), [Lua](http://www.lua.org/), and [Python](http://en.wikipedia.org/wiki/Python_(programming_language)).
 
-The current official extensions are listed below:
-
- * Oxide.Ext.CSharp - _Allows raw [CSharp](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)) plugins to be loaded_
- * Oxide.Ext.JavaScript - _Allows [JavaScript](http://en.wikipedia.org/wiki/JavaScript) plugins to be loaded_
- * Oxide.Ext.Lua - _Allows [Lua](http://www.lua.org/) plugins to be loaded_
- * Oxide.Ext.MySql - _Allows plugins to access a [MySQL](http://www.mysql.com/) database_
- * Oxide.Ext.Python - _Allows [Python](http://en.wikipedia.org/wiki/Python_(programming_language)) plugins to be loaded_
- * Oxide.Ext.Rust - _Provides support for the [Rust](http://playrust.com/) Experimental server_
- * Oxide.Ext.RustLegacy - _Provides support for the [Rust](http://playrust.com/) Legacy server_
- * Oxide.Ext.SevenDays - _Provides support for the [7 Days to Die](http://7daystodie.com/) server_
- * Oxide.Ext.SQLite - _Allows plugins to access a [SQLite](http://www.sqlite.org/) database_
- * Oxide.Ext.Unity - _Provides support for [Unity](http://unity3d.com/) games_
-
-Third-party, unofficial extensions available:
-
- * [Oxide.Ext.RustIO.dll](http://oxidemod.org/extensions/768/) - _Provides generation of map images, lightweight web server, and live map_
-
-Examples of what extensions may be available in the future:
-
- * Oxide.Ext.IRC - _Allows plugins to access an IRC server_
- * Oxide.Ext.Updater - _Allows for automatic plugin checking and updating_
+Database support for plugins is also available in the [MySQL](http://www.mysql.com/) and [SQLite](http://www.sqlite.org/) varieties, so if JSON files aren't enough, you have options! If you'd prefer another database type, those can always be accessed via web requests and your own custom bridge script on your site.
