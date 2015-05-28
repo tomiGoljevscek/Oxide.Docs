@@ -8,8 +8,6 @@ We need a CSharp example here
 
 ``` javascript
 var PluginName = {
-    HasConfig: true,
-
     Init: function() {
         this.LoadDefaultConfig();
     },
@@ -26,8 +24,6 @@ var PluginName = {
 ```
 
 ``` lua
-PLUGIN.HasConfig = true
-
 function PLUGIN:Init()
     self:LoadDefaultConfig()
 end
