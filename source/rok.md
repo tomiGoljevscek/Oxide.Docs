@@ -8,7 +8,7 @@ language_tabs:
   - python
 
 includes:
-  - hooks_plugin
+  - plugin_hooks
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>

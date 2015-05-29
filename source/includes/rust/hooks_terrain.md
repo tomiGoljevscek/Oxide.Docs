@@ -21,7 +21,6 @@ We need a Lua example here
 We need a Python example here
 ```
 
-**Available for:**  
-![Rust](images/icon-rust.png)
-
+ * Called from InitializePVT.Apply
+ * No return behavior
  * Called after the terrain generation process has completed

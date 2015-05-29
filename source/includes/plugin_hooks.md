@@ -3,7 +3,7 @@
 **Available for all supported games:**  
 [![Rust](images/icon-rust.png)](rust.html)
 [![Rust Legacy](images/icon-legacy.png)](legacy.html)
-[![7 Days to Die](images/icon-7dtd.png)](7dtd.html)
+[![7 Days to Die](images/icon-7dtd.png)](sdtd.html)
 [![Reign of Kings](images/icon-rok.png)](rok.html)
 
 ## Init

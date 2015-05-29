@@ -1,5 +1,5 @@
 ---
-title: Oxide API Reference
+title: Oxide Plugin API Reference
 
 language_tabs:
   - csharp
@@ -11,7 +11,7 @@ includes:
   - introduction
   - getting_started
   - games_supported
-  - hooks_plugin
+  - plugin_hooks
   - commands
   - configurations
   - data_tables

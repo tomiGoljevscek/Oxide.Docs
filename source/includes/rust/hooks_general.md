@@ -21,12 +21,8 @@ We need a Lua example here
 We need a Python example here
 ```
 
-**Available for:**  
-![Rust](images/icon-rust.png)
-![Rust Legacy](images/icon-legacy.png)
-![7 Days to Die](images/icon-7dtd.png)
-![Reign of Kings](images/icon-rok.png)
-
+ * Called from ServerMgr.Initialize
+ * No return behavior
  * Called after the server startup has been completed and is awaiting connections
 
 ## OnServerSave
@@ -50,13 +46,9 @@ We need a Lua example here
 We need a Python example here
 ```
 
-**Available for:**  
-![Rust](images/icon-rust.png)
-![Rust Legacy](images/icon-legacy.png)
-![7 Days to Die](images/icon-7dtd.png)
-![Reign of Kings](images/icon-rok.png)
-
- * Called before the server saves world and player data
+ * Called from SaveRestore.DoAutomatedSave
+ * No return behavior
+ * Called before the server saves and rotates the .sav files
 
 ## OnServerShutdown
 
@@ -79,12 +71,8 @@ We need a Lua example here
 We need a Python example here
 ```
 
-**Available for:**  
-![Rust](images/icon-rust.png)
-![Rust Legacy](images/icon-legacy.png)
-![7 Days to Die](images/icon-7dtd.png)
-![Reign of Kings](images/icon-rok.png)
-
+ * Called from ConsoleGlobal
+ * No return behavior
  * Called before the server starts the shutdown sequence
  * This should generally not be used by plugins, instead use the Unload hook
 
@@ -109,7 +97,57 @@ We need a Lua example here
 We need a Python example here
 ```
 
-**Available for:**  
-![Rust](images/icon-rust.png)
-
+ * Called from ServerMgr.DoTick
+ * No return behavior
  * Called every tick (defined by the tick rate of the server)
+
+## BuildServerTags
+
+``` csharp
+private void BuildServerTags(IList<string> tags)
+{
+    Puts("BuildServerTags works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from RustCore.ModifyTags
+ * No return behavior
+ * Add tags to the list, they will be concat'd at the end
+
+## OnRunCommand(ConsoleSystem.Arg arg)
+
+``` csharp
+private void OnRunCommand(ConsoleSystem.Arg arg)
+{
+    Puts("OnRunCommand works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from ConsoleSystem.Run_Internal, ConsoleSystem.Run_Unrestricted, and ConsoleSystem.SystemRealm_Normal
+ * Return true to override Rust's command handling system
+ * Useful for intercepting commands before they get to their intended target (like chat.say)
+ * Used by RustCore to implement chat commands
