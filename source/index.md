@@ -10,25 +10,25 @@ language_tabs:
 includes:
   - introduction
   - getting_started
-  - rust_api_hooks
-  - rust_functions
-  - rustlegacy_api_hooks
-  - rustlegacy_functions
-  - sevendays_api_hooks
-  - sevendays_functions
+  - hooks_plugin
+  - hooks_general
+  - hooks_entity
+  - hooks_item
+  - hooks_sign
+  - hooks_structure
+  - hooks_terrain
   - commands
   - configurations
   - data_tables
   - permissions
   - timers
   - web_requests
-  - styling_messages
   - compiling_source
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>
   - <a href='https://github.com/OxideMod/Oxide'>View the source on GitHub</a>
-  - <a href='https://github.com/tripit/slate'>Documentation powered by Slate</a>
+  - <a href='https://github.com/OxideMod/Docs'>Contribute to the Docs on GitHub</a>
 
 search: true
 ---

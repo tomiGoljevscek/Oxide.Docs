@@ -1,10 +1,10 @@
 # Timers
 
-## Creating a timer
+Sometimes you come across a situation which only a timer can fix.
 
-Sometimes you come across a situation which only a timer can fix. Timers are great for delaying code, allowing it to be run later. The following sections will show you the various timer types, and how to use them properly.
+Timers are great for delaying code, allowing it to be run later.
 
-## timer.Once
+## Single timer
 
 > Basic example of timer.Once
 
@@ -54,9 +54,9 @@ end, self.Plugin)
 We need a Python example here
 ```
 
-Executes the specified function once after the specified delay.
+Executes the specified function once after the specified delay.  
 
-## timer.Repeat
+## Repeating timer
 
 > Basic example of timer.Repeat
 
@@ -66,7 +66,7 @@ We need a CSharp example here
 
 ``` javascript
 timer.Repeat(10, 0, function() {
-    rust.BroadcastChat("SERVER", "Hello world!");
+    rust.BroadcastChat("SERVER", "Hello world!");Placeholder
 }, this.Plugin);
 ```
 
@@ -82,9 +82,11 @@ def my_callback_func():
 timer.Repeat(10, 0, Action(my_callback_func), self.Plugin)
 ```
 
-Executes the specified function every "delay" seconds. If "repeats" is specified, the function will only be called "repeats" times.
+Executes the specified function every "delay" seconds.
 
-## timer.NextFrame
+If "repeats" is specified, the function will only be called "repeats" times.  
+
+## Next frame timer
 
 > Basic example of timer.NextFrame
 
@@ -104,7 +106,7 @@ We need a Lua example here
 We need a Python example here
 ```
 
-Executes the specified function at the next frame.
+Executes the specified function at the next frame.  
 
 ## Destroying a timer
 
@@ -151,4 +153,6 @@ end
 We need a Python example here
 ```
 
-If you need to stop a timer, you can do so by destroying the instance of the timer. When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
+When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
+
+If you need to stop a timer manually, you can do so by destroying the instance of the timer.
