@@ -1,8 +1,6 @@
-Oxide Docs [![Build Status](https://travis-ci.org/OxideMod/Docs.png)](https://travis-ci.org/OxideMod/Docs)
-==========
+# Oxide Docs [![Build Status](https://travis-ci.org/OxideMod/Docs.svg?branch=master)](https://travis-ci.org/OxideMod/Docs)
 
-Contributing
-------------
+## Contributing
 
 ### Prerequisites
 
@@ -27,8 +25,7 @@ Now that you have it all setup, you'll probably want to learn more about [editin
 
 Once you've made the changes you'd feel are needed, push them to your fork and then submit a pull request. Simple as that!
 
-Special Thanks
---------------
+## Special Thanks
 
  - [Robert Lord](http://lord.io), creator of Slate, and contributors
  - [Middleman](https://github.com/middleman/middleman) - for making everything a sinch
