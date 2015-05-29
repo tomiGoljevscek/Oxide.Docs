@@ -40,7 +40,7 @@ task :travis do
 
       # Add files, create commit, and push to GitHub
       sh 'git add --all'
-      sh "git commit -m 'Built from #{rev}'"
+      sh "git commit -m 'Built from https://github.com/#{ENV['TRAVIS_REPO_SLUG']}/commit/#{rev}'"
       verbose false do
         sh "git push -q #{repo} #{branch}"
       end
