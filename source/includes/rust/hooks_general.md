@@ -87,7 +87,6 @@ We need a Python example here
 
  * Called before the server starts the shutdown sequence
  * This should generally not be used by plugins, instead use the Unload hook
-Placeholder
 
 ## OnTick
 
@@ -114,4 +113,3 @@ We need a Python example here
 ![Rust](images/icon-rust.png)
 
  * Called every tick (defined by the tick rate of the server)
- * **Available for:**  

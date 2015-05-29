@@ -1,5 +1,5 @@
 ---
-title: Oxide API Reference
+title: Oxide API for Rust
 
 language_tabs:
   - csharp
@@ -8,17 +8,14 @@ language_tabs:
   - python
 
 includes:
-  - introduction
-  - getting_started
-  - games_supported
   - hooks_plugin
-  - commands
-  - configurations
-  - data_tables
-  - permissions
-  - timers
-  - web_requests
-  - compiling_source
+  - rust/hooks_general
+  - rust/hooks_entity
+  - rust/hooks_item
+  - rust/hooks_sign
+  - rust/hooks_structure
+  - rust/hooks_terrain
+  - rust/styling_messages
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>
