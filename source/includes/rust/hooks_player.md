@@ -126,7 +126,7 @@ We need a Python example here
  * No return behavior
  * Called when the player is initialising (after they've connected, before they wake up)
 
-## OnFindSpawnPoint()
+## OnFindSpawnPoint
 
 ``` csharp
 void OnFindSpawnPoint()

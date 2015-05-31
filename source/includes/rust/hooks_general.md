@@ -126,7 +126,7 @@ We need a Python example here
  * No return behavior
  * Add tags to the list, they will be concat'd at the end
 
-## OnRunCommand(ConsoleSystem.Arg arg)
+## OnRunCommand
 
 ``` csharp
 void OnRunCommand(ConsoleSystem.Arg arg)

@@ -25,32 +25,6 @@ We need a Python example here
  * No return behavior
  * Called when an airdrop has been called
 
-## ModifyDamage
-
-``` csharp
-void ModifyDamage(TakeDamage takeDamage, DamageEvent damage)
-{
-    Puts("ModifyDamage works!");
-}
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` python
-We need a Python example here
-```
-
- * Called from RustLegacyCore.OnProcessDamageEvent
- * Returning a non-null value overrides default behavior
- * Called when any kind of entity takes damage
- * Modify the DamageEvent object and return it to 'apply' the modifications
-
 ## OnHurt
 
 ``` csharp
