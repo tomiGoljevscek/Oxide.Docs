@@ -14,7 +14,7 @@ includes:
   - legacy/hooks_entity
   - legacy/hooks_item
   - legacy/hooks_structure
-  - library_functions
+  - legacy/library_functions
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>
