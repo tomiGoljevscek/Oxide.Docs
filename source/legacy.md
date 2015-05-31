@@ -9,6 +9,11 @@ language_tabs:
 
 includes:
   - plugin_hooks
+  - legacy/hooks_general
+  - legacy/hooks_player
+  - legacy/hooks_entity
+  - legacy/hooks_item
+  - legacy/hooks_structure
   - library_functions
 
 toc_footers:

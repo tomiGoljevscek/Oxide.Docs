@@ -9,6 +9,7 @@ language_tabs:
 
 includes:
   - plugin_hooks
+  - library_functions
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>

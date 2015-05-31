@@ -9,6 +9,9 @@ language_tabs:
 
 includes:
   - plugin_hooks
+  - sdtd/hooks_general
+  - sdtd/hooks_player
+  - sdtd/hooks_entity
   - library_functions
 
 toc_footers:

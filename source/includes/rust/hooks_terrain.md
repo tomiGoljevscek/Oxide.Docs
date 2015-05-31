@@ -3,7 +3,7 @@
 ## OnTerrainInitialized
 
 ``` csharp
-private void OnTerrainInitialized()
+void OnTerrainInitialized()
 {
     Puts("OnTerrainInitialized works!");
 }

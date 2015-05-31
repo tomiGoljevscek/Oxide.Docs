@@ -9,7 +9,7 @@
 ## Init
 
 ``` csharp
-private void Init()
+void Init()
 {
     Puts("Init works!");
 }
@@ -34,7 +34,7 @@ We need a Python example here
 ## LoadDefaultConfig
 
 ``` csharp
-private void LoadDefaultConfig()
+void LoadDefaultConfig()
 {
     Puts("LoadDefaultConfig works!");
 }
@@ -58,7 +58,7 @@ We need a Python example here
 ## OnFrame
 
 ``` csharp
-private void OnFrame()
+void OnFrame()
 {
     Puts("OnFrame works!");
 }
@@ -81,7 +81,7 @@ We need a Python example here
 ## Unload
 
 ``` csharp
-private void Unload()
+void Unload()
 {
     Puts("Unload works!");
 }
@@ -104,7 +104,7 @@ We need a Python example here
 ## OnPluginLoaded
 
 ``` csharp
-private void OnPluginLoaded(Plugin pluginName)
+void OnPluginLoaded(Plugin pluginName)
 {
     Puts("OnPluginLoaded works!");
 }
@@ -127,7 +127,7 @@ We need a Python example here
 ## OnPluginUnloaded
 
 ``` csharp
-private void OnPluginUnloaded(Plugin pluginName)
+void OnPluginUnloaded(Plugin pluginName)
 {
     Puts("OnPluginUnloaded works!");
 }

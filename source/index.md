@@ -11,7 +11,6 @@ includes:
   - introduction
   - getting_started
   - games_supported
-  - plugin_hooks
   - commands
   - configurations
   - data_tables
