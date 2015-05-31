@@ -10,7 +10,7 @@ language_tabs:
 includes:
   - introduction
   - getting_started
-  - games_supported
+  - supported_games
   - commands
   - configurations
   - data_tables

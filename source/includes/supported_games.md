@@ -1,4 +1,4 @@
-# Games Supported
+# Supported Games
 
 ## Rust
 
@@ -16,7 +16,7 @@ Oxide support for Rust Legacy is mostly complete, but it may receive fixes as ne
 
 Oxide support for 7 Days to Die is currently limited, and in a very alpha state. More hooks will be added soon.
 
-**[Homepage](http://7daystodie.com/) | [Steam Page](http://store.steampowered.com/app/251570/) | [API documentation](7dtd.html)**
+**[Homepage](http://7daystodie.com/) | [Steam Page](http://store.steampowered.com/app/251570/) | [API documentation](sdtd.html)**
 
 ## Reign of Kings
 
