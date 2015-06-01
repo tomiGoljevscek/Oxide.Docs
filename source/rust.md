@@ -1,5 +1,6 @@
 ---
 title: Oxide API for Rust
+short_code: rust
 
 language_tabs:
   - csharp

@@ -1,5 +1,6 @@
 ---
 title: Oxide API for Rust Legacy
+short_code: legacy
 
 language_tabs:
   - csharp

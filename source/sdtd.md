@@ -1,5 +1,6 @@
 ---
 title: Oxide API for 7 Days to Die
+short_code: sdtd
 
 language_tabs:
   - csharp

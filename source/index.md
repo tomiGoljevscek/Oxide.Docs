@@ -1,5 +1,5 @@
 ---
-title: Oxide Plugin API Reference
+title: Oxide API Reference
 
 language_tabs:
   - csharp

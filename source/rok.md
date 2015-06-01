@@ -1,5 +1,6 @@
 ---
 title: Oxide API for Reign of Kings
+short_code: rok
 
 language_tabs:
   - csharp
