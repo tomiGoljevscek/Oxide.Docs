@@ -18,6 +18,9 @@ set :fonts_dir, 'fonts'
 # Activate automatic page reloading
 activate :livereload
 
+# Create folders for each page
+activate :directory_indexes
+
 # Activate the syntax highlighter
 activate :syntax
 

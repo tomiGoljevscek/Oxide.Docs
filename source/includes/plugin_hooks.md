@@ -1,10 +1,10 @@
 # Plugin Hooks
 
 **Available for all supported games:**  
-[![Rust](images/icon-rust.png)](rust.html)
-[![Rust Legacy](images/icon-legacy.png)](legacy.html)
-[![7 Days to Die](images/icon-7dtd.png)](sdtd.html)
-[![Reign of Kings](images/icon-rok.png)](rok.html)
+[![Rust](icon-rust.png)](/rust/)
+[![Rust Legacy](icon-legacy.png)](/legacy/)
+[![7 Days to Die](icon-7dtd.png)](/sdtd/)
+[![Reign of Kings](icon-rok.png)](/rok/)
 
 ## Init
 
