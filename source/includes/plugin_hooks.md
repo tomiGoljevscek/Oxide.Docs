@@ -2,10 +2,10 @@
 
 **Available for all supported games**
 
-[![Rust](icon-rust.png)](/rust/)
-[![Rust Legacy](icon-legacy.png)](/legacy/)
-[![7 Days to Die](icon-sdtd.png)](/sdtd/)
-[![Reign of Kings](icon-rok.png)](/rok/)
+[![Rust](icon-rust.png)](/Docs/rust/)
+[![Rust Legacy](icon-legacy.png)](/Docs/legacy/)
+[![7 Days to Die](icon-sdtd.png)](/Docs/sdtd/)
+[![Reign of Kings](icon-rok.png)](/Docs/rok/)
 
 ## Init
 
