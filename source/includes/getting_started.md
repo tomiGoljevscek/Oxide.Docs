@@ -3,7 +3,8 @@
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("Title of Plugin", "Description", "Your Name", "0.1.0", ResourceId = 681)]
+    [Info("Title of Plugin", "Your Name", "0.1.0", ResourceId = 681)]
+    [Description("This is what my plugin does")]
     public class PluginName : RustPlugin
     {
         // This is where your plugin will do its magic
@@ -14,7 +15,7 @@ namespace Oxide.Plugins
 ``` javascript
 var PluginName = {
     Title : "Title of Plugin",
-    Description : "Plugin description",
+    Description : "This is what my plugin does",
     Author : "Your Name",
     Version : V(0, 1, 0),
     ResourceId : 681
@@ -25,7 +26,7 @@ var PluginName = {
 
 ``` lua
 PLUGIN.Title = "Title of Plugin"
-PLUGIN.Description = "Plugin description"
+PLUGIN.Description = "This is what my plugin does"
 PLUGIN.Author = "Your Name"
 PLUGIN.Version = V(0, 1, 0)
 PLUGIN.ResourceId = 681
@@ -37,7 +38,7 @@ PLUGIN.ResourceId = 681
 class PluginName:
     def __init__(self):
         self.Title = "Title of Plugin"
-        self.Description = "Plugin description"
+        self.Description = "This is what my plugin does"
         self.Author = "Your Name"
         self.Version = V(0, 1, 0)
         self.ResourceId = 681
