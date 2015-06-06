@@ -380,3 +380,128 @@ We need a Python example here
  * Called from BasePlayer.EndSleeping()
  * No return behavior
  * Called when a player awakes
+
+## OnWeaponThrown
+
+``` csharp
+void OnWeaponThrown(BasePlayer player, BaseEntity entity)
+{
+    Puts("OnWeaponThrown works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from RustCore.OnWeaponThrow
+ * No return behavior
+ * Called when a player throws a weapon (grenade, c4, ...)
+
+## OnRocketLaunched
+
+``` csharp
+void OnRocketLaunched(BasePlayer player, BaseEntity entity)
+{
+    Puts("OnRocketLaunched works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from RustCore.OnRocketLaunch
+ * No return behavior
+ * Called when a player launches a rocket
+
+## OnWeaponFired
+
+``` csharp
+void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjectile projectile, ProtoBuf.ProjectileShoot projectiles)
+{
+    Puts("OnWeaponFired works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from RustCore.OnWeaponFire
+ * No return behavior
+ * Called when a player fires a weapon
+
+## CanBeWounded
+
+``` csharp
+void CanBeWounded(BasePlayer player, HitInfo info) 
+{
+    Puts("CanBeWounded works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from BasePlayer.EligibleForWounding
+ * Returning true or false will cancel default behavior
+ * Called when a player dies
+
+## CanLootPlayer
+
+``` csharp
+void CanLootPlayer(BasePlayer player, BasePlayer target) 
+{
+    Puts("CanLootPlayer works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from BasePlayer.CanBeLooted
+ * Returning true or false will cancel default behavior
+ * Called when a player attempts to loot another player

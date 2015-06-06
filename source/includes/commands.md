@@ -20,7 +20,7 @@ version or oxide.version
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0, ResourceId = 999)] 
+    [Info("Example", "Oxide Team", 1.0)] 
     [Description("This example illustrates how to create a chat command.")]
     class Example : RustPlugin
     {
@@ -57,7 +57,7 @@ namespace Oxide.Plugins
     [Description("This example illustrates how to create a console command.")]
     class Example : RustPlugin
     {
-        [ConsoleCommand("oxide.save")]
+        [ConsoleCommand("plugin.save")]
         private void SaveCommand(ConsoleSystem.Arg arg)
         {
             PrintToConsole(arg.Player(), "Saving the world data");

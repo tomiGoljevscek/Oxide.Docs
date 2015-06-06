@@ -68,7 +68,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)] 
     [Description("This example illustrates how to update a value in a configuration file.")]
-    class Examplet : RustPlugin
+    class Example : RustPlugin
     {
         [ChatCommand("Test")]
         private void Test(BasePlayer player, string command, string[] args)

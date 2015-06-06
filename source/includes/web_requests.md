@@ -16,7 +16,7 @@ namespace Oxide.Plugins
     {
         private readonly WebRequests webRequests = Interface.GetMod().GetLibrary<WebRequests>("WebRequests");
 
-        [ChatCommand("getreqeust")]
+        [ChatCommand("getrequest")]
         private void ExampleGetRequest(BasePlayer player, string command, string[] args)
         {
             webRequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", (code, response) => WebRequestCallback(code, response, player), this);
@@ -26,14 +26,13 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                Puts($"Couldn't get an answer from Google for {player.displayName}");
+                Puts("Couldn't get an answer from Google for " + player.displayName);
                 return;
             }
-            Puts($"Google answered for {player.displayName}: {response}");
+            Puts("Google answered for " + player.displayName + ": " + response);
         }
     }
 }
-
 ```
 
 ``` javascript
@@ -84,8 +83,8 @@ namespace Oxide.Plugins
     {
         private readonly WebRequests webRequests = Interface.GetMod().GetLibrary<WebRequests>("WebRequests");
 
-        [ChatCommand("getreqeust")]
-        private void ExampleGetRequest(BasePlayer player, string command, string[] args)
+        [ChatCommand("postrequest")]
+        private void ExamplePostRequest(BasePlayer player, string command, string[] args)
         {
             webRequests.EnqueuePost("http://www.google.com/search?q=Oxide+Mod", "param1=value1&param2=value2", (code, response) => WebRequestCallback(code, response, player), this);
         }
@@ -94,14 +93,13 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                Puts($"Couldn't get an answer from Google for {player.displayName}");
+                Puts("Couldn't get an answer from Google for " + player.displayName);
                 return;
             }
-            Puts($"Google answered for {player.displayName}: {response}");
+            Puts("Google answered for " + player.displayName + ": " + response);
         }
     }
 }
-
 ```
 
 ``` javascript

@@ -25,6 +25,106 @@ We need a Python example here
  * Return a ItemCraftTask object to modify behavior
  * Called right after an item has started crafting
 
+## OnItemCraftFinished
+
+``` csharp
+void OnItemCraftFinished(ItemCraftTask task, Item item)
+{
+    Puts("OnItemCraftFinished works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from ItemCrafter.FinishCrafting
+ * No return behavior
+ * Called right after an item has been crafted
+
+## OnItemResearch
+
+``` csharp
+void OnItemResearch(Item item, BasePlayer player)
+{
+    Puts("OnItemResearch works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from ResearchTable.DoResearch
+ * Returning a non-null value will cancel default behavior
+ * Called right before a player begins to research an item
+
+## OnItemResearchStart
+
+``` csharp
+void OnItemResearchStart(ResearchTable table)
+{
+    Puts("OnItemResearchStart works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from ResearchTable.DoResearch
+ * No return behavior
+ * Called when a player has started researching an item
+
+## OnItemResearchEnd
+
+``` csharp
+void OnItemResearchEnd(ResearchTable table, float chance)
+{
+    Puts("OnItemResearchEnd works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from RustCore.OnItemResearchEnds
+ * Returning a float will affect if researching is succesful or not
+ * Called right before a player finishes researching an item
+
 ## OnItemDeployed
 
 ``` csharp
@@ -151,7 +251,32 @@ We need a Python example here
  * Called from Item.UseOneItem
  * No return behavior
  * Called right after a consumable item is used
+ 
+## OnHealingItemUse
 
+``` csharp
+void OnHealingItemUse(HeldEntity item, BasePlayer target)
+{
+    Puts("OnHealingItemUse works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from SyringeWeapon.GiveEffectsTo and MedicalTool.GiveEffectsTo
+ * Returning a non-null value will cancel default behavior
+ * Called right before a Syringe or Medkit item is used
+ 
 ## OnConsumeFuel
 
 ``` csharp
