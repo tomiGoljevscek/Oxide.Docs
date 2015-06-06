@@ -5,7 +5,35 @@ Sends a HTTP web request to the specified URL. Returns true if the web request w
 ## Get method
 
 ``` csharp
-We need a CSharp example here
+using Oxide.Core;
+using Oxide.Core.Libraries;
+
+namespace Oxide.Plugins
+{
+    [Info("Example", "Oxide Team", 1.0)]
+    [Description("This example illustrates how to use a GET WebRequest.")]
+    class Example : RustPlugin
+    {
+        private readonly WebRequests webRequests = Interface.GetMod().GetLibrary<WebRequests>("WebRequests");
+
+        [ChatCommand("getreqeust")]
+        private void ExampleGetRequest(BasePlayer player, string command, string[] args)
+        {
+            webRequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", (code, response) => WebRequestCallback(code, response, player), this);
+        }
+
+        private void WebRequestCallback(int code, string response, BasePlayer player)
+        {
+            if (response == null || code != 200)
+            {
+                Puts($"Couldn't get an answer from Google for {player.displayName}");
+                return;
+            }
+            Puts($"Google answered for {player.displayName}: {response}");
+        }
+    }
+}
+
 ```
 
 ``` javascript
@@ -45,7 +73,35 @@ Returns true/false
 ## Post method
 
 ``` csharp
-We need a CSharp example here
+using Oxide.Core;
+using Oxide.Core.Libraries;
+
+namespace Oxide.Plugins
+{
+    [Info("Example", "Oxide Team", 1.0)]
+    [Description("This example illustrates how to use a POST WebRequest.")]
+    class Example : RustPlugin
+    {
+        private readonly WebRequests webRequests = Interface.GetMod().GetLibrary<WebRequests>("WebRequests");
+
+        [ChatCommand("getreqeust")]
+        private void ExampleGetRequest(BasePlayer player, string command, string[] args)
+        {
+            webRequests.EnqueuePost("http://www.google.com/search?q=Oxide+Mod", "param1=value1&param2=value2", (code, response) => WebRequestCallback(code, response, player), this);
+        }
+
+        private void WebRequestCallback(int code, string response, BasePlayer player)
+        {
+            if (response == null || code != 200)
+            {
+                Puts($"Couldn't get an answer from Google for {player.displayName}");
+                return;
+            }
+            Puts($"Google answered for {player.displayName}: {response}");
+        }
+    }
+}
+
 ```
 
 ``` javascript

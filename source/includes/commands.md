@@ -18,7 +18,20 @@ version or oxide.version
 ## Chat commands
 
 ``` csharp
-We need a CSharp example here
+namespace Oxide.Plugins
+{
+    [Info("Example", "Oxide Team", 1.0, ResourceId = 999)] 
+    [Description("This example illustrates how to create a chat command.")]
+    class Example : RustPlugin
+    {
+        [ChatCommand("save")]
+        private void SaveCommand(BasePlayer player, string command, string[] args)
+        {
+            PrintToChat(player, "Saving the world data!");
+            SaveRestore.Save();
+        }
+    }
+}
 ```
 
 ``` javascript
@@ -36,7 +49,22 @@ We need a Python example here
 ## Console commands
 
 ``` csharp
-We need a CSharp example here
+using UnityEngine;
+
+namespace Oxide.Plugins
+{
+    [Info("Example", "Oxide Team", 1.0)] 
+    [Description("This example illustrates how to create a console command.")]
+    class Example : RustPlugin
+    {
+        [ConsoleCommand("oxide.save")]
+        private void SaveCommand(ConsoleSystem.Arg arg)
+        {
+            PrintToConsole(arg.Player(), "Saving the world data");
+            SaveRestore.Save();
+        }
+    }
+}
 ```
 
 ``` javascript
