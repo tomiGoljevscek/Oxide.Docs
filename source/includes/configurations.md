@@ -3,7 +3,24 @@
 ## Creating a configuration
 
 ``` csharp
-We need a CSharp example here
+namespace Oxide.Plugins
+{
+    [Info("Example", "Oxide Team", 1.0)]
+    [Description("This example illustrates how to use a basic configuration file.")]
+    class Example : RustPlugin
+    {
+        protected override void LoadDefaultConfig()
+        {
+            PrintWarning("Creating a new configuration file.");
+            Config.Clear();
+            Config["ShowJoinMessage"] = true;
+            Config["ShowLeaveMessage"] = true;
+            Config["JoinMessage"] = "Welcome to this server";
+            Config["LeaveMessage"] = "Goodbye";
+            SaveConfig();
+        }
+    }
+}
 ```
 
 ``` javascript
@@ -47,7 +64,23 @@ Since many users won't want to (or can't) edit the plugin directly to change the
 ## Saving a configuration
 
 ``` csharp
-We need a CSharp example here
+namespace Oxide.Plugins
+{
+    [Info("Example", "Oxide Team", 1.0)] 
+    [Description("This example illustrates how to update a value in a configuration file.")]
+    class Example : RustPlugin
+    {
+        [ChatCommand("Test")]
+        private void Test(BasePlayer player, string command, string[] args)
+        {
+            if ((bool) Config["ShowJoinMessage"])
+                Config["ShowJoinMessage"] = false;
+            else
+                Config["ShowJoinMessage"] = true;
+            SaveConfig();
+        }
+    }
+}
 ```
 
 ``` javascript

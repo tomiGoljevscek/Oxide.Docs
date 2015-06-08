@@ -9,7 +9,8 @@ Timers are great for delaying code, allowing it to be run later.
 > Basic example of timer.Once
 
 ``` csharp
-We need a CSharp example here
+timer.Once(3, () => PrintToChat("Hello world!"));
+timer.In(3, () => PrintToChat("Hello world!"));
 ```
 
 ``` javascript
@@ -30,10 +31,10 @@ def my_callback_func():
 timer.Once(3, Action(my_callback_func), self.Plugin)
 ```
 
-> Example of timer.Once with a table
+> Example of timer.Once stored in a variable or table
 
 ``` csharp
-We need a CSharp example here
+var timerVariable = timer.In(3, () => PrintToChat("Hello world!"));
 ```
 
 ``` javascript
@@ -61,12 +62,12 @@ Executes the specified function once after the specified delay.
 > Basic example of timer.Repeat
 
 ``` csharp
-We need a CSharp example here
+timer.Repeat(10, 0, () => PrintToChat("Hello world!"));
 ```
 
 ``` javascript
 timer.Repeat(10, 0, function() {
-    rust.BroadcastChat("SERVER", "Hello world!");Placeholder
+    rust.BroadcastChat("SERVER", "Hello world!");
 }, this.Plugin);
 ```
 
@@ -91,7 +92,8 @@ If "repeats" is specified, the function will only be called "repeats" times.
 > Basic example of timer.NextFrame
 
 ``` csharp
-We need a CSharp example here
+// This is not implemented for C#, the following can be used instead:
+timer.Once(1, 0.0f, () => PrintToChat("Hello world"));
 ```
 
 ``` javascript
@@ -99,7 +101,9 @@ We need a JavaScript example here
 ```
 
 ``` lua
-We need a Lua example here
+timer.NextFrame(function()
+    rust.BroadcastChat("SERVER", "Hello world!")
+);
 ```
 
 ``` python
@@ -110,10 +114,12 @@ Executes the specified function at the next frame.
 
 ## Destroying a timer
 
-> Basic example in Unload
+> Basic example
 
 ``` csharp
-We need a CSharp example here
+if (timerVariable != null) {
+    timerVariable.Destroy();
+}
 ```
 
 ``` javascript
@@ -131,26 +137,6 @@ end
 ``` python
 if timerVariable:
     timerVariable.Destroy()
-```
-
-> Example in Unload with a table
-
-``` csharp
-We need a CSharp example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` lua
-for key, value in pairs(timersVariable) do
-    timersVariable[key]:Destroy()
-end
-```
-
-``` python
-We need a Python example here
 ```
 
 When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
