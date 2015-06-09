@@ -71,3 +71,21 @@ namespace Oxide.Plugins
 Oxide support for Reign of Kings is currently limited, and in a very alpha state. More hooks will be added soon.
 
 **[Homepage](http://www.reignofkings.net/) | [Steam Page](http://store.steampowered.com/app/344760/) | [API documentation](rok.html)**
+
+## Beasts of Prey
+
+``` csharp
+namespace Oxide.Plugins
+{
+    [Info("BoP Plugin", "Author", 1.0, ResourceId = 1126)]
+    [Description("This is a plugin for Beasts of Prey")]
+    public class PluginName : BeastsOfPreyPlugin
+    {
+        // This is where your plugin will do its magic
+    }
+}
+```
+
+Oxide support for Beasts of Prey is currently limited, and in a very alpha state. More hooks will be added soon.
+
+**[Homepage](http://www.beastsofprey.com/) | [Steam Page](http://store.steampowered.com/app/299860/) | [API documentation](/bop/)**
