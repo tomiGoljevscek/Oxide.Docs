@@ -18,6 +18,7 @@ includes:
   - rust/hooks_structure
   - rust/hooks_terrain
   - rust/library_functions
+  - rust/item_list
   - rust/styling_messages
 
 toc_footers:
