@@ -8,15 +8,10 @@ language_tabs:
   - python
 
 includes:
-  - introduction
-  - getting_started
+  - overview
   - supported_games
-  - commands
-  - configurations
-  - data_tables
-  - permissions
-  - timers
-  - web_requests
+  - getting_help
+  - contributing
   - compiling_source
 
 toc_footers:

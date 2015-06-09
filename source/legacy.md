@@ -16,6 +16,12 @@ includes:
   - legacy/hooks_item
   - legacy/hooks_structure
   - legacy/library_functions
+  - commands
+  - configurations
+  - data_tables
+  - permissions
+  - timers
+  - web_requests
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>

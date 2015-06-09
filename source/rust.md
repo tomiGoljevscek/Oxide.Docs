@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - rust/plugin_basics
   - plugin_hooks
   - rust/hooks_general
   - rust/hooks_player
@@ -18,6 +19,12 @@ includes:
   - rust/hooks_structure
   - rust/hooks_terrain
   - rust/library_functions
+  - commands
+  - configurations
+  - data_tables
+  - permissions
+  - timers
+  - web_requests
   - rust/item_list
   - rust/styling_messages
 

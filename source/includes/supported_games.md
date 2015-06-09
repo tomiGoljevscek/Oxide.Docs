@@ -1,18 +1,10 @@
 # Supported Games
 
-## Rust
+Plugins can currently be developed for the games [Rust](#rust), [Rust Legacy](#rust-legacy), [Reign of Kings](#reign-of-kings), [7 Days to Die](#7-days-to-die), [The Forest](#the-forest), [Beasts of Prey](#beasts-of-prey), and [The Dead Linger](#the-dead-linger), with support for more on the way!
 
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("Rust Plugin", "Author", 1.0, ResourceId = 714)]
-    [Description("This is a plugin for Rust Experimental")]
-    public class PluginName : RustPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
+Oxide provides support for multiple programming languages to develop plugins: [CSharp](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)), [JavaScript](http://en.wikipedia.org/wiki/JavaScript), [Lua](http://www.lua.org/), and [Python](http://en.wikipedia.org/wiki/Python_(programming_language)). Make them as complicated or as simple as you'd like, your imagination is the limit!
+
+## Rust
 
 Oxide support for Rust _(formerly Rust Experimental)_ is actively developed, though you can already do a vast amount of things with it. This is the version of Rust supported by the Facepunch developers.
 
@@ -20,35 +12,11 @@ Oxide support for Rust _(formerly Rust Experimental)_ is actively developed, tho
 
 ## Rust Legacy
 
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("RustLegacy Plugin", "Author", 1.0, ResourceId = 917)]
-    [Description("This is a plugin for Rust Legacy")]
-    public class PluginName : RustLegacyPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
-
 Oxide support for Rust Legacy is mostly complete, but it may receive fixes as needed. The game itself has been discontinued by the developers though. You can access this version of Rust by using the `-beta legacy` command-line parameter with SteamCMD.
 
 **[Homepage](http://playrust.com/) | [Steam Page](http://store.steampowered.com/app/252490/) | [API documentation](/Docs/legacy/)**
 
 ## 7 Days to Die
-
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("SDTD Plugin", "Author", 1.0, ResourceId = 813)]
-    [Description("This is a plugin for Seven Days To Die")]
-    public class PluginName : SevenDaysPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
 
 Oxide support for 7 Days to Die is currently limited, and in a very alpha state. More hooks will be added soon.
 
@@ -56,35 +24,11 @@ Oxide support for 7 Days to Die is currently limited, and in a very alpha state.
 
 ## Reign of Kings
 
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("RoK Plugin", "Author", 1.0, ResourceId = 950)]
-    [Description("This is a plugin for Reign of Kings")]
-    public class PluginName : ReignOfKingsPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
-
 Oxide support for Reign of Kings is currently limited, and in a very alpha state. More hooks will be added soon.
 
 **[Homepage](http://www.reignofkings.net/) | [Steam Page](http://store.steampowered.com/app/344760/) | [API documentation](/Docs/rok/)**
 
 ## The Forest
-
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("Forest Plugin", "Author", 1.0, ResourceId = 1127)]
-    [Description("This is a plugin for Beasts of Prey")]
-    public class PluginName : ForestPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
 
 Oxide support for The Forest is currently limited, and in a very alpha state. More hooks will be added soon.
 
@@ -92,35 +36,11 @@ Oxide support for The Forest is currently limited, and in a very alpha state. Mo
 
 ## Beasts of Prey
 
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("BoP Plugin", "Author", 1.0, ResourceId = 1126)]
-    [Description("This is a plugin for Beasts of Prey")]
-    public class PluginName : BeastsOfPreyPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
-
 Oxide support for Beasts of Prey is currently limited, and in a very alpha state. More hooks will be added soon.
 
 **[Homepage](http://www.beastsofprey.com/) | [Steam Page](http://store.steampowered.com/app/299860/) | [API documentation](/Docs/bop/)**
 
 ## The Dead Linger
-
-``` csharp
-namespace Oxide.Plugins
-{
-    [Info("TDL Plugin", "Author", 1.0, ResourceId = 1124)]
-    [Description("This is a plugin for The Dead Linger")]
-    public class PluginName : DeadLingerPlugin
-    {
-        // This is where your plugin will do its magic
-    }
-}
-```
 
 Oxide support for The Dead Linger is currently limited, and in a very alpha state. More hooks will be added soon.
 
