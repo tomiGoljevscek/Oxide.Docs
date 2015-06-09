@@ -20,15 +20,20 @@ void Init()
 ```
 
 ``` javascript
-We need a JavaScript example here
+Init: function() {
+    print("Init works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:Init()
+    print("Init works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def Init():
+    print "Init works!"
 ```
 
  * Called when the plugin is being loaded
@@ -45,15 +50,20 @@ void LoadDefaultConfig()
 ```
 
 ``` javascript
-We need a JavaScript example here
+LoadDefaultConfig: function() {
+    print("LoadDefaultConfig works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:LoadDefaultConfig()
+    print("LoadDefaultConfig works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def LoadDefaultConfig():
+    print "LoadDefaultConfig works!"
 ```
 
  * Called when the config for the plugin should be initialized
@@ -69,15 +79,20 @@ void OnFrame()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnFrame: function() {
+    print("OnFrame works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnFrame()
+    print("OnFrame works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnFrame():
+    print "OnFrame works!"
 ```
 
  * Placeholder
@@ -92,15 +107,20 @@ void Unload()
 ```
 
 ``` javascript
-We need a JavaScript example here
+Unload: function() {
+    print("Unload works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:Unload()
+    print("Unload works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def Unload():
+    print "Unload works!"
 ```
 
  * Called when the plugin is being unloaded
@@ -115,15 +135,20 @@ void OnPluginLoaded(Plugin pluginName)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPluginLoaded: function() {
+    print("OnPluginLoaded works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPluginLoaded()
+    print("OnPluginLoaded works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPluginLoaded():
+    print "OnPluginLoaded works!"
 ```
 
  * Called when specified plugin has been loaded
@@ -138,15 +163,20 @@ void OnPluginUnloaded(Plugin pluginName)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPluginUnloaded: function() {
+    print("OnPluginUnloaded works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPluginUnloaded()
+    print("OnPluginUnloaded works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPluginUnloaded():
+    print "OnPluginUnloaded works!"
 ```
 
  * Called when specified plugin has been unloaded
