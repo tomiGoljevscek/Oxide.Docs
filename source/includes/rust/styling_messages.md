@@ -44,27 +44,27 @@ Another option is to use the name of the color. This is easier to understand but
 
 |Color Name                 |Hex Value  |Swatch                            |
 |---------------------------|-----------|----------------------------------|
-|aqua (same as cyan)        |#00ffffff  |![](images/cyan-swatch.png)       |
-|black                      |#000000ff  |![](images/black-swatch.png)      |
-|blue                       |#0000ffff  |![](images/blue-swatch.png)       |
-|brown                      |#a52a2aff  |![](images/brown-swatch.png)      |
-|cyan (same as aqua)        |#00ffffff  |![](images/cyan-swatch.png)       |
-|darkblue                   |#0000a0ff  |![](images/darkblue-swatch.png)   |
-|fuchsia (same as magenta)  |#ff00ffff  |![](images/magenta-swatch.png)    |
-|green                      |#008000ff  |![](images/green-swatch.png)      |
-|grey                       |#808080ff  |![](images/grey-swatch.png)       |
-|lightblue                  |#add8e6ff  |![](images/lightblue-swatch.png)  |
-|lime                       |#00ff00ff  |![](images/lime-swatch.png)       |
-|magenta (same as fuchsia)  |#ff00ffff  |![](images/magenta-swatch.png)    |
-|maroon                     |#800000ff  |![](images/maroon-swatch.png)     |
-|navy                       |#000080ff  |![](images/navy-swatch.png)       |
-|olive                      |#808000ff  |![](images/olive-swatch.png)      |
-|orange                     |#ffa500ff  |![](images/orange-swatch.png)     |
-|purple                     |#800080ff  |![](images/purple-swatch.png)     |
-|red                        |#ff0000ff  |![](images/red-swatch.png)        |
-|silver                     |#c0c0c0ff  |![](images/silver-swatch.png)     |
-|teal                       |#008080ff  |![](images/teal-swatch.png)       |
-|white                      |#ffffffff  |![](images/white-swatch.png)      |
-|yellow                     |#ffff00ff  |![](images/yellow-swatch.png)     |
+|aqua (same as cyan)        |#00ffffff  |![](cyan-swatch.png)       |
+|black                      |#000000ff  |![](black-swatch.png)      |
+|blue                       |#0000ffff  |![](blue-swatch.png)       |
+|brown                      |#a52a2aff  |![](brown-swatch.png)      |
+|cyan (same as aqua)        |#00ffffff  |![](cyan-swatch.png)       |
+|darkblue                   |#0000a0ff  |![](darkblue-swatch.png)   |
+|fuchsia (same as magenta)  |#ff00ffff  |![](magenta-swatch.png)    |
+|green                      |#008000ff  |![](green-swatch.png)      |
+|grey                       |#808080ff  |![](grey-swatch.png)       |
+|lightblue                  |#add8e6ff  |![](lightblue-swatch.png)  |
+|lime                       |#00ff00ff  |![](lime-swatch.png)       |
+|magenta (same as fuchsia)  |#ff00ffff  |![](magenta-swatch.png)    |
+|maroon                     |#800000ff  |![](maroon-swatch.png)     |
+|navy                       |#000080ff  |![](navy-swatch.png)       |
+|olive                      |#808000ff  |![](olive-swatch.png)      |
+|orange                     |#ffa500ff  |![](orange-swatch.png)     |
+|purple                     |#800080ff  |![](purple-swatch.png)     |
+|red                        |#ff0000ff  |![](red-swatch.png)        |
+|silver                     |#c0c0c0ff  |![](silver-swatch.png)     |
+|teal                       |#008080ff  |![](teal-swatch.png)       |
+|white                      |#ffffffff  |![](white-swatch.png)      |
+|yellow                     |#ffff00ff  |![](yellow-swatch.png)     |
 
 _Source: [http://docs.unity3d.com/Manual/StyledText.html](http://docs.unity3d.com/Manual/StyledText.html)_
