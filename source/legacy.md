@@ -19,7 +19,7 @@ includes:
   - legacy/library_functions
   - commands
   - configurations
-  - data_tables
+  - storing_data
   - permissions
   - timers
   - web_requests

@@ -1,4 +1,4 @@
-# Data Tables
+# Storing Data
 
 ## Creating a data table
 
@@ -74,7 +74,7 @@ We need a Python example here
 ```
 To store plugin related data to use in your plugin, you want to create a data file.
 
-## Saving a Data Table
+## Saving a data table
 
 ``` csharp
 using System.Collections.Generic;
