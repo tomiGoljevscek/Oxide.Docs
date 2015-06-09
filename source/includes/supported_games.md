@@ -89,3 +89,21 @@ namespace Oxide.Plugins
 Oxide support for Beasts of Prey is currently limited, and in a very alpha state. More hooks will be added soon.
 
 **[Homepage](http://www.beastsofprey.com/) | [Steam Page](http://store.steampowered.com/app/299860/) | [API documentation](/bop/)**
+
+## The Dead Linger
+
+``` csharp
+namespace Oxide.Plugins
+{
+    [Info("TDL Plugin", "Author", 1.0, ResourceId = 1124)]
+    [Description("This is a plugin for The Dead Linger")]
+    public class PluginName : DeadLingerPlugin
+    {
+        // This is where your plugin will do its magic
+    }
+}
+```
+
+Oxide support for The Dead Linger is currently limited, and in a very alpha state. More hooks will be added soon.
+
+**[Homepage](http://www.thedeadlinger.com/) | [Steam Page](http://store.steampowered.com/app/245130/) | [API documentation](/tdl/)**
