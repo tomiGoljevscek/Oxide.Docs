@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - legacy/getting_started
   - plugin_hooks
   - legacy/hooks_general
   - legacy/hooks_player

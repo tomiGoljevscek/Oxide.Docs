@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - tdl/getting_started
   - plugin_hooks
   - commands
   - configurations

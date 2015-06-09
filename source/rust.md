@@ -9,7 +9,7 @@ language_tabs:
   - python
 
 includes:
-  - rust/plugin_basics
+  - rust/getting_started
   - plugin_hooks
   - rust/hooks_general
   - rust/hooks_player

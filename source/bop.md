@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - bop/getting_started
   - plugin_hooks
   - commands
   - configurations

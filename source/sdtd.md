@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - sdtd/getting_started
   - plugin_hooks
   - sdtd/hooks_general
   - sdtd/hooks_player

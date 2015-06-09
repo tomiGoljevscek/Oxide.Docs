@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - forest/getting_started
   - plugin_hooks
   - commands
   - configurations

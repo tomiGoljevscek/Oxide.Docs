@@ -9,6 +9,7 @@ language_tabs:
   - python
 
 includes:
+  - rok/getting_started
   - plugin_hooks
   - rok/hooks_general
   - rok/hooks_player
