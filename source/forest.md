@@ -1,6 +1,6 @@
 ---
 title: Oxide API for The Forest
-short_code: bop
+short_code: forest
 
 language_tabs:
   - csharp
