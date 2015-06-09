@@ -1,6 +1,15 @@
 # Supported Games
 
-Plugins can currently be developed for the games [Rust](#rust), [Rust Legacy](#rust-legacy), [Reign of Kings](#reign-of-kings), [7 Days to Die](#7-days-to-die), [The Forest](#the-forest), [Beasts of Prey](#beasts-of-prey), and [The Dead Linger](#the-dead-linger), with support for more on the way!
+>
+[![Rust](rust/favicon-32x32.png)](/Docs/rust/)
+[![Rust Legacy](legacy/favicon-32x32.png)](/Docs/legacy/)
+[![7 Days to Die](sdtd/favicon-32x32.png)](/Docs/sdtd/)
+[![Reign of Kings](rok/favicon-32x32.png)](/Docs/rok/)
+[![The Forest](forest/favicon-32x32.png)](/Docs/forest/)
+[![Beasts of Prey](bop/favicon-32x32.png)](/Docs/bop/)
+[![The Dead Linger](tdl/favicon-32x32.png)](/Docs/tdl/)
+
+Plugins can currently be developed for the games [Rust](#rust), [Rust Legacy](#rust-legacy), [7 Days to Die](#7-days-to-die), [Reign of Kings](#reign-of-kings), [The Forest](#the-forest), [Beasts of Prey](#beasts-of-prey), and [The Dead Linger](#the-dead-linger), with support for more on the way!
 
 Oxide provides support for multiple programming languages to develop plugins: [CSharp](http://en.wikipedia.org/wiki/C_Sharp_(programming_language)), [JavaScript](http://en.wikipedia.org/wiki/JavaScript), [Lua](http://www.lua.org/), and [Python](http://en.wikipedia.org/wiki/Python_(programming_language)). Make them as complicated or as simple as you'd like, your imagination is the limit!
 
