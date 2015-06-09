@@ -16,7 +16,7 @@ namespace Oxide.Plugins
 
 Oxide support for Rust _(formerly Rust Experimental)_ is actively developed, though you can already do a vast amount of things with it. This is the version of Rust supported by the Facepunch developers.
 
-**[Homepage](http://playrust.com/) | [Steam Page](http://store.steampowered.com/app/252490/) | [API documentation](/rust/)**
+**[Homepage](http://playrust.com/) | [Steam Page](http://store.steampowered.com/app/252490/) | [API documentation](/Docs/rust/)**
 
 ## Rust Legacy
 
@@ -34,7 +34,7 @@ namespace Oxide.Plugins
 
 Oxide support for Rust Legacy is mostly complete, but it may receive fixes as needed. The game itself has been discontinued by the developers though. You can access this version of Rust by using the `-beta legacy` command-line parameter with SteamCMD.
 
-**[Homepage](http://playrust.com/) | [Steam Page](http://store.steampowered.com/app/252490/) | [API documentation](/legacy/)**
+**[Homepage](http://playrust.com/) | [Steam Page](http://store.steampowered.com/app/252490/) | [API documentation](/Docs/legacy/)**
 
 ## 7 Days to Die
 
@@ -52,7 +52,7 @@ namespace Oxide.Plugins
 
 Oxide support for 7 Days to Die is currently limited, and in a very alpha state. More hooks will be added soon.
 
-**[Homepage](http://7daystodie.com/) | [Steam Page](http://store.steampowered.com/app/251570/) | [API documentation](/sdtd/)**
+**[Homepage](http://7daystodie.com/) | [Steam Page](http://store.steampowered.com/app/251570/) | [API documentation](/Docs/sdtd/)**
 
 ## Reign of Kings
 
@@ -70,7 +70,7 @@ namespace Oxide.Plugins
 
 Oxide support for Reign of Kings is currently limited, and in a very alpha state. More hooks will be added soon.
 
-**[Homepage](http://www.reignofkings.net/) | [Steam Page](http://store.steampowered.com/app/344760/) | [API documentation](/rok/)**
+**[Homepage](http://www.reignofkings.net/) | [Steam Page](http://store.steampowered.com/app/344760/) | [API documentation](/Docs/rok/)**
 
 ## The Forest
 
@@ -88,7 +88,7 @@ namespace Oxide.Plugins
 
 Oxide support for The Forest is currently limited, and in a very alpha state. More hooks will be added soon.
 
-**[Homepage](http://survivetheforest.com/) | [Steam Page](http://store.steampowered.com/app/242760/) | [API documentation](/forest/)**
+**[Homepage](http://survivetheforest.com/) | [Steam Page](http://store.steampowered.com/app/242760/) | [API documentation](/Docs/forest/)**
 
 ## Beasts of Prey
 
@@ -106,7 +106,7 @@ namespace Oxide.Plugins
 
 Oxide support for Beasts of Prey is currently limited, and in a very alpha state. More hooks will be added soon.
 
-**[Homepage](http://www.beastsofprey.com/) | [Steam Page](http://store.steampowered.com/app/299860/) | [API documentation](/bop/)**
+**[Homepage](http://www.beastsofprey.com/) | [Steam Page](http://store.steampowered.com/app/299860/) | [API documentation](/Docs/bop/)**
 
 ## The Dead Linger
 
@@ -124,4 +124,4 @@ namespace Oxide.Plugins
 
 Oxide support for The Dead Linger is currently limited, and in a very alpha state. More hooks will be added soon.
 
-**[Homepage](http://www.thedeadlinger.com/) | [Steam Page](http://store.steampowered.com/app/245130/) | [API documentation](/tdl/)**
+**[Homepage](http://www.thedeadlinger.com/) | [Steam Page](http://store.steampowered.com/app/245130/) | [API documentation](/Docs/tdl/)**

@@ -2,10 +2,13 @@
 
 **Available for all supported games**
 
-[![Rust](icon-rust.png)](/Docs/rust/)
-[![Rust Legacy](icon-legacy.png)](/Docs/legacy/)
-[![7 Days to Die](icon-sdtd.png)](/Docs/sdtd/)
-[![Reign of Kings](icon-rok.png)](/Docs/rok/)
+[![Rust](rust/favicon-32x32.png)](/Docs/rust/)
+[![Rust Legacy](legacy/favicon-32x32.png)](/Docs/legacy/)
+[![7 Days to Die](sdtd/favicon-32x32.png)](/Docs/sdtd/)
+[![Reign of Kings](rok/favicon-32x32.png)](/Docs/rok/)
+[![The Forest](forest/favicon-32x32.png)](/Docs/forest/)
+[![Beasts of Prey](bop/favicon-32x32.png)](/Docs/bop/)
+[![The Dead Linger](tdl/favicon-32x32.png)](/Docs/tdl/)
 
 ## Init
 
