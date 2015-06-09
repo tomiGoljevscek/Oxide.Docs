@@ -72,6 +72,24 @@ Oxide support for Reign of Kings is currently limited, and in a very alpha state
 
 **[Homepage](http://www.reignofkings.net/) | [Steam Page](http://store.steampowered.com/app/344760/) | [API documentation](rok.html)**
 
+## The Forest
+
+``` csharp
+namespace Oxide.Plugins
+{
+    [Info("Forest Plugin", "Author", 1.0, ResourceId = 1127)]
+    [Description("This is a plugin for Beasts of Prey")]
+    public class PluginName : ForestPlugin
+    {
+        // This is where your plugin will do its magic
+    }
+}
+```
+
+Oxide support for The Forest is currently limited, and in a very alpha state. More hooks will be added soon.
+
+**[Homepage](http://survivetheforest.com/) | [Steam Page](http://store.steampowered.com/app/242760/) | [API documentation](/forest/)**
+
 ## Beasts of Prey
 
 ``` csharp
