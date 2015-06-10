@@ -10,7 +10,7 @@ void OnServerInitialized()
 ```
 
 ``` javascript
-OnServerInitialized: function () {
+OnServerInitialized: function() {
     print("OnServerInitialized works!");
 }
 ```

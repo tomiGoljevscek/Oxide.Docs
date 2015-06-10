@@ -492,7 +492,7 @@ void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjecti
 ```
 
 ``` javascript
-OnWeaponFired: function(projectile, player, projectile, projectiles)
+OnWeaponFired: function(baseProjectile, player, modProjectile, projectiles)
 {
     print("OnWeaponFired works!");
 }
