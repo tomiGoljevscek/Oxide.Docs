@@ -10,7 +10,10 @@ void OnUserApprove(Network.Connection connection)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnUserApprove: function(connection)
+{
+    print("OnUserApprove works!");
+}
 ```
 
 ``` lua
@@ -35,7 +38,10 @@ void CanClientLogin(Network.Connection connection)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanClientLogin: function(connection)
+{
+    print("CanClientLogin works!");
+}
 ```
 
 ``` lua
@@ -60,7 +66,10 @@ void OnPlayerConnected(Network.Message packet)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerConnected: function(packet)
+{
+    print("OnPlayerConnected works!");
+}
 ```
 
 ``` lua
@@ -86,7 +95,10 @@ void OnPlayerDisconnected(BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerDisconnected: function(player)
+{
+    print("OnPlayerDisconnected works!");
+}
 ```
 
 ``` lua
@@ -111,7 +123,10 @@ void OnPlayerInit(BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerInit: function(player)
+{
+    print("OnPlayerInit works!");
+}
 ```
 
 ``` lua
@@ -136,7 +151,10 @@ void OnFindSpawnPoint()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnFindSpawnPoint: function()
+{
+    print("OnFindSpawnPoint works!");
+}
 ```
 
 ``` lua
@@ -161,7 +179,10 @@ void OnPlayerRespawned(BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerRespawned: function(player)
+{
+    print("OnPlayerRespawned works!");
+}
 ```
 
 ``` lua
@@ -188,7 +209,10 @@ void OnPlayerChat(ConsoleSystem.Arg arg)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerChat: function(arg)
+{
+    print("OnPlayerChat works!");
+}
 ```
 
 ``` lua
@@ -212,7 +236,10 @@ void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnRunPlayerMetabolism: function(metabolism)
+{
+    print("OnRunPlayerMetabolism works!");
+}
 ```
 
 ``` lua
@@ -240,7 +267,10 @@ void OnPlayerAttack(BasePlayer attacker, HitInfo hitInfo)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerAttack: function(attacker, hitInfo)
+{
+    print("OnPlayerAttack works!");
+}
 ```
 
 ``` lua
@@ -266,7 +296,10 @@ void OnPlayerLoot(PlayerLoot lootInventory, BaseEntity targetEntity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerLoot: function(lootInventory, targetEntity)
+{
+    print("OnPlayerLoot works!");
+}
 ```
 
 ``` lua
@@ -291,7 +324,10 @@ void OnPlayerLoot(PlayerLoot lootInventory, BasePlayer targetPlayer)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerLoot: function(lootInventory, targetPlayer)
+{
+    print("OnPlayerLoot works!");
+}
 ```
 
 ``` lua
@@ -316,7 +352,10 @@ void OnPlayerLoot(PlayerLoot lootInventory, Item targetItem)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerLoot: function(lootInventory, targetItem)
+{
+    print("OnPlayerLoot works!");
+}
 ```
 
 ``` lua
@@ -341,7 +380,10 @@ void OnPlayerInput(BasePlayer player, InputState input)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerInput: function(player, input)
+{
+    print("OnPlayerInput works!");
+}
 ```
 
 ``` lua
@@ -366,7 +408,10 @@ void OnPlayerSleepEnded(BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerSleepEnded: function(player)
+{
+    print("OnPlayerSleepEnded works!");
+}
 ```
 
 ``` lua
@@ -391,7 +436,10 @@ void OnWeaponThrown(BasePlayer player, BaseEntity entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnWeaponThrown: function(player, entity)
+{
+    print("OnWeaponThrown works!");
+}
 ```
 
 ``` lua
@@ -416,7 +464,10 @@ void OnRocketLaunched(BasePlayer player, BaseEntity entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnRocketLaunched: function(player, entity)
+{
+    print("OnRocketLaunched works!");
+}
 ```
 
 ``` lua
@@ -441,7 +492,10 @@ void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjecti
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnWeaponFired: function(baseProjectile, player, modProjectile, projectiles)
+{
+    print("OnWeaponFired works!");
+}
 ```
 
 ``` lua
@@ -466,7 +520,10 @@ void CanBeWounded(BasePlayer player, HitInfo info)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanBeWounded: function(player, info) 
+{
+    print("CanBeWounded works!");
+}
 ```
 
 ``` lua
@@ -491,7 +548,10 @@ void CanLootPlayer(BasePlayer player, BasePlayer target)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanLootPlayer: function(player, target) 
+{
+    print("CanLootPlayer works!");
+}
 ```
 
 ``` lua

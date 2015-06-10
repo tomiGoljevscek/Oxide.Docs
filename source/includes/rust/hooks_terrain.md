@@ -10,7 +10,10 @@ void OnTerrainInitialized()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnTerrainInitialized: function()
+{
+    print("OnTerrainInitialized works!");
+}
 ```
 
 ``` lua
