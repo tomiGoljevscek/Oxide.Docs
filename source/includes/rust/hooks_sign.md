@@ -10,7 +10,10 @@ void CanUpdateSign(Signage sign, BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanUpdateSign: function(sign, player)
+{
+    print("CanUpdateSign works!");
+}
 ```
 
 ``` lua
@@ -35,7 +38,10 @@ void OnSignLocked(Signage sign, BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnSignLocked: function(sign, player)
+{
+    print("OnSignLocked works!");
+}
 ```
 
 ``` lua
@@ -60,7 +66,10 @@ void OnSignUpdated(Signage sign, BasePlayer player, string text)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnSignUpdated: function(sign, player, text)
+{
+    print("OnSignUpdated works!");
+}
 ```
 
 ``` lua

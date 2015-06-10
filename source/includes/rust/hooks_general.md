@@ -10,7 +10,9 @@ void OnServerInitialized()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnServerInitialized: function () {
+    print("OnServerInitialized works!");
+}
 ```
 
 ``` lua
@@ -35,7 +37,9 @@ void OnServerSave()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnServerSave: function() {
+    print("OnServerSave works!");
+}
 ```
 
 ``` lua
@@ -60,7 +64,9 @@ void OnServerShutdown()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnServerShutdown: function() {
+    print("OnServerShutdown works!");
+}
 ```
 
 ``` lua
@@ -86,7 +92,9 @@ void OnTick()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnTick: function() {
+    print("OnTick works!");
+}
 ```
 
 ``` lua
@@ -111,7 +119,9 @@ void BuildServerTags(IList<string> tags)
 ```
 
 ``` javascript
-We need a JavaScript example here
+BuildServerTags: function(tags) {
+    tags.Add("mymodtag");
+}
 ```
 
 ``` lua
@@ -136,7 +146,9 @@ void OnRunCommand(ConsoleSystem.Arg arg)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnRunCommand: function(arg) {
+    print("OnRunCommand works!");
+}
 ```
 
 ``` lua

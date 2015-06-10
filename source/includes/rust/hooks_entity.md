@@ -10,7 +10,10 @@ void OnEntitySpawned(BaseNetworkable entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntitySpawned: function(entity)
+{
+    print("OnEntitySpawned works!");
+}
 ```
 
 ``` lua
@@ -35,7 +38,10 @@ void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo hitInfo)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityTakeDamage: function(entity, hitInfo)
+{
+    print("OnEntityTakeDamage works!");
+}
 ```
 
 ``` lua
@@ -62,7 +68,10 @@ void OnEntityDeath(BaseCombatEntity entity, HitInfo hitInfo)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityDeath: function(entity, hitInfo)
+{
+    print("OnEntityDeath works!");
+}
 ```
 
 ``` lua
@@ -88,7 +97,10 @@ void OnEntityEnter(TriggerBase triggerBase, BaseEntity entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityEnter: function(triggerBase, entity)
+{
+    print("OnEntityEnter works!");
+}
 ```
 
 ``` lua
@@ -113,7 +125,10 @@ void OnEntityLeave(TriggerBase triggerBase, BaseEntity entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityLeave: function(triggerBase, entity)
+{
+    print("OnEntityLeave works!");
+}
 ```
 
 ``` lua
@@ -138,7 +153,10 @@ void OnEntityGroundMissing(BaseEntity entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityGroundMissing: function(entity)
+{
+    print("OnEntityGroundMissing works!");
+}
 ```
 
 ``` lua

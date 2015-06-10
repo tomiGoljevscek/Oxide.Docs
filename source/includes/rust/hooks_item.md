@@ -10,7 +10,10 @@ void OnItemCraft(ItemCraftTask item)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemCraft: function(item)
+{
+    print("OnItemCraft works!");
+}
 ```
 
 ``` lua
@@ -35,7 +38,10 @@ void OnItemCraftFinished(ItemCraftTask task, Item item)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemCraftFinished: function(task, item)
+{
+    print("OnItemCraftFinished works!");
+}
 ```
 
 ``` lua
@@ -60,7 +66,10 @@ void OnItemResearch(Item item, BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemResearch: function(item, player)
+{
+    print("OnItemResearch works!");
+}
 ```
 
 ``` lua
@@ -85,7 +94,10 @@ void OnItemResearchStart(ResearchTable table)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemResearchStart: function(table)
+{
+    print("OnItemResearchStart works!");
+}
 ```
 
 ``` lua
@@ -110,7 +122,11 @@ void OnItemResearchEnd(ResearchTable table, float chance)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemResearchEnd: function(table, chance)
+{
+    print("OnItemResearchEnd works!");
+    return chance;
+}
 ```
 
 ``` lua
@@ -135,7 +151,10 @@ void OnItemDeployed(Deployer deployer, BaseEntity deployedEntity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemDeployed: function(deployer, deployedEntity)
+{
+    print("OnItemDeployed works!");
+}
 ```
 
 ``` lua
@@ -160,7 +179,10 @@ void OnItemAddedToContainer(ItemContainer container, Item item)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemAddedToContainer: function(container, item)
+{
+    print("OnItemAddedToContainer works!");
+}
 ```
 
 ``` lua
@@ -186,7 +208,10 @@ void OnItemRemovedFromContainer(ItemContainer container, Item item)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnItemRemovedFromContainer: function(container, item)
+{
+    print("OnItemRemovedFromContainer works!");
+}
 ```
 
 ``` lua
@@ -212,7 +237,10 @@ void OnGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnGather: function(dispenser, entity, item)
+{
+    print("OnGather works!");
+}
 ```
 
 ``` lua
@@ -237,7 +265,10 @@ void OnConsumableUse(Item item)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnConsumableUse: function(item)
+{
+    print("OnConsumableUse works!");
+}
 ```
 
 ``` lua
@@ -262,7 +293,10 @@ void OnHealingItemUse(HeldEntity item, BasePlayer target)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnHealingItemUse: function(item, target)
+{
+    print("OnHealingItemUse works!");
+}
 ```
 
 ``` lua
@@ -287,7 +321,10 @@ void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnConsumeFuel: function(oven, fuel, burnable)
+{
+    print("OnConsumeFuel works!");
+}
 ```
 
 ``` lua
@@ -312,7 +349,10 @@ void OnLoseCondition(Item item, ref float amount)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnLoseCondition: function(item, amount)
+{
+    print("OnLoseCondition works!");
+}
 ```
 
 ``` lua

@@ -10,7 +10,10 @@ void CanOpenDoor(BasePlayer player, BaseLock lock)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanOpenDoor: function(player, lock)
+{
+    print("CanOpenDoor works!");
+}
 ```
 
 ``` lua
@@ -34,7 +37,10 @@ void CanOpenDoor(BasePlayer player, CodeLock lock)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanOpenDoor: function(player, lock)
+{
+    print("CanOpenDoor works!");
+}
 ```
 
 ``` lua
@@ -58,7 +64,10 @@ void CanOpenDoor(BasePlayer player, KeyLock lock)
 ```
 
 ``` javascript
-We need a JavaScript example here
+CanOpenDoor: function(player, lock)
+{
+    print("CanOpenDoor works!");
+}
 ```
 
 ``` lua
@@ -82,7 +91,10 @@ void OnEntityBuilt(Planner planner, UnityEngine/GameObject component)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityBuilt: function(planner, component)
+{
+    print("OnEntityBuilt works!");
+}
 ```
 
 ``` lua
@@ -107,7 +119,10 @@ void OnBuildingBlockUpgrade(BuildingBlock block, BasePlayer player, BuildingGrad
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnBuildingBlockUpgrade: function(block, player, grade)
+{
+    print("OnBuildingBlockUpgrade works!");
+}
 ```
 
 ``` lua
@@ -132,7 +147,10 @@ void OnBuildingBlockRotate(BuildingBlock block, BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnBuildingBlockRotate: function(block, player)
+{
+    print("OnBuildingBlockRotate works!");
+}
 ```
 
 ``` lua
@@ -157,7 +175,10 @@ void OnBuildingBlockDemolish(BuildingBlock block, BasePlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnBuildingBlockDemolish: function(block, player)
+{
+    print("OnBuildingBlockDemolish works!");
+}
 ```
 
 ``` lua

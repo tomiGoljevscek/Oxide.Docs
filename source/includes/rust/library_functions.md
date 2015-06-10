@@ -185,7 +185,7 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+rust.RunServerCommand("server.hostname", "New Server Name")
 ```
 
 ``` lua
@@ -216,7 +216,7 @@ void ForcePlayerPosition(BasePlayer player, string x, string y, string z)
 ```
 
 ``` javascript
-We need a JavaScript example here
+rust.ForcePlayerPosition(player, x, y, z)
 ```
 
 ``` lua
@@ -238,7 +238,9 @@ We need a CSharp example here
 ```
 
 ``` javascript
-We need a JavaScript example here
+// Get value of private property
+var field = myObject.GetType().GetField("propertyName", rust.PrivateBindingFlag());
+var privateFieldValue = field.GetValue(myObject);
 ```
 
 ``` lua
