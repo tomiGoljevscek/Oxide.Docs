@@ -1,6 +1,6 @@
 # Item List
 
-|Item ID        |Item Name                     |Item Shortname            |
+| Item Id       | Item Name                    | Item Shortname           |
 |---------------|------------------------------|--------------------------|
 | 79011270      | Handmade Shell               | ammo_handmade_shell      |
 | 4131848       | Pistol Bullet                | ammo_pistol              |
@@ -108,6 +108,7 @@
 | -1057903190   | Metal Ore                    | metal_ore                |
 | 403808850     | Metal Chest Plate            | metal_plate_torso        |
 | -126749089    | Metal - Refined              | metal_refined            |
+| -1411620422   | Mining Quarry                | mining.quarry            |
 | 843418712     | Mushroom                     | mushroom                 |
 | 3387378       | Note                         | note                     |
 | 106434956     | Paper                        | paper                    |
@@ -139,8 +140,9 @@
 | -1289478934   | Stone Hatchet                | stonehatchet             |
 | -892070738    | Stones                       | stones                   |
 | -891243783    | Sulfur                       | sulfur                   |
-| 890858652     | Sulfur Ore                   | sulfur_ore               |  
+| 890858652     | Sulfur Ore                   | sulfur_ore               |
 | -1087461384   | Supply Signal                | supply_signal            |
+| 1293049486    | Survey Charge                | surveycharge             |
 | 84844513      | Medical Syringe              | syringe_medical          |
 | -804398164    | Camera                       | tool_camera              |
 | 110547964     | Torch                        | torch                    |
@@ -150,9 +152,9 @@
 | 1461745071    | Urban Pants                  | urban_pants              |
 | 1464719305    | Green T-Shirt                | urban_shirt              |
 | 1909231589    | Vagabond Jacket              | vagabond_jacket          |
-| 112903447     | Water                        | water                    | 
+| 112903447     | Water                        | water                    |
 | -76833860     | Large Water Catcher          | water_catcher_large      |
-| -70027896     | Small Water Catcher          | water_catcher_smal l     | 
+| -70027896     | Small Water Catcher          | water_catcher_small      |
 | -1176979440   | Burned Wolf Meat             | wolfmeat_burned          |
 | -1153983671   | Cooked Wolf Meat             | wolfmeat_cooked          |
 | 180908550     | Raw Wolf Meat                | wolfmeat_raw             |
