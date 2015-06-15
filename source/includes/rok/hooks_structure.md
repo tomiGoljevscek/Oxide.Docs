@@ -3,7 +3,7 @@
 ## OnCubePlacement
 
 ``` csharp
-void OnCubePlacement(CubePlaceEvent event)
+void OnCubePlacement(CubePlaceEvent e)
 {
     Puts("OnCubePlacement works!");
 }
@@ -28,7 +28,7 @@ We need a Python example here
 ## OnCubeTakeDamage
 
 ``` csharp
-void OnCubeTakeDamage(CubeDamageEvent event)
+void OnCubeTakeDamage(CubeDamageEvent e)
 {
     Puts("OnCubeTakeDamage works!");
 }
@@ -53,7 +53,7 @@ We need a Python example here
 ## OnCubeDestroyed
 
 ``` csharp
-void OnCubeDestroyed(CubeDestroyEvent event)
+void OnCubeDestroyed(CubeDestroyEvent e)
 {
     Puts("OnCubeDestroyed works!");
 }

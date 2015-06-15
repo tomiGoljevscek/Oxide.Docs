@@ -3,7 +3,7 @@
 ## OnEntityHealthChange
 
 ``` csharp
-void OnEntityHealthChange(EntityDamageEvent event)
+void OnEntityHealthChange(EntityDamageEvent e)
 {
     Puts("OnEntityHealthChange works!");
 }
@@ -27,7 +27,7 @@ We need a Python example here
 ## OnEntityDeath
 
 ``` csharp
-void OnEntityDeath(EntityDeathEvent event)
+void OnEntityDeath(EntityDeathEvent e)
 {
     Puts("OnEntityDeath works!");
 }

@@ -77,7 +77,7 @@ We need a Python example here
 ## OnPlayerSpawn
 
 ``` csharp
-void OnPlayerSpawn(PlayerFirstSpawnEvent event)
+void OnPlayerSpawn(PlayerFirstSpawnEvent e)
 {
     Puts("OnPlayerSpawn works!");
 }
@@ -102,7 +102,7 @@ We need a Python example here
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(PlayerEvent event)
+void OnPlayerChat(PlayerEvent e)
 {
     Puts("OnPlayerChat works!");
 }
