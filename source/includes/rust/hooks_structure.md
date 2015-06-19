@@ -1,18 +1,18 @@
 # Structure Hooks
 
-## CanOpenDoor
+## CanUseDoor
 
 ``` csharp
-void CanOpenDoor(BasePlayer player, BaseLock lock)
+void CanUseDoor(BasePlayer player, BaseLock lock)
 {
-    Puts("CanOpenDoor works!");
+    Puts("CanUseDoor works!");
 }
 ```
 
 ``` javascript
-CanOpenDoor: function(player, lock)
+CanUseDoor: function(player, lock)
 {
-    print("CanOpenDoor works!");
+    print("CanUseDoor works!");
 }
 ```
 
@@ -27,19 +27,19 @@ We need a Python example here
  * Called from BaseLock.OnTryToOpen and BaseLock.OnTryToClose
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-## CanOpenDoor
+## CanUseDoor
 
 ``` csharp
-void CanOpenDoor(BasePlayer player, CodeLock lock)
+void CanUseDoor(BasePlayer player, CodeLock lock)
 {
-    Puts("CanOpenDoor works!");
+    Puts("CanUseDoor works!");
 }
 ```
 
 ``` javascript
-CanOpenDoor: function(player, lock)
+CanUseDoor: function(player, lock)
 {
-    print("CanOpenDoor works!");
+    print("CanUseDoor works!");
 }
 ```
 
@@ -54,19 +54,19 @@ We need a Python example here
  * Called from CodeLock.OnTryToOpen and CodeLock.OnTryToClose
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-## CanOpenDoor
+## CanUseDoor
 
 ``` csharp
-void CanOpenDoor(BasePlayer player, KeyLock lock)
+void CanUseDoor(BasePlayer player, KeyLock lock)
 {
-    Puts("CanOpenDoor works!");
+    Puts("CanUseDoor works!");
 }
 ```
 
 ``` javascript
-CanOpenDoor: function(player, lock)
+CanUseDoor: function(player, lock)
 {
-    print("CanOpenDoor works!");
+    print("CanUseDoor works!");
 }
 ```
 

@@ -139,7 +139,7 @@ We need a Python example here
 
  * Called from BasePlayer.PlayerInit
  * No return behavior
- * Called when the player is initialising (after they've connected, before they wake up)
+ * Called when the player is initializing (after they've connected, before they wake up)
 
 ## OnFindSpawnPoint
 
@@ -422,7 +422,7 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from BasePlayer.EndSleeping()
+ * Called from BasePlayer.EndSleeping
  * No return behavior
  * Called when a player awakes
 
