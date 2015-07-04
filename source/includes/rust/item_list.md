@@ -39,7 +39,9 @@
 | -195677881    | Black Raspberries            | black raspberries        |
 | 93832698      | Blood                        | blood                    |
 | -1063412582   | Blueberries                  | blueberries              |
+| 965033297     | Bone Club                    | bone_club                |
 | -1405028248   | Bone Fragments               | bone_fragments           |
+| 68998734      | Bota Bag                     | botabag                  |
 | -1355335174   | Hunting Bow                  | bow_hunting              |
 | -1115134734   | Repair Bench                 | box_repair_bench         |
 | -232304374    | Wood Storage Box             | box_wooden               |
@@ -64,6 +66,7 @@
 | -341443994    | Chocolate Bar                | chocholate               |
 | 94756378      | Cloth                        | cloth                    |
 | -1590712184   | Coffee Can Helmet            | coffeecan_helmet         |
+| 3059624       | Corn                         | corn                     |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
 | 1202088526    | Door Key                     | door_key                 |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
@@ -80,6 +83,7 @@
 | -347516682    | Salvaged Hammer              | hammer_salvaged          |
 | -1381682752   | Candle Hat                   | hat.candle               |
 | -450738836    | Miners Hat                   | hat.miner                |
+| 124310981     | Wolf Headdress               | hat.wolf                 |
 | 698310895     | Hatchet                      | hatchet                  |
 | 324040353     | Hazmat Boots                 | hazmat_boots             |
 | 1595693146    | Hazmat Gloves                | hazmat_gloves            |
@@ -115,12 +119,18 @@
 | -578028723    | Pick Axe                     | pickaxe                  |
 | -1333972664   | Eoka Pistol                  | pistol_eoka              |
 | 698465195     | Revolver                     | pistol_revolver          |
+| -2117223451   | Semi-Automatic Pistol        | pistol_semiauto          |
+| -225085592    | Pumpkin                      | pumpkin                  |
 | -904691670    | Research Table               | research_table           |
 | -1461461759   | Assault Rifle                | rifle_ak                 |
 | -10407508     | Bolt Action Rifle            | rifle_bolt               |
+| 878016432     | Riot Helmet                  | riot_helmet              |
+| 249996912     | Road Sign Jacket             | roadsign_jacket          |
 | 3506021       | Rock                         | rock                     |
 | -2016319317   | Rocket Launcher              | rocket_launcher          |
 | 1595199470    | Salt Water                   | salt_water               |
+| 583366917     | Corn Seed                    | seed.corn                |
+| 466113771     | Pumpkin Seed                 | seed.pumpkin             |
 | -964239615    | Pump Shotgun                 | shotgun_pump             |
 | 1038756428    | Waterpipe Shotgun            | shotgun_waterpipe        |
 | -1962514734   | Huge Wooden Sign             | sign.wooden.huge         |
@@ -147,6 +157,7 @@
 | -804398164    | Camera                       | tool_camera              |
 | 110547964     | Torch                        | torch                    |
 | 1091325318    | Snap Trap                    | trap_bear                |
+| 1884146064    | Land Mine                    | trap_landmine            |
 | 1449233812    | Urban Boots                  | urban_boots              |
 | -2102654629   | Red Jacket                   | urban_jacket             |
 | 1461745071    | Urban Pants                  | urban_pants              |
