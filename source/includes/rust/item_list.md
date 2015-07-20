@@ -39,8 +39,11 @@
 | -195677881    | Black Raspberries            | black raspberries        |
 | 93832698      | Blood                        | blood                    |
 | -1063412582   | Blueberries                  | blueberries              |
+| 233016681     | Bone Jacket                  | bone_armor_jacket        |
+| -402573343    | Bone Armor Pants             | bone_armor_pants         |
 | 965033297     | Bone Club                    | bone_club                |
 | -1405028248   | Bone Fragments               | bone_fragments           |
+| 1922580340    | "The Accident" Book          | book.accident            |
 | 68998734      | Bota Bag                     | botabag                  |
 | -1355335174   | Hunting Bow                  | bow_hunting              |
 | -1115134734   | Repair Bench                 | box_repair_bench         |
@@ -95,6 +98,14 @@
 | -640548383    | Raw Human Meat               | humanmeat_raw            |
 | 160151277     | Spoiled Human Meat           | humanmeat_spoiled        |
 | 188900688     | Salvaged Icepick             | icepick_salvaged         |
+| -1617395334   | Blue Jacket                  | jacket.blue              |
+| -1690888907   | Desert Jacket                | jacket.desertcamo        |
+| 1405133283    | Green Jacket                 | jacket.green             |
+| 641140896     | Hunting Jacket               | jacket.hunter            |
+| 2023044374    | Multicam Jacket              | jacket.multicam          |
+| 1333314417    | Red Jacket                   | jacket.red               |
+| 2060891043    | Snowcamo Jacket              | jacket.snowcamo          |
+| -747802446    | Urban Camo Jacket            | jacket.urbancamo         |
 | -1571634604   | Snow Jacket - Red            | jacket_snow              |
 | -1476032418   | Snow Jacket - Black          | jacket_snow2             |
 | -1476032417   | Snow Jacket - Wood Camo      | jacket_snow3             |
@@ -106,6 +117,7 @@
 | 1908195100    | Lock                         | lock.key                 |
 | -1146752164   | Blue Longsleeve T-Shirt      | longsleeve_tshirt_blue   |
 | 28178745      | Low Grade Fuel               | lowgradefuel             |
+| 825308669     | Machete                      | machete                  |
 | 107868        | Paper Map                    | map                      |
 | 1582195969    | Metal Facemask               | metal_facemask           |
 | -351194901    | Metal Fragments              | metal_fragments          |
@@ -115,6 +127,7 @@
 | -1411620422   | Mining Quarry                | mining.quarry            |
 | 843418712     | Mushroom                     | mushroom                 |
 | 3387378       | Note                         | note                     |
+| -1824341447   | Blue Jeans                   | pants.jeans              |
 | 106434956     | Paper                        | paper                    |
 | -578028723    | Pick Axe                     | pickaxe                  |
 | -1333972664   | Eoka Pistol                  | pistol_eoka              |
@@ -126,9 +139,11 @@
 | -10407508     | Bolt Action Rifle            | rifle_bolt               |
 | 878016432     | Riot Helmet                  | riot_helmet              |
 | 249996912     | Road Sign Jacket             | roadsign_jacket          |
+| -1550538360   | Road Sign Kilt               | roadsign_kilt            |
 | 3506021       | Rock                         | rock                     |
 | -2016319317   | Rocket Launcher              | rocket_launcher          |
 | 1595199470    | Salt Water                   | salt_water               |
+| 1013861083    | Salvaged Sword               | salvaged_sword           |
 | 583366917     | Corn Seed                    | seed.corn                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
 | -964239615    | Pump Shotgun                 | shotgun_pump             |
@@ -158,8 +173,14 @@
 | 110547964     | Torch                        | torch                    |
 | 1091325318    | Snap Trap                    | trap_bear                |
 | 1884146064    | Land Mine                    | trap_landmine            |
+| -70121197     | Black Tshirt                 | tshirt.black             |
+| 1660456359    | Sandbox Game Shirt           | tshirt.gmod              |
+| 313231737     | Black Longsleeve T-Shirt     | tshirt.long.black        |
+| -128288219    | Grey Longsleeve T-Shirt      | tshirt.long.grey         |
+| 1497979892    | Orange Longsleeve T-Shirt    | tshirt.long.orange       |
+| 1772591674    | Yellow Longsleeve T-Shirt    | tshirt.long.yellow       |
 | 1449233812    | Urban Boots                  | urban_boots              |
-| -2102654629   | Red Jacket                   | urban_jacket             |
+| -2102654629   | Red Hoodie                   | urban_jacket             |
 | 1461745071    | Urban Pants                  | urban_pants              |
 | 1464719305    | Green T-Shirt                | urban_shirt              |
 | 1909231589    | Vagabond Jacket              | vagabond_jacket          |
@@ -171,3 +192,5 @@
 | 180908550     | Raw Wolf Meat                | wolfmeat_raw             |
 | -70021998     | Spoiled Wolf Meat            | wolfmeat_spoiled         |
 | 3655341       | Wood                         | wood                     |
+| 600859680     | Wood Chestplate              | wood_armor_jacket        |
+| 1548955210    | Wood Armor Pants             | wood_armor_pants         |
