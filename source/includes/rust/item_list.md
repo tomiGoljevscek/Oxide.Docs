@@ -70,6 +70,8 @@
 | 94756378      | Cloth                        | cloth                    |
 | -1590712184   | Coffee Can Helmet            | coffeecan_helmet         |
 | 3059624       | Corn                         | corn                     |
+| 2123300234    | Crossbow                     | crossbow                 |
+| 1985396346    | Crude Oil                    | crude_oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
 | 1202088526    | Door Key                     | door_key                 |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
@@ -84,6 +86,10 @@
 | -1580059655   | Gun Powder                   | gunpowder                |
 | -1224598842   | Hammer                       | hammer                   |
 | -347516682    | Salvaged Hammer              | hammer_salvaged          |
+| 2018793804    | Beenie Hat                   | hat.beenie.black         |
+| 1866238317    | Blue Beenie Hat              | hat.beenie.blue          |
+| 2023594064    | Green Beenie Hat             | hat.beenie.green         |
+| -771067618    | Red Beenie Hat               | hat.beenie.red           |
 | -1381682752   | Candle Hat                   | hat.candle               |
 | -450738836    | Miners Hat                   | hat.miner                |
 | 124310981     | Wolf Headdress               | hat.wolf                 |
@@ -93,6 +99,10 @@
 | 1617759629    | Hazmat Helmet                | hazmat_helmet            |
 | 1671053806    | Hazmat Jacket                | hazmat_jacket            |
 | 336551612     | Hazmat Pants                 | hazmat_pants             |
+| 1412390345    | Black Hoodie                 | hoodie.black             |
+| -1478459056   | Blue Hoodie                  | hoodie.blue              |
+| 1417190605    | Green Hoodie                 | hoodie.green             |
+| 1095810548    | High Quality Metal Ore       | hq_metal_ore             |
 | -476817835    | Burned Human Meat            | humanmeat_burned         |
 | -453822066    | Cooked Human Meat            | humanmeat_cooked         |
 | -640548383    | Raw Human Meat               | humanmeat_raw            |
@@ -112,22 +122,29 @@
 | 821258270     | Bone Knife                   | knife_bone               |
 | 108061910     | Wooden Ladder                | ladder.wooden.wall       |
 | -51678842     | Lantern                      | lantern                  |
+| 241599572     | Large Furnace                | large_furnace            |
 | -789202811    | Large Medkit                 | largemedkit              |
 | -975723312    | Code Lock                    | lock.code                |
 | 1908195100    | Lock                         | lock.key                 |
 | -1146752164   | Blue Longsleeve T-Shirt      | longsleeve_tshirt_blue   |
+| -2144314143   | Longsword                    | Longsword                |
 | 28178745      | Low Grade Fuel               | lowgradefuel             |
+| 2390294       | Mace                         | Mace                     |
 | 825308669     | Machete                      | machete                  |
 | 107868        | Paper Map                    | map                      |
 | 1582195969    | Metal Facemask               | metal_facemask           |
 | -351194901    | Metal Fragments              | metal_fragments          |
 | -1057903190   | Metal Ore                    | metal_ore                |
 | 403808850     | Metal Chest Plate            | metal_plate_torso        |
-| -126749089    | Metal - Refined              | metal_refined            |
+| -126749089    | High Quality Metal           | metal_refined            |
+| -758925787    | Pump Jack                    | mining.pumpjack          |
 | -1411620422   | Mining Quarry                | mining.quarry            |
 | 843418712     | Mushroom                     | mushroom                 |
 | 3387378       | Note                         | note                     |
+| -1654763153   | Forest Camo Pants            | pants.forestcamo         |
 | -1824341447   | Blue Jeans                   | pants.jeans              |
+| -2128121771   | Snow Camo Pants              | pants.snowcamo           |
+| -1758180800   | Urban Camo Pants             | pants.urbancamo          |
 | 106434956     | Paper                        | paper                    |
 | -578028723    | Pick Axe                     | pickaxe                  |
 | -1333972664   | Eoka Pistol                  | pistol_eoka              |
@@ -143,9 +160,12 @@
 | 3506021       | Rock                         | rock                     |
 | -2016319317   | Rocket Launcher              | rocket_launcher          |
 | 1595199470    | Salt Water                   | salt_water               |
+| 417102139     | Salvaged Cleaver             | Salvaged Cleaver         |
 | 1013861083    | Salvaged Sword               | salvaged_sword           |
 | 583366917     | Corn Seed                    | seed.corn                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
+| -677893748    | Black Boots                  | shoes.boots.black        |
+| -461023122    | Tan Boots                    | shoes.boots.tan          |
 | -964239615    | Pump Shotgun                 | shotgun_pump             |
 | 1038756428    | Waterpipe Shotgun            | shotgun_waterpipe        |
 | -1962514734   | Huge Wooden Sign             | sign.wooden.huge         |
@@ -155,6 +175,7 @@
 | -1931345461   | Human Skull                  | skull_human              |
 | 1046518260    | Wolf Skull                   | skull_wolf               |
 | 1253290621    | Sleeping Bag                 | sleepingbag              |
+| 607928697     | Small Oil Refinery           | small_oil_refinery       |
 | 927253046     | Small Water Bottle           | smallwaterbottle         |
 | 109554112     | Custom SMG                   | smg_2                    |
 | 2085492774    | Thompson                     | smg_thompson             |
@@ -174,16 +195,21 @@
 | 1091325318    | Snap Trap                    | trap_bear                |
 | 1884146064    | Land Mine                    | trap_landmine            |
 | -70121197     | Black Tshirt                 | tshirt.black             |
+| 1660306630    | Blue Tshirt                  | tshirt.blue              |
+| 90379145      | Forest Camo Tshirt           | tshirt.forestcamo        |
 | 1660456359    | Sandbox Game Shirt           | tshirt.gmod              |
 | 313231737     | Black Longsleeve T-Shirt     | tshirt.long.black        |
 | -128288219    | Grey Longsleeve T-Shirt      | tshirt.long.grey         |
 | 1497979892    | Orange Longsleeve T-Shirt    | tshirt.long.orange       |
 | 1772591674    | Yellow Longsleeve T-Shirt    | tshirt.long.yellow       |
-| 1449233812    | Urban Boots                  | urban_boots              |
-| -2102654629   | Red Hoodie                   | urban_jacket             |
+| -84973915     | Red Tshirt                   | tshirt.red               |
+| -454959898    | Urban Camo Tshirt            | tshirt.urbancamo         |
+| 1449233812    | Brown Boots                  | urban_boots              |
+| -2102654629   | Hoodie                       | urban_jacket             |
 | 1461745071    | Urban Pants                  | urban_pants              |
 | 1464719305    | Green T-Shirt                | urban_shirt              |
 | 1909231589    | Vagabond Jacket              | vagabond_jacket          |
+| -1792066367   | High External Wall           | wall.external.high       |
 | 112903447     | Water                        | water                    |
 | -76833860     | Large Water Catcher          | water_catcher_large      |
 | -70027896     | Small Water Catcher          | water_catcher_small      |
