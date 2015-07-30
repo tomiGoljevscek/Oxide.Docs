@@ -54,7 +54,7 @@ Init: function() {
 
 var dataTable
 LoadDataFiles: function() {
-    dataTable = data.GetData("pluginName") || {};
+    dataTable = data.GetData("pluginName");
 }
 ```
 
