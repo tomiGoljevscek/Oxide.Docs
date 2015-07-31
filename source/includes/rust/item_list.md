@@ -80,6 +80,7 @@
 | 97513422      | Flare                        | flare                    |
 | 320893770     | Acoustic Guitar              | fun_guitar               |
 | -505639592    | Furnace                      | furnace                  |
+| 277631078     | Wind Turbine                 | generator.wind.scrap     |
 | 718197703     | Granola Bar                  | granolabar               |
 | 384204160     | Beancan Grenade              | grenade.beancan          |
 | -1308622549   | F1 Grenade                   | grenade.f1               |
@@ -91,6 +92,11 @@
 | 2023594064    | Green Beenie Hat             | hat.beenie.green         |
 | -771067618    | Red Beenie Hat               | hat.beenie.red           |
 | -1381682752   | Candle Hat                   | hat.candle               |
+| -645140128    | Baseball Cap                 | hat.cap.base             |
+| -645129495    | Blue Cap                     | hat.cap.blue             |
+| 691700588     | Forest Camo Cap              | hat.cap.forestcamo       |
+| 1480603220    | Green Cap                    | hat.cap.green            |
+| 117751842     | Red Cap                      | hat.cap.red              |
 | -450738836    | Miners Hat                   | hat.miner                |
 | 124310981     | Wolf Headdress               | hat.wolf                 |
 | 698310895     | Hatchet                      | hatchet                  |
@@ -124,6 +130,7 @@
 | -51678842     | Lantern                      | lantern                  |
 | 241599572     | Large Furnace                | large_furnace            |
 | -789202811    | Large Medkit                 | largemedkit              |
+| 50834473      | Leather                      | leather                  |
 | -975723312    | Code Lock                    | lock.code                |
 | 1908195100    | Lock                         | lock.key                 |
 | -1146752164   | Blue Longsleeve T-Shirt      | longsleeve_tshirt_blue   |
@@ -196,6 +203,8 @@
 | 1884146064    | Land Mine                    | trap_landmine            |
 | -70121197     | Black Tshirt                 | tshirt.black             |
 | 1660306630    | Blue Tshirt                  | tshirt.blue              |
+| -1092773987   | German Tshirt                | tshirt.flag.germany      |
+| 2095597329    | Russia Tshirt                | tshirt.flag.russia       |
 | 90379145      | Forest Camo Tshirt           | tshirt.forestcamo        |
 | 1660456359    | Sandbox Game Shirt           | tshirt.gmod              |
 | 313231737     | Black Longsleeve T-Shirt     | tshirt.long.black        |
@@ -209,7 +218,8 @@
 | 1461745071    | Urban Pants                  | urban_pants              |
 | 1464719305    | Green T-Shirt                | urban_shirt              |
 | 1909231589    | Vagabond Jacket              | vagabond_jacket          |
-| -1792066367   | High External Wall           | wall.external.high       |
+| -1792066367   | High External Wooden Wall    | wall.external.high       |
+| -496055048    | High External Stone Wall     | wall.external.high.stone |
 | 112903447     | Water                        | water                    |
 | -76833860     | Large Water Catcher          | water_catcher_large      |
 | -70027896     | Small Water Catcher          | water_catcher_small      |
