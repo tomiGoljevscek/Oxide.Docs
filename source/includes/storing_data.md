@@ -49,12 +49,12 @@ namespace Oxide.Plugins
 
 ``` javascript
 Init: function() {
-    this:LoadDataFiles();
+    this.LoadDataFiles();
 }
 
 var dataTable
 LoadDataFiles: function() {
-    dataTable = datafile.GetDataTable("pluginName") || {};
+    dataTable = data.GetData("pluginName");
 }
 ```
 
@@ -137,13 +137,13 @@ namespace Oxide.Plugins
 
 ``` javascript
 SaveDataFiles: function() {
-    datafile.SaveDataTable("pluginName");
+    data.SaveData("pluginName");
 }
 
 cmdTest: function(player, cmd, args) {
     var name = player.displayName;
     dataTable[name] = true;
-    this:SaveDataFiles();
+    this.SaveDataFiles();
 }
 ```
 
