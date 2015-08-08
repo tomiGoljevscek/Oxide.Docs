@@ -103,7 +103,7 @@ var ExamplePlugin {
             ingameConsole = true; // Is in game player console
 
             // Check player auth level in case the command is for admins only.
-            if (args.connection.player.net.connection.AuthLevel > 1) {
+            if (args.connection.player.net.connection.authLevel > 1) {
                 isAdmin = true;
             } else {
                 isAdmin = false;
@@ -112,7 +112,7 @@ var ExamplePlugin {
             ingameConsole = false; // External RCON console
             isAdmin = true;
         }
-        
+
         // You can get args with:
         if (args.HasArgs(2)) {
             var first = args.GetString(0); // Or maybe GetInt
