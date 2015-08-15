@@ -92,6 +92,7 @@
 | -1224598842   | Hammer                       | hammer                   |
 | -1976561211   | Salvaged Hammer              | hammer.salvaged          |
 | -1406876421   | Beenie Hat                   | hat.beenie               |
+| -1397343301   | Boonie Hat                   | hat.boonie               |
 | -1381682752   | Candle Hat                   | hat.candle               |
 | 696727039     | Baseball Cap                 | hat.cap                  |
 | -450738836    | Miners Hat                   | hat.miner                |
@@ -126,6 +127,7 @@
 | 3343606       | Mace                         | mace                     |
 | 825308669     | Machete                      | machete                  |
 | 107868        | Paper Map                    | map                      |
+| 997973965     | Improvised Balaclava         | mask.balaclava           |
 | -46848560     | Metal Facemask               | metal.facemask           |
 | 688032252     | Metal Fragments              | metal.fragments          |
 | -1059362949   | Metal Ore                    | metal.ore                |
