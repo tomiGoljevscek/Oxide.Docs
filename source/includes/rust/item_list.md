@@ -47,7 +47,6 @@
 | 459479619     | Bone Armor Pants             | bone.armor.pants         |
 | 919780768     | Bone Club                    | bone.club                |
 | -365801095    | Bone Fragments               | bone.fragments           |
-| 1922580340    | The Accident                 | book.accident            |
 | 68998734      | Bota Bag                     | botabag                  |
 | -853695669    | Hunting Bow                  | bow.hunting              |
 | -1026117678   | Repair Bench                 | box.repair.bench         |
