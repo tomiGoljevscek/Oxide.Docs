@@ -1,3 +1,7 @@
+# Use new Travis-CI infrastructure
+sudo: false
+
+# Source language
 rvm: 2.0.0
 
 # Run deployment script
