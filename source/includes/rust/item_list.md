@@ -127,6 +127,7 @@
 | 825308669     | Machete                      | machete                  |
 | 107868        | Paper Map                    | map                      |
 | 997973965     | Improvised Balaclava         | mask.balaclava           |
+| -46188931     | Bandana Mask                 | mask.bandana             |
 | -46848560     | Metal Facemask               | metal.facemask           |
 | 688032252     | Metal Fragments              | metal.fragments          |
 | -1059362949   | Metal Ore                    | metal.ore                |
