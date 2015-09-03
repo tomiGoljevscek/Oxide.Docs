@@ -3,15 +3,15 @@
 ## Default commands
 
 ```
-oxide.load *|<pluginname>+  
-oxide.unload *|<pluginname>+  
-oxide.reload *|<pluginname>+  
-oxide.grant <group|user> <name|id> <permission>  
-oxide.revoke <group|user> <name|id> <permission>  
-oxide.group <add|set> <name> [title] [rank]  
-oxide.group <remove|show> <name>  
-oxide.group <parent> <name> <parentName>  
-oxide.usergroup <add|remove> <username> <groupname>  
+load *|<pluginname>+  
+unload *|<pluginname>+  
+reload *|<pluginname>+  
+grant <group|user> <name|id> *|<permission>  
+revoke <group|user> <name|id> *|<permission>  
+group <add|set> <name> [title] [rank]  
+group <remove|show> <name>  
+group <parent> <name> <parentName>  
+usergroup <add|remove> <username> <groupname>  
 version or oxide.version
 ```
 
