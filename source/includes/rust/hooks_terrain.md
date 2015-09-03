@@ -10,20 +10,22 @@ void OnTerrainInitialized()
 ```
 
 ``` javascript
-OnTerrainInitialized: function()
-{
+OnTerrainInitialized: function() {
     print("OnTerrainInitialized works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnTerrainInitialized()
+    print("OnTerrainInitialized works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnTerrainInitialized(self):
+    print "OnTerrainInitialized works!"
 ```
 
- * Called from InitializePVT.Apply
- * No return behavior
+ * Called from TerrainMeta.CalculateChecksum
  * Called after the terrain generation process has completed
+ * No return behavior

@@ -10,18 +10,20 @@ void CanUseDoor(BasePlayer player, BaseLock lock)
 ```
 
 ``` javascript
-CanUseDoor: function(player, lock)
-{
+CanUseDoor: function(player, lock) {
     print("CanUseDoor works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanUseDoor(player, lock)
+    print("CanUseDoor works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanUseDoor(self, player, lock):
+    print "CanUseDoor works!"
 ```
 
  * Called from BaseLock.OnTryToOpen and BaseLock.OnTryToClose
@@ -37,18 +39,20 @@ void CanUseDoor(BasePlayer player, CodeLock lock)
 ```
 
 ``` javascript
-CanUseDoor: function(player, lock)
-{
+CanUseDoor: function(player, lock) {
     print("CanUseDoor works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanUseDoor(player, lock)
+    print("CanUseDoor works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanUseDoor(self, player, door):
+    print "CanUseDoor works!"
 ```
 
  * Called from CodeLock.OnTryToOpen and CodeLock.OnTryToClose
@@ -64,22 +68,84 @@ void CanUseDoor(BasePlayer player, KeyLock lock)
 ```
 
 ``` javascript
-CanUseDoor: function(player, lock)
-{
+CanUseDoor: function(player, lock) {
     print("CanUseDoor works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanUseDoor(player, lock)
+    print("CanUseDoor works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanUseDoor(self, player, lock):
+    print "CanUseDoor works!"
 ```
 
  * Called from KeyLock.OnTryToOpen and KeyLock.OnTryToClose
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+
+## OnDoorClosed
+
+``` csharp
+void OnDoorClosed(Door door, BasePlayer player)
+{
+    Puts("OnDoorClosed works!");
+}
+```
+
+``` javascript
+OnDoorClosed: function(door, player) {
+    print("OnDoorClosed works!");
+}
+```
+
+``` lua
+function PLUGIN:OnDoorClosed(door, player)
+    print("OnDoorClosed works!")
+end
+```
+
+``` python
+def OnDoorClosed(self, door, player):
+    print "OnDoorClosed works!"
+```
+
+ * Called from RustCore.IOnDoorClosed
+ * Called when a player closed a door
+ * No return behavior
+
+## OnDoorOpened
+
+``` csharp
+void OnDoorOpened(Door door, BasePlayer player)
+{
+    Puts("OnDoorOpened works!");
+}
+```
+
+``` javascript
+OnDoorOpened: function(door, player) {
+    print("OnDoorOpened works!");
+}
+```
+
+``` lua
+function PLUGIN:OnDoorOpened(door, player)
+    print("OnDoorOpened works!")
+end
+```
+
+``` python
+def OnDoorOpened(self, door, player):
+    print "OnDoorOpened works!"
+```
+
+ * Called from RustCore.IOnDoorOpened
+ * Called when a player opened a door
+ * No return behavior
 
 ## OnEntityBuilt
 
@@ -91,104 +157,142 @@ void OnEntityBuilt(Planner planner, UnityEngine/GameObject component)
 ```
 
 ``` javascript
-OnEntityBuilt: function(planner, component)
-{
+OnEntityBuilt: function(planner, component) {
     print("OnEntityBuilt works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityBuilt(planner, component)
+    print("OnEntityBuilt works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityBuilt(self, planner, component):
+    print "OnEntityBuilt works!"
 ```
 
  * Called from Planner.DoBuild
- * No return behavior
  * Called when any structure is built (walls, ceilings, stairs, etc.)
-
-## OnBuildingBlockUpgrade
-
-``` csharp
-void OnBuildingBlockUpgrade(BuildingBlock block, BasePlayer player, BuildingGrade.Enum grade)
-{
-    Puts("OnBuildingBlockUpgrade works!");
-}
-```
-
-``` javascript
-OnBuildingBlockUpgrade: function(block, player, grade)
-{
-    print("OnBuildingBlockUpgrade works!");
-}
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` python
-We need a Python example here
-```
-
- * Called from BuildingBlock.DoUpgradeToGrade
- * Returning a BuildingGrade.Enum grade will change the grade that will be upgraded to
- * Called when a player upgrades the grade of a BuildingBlock
-
-## OnBuildingBlockRotate
-
-``` csharp
-void OnBuildingBlockRotate(BuildingBlock block, BasePlayer player)
-{
-    Puts("OnBuildingBlockRotate works!");
-}
-```
-
-``` javascript
-OnBuildingBlockRotate: function(block, player)
-{
-    print("OnBuildingBlockRotate works!");
-}
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` python
-We need a Python example here
-```
-
- * Called from BuildingBlock.DoRotation
  * No return behavior
- * Called when a player rotates a BuildingBlock
 
-## OnBuildingBlockDemolish
+## OnStructureDemolish
 
 ``` csharp
-void OnBuildingBlockDemolish(BuildingBlock block, BasePlayer player)
+void OnStructureDemolish(BuildingBlock block, BasePlayer player)
 {
-    Puts("OnBuildingBlockDemolish works!");
+    Puts("OnStructureDemolish works!");
 }
 ```
 
 ``` javascript
-OnBuildingBlockDemolish: function(block, player)
-{
-    print("OnBuildingBlockDemolish works!");
+OnStructureDemolish: function(block, player) {
+    print("OnStructureDemolish works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnStructureDemolish(block, player)
+    print("OnStructureDemolish works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnStructureDemolish(self, block, player):
+    print "OnStructureDemolish works!"
 ```
 
  * Called from BuildingBlock.DoImmediateDemolish
- * Return true to cancel
  * Called when a player selects DemolishImmediate from the BuildingBlock menu
+ * Return true to cancel
+
+## OnStructureRepair
+
+``` csharp
+void OnStructureRepair(BuildingBlock block, BasePlayer player)
+{
+    Puts("OnStructureRepair works!");
+}
+```
+
+``` javascript
+OnStructureRepair: function(block, player) {
+    print("OnStructureRepair works!");
+}
+```
+
+``` lua
+function PLUGIN:OnStructureRepair(block, player)
+    print("OnStructureRepair works!")
+end
+```
+
+``` python
+def OnStructureRepair(self, block, player):
+    print "OnStructureRepair works!"
+```
+
+ * Called from BuildingBlock.DoRepair
+ * Called when a player repairs a BuildingBlock
+ * No return behavior
+
+## OnStructureRotate
+
+``` csharp
+void OnStructureRotate(BuildingBlock block, BasePlayer player)
+{
+    Puts("OnStructureRotate works!");
+}
+```
+
+``` javascript
+OnStructureRotate: function(block, player) {
+    print("OnStructureRotate works!");
+}
+```
+
+``` lua
+function PLUGIN:OnStructureRotate(block, player)
+    print("OnStructureRotate works!")
+end
+```
+
+``` python
+def OnStructureRotate(self, block, player):
+    print "OnStructureRotate works!"
+```
+
+ * Called from BuildingBlock.DoRotation
+ * Called when a player rotates a BuildingBlock
+ * No return behavior
+
+## OnStructureUpgrade
+
+``` csharp
+void OnStructureUpgrade(BuildingBlock block, BasePlayer player, BuildingGrade.Enum grade)
+{
+    Puts("OnStructureUpgrade works!");
+}
+```
+
+``` javascript
+OnStructureUpgrade: function(block, player, grade) {
+    print("OnStructureUpgrade works!");
+}
+```
+
+``` lua
+function PLUGIN:OnStructureUpgrade(block, player, grade)
+    print("OnStructureUpgrade works!")
+end
+```
+
+``` python
+def OnStructureUpgrade(self, block, player, grade):
+    print "OnStructureUpgrade works!"
+```
+
+ * Called from BuildingBlock.DoUpgradeToGrade
+ * Called when a player upgrades the grade of a BuildingBlock
+ * Returning a BuildingGrade.Enum grade will change the grade that will be upgraded to

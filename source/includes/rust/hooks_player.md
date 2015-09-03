@@ -10,23 +10,25 @@ void OnUserApprove(Network.Connection connection)
 ```
 
 ``` javascript
-OnUserApprove: function(connection)
-{
+OnUserApprove: function(connection) {
     print("OnUserApprove works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnUserApprove(connection)
+    print("OnUserApprove works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnUserApprove(self, connection):
+    print "OnUserApprove works!"
 ```
 
  * Called from ConnectionAuth.OnNewConnection
- * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
  * Used by RustCore and abstracted into CanClientLogin
+ * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
 
 ## CanClientLogin
 
@@ -38,23 +40,25 @@ void CanClientLogin(Network.Connection connection)
 ```
 
 ``` javascript
-CanClientLogin: function(connection)
-{
+CanClientLogin: function(connection) {
     print("CanClientLogin works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanClientLogin(connection)
+    print("CanClientLogin works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanClientLogin(self, connection):
+    print "CanClientLogin works!"
 ```
 
- * Called from RustCore.OnUserApprove
- * Returning true will allow the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
+ * Called from RustCore.IOnUserApprove
  * Returning a string will use the string as the error message
+ * Returning true will allow the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
 
 ## OnPlayerConnected
 
@@ -66,24 +70,26 @@ void OnPlayerConnected(Network.Message packet)
 ```
 
 ``` javascript
-OnPlayerConnected: function(packet)
-{
+OnPlayerConnected: function(packet) {
     print("OnPlayerConnected works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerConnected(packet)
+    print("OnPlayerConnected works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerConnected(self, packet):
+    print "OnPlayerConnected works!"
 ```
 
  * Called from ServerMgr.ClientReady
- * No return behavior
  * Called before the player object is created, but after the player has been approved to join the game
  * Can get the connection from packet.connection
+ * No return behavior
 
 ## OnPlayerDisconnected
 
@@ -95,23 +101,25 @@ void OnPlayerDisconnected(BasePlayer player)
 ```
 
 ``` javascript
-OnPlayerDisconnected: function(player)
-{
+OnPlayerDisconnected: function(player) {
     print("OnPlayerDisconnected works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerDisconnected(player)
+    print("OnPlayerDisconnected works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerDisconnected(self, player):
+    print "OnPlayerDisconnected works!"
 ```
 
  * Called from BasePlayer.OnDisconnected
- * No return behavior
  * Called after the player has disconnected from the server
+ * No return behavior
 
 ## OnPlayerInit
 
@@ -123,23 +131,25 @@ void OnPlayerInit(BasePlayer player)
 ```
 
 ``` javascript
-OnPlayerInit: function(player)
-{
+OnPlayerInit: function(player) {
     print("OnPlayerInit works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerInit(player)
+    print("OnPlayerInit works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerInit(self, player):
+    print "OnPlayerInit works!"
 ```
 
  * Called from BasePlayer.PlayerInit
- * No return behavior
  * Called when the player is initializing (after they've connected, before they wake up)
+ * No return behavior
 
 ## OnFindSpawnPoint
 
@@ -151,23 +161,55 @@ void OnFindSpawnPoint()
 ```
 
 ``` javascript
-OnFindSpawnPoint: function()
-{
+OnFindSpawnPoint: function() {
     print("OnFindSpawnPoint works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnFindSpawnPoint()
+    print("OnFindSpawnPoint works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnFindSpawnPoint(self):
+    print "OnFindSpawnPoint works!"
 ```
 
  * Called from ServerMgr.BasePlayer/SpawnPoint
- * Return a BasePlayer.SpawnPoint object to use that spawnpoint
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
+ * Return a BasePlayer.SpawnPoint object to use that spawnpoint
+
+## OnHammerHit
+
+``` csharp
+void OnHammerHit(BasePlayer player, HitInfo info)
+{
+    Puts("OnHammerHit works!");
+}
+```
+
+``` javascript
+OnHammerHit: function(player, info) {
+    print("OnHammerHit works!");
+}
+```
+
+``` lua
+function PLUGIN:OnHammerHit(player, info)
+    print("OnHammerHit works!")
+end
+```
+
+``` python
+def OnHammerHit(self, player, info):
+    print "OnHammerHit works!"
+```
+
+ * Called from RustCore.IOnHammerHit
+ * Called when the player has hit something with a hammer
+ * No return behavior
 
 ## OnPlayerRespawned
 
@@ -179,25 +221,27 @@ void OnPlayerRespawned(BasePlayer player)
 ```
 
 ``` javascript
-OnPlayerRespawned: function(player)
-{
+OnPlayerRespawned: function(player) {
     print("OnPlayerRespawned works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerRespawned(player)
+    print("OnPlayerRespawned works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerRespawned(self, player):
+    print "OnPlayerRespawned works!"
 ```
 
  * Called from BasePlayer.Respawn
- * No return behavior
  * Called when the player spawns (specifically when they click the "Respawn" button)
  * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
+ * No return behavior
 
 ## OnPlayerChat
 
@@ -209,18 +253,20 @@ void OnPlayerChat(ConsoleSystem.Arg arg)
 ```
 
 ``` javascript
-OnPlayerChat: function(arg)
-{
+OnPlayerChat: function(arg) {
     print("OnPlayerChat works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerChat(arg)
+    print("OnPlayerChat works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerChat(self, arg):
+    print "OnPlayerChat works!"
 ```
 
  * Called from chat.say
@@ -236,55 +282,59 @@ void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 ```
 
 ``` javascript
-OnRunPlayerMetabolism: function(metabolism)
-{
+OnRunPlayerMetabolism: function(metabolism) {
     print("OnRunPlayerMetabolism works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnRunPlayerMetabolism(metabolism)
+    print("OnRunPlayerMetabolism works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnRunPlayerMetabolism(self, metabolism):
+    print "OnRunPlayerMetabolism works!"
 ```
 
  * Called from PlayerMetabolism.RunMetabolism
  * Called before a metabolism update occurs for the specified player
- * Returning true cancels the update
  * Metabolism update consists of managing the player's temperature, health etc.
  * You can use this to turn off or change certain aspects of the metabolism, either by editing values before returning, or taking complete control of the method
  * Access the player object using metabolism:GetComponent("BasePlayer")
+ * Returning true cancels the update
 
 ## OnPlayerAttack
 
 ``` csharp
-void OnPlayerAttack(BasePlayer attacker, HitInfo hitInfo)
+void OnPlayerAttack(BasePlayer attacker, HitInfo info)
 {
     Puts("OnPlayerAttack works!");
 }
 ```
 
 ``` javascript
-OnPlayerAttack: function(attacker, hitInfo)
-{
+OnPlayerAttack: function(attacker, info) {
     print("OnPlayerAttack works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerAttack(attacker, info)
+    print("OnPlayerAttack works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerAttack(self, attacker, info):
+    print "OnPlayerAttack works!"
 ```
 
  * Called from BasePlayer.SharedProjectileAttack and BaseMelee.DoAttackShared
- * Returning true cancels the attack
  * Useful for modifying an attack before it goes out
  * hitInfo.HitEntity should be the entity that this attack would hit
+ * Returning true cancels the attack
 
 ## OnPlayerLoot
 
@@ -296,23 +346,25 @@ void OnPlayerLoot(PlayerLoot lootInventory, BaseEntity targetEntity)
 ```
 
 ``` javascript
-OnPlayerLoot: function(lootInventory, targetEntity)
-{
+OnPlayerLoot: function(lootInventory, targetEntity) {
     print("OnPlayerLoot works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerLoot(lootInventory, targetEntity)
+    print("OnPlayerLoot works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerLoot(self, lootInventory, targetEntity):
+    print "OnPlayerLoot works!"
 ```
 
  * Called from PlayerLoot.StartLootingEntity
- * No return behavior
  * Called when the player starts looting an entity
+ * No return behavior
 
 ## OnPlayerLoot
 
@@ -324,23 +376,25 @@ void OnPlayerLoot(PlayerLoot lootInventory, BasePlayer targetPlayer)
 ```
 
 ``` javascript
-OnPlayerLoot: function(lootInventory, targetPlayer)
-{
+OnPlayerLoot: function(lootInventory, targetPlayer) {
     print("OnPlayerLoot works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerLoot(lootInventory, targetPlayer)
+    print("OnPlayerLoot works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerLoot(self, lootInventory, targetEntity):
+    print "OnPlayerLoot works!"
 ```
 
  * Called from PlayerLoot.StartLootingPlayer
- * No return behavior
  * Called when the player starts looting another player
+ * No return behavior
 
 ## OnPlayerLoot
 
@@ -352,23 +406,25 @@ void OnPlayerLoot(PlayerLoot lootInventory, Item targetItem)
 ```
 
 ``` javascript
-OnPlayerLoot: function(lootInventory, targetItem)
-{
+OnPlayerLoot: function(lootInventory, targetItem) {
     print("OnPlayerLoot works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerLoot(lootInventory, targetItem)
+    print("OnPlayerLoot works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerLoot(self, lootInventory, targetEntity):
+    print "OnPlayerLoot works!"
 ```
 
  * Called from PlayerLoot.StartLootingItem
- * No return behavior
  * Called when the player starts looting an item
+ * No return behavior
 
 ## OnPlayerInput
 
@@ -380,23 +436,25 @@ void OnPlayerInput(BasePlayer player, InputState input)
 ```
 
 ``` javascript
-OnPlayerInput: function(player, input)
-{
+OnPlayerInput: function(player, input) {
     print("OnPlayerInput works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerInput(player, input)
+    print("OnPlayerInput works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerInput(self, player, input):
+    print "OnPlayerInput works!"
 ```
 
  * Called from BasePlayer.OnReceiveTick
- * No return behavior
  * Called when input is received from a connected client
+ * No return behavior
 
 ## OnPlayerSleepEnded
 
@@ -408,23 +466,25 @@ void OnPlayerSleepEnded(BasePlayer player)
 ```
 
 ``` javascript
-OnPlayerSleepEnded: function(player)
-{
+OnPlayerSleepEnded: function(player) {
     print("OnPlayerSleepEnded works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerSleepEnded(player)
+    print("OnPlayerSleepEnded works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerSleepEnded(self, player):
+    print "OnPlayerSleepEnded works!"
 ```
 
  * Called from BasePlayer.EndSleeping
- * No return behavior
  * Called when a player awakes
+ * No return behavior
 
 ## OnWeaponThrown
 
@@ -436,23 +496,25 @@ void OnWeaponThrown(BasePlayer player, BaseEntity entity)
 ```
 
 ``` javascript
-OnWeaponThrown: function(player, entity)
-{
+OnWeaponThrown: function(player, entity) {
     print("OnWeaponThrown works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnWeaponThrown(player, entity)
+    print("OnWeaponThrown works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnWeaponThrown(self, player, entity):
+    print "OnWeaponThrown works!"
 ```
 
- * Called from RustCore.OnWeaponThrow
- * No return behavior
+ * Called from RustCore.IOnWeaponThrown
  * Called when a player throws a weapon (grenade, c4, ...)
+ * No return behavior
 
 ## OnRocketLaunched
 
@@ -464,23 +526,25 @@ void OnRocketLaunched(BasePlayer player, BaseEntity entity)
 ```
 
 ``` javascript
-OnRocketLaunched: function(player, entity)
-{
+OnRocketLaunched: function(player, entity) {
     print("OnRocketLaunched works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnRocketLaunched(player, entity)
+    print("OnRocketLaunched works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnRocketLaunched(self, player, entity):
+    print "OnRocketLaunched works!"
 ```
 
- * Called from RustCore.OnRocketLaunch
- * No return behavior
+ * Called from RustCore.IOnRocketLaunched
  * Called when a player launches a rocket
+ * No return behavior
 
 ## OnWeaponFired
 
@@ -492,23 +556,25 @@ void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjecti
 ```
 
 ``` javascript
-OnWeaponFired: function(baseProjectile, player, modProjectile, projectiles)
-{
+OnWeaponFired: function(baseProjectile, player, modProjectile, projectiles) {
     print("OnWeaponFired works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnWeaponFired(baseProjectile, player, modProjectile, projectiles)
+    print("OnWeaponFired works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnWeaponFired(self, baseProjectile, player, modProjectile, projectiles):
+    print "OnWeaponFired works!"
 ```
 
- * Called from RustCore.OnWeaponFire
- * No return behavior
+ * Called from RustCore.IOnWeaponFired
  * Called when a player fires a weapon
+ * No return behavior
 
 ## CanBeWounded
 
@@ -520,23 +586,25 @@ void CanBeWounded(BasePlayer player, HitInfo info)
 ```
 
 ``` javascript
-CanBeWounded: function(player, info) 
-{
+CanBeWounded: function(player, info) {
     print("CanBeWounded works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanBeWounded(player, info)
+    print("CanBeWounded works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanBeWounded(self, player, info):
+    print "CanBeWounded works!"
 ```
 
  * Called from BasePlayer.EligibleForWounding
- * Returning true or false will cancel default behavior
  * Called when a player dies
+ * Returning true or false will cancel default behavior
 
 ## CanLootPlayer
 
@@ -548,20 +616,22 @@ void CanLootPlayer(BasePlayer player, BasePlayer target)
 ```
 
 ``` javascript
-CanLootPlayer: function(player, target) 
-{
+CanLootPlayer: function(player, target) {
     print("CanLootPlayer works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanLootPlayer(player, target)
+    print("CanLootPlayer works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanLootPlayer(self, player, target):
+    print "CanLootPlayer works!"
 ```
 
  * Called from BasePlayer.CanBeLooted
- * Returning true or false will cancel default behavior
  * Called when a player attempts to loot another player
+ * Returning true or false will cancel default behavior

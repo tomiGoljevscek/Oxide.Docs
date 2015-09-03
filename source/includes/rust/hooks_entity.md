@@ -1,5 +1,34 @@
 # Entity Hooks
 
+## OnAirdrop
+
+``` csharp
+void OnAirdrop(CargoPlane plane, Vector3 location)
+{
+    Puts("OnAirdrop works!");
+}
+```
+``` javascript
+OnAirdrop: function(plane, location) {
+    print("OnAirdrop works!");
+}
+```
+
+``` lua
+function PLUGIN:OnAirdrop(plane, location)
+    print("OnAirdrop works!")
+end
+```
+
+``` python
+def OnAirdrop(self, plane, location):
+    print "OnAirdrop works!"
+```
+
+ * Called from CargoPlane.UpdateDropPosition
+ * Called when an airdrop has been called
+ * No return behavior
+
 ## OnEntitySpawned
 
 ``` csharp
@@ -10,138 +39,147 @@ void OnEntitySpawned(BaseNetworkable entity)
 ```
 
 ``` javascript
-OnEntitySpawned: function(entity)
-{
+OnEntitySpawned: function(entity) {
     print("OnEntitySpawned works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntitySpawned(entity)
+    print("OnEntitySpawned works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntitySpawned(self, entity):
+    print "OnEntitySpawned works!"
 ```
 
  * Called from BaseNetworkable.Spawn
- * No return behavior
  * Called after any networked entity has spawned (including trees)
+ * No return behavior
 
 ## OnEntityTakeDamage
 
 ``` csharp
-void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo hitInfo)
+void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
 {
     Puts("OnEntityTakeDamage works!");
 }
 ```
 
 ``` javascript
-OnEntityTakeDamage: function(entity, hitInfo)
-{
+OnEntityTakeDamage: function(entity, info) {
     print("OnEntityTakeDamage works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityTakeDamage(entity, info)
+    print("OnEntityTakeDamage works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityTakeDamage(self, entity, info):
+    print "OnEntityTakeDamage works!"
 ```
 
  * Called from BaseCombatEntity.Hurt
- * Returning non-null value overrides default server behavior (useful for godmode etc.)
  * Alternatively, modify the hitInfo object to change the damage
  * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
+ * Returning a non-null value overrides default server behavior (useful for godmode etc.)
 
 ## OnEntityDeath
 
 ``` csharp
-void OnEntityDeath(BaseCombatEntity entity, HitInfo hitInfo)
+void OnEntityDeath(BaseCombatEntity entity, HitInfo info)
 {
     Puts("OnEntityDeath works!");
 }
 ```
 
 ``` javascript
-OnEntityDeath: function(entity, hitInfo)
-{
+OnEntityDeath: function(entity, info) {
     print("OnEntityDeath works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityDeath(entity, info)
+    print("OnEntityDeath works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityDeath(self, entity, info):
+    print "OnEntityDeath works!"
 ```
 
  * Called from BaseCombatEntity.Die
- * No return behavior
  * hitInfo might be null, check it before use
  * Editing hitInfo has no effect because the death has already happened
+ * No return behavior
 
 ## OnEntityEnter
 
 ``` csharp
-void OnEntityEnter(TriggerBase triggerBase, BaseEntity entity)
-{
+void OnEntityEnter(TriggerBase trigger, BaseEntity entity) {
     Puts("OnEntityEnter works!");
 }
 ```
 
 ``` javascript
-OnEntityEnter: function(triggerBase, entity)
-{
+OnEntityEnter: function(trigger, entity) {
     print("OnEntityEnter works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityEnter(trigger, entity)
+    print("OnEntityEnter works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityEnter(self, trigger, entity):
+    print "OnEntityEnter works!"
 ```
 
  * Called from TriggerBase.OnEntityEnter
- * No return behavior
  * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
+ * No return behavior
 
 ## OnEntityLeave
 
 ``` csharp
-void OnEntityLeave(TriggerBase triggerBase, BaseEntity entity)
+void OnEntityLeave(TriggerBase trigger, BaseEntity entity)
 {
     Puts("OnEntityLeave works!");
 }
 ```
 
 ``` javascript
-OnEntityLeave: function(triggerBase, entity)
-{
+OnEntityLeave: function(trigger, entity) {
     print("OnEntityLeave works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityLeave(trigger, entity)
+    print("OnEntityLeave works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityLeave(self, trigger, entity):
+    print "OnEntityLeave works!"
 ```
 
  * Called from TriggerBase.OnEntityLeave
- * No return behavior
  * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
+ * No return behavior
 
 ## OnEntityGroundMissing
 
@@ -153,20 +191,22 @@ void OnEntityGroundMissing(BaseEntity entity)
 ```
 
 ``` javascript
-OnEntityGroundMissing: function(entity)
-{
+OnEntityGroundMissing: function(entity) {
     print("OnEntityGroundMissing works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityGroundMissing(entity)
+    print("OnEntityGroundMissing works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityGroundMissing(self, entity):
+    print "OnEntityGroundMissing works!"
 ```
 
  * Called from DestroyOnGroundMissing.OnGroundMissing
- * Returning non-null value ovverides default server behavior
  * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
+ * Returning a non-null value ovverides default server behavior

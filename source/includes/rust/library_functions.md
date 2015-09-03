@@ -13,7 +13,7 @@ void OnPlayerInit(BasePlayer player)
 ```
 
 ``` javascript
-OnPlayerInit : function(player) {
+OnPlayerInit: function(player) {
     rust.BroadcastChat(player.displayName + " has joined the server");
 }
 ```
@@ -44,7 +44,7 @@ void OnPlayerSpawn(BasePlayer player)
 ```
 
 ``` javascript
-OnPlayerSpawn : function(player) {
+OnPlayerSpawn: function(player) {
     rust.SendChatMessage(player, "SERVER", "You've respawned from a terrible death");
 }
 ```
@@ -94,7 +94,7 @@ We need a CSharp example here
 ```
 
 ``` javascript
-OnPlayerConnected : function(packet) {
+OnPlayerConnected: function(packet) {
     var connection = packet.connection;
     rust.BroadcastChat(connection.username + " connected (" + rust.UserIDFromConnection(connection) + ")");
 }
@@ -128,10 +128,10 @@ void cmdChatSteamid(BasePlayer player, string command, string[] args)
 ```
 
 ``` javascript
-Init : function() {
+Init: function() {
     command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
 },
-cmdSteamId : function(player, command, arg) {
+cmdSteamId: function(player, command, arg) {
     rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " + rust.UserIDFromPlayer(player));
 }
 ```

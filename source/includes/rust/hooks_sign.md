@@ -10,23 +10,25 @@ void CanUpdateSign(Signage sign, BasePlayer player)
 ```
 
 ``` javascript
-CanUpdateSign: function(sign, player)
-{
+CanUpdateSign: function(sign, player) {
     print("CanUpdateSign works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:CanUpdateSign(sign, player)
+    print("CanUpdateSign works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def CanUpdateSign(self, sign, player):
+    print "CanUpdateSign works!"
 ```
 
  * Called from Signage.CanUpdateSign
- * Return true or false to override Rust's check
  * Called before the player changes the text on a sign or locks it
+ * Returning true or false will override Rust's check
 
 ## OnSignLocked
 
@@ -38,23 +40,25 @@ void OnSignLocked(Signage sign, BasePlayer player)
 ```
 
 ``` javascript
-OnSignLocked: function(sign, player)
-{
+OnSignLocked: function(sign, player) {
     print("OnSignLocked works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnSignLocked(sign, player)
+    print("OnSignLocked works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnSignLocked(self, sign, player):
+    print "OnSignLocked works!"
 ```
 
  * Called from Signage.LockSign
- * No return behavior
  * Called after the player has locked a sign
+ * No return behavior
 
 ## OnSignUpdated
 
@@ -66,20 +70,22 @@ void OnSignUpdated(Signage sign, BasePlayer player, string text)
 ```
 
 ``` javascript
-OnSignUpdated: function(sign, player, text)
-{
+OnSignUpdated: function(sign, player, text) {
     print("OnSignUpdated works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnSignUpdated(sign, player, text)
+    print("OnSignUpdated works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnSignUpdated(self, sign, player, text):
+    print "OnSignUpdated works!"
 ```
 
  * Called from Signage.UpdateSign
- * No return behavior
  * Called after the player has changed the text on a sign
+ * No return behavior
