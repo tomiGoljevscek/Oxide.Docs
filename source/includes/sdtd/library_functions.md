@@ -12,7 +12,7 @@ void OnPlayerConnected(ClientInfo client)
 ```
 
 ``` javascript
-OnPlayerConnected : function(client) {
+OnPlayerConnected: function(client) {
     sdtd.BroadcastChat(client.playerName + " has joined the server");
 }
 ```

@@ -1,6 +1,6 @@
 # Structure Hooks
 
-## CanUseDoor
+## OnDoorUse
 
 ``` csharp
 void OnDoorUse(TileEntitySecure door, string steamId)
@@ -10,16 +10,22 @@ void OnDoorUse(TileEntitySecure door, string steamId)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnDoorUse: function(door, steamId) {
+    print("OnDoorUse works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnDoorUse(door, steamId)
+    print("OnDoorUse works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnDoorUse(self, door, steamId):
+    print "OnDoorUse works!"
 ```
 
  * Called from TileEntitySecure.IsUserAllowed
- * Help! This is missing a description!
+ * Called when a player tries to use a door
+ * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage

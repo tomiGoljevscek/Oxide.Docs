@@ -10,20 +10,25 @@ void OnServerInitialized()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnServerInitialized: function() {
+    print("OnServerInitialized works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnServerInitialized()
+    print("OnServerInitialized works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnServerInitialized(self):
+    print "OnServerInitialized works!"
 ```
 
  * Called from GameManager.StartGame
- * No return behavior
  * Called after the server startup has been completed and is awaiting connections
+ * No return behavior
 
 ## OnServerSave
 
@@ -35,20 +40,25 @@ void OnServerSave()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnServerSave: function() {
+    print("OnServerSave works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnServerSave()
+    print("OnServerSave works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnServerSave(self):
+    print "OnServerSave works!"
 ```
 
  * Called from World.Save
- * No return behavior
  * Is called before the server saves world and player data
+ * No return behavior
 
 ## OnServerShutdown
 
@@ -60,21 +70,26 @@ void OnServerShutdown()
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnServerShutdown: function() {
+    print("OnServerShutdown works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnServerShutdown()
+    print("OnServerShutdown works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnServerShutdown(self):
+    print "OnServerShutdown works!"
 ```
 
  * Called from ModManager.GameShutdown
- * No return behavior
  * Is called before the server starts the shutdown sequence
  * This should generally not be used by plugins, instead use the Unload hook
+ * No return behavior
 
 ## OnRunCommand
 
@@ -86,16 +101,22 @@ void OnRunCommand(ClientInfo client, String[] args)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnRunCommand: function(client, args) {
+    print("OnRunCommand works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnRunCommand(client, args)
+    print("OnRunCommand works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnRunCommand(self, client, args):
+    print "OnRunCommand works!"
 ```
 
  * Called from ConnectionManager.ServerConsoleCommand
- * Help! This is missing a description!
+ * Useful for intercepting commands before they get to their intended target
+ * Return true to override the command handling system

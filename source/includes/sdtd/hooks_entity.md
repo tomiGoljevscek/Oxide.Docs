@@ -3,26 +3,32 @@
 ## OnAirdrop
 
 ``` csharp
-void OnAirdrop(Vector3 vector)
+void OnAirdrop(Vector3 location)
 {
     Puts("OnAirdrop works!");
 }
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnAirdrop: function(location) {
+    print("OnAirdrop works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnAirdrop(location)
+    print("OnAirdrop works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnAirdrop(self, location):
+    print "OnAirdrop works!"
 ```
 
  * Called from AIAirDrop.md0003
  * Called when an airdrop has been called
+ * No return behavior
 
 ## OnEntitySpawned
 
@@ -34,19 +40,25 @@ void OnEntitySpawned(Entity entity)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntitySpawned: function(entity) {
+    print("OnEntitySpawned works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntitySpawned(entity)
+    print("OnEntitySpawned works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntitySpawned(self, entity):
+    print "OnEntitySpawned works!"
 ```
 
  * Called from World.SpawnEntityInWorld
- * Help! This is missing a description!
+ * Called when an entity has spawned in the world
+ * No return behavior
 
 ## OnEntityTakeDamage
 
@@ -58,19 +70,25 @@ void OnEntityTakeDamage(EntityAlive entity, DamageSource source)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityTakeDamage: function(entity, source) {
+    print("OnEntityTakeDamage works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityTakeDamage(entity, source)
+    print("OnEntityTakeDamage works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityTakeDamage(self, entity, source):
+    print "OnEntityTakeDamage works!"
 ```
 
  * Called from EntityAlive.DamageEntity
- * Help! This is missing a description!
+ * Called when an entity takes damage from another source
+ * No return behavior
 
 ## OnEntityDeath
 
@@ -82,16 +100,22 @@ void OnEntityDeath(Entity entity, DamageResponse response)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnEntityDeath: function(entity, response) {
+    print("OnEntityDeath works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnEntityDeath(entity, response)
+    print("OnEntityDeath works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnEntityDeath(self, entity, response):
+    print "OnEntityDeath works!"
 ```
 
  * Called from Entity.OnEntityDeath
- * Help! This is missing a description!
+ * Called when an entity has died
+ * No return behavior

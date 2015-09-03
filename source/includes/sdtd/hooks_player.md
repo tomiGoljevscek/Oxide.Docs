@@ -10,19 +10,25 @@ void OnPlayerConnected(EntityPlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerConnected: function(player) {
+    print("OnPlayerConnected works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerConnected(player)
+    print("OnPlayerConnected works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerConnected(self, player):
+    print "OnPlayerConnected works!"
 ```
 
  * Called from GameManager.RequestToSpawnPlayer
- * Help! This is missing a description!
+ * Called when a player has connected to the server
+ * No return behavior
 
 ## OnPlayerDisconnected
 
@@ -34,19 +40,25 @@ void OnPlayerDisconnected(EntityPlayer player)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerDisconnected: function(player) {
+    print("OnPlayerDisconnected works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerDisconnected(player)
+    print("OnPlayerDisconnected works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerDisconnected(self, player):
+    print "OnPlayerDisconnected works!"
 ```
 
  * Called from GameManager.PlayerDisconnected
- * Help! This is missing a description!
+ * Called when a player has disconnected from the server
+ * No return behavior
 
 ## OnPlayerChat
 
@@ -58,19 +70,25 @@ void OnPlayerChat(string message, string playerName)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerChat: function(message, playerName) {
+    print("OnPlayerChat works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerChat(message, playerName)
+    print("OnPlayerChat works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerChat(self, message, playerName):
+    print "OnPlayerChat works!"
 ```
 
  * Called from GameManager.GameMessageServer
- * Help! This is missing a description!
+ * Called when a player sends chat to the server
+ * No return behavior
 
 ## OnPlayerRespawned
 
@@ -82,19 +100,25 @@ void OnPlayerRespawned(EntityPlayer player, string reason)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnPlayerRespawned: function(player, reason) {
+    print("OnPlayerRespawned works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnPlayerRespawned(player, reason)
+    print("OnPlayerRespawned works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnPlayerRespawned(self, player, reason):
+    print "OnPlayerRespawned works!"
 ```
 
  * Called from EntityPlayer.Respawn
- * Help! This is missing a description!
+ * Called when a player has respawned
+ * No return behavior
 
 ## OnExperienceGained
 
@@ -106,16 +130,22 @@ void OnExperienceGained(EntityPlayer player, uint exp)
 ```
 
 ``` javascript
-We need a JavaScript example here
+OnExperienceGained: function(player, exp) {
+    print("OnExperienceGained works!");
+}
 ```
 
 ``` lua
-We need a Lua example here
+function PLUGIN:OnExperienceGained(player, exp)
+    print("OnExperienceGained works!")
+end
 ```
 
 ``` python
-We need a Python example here
+def OnExperienceGained(self, player, exp):
+    print "OnExperienceGained works!"
 ```
 
  * Called from EntityPlayer.AddExp
- * Help! This is missing a description!
+ * Called when a player has gained experience
+ * No return behavior
