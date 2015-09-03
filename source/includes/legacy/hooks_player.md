@@ -146,6 +146,7 @@ We need a Python example here
 ```
 
  * Called from RustLegacyCore.OnRunCommand
+ * Called when a player sends chat to the server
  * Returning a non-null value overrides default behavior of chat, not commands
 
 ## OnPlayerVoice

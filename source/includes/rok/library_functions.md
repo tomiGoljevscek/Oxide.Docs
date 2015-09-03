@@ -12,7 +12,7 @@ void OnPlayerConnected(Player player)
 ```
 
 ``` javascript
-OnPlayerConnected : function(player) {
+OnPlayerConnected: function(player) {
     rok.BroadcastChat(player.DisplayName + " has joined the server");
 }
 ```

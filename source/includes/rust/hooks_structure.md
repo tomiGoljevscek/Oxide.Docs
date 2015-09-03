@@ -27,6 +27,7 @@ def CanUseDoor(self, player, lock):
 ```
 
  * Called from BaseLock.OnTryToOpen and BaseLock.OnTryToClose
+ * Called when a player tries to use a locked door
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## CanUseDoor
@@ -56,6 +57,7 @@ def CanUseDoor(self, player, door):
 ```
 
  * Called from CodeLock.OnTryToOpen and CodeLock.OnTryToClose
+ * Called when a player tries to use a door with a code lock
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## CanUseDoor
@@ -85,6 +87,7 @@ def CanUseDoor(self, player, lock):
 ```
 
  * Called from KeyLock.OnTryToOpen and KeyLock.OnTryToClose
+ * Called when a player tries to use a door with a key lock
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## OnDoorClosed

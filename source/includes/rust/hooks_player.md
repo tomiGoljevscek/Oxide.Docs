@@ -270,6 +270,7 @@ def OnPlayerChat(self, arg):
 ```
 
  * Called from chat.say
+ * Called when a player sends chat to the server
  * Returning a non-null value overrides default behavior of chat, not commands
 
 ## OnRunPlayerMetabolism
@@ -339,26 +340,26 @@ def OnPlayerAttack(self, attacker, info):
 ## OnPlayerLoot
 
 ``` csharp
-void OnPlayerLoot(PlayerLoot lootInventory, BaseEntity targetEntity)
+void OnPlayerLoot(PlayerLoot inventory, BaseEntity target)
 {
     Puts("OnPlayerLoot works!");
 }
 ```
 
 ``` javascript
-OnPlayerLoot: function(lootInventory, targetEntity) {
+OnPlayerLoot: function(inventory, target) {
     print("OnPlayerLoot works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerLoot(lootInventory, targetEntity)
+function PLUGIN:OnPlayerLoot(inventory, target)
     print("OnPlayerLoot works!")
 end
 ```
 
 ``` python
-def OnPlayerLoot(self, lootInventory, targetEntity):
+def OnPlayerLoot(self, inventory, target):
     print "OnPlayerLoot works!"
 ```
 
@@ -369,26 +370,26 @@ def OnPlayerLoot(self, lootInventory, targetEntity):
 ## OnPlayerLoot
 
 ``` csharp
-void OnPlayerLoot(PlayerLoot lootInventory, BasePlayer targetPlayer)
+void OnPlayerLoot(PlayerLoot inventory, BasePlayer target)
 {
     Puts("OnPlayerLoot works!");
 }
 ```
 
 ``` javascript
-OnPlayerLoot: function(lootInventory, targetPlayer) {
+OnPlayerLoot: function(inventory, target) {
     print("OnPlayerLoot works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerLoot(lootInventory, targetPlayer)
+function PLUGIN:OnPlayerLoot(inventory, target)
     print("OnPlayerLoot works!")
 end
 ```
 
 ``` python
-def OnPlayerLoot(self, lootInventory, targetEntity):
+def OnPlayerLoot(self, inventory, target):
     print "OnPlayerLoot works!"
 ```
 
@@ -399,26 +400,26 @@ def OnPlayerLoot(self, lootInventory, targetEntity):
 ## OnPlayerLoot
 
 ``` csharp
-void OnPlayerLoot(PlayerLoot lootInventory, Item targetItem)
+void OnPlayerLoot(PlayerLoot inventory, Item item)
 {
     Puts("OnPlayerLoot works!");
 }
 ```
 
 ``` javascript
-OnPlayerLoot: function(lootInventory, targetItem) {
+OnPlayerLoot: function(inventory, item) {
     print("OnPlayerLoot works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerLoot(lootInventory, targetItem)
+function PLUGIN:OnPlayerLoot(inventory, item)
     print("OnPlayerLoot works!")
 end
 ```
 
 ``` python
-def OnPlayerLoot(self, lootInventory, targetEntity):
+def OnPlayerLoot(self, inventory, target):
     print "OnPlayerLoot works!"
 ```
 

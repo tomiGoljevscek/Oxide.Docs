@@ -180,4 +180,4 @@ def OnRunCommand(self, arg):
  * Called from ConsoleSystem.Run_Internal, ConsoleSystem.Run_Unrestricted, and ConsoleSystem.SystemRealm_Normal
  * Useful for intercepting commands before they get to their intended target (like chat.say)
  * Used by RustCore to implement chat commands
- * Return true to override Rust's command handling system
+ * Return true to override the command handling system

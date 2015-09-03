@@ -13,7 +13,7 @@ void OnPlayerConnected(NetUser netuser)
 ```
 
 ``` javascript
-OnPlayerConnected : function(netuser) {
+OnPlayerConnected: function(netuser) {
     rust.BroadcastChat(netuser.displayName + " has joined the server");
 }
 ```
@@ -44,7 +44,7 @@ void OnPlayerConnected(NetUser netuser)
 ```
 
 ``` javascript
-OnPlayerConnected : function(netuser) {
+OnPlayerConnected: function(netuser) {
     rust.BroadcastConsole(netuser.displayName + " has joined the server");
 }
 ```
@@ -74,10 +74,10 @@ void Example(NetUser netuser, string command, string[] args)
 ```
 
 ``` javascript
-Init : function() {
+Init: function() {
     command.AddChatCommand("ex",  self.Plugin, "Example");
 },
-Example : function(netuser, command, args) {
+Example: function(netuser, command, args) {
     target = rust.FindPlayer(args[0]);
 }
 ```
@@ -158,7 +158,7 @@ void OnPlayerSpawn(NetUser netuser)
 ```
 
 ``` javascript
-OnPlayerSpawn : function(netuser) {
+OnPlayerSpawn: function(netuser) {
     rust.SendChatMessage(netuser, "You've respawned from a terrible death");
 }
 ```
@@ -189,7 +189,7 @@ void OnPlayerSpawn(NetUser netuser)
 ```
 
 ``` javascript
-OnPlayerSpawn : function(netuser) {
+OnPlayerSpawn: function(netuser) {
     rust.SendConsoleMessage(netuser, "You've respawned from a terrible death");
 }
 ```
@@ -220,10 +220,10 @@ void cmdChatSteamid(NetUser netuser, string command, string[] args)
 ```
 
 ``` javascript
-Init : function() {
+Init: function() {
     command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
 },
-cmdSteamId : function(netuser, command, arg) {
+cmdSteamId: function(netuser, command, arg) {
     rust.SendChatMessage(netuser, "Your Steam ID is: " + rust.UserIDFromPlayer(netuser));
 }
 ```
@@ -262,10 +262,10 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 ```
 
 ``` javascript
-Init : function() {
+Init: function() {
     command.AddChatCommand("notice",  self.Plugin, "cmdNotice");
 },
-cmdNotice : function(netuser, command, arg) {
+cmdNotice: function(netuser, command, arg) {
     rust.Notice(netuser, "Notice Demo", "!", 4);
 }
 ```
@@ -302,10 +302,10 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 ```
 
 ``` javascript
-Init : function() {
+Init: function() {
     command.AddChatCommand("notice",  self.Plugin, "cmdNotice");
 },
-cmdNotice : function(netuser, command, arg) {
+cmdNotice: function(netuser, command, arg) {
     rust.InventoryNotice(netuser, "InventoryNotice Demo");
 }
 ```
