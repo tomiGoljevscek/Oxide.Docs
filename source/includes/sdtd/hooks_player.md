@@ -3,7 +3,7 @@
 ## OnPlayerConnected
 
 ``` csharp
-void OnPlayerConnected(ClientInfo client)
+void OnPlayerConnected(EntityPlayer player)
 {
     Puts("OnPlayerConnected works!");
 }
@@ -21,13 +21,13 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from GameManager.md0013
+ * Called from GameManager.RequestToSpawnPlayer
  * Help! This is missing a description!
 
 ## OnPlayerDisconnected
 
 ``` csharp
-void OnPlayerDisconnected(ClientInfo client)
+void OnPlayerDisconnected(EntityPlayer player)
 {
     Puts("OnPlayerDisconnected works!");
 }
@@ -45,13 +45,13 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from ConnectionManager.RemovePlayer
+ * Called from GameManager.PlayerDisconnected
  * Help! This is missing a description!
 
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(string message, int team, string playerName)
+void OnPlayerChat(string message, string playerName)
 {
     Puts("OnPlayerChat works!");
 }
@@ -69,5 +69,53 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from GameManager.SendChatMessage
+ * Called from GameManager.GameMessageServer
+ * Help! This is missing a description!
+
+## OnPlayerRespawned
+
+``` csharp
+void OnPlayerRespawned(EntityPlayer player, string reason)
+{
+    Puts("OnPlayerRespawned works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from EntityPlayer.Respawn
+ * Help! This is missing a description!
+
+## OnExperienceGained
+
+``` csharp
+void OnExperienceGained(EntityPlayer player, uint exp)
+{
+    Puts("OnExperienceGained works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from EntityPlayer.AddExp
  * Help! This is missing a description!

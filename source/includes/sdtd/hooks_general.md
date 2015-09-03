@@ -21,7 +21,7 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from ConnectionManager.OnServerInitialized
+ * Called from GameManager.StartGame
  * No return behavior
  * Called after the server startup has been completed and is awaiting connections
 
@@ -46,16 +46,16 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from GameManager.SavePlayerData and GameManager.SaveWorld
+ * Called from World.Save
  * No return behavior
  * Is called before the server saves world and player data
 
-## OnServerQuit
+## OnServerShutdown
 
 ``` csharp
-void OnServerQuit()
+void OnServerShutdown()
 {
-    Puts("OnServerQuit works!");
+    Puts("OnServerShutdown works!");
 }
 ```
 
@@ -71,7 +71,7 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from GameManager.OnApplicationQuit
+ * Called from ModManager.GameShutdown
  * No return behavior
  * Is called before the server starts the shutdown sequence
  * This should generally not be used by plugins, instead use the Unload hook
@@ -79,7 +79,7 @@ We need a Python example here
 ## OnRunCommand
 
 ``` csharp
-void OnRunCommand(ConsoleSdtd console, ConsoleCommand command, String[] args)
+void OnRunCommand(ClientInfo client, String[] args)
 {
     Puts("OnRunCommand works!");
 }
@@ -97,5 +97,5 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from ConsoleSdtd.ExecuteRemoteCmdInternal
+ * Called from ConnectionManager.ServerConsoleCommand
  * Help! This is missing a description!

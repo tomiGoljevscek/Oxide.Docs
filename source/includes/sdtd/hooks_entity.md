@@ -1,5 +1,29 @@
 # Entity Hooks
 
+## OnAirdrop
+
+``` csharp
+void OnAirdrop(Vector3 vector)
+{
+    Puts("OnAirdrop works!");
+}
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called from AIAirDrop.md0003
+ * Called when an airdrop has been called
+
 ## OnEntitySpawned
 
 ``` csharp
@@ -24,12 +48,12 @@ We need a Python example here
  * Called from World.SpawnEntityInWorld
  * Help! This is missing a description!
 
-## OnEntityHurt
+## OnEntityTakeDamage
 
 ``` csharp
-void OnEntityHurt(cl0006 entity, DamageSource source)
+void OnEntityTakeDamage(EntityAlive entity, DamageSource source)
 {
-    Puts("OnEntityHurt works!");
+    Puts("OnEntityTakeDamage works!");
 }
 ```
 
@@ -45,13 +69,13 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from cl0006.DamageEntity
+ * Called from EntityAlive.DamageEntity
  * Help! This is missing a description!
 
 ## OnEntityDeath
 
 ``` csharp
-void OnEntityDeath(cl0006 entity)
+void OnEntityDeath(Entity entity, DamageResponse response)
 {
     Puts("OnEntityDeath works!");
 }
@@ -69,5 +93,5 @@ We need a Lua example here
 We need a Python example here
 ```
 
- * Called from cl0006.OnEntityDeath and EntityCar.OnEntityDeath
+ * Called from Entity.OnEntityDeath
  * Help! This is missing a description!
