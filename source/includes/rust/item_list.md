@@ -193,6 +193,7 @@
 | 112903447     | Water                        | water                    |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |
+| 1213686767    | Silencer                     | weapon.mod.silencer      |
 | -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
 | -1691991080   | Cooked Wolf Meat             | wolfmeat.cooked          |
 | 179448791     | Raw Wolf Meat                | wolfmeat.raw             |
