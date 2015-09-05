@@ -26,6 +26,7 @@ includes:
   - timers
   - web_requests
   - rust/item_list
+  - rust/item_skins_list
   - rust/styling_messages
 
 toc_footers:
