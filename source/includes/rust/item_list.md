@@ -83,6 +83,7 @@
 | 97513422      | Flare                        | flare                    |
 | -217113639    | Acoustic Guitar              | fun.guitar               |
 | -505639592    | Furnace                      | furnace                  |
+| -1227787393   | High External Wooden Gate    | gates.external.high      |
 | 277631078     | Wind Turbine                 | generator.wind.scrap     |
 | 718197703     | Granola Bar                  | granolabar               |
 | 384204160     | Beancan Grenade              | grenade.beancan          |
@@ -193,6 +194,7 @@
 | 112903447     | Water                        | water                    |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |
+| -465236267    | Holosight                    | weapon.mod.holosight     |
 | 1213686767    | Silencer                     | weapon.mod.silencer      |
 | -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
 | -1691991080   | Cooked Wolf Meat             | wolfmeat.cooked          |
