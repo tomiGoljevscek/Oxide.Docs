@@ -208,7 +208,7 @@ def OnStructureDemolish(self, block, player):
 
  * Called from BuildingBlock.DoImmediateDemolish
  * Called when a player selects DemolishImmediate from the BuildingBlock menu
- * Return true to cancel
+ * Returning true will cancel the demolition
 
 ## OnStructureRepair
 
@@ -298,4 +298,4 @@ def OnStructureUpgrade(self, block, player, grade):
 
  * Called from BuildingBlock.DoUpgradeToGrade
  * Called when a player upgrades the grade of a BuildingBlock
- * Returning a BuildingGrade.Enum grade will change the grade that will be upgraded to
+ * Returning true will cancel the upgrade
