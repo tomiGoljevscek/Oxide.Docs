@@ -94,26 +94,26 @@ def OnPlayerConnected(self, packet):
 ## OnPlayerDisconnected
 
 ``` csharp
-void OnPlayerDisconnected(BasePlayer player)
+void OnPlayerDisconnected(BasePlayer player, string reason)
 {
     Puts("OnPlayerDisconnected works!");
 }
 ```
 
 ``` javascript
-OnPlayerDisconnected: function(player) {
+OnPlayerDisconnected: function(player, reason) {
     print("OnPlayerDisconnected works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerDisconnected(player)
+function PLUGIN:OnPlayerDisconnected(player, reason)
     print("OnPlayerDisconnected works!")
 end
 ```
 
 ``` python
-def OnPlayerDisconnected(self, player):
+def OnPlayerDisconnected(self, player, reason):
     print "OnPlayerDisconnected works!"
 ```
 
