@@ -279,7 +279,7 @@ def OnItemRemovedFromContainer(self, container, item):
 ## OnDispenserGather
 
 ``` csharp
-void OnDispenserGatherGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
+void OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
 {
     Puts("OnDispenserGather works!");
 }
