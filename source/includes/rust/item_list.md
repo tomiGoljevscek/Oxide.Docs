@@ -175,6 +175,7 @@
 | -2118132208   | Stone Spear                  | spear.stone              |
 | -1127699509   | Wooden Spear                 | spear.wooden             |
 | -685265909    | Wooden Floor Spikes          | spikes.floor             |
+| 1051155022    | Small Stash                  | stash.small              |
 | 789892804     | Stone Pick Axe               | stone.pickaxe            |
 | -1289478934   | Stone Hatchet                | stonehatchet             |
 | -892070738    | Stones                       | stones                   |
