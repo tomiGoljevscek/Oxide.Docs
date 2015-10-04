@@ -62,7 +62,7 @@ Assigns the specified permission to the specified group.
 
 ## Granting permission to user
 
-GrantUserPermission(string userid, string perm)
+GrantUserPermission(string userid, string perm, Plugin owner)
 
 Assigns the specified permission to the specified user.
 
