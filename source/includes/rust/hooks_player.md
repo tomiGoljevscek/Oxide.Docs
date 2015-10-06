@@ -120,6 +120,67 @@ def OnFindSpawnPoint(self):
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
  * Return a BasePlayer.SpawnPoint object to use that spawnpoint
 
+## OnPlayerAttack
+
+``` csharp
+void OnPlayerAttack(BasePlayer attacker, HitInfo info)
+{
+    Puts("OnPlayerAttack works!");
+}
+```
+
+``` javascript
+OnPlayerAttack: function(attacker, info) {
+    print("OnPlayerAttack works!");
+}
+```
+
+``` lua
+function PLUGIN:OnPlayerAttack(attacker, info)
+    print("OnPlayerAttack works!")
+end
+```
+
+``` python
+def OnPlayerAttack(self, attacker, info):
+    print "OnPlayerAttack works!"
+```
+
+ * Called from BasePlayer.SharedProjectileAttack and BaseMelee.DoAttackShared
+ * Useful for modifying an attack before it goes out
+ * hitInfo.HitEntity should be the entity that this attack would hit
+ * Returning true cancels the attack
+
+## OnPlayerChat
+
+``` csharp
+void OnPlayerChat(ConsoleSystem.Arg arg)
+{
+    Puts("OnPlayerChat works!");
+}
+```
+
+``` javascript
+OnPlayerChat: function(arg) {
+    print("OnPlayerChat works!");
+}
+```
+
+``` lua
+function PLUGIN:OnPlayerChat(arg)
+    print("OnPlayerChat works!")
+end
+```
+
+``` python
+def OnPlayerChat(self, arg):
+    print "OnPlayerChat works!"
+```
+
+ * Called from chat.say
+ * Called when a player sends chat to the server
+ * Returning a non-null value overrides default behavior of chat, not commands
+
 ## OnPlayerConnected
 
 ``` csharp
@@ -211,6 +272,36 @@ def OnPlayerInit(self, player):
  * Called when the player is initializing (after they've connected, before they wake up)
  * No return behavior
 
+## OnPlayerInput
+
+``` csharp
+void OnPlayerInput(BasePlayer player, InputState input)
+{
+    Puts("OnPlayerInput works!");
+}
+```
+
+``` javascript
+OnPlayerInput: function(player, input) {
+    print("OnPlayerInput works!");
+}
+```
+
+``` lua
+function PLUGIN:OnPlayerInput(player, input)
+    print("OnPlayerInput works!")
+end
+```
+
+``` python
+def OnPlayerInput(self, player, input):
+    print "OnPlayerInput works!"
+```
+
+ * Called from BasePlayer.OnReceiveTick
+ * Called when input is received from a connected client
+ * No return behavior
+
 ## OnPlayerRespawned
 
 ``` csharp
@@ -241,97 +332,6 @@ def OnPlayerRespawned(self, player):
  * Called when the player spawns (specifically when they click the "Respawn" button)
  * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
- * No return behavior
-
-## OnPlayerChat
-
-``` csharp
-void OnPlayerChat(ConsoleSystem.Arg arg)
-{
-    Puts("OnPlayerChat works!");
-}
-```
-
-``` javascript
-OnPlayerChat: function(arg) {
-    print("OnPlayerChat works!");
-}
-```
-
-``` lua
-function PLUGIN:OnPlayerChat(arg)
-    print("OnPlayerChat works!")
-end
-```
-
-``` python
-def OnPlayerChat(self, arg):
-    print "OnPlayerChat works!"
-```
-
- * Called from chat.say
- * Called when a player sends chat to the server
- * Returning a non-null value overrides default behavior of chat, not commands
-
-## OnPlayerAttack
-
-``` csharp
-void OnPlayerAttack(BasePlayer attacker, HitInfo info)
-{
-    Puts("OnPlayerAttack works!");
-}
-```
-
-``` javascript
-OnPlayerAttack: function(attacker, info) {
-    print("OnPlayerAttack works!");
-}
-```
-
-``` lua
-function PLUGIN:OnPlayerAttack(attacker, info)
-    print("OnPlayerAttack works!")
-end
-```
-
-``` python
-def OnPlayerAttack(self, attacker, info):
-    print "OnPlayerAttack works!"
-```
-
- * Called from BasePlayer.SharedProjectileAttack and BaseMelee.DoAttackShared
- * Useful for modifying an attack before it goes out
- * hitInfo.HitEntity should be the entity that this attack would hit
- * Returning true cancels the attack
-
-## OnPlayerInput
-
-``` csharp
-void OnPlayerInput(BasePlayer player, InputState input)
-{
-    Puts("OnPlayerInput works!");
-}
-```
-
-``` javascript
-OnPlayerInput: function(player, input) {
-    print("OnPlayerInput works!");
-}
-```
-
-``` lua
-function PLUGIN:OnPlayerInput(player, input)
-    print("OnPlayerInput works!")
-end
-```
-
-``` python
-def OnPlayerInput(self, player, input):
-    print "OnPlayerInput works!"
-```
-
- * Called from BasePlayer.OnReceiveTick
- * Called when input is received from a connected client
  * No return behavior
 
 ## OnPlayerLoot
