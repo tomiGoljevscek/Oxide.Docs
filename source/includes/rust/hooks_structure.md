@@ -150,6 +150,66 @@ def OnDoorOpened(self, door, player):
  * Called when a player opened a door
  * No return behavior
 
+## OnCupboardAuthorize
+
+``` csharp
+void OnCupboardAuthorize(BuildingPrivlidge priviledge, BasePlayer player)
+{
+    Puts("OnCupboardAuthorize works!");
+}
+```
+
+``` javascript
+OnCupboardAuthorize: function(priviledge, player) {
+    print("OnCupboardAuthorize works!");
+}
+```
+
+``` lua
+function PLUGIN:OnCupboardAuthorize(priviledge, player)
+    print("OnCupboardAuthorize works!")
+end
+```
+
+``` python
+def OnCupboardAuthorize(self, priviledge, player):
+    print "OnCupboardAuthorize works!"
+```
+
+ * Called from BuildingPrivlidge.AddSelfAuthorize
+ * Called when a cupboard attempts to authorize a player
+ * No return behavior
+
+## OnCupboardDeauthorize
+
+``` csharp
+void OnCupboardDeauthorize(BuildingPrivlidge priviledge, BasePlayer player)
+{
+    Puts("OnCupboardAuthorize works!");
+}
+```
+
+``` javascript
+OnCupboardDeauthorize: function(priviledge, player) {
+    print("OnCupboardDeauthorize works!");
+}
+```
+
+``` lua
+function PLUGIN:OnCupboardDeauthorize(priviledge, player)
+    print("OnCupboardDeauthorize works!")
+end
+```
+
+``` python
+def OnCupboardDeauthorize(self, priviledge, player):
+    print "OnCupboardDeauthorize works!"
+```
+
+ * Called from BuildingPrivlidge.RemoveSelfAuthorize
+ * Called when a cupboard attempts to deauthorize a player
+ * No return behavior
+
 ## OnEntityBuilt
 
 ``` csharp
@@ -178,6 +238,36 @@ def OnEntityBuilt(self, planner, component):
 
  * Called from Planner.DoBuild
  * Called when any structure is built (walls, ceilings, stairs, etc.)
+ * No return behavior
+
+## OnHammerHit
+
+``` csharp
+void OnHammerHit(BasePlayer player, HitInfo info)
+{
+    Puts("OnHammerHit works!");
+}
+```
+
+``` javascript
+OnHammerHit: function(player, info) {
+    print("OnHammerHit works!");
+}
+```
+
+``` lua
+function PLUGIN:OnHammerHit(player, info)
+    print("OnHammerHit works!")
+end
+```
+
+``` python
+def OnHammerHit(self, player, info):
+    print "OnHammerHit works!"
+```
+
+ * Called from RustCore.IOnHammerHit
+ * Called when the player has hit something with a hammer
  * No return behavior
 
 ## OnStructureDemolish
