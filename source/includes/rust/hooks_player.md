@@ -1,34 +1,34 @@
 # Player Hooks
 
-## OnUserApprove
+## CanBeWounded
 
 ``` csharp
-void OnUserApprove(Network.Connection connection)
+void CanBeWounded(BasePlayer player, HitInfo info) 
 {
-    Puts("OnUserApprove works!");
+    Puts("CanBeWounded works!");
 }
 ```
 
 ``` javascript
-OnUserApprove: function(connection) {
-    print("OnUserApprove works!");
+CanBeWounded: function(player, info) {
+    print("CanBeWounded works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnUserApprove(connection)
-    print("OnUserApprove works!")
+function PLUGIN:CanBeWounded(player, info)
+    print("CanBeWounded works!")
 end
 ```
 
 ``` python
-def OnUserApprove(self, connection):
-    print "OnUserApprove works!"
+def CanBeWounded(self, player, info):
+    print "CanBeWounded works!"
 ```
 
- * Called from ConnectionAuth.OnNewConnection
- * Used by RustCore and abstracted into CanClientLogin
- * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
+ * Called from BasePlayer.EligibleForWounding
+ * Called when a player dies
+ * Returning true or false will cancel default behavior
 
 ## CanClientLogin
 
@@ -59,6 +59,66 @@ def CanClientLogin(self, connection):
  * Called from RustCore.IOnUserApprove
  * Returning a string will use the string as the error message
  * Returning true will allow the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
+
+## CanLootPlayer
+
+``` csharp
+void CanLootPlayer(BasePlayer player, BasePlayer target) 
+{
+    Puts("CanLootPlayer works!");
+}
+```
+
+``` javascript
+CanLootPlayer: function(player, target) {
+    print("CanLootPlayer works!");
+}
+```
+
+``` lua
+function PLUGIN:CanLootPlayer(player, target)
+    print("CanLootPlayer works!")
+end
+```
+
+``` python
+def CanLootPlayer(self, player, target):
+    print "CanLootPlayer works!"
+```
+
+ * Called from BasePlayer.CanBeLooted
+ * Called when a player attempts to loot another player
+ * Returning true or false will cancel default behavior
+
+## OnFindSpawnPoint
+
+``` csharp
+void OnFindSpawnPoint()
+{
+    Puts("OnFindSpawnPoint works!");
+}
+```
+
+``` javascript
+OnFindSpawnPoint: function() {
+    print("OnFindSpawnPoint works!");
+}
+```
+
+``` lua
+function PLUGIN:OnFindSpawnPoint()
+    print("OnFindSpawnPoint works!")
+end
+```
+
+``` python
+def OnFindSpawnPoint(self):
+    print "OnFindSpawnPoint works!"
+```
+
+ * Called from ServerMgr.BasePlayer/SpawnPoint
+ * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
+ * Return a BasePlayer.SpawnPoint object to use that spawnpoint
 
 ## OnPlayerConnected
 
@@ -150,36 +210,6 @@ def OnPlayerInit(self, player):
  * Called from BasePlayer.PlayerInit
  * Called when the player is initializing (after they've connected, before they wake up)
  * No return behavior
-
-## OnFindSpawnPoint
-
-``` csharp
-void OnFindSpawnPoint()
-{
-    Puts("OnFindSpawnPoint works!");
-}
-```
-
-``` javascript
-OnFindSpawnPoint: function() {
-    print("OnFindSpawnPoint works!");
-}
-```
-
-``` lua
-function PLUGIN:OnFindSpawnPoint()
-    print("OnFindSpawnPoint works!")
-end
-```
-
-``` python
-def OnFindSpawnPoint(self):
-    print "OnFindSpawnPoint works!"
-```
-
- * Called from ServerMgr.BasePlayer/SpawnPoint
- * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
- * Return a BasePlayer.SpawnPoint object to use that spawnpoint
 
 ## OnHammerHit
 
@@ -273,39 +303,6 @@ def OnPlayerChat(self, arg):
  * Called when a player sends chat to the server
  * Returning a non-null value overrides default behavior of chat, not commands
 
-## OnRunPlayerMetabolism
-
-``` csharp
-void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
-{
-    Puts("OnRunPlayerMetabolism works!");
-}
-```
-
-``` javascript
-OnRunPlayerMetabolism: function(metabolism) {
-    print("OnRunPlayerMetabolism works!");
-}
-```
-
-``` lua
-function PLUGIN:OnRunPlayerMetabolism(metabolism)
-    print("OnRunPlayerMetabolism works!")
-end
-```
-
-``` python
-def OnRunPlayerMetabolism(self, metabolism):
-    print "OnRunPlayerMetabolism works!"
-```
-
- * Called from PlayerMetabolism.RunMetabolism
- * Called before a metabolism update occurs for the specified player
- * Metabolism update consists of managing the player's temperature, health etc.
- * You can use this to turn off or change certain aspects of the metabolism, either by editing values before returning, or taking complete control of the method
- * Access the player object using metabolism:GetComponent("BasePlayer")
- * Returning true cancels the update
-
 ## OnPlayerAttack
 
 ``` csharp
@@ -336,6 +333,36 @@ def OnPlayerAttack(self, attacker, info):
  * Useful for modifying an attack before it goes out
  * hitInfo.HitEntity should be the entity that this attack would hit
  * Returning true cancels the attack
+
+## OnPlayerInput
+
+``` csharp
+void OnPlayerInput(BasePlayer player, InputState input)
+{
+    Puts("OnPlayerInput works!");
+}
+```
+
+``` javascript
+OnPlayerInput: function(player, input) {
+    print("OnPlayerInput works!");
+}
+```
+
+``` lua
+function PLUGIN:OnPlayerInput(player, input)
+    print("OnPlayerInput works!")
+end
+```
+
+``` python
+def OnPlayerInput(self, player, input):
+    print "OnPlayerInput works!"
+```
+
+ * Called from BasePlayer.OnReceiveTick
+ * Called when input is received from a connected client
+ * No return behavior
 
 ## OnPlayerLoot
 
@@ -427,36 +454,6 @@ def OnPlayerLoot(self, inventory, target):
  * Called when the player starts looting an item
  * No return behavior
 
-## OnPlayerInput
-
-``` csharp
-void OnPlayerInput(BasePlayer player, InputState input)
-{
-    Puts("OnPlayerInput works!");
-}
-```
-
-``` javascript
-OnPlayerInput: function(player, input) {
-    print("OnPlayerInput works!");
-}
-```
-
-``` lua
-function PLUGIN:OnPlayerInput(player, input)
-    print("OnPlayerInput works!")
-end
-```
-
-``` python
-def OnPlayerInput(self, player, input):
-    print "OnPlayerInput works!"
-```
-
- * Called from BasePlayer.OnReceiveTick
- * Called when input is received from a connected client
- * No return behavior
-
 ## OnPlayerSleepEnded
 
 ``` csharp
@@ -485,36 +482,6 @@ def OnPlayerSleepEnded(self, player):
 
  * Called from BasePlayer.EndSleeping
  * Called when a player awakes
- * No return behavior
-
-## OnWeaponThrown
-
-``` csharp
-void OnWeaponThrown(BasePlayer player, BaseEntity entity)
-{
-    Puts("OnWeaponThrown works!");
-}
-```
-
-``` javascript
-OnWeaponThrown: function(player, entity) {
-    print("OnWeaponThrown works!");
-}
-```
-
-``` lua
-function PLUGIN:OnWeaponThrown(player, entity)
-    print("OnWeaponThrown works!")
-end
-```
-
-``` python
-def OnWeaponThrown(self, player, entity):
-    print "OnWeaponThrown works!"
-```
-
- * Called from RustCore.IOnWeaponThrown
- * Called when a player throws a weapon (grenade, c4, ...)
  * No return behavior
 
 ## OnRocketLaunched
@@ -547,6 +514,99 @@ def OnRocketLaunched(self, player, entity):
  * Called when a player launches a rocket
  * No return behavior
 
+## OnRunPlayerMetabolism
+
+``` csharp
+void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
+{
+    Puts("OnRunPlayerMetabolism works!");
+}
+```
+
+``` javascript
+OnRunPlayerMetabolism: function(metabolism) {
+    print("OnRunPlayerMetabolism works!");
+}
+```
+
+``` lua
+function PLUGIN:OnRunPlayerMetabolism(metabolism)
+    print("OnRunPlayerMetabolism works!")
+end
+```
+
+``` python
+def OnRunPlayerMetabolism(self, metabolism):
+    print "OnRunPlayerMetabolism works!"
+```
+
+ * Called from PlayerMetabolism.RunMetabolism
+ * Called before a metabolism update occurs for the specified player
+ * Metabolism update consists of managing the player's temperature, health etc.
+ * You can use this to turn off or change certain aspects of the metabolism, either by editing values before returning, or taking complete control of the method
+ * Access the player object using metabolism:GetComponent("BasePlayer")
+ * Returning true cancels the update
+
+## OnNewConnection
+
+``` csharp
+void OnNewConnection(Network.Connection connection)
+{
+    Puts("OnNewConnection works!");
+}
+```
+
+``` javascript
+OnNewConnection: function(connection) {
+    print("OnNewConnection works!");
+}
+```
+
+``` lua
+function PLUGIN:OnNewConnection(connection)
+    print("OnNewConnection works!")
+end
+```
+
+``` python
+def OnNewConnection(self, connection):
+    print "OnNewConnection works!"
+```
+
+ * Called from ConnectionAuth.OnNewConnection
+ * Called when a new connection is made by a user, after token, but before other checks.
+ * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
+
+## OnUserApprove
+
+``` csharp
+void OnUserApprove(Network.Connection connection)
+{
+    Puts("OnUserApprove works!");
+}
+```
+
+``` javascript
+OnUserApprove: function(connection) {
+    print("OnUserApprove works!");
+}
+```
+
+``` lua
+function PLUGIN:OnUserApprove(connection)
+    print("OnUserApprove works!")
+end
+```
+
+``` python
+def OnUserApprove(self, connection):
+    print "OnUserApprove works!"
+```
+
+ * Called from ConnectionAuth.OnNewConnection
+ * Used by RustCore and abstracted into CanClientLogin
+ * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
+
 ## OnWeaponFired
 
 ``` csharp
@@ -577,62 +637,32 @@ def OnWeaponFired(self, baseProjectile, player, modProjectile, projectiles):
  * Called when a player fires a weapon
  * No return behavior
 
-## CanBeWounded
+## OnWeaponThrown
 
 ``` csharp
-void CanBeWounded(BasePlayer player, HitInfo info) 
+void OnWeaponThrown(BasePlayer player, BaseEntity entity)
 {
-    Puts("CanBeWounded works!");
+    Puts("OnWeaponThrown works!");
 }
 ```
 
 ``` javascript
-CanBeWounded: function(player, info) {
-    print("CanBeWounded works!");
+OnWeaponThrown: function(player, entity) {
+    print("OnWeaponThrown works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanBeWounded(player, info)
-    print("CanBeWounded works!")
+function PLUGIN:OnWeaponThrown(player, entity)
+    print("OnWeaponThrown works!")
 end
 ```
 
 ``` python
-def CanBeWounded(self, player, info):
-    print "CanBeWounded works!"
+def OnWeaponThrown(self, player, entity):
+    print "OnWeaponThrown works!"
 ```
 
- * Called from BasePlayer.EligibleForWounding
- * Called when a player dies
- * Returning true or false will cancel default behavior
-
-## CanLootPlayer
-
-``` csharp
-void CanLootPlayer(BasePlayer player, BasePlayer target) 
-{
-    Puts("CanLootPlayer works!");
-}
-```
-
-``` javascript
-CanLootPlayer: function(player, target) {
-    print("CanLootPlayer works!");
-}
-```
-
-``` lua
-function PLUGIN:CanLootPlayer(player, target)
-    print("CanLootPlayer works!")
-end
-```
-
-``` python
-def CanLootPlayer(self, player, target):
-    print "CanLootPlayer works!"
-```
-
- * Called from BasePlayer.CanBeLooted
- * Called when a player attempts to loot another player
- * Returning true or false will cancel default behavior
+ * Called from RustCore.IOnWeaponThrown
+ * Called when a player throws a weapon (grenade, c4, ...)
+ * No return behavior
