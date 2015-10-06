@@ -29,6 +29,96 @@ def OnAirdrop(self, plane, location):
  * Called when an airdrop has been called
  * No return behavior
 
+## OnEntityDeath
+
+``` csharp
+void OnEntityDeath(BaseCombatEntity entity, HitInfo info)
+{
+    Puts("OnEntityDeath works!");
+}
+```
+
+``` javascript
+OnEntityDeath: function(entity, info) {
+    print("OnEntityDeath works!");
+}
+```
+
+``` lua
+function PLUGIN:OnEntityDeath(entity, info)
+    print("OnEntityDeath works!")
+end
+```
+
+``` python
+def OnEntityDeath(self, entity, info):
+    print "OnEntityDeath works!"
+```
+
+ * Called from BaseCombatEntity.Die
+ * hitInfo might be null, check it before use
+ * Editing hitInfo has no effect because the death has already happened
+ * No return behavior
+
+## OnEntityEnter
+
+``` csharp
+void OnEntityEnter(TriggerBase trigger, BaseEntity entity) {
+    Puts("OnEntityEnter works!");
+}
+```
+
+``` javascript
+OnEntityEnter: function(trigger, entity) {
+    print("OnEntityEnter works!");
+}
+```
+
+``` lua
+function PLUGIN:OnEntityEnter(trigger, entity)
+    print("OnEntityEnter works!")
+end
+```
+
+``` python
+def OnEntityEnter(self, trigger, entity):
+    print "OnEntityEnter works!"
+```
+
+ * Called from TriggerBase.OnEntityEnter
+ * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
+ * No return behavior
+
+## OnEntityGroundMissing
+
+``` csharp
+void OnEntityGroundMissing(BaseEntity entity)
+{
+    Puts("OnEntityGroundMissing works!");
+}
+```
+
+``` javascript
+OnEntityGroundMissing: function(entity) {
+    print("OnEntityGroundMissing works!");
+}
+```
+
+``` lua
+function PLUGIN:OnEntityGroundMissing(entity)
+    print("OnEntityGroundMissing works!")
+end
+```
+
+``` python
+def OnEntityGroundMissing(self, entity):
+    print "OnEntityGroundMissing works!"
+```
+
+ * Called from DestroyOnGroundMissing.OnGroundMissing
+ * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
+ * Returning a non-null value overides default server behavior
+
 ## OnEntitySpawned
 
 ``` csharp
@@ -91,66 +181,6 @@ def OnEntityTakeDamage(self, entity, info):
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
  * Returning a non-null value overrides default server behavior (useful for godmode etc.)
 
-## OnEntityDeath
-
-``` csharp
-void OnEntityDeath(BaseCombatEntity entity, HitInfo info)
-{
-    Puts("OnEntityDeath works!");
-}
-```
-
-``` javascript
-OnEntityDeath: function(entity, info) {
-    print("OnEntityDeath works!");
-}
-```
-
-``` lua
-function PLUGIN:OnEntityDeath(entity, info)
-    print("OnEntityDeath works!")
-end
-```
-
-``` python
-def OnEntityDeath(self, entity, info):
-    print "OnEntityDeath works!"
-```
-
- * Called from BaseCombatEntity.Die
- * hitInfo might be null, check it before use
- * Editing hitInfo has no effect because the death has already happened
- * No return behavior
-
-## OnEntityEnter
-
-``` csharp
-void OnEntityEnter(TriggerBase trigger, BaseEntity entity) {
-    Puts("OnEntityEnter works!");
-}
-```
-
-``` javascript
-OnEntityEnter: function(trigger, entity) {
-    print("OnEntityEnter works!");
-}
-```
-
-``` lua
-function PLUGIN:OnEntityEnter(trigger, entity)
-    print("OnEntityEnter works!")
-end
-```
-
-``` python
-def OnEntityEnter(self, trigger, entity):
-    print "OnEntityEnter works!"
-```
-
- * Called from TriggerBase.OnEntityEnter
- * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
- * No return behavior
-
 ## OnEntityLeave
 
 ``` csharp
@@ -181,32 +211,32 @@ def OnEntityLeave(self, trigger, entity):
  * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
  * No return behavior
 
-## OnEntityGroundMissing
+## OnResourceDepositCreated
 
 ``` csharp
-void OnEntityGroundMissing(BaseEntity entity)
+void OnResourceDepositCreated(ResourceDepositManager.ResourceDeposit deposit)
 {
-    Puts("OnEntityGroundMissing works!");
+    Puts("OnResourceDepositCreated works!");
 }
 ```
 
 ``` javascript
-OnEntityGroundMissing: function(entity) {
-    print("OnEntityGroundMissing works!");
+OnResourceDepositCreated: function(deposit) {
+    print("OnResourceDepositCreated works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnEntityGroundMissing(entity)
-    print("OnEntityGroundMissing works!")
+function PLUGIN:OnResourceDepositCreated(deposit)
+    print("OnResourceDepositCreated works!")
 end
 ```
 
 ``` python
-def OnEntityGroundMissing(self, entity):
-    print "OnEntityGroundMissing works!"
+def OnResourceDepositCreated(self, deposit):
+    print "OnResourceDepositCreated works!"
 ```
 
- * Called from DestroyOnGroundMissing.OnGroundMissing
- * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
- * Returning a non-null value ovverides default server behavior
+ * Called from ResourceDepositManager.CreateFromPosition
+ * Called when a resource deposit has been created
+ * No return behavior
