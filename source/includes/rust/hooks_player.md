@@ -211,36 +211,6 @@ def OnPlayerInit(self, player):
  * Called when the player is initializing (after they've connected, before they wake up)
  * No return behavior
 
-## OnHammerHit
-
-``` csharp
-void OnHammerHit(BasePlayer player, HitInfo info)
-{
-    Puts("OnHammerHit works!");
-}
-```
-
-``` javascript
-OnHammerHit: function(player, info) {
-    print("OnHammerHit works!");
-}
-```
-
-``` lua
-function PLUGIN:OnHammerHit(player, info)
-    print("OnHammerHit works!")
-end
-```
-
-``` python
-def OnHammerHit(self, player, info):
-    print "OnHammerHit works!"
-```
-
- * Called from RustCore.IOnHammerHit
- * Called when the player has hit something with a hammer
- * No return behavior
-
 ## OnPlayerRespawned
 
 ``` csharp
