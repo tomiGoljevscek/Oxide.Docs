@@ -119,6 +119,36 @@ def OnEntityGroundMissing(self, entity):
  * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
  * Returning a non-null value overides default server behavior
 
+## OnEntityLeave
+
+``` csharp
+void OnEntityLeave(TriggerBase trigger, BaseEntity entity)
+{
+    Puts("OnEntityLeave works!");
+}
+```
+
+``` javascript
+OnEntityLeave: function(trigger, entity) {
+    print("OnEntityLeave works!");
+}
+```
+
+``` lua
+function PLUGIN:OnEntityLeave(trigger, entity)
+    print("OnEntityLeave works!")
+end
+```
+
+``` python
+def OnEntityLeave(self, trigger, entity):
+    print "OnEntityLeave works!"
+```
+
+ * Called from TriggerBase.OnEntityLeave
+ * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
+ * No return behavior
+
 ## OnEntitySpawned
 
 ``` csharp
@@ -180,36 +210,6 @@ def OnEntityTakeDamage(self, entity, info):
  * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
  * Returning a non-null value overrides default server behavior (useful for godmode etc.)
-
-## OnEntityLeave
-
-``` csharp
-void OnEntityLeave(TriggerBase trigger, BaseEntity entity)
-{
-    Puts("OnEntityLeave works!");
-}
-```
-
-``` javascript
-OnEntityLeave: function(trigger, entity) {
-    print("OnEntityLeave works!");
-}
-```
-
-``` lua
-function PLUGIN:OnEntityLeave(trigger, entity)
-    print("OnEntityLeave works!")
-end
-```
-
-``` python
-def OnEntityLeave(self, trigger, entity):
-    print "OnEntityLeave works!"
-```
-
- * Called from TriggerBase.OnEntityLeave
- * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
- * No return behavior
 
 ## OnResourceDepositCreated
 
