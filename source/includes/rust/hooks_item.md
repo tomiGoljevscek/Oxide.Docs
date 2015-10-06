@@ -1,5 +1,186 @@
 # Item Hooks
 
+## OnBlueprintReveal
+
+``` csharp
+void OnBlueprintReveal(Item item, Item revealed, BasePlayer player)
+{
+    Puts("OnBlueprintReveal works!");
+}
+```
+
+``` javascript
+OnBlueprintReveal: function(item) {
+    print("OnBlueprintReveal works!");
+}
+```
+
+``` lua
+function PLUGIN:OnBlueprintReveal(item)
+    print("OnBlueprintReveal works!")
+end
+```
+
+``` python
+def OnBlueprintReveal(self, item):
+    print "OnBlueprintReveal works!"
+```
+
+ * Called from ItemModReveal.ServerCommand
+ * Called when a player attempts to reveal a blueprint
+ * No return behavior
+
+## OnConsumableUse
+
+``` csharp
+void OnConsumableUse(Item item)
+{
+    Puts("OnConsumableUse works!");
+}
+```
+
+``` javascript
+OnConsumableUse: function(item) {
+    print("OnConsumableUse works!");
+}
+```
+
+``` lua
+function PLUGIN:OnConsumableUse(item)
+    print("OnConsumableUse works!")
+end
+```
+
+``` python
+def OnConsumableUse(self, item):
+    print "OnConsumableUse works!"
+```
+
+ * Called from Item.UseOneItem
+ * Called right after a consumable item is used
+ * No return behavior
+ 
+## OnConsumeFuel
+
+``` csharp
+void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
+{
+    Puts("OnConsumeFuel works!");
+}
+```
+
+``` javascript
+OnConsumeFuel: function(oven, fuel, burnable) {
+    print("OnConsumeFuel works!");
+}
+```
+
+``` lua
+function PLUGIN:OnConsumeFuel(oven, fuel, burnable)
+    print("OnConsumeFuel works!")
+end
+```
+
+``` python
+def OnConsumeFuel(self, oven, fuel, burnable):
+    print "OnConsumeFuel works!"
+```
+
+ * Called from BaseOven.ConsumeFuel
+ * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
+ * No return behavior
+
+## OnDispenserGather
+
+``` csharp
+void OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
+{
+    Puts("OnDispenserGather works!");
+}
+```
+
+``` javascript
+OnDispenserGather: function(dispenser, entity, item) {
+    print("OnDispenserGather works!");
+}
+```
+
+``` lua
+function PLUGIN:OnDispenserGather(dispenser, entity, item)
+    print("OnDispenserGather works!")
+end
+```
+
+``` python
+def OnDispenserGather(self, dispenser, entity, item):
+    print "OnDispenserGather works!"
+```
+
+ * Called from ResourceDispenser.GiveResourceFromItem
+ * Called before the player is given items from a resource
+ * No return behavior
+
+## OnHealingItemUse
+
+``` csharp
+void OnHealingItemUse(HeldEntity item, BasePlayer target)
+{
+    Puts("OnHealingItemUse works!");
+}
+```
+
+``` javascript
+OnHealingItemUse: function(item, target) {
+    print("OnHealingItemUse works!");
+}
+```
+
+``` lua
+function PLUGIN:OnHealingItemUse(item, target)
+    print("OnHealingItemUse works!")
+end
+```
+
+``` python
+def OnHealingItemUse(self, item, target):
+    print "OnHealingItemUse works!"
+```
+
+ * Called from SyringeWeapon.GiveEffectsTo and MedicalTool.GiveEffectsTo
+ * Called right before a Syringe or Medkit item is used
+ * Returning a non-null value will cancel default behavior
+
+## OnItemAddedToContainer
+
+``` csharp
+void OnItemAddedToContainer(ItemContainer container, Item item)
+{
+    Puts("OnItemAddedToContainer works!");
+}
+```
+
+``` javascript
+OnItemAddedToContainer: function(container, item) {
+    print("OnItemAddedToContainer works!");
+}
+```
+
+``` lua
+function PLUGIN:OnItemAddedToContainer(container, item)
+    print("OnItemAddedToContainer works!")
+end
+```
+
+``` python
+def OnItemAddedToContainer(self, container, item):
+    print "OnItemAddedToContainer works!"
+```
+
+ * Called from ItemContainer.Insert
+ * Called right after an item was added to a container
+ * An entire stack has to be created, not just adding more wood to a wood stack for example
+ * No return behavior
+
 ## OnItemCraft
 
 ``` csharp
@@ -30,6 +211,36 @@ def OnItemCraft(self, item):
  * Called right after an item has started crafting
  * Return an ItemCraftTask object to modify behavior
 
+## OnItemCraftCancelled
+
+``` csharp
+void OnItemCraftCancelled(ItemCraftTask task)
+{
+    Puts("OnItemCraftCancelled works!");
+}
+```
+
+``` javascript
+OnItemCraftCancelled: function(task) {
+    print("OnItemCraftCancelled works!");
+}
+```
+
+``` lua
+function PLUGIN:OnItemCraftCancelled(task)
+    print("OnItemCraftCancelled works!")
+end
+```
+
+``` python
+def OnItemCraftCancelled(self, task):
+    print "OnItemCraftCancelled works!"
+```
+
+ * Called from ItemCrafter.CancelTask
+ * Called before an item has been crafted
+ * Returning a non-null value will cancel default behavior
+
 ## OnItemCraftFinished
 
 ``` csharp
@@ -58,6 +269,36 @@ def OnItemCraftFinished(self, task, item):
 
  * Called from ItemCrafter.FinishCrafting
  * Called right after an item has been crafted
+ * No return behavior
+
+## OnItemDeployed
+
+``` csharp
+void OnItemDeployed(Deployer deployer, BaseEntity entity)
+{
+    Puts("OnItemDeployed works!");
+}
+```
+
+``` javascript
+OnItemDeployed: function(deployer, entity) {
+    print("OnItemDeployed works!");
+}
+```
+
+``` lua
+function PLUGIN:OnItemDeployed(deployer, entity)
+    print("OnItemDeployed works!")
+end
+```
+
+``` python
+def OnItemDeployed(self, deployer, entity):
+    print "OnItemDeployed works!"
+```
+
+ * Called from Deployer.DoDeploy_Regular and Deployer.DoDeploy_Slot
+ * Called right after an item has been deployed
  * No return behavior
 
 ## OnItemPickup
@@ -120,36 +361,6 @@ def OnItemResearch(self, item, player):
  * Called right before a player begins to research an item
  * Returning a non-null value will cancel default behavior
 
-## OnItemResearchStart
-
-``` csharp
-void OnItemResearchStart(ResearchTable table)
-{
-    Puts("OnItemResearchStart works!");
-}
-```
-
-``` javascript
-OnItemResearchStart: function(table) {
-    print("OnItemResearchStart works!");
-}
-```
-
-``` lua
-function PLUGIN:OnItemResearchStart(table)
-    print("OnItemResearchStart works!")
-end
-```
-
-``` python
-def OnItemResearchStart(self, table):
-    print "OnItemResearchStart works!"
-```
-
- * Called from ResearchTable.DoResearch
- * Called when a player has started researching an item
- * No return behavior
-
 ## OnItemResearchEnd
 
 ``` csharp
@@ -184,65 +395,34 @@ def OnItemResearchEnd(self, table, chance):
  * Called right before a player finishes researching an item
  * Returning a float will affect if researching is successful or not
 
-## OnItemDeployed
+## OnItemResearchStart
 
 ``` csharp
-void OnItemDeployed(Deployer deployer, BaseEntity entity)
+void OnItemResearchStart(ResearchTable table)
 {
-    Puts("OnItemDeployed works!");
+    Puts("OnItemResearchStart works!");
 }
 ```
 
 ``` javascript
-OnItemDeployed: function(deployer, entity) {
-    print("OnItemDeployed works!");
+OnItemResearchStart: function(table) {
+    print("OnItemResearchStart works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnItemDeployed(deployer, entity)
-    print("OnItemDeployed works!")
+function PLUGIN:OnItemResearchStart(table)
+    print("OnItemResearchStart works!")
 end
 ```
 
 ``` python
-def OnItemDeployed(self, deployer, entity):
-    print "OnItemDeployed works!"
+def OnItemResearchStart(self, table):
+    print "OnItemResearchStart works!"
 ```
 
- * Called from Deployer.DoDeploy_Regular and Deployer.DoDeploy_Slot
- * Called right after an item has been deployed
- * No return behavior
-
-## OnItemAddedToContainer
-
-``` csharp
-void OnItemAddedToContainer(ItemContainer container, Item item)
-{
-    Puts("OnItemAddedToContainer works!");
-}
-```
-
-``` javascript
-OnItemAddedToContainer: function(container, item) {
-    print("OnItemAddedToContainer works!");
-}
-```
-
-``` lua
-function PLUGIN:OnItemAddedToContainer(container, item)
-    print("OnItemAddedToContainer works!")
-end
-```
-
-``` python
-def OnItemAddedToContainer(self, container, item):
-    print "OnItemAddedToContainer works!"
-```
-
- * Called from ItemContainer.Insert
- * Called right after an item was added to a container
- * An entire stack has to be created, not just adding more wood to a wood stack for example
+ * Called from ResearchTable.DoResearch
+ * Called when a player has started researching an item
  * No return behavior
 
 ## OnItemRemovedFromContainer
@@ -276,34 +456,64 @@ def OnItemRemovedFromContainer(self, container, item):
  * The entire stack has to be removed for this to be called, not just a little bit
  * No return behavior
 
-## OnDispenserGather
+## OnItemUpgrade
 
 ``` csharp
-void OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
+void OnItemUpgrade(Item item, Item upgraded, BasePlayer player)
 {
-    Puts("OnDispenserGather works!");
+    Puts("OnItemUpgrade works!");
 }
 ```
 
 ``` javascript
-OnDispenserGather: function(dispenser, entity, item) {
-    print("OnDispenserGather works!");
+OnItemUpgrade: function(item, upgraded, item) {
+    print("OnItemUpgrade works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnDispenserGather(dispenser, entity, item)
-    print("OnDispenserGather works!")
+function PLUGIN:OnItemUpgrade(item, upgraded, item)
+    print("OnItemUpgrade works!")
 end
 ```
 
 ``` python
-def OnDispenserGather(self, dispenser, entity, item):
-    print "OnDispenserGather works!"
+def OnItemUpgrade(self, item, upgraded, item):
+    print "OnItemUpgrade works!"
 ```
 
- * Called from ResourceDispenser.GiveResourceFromItem
- * Called before the player is given items from a resource
+ * Called from ItemModUpgrade.ServerCommand
+ * Called right before an item is upgraded
+ * No return behavior
+
+## OnLoseCondition
+
+``` csharp
+void OnLoseCondition(Item item, ref float amount)
+{
+    Puts("OnLoseCondition works!");
+}
+```
+
+``` javascript
+OnLoseCondition: function(item, amount) {
+    print("OnLoseCondition works!");
+}
+```
+
+``` lua
+function PLUGIN:OnLoseCondition(item, amount)
+    print("OnLoseCondition works!")
+end
+```
+
+``` python
+def OnLoseCondition(self, item, amount):
+    print "OnLoseCondition works!"
+```
+
+ * Called from Item.LoseCondition
+ * Called right before the condition of the item is modified
  * No return behavior
 
 ## OnPlantGather
@@ -424,126 +634,6 @@ def OnSurveyGather(self, survey, item):
 
  * Called from SurveyCharge.Explode
  * Called before items are gathered from a survey charge
- * No return behavior
-
-## OnConsumableUse
-
-``` csharp
-void OnConsumableUse(Item item)
-{
-    Puts("OnConsumableUse works!");
-}
-```
-
-``` javascript
-OnConsumableUse: function(item) {
-    print("OnConsumableUse works!");
-}
-```
-
-``` lua
-function PLUGIN:OnConsumableUse(item)
-    print("OnConsumableUse works!")
-end
-```
-
-``` python
-def OnConsumableUse(self, item):
-    print "OnConsumableUse works!"
-```
-
- * Called from Item.UseOneItem
- * Called right after a consumable item is used
- * No return behavior
- 
-## OnConsumeFuel
-
-``` csharp
-void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
-{
-    Puts("OnConsumeFuel works!");
-}
-```
-
-``` javascript
-OnConsumeFuel: function(oven, fuel, burnable) {
-    print("OnConsumeFuel works!");
-}
-```
-
-``` lua
-function PLUGIN:OnConsumeFuel(oven, fuel, burnable)
-    print("OnConsumeFuel works!")
-end
-```
-
-``` python
-def OnConsumeFuel(self, oven, fuel, burnable):
-    print "OnConsumeFuel works!"
-```
-
- * Called from BaseOven.ConsumeFuel
- * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
- * No return behavior
-
-## OnHealingItemUse
-
-``` csharp
-void OnHealingItemUse(HeldEntity item, BasePlayer target)
-{
-    Puts("OnHealingItemUse works!");
-}
-```
-
-``` javascript
-OnHealingItemUse: function(item, target) {
-    print("OnHealingItemUse works!");
-}
-```
-
-``` lua
-function PLUGIN:OnHealingItemUse(item, target)
-    print("OnHealingItemUse works!")
-end
-```
-
-``` python
-def OnHealingItemUse(self, item, target):
-    print "OnHealingItemUse works!"
-```
-
- * Called from SyringeWeapon.GiveEffectsTo and MedicalTool.GiveEffectsTo
- * Called right before a Syringe or Medkit item is used
- * Returning a non-null value will cancel default behavior
-
-## OnLoseCondition
-
-``` csharp
-void OnLoseCondition(Item item, ref float amount)
-{
-    Puts("OnLoseCondition works!");
-}
-```
-
-``` javascript
-OnLoseCondition: function(item, amount) {
-    print("OnLoseCondition works!");
-}
-```
-
-``` lua
-function PLUGIN:OnLoseCondition(item, amount)
-    print("OnLoseCondition works!")
-end
-```
-
-``` python
-def OnLoseCondition(self, item, amount):
-    print "OnLoseCondition works!"
-```
-
- * Called from Item.LoseCondition
- * Called right before the condition of the item is modified
  * No return behavior
 
 ## OnTrapArm
