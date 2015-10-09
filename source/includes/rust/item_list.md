@@ -66,7 +66,7 @@
 | 1050986417    | Empty Tuna Can               | can.tuna.empty           |
 | 1436001773    | Charcoal                     | charcoal                 |
 | 1711323399    | Burned Chicken               | chicken.burned           |
-| 1734319168    | Cooked Chicken               | chicken.cooked           |
+| 1734319168    | Cooked Chicken.              | chicken.cooked           |
 | -1658459025   | Raw Chicken Breast           | chicken.raw              |
 | -726947205    | Spoiled Chicken              | chicken.spoiled          |
 | -341443994    | Chocolate Bar                | chocholate               |

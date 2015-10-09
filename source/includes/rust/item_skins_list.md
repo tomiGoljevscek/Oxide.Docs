@@ -8,6 +8,7 @@
 | 10017        | Green Beenie Hat                  |
 | 10040        | Rasta Beenie                      |
 | 10016        | Red Beenie Hat                    |
+| 10085        | Winter Deers                      |
 
 ## Boonie Hat
 | Skin Id      | Skin name                         |
@@ -32,6 +33,7 @@
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
 | 14072        | Green Hoodie                      |
+| 10086        | Skeleton Hoodie                   |
 
 ## Jacket
 | Skin Id      | Skin name                         |
@@ -41,9 +43,16 @@
 | 10009        | Green Jacket                      |
 | 10015        | Hunting Jacket                    |
 | 10013        | Multicam Jacket                   |
+| 10072        | Provocateur Jacket                |
 | 10010        | Red Jacket                        |
 | 10008        | Snowcamo Jacket                   |
 | 10014        | Urban Camo Jacket                 |
+
+## Snow Jacket - Red
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10082        | 60's Army Jacket                  |
+| 10083        | Salvaged Shirt, Coat and Tie      |
 
 ## Improvised Balaclava
 | Skin Id      | Skin name                         |
@@ -52,8 +61,11 @@
 | 10071        | Double Yellow Balaclava           |
 | 10068        | Forest Camo Balaclava             |
 | 10057        | Murica Balaclava                  |
+| 10075        | Nightmare Balaclava               |
 | 10070        | Red Check Balaclava               |
 | 10054        | Rorschach Skull                   |
+| 10090        | Skin Balaclava                    |
+| 10084        | The Rust Knight                   |
 
 ## Bandana Mask
 | Skin Id      | Skin name                         |
@@ -67,6 +79,7 @@
 | 10065        | Red Skull Bandana                 |
 | 10064        | Skull Bandana                     |
 | 10062        | Snow Camo Bandana                 |
+| 10079        | Wizard Bandana                    |
 
 ## Pants
 | Skin Id      | Skin name                         |
@@ -74,22 +87,39 @@
 | 10001        | Blue Jeans                        |
 | 10049        | Blue Track Pants                  |
 | 10019        | Forest Camo Pants                 |
+| 10078        | Old Prisoner Pants                |
 | 10048        | Punk Rock Pants                   |
 | 10021        | Snow Camo Pants                   |
 | 10020        | Urban Camo Pants                  |
 
+## Semi-Automatic Pistol
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10087        | Contamination Pistol              |
+| 10081        | Reaper Note Pistol                |
+| 10073        | Red Shine Pistol                  |
+
 ## Boots
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 10080        | Army Boots                        |
 | 10023        | Black Boots                       |
+| 10088        | Bloody Boots                      |
 | 10034        | Punk Boots                        |
 | 10044        | Scavenged Sneaker Boots           |
 | 10022        | Tan Boots                         |
+
+## Pump Shotgun
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10074        | Chieftain Pump Shotgun            |
 
 ## Sleeping Bag
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10037        | Blue Plaid Sleeping Bag           |
+| 10077        | Tiger Crown Sleeping Bag          |
+| 10076        | Wood Camo Sleeping Bag            |
 
 ## T-Shirt
 | Skin Id      | Skin name                         |
@@ -117,6 +147,7 @@
 |--------------|-----------------------------------|
 | 10047        | Aztec Long T-Shirt                |
 | 10004        | Black Longsleeve T-Shirt          |
+| 10089        | Christmas Jumper                  |
 | 10050        | Frankensteins Sweater             |
 | 10032        | Green Checkered Shirt             |
 | 10005        | Grey Longsleeve T-Shirt           |
