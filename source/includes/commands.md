@@ -12,6 +12,8 @@ group <add|set> <name> [title] [rank]
 group <remove|show> <name>  
 group <parent> <name> <parentName>  
 usergroup <add|remove> <username> <groupname>  
+show <group|user> <name>
+show perms
 version or oxide.version
 ```
 
