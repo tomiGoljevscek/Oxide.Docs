@@ -63,7 +63,7 @@ def CanClientLogin(self, connection):
 ## CanLootPlayer
 
 ``` csharp
-void CanLootPlayer(BasePlayer player, BasePlayer target) 
+void CanLootPlayer(BasePlayer target, BasePlayer looter) 
 {
     Puts("CanLootPlayer works!");
 }
