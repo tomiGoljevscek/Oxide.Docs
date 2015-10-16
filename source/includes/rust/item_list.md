@@ -117,6 +117,8 @@
 | 776005741     | Bone Knife                   | knife.bone               |
 | 108061910     | Wooden Ladder                | ladder.wooden.wall       |
 | -51678842     | Lantern                      | lantern                  |
+| 1876243432    | Jack O Lantern Happy         | lantern_a                |
+| 1876243433    | Jack O Lantern Angry         | lantern_b                |
 | 743239077     | Large Furnace                | large.furnace            |
 | -789202811    | Large Medkit                 | largemedkit              |
 | 50834473      | Leather                      | leather                  |
