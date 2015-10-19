@@ -3,17 +3,17 @@
 ## Default commands
 
 ```
-load *|<pluginname>+  
-unload *|<pluginname>+  
-reload *|<pluginname>+  
-grant <group|user> <name|id> *|<permission>  
-revoke <group|user> <name|id> *|<permission>  
-group <add|set> <name> [title] [rank]  
-group <remove|show> <name>  
-group <parent> <name> <parentName>  
-usergroup <add|remove> <username> <groupname>  
+load *|<pluginname>+
+unload *|<pluginname>+
+reload *|<pluginname>+
+grant <group|user> <name|id> *|<permission>
+revoke <group|user> <name|id> *|<permission>
+group <add|set> <name> [title] [rank]
+group <remove> <name>
+group <parent> <name> <parentname>
+usergroup <add|remove> <username> <groupname>
 show <group|user> <name>
-show perms
+show <groups|perms>
 version or oxide.version
 ```
 

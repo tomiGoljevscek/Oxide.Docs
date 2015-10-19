@@ -3,26 +3,26 @@
 ## CanUseDoor
 
 ``` csharp
-void CanUseDoor(BasePlayer player, BaseLock lock)
+void CanUseDoor(BasePlayer player, BaseLock door)
 {
     Puts("CanUseDoor works!");
 }
 ```
 
 ``` javascript
-CanUseDoor: function(player, lock) {
+CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanUseDoor(player, lock)
+function PLUGIN:CanUseDoor(player, door)
     print("CanUseDoor works!")
 end
 ```
 
 ``` python
-def CanUseDoor(self, player, lock):
+def CanUseDoor(self, player, door):
     print "CanUseDoor works!"
 ```
 
@@ -33,20 +33,20 @@ def CanUseDoor(self, player, lock):
 ## CanUseDoor
 
 ``` csharp
-void CanUseDoor(BasePlayer player, CodeLock lock)
+void CanUseDoor(BasePlayer player, CodeLock door)
 {
     Puts("CanUseDoor works!");
 }
 ```
 
 ``` javascript
-CanUseDoor: function(player, lock) {
+CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanUseDoor(player, lock)
+function PLUGIN:CanUseDoor(player, door)
     print("CanUseDoor works!")
 end
 ```
@@ -63,26 +63,26 @@ def CanUseDoor(self, player, door):
 ## CanUseDoor
 
 ``` csharp
-void CanUseDoor(BasePlayer player, KeyLock lock)
+void CanUseDoor(BasePlayer player, KeyLock door)
 {
     Puts("CanUseDoor works!");
 }
 ```
 
 ``` javascript
-CanUseDoor: function(player, lock) {
+CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanUseDoor(player, lock)
+function PLUGIN:CanUseDoor(player, door)
     print("CanUseDoor works!")
 end
 ```
 
 ``` python
-def CanUseDoor(self, player, lock):
+def CanUseDoor(self, player, door):
     print "CanUseDoor works!"
 ```
 
