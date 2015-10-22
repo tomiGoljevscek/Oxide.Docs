@@ -178,7 +178,7 @@ def OnCupboardAuthorize(self, priviledge, player):
 
  * Called from BuildingPrivlidge.AddSelfAuthorize
  * Called when a cupboard attempts to authorize a player
- * No return behavior
+ * Returning a non-null value cancels the authorization
 
 ## OnCupboardDeauthorize
 
@@ -208,7 +208,7 @@ def OnCupboardDeauthorize(self, priviledge, player):
 
  * Called from BuildingPrivlidge.RemoveSelfAuthorize
  * Called when a cupboard attempts to deauthorize a player
- * No return behavior
+ * Returning a non-null value cancels the deauthorization
 
 ## OnEntityBuilt
 
