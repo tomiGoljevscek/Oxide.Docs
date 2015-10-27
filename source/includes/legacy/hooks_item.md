@@ -53,7 +53,7 @@ We need a Python example here
 ## OnItemDeployed
 
 ``` csharp
-void OnItemDeployed(DeployableObject deployable, NetUser netuser)
+void OnItemDeployed(DeployableObject deployable, IDeployableItem item)
 {
     Puts("OnItemDeployed works!");
 }

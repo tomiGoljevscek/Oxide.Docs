@@ -3,7 +3,7 @@
 ## OnStructureBuilt
 
 ``` csharp
-void OnStructureBuilt(StructureComponent structure, NetUser netuser)
+void OnStructureBuilt(StructureComponent component, IStructureComponentItem item)
 {
     Puts("OnStructureBuilt works!");
 }
