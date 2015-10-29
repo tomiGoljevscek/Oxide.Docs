@@ -57,6 +57,7 @@
 ## Improvised Balaclava
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 10105        | Burlap Brains Balaclava           |
 | 10069        | Desert Camo Balaclava             |
 | 10071        | Double Yellow Balaclava           |
 | 10068        | Forest Camo Balaclava             |
@@ -65,7 +66,9 @@
 | 10070        | Red Check Balaclava               |
 | 10054        | Rorschach Skull                   |
 | 10090        | Skin Balaclava                    |
+| 10110        | Stitched Skin                     |
 | 10084        | The Rust Knight                   |
+| 10111        | Zipper Face                       |
 
 ## Bandana Mask
 | Skin Id      | Skin name                         |
@@ -73,6 +76,7 @@
 | 10061        | Black Bandana                     |
 | 10060        | Blue Bandana                      |
 | 10067        | Checkered Bandana                 |
+| 10104        | Creepy Clown Bandana              |
 | 10066        | Desert Camo Bandana               |
 | 10063        | Forest Camo Bandana               |
 | 10059        | Green Bandana                     |
@@ -96,6 +100,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10087        | Contamination Pistol              |
+| 10108        | Halloween Bat                     |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
 
@@ -118,6 +123,8 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10037        | Blue Plaid Sleeping Bag           |
+| 10109        | Freshly Dug Grave                 |
+| 10107        | Horror Bag                        |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 10076        | Wood Camo Sleeping Bag            |
 
@@ -148,6 +155,7 @@
 | 10047        | Aztec Long T-Shirt                |
 | 10004        | Black Longsleeve T-Shirt          |
 | 10089        | Christmas Jumper                  |
+| 10106        | Creepy Jack                       |
 | 10050        | Frankensteins Sweater             |
 | 10032        | Green Checkered Shirt             |
 | 10005        | Grey Longsleeve T-Shirt           |

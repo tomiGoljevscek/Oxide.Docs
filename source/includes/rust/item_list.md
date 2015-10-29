@@ -25,6 +25,7 @@
 | -135651869    | Hide Pants                   | attire.hide.pants        |
 | 102672084     | Hide Poncho                  | attire.hide.poncho       |
 | -1666761111   | Hide Vest                    | attire.hide.vest         |
+| 563023711     | Auto Turret                  | autoturret               |
 | 790921853     | Salvaged Axe                 | axe.salvaged             |
 | -337261910    | Bandage                      | bandage                  |
 | 498312426     | Concrete Barricade           | barricade.concrete       |
@@ -64,6 +65,7 @@
 | 2080339268    | Empty Can Of Beans           | can.beans.empty          |
 | -171664558    | Can of Tuna                  | can.tuna                 |
 | 1050986417    | Empty Tuna Can               | can.tuna.empty           |
+| 1300054961    | CCTV Camera                  | cctv.camera              |
 | 1436001773    | Charcoal                     | charcoal                 |
 | 1711323399    | Burned Chicken               | chicken.burned           |
 | 1734319168    | Cooked Chicken.              | chicken.cooked           |
@@ -163,6 +165,19 @@
 | 2107229499    | Boots                        | shoes.boots              |
 | -1009492144   | Pump Shotgun                 | shotgun.pump             |
 | 2077983581    | Waterpipe Shotgun            | shotgun.waterpipe        |
+| 1498516223    | Two Sided Hanging Sign       | sign.hanging             |
+| 1628490888    | Large Banner Hanging         | sign.hanging.banner.large|
+| -632459882    | Two Sided Ornate Hanging Sign| sign.hanging.ornate      |
+| -626812403    | Landscape Picture Frame      | sign.pictureframe.landscape|
+| 385802761     | Portrait Picture Frame       | sign.pictureframe.portrait|
+| 2117976603    | Tall Picture Frame           | sign.pictureframe.tall   |
+| 1338515426    | XL Picture Frame             | sign.pictureframe.xl     |
+| -1455694274   | XXL Picture Frame            | sign.pictureframe.xxl    |
+| 1579245182    | Large Banner on pole         | sign.pole.banner.large   |
+| -587434450    | Double Sign Post             | sign.post.double         |
+| -163742043    | Single Sign Post             | sign.post.single         |
+| -1224714193   | One Sided Town Sign Post     | sign.post.town           |
+| 644359987     | Two Sided Town Sign Post     | sign.post.town.roof      |
 | -1962514734   | Huge Wooden Sign             | sign.wooden.huge         |
 | -705305612    | Large Wooden Sign            | sign.wooden.large        |
 | -357728804    | Wooden Sign                  | sign.wooden.medium       |
@@ -186,6 +201,7 @@
 | -1625468793   | Supply Signal                | supply.signal            |
 | 1293049486    | Survey Charge                | surveycharge             |
 | 586484018     | Medical Syringe              | syringe.medical          |
+| 1490499512    | Targeting Computer           | targeting.computer       |
 | -1342405573   | Camera                       | tool.camera              |
 | 110547964     | Torch                        | torch                    |
 | 1046072789    | Snap Trap                    | trap.bear                |
