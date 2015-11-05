@@ -208,8 +208,8 @@ def OnItemCraft(self, item):
 ```
 
  * Called from ItemCrafter.CraftItem
- * Called right after an item has started crafting
- * Return an ItemCraftTask object to modify behavior
+ * Called right after an item is added to the crafting queue
+ * Return an ItemCraftTask object to modify behavior or outcome
 
 ## OnItemCraftCancelled
 
