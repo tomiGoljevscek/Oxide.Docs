@@ -78,6 +78,9 @@
 | 2123300234    | Crossbow                     | crossbow                 |
 | 1983936587    | Crude Oil                    | crude.oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
+| -2104481870   | Sheet Metal Door             | door.hinged.metal        |
+| -1571725662   | Armored Door                 | door.hinged.toptier      |
+| 1456441506    | Wooden Door                  | door.hinged.wood         |
 | 1200628767    | Door Key                     | door.key                 |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
 | 1755466030    | Explosives                   | explosives               |
@@ -85,7 +88,9 @@
 | 97513422      | Flare                        | flare                    |
 | -217113639    | Acoustic Guitar              | fun.guitar               |
 | -505639592    | Furnace                      | furnace                  |
-| -1227787393   | High External Wooden Gate    | gates.external.high      |
+| 1598149413    | Large Furnace                | furnace.large            |
+| -1779401418   | High External Stone Gate     | gates.external.high.stone|
+| -57285700     | High External Wooden Gate    | gates.external.high.wood |
 | 277631078     | Wind Turbine                 | generator.wind.scrap     |
 | 718197703     | Granola Bar                  | granolabar               |
 | 384204160     | Beancan Grenade              | grenade.beancan          |
@@ -114,14 +119,11 @@
 | -1440143841   | Salvaged Icepick             | icepick.salvaged         |
 | -1167640370   | Jacket                       | jacket                   |
 | -1616887133   | Snow Jacket - Red            | jacket.snow              |
-| 1416106479    | Snow Jacket - Black          | jacket.snow2             |
-| 1416106480    | Snow Jacket - Wood Camo      | jacket.snow3             |
+| -1284735799   | Jack O Lantern Angry         | jackolantern.angry       |
+| -1278649848   | Jack O Lantern Happy         | jackolantern.happy       |
 | 776005741     | Bone Knife                   | knife.bone               |
 | 108061910     | Wooden Ladder                | ladder.wooden.wall       |
 | -51678842     | Lantern                      | lantern                  |
-| 1876243432    | Jack O Lantern Happy         | lantern_a                |
-| 1876243433    | Jack O Lantern Angry         | lantern_b                |
-| 743239077     | Large Furnace                | large.furnace            |
 | -789202811    | Large Medkit                 | largemedkit              |
 | 50834473      | Leather                      | leather                  |
 | -975723312    | Code Lock                    | lock.code                |
@@ -133,6 +135,9 @@
 | 107868        | Paper Map                    | map                      |
 | 997973965     | Improvised Balaclava         | mask.balaclava           |
 | -46188931     | Bandana Mask                 | mask.bandana             |
+| -253819519    | Pork                         | meat.boar                |
+| 968732481     | Burned Pork                  | meat.pork.burned         |
+| 991728250     | Cooked Pork                  | meat.pork.cooked         |
 | -46848560     | Metal Facemask               | metal.facemask           |
 | 688032252     | Metal Fragments              | metal.fragments          |
 | -1059362949   | Metal Ore                    | metal.ore                |
@@ -162,9 +167,13 @@
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 583366917     | Corn Seed                    | seed.corn                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
+| 2057749608    | Salvaged Shelves             | shelves                  |
 | 2107229499    | Boots                        | shoes.boots              |
 | -1009492144   | Pump Shotgun                 | shotgun.pump             |
 | 2077983581    | Waterpipe Shotgun            | shotgun.waterpipe        |
+| -529054135    | Metal horizontal embrasure   | shutter.metal.embrasure.a|
+| -529054134    | Metal Vertical embrasure     | shutter.metal.embrasure.b|
+| 486166145     | Wood Shutters                | shutter.wood.a           |
 | 1498516223    | Two Sided Hanging Sign       | sign.hanging             |
 | 1628490888    | Large Banner Hanging         | sign.hanging.banner.large|
 | -632459882    | Two Sided Ornate Hanging Sign| sign.hanging.ornate      |
@@ -210,6 +219,9 @@
 | 1660607208    | Longsleeve T-Shirt           | tshirt.long              |
 | -1792066367   | High External Wooden Wall    | wall.external.high       |
 | -496055048    | High External Stone Wall     | wall.external.high.stone |
+| -1021702157   | Metal Window Bars            | wall.window.bars.metal   |
+| -402507101    | Reinforced Window Bars       | wall.window.bars.toptier |
+| -1556671423   | Wooden Window Bars           | wall.window.bars.wood    |
 | 112903447     | Water                        | water                    |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |

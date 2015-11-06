@@ -52,7 +52,9 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10082        | 60's Army Jacket                  |
+| 10113        | Black                             |
 | 10083        | Salvaged Shirt, Coat and Tie      |
+| 10112        | Woodland                          |
 
 ## Improvised Balaclava
 | Skin Id      | Skin name                         |
@@ -96,6 +98,11 @@
 | 10021        | Snow Camo Pants                   |
 | 10020        | Urban Camo Pants                  |
 
+## Revolver
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10114        | Outback revolver                  |
+
 ## Semi-Automatic Pistol
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -103,6 +110,13 @@
 | 10108        | Halloween Bat                     |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
+
+## Bolt Action Rifle
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10117        | Dreamcatcher                      |
+| 10115        | Ghost Bolt Rifle                  |
+| 10116        | Tundra Bolt Rifle                 |
 
 ## Boots
 | Skin Id      | Skin name                         |
