@@ -41,7 +41,7 @@ namespace Oxide.Plugins
 
         private void Loaded()
         {
-            storedData = Interface.GetMod().DataFileSystem.ReadObject<StoredData>("MyDataFile");
+            storedData = Interface.Oxide.DataFileSystem.ReadObject<StoredData>("MyDataFile");
         }
     }
 }
@@ -115,7 +115,7 @@ namespace Oxide.Plugins
 
         private void Loaded()
         {
-            storedData = Interface.GetMod().DataFileSystem.ReadObject<StoredData>("MyDataFile");
+            storedData = Interface.Oxide.DataFileSystem.ReadObject<StoredData>("MyDataFile");
         }
 
         [ChatCommand("Test")]
@@ -128,7 +128,7 @@ namespace Oxide.Plugins
             {
                 PrintToChat(player, "Saving your data to the file.");
                 storedData.Players.Add(info);
-                Interface.GetMod().DataFileSystem.WriteObject("MyDataFile", storedData);
+                Interface.Oxide.DataFileSystem.WriteObject("MyDataFile", storedData);
             }
         }
     }

@@ -14,7 +14,7 @@ namespace Oxide.Plugins
     [Description("This example illustrates how to use a GET WebRequest.")]
     class Example : RustPlugin
     {
-        private readonly WebRequests webRequests = Interface.GetMod().GetLibrary<WebRequests>("WebRequests");
+        private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
         [ChatCommand("getrequest")]
         private void ExampleGetRequest(BasePlayer player, string command, string[] args)
@@ -81,7 +81,7 @@ namespace Oxide.Plugins
     [Description("This example illustrates how to use a POST WebRequest.")]
     class Example : RustPlugin
     {
-        private readonly WebRequests webRequests = Interface.GetMod().GetLibrary<WebRequests>("WebRequests");
+        private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
         [ChatCommand("postrequest")]
         private void ExamplePostRequest(BasePlayer player, string command, string[] args)
