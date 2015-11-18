@@ -213,20 +213,20 @@ def OnCupboardDeauthorize(self, priviledge, player):
 ## OnEntityBuilt
 
 ``` csharp
-void OnEntityBuilt(Planner planner, UnityEngine/GameObject component)
+void OnEntityBuilt(Planner plan, GameObject go)
 {
     Puts("OnEntityBuilt works!");
 }
 ```
 
 ``` javascript
-OnEntityBuilt: function(planner, component) {
+OnEntityBuilt: function(plan, obj) {
     print("OnEntityBuilt works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnEntityBuilt(planner, component)
+function PLUGIN:OnEntityBuilt(plan, obj)
     print("OnEntityBuilt works!")
 end
 ```
