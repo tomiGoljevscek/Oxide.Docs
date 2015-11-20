@@ -126,6 +126,7 @@
 | -51678842     | Lantern                      | lantern                  |
 | -789202811    | Large Medkit                 | largemedkit              |
 | 50834473      | Leather                      | leather                  |
+| 193190034     | M249                         | lmg.m249                 |
 | -975723312    | Code Lock                    | lock.code                |
 | 1908195100    | Lock                         | lock.key                 |
 | 146685185     | Longsword                    | longsword                |
