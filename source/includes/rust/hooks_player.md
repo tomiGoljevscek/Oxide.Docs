@@ -580,26 +580,26 @@ def OnUserApprove(self, connection):
 ## OnWeaponFired
 
 ``` csharp
-void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjectile projectile, ProtoBuf.ProjectileShoot projectiles)
+void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjectile mod, ProtoBuf.ProjectileShoot projectiles)
 {
     Puts("OnWeaponFired works!");
 }
 ```
 
 ``` javascript
-OnWeaponFired: function(baseProjectile, player, modProjectile, projectiles) {
+OnWeaponFired: function(projectile, player, mod, projectiles) {
     print("OnWeaponFired works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnWeaponFired(baseProjectile, player, modProjectile, projectiles)
+function PLUGIN:OnWeaponFired(projectile, player, mod, projectiles)
     print("OnWeaponFired works!")
 end
 ```
 
 ``` python
-def OnWeaponFired(self, baseProjectile, player, modProjectile, projectiles):
+def OnWeaponFired(self, projectile, player, mod, projectiles):
     print "OnWeaponFired works!"
 ```
 
