@@ -669,7 +669,7 @@ def OnTrapArm(self, trap, player):
 ## OnTrapDisarm
 
 ``` csharp
-void OnTrapDisarm(LandMine trap, BasePlayer player)
+void OnTrapDisarm(Landmine trap, BasePlayer player)
 {
     Puts("OnTrapDisarm works!");
 }
