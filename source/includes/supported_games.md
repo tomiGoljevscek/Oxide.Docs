@@ -7,7 +7,6 @@
 [![Reign of Kings](rok/favicon-32x32.png)](/rok/)
 [![The Forest](forest/favicon-32x32.png)](/forest/)
 [![Beasts of Prey](bop/favicon-32x32.png)](/bop/)
-[![The Dead Linger](tdl/favicon-32x32.png)](/tdl/)
 
 Plugins can currently be developed for the games [Rust](#rust), [Rust Legacy](#rust-legacy), [7 Days to Die](#7-days-to-die), [Reign of Kings](#reign-of-kings), [The Forest](#the-forest), [Beasts of Prey](#beasts-of-prey), and [The Dead Linger](#the-dead-linger), with support for more on the way!
 

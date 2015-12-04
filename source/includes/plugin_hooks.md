@@ -8,7 +8,6 @@
 [![Reign of Kings](rok/favicon-32x32.png)](/rok/)
 [![The Forest](forest/favicon-32x32.png)](/forest/)
 [![Beasts of Prey](bop/favicon-32x32.png)](/bop/)
-[![The Dead Linger](tdl/favicon-32x32.png)](/tdl/)
 
 ## Init
 
