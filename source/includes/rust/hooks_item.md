@@ -304,27 +304,27 @@ def OnItemDeployed(self, deployer, entity):
 ## OnItemPickup
 
 ``` csharp
-void OnItemPickup(BasePlayer player, Item item)
+void OnCollectiblePickup(Item item, BasePlayer player)
 {
-    Puts("OnItemPickup works!");
+    Puts("OnCollectiblePickup works!");
 }
 ```
 
 ``` javascript
-OnItemPickup: function(player, item) {
-    print("OnItemPickup works!");
+OnCollectiblePickup: function(item, player) {
+    print("OnCollectiblePickup works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnItemPickup(player, item)
-    print("OnItemPickup works!")
+function PLUGIN:OnCollectiblePickup(item, player)
+    print("OnCollectiblePickup works!")
 end
 ```
 
 ``` python
-def OnItemPickup(self, player, item):
-    print "OnItemPickup works!"
+def OnCollectiblePickup(self, item, player):
+    print "OnCollectiblePickup works!"
 ```
 
  * Called from RustCore.IOnItemPickup
