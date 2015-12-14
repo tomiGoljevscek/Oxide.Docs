@@ -1,6 +1,6 @@
 ---
-title: Oxide API for Beasts of Prey
-short_code: bop
+title: Oxide API for The Forest
+short_code: the-forest
 
 language_tabs:
   - csharp
@@ -9,7 +9,7 @@ language_tabs:
   - python
 
 includes:
-  - bop/getting_started
+  - the-forest/getting_started
   - plugin_hooks
   - commands
   - configurations

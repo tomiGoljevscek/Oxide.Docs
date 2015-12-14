@@ -1,6 +1,6 @@
 ---
-title: Oxide API for 7 Days to Die
-short_code: sdtd
+title: Oxide API for Rust Legacy
+short_code: rust-legacy
 
 language_tabs:
   - csharp
@@ -9,12 +9,14 @@ language_tabs:
   - python
 
 includes:
-  - sdtd/getting_started
+  - rust-legacy/getting_started
   - plugin_hooks
-  - sdtd/hooks_general
-  - sdtd/hooks_player
-  - sdtd/hooks_entity
-  - sdtd/library_functions
+  - rust-legacy/hooks_general
+  - rust-legacy/hooks_player
+  - rust-legacy/hooks_entity
+  - rust-legacy/hooks_item
+  - rust-legacy/hooks_structure
+  - rust-legacy/library_functions
   - commands
   - configurations
   - storing_data

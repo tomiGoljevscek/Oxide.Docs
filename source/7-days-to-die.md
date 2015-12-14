@@ -1,6 +1,6 @@
 ---
-title: Oxide API for Rust Legacy
-short_code: legacy
+title: Oxide API for 7 Days to Die
+short_code: 7-days-to-die
 
 language_tabs:
   - csharp
@@ -9,14 +9,12 @@ language_tabs:
   - python
 
 includes:
-  - legacy/getting_started
+  - 7-days-to-die/getting_started
   - plugin_hooks
-  - legacy/hooks_general
-  - legacy/hooks_player
-  - legacy/hooks_entity
-  - legacy/hooks_item
-  - legacy/hooks_structure
-  - legacy/library_functions
+  - 7-days-to-die/hooks_general
+  - 7-days-to-die/hooks_player
+  - 7-days-to-die/hooks_entity
+  - 7-days-to-die/library_functions
   - commands
   - configurations
   - storing_data

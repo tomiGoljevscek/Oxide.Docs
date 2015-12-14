@@ -1,6 +1,6 @@
 ---
-title: Oxide API for The Forest
-short_code: forest
+title: Oxide API for Reign of Kings
+short_code: reign-of-kings
 
 language_tabs:
   - csharp
@@ -9,8 +9,13 @@ language_tabs:
   - python
 
 includes:
-  - forest/getting_started
+  - reign-of-kings/getting_started
   - plugin_hooks
+  - reign-of-kings/hooks_general
+  - reign-of-kings/hooks_player
+  - reign-of-kings/hooks_entity
+  - reign-of-kings/hooks_structure
+  - reign-of-kings/library_functions
   - commands
   - configurations
   - storing_data

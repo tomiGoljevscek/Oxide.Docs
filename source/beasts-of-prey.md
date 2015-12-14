@@ -1,6 +1,6 @@
 ---
-title: Oxide API for Reign of Kings
-short_code: rok
+title: Oxide API for Beasts of Prey
+short_code: beasts-of-prey
 
 language_tabs:
   - csharp
@@ -9,13 +9,8 @@ language_tabs:
   - python
 
 includes:
-  - rok/getting_started
+  - beasts-of-prey/getting_started
   - plugin_hooks
-  - rok/hooks_general
-  - rok/hooks_player
-  - rok/hooks_entity
-  - rok/hooks_structure
-  - rok/library_functions
   - commands
   - configurations
   - storing_data
