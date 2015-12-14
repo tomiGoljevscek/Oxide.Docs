@@ -24,7 +24,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)]
     [Description("This example illustrates how to create a chat command.")]
-    class Example : RustPlugin
+    class Example : CovalencePlugin
     {
         [ChatCommand("save")]
         private void SaveCommand(BasePlayer player, string command, string[] args)
@@ -45,7 +45,7 @@ var ExamplePlugin {
     Init: function ()
     {
         // The following command is called when a player enters `/test` to chat.
-        command.AddChatCommand('test', this.Plugin, 'testChatCommand');
+        cmd.AddChatCommand('test', this.Plugin, 'testChatCommand');
     },
 
     testChatCommand: function (player, cmd, arg)
@@ -72,7 +72,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)]
     [Description("This example illustrates how to create a console command.")]
-    class Example : RustPlugin
+    class Example : CovalencePlugin
     {
         [ConsoleCommand("plugin.save")]
         private void SaveCommand(ConsoleSystem.Arg arg)

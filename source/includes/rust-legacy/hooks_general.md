@@ -1,30 +1,5 @@
 # General Hooks
 
-## BuildServerTags
-
-``` csharp
-void BuildServerTags(IList<string> tags)
-{
-    Puts("BuildServerTags works!");
-}
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` python
-We need a Python example here
-```
-
- * Called from RustLegacyCore.ModifyTags
- * No return behavior
- * Add tags to the list, they will be concat'd at the end
-
 ## OnServerInitialized
 
 ``` csharp

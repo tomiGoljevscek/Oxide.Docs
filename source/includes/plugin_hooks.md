@@ -42,7 +42,7 @@ def Init():
 ## LoadDefaultConfig
 
 ``` csharp
-void LoadDefaultConfig()
+protected override void LoadDefaultConfig()
 {
     Puts("LoadDefaultConfig works!");
 }

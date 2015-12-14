@@ -75,7 +75,7 @@ void Example(NetUser netuser, string command, string[] args)
 
 ``` javascript
 Init: function() {
-    command.AddChatCommand("ex",  self.Plugin, "Example");
+    cmd.AddChatCommand("ex",  self.Plugin, "Example");
 },
 Example: function(netuser, command, args) {
     target = rust.FindPlayer(args[0]);
@@ -84,7 +84,7 @@ Example: function(netuser, command, args) {
 
 ``` lua
 function PLUGIN:Init()
-    command.AddChatCommand("ex",  self.Plugin, "Example")
+    cmd.AddChatCommand("ex",  self.Plugin, "Example")
 end
 function PLUGIN:Example(netuser, command, args)
     target = rust.FindPlayer(args[0])
@@ -93,7 +93,7 @@ end
 
 ``` python
 def Init(self):
-    command.AddChatCommand("ex",  self.Plugin, "Example")
+    cmd.AddChatCommand("ex",  self.Plugin, "Example")
 def Example(self, netuser, command, args):
     target = rust.FindPlayer(args[0])
 ```
@@ -221,7 +221,7 @@ void cmdChatSteamid(NetUser netuser, string command, string[] args)
 
 ``` javascript
 Init: function() {
-    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
 },
 cmdSteamId: function(netuser, command, arg) {
     rust.SendChatMessage(netuser, "Your Steam ID is: " + rust.UserIDFromPlayer(netuser));
@@ -230,7 +230,7 @@ cmdSteamId: function(netuser, command, arg) {
 
 ``` lua
 function PLUGIN:Init()
-    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
 end
 function PLUGIN:cmdSteamId(netuser, command, arg)
     rust.SendChatMessage(netuser, "Your Steam ID is: " .. rust.UserIDFromPlayer(netuser))
@@ -239,7 +239,7 @@ end
 
 ``` python
 def Init(self):
-    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
 def cmdSteamId(self, netuser, command, arg):
     rust.SendChatMessage(netuser, "Your Steam ID is: " + rust.UserIDFromPlayer(netuser))
 ```
@@ -263,7 +263,7 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 
 ``` javascript
 Init: function() {
-    command.AddChatCommand("notice",  self.Plugin, "cmdNotice");
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice");
 },
 cmdNotice: function(netuser, command, arg) {
     rust.Notice(netuser, "Notice Demo", "!", 4);
@@ -272,7 +272,7 @@ cmdNotice: function(netuser, command, arg) {
 
 ``` lua
 function PLUGIN:Init()
-    command.AddChatCommand("notice",  self.Plugin, "cmdNotice")
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
 end
 function PLUGIN:cmdNotice(netuser, command, arg)
     rust.Notice(netuser, "Notice Demo", "!", 4);
@@ -281,7 +281,7 @@ end
 
 ``` python
 def Init(self):
-    command.AddChatCommand("notice",  self.Plugin, "cmdNotice")
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
 def cmdNotice(self, netuser, command, arg):
     rust.Notice(netuser, "Notice Demo", "!", 4);
 ```
@@ -303,7 +303,7 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 
 ``` javascript
 Init: function() {
-    command.AddChatCommand("notice",  self.Plugin, "cmdNotice");
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice");
 },
 cmdNotice: function(netuser, command, arg) {
     rust.InventoryNotice(netuser, "InventoryNotice Demo");
@@ -312,7 +312,7 @@ cmdNotice: function(netuser, command, arg) {
 
 ``` lua
 function PLUGIN:Init()
-    command.AddChatCommand("notice",  self.Plugin, "cmdNotice")
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
 end
 function PLUGIN:cmdNotice(netuser, command, arg)
     rust.InventoryNotice(netuser, "InventoryNotice Demo");
@@ -321,7 +321,7 @@ end
 
 ``` python
 def Init(self):
-    command.AddChatCommand("notice",  self.Plugin, "cmdNotice")
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
 def cmdNotice(self, netuser, command, arg):
     rust.InventoryNotice(netuser, "InventoryNotice Demo");
 ```

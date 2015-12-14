@@ -10,7 +10,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)] 
     [Description("This example illustrates how to create a data file.")]
-    class Examplet : RustPlugin
+    class Example : CovalencePlugin
     {
         class StoredData
         {
@@ -84,7 +84,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)] 
     [Description("This example illustrates how to save to a data file.")]
-    class Examplet : RustPlugin
+    class Example : CovalencePlugin
     {
         class StoredData
         {

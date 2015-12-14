@@ -5,7 +5,7 @@ namespace Oxide.Plugins
 {
     [Info("Title of Plugin", "Your Name", 0.1, ResourceId = 714)]
     [Description("This is what the plugin does")]
-    public class PluginName : RustPlugin
+    public class PluginName : CovalencePlugin
     {
         // This is where your plugin will do its magic
     }

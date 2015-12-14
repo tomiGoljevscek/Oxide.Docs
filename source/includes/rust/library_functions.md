@@ -129,7 +129,7 @@ void cmdChatSteamid(BasePlayer player, string command, string[] args)
 
 ``` javascript
 Init: function() {
-    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
 },
 cmdSteamId: function(player, command, arg) {
     rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " + rust.UserIDFromPlayer(player));
@@ -138,7 +138,7 @@ cmdSteamId: function(player, command, arg) {
 
 ``` lua
 function PLUGIN:Init()
-    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
 end
 function PLUGIN:cmdSteamId(player, command, arg)
     rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " .. rust.UserIDFromPlayer(player))
@@ -147,7 +147,7 @@ end
 
 ``` python
 def Init(self):
-    command.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
 def cmdSteamId(self, player, command, arg):
     rust.SendChatMessage(player, "SERVER", "Your Steam ID is: " + rust.UserIDFromPlayer(player))
 ```

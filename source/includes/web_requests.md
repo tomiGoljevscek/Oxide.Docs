@@ -12,7 +12,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)]
     [Description("This example illustrates how to use a GET WebRequest.")]
-    class Example : RustPlugin
+    class Example : CovalencePlugin
     {
         private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
@@ -79,7 +79,7 @@ namespace Oxide.Plugins
 {
     [Info("Example", "Oxide Team", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest.")]
-    class Example : RustPlugin
+    class Example : CovalencePlugin
     {
         private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 

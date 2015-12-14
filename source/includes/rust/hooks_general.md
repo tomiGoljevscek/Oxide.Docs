@@ -1,35 +1,5 @@
 # General Hooks
 
-## BuildServerTags
-
-``` csharp
-void BuildServerTags(IList<string> tags)
-{
-    tags.Add("mymodtag");
-}
-```
-
-``` javascript
-BuildServerTags: function(tags) {
-    tags.Add("mymodtag");
-}
-```
-
-``` lua
-function PLUGIN:BuildServerTags(tags)
-    tags:Add("mymodtag")
-end
-```
-
-``` python
-def BuildServerTags(self, tags):
-    tags.Add("mymodtag")
-```
-
- * Called from RustCore.IModifyTags
- * Adds tags to the list, they will be concat'd at the end
- * No return behavior
-
 ## OnRunCommand
 
 ``` csharp

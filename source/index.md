@@ -3,8 +3,9 @@ title: Oxide API Reference
 
 language_tabs:
   - csharp
-  - javascript
   - lua
+  - javascript
+  - coffee
   - python
 
 includes:
