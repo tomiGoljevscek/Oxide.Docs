@@ -2,12 +2,12 @@
 
 **Available for all supported games**
 
+[![7 Days to Die](7-days-to-die/favicon-32x32.png)](/7-days-to-die/)
+[![Beasts of Prey](beasts-of-prey/favicon-32x32.png)](/beasts-of-prey/)
+[![Reign of Kings](reign-of-kings/favicon-32x32.png)](/reign-of-kings/)
 [![Rust](rust/favicon-32x32.png)](/rust/)
-[![Rust Legacy](legacy/favicon-32x32.png)](/legacy/)
-[![7 Days to Die](sdtd/favicon-32x32.png)](/sdtd/)
-[![Reign of Kings](rok/favicon-32x32.png)](/rok/)
-[![The Forest](forest/favicon-32x32.png)](/forest/)
-[![Beasts of Prey](bop/favicon-32x32.png)](/bop/)
+[![Rust Legacy](rust-legacy/favicon-32x32.png)](/rust-legacy/)
+[![The Forest](the-forest/favicon-32x32.png)](/the-forest/)
 
 ## Init
 
