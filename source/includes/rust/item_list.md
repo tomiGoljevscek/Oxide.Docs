@@ -65,6 +65,7 @@
 | 2080339268    | Empty Can Of Beans           | can.beans.empty          |
 | -171664558    | Can of Tuna                  | can.tuna                 |
 | 1050986417    | Empty Tuna Can               | can.tuna.empty           |
+| 523409530     | Candy Cane                   | candycane                |
 | 1300054961    | CCTV Camera                  | cctv.camera              |
 | 1436001773    | Charcoal                     | charcoal                 |
 | 1711323399    | Burned Chicken               | chicken.burned           |
@@ -73,6 +74,7 @@
 | -726947205    | Spoiled Chicken              | chicken.spoiled          |
 | -341443994    | Chocolate Bar                | chocholate               |
 | 94756378      | Cloth                        | cloth                    |
+| 3059095       | Coal :(                      | coal                     |
 | -2128719593   | Coffee Can Helmet            | coffeecan.helmet         |
 | 3059624       | Corn                         | corn                     |
 | 2123300234    | Crossbow                     | crossbow                 |
@@ -154,6 +156,7 @@
 | -1379225193   | Eoka Pistol                  | pistol.eoka              |
 | -930579334    | Revolver                     | pistol.revolver          |
 | 548699316     | Semi-Automatic Pistol        | pistol.semiauto          |
+| 640562379     | Pookie Bear                  | pookie.bear              |
 | -225085592    | Pumpkin                      | pumpkin                  |
 | 1987447227    | Research Table               | research.table           |
 | -1461508848   | Assault Rifle                | rifle.ak                 |
@@ -166,6 +169,7 @@
 | 192371071     | Salt Water                   | salt.water               |
 | -1775234707   | Salvaged Cleaver             | salvaged.cleaver         |
 | -388967316    | Salvaged Sword               | salvaged.sword           |
+| 2007564590    | Santa Hat                    | santahat                 |
 | 583366917     | Corn Seed                    | seed.corn                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
 | 2057749608    | Salvaged Shelves             | shelves                  |
@@ -203,6 +207,8 @@
 | -1127699509   | Wooden Spear                 | spear.wooden             |
 | -685265909    | Wooden Floor Spikes          | spikes.floor             |
 | 1051155022    | Small Stash                  | stash.small              |
+| -1623330855   | SUPER Stocking               | stocking.large           |
+| -1616524891   | Small Stocking               | stocking.small           |
 | 789892804     | Stone Pick Axe               | stone.pickaxe            |
 | -1289478934   | Stone Hatchet                | stonehatchet             |
 | -892070738    | Stones                       | stones                   |
@@ -235,3 +241,6 @@
 | 3655341       | Wood                         | wood                     |
 | 1554697726    | Wood Chestplate              | wood.armor.jacket        |
 | -1883959124   | Wood Armor Pants             | wood.armor.pants         |
+| -1732316031   | Large Present                | xmas.present.large       |
+| -2130280721   | Medium Present               | xmas.present.medium      |
+| -1725510067   | Small Present                | xmas.present.small       |

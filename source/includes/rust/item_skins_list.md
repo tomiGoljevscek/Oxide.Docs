@@ -1,5 +1,23 @@
 # Item Skins
 
+## Large Wood Box
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10122        | Large Wood Box                    |
+| 10123        | Large Wood Box                    |
+| 10124        | Large Wood Box                    |
+
+## Bucket Helmet
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10126        | Bucket Helmet                     |
+| 10127        | Bucket Helmet                     |
+
+## Leather Gloves
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10128        | Leather Gloves                    |
+
 ## Beenie Hat
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -136,11 +154,18 @@
 ## Sleeping Bag
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 10119        | Sleeping Bag                      |
+| 10121        | Sleeping Bag                      |
 | 10037        | Blue Plaid Sleeping Bag           |
 | 10109        | Freshly Dug Grave                 |
 | 10107        | Horror Bag                        |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 10076        | Wood Camo Sleeping Bag            |
+
+## Thompson
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10120        | Thompson                          |
 
 ## T-Shirt
 | Skin Id      | Skin name                         |
@@ -166,6 +191,8 @@
 ## Longsleeve T-Shirt
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 10118        | Longsleeve T-Shirt                |
+| 10125        | Longsleeve T-Shirt                |
 | 10047        | Aztec Long T-Shirt                |
 | 10004        | Black Longsleeve T-Shirt          |
 | 10089        | Christmas Jumper                  |
