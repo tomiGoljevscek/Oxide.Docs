@@ -3,20 +3,20 @@
 ## Large Wood Box
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10122        | Large Wood Box                    |
-| 10123        | Large Wood Box                    |
-| 10124        | Large Wood Box                    |
+| 10124        | Ammo Wooden Box                   |
+| 10122        | Christmas Storage                 |
+| 10123        | First Aid Green                   |
 
 ## Bucket Helmet
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10126        | Bucket Helmet                     |
-| 10127        | Bucket Helmet                     |
+| 10127        | Medic Helmet                      |
+| 10126        | Wooden Bucket                     |
 
 ## Leather Gloves
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10128        | Leather Gloves                    |
+| 10128        | Boxer's Bandages                  |
 
 ## Beenie Hat
 | Skin Id      | Skin name                         |
@@ -154,9 +154,9 @@
 ## Sleeping Bag
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10119        | Sleeping Bag                      |
-| 10121        | Sleeping Bag                      |
+| 10121        | Aston Christmas                   |
 | 10037        | Blue Plaid Sleeping Bag           |
+| 10119        | Christmas Bag                     |
 | 10109        | Freshly Dug Grave                 |
 | 10107        | Horror Bag                        |
 | 10077        | Tiger Crown Sleeping Bag          |
@@ -165,7 +165,7 @@
 ## Thompson
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10120        | Thompson                          |
+| 10120        | Santa's Little Helper             |
 
 ## T-Shirt
 | Skin Id      | Skin name                         |
@@ -191,8 +191,6 @@
 ## Longsleeve T-Shirt
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10118        | Longsleeve T-Shirt                |
-| 10125        | Longsleeve T-Shirt                |
 | 10047        | Aztec Long T-Shirt                |
 | 10004        | Black Longsleeve T-Shirt          |
 | 10089        | Christmas Jumper                  |
@@ -200,6 +198,8 @@
 | 10050        | Frankensteins Sweater             |
 | 10032        | Green Checkered Shirt             |
 | 10005        | Grey Longsleeve T-Shirt           |
+| 10125        | Lawman                            |
+| 10118        | Merry Reindeer                    |
 | 10051        | Nightmare Sweater                 |
 | 10006        | Orange Longsleeve T-Shirt         |
 | 10036        | Sign Painter                      |
