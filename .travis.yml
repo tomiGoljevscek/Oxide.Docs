@@ -14,12 +14,10 @@ notifications:
   # Slack (oxidemod.slack.com)
   slack:
     rooms:
-      secure: "WrRKzdAGL/HgZ3VN51cSUx8acnSH7GBpgDRuAwX2n0Nqwp4LQ2+3zt72Kl4U0M8GuNCC0awc6QD/VbHwEZg6
-      Ahi+wuSIlBtB9R6euJfe6VAKcJzzuTc3jUL+MmYkVsujWkKsZ1Jre/wFuvWWnroVgUX7m7tJo3GnyyOtqryJBQc="
+      secure: "WrRKzdAGL/HgZ3VN51cSUx8acnSH7GBpgDRuAwX2n0Nqwp4LQ2+3zt72Kl4U0M8GuNCC0awc6QD/VbHwEZg6Ahi+wuSIlBtB9R6euJfe6VAKcJzzuTc3jUL+MmYkVsujWkKsZ1Jre/wFuvWWnroVgUX7m7tJo3GnyyOtqryJBQc="
 
 # Environmental system variables
 env:
   global:
     # Super secure, encrypted variables! Ssssh!
-    - secure: "HTkLZ8Tgib+bW13R41PDdo7WgTR3g37ioBHs82/yX0nXtwUMmNlKMdHEZJjrTvUZRkPAQ8gkVfFsNhsUAj8Z
-    88lfrNItuWPfWEKDaeh/3hGIaNS3Wzoe+Yyhj+CfRX0fpzswyR0Q8TqmfKvqzz+SUNTmKKetzXvCBO4uWEalW+E="
+    - secure: "HTkLZ8Tgib+bW13R41PDdo7WgTR3g37ioBHs82/yX0nXtwUMmNlKMdHEZJjrTvUZRkPAQ8gkVfFsNhsUAj8Z88lfrNItuWPfWEKDaeh/3hGIaNS3Wzoe+Yyhj+CfRX0fpzswyR0Q8TqmfKvqzz+SUNTmKKetzXvCBO4uWEalW+E="
