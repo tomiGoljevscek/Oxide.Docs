@@ -1,13 +1,16 @@
-# Plugin Hooks
+# Universal Hooks
 
 **Available for all supported games**
 
 [![7 Days to Die](7-days-to-die/favicon-32x32.png)](/7-days-to-die/)
 [![Beasts of Prey](beasts-of-prey/favicon-32x32.png)](/beasts-of-prey/)
+[![Blockstorm](blockstorm/favicon-32x32.png)](/blockstorm/)
+[![Hurtworld](hurtworld/favicon-32x32.png)](/hurtworld/)
 [![Reign of Kings](reign-of-kings/favicon-32x32.png)](/reign-of-kings/)
 [![Rust](rust/favicon-32x32.png)](/rust/)
 [![Rust Legacy](rust-legacy/favicon-32x32.png)](/rust-legacy/)
 [![The Forest](the-forest/favicon-32x32.png)](/the-forest/)
+[![Unturned](unturned/favicon-32x32.png)](/unturned/)
 
 ## Init
 
@@ -18,16 +21,20 @@ void Init()
 }
 ```
 
+``` lua
+function PLUGIN:Init()
+    print("Init works!")
+end
+```
+
 ``` javascript
 Init: function() {
     print("Init works!");
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    print("Init works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -48,16 +55,20 @@ protected override void LoadDefaultConfig()
 }
 ```
 
+``` lua
+function PLUGIN:LoadDefaultConfig()
+    print("LoadDefaultConfig works!")
+end
+```
+
 ``` javascript
 LoadDefaultConfig: function() {
     print("LoadDefaultConfig works!");
 }
 ```
 
-``` lua
-function PLUGIN:LoadDefaultConfig()
-    print("LoadDefaultConfig works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -77,16 +88,20 @@ void OnFrame()
 }
 ```
 
+``` lua
+function PLUGIN:OnFrame()
+    print("OnFrame works!")
+end
+```
+
 ``` javascript
 OnFrame: function() {
     print("OnFrame works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnFrame()
-    print("OnFrame works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -105,16 +120,20 @@ void Unload()
 }
 ```
 
+``` lua
+function PLUGIN:Unload()
+    print("Unload works!")
+end
+```
+
 ``` javascript
 Unload: function() {
     print("Unload works!");
 }
 ```
 
-``` lua
-function PLUGIN:Unload()
-    print("Unload works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -133,16 +152,20 @@ void OnPluginLoaded(Plugin pluginName)
 }
 ```
 
+``` lua
+function PLUGIN:OnPluginLoaded()
+    print("OnPluginLoaded works!")
+end
+```
+
 ``` javascript
 OnPluginLoaded: function() {
     print("OnPluginLoaded works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPluginLoaded()
-    print("OnPluginLoaded works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -161,16 +184,20 @@ void OnPluginUnloaded(Plugin pluginName)
 }
 ```
 
+``` lua
+function PLUGIN:OnPluginUnloaded()
+    print("OnPluginUnloaded works!")
+end
+```
+
 ``` javascript
 OnPluginUnloaded: function() {
     print("OnPluginUnloaded works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPluginUnloaded()
-    print("OnPluginUnloaded works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

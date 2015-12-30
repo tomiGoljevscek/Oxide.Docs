@@ -39,7 +39,7 @@ namespace Oxide.Plugins
 
         StoredData storedData;
 
-        private void Loaded()
+        void Loaded()
         {
             storedData = Interface.Oxide.DataFileSystem.ReadObject<StoredData>("MyDataFile");
         }
@@ -113,13 +113,13 @@ namespace Oxide.Plugins
 
         StoredData storedData;
 
-        private void Loaded()
+        void Loaded()
         {
             storedData = Interface.Oxide.DataFileSystem.ReadObject<StoredData>("MyDataFile");
         }
 
         [ChatCommand("Test")]
-        private void Test(BasePlayer player, string command, string[] args)
+        void Test(BasePlayer player, string command, string[] args)
         {
             var info = new PlayerInfo(player);
             if (storedData.Players.Contains(info))

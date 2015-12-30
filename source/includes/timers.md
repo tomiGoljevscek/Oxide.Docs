@@ -13,16 +13,20 @@ timer.Once(3, () => PrintToChat("Hello world!"));
 timer.In(3, () => PrintToChat("Hello world!"));
 ```
 
+``` lua
+timer.Once(3, function()
+    rust.BroadcastChat("SERVER", "Hello world!")
+end, self.Plugin)
+```
+
 ``` javascript
 timer.Once(3, function() {
     rust.BroadcastChat("SERVER", "Hello world!");
 }, this.Plugin);
 ```
 
-``` lua
-timer.Once(3, function()
-    rust.BroadcastChat("SERVER", "Hello world!")
-end, self.Plugin)
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -37,10 +41,6 @@ timer.Once(3, Action(my_callback_func), self.Plugin)
 var timerVariable = timer.In(3, () => PrintToChat("Hello world!"));
 ```
 
-``` javascript
-We need a JavaScript example here
-```
-
 ``` lua
 local timersVariable = {}
 timersVariable["Notice1"] = timer.Once(3, function()
@@ -49,6 +49,14 @@ end)
 timersVariable["Notice2"] = timer.Once(10, function()
     rust.BroadcastChat("SERVER", "This is the Notice 2 every 10 seconds")
 end, self.Plugin)
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -65,16 +73,20 @@ Executes the specified function once after the specified delay.
 timer.Repeat(10, 0, () => PrintToChat("Hello world!"));
 ```
 
+``` lua
+timer.Repeat(10, 0, function()
+    rust.BroadcastChat("SERVER", "Hello world!")
+end, self.Plugin)
+```
+
 ``` javascript
 timer.Repeat(10, 0, function() {
     rust.BroadcastChat("SERVER", "Hello world!");
 }, this.Plugin);
 ```
 
-``` lua
-timer.Repeat(10, 0, function()
-    rust.BroadcastChat("SERVER", "Hello world!")
-end, self.Plugin)
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -96,14 +108,18 @@ If "repeats" is specified, the function will only be called "repeats" times.
 timer.Once(1, 0.0f, () => PrintToChat("Hello world"));
 ```
 
-``` javascript
-We need a JavaScript example here
-```
-
 ``` lua
 timer.NextFrame(function()
     rust.BroadcastChat("SERVER", "Hello world!")
 );
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -122,16 +138,20 @@ if (timerVariable != null) {
 }
 ```
 
+``` lua
+if timerVariable then
+    timerVariable:Destroy()
+end
+```
+
 ``` javascript
 if (timerVariable) {
     timerVariable.Destroy();
 }
 ```
 
-``` lua
-if timerVariable then
-    timerVariable:Destroy()
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

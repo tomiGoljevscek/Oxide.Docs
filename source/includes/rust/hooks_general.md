@@ -1,4 +1,4 @@
-# General Hooks
+# Server Hooks
 
 ## OnRunCommand
 
@@ -9,16 +9,20 @@ void OnRunCommand(ConsoleSystem.Arg arg)
 }
 ```
 
+``` lua
+function PLUGIN:OnRunCommand(arg)
+    print("OnRunCommand works!")
+end
+```
+
 ``` javascript
 OnRunCommand: function(arg) {
     print("OnRunCommand works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnRunCommand(arg)
-    print("OnRunCommand works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -40,16 +44,20 @@ void OnServerInitialized()
 }
 ```
 
+``` lua
+function PLUGIN:OnServerInitialized()
+    print("OnServerInitialized works!")
+end
+```
+
 ``` javascript
 OnServerInitialized: function() {
     print("OnServerInitialized works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnServerInitialized()
-    print("OnServerInitialized works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -70,16 +78,20 @@ void OnServerSave()
 }
 ```
 
+``` lua
+function PLUGIN:OnServerSave()
+    print("OnServerSave works!")
+end
+```
+
 ``` javascript
 OnServerSave: function() {
     print("OnServerSave works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnServerSave()
-    print("OnServerSave works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -100,16 +112,20 @@ void OnServerShutdown()
 }
 ```
 
+``` lua
+function PLUGIN:OnServerShutdown()
+    print("OnServerShutdown works!")
+end
+```
+
 ``` javascript
 OnServerShutdown: function() {
     print("OnServerShutdown works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnServerShutdown()
-    print("OnServerShutdown works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -131,16 +147,20 @@ void OnTick()
 }
 ```
 
+``` lua
+function PLUGIN:OnTick()
+    print("OnTick works!")
+end
+```
+
 ``` javascript
 OnTick: function() {
     print("OnTick works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnTick()
-    print("OnTick works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

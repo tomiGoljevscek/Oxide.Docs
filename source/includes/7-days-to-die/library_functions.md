@@ -11,16 +11,20 @@ void OnPlayerConnected(ClientInfo client)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerConnected(client)
+    sdtd.BroadcastChat(client.playerName .. " has joined the server")
+end
+```
+
 ``` javascript
 OnPlayerConnected: function(client) {
     sdtd.BroadcastChat(client.playerName + " has joined the server");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerConnected(client)
-    sdtd.BroadcastChat(client.playerName .. " has joined the server")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

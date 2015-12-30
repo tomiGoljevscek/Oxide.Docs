@@ -9,16 +9,20 @@ void CanUpdateSign(Signage sign, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:CanUpdateSign(sign, player)
+    print("CanUpdateSign works!")
+end
+```
+
 ``` javascript
 CanUpdateSign: function(sign, player) {
     print("CanUpdateSign works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanUpdateSign(sign, player)
-    print("CanUpdateSign works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -39,16 +43,20 @@ void OnSignLocked(Signage sign, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnSignLocked(sign, player)
+    print("OnSignLocked works!")
+end
+```
+
 ``` javascript
 OnSignLocked: function(sign, player) {
     print("OnSignLocked works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnSignLocked(sign, player)
-    print("OnSignLocked works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -69,16 +77,20 @@ void OnSignUpdated(Signage sign, BasePlayer player, string text)
 }
 ```
 
+``` lua
+function PLUGIN:OnSignUpdated(sign, player, text)
+    print("OnSignUpdated works!")
+end
+```
+
 ``` javascript
 OnSignUpdated: function(sign, player, text) {
     print("OnSignUpdated works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnSignUpdated(sign, player, text)
-    print("OnSignUpdated works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

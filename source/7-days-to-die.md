@@ -4,13 +4,14 @@ short_code: 7-days-to-die
 
 language_tabs:
   - csharp
-  - javascript
   - lua
+  - javascript
+  - coffeescript
   - python
 
 includes:
   - 7-days-to-die/getting_started
-  - plugin_hooks
+  - universal_hooks
   - 7-days-to-die/hooks_general
   - 7-days-to-die/hooks_player
   - 7-days-to-die/hooks_entity

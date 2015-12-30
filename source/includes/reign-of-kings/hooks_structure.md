@@ -9,12 +9,16 @@ void OnCubePlacement(CubePlaceEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -34,12 +38,16 @@ void OnCubeTakeDamage(CubeDamageEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -59,12 +67,16 @@ void OnCubeDestroyed(CubeDestroyEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

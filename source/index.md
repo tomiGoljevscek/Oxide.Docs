@@ -1,13 +1,6 @@
 ---
 title: Oxide API Reference
 
-language_tabs:
-  - csharp
-  - lua
-  - javascript
-  - coffee
-  - python
-
 includes:
   - overview
   - supported_games

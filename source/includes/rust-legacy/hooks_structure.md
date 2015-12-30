@@ -9,12 +9,16 @@ void OnStructureBuilt(StructureComponent component, IStructureComponentItem item
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -34,12 +38,16 @@ void OnStructureDecay(StructureMaster master)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -59,12 +67,16 @@ void OnDoorToggle(BasicDoor door, ulong timestamp, Controllable controllable)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

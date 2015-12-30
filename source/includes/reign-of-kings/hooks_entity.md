@@ -9,12 +9,16 @@ void OnEntityHealthChange(EntityDamageEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -33,12 +37,16 @@ void OnEntityDeath(EntityDeathEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

@@ -9,16 +9,20 @@ void CanUseDoor(BasePlayer player, BaseLock door)
 }
 ```
 
+``` lua
+function PLUGIN:CanUseDoor(player, door)
+    print("CanUseDoor works!")
+end
+```
+
 ``` javascript
 CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanUseDoor(player, door)
-    print("CanUseDoor works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -39,16 +43,20 @@ void CanUseDoor(BasePlayer player, CodeLock door)
 }
 ```
 
+``` lua
+function PLUGIN:CanUseDoor(player, door)
+    print("CanUseDoor works!")
+end
+```
+
 ``` javascript
 CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanUseDoor(player, door)
-    print("CanUseDoor works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -69,16 +77,20 @@ void CanUseDoor(BasePlayer player, KeyLock door)
 }
 ```
 
+``` lua
+function PLUGIN:CanUseDoor(player, door)
+    print("CanUseDoor works!")
+end
+```
+
 ``` javascript
 CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanUseDoor(player, door)
-    print("CanUseDoor works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -99,16 +111,20 @@ void OnDoorClosed(Door door, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnDoorClosed(door, player)
+    print("OnDoorClosed works!")
+end
+```
+
 ``` javascript
 OnDoorClosed: function(door, player) {
     print("OnDoorClosed works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnDoorClosed(door, player)
-    print("OnDoorClosed works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -129,16 +145,20 @@ void OnDoorOpened(Door door, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnDoorOpened(door, player)
+    print("OnDoorOpened works!")
+end
+```
+
 ``` javascript
 OnDoorOpened: function(door, player) {
     print("OnDoorOpened works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnDoorOpened(door, player)
-    print("OnDoorOpened works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -159,16 +179,20 @@ void OnCupboardAuthorize(BuildingPrivlidge priviledge, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnCupboardAuthorize(priviledge, player)
+    print("OnCupboardAuthorize works!")
+end
+```
+
 ``` javascript
 OnCupboardAuthorize: function(priviledge, player) {
     print("OnCupboardAuthorize works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnCupboardAuthorize(priviledge, player)
-    print("OnCupboardAuthorize works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -189,16 +213,20 @@ void OnCupboardDeauthorize(BuildingPrivlidge priviledge, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnCupboardDeauthorize(priviledge, player)
+    print("OnCupboardDeauthorize works!")
+end
+```
+
 ``` javascript
 OnCupboardDeauthorize: function(priviledge, player) {
     print("OnCupboardDeauthorize works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnCupboardDeauthorize(priviledge, player)
-    print("OnCupboardDeauthorize works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -219,16 +247,20 @@ void OnEntityBuilt(Planner plan, GameObject go)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityBuilt(plan, obj)
+    print("OnEntityBuilt works!")
+end
+```
+
 ``` javascript
 OnEntityBuilt: function(plan, obj) {
     print("OnEntityBuilt works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityBuilt(plan, obj)
-    print("OnEntityBuilt works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -249,16 +281,20 @@ void OnHammerHit(BasePlayer player, HitInfo info)
 }
 ```
 
+``` lua
+function PLUGIN:OnHammerHit(player, info)
+    print("OnHammerHit works!")
+end
+```
+
 ``` javascript
 OnHammerHit: function(player, info) {
     print("OnHammerHit works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnHammerHit(player, info)
-    print("OnHammerHit works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -279,16 +315,20 @@ void OnStructureDemolish(BuildingBlock block, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnStructureDemolish(block, player)
+    print("OnStructureDemolish works!")
+end
+```
+
 ``` javascript
 OnStructureDemolish: function(block, player) {
     print("OnStructureDemolish works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnStructureDemolish(block, player)
-    print("OnStructureDemolish works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -309,16 +349,20 @@ void OnStructureRepair(BuildingBlock block, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnStructureRepair(block, player)
+    print("OnStructureRepair works!")
+end
+```
+
 ``` javascript
 OnStructureRepair: function(block, player) {
     print("OnStructureRepair works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnStructureRepair(block, player)
-    print("OnStructureRepair works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -339,16 +383,20 @@ void OnStructureRotate(BuildingBlock block, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnStructureRotate(block, player)
+    print("OnStructureRotate works!")
+end
+```
+
 ``` javascript
 OnStructureRotate: function(block, player) {
     print("OnStructureRotate works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnStructureRotate(block, player)
-    print("OnStructureRotate works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -369,16 +417,20 @@ void OnStructureUpgrade(BuildingBlock block, BasePlayer player, BuildingGrade.En
 }
 ```
 
+``` lua
+function PLUGIN:OnStructureUpgrade(block, player, grade)
+    print("OnStructureUpgrade works!")
+end
+```
+
 ``` javascript
 OnStructureUpgrade: function(block, player, grade) {
     print("OnStructureUpgrade works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnStructureUpgrade(block, player, grade)
-    print("OnStructureUpgrade works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

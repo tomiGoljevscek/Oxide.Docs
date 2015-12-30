@@ -9,12 +9,16 @@ void OnAirdrop(Vector3 position)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -34,12 +38,16 @@ void OnHurt(TakeDamage takeDamage, DamageEvent damage)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -59,12 +67,16 @@ void OnKilled(TakeDamage takeDamage, DamageEvent damage)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

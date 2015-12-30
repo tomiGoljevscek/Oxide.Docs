@@ -9,12 +9,16 @@ void OnUserApprove(ConnectionLoginData data)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -33,12 +37,16 @@ void OnPlayerConnected(Player player)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -58,12 +66,16 @@ void OnPlayerDisconected(Player player)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -83,12 +95,16 @@ void OnPlayerSpawn(PlayerFirstSpawnEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -108,12 +124,16 @@ void OnPlayerChat(PlayerEvent e)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

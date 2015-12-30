@@ -4,13 +4,14 @@ short_code: rust
 
 language_tabs:
   - csharp
-  - javascript
   - lua
+  - javascript
+  - coffeescript
   - python
 
 includes:
-  - rust/getting_started
-  - plugin_hooks
+  - getting_started
+  - universal_hooks
   - rust/hooks_general
   - rust/hooks_player
   - rust/hooks_entity
@@ -28,7 +29,7 @@ includes:
   - rust/item_list
   - rust/item_skins_list
   - rust/prefab_list
-  - rust/styling_messages
+  - styling_messages
 
 toc_footers:
   - <a href='http://oxidemod.org'>Get help on our forums</a>

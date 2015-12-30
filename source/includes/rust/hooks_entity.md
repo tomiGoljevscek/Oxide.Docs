@@ -8,16 +8,21 @@ void OnAirdrop(CargoPlane plane, Vector3 location)
     Puts("OnAirdrop works!");
 }
 ```
+
+``` lua
+function PLUGIN:OnAirdrop(plane, location)
+    print("OnAirdrop works!")
+end
+```
+
 ``` javascript
 OnAirdrop: function(plane, location) {
     print("OnAirdrop works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnAirdrop(plane, location)
-    print("OnAirdrop works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -38,16 +43,20 @@ void OnEntityDeath(BaseCombatEntity entity, HitInfo info)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityDeath(entity, info)
+    print("OnEntityDeath works!")
+end
+```
+
 ``` javascript
 OnEntityDeath: function(entity, info) {
     print("OnEntityDeath works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityDeath(entity, info)
-    print("OnEntityDeath works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -68,16 +77,20 @@ void OnEntityEnter(TriggerBase trigger, BaseEntity entity) {
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityEnter(trigger, entity)
+    print("OnEntityEnter works!")
+end
+```
+
 ``` javascript
 OnEntityEnter: function(trigger, entity) {
     print("OnEntityEnter works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityEnter(trigger, entity)
-    print("OnEntityEnter works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -98,16 +111,20 @@ void OnEntityGroundMissing(BaseEntity entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityGroundMissing(entity)
+    print("OnEntityGroundMissing works!")
+end
+```
+
 ``` javascript
 OnEntityGroundMissing: function(entity) {
     print("OnEntityGroundMissing works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityGroundMissing(entity)
-    print("OnEntityGroundMissing works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -128,16 +145,20 @@ void OnEntityLeave(TriggerBase trigger, BaseEntity entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityLeave(trigger, entity)
+    print("OnEntityLeave works!")
+end
+```
+
 ``` javascript
 OnEntityLeave: function(trigger, entity) {
     print("OnEntityLeave works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityLeave(trigger, entity)
-    print("OnEntityLeave works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -158,16 +179,20 @@ void OnEntitySpawned(BaseNetworkable entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntitySpawned(entity)
+    print("OnEntitySpawned works!")
+end
+```
+
 ``` javascript
 OnEntitySpawned: function(entity) {
     print("OnEntitySpawned works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntitySpawned(entity)
-    print("OnEntitySpawned works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -188,16 +213,20 @@ void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityTakeDamage(entity, info)
+    print("OnEntityTakeDamage works!")
+end
+```
+
 ``` javascript
 OnEntityTakeDamage: function(entity, info) {
     print("OnEntityTakeDamage works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityTakeDamage(entity, info)
-    print("OnEntityTakeDamage works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -220,16 +249,20 @@ void OnResourceDepositCreated(ResourceDepositManager.ResourceDeposit deposit)
 }
 ```
 
+``` lua
+function PLUGIN:OnResourceDepositCreated(deposit)
+    print("OnResourceDepositCreated works!")
+end
+```
+
 ``` javascript
 OnResourceDepositCreated: function(deposit) {
     print("OnResourceDepositCreated works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnResourceDepositCreated(deposit)
-    print("OnResourceDepositCreated works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

@@ -71,7 +71,7 @@ namespace Oxide.Plugins
     class Example : CovalencePlugin
     {
         [ChatCommand("Test")]
-        private void Test(BasePlayer player, string command, string[] args)
+        void Test(BasePlayer player, string command, string[] args)
         {
             if ((bool) Config["ShowJoinMessage"])
                 Config["ShowJoinMessage"] = false;

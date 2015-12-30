@@ -9,16 +9,20 @@ void OnDoorUse(TileEntitySecure door, string steamId)
 }
 ```
 
+``` lua
+function PLUGIN:OnDoorUse(door, steamId)
+    print("OnDoorUse works!")
+end
+```
+
 ``` javascript
 OnDoorUse: function(door, steamId) {
     print("OnDoorUse works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnDoorUse(door, steamId)
-    print("OnDoorUse works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

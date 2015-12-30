@@ -9,16 +9,20 @@ void OnAirdrop(Vector3 location)
 }
 ```
 
+``` lua
+function PLUGIN:OnAirdrop(location)
+    print("OnAirdrop works!")
+end
+```
+
 ``` javascript
 OnAirdrop: function(location) {
     print("OnAirdrop works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnAirdrop(location)
-    print("OnAirdrop works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -39,16 +43,20 @@ void OnEntitySpawned(Entity entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntitySpawned(entity)
+    print("OnEntitySpawned works!")
+end
+```
+
 ``` javascript
 OnEntitySpawned: function(entity) {
     print("OnEntitySpawned works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntitySpawned(entity)
-    print("OnEntitySpawned works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -69,16 +77,20 @@ void OnEntityTakeDamage(EntityAlive entity, DamageSource source)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityTakeDamage(entity, source)
+    print("OnEntityTakeDamage works!")
+end
+```
+
 ``` javascript
 OnEntityTakeDamage: function(entity, source) {
     print("OnEntityTakeDamage works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityTakeDamage(entity, source)
-    print("OnEntityTakeDamage works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -99,16 +111,20 @@ void OnEntityDeath(Entity entity, DamageResponse response)
 }
 ```
 
+``` lua
+function PLUGIN:OnEntityDeath(entity, response)
+    print("OnEntityDeath works!")
+end
+```
+
 ``` javascript
 OnEntityDeath: function(entity, response) {
     print("OnEntityDeath works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnEntityDeath(entity, response)
-    print("OnEntityDeath works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

@@ -4,13 +4,14 @@ short_code: the-forest
 
 language_tabs:
   - csharp
-  - javascript
   - lua
+  - javascript
+  - coffeescript
   - python
 
 includes:
   - the-forest/getting_started
-  - plugin_hooks
+  - universal_hooks
   - commands
   - configurations
   - storing_data

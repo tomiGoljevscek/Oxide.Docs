@@ -48,8 +48,13 @@ html, body {
   width: 20px;
 }
 
+#logo-button {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
 .tocify-wrapper {
-  @include transition(left ease-in-out 0.3s);
+  transition: left 0.3s ease-in-out;
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -71,11 +76,6 @@ html, body {
     }
   }
 
-  // This is the logo at the top of the ToC
-  &>img {
-    display: block;
-  }
-
   &>.search {
     position: relative;
 
@@ -84,7 +84,7 @@ html, body {
       border-width: 0 0 1px 0;
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
       margin: $nav-v-padding $nav-padding;
       width: $nav-width - 30;
       outline: none;
@@ -101,19 +101,15 @@ html, body {
     }
   }
 
-  img+.tocify {
-    margin-top: $logo-margin;
-  }
-
   .search-results {
     margin-top: 0;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     height: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    @include transition-property(height margin);
-    @include transition-duration(180ms);
-    @include transition-timing-function(ease-in-out);
+    transition-property: height, margin;
+    transition-duration: 180ms;
+    transition-timing-function: ease-in-out;
     &.visible {
       height: 30%;
       margin-bottom: 1em;
@@ -133,8 +129,6 @@ html, body {
       }
     }
   }
-
-
   .tocify-item>a, .toc-footer li {
     padding: 0 $nav-padding 0 $nav-padding;
     display: block;
@@ -155,9 +149,9 @@ html, body {
 
   li {
     color: $nav-text;
-    @include transition-property('background');
-    @include transition-timing-function('linear');
-    @include transition-duration(230ms);
+    transition-property: background;
+    transition-timing-function: linear;
+    transition-duration: 230ms;
   }
 
   // This is the currently selected ToC entry
@@ -208,8 +202,8 @@ html, body {
     $side-pad: $main-padding / 2 - 8px;
     padding: $side-pad $side-pad $side-pad;
     background-color: rgba($main-bg, 0.7);
-    @include transform-origin(0, 0);
-    @include transform(rotate(-90deg) translate(-100%, 0));
+    transform-origin: 0 0;
+    transform: rotate(-90deg) translate(-100%, 0);
     border-radius: 0 0 0 5px;
   }
   padding: 0 1.5em 5em 0; // increase touch size area
@@ -228,7 +222,7 @@ html, body {
     vertical-align: bottom;
   }
 
-  @include transition(left ease-in-out 0.3s);
+  transition: left 0.3s ease-in-out;
 
   &:hover { opacity: 1; }
   &.open {left: $nav-width}
@@ -319,7 +313,7 @@ html, body {
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     display: block;
 
     @extend %left-col;
@@ -343,9 +337,7 @@ html, body {
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
     border-top: 1px solid #ddd;
-    @include background-image(
-      linear-gradient(top, #fff, #f9f9f9)
-    );
+    background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
@@ -361,9 +353,7 @@ html, body {
     border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
-    @include background-image(
-      linear-gradient(top, rgba(#fff,0.4), rgba(#fff, 0))
-    );
+    background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -493,7 +483,7 @@ html, body {
     margin: -2px;
     border-radius: 4px;
     border: 1px solid #F7E633;
-    @include background(linear-gradient(bottom right, #F7E633 0%, #F1D32F 100%));
+    background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
 }
 
@@ -514,7 +504,7 @@ html, body {
     float:right;
     clear:right;
 
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 
     @extend %right-col;
 
@@ -523,7 +513,6 @@ html, body {
     a {
       color: #fff;
       text-decoration: none;
-      border-bottom: dashed 1px #ccc;
     }
   }
 

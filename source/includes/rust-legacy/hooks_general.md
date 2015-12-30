@@ -1,4 +1,4 @@
-# General Hooks
+# Server Hooks
 
 ## OnServerInitialized
 
@@ -9,12 +9,16 @@ void OnServerInitialized()
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeScript example here
 ```
 
 ``` python
@@ -34,12 +38,16 @@ void OnServerSave
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeScript example here
 ```
 
 ``` python
@@ -59,12 +67,16 @@ void OnServerShutdown
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeScript example here
 ```
 
 ``` python
@@ -85,12 +97,16 @@ void OnRunCommand(ConsoleSystem.Arg arg, bool wantReply)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeScript example here
 ```
 
 ``` python
@@ -111,12 +127,16 @@ void OnDatablocksInitialized()
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeScript example here
 ```
 
 ``` python
@@ -135,12 +155,16 @@ void OnResourceNodeLoaded(ResourceTarget resource)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeScript example here
 ```
 
 ``` python

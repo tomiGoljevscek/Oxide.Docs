@@ -17,12 +17,12 @@ namespace Oxide.Plugins
         private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
         [ChatCommand("getrequest")]
-        private void ExampleGetRequest(BasePlayer player, string command, string[] args)
+        void ExampleGetRequest(BasePlayer player, string command, string[] args)
         {
             webRequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", (code, response) => WebRequestCallback(code, response, player), this);
         }
 
-        private void WebRequestCallback(int code, string response, BasePlayer player)
+        void WebRequestCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {
@@ -35,6 +35,16 @@ namespace Oxide.Plugins
 }
 ```
 
+``` lua
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response)
+    if response == nil or code ~= 200 then 
+        print("Couldn't get an answer from Google!") 
+        return 
+    end
+    print("Google answered: " .. tostring(response))
+end, self.Plugin)
+```
+
 ``` javascript
 webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response) {
     if (response == null || code != 200) {
@@ -45,14 +55,8 @@ webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code
 }.bind(this), this.Plugin);
 ```
 
-``` lua
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response)
-    if response == nil or code ~= 200 then 
-        print("Couldn't get an answer from Google!") 
-        return 
-    end
-    print("Google answered: " .. tostring(response))
-end, self.Plugin)
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -84,12 +88,12 @@ namespace Oxide.Plugins
         private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
         [ChatCommand("postrequest")]
-        private void ExamplePostRequest(BasePlayer player, string command, string[] args)
+        void ExamplePostRequest(BasePlayer player, string command, string[] args)
         {
             webRequests.EnqueuePost("http://www.google.com/search?q=Oxide+Mod", "param1=value1&param2=value2", (code, response) => WebRequestCallback(code, response, player), this);
         }
 
-        private void WebRequestCallback(int code, string response, BasePlayer player)
+        void WebRequestCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {
@@ -102,12 +106,16 @@ namespace Oxide.Plugins
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

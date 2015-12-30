@@ -9,16 +9,20 @@ void OnTerrainInitialized()
 }
 ```
 
+``` lua
+function PLUGIN:OnTerrainInitialized()
+    print("OnTerrainInitialized works!")
+end
+```
+
 ``` javascript
 OnTerrainInitialized: function() {
     print("OnTerrainInitialized works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnTerrainInitialized()
-    print("OnTerrainInitialized works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

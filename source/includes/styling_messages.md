@@ -36,7 +36,7 @@ We are <size=50>largely</size> unaffected.
 <color=#00ffffff>Hello world</color>
 ```
 
-With Rust, you can stylize messages send from the server via plugins. Styling is limited to bold, italic, size, and color.
+Messages sent from the server via plugins can be stylized using basic HTML. Styling is limited to bold, italic, size, and color.
 
 The color can be specified in the traditional HTML format. `#rrggbbaa`... where the letters correspond to pairs of hexadecimal digits denoting the red, green, blue and alpha (transparency) values for the color.
 

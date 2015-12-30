@@ -27,13 +27,17 @@ namespace Oxide.Plugins
     class Example : CovalencePlugin
     {
         [ChatCommand("save")]
-        private void SaveCommand(BasePlayer player, string command, string[] args)
+        void SaveCommand(BasePlayer player, string command, string[] args)
         {
             PrintToChat(player, "Saving the world data!");
             SaveRestore.Save();
         }
     }
 }
+```
+
+``` lua
+We need a Lua example here
 ```
 
 ``` javascript
@@ -55,8 +59,8 @@ var ExamplePlugin {
 }
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -75,13 +79,17 @@ namespace Oxide.Plugins
     class Example : CovalencePlugin
     {
         [ConsoleCommand("plugin.save")]
-        private void SaveCommand(ConsoleSystem.Arg arg)
+        void SaveCommand(ConsoleSystem.Arg arg)
         {
             PrintToConsole(arg.Player(), "Saving the world data");
             SaveRestore.Save();
         }
     }
 }
+```
+
+``` lua
+We need a Lua example here
 ```
 
 ``` javascript
@@ -130,8 +138,8 @@ var ExamplePlugin {
 }
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

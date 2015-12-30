@@ -9,16 +9,20 @@ void OnPlayerConnected(EntityPlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerConnected(player)
+    print("OnPlayerConnected works!")
+end
+```
+
 ``` javascript
 OnPlayerConnected: function(player) {
     print("OnPlayerConnected works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerConnected(player)
-    print("OnPlayerConnected works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -39,16 +43,20 @@ void OnPlayerDisconnected(EntityPlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerDisconnected(player)
+    print("OnPlayerDisconnected works!")
+end
+```
+
 ``` javascript
 OnPlayerDisconnected: function(player) {
     print("OnPlayerDisconnected works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerDisconnected(player)
-    print("OnPlayerDisconnected works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -69,16 +77,20 @@ void OnPlayerChat(string message, string playerName)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerChat(message, playerName)
+    print("OnPlayerChat works!")
+end
+```
+
 ``` javascript
 OnPlayerChat: function(message, playerName) {
     print("OnPlayerChat works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerChat(message, playerName)
-    print("OnPlayerChat works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -99,16 +111,20 @@ void OnPlayerRespawned(EntityPlayer player, string reason)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerRespawned(player, reason)
+    print("OnPlayerRespawned works!")
+end
+```
+
 ``` javascript
 OnPlayerRespawned: function(player, reason) {
     print("OnPlayerRespawned works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerRespawned(player, reason)
-    print("OnPlayerRespawned works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -129,16 +145,20 @@ void OnExperienceGained(EntityPlayer player, uint exp)
 }
 ```
 
+``` lua
+function PLUGIN:OnExperienceGained(player, exp)
+    print("OnExperienceGained works!")
+end
+```
+
 ``` javascript
 OnExperienceGained: function(player, exp) {
     print("OnExperienceGained works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnExperienceGained(player, exp)
-    print("OnExperienceGained works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

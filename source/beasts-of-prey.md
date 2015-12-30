@@ -4,13 +4,14 @@ short_code: beasts-of-prey
 
 language_tabs:
   - csharp
-  - javascript
   - lua
+  - javascript
+  - coffeescript
   - python
 
 includes:
   - beasts-of-prey/getting_started
-  - plugin_hooks
+  - universal_hooks
   - commands
   - configurations
   - storing_data

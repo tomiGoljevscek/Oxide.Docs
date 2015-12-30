@@ -4,13 +4,14 @@ short_code: rust-legacy
 
 language_tabs:
   - csharp
-  - javascript
   - lua
+  - javascript
+  - coffeescript
   - python
 
 includes:
   - rust-legacy/getting_started
-  - plugin_hooks
+  - universal_hooks
   - rust-legacy/hooks_general
   - rust-legacy/hooks_player
   - rust-legacy/hooks_entity

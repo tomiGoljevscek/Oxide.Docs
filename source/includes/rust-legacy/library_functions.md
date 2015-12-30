@@ -12,16 +12,20 @@ void OnPlayerConnected(NetUser netuser)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerConnected(netuser)
+    rust.BroadcastChat(netuser.displayName .. " has joined the server")
+end
+```
+
 ``` javascript
 OnPlayerConnected: function(netuser) {
     rust.BroadcastChat(netuser.displayName + " has joined the server");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerConnected(netuser)
-    rust.BroadcastChat(netuser.displayName .. " has joined the server")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -43,16 +47,20 @@ void OnPlayerConnected(NetUser netuser)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerConnected(netuser)
+    rust.BroadcastConsole(netuser.displayName .. " has joined the server")
+end
+```
+
 ``` javascript
 OnPlayerConnected: function(netuser) {
     rust.BroadcastConsole(netuser.displayName + " has joined the server");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerConnected(netuser)
-    rust.BroadcastConsole(netuser.displayName .. " has joined the server")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -73,6 +81,15 @@ void Example(NetUser netuser, string command, string[] args)
 }
 ```
 
+``` lua
+function PLUGIN:Init()
+    cmd.AddChatCommand("ex",  self.Plugin, "Example")
+end
+function PLUGIN:Example(netuser, command, args)
+    target = rust.FindPlayer(args[0])
+end
+```
+
 ``` javascript
 Init: function() {
     cmd.AddChatCommand("ex",  self.Plugin, "Example");
@@ -82,13 +99,8 @@ Example: function(netuser, command, args) {
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    cmd.AddChatCommand("ex",  self.Plugin, "Example")
-end
-function PLUGIN:Example(netuser, command, args)
-    target = rust.FindPlayer(args[0])
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -108,12 +120,16 @@ Searches for an online player by name, steam id or ip. Returns a netuser if a pl
 This should not be used in C# plugins, Reflection should be used instead
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -131,12 +147,16 @@ var message = "Use /kick \"playername\" to kick player";
 message.QuoteSafe();
 ```
 
+``` lua
+rust.QuoteSafe("Use /kick \"playername\" to kick player")
+```
+
 ``` javascript
 rust.QuoteSafe("Use /kick \"playername\" to kick player");
 ```
 
-``` lua
-rust.QuoteSafe("Use /kick \"playername\" to kick player")
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -157,16 +177,20 @@ void OnPlayerSpawn(NetUser netuser)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerSpawn(player)
+    rust.SendChatMessage(netuser, "You've respawned from a terrible death")
+end
+```
+
 ``` javascript
 OnPlayerSpawn: function(netuser) {
     rust.SendChatMessage(netuser, "You've respawned from a terrible death");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerSpawn(player)
-    rust.SendChatMessage(netuser, "You've respawned from a terrible death")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -188,16 +212,20 @@ void OnPlayerSpawn(NetUser netuser)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerSpawn(player)
+    rust.SendConsoleMessage(netuser, "You've respawned from a terrible death")
+end
+```
+
 ``` javascript
 OnPlayerSpawn: function(netuser) {
     rust.SendConsoleMessage(netuser, "You've respawned from a terrible death");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerSpawn(player)
-    rust.SendConsoleMessage(netuser, "You've respawned from a terrible death")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -219,6 +247,15 @@ void cmdChatSteamid(NetUser netuser, string command, string[] args)
 }
 ```
 
+``` lua
+function PLUGIN:Init()
+    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+end
+function PLUGIN:cmdSteamId(netuser, command, arg)
+    rust.SendChatMessage(netuser, "Your Steam ID is: " .. rust.UserIDFromPlayer(netuser))
+end
+```
+
 ``` javascript
 Init: function() {
     cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
@@ -228,13 +265,8 @@ cmdSteamId: function(netuser, command, arg) {
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
-end
-function PLUGIN:cmdSteamId(netuser, command, arg)
-    rust.SendChatMessage(netuser, "Your Steam ID is: " .. rust.UserIDFromPlayer(netuser))
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -261,6 +293,15 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 }
 ```
 
+``` lua
+function PLUGIN:Init()
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
+end
+function PLUGIN:cmdNotice(netuser, command, arg)
+    rust.Notice(netuser, "Notice Demo", "!", 4);
+end
+```
+
 ``` javascript
 Init: function() {
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice");
@@ -270,13 +311,8 @@ cmdNotice: function(netuser, command, arg) {
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
-end
-function PLUGIN:cmdNotice(netuser, command, arg)
-    rust.Notice(netuser, "Notice Demo", "!", 4);
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -301,6 +337,15 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 }
 ```
 
+``` lua
+function PLUGIN:Init()
+    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
+end
+function PLUGIN:cmdNotice(netuser, command, arg)
+    rust.InventoryNotice(netuser, "InventoryNotice Demo");
+end
+```
+
 ``` javascript
 Init: function() {
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice");
@@ -310,13 +355,8 @@ cmdNotice: function(netuser, command, arg) {
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
-end
-function PLUGIN:cmdNotice(netuser, command, arg)
-    rust.InventoryNotice(netuser, "InventoryNotice Demo");
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
