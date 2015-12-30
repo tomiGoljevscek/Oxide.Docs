@@ -1,23 +1,15 @@
-# Use new Travis-CI infrastructure
 sudo: false
 cache: bundler
-
-# Source language
 rvm: 2.0.0
 
-# Run deployment script
 script: bundle exec rake travis
 
 notifications:
-  # Disable build status email notifications, until the issue with forks is fixed
   email: false
-  # Slack (oxidemod.slack.com)
   slack:
     rooms:
-      secure: "WrRKzdAGL/HgZ3VN51cSUx8acnSH7GBpgDRuAwX2n0Nqwp4LQ2+3zt72Kl4U0M8GuNCC0awc6QD/VbHwEZg6Ahi+wuSIlBtB9R6euJfe6VAKcJzzuTc3jUL+MmYkVsujWkKsZ1Jre/wFuvWWnroVgUX7m7tJo3GnyyOtqryJBQc="
+      secure: "MqRvOkEqet1efaTaWstcB+2NAkn8cATwopYoCj1vlJSEsncdkwDf/mQK+2g/mvWE8xr0I93VxR/QxkQOvRb6e9eImTWUPPvw6RmvM905GxSmoPQUi3XOoj8ETUhBzPkTrvfp25o6DxUy4Rd5TZgMQxyWplla8fewkuSSbeuv83I="
 
-# Environmental system variables
 env:
   global:
-    # Super secure, encrypted variables! Ssssh!
     - secure: "HTkLZ8Tgib+bW13R41PDdo7WgTR3g37ioBHs82/yX0nXtwUMmNlKMdHEZJjrTvUZRkPAQ8gkVfFsNhsUAj8Z88lfrNItuWPfWEKDaeh/3hGIaNS3Wzoe+Yyhj+CfRX0fpzswyR0Q8TqmfKvqzz+SUNTmKKetzXvCBO4uWEalW+E="
