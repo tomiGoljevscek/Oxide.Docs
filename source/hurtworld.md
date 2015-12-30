@@ -10,7 +10,7 @@ language_tabs:
   - python
 
 includes:
-  - getting_started
+  - hurtworld/getting_started
   - universal_hooks
   - commands
   - configurations

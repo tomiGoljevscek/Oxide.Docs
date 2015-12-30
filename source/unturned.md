@@ -1,6 +1,6 @@
 ---
-title: Oxide API for Reign of Kings
-short_code: reign-of-kings
+title: Oxide API for Unturned
+short_code: unturned
 
 language_tabs:
   - csharp
@@ -10,13 +10,8 @@ language_tabs:
   - python
 
 includes:
-  - reign-of-kings/getting_started
+  - unturned/getting_started
   - universal_hooks
-  - reign-of-kings/hooks_general
-  - reign-of-kings/hooks_player
-  - reign-of-kings/hooks_entity
-  - reign-of-kings/hooks_structure
-  - reign-of-kings/library_functions
   - commands
   - configurations
   - storing_data

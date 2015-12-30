@@ -6,7 +6,7 @@ namespace Oxide.Plugins
     [Info("EpicPlugin", "Unknown", 0.1)]
     [Description("This is what the plugin does")]
 
-    class PluginName : RustLegacyPlugin
+    class PluginName : BlockstormPlugin
     {
         // This is where your plugin will do its magic
     }
