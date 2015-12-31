@@ -47,6 +47,39 @@ def Init():
  * Other plugins may or may not be present, dependant on load order
  * Other plugins will have been executed though, so globals exposed by them will be present
 
+## Unload
+
+``` csharp
+void Unload()
+{
+    Puts("Save files, destroy timers, etc.");
+}
+```
+
+``` lua
+function PLUGIN:Unload()
+    print("Save files, destroy timers, etc.")
+end
+```
+
+``` javascript
+Unload: function() {
+    print("Save files, destroy timers, etc.");
+}
+```
+
+``` coffeescript
+Unload: () =>
+    print "Save files, destroy timers, etc."
+```
+
+``` python
+def Unload():
+    print "Save files, destroy timers, etc."
+```
+
+ * Called when a plugin is being unloaded
+
 ## LoadDefaultConfig
 
 ``` csharp
@@ -180,6 +213,74 @@ def OnPluginUnloaded(name):
 
  * Called when a plugin has been unloaded
 
+## OnServerInitialized
+
+``` csharp
+void OnServerInitialized()
+{
+    Puts("OnServerInitialized works!");
+}
+```
+
+``` lua
+function PLUGIN:OnServerInitialized()
+    print("OnServerInitialized works!")
+end
+```
+
+``` javascript
+OnServerInitialized: function() {
+    print("OnServerInitialized works!");
+}
+```
+
+``` coffeescript
+OnServerInitialized: () =>
+    print "OnServerInitialized works!"
+```
+
+``` python
+def OnServerInitialized():
+    print "OnServerInitialized works!"
+```
+
+ * No return behavior
+ * Called after the server startup has been completed and is awaiting connections
+
+## OnServerSave
+
+``` csharp
+void OnServerSave
+{
+    Puts("OnServerSave works!");
+}
+```
+
+``` lua
+function PLUGIN:OnServerSave()
+    print("OnServerSave works!")
+end
+```
+
+``` javascript
+OnServerSave: function() {
+    print("OnServerSave works!");
+}
+```
+
+``` coffeescript
+OnServerSave: () =>
+    print "OnServerSave works!"
+```
+
+``` python
+def OnServerSave():
+    print "OnServerSave works!"
+```
+
+ * No return behavior
+ * Called before the server saves and shuts down
+
 ## OnUserPermissionGranted
 
 ``` csharp
@@ -311,36 +412,3 @@ def OnGroupPermissionRevoked(name, perm):
 ```
 
  * Called when a permission has been revoked from a group
-
-## Unload
-
-``` csharp
-void Unload()
-{
-    Puts("Save files, destroy timers, etc.");
-}
-```
-
-``` lua
-function PLUGIN:Unload()
-    print("Save files, destroy timers, etc.")
-end
-```
-
-``` javascript
-Unload: function() {
-    print("Save files, destroy timers, etc.");
-}
-```
-
-``` coffeescript
-Unload: () =>
-    print "Save files, destroy timers, etc."
-```
-
-``` python
-def Unload():
-    print "Save files, destroy timers, etc."
-```
-
- * Called when a plugin is being unloaded

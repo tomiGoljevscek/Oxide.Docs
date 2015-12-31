@@ -72,7 +72,8 @@ def OnEntityDeath(self, entity, info):
 ## OnEntityEnter
 
 ``` csharp
-void OnEntityEnter(TriggerBase trigger, BaseEntity entity) {
+void OnEntityEnter(TriggerBase trigger, BaseEntity entity)
+{
     Puts("OnEntityEnter works!");
 }
 ```
