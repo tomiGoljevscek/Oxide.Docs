@@ -10,24 +10,29 @@ void OnItemAdded(Inventory inventory, int slot, IInventoryItem item)
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnItemAdded(inventory, slot, item)
+    print("OnItemAdded works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnItemAdded: (inventory, slot, item) =>
+  print "OnItemAdded works!"
+```
+
+``` javascript
+OnItemAdded: function(inventory, slot, item) {
+  print("OnItemAdded works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnItemAdded(self, inventory, slot, item):
+  print "OnItemAdded works!"
 ```
 
- * Called from Inventory.ItemAdded
- * No return behavior
  * Called when an item was added to an inventory
+ * No return behavior
 
 ## OnItemRemoved
 
@@ -39,25 +44,30 @@ void OnItemRemoved(Inventory inventory, int slot, IInventoryItem item)
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnItemRemoved(inventory, slot, item)
+    print("OnItemRemoved works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnItemRemoved: (inventory, slot, item) =>
+  print "OnItemRemoved works!"
+```
+
+``` javascript
+OnItemRemoved: function(inventory, slot, item) {
+  print("OnItemRemoved works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnItemRemoved(self, inventory, slot, item):
+  print "OnItemRemoved works!"
 ```
 
- * Called from Inventory.ItemRemoved
- * No return behavior
  * Called when an item was removed from an inventory
- 
+ * No return behavior
+
 ## OnItemDeployed
 
 ``` csharp
@@ -68,21 +78,26 @@ void OnItemDeployed(DeployableObject deployable, IDeployableItem item)
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnItemDeployed(deployable, item)
+    print("OnItemDeployed works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnItemDeployed: (deployable, item) =>
+  print "OnItemDeployed works!"
+```
+
+``` javascript
+OnItemDeployed: function(deployable, item) {
+  print("OnItemDeployed works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnItemDeployed(self, deployable, item):
+  print "OnItemDeployed works!"
 ```
 
- * Called from DeployableItemDataBlock.DoAction1
- * No return behavior
  * Called when an item was deployed by a player
+ * No return behavior

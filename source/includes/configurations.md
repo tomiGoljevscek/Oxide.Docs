@@ -5,10 +5,10 @@
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Unknown", 1.0)]
     [Description("This example illustrates how to use a basic configuration file.")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicPlugin : RustPlugin
     {
         protected override void LoadDefaultConfig()
         {
@@ -67,10 +67,10 @@ Since many users won't want to (or can't) edit the plugin directly to change the
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Oxide Team", 1.0)] 
+    [Info("EpicPlugin", "Unknown", 1.0)] 
     [Description("This example illustrates how to update a value in a configuration file.")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicPlugin : RustPlugin
     {
         [ChatCommand("Test")]
         void Test(BasePlayer player, string command, string[] args)

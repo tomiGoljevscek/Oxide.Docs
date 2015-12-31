@@ -9,16 +9,20 @@ void OnBlueprintReveal(Item item, Item revealed, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnBlueprintReveal(item)
+    print("OnBlueprintReveal works!")
+end
+```
+
 ``` javascript
 OnBlueprintReveal: function(item) {
     print("OnBlueprintReveal works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnBlueprintReveal(item)
-    print("OnBlueprintReveal works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -39,16 +43,20 @@ void OnConsumableUse(Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnConsumableUse(item)
+    print("OnConsumableUse works!")
+end
+```
+
 ``` javascript
 OnConsumableUse: function(item) {
     print("OnConsumableUse works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnConsumableUse(item)
-    print("OnConsumableUse works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -69,16 +77,20 @@ void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
 }
 ```
 
+``` lua
+function PLUGIN:OnConsumeFuel(oven, fuel, burnable)
+    print("OnConsumeFuel works!")
+end
+```
+
 ``` javascript
 OnConsumeFuel: function(oven, fuel, burnable) {
     print("OnConsumeFuel works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnConsumeFuel(oven, fuel, burnable)
-    print("OnConsumeFuel works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -99,16 +111,20 @@ void OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item
 }
 ```
 
+``` lua
+function PLUGIN:OnDispenserGather(dispenser, entity, item)
+    print("OnDispenserGather works!")
+end
+```
+
 ``` javascript
 OnDispenserGather: function(dispenser, entity, item) {
     print("OnDispenserGather works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnDispenserGather(dispenser, entity, item)
-    print("OnDispenserGather works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -129,16 +145,20 @@ void OnHealingItemUse(HeldEntity item, BasePlayer target)
 }
 ```
 
+``` lua
+function PLUGIN:OnHealingItemUse(item, target)
+    print("OnHealingItemUse works!")
+end
+```
+
 ``` javascript
 OnHealingItemUse: function(item, target) {
     print("OnHealingItemUse works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnHealingItemUse(item, target)
-    print("OnHealingItemUse works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -159,16 +179,20 @@ void OnItemAddedToContainer(ItemContainer container, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemAddedToContainer(container, item)
+    print("OnItemAddedToContainer works!")
+end
+```
+
 ``` javascript
 OnItemAddedToContainer: function(container, item) {
     print("OnItemAddedToContainer works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemAddedToContainer(container, item)
-    print("OnItemAddedToContainer works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -190,16 +214,20 @@ void OnItemCraft(ItemCraftTask item)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemCraft(item)
+    print("OnItemCraft works!")
+end
+```
+
 ``` javascript
 OnItemCraft: function(item) {
     print("OnItemCraft works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemCraft(item)
-    print("OnItemCraft works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -220,16 +248,20 @@ void OnItemCraftCancelled(ItemCraftTask task)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemCraftCancelled(task)
+    print("OnItemCraftCancelled works!")
+end
+```
+
 ``` javascript
 OnItemCraftCancelled: function(task) {
     print("OnItemCraftCancelled works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemCraftCancelled(task)
-    print("OnItemCraftCancelled works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -250,16 +282,20 @@ void OnItemCraftFinished(ItemCraftTask task, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemCraftFinished(task, item)
+    print("OnItemCraftFinished works!")
+end
+```
+
 ``` javascript
 OnItemCraftFinished: function(task, item) {
     print("OnItemCraftFinished works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemCraftFinished(task, item)
-    print("OnItemCraftFinished works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -280,16 +316,20 @@ void OnItemDeployed(Deployer deployer, BaseEntity entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemDeployed(deployer, entity)
+    print("OnItemDeployed works!")
+end
+```
+
 ``` javascript
 OnItemDeployed: function(deployer, entity) {
     print("OnItemDeployed works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemDeployed(deployer, entity)
-    print("OnItemDeployed works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -310,16 +350,20 @@ void OnCollectiblePickup(Item item, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnCollectiblePickup(item, player)
+    print("OnCollectiblePickup works!")
+end
+```
+
 ``` javascript
 OnCollectiblePickup: function(item, player) {
     print("OnCollectiblePickup works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnCollectiblePickup(item, player)
-    print("OnCollectiblePickup works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -340,16 +384,20 @@ void OnItemResearch(Item item, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemResearch(item, player)
+    print("OnItemResearch works!")
+end
+```
+
 ``` javascript
 OnItemResearch: function(item, player) {
     print("OnItemResearch works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemResearch(item, player)
-    print("OnItemResearch works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -371,6 +419,13 @@ void OnItemResearchEnd(ResearchTable table, float chance)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemResearchEnd(table, chance)
+    print("OnItemResearchEnd works!")
+    return chance
+end
+```
+
 ``` javascript
 OnItemResearchEnd: function(table, chance) {
     print("OnItemResearchEnd works!");
@@ -378,11 +433,8 @@ OnItemResearchEnd: function(table, chance) {
 }
 ```
 
-``` lua
-function PLUGIN:OnItemResearchEnd(table, chance)
-    print("OnItemResearchEnd works!")
-    return chance
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -404,16 +456,20 @@ void OnItemResearchStart(ResearchTable table)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemResearchStart(table)
+    print("OnItemResearchStart works!")
+end
+```
+
 ``` javascript
 OnItemResearchStart: function(table) {
     print("OnItemResearchStart works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemResearchStart(table)
-    print("OnItemResearchStart works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -434,16 +490,20 @@ void OnItemRemovedFromContainer(ItemContainer container, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemRemovedFromContainer(container, item)
+    print("OnItemRemovedFromContainer works!")
+end
+```
+
 ``` javascript
 OnItemRemovedFromContainer: function(container, item) {
     print("OnItemRemovedFromContainer works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemRemovedFromContainer(container, item)
-    print("OnItemRemovedFromContainer works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -465,16 +525,20 @@ void OnItemUpgrade(Item item, Item upgraded, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnItemUpgrade(item, upgraded, item)
+    print("OnItemUpgrade works!")
+end
+```
+
 ``` javascript
 OnItemUpgrade: function(item, upgraded, item) {
     print("OnItemUpgrade works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnItemUpgrade(item, upgraded, item)
-    print("OnItemUpgrade works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -495,16 +559,20 @@ void OnLoseCondition(Item item, ref float amount)
 }
 ```
 
+``` lua
+function PLUGIN:OnLoseCondition(item, amount)
+    print("OnLoseCondition works!")
+end
+```
+
 ``` javascript
 OnLoseCondition: function(item, amount) {
     print("OnLoseCondition works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnLoseCondition(item, amount)
-    print("OnLoseCondition works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -525,16 +593,20 @@ void OnPlantGather(PlantEntity plant, Item item, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlantGather(plant, item, player)
+    print("OnPlantGather works!")
+end
+```
+
 ``` javascript
 OnPlantGather: function(plant, item, player) {
     print("OnPlantGather works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlantGather(plant, item, player)
-    print("OnPlantGather works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -555,16 +627,20 @@ void OnQuarryGather(MiningQuarry quarry, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnQuarryGather(quarry, item)
+    print("OnQuarryGather works!")
+end
+```
+
 ``` javascript
 OnQuarryGather: function(quarry, item) {
     print("OnQuarryGather works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnQuarryGather(quarry, item)
-    print("OnQuarryGather works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -585,16 +661,20 @@ void OnQuarryGather(MiningQuarry quarry, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnQuarryGather(quarry, item)
+    print("OnQuarryGather works!")
+end
+```
+
 ``` javascript
 OnQuarryGather: function(quarry, item) {
     print("OnQuarryGather works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnQuarryGather(quarry, item)
-    print("OnQuarryGather works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -615,16 +695,20 @@ void OnSurveyGather(SurveryCharge survey, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnSurveyGather(survey, item)
+    print("OnSurveyGather works!")
+end
+```
+
 ``` javascript
 OnSurveyGather: function(survey, item) {
     print("OnSurveyGather works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnSurveyGather(survey, item)
-    print("OnSurveyGather works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -645,16 +729,20 @@ void OnTrapArm(BearTrap trap, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnTrapArm(trap, player)
+    print("OnTrapArm works!")
+end
+```
+
 ``` javascript
 OnTrapArm: function(trap, player) {
     print("OnTrapArm works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnTrapArm(trap, player)
-    print("OnTrapArm works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -675,16 +763,20 @@ void OnTrapDisarm(Landmine trap, BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnTrapDisarm(trap, player)
+    print("OnTrapDisarm works!")
+end
+```
+
 ``` javascript
 OnTrapDisarm: function(trap, player) {
     print("OnTrapDisarm works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnTrapDisarm(trap, player)
-    print("OnTrapDisarm works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -705,16 +797,20 @@ void OnTrapSnapped(BearTrap trap, GameObject go)
 }
 ```
 
+``` lua
+function PLUGIN:OnTrapSnapped(trap, player)
+    print("OnTrapSnapped works!")
+end
+```
+
 ``` javascript
 OnTrapSnapped: function(trap, player) {
     print("OnTrapSnapped works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnTrapSnapped(trap, player)
-    print("OnTrapSnapped works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -735,16 +831,20 @@ void OnTrapTrigger(BearTrap trap, GameObject go)
 }
 ```
 
+``` lua
+function PLUGIN:OnTrapTrigger(trap, go)
+    print("OnTrapTrigger works!")
+end
+```
+
 ``` javascript
 OnTrapTrigger: function(trap, go) {
     print("OnTrapTrigger works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnTrapTrigger(trap, go)
-    print("OnTrapTrigger works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

@@ -3,86 +3,98 @@
 ## OnCubePlacement
 
 ``` csharp
-void OnCubePlacement(CubePlaceEvent e)
+void OnCubePlacement(CubePlaceEvent evt)
 {
     Puts("OnCubePlacement works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnCubePlacement(evt)
+    print("OnCubePlacement works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnCubePlacement: (evt) =>
+  print "OnCubePlacement works!"
+```
+
+``` javascript
+OnCubePlacement: function(evt) {
+  print("OnCubePlacement works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnCubePlacement(self, evt):
+  print "OnCubePlacement works!"
 ```
 
- * Called from ??
- * ??
  * Help! This is missing a description!
 
 ## OnCubeTakeDamage
 
 ``` csharp
-void OnCubeTakeDamage(CubeDamageEvent e)
+void OnCubeTakeDamage(CubeDamageEvent evt)
 {
     Puts("OnCubeTakeDamage works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnCubeTakeDamage(evt)
+    print("OnCubeTakeDamage works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnCubeTakeDamage: (evt) =>
+  print "OnCubeTakeDamage works!"
+```
+
+``` javascript
+OnCubeTakeDamage: function(evt) {
+  print("OnCubeTakeDamage works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnCubeTakeDamage(self, evt):
+  print "OnCubeTakeDamage works!"
 ```
 
- * Called from ??
- * ??
  * Help! This is missing a description!
 
 ## OnCubeDestroyed
 
 ``` csharp
-void OnCubeDestroyed(CubeDestroyEvent e)
+void OnCubeDestroyed(CubeDestroyEvent evt)
 {
     Puts("OnCubeDestroyed works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnCubeDestroyed(evt)
+    print("OnCubeDestroyed works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnCubeDestroyed: (evt) =>
+  print "OnCubeDestroyed works!"
+```
+
+``` javascript
+OnCubeDestroyed: function(evt) {
+  print("OnCubeDestroyed works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnCubeDestroyed(self, evt):
+  print "OnCubeDestroyed works!"
 ```
 
- * Called from ??
- * ??
  * Help! This is missing a description!

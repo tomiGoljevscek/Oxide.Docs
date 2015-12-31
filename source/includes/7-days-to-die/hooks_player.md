@@ -15,22 +15,22 @@ function PLUGIN:OnPlayerConnected(player)
 end
 ```
 
-``` javascript
-OnPlayerConnected: function(player) {
-    print("OnPlayerConnected works!");
-}
+``` coffeescript
+OnPlayerConnected: (player) =>
+  print "OnPlayerConnected works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnPlayerConnected: function(player) {
+  print("OnPlayerConnected works!");
+}
 ```
 
 ``` python
 def OnPlayerConnected(self, player):
-    print "OnPlayerConnected works!"
+  print "OnPlayerConnected works!"
 ```
 
- * Called from GameManager.RequestToSpawnPlayer
  * Called when a player has connected to the server
  * No return behavior
 
@@ -49,56 +49,56 @@ function PLUGIN:OnPlayerDisconnected(player)
 end
 ```
 
-``` javascript
-OnPlayerDisconnected: function(player) {
-    print("OnPlayerDisconnected works!");
-}
+``` coffeescript
+OnPlayerDisconnected: (player) =>
+  print "OnPlayerDisconnected works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnPlayerDisconnected: function(player) {
+  print("OnPlayerDisconnected works!");
+}
 ```
 
 ``` python
 def OnPlayerDisconnected(self, player):
-    print "OnPlayerDisconnected works!"
+  print "OnPlayerDisconnected works!"
 ```
 
- * Called from GameManager.PlayerDisconnected
  * Called when a player has disconnected from the server
  * No return behavior
 
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(string message, string playerName)
+void OnPlayerChat(string message, string name)
 {
     Puts("OnPlayerChat works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerChat(message, playerName)
+function PLUGIN:OnPlayerChat(message, name)
     print("OnPlayerChat works!")
 end
 ```
 
+``` coffeescript
+OnPlayerChat: (message, name) =>
+  print "OnPlayerConnected works!"
+```
+
 ``` javascript
-OnPlayerChat: function(message, playerName) {
-    print("OnPlayerChat works!");
+OnPlayerChat: function(message, name) {
+  print("OnPlayerChat works!");
 }
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
-```
-
 ``` python
-def OnPlayerChat(self, message, playerName):
-    print "OnPlayerChat works!"
+def OnPlayerChat(self, message, name):
+  print "OnPlayerChat works!"
 ```
 
- * Called from GameManager.GameMessageServer
  * Called when a player sends chat to the server
  * No return behavior
 
@@ -117,22 +117,22 @@ function PLUGIN:OnPlayerRespawned(player, reason)
 end
 ```
 
-``` javascript
-OnPlayerRespawned: function(player, reason) {
-    print("OnPlayerRespawned works!");
-}
+``` coffeescript
+OnPlayerRespawned: (player, reason) =>
+  print "OnPlayerRespawned works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnPlayerRespawned: function(player, reason) {
+  print("OnPlayerRespawned works!");
+}
 ```
 
 ``` python
 def OnPlayerRespawned(self, player, reason):
-    print "OnPlayerRespawned works!"
+  print "OnPlayerRespawned works!"
 ```
 
- * Called from EntityPlayer.Respawn
  * Called when a player has respawned
  * No return behavior
 
@@ -151,21 +151,21 @@ function PLUGIN:OnExperienceGained(player, exp)
 end
 ```
 
-``` javascript
-OnExperienceGained: function(player, exp) {
-    print("OnExperienceGained works!");
-}
+``` coffeescript
+OnExperienceGained: (player, exp) =>
+  print "OnExperienceGained works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnExperienceGained: function(player, exp) {
+  print("OnExperienceGained works!");
+}
 ```
 
 ``` python
 def OnExperienceGained(self, player, exp):
-    print "OnExperienceGained works!"
+  print "OnExperienceGained works!"
 ```
 
- * Called from EntityPlayer.AddExp
  * Called when a player has gained experience
  * No return behavior

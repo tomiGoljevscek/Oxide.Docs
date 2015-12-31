@@ -15,21 +15,21 @@ function PLUGIN:OnTerrainInitialized()
 end
 ```
 
-``` javascript
-OnTerrainInitialized: function() {
-    print("OnTerrainInitialized works!");
-}
+``` coffeescript
+OnTerrainInitialized: ->
+  print "OnTerrainInitialized works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnTerrainInitialized: function() {
+  print("OnTerrainInitialized works!");
+}
 ```
 
 ``` python
 def OnTerrainInitialized(self):
-    print "OnTerrainInitialized works!"
+  print "OnTerrainInitialized works!"
 ```
 
- * Called from TerrainMeta.CalculateChecksum
  * Called after the terrain generation process has completed
  * No return behavior

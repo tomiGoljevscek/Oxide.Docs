@@ -8,10 +8,10 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Oxide Team", 1.0)] 
+    [Info("EpicPlugin", "Unknown", 1.0)] 
     [Description("This example illustrates how to create a data file.")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicPlugin : RustPlugin
     {
         class StoredData
         {
@@ -83,10 +83,10 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Oxide Team", 1.0)] 
+    [Info("EpicPlugin", "Unknown", 1.0)] 
     [Description("This example illustrates how to save to a data file.")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicPlugin : RustPlugin
     {
         class StoredData
         {

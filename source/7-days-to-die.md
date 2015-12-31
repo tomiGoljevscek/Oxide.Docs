@@ -5,8 +5,8 @@ short_code: 7-days-to-die
 language_tabs:
   - csharp
   - lua
-  - javascript
   - coffeescript
+  - javascript
   - python
 
 includes:

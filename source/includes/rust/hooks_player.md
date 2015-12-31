@@ -9,16 +9,20 @@ void CanBeWounded(BasePlayer player, HitInfo info)
 }
 ```
 
+``` lua
+function PLUGIN:CanBeWounded(player, info)
+    print("CanBeWounded works!")
+end
+```
+
 ``` javascript
 CanBeWounded: function(player, info) {
     print("CanBeWounded works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanBeWounded(player, info)
-    print("CanBeWounded works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -39,16 +43,20 @@ void CanClientLogin(Network.Connection connection)
 }
 ```
 
+``` lua
+function PLUGIN:CanClientLogin(connection)
+    print("CanClientLogin works!")
+end
+```
+
 ``` javascript
 CanClientLogin: function(connection) {
     print("CanClientLogin works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanClientLogin(connection)
-    print("CanClientLogin works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -69,16 +77,20 @@ void CanLootPlayer(BasePlayer target, BasePlayer looter)
 }
 ```
 
+``` lua
+function PLUGIN:CanLootPlayer(player, target)
+    print("CanLootPlayer works!")
+end
+```
+
 ``` javascript
 CanLootPlayer: function(player, target) {
     print("CanLootPlayer works!");
 }
 ```
 
-``` lua
-function PLUGIN:CanLootPlayer(player, target)
-    print("CanLootPlayer works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -99,16 +111,20 @@ void OnFindSpawnPoint()
 }
 ```
 
+``` lua
+function PLUGIN:OnFindSpawnPoint()
+    print("OnFindSpawnPoint works!")
+end
+```
+
 ``` javascript
 OnFindSpawnPoint: function() {
     print("OnFindSpawnPoint works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnFindSpawnPoint()
-    print("OnFindSpawnPoint works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -129,16 +145,20 @@ void OnPlayerAttack(BasePlayer attacker, HitInfo info)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerAttack(attacker, info)
+    print("OnPlayerAttack works!")
+end
+```
+
 ``` javascript
 OnPlayerAttack: function(attacker, info) {
     print("OnPlayerAttack works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerAttack(attacker, info)
-    print("OnPlayerAttack works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -160,16 +180,20 @@ void OnPlayerChat(ConsoleSystem.Arg arg)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerChat(arg)
+    print("OnPlayerChat works!")
+end
+```
+
 ``` javascript
 OnPlayerChat: function(arg) {
     print("OnPlayerChat works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerChat(arg)
-    print("OnPlayerChat works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -190,16 +214,20 @@ void OnPlayerConnected(Network.Message packet)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerConnected(packet)
+    print("OnPlayerConnected works!")
+end
+```
+
 ``` javascript
 OnPlayerConnected: function(packet) {
     print("OnPlayerConnected works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerConnected(packet)
-    print("OnPlayerConnected works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -221,16 +249,20 @@ void OnPlayerDisconnected(BasePlayer player, string reason)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerDisconnected(player, reason)
+    print("OnPlayerDisconnected works!")
+end
+```
+
 ``` javascript
 OnPlayerDisconnected: function(player, reason) {
     print("OnPlayerDisconnected works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerDisconnected(player, reason)
-    print("OnPlayerDisconnected works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -251,16 +283,20 @@ void OnPlayerInit(BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerInit(player)
+    print("OnPlayerInit works!")
+end
+```
+
 ``` javascript
 OnPlayerInit: function(player) {
     print("OnPlayerInit works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerInit(player)
-    print("OnPlayerInit works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -281,16 +317,20 @@ void OnPlayerInput(BasePlayer player, InputState input)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerInput(player, input)
+    print("OnPlayerInput works!")
+end
+```
+
 ``` javascript
 OnPlayerInput: function(player, input) {
     print("OnPlayerInput works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerInput(player, input)
-    print("OnPlayerInput works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -311,16 +351,20 @@ void OnPlayerRespawned(BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerRespawned(player)
+    print("OnPlayerRespawned works!")
+end
+```
+
 ``` javascript
 OnPlayerRespawned: function(player) {
     print("OnPlayerRespawned works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerRespawned(player)
-    print("OnPlayerRespawned works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -343,16 +387,20 @@ void OnPlayerLoot(PlayerLoot inventory, BaseEntity target)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerLoot(inventory, target)
+    print("OnPlayerLoot works!")
+end
+```
+
 ``` javascript
 OnPlayerLoot: function(inventory, target) {
     print("OnPlayerLoot works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerLoot(inventory, target)
-    print("OnPlayerLoot works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -373,16 +421,20 @@ void OnPlayerLoot(PlayerLoot inventory, BasePlayer target)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerLoot(inventory, target)
+    print("OnPlayerLoot works!")
+end
+```
+
 ``` javascript
 OnPlayerLoot: function(inventory, target) {
     print("OnPlayerLoot works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerLoot(inventory, target)
-    print("OnPlayerLoot works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -403,16 +455,20 @@ void OnPlayerLoot(PlayerLoot inventory, Item item)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerLoot(inventory, item)
+    print("OnPlayerLoot works!")
+end
+```
+
 ``` javascript
 OnPlayerLoot: function(inventory, item) {
     print("OnPlayerLoot works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerLoot(inventory, item)
-    print("OnPlayerLoot works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -433,16 +489,20 @@ void OnPlayerSleepEnded(BasePlayer player)
 }
 ```
 
+``` lua
+function PLUGIN:OnPlayerSleepEnded(player)
+    print("OnPlayerSleepEnded works!")
+end
+```
+
 ``` javascript
 OnPlayerSleepEnded: function(player) {
     print("OnPlayerSleepEnded works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnPlayerSleepEnded(player)
-    print("OnPlayerSleepEnded works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -463,16 +523,20 @@ void OnRocketLaunched(BasePlayer player, BaseEntity entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnRocketLaunched(player, entity)
+    print("OnRocketLaunched works!")
+end
+```
+
 ``` javascript
 OnRocketLaunched: function(player, entity) {
     print("OnRocketLaunched works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnRocketLaunched(player, entity)
-    print("OnRocketLaunched works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -493,16 +557,20 @@ void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 }
 ```
 
+``` lua
+function PLUGIN:OnRunPlayerMetabolism(metabolism)
+    print("OnRunPlayerMetabolism works!")
+end
+```
+
 ``` javascript
 OnRunPlayerMetabolism: function(metabolism) {
     print("OnRunPlayerMetabolism works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnRunPlayerMetabolism(metabolism)
-    print("OnRunPlayerMetabolism works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -526,16 +594,20 @@ void OnNewConnection(Network.Connection connection)
 }
 ```
 
+``` lua
+function PLUGIN:OnNewConnection(connection)
+    print("OnNewConnection works!")
+end
+```
+
 ``` javascript
 OnNewConnection: function(connection) {
     print("OnNewConnection works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnNewConnection(connection)
-    print("OnNewConnection works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -556,16 +628,20 @@ void OnUserApprove(Network.Connection connection)
 }
 ```
 
+``` lua
+function PLUGIN:OnUserApprove(connection)
+    print("OnUserApprove works!")
+end
+```
+
 ``` javascript
 OnUserApprove: function(connection) {
     print("OnUserApprove works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnUserApprove(connection)
-    print("OnUserApprove works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -586,16 +662,20 @@ void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjecti
 }
 ```
 
+``` lua
+function PLUGIN:OnWeaponFired(projectile, player, mod, projectiles)
+    print("OnWeaponFired works!")
+end
+```
+
 ``` javascript
 OnWeaponFired: function(projectile, player, mod, projectiles) {
     print("OnWeaponFired works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnWeaponFired(projectile, player, mod, projectiles)
-    print("OnWeaponFired works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
@@ -616,16 +696,20 @@ void OnWeaponThrown(BasePlayer player, BaseEntity entity)
 }
 ```
 
+``` lua
+function PLUGIN:OnWeaponThrown(player, entity)
+    print("OnWeaponThrown works!")
+end
+```
+
 ``` javascript
 OnWeaponThrown: function(player, entity) {
     print("OnWeaponThrown works!");
 }
 ```
 
-``` lua
-function PLUGIN:OnWeaponThrown(player, entity)
-    print("OnWeaponThrown works!")
-end
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python

@@ -5,8 +5,8 @@ short_code: unturned
 language_tabs:
   - csharp
   - lua
-  - javascript
   - coffeescript
+  - javascript
   - python
 
 includes:

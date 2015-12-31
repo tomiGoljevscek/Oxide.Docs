@@ -15,22 +15,22 @@ function PLUGIN:OnAirdrop(location)
 end
 ```
 
-``` javascript
-OnAirdrop: function(location) {
-    print("OnAirdrop works!");
-}
+``` coffeescript
+OnAirdrop: (location) =>
+  print "OnAirdrop works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnAirdrop: function(location) {
+  print("OnAirdrop works!");
+}
 ```
 
 ``` python
 def OnAirdrop(self, location):
-    print "OnAirdrop works!"
+  print "OnAirdrop works!"
 ```
 
- * Called from AIAirDrop.md0003
  * Called when an airdrop has been called
  * No return behavior
 
@@ -49,22 +49,22 @@ function PLUGIN:OnEntitySpawned(entity)
 end
 ```
 
-``` javascript
-OnEntitySpawned: function(entity) {
-    print("OnEntitySpawned works!");
-}
+``` coffeescript
+OnEntitySpawned: (entity) =>
+  print "OnEntitySpawned works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnEntitySpawned: function(entity) {
+  print("OnEntitySpawned works!");
+}
 ```
 
 ``` python
 def OnEntitySpawned(self, entity):
-    print "OnEntitySpawned works!"
+  print "OnEntitySpawned works!"
 ```
 
- * Called from World.SpawnEntityInWorld
  * Called when an entity has spawned in the world
  * No return behavior
 
@@ -83,22 +83,22 @@ function PLUGIN:OnEntityTakeDamage(entity, source)
 end
 ```
 
-``` javascript
-OnEntityTakeDamage: function(entity, source) {
-    print("OnEntityTakeDamage works!");
-}
+``` coffeescript
+OnEntityTakeDamage: (entity, source) =>
+  print "OnEntityTakeDamage works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnEntityTakeDamage: function(entity, source) {
+  print("OnEntityTakeDamage works!");
+}
 ```
 
 ``` python
 def OnEntityTakeDamage(self, entity, source):
-    print "OnEntityTakeDamage works!"
+  print "OnEntityTakeDamage works!"
 ```
 
- * Called from EntityAlive.DamageEntity
  * Called when an entity takes damage from another source
  * No return behavior
 
@@ -117,21 +117,21 @@ function PLUGIN:OnEntityDeath(entity, response)
 end
 ```
 
-``` javascript
-OnEntityDeath: function(entity, response) {
-    print("OnEntityDeath works!");
-}
+``` coffeescript
+OnEntityDeath: (entity, response) =>
+  print "OnEntityDeath works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnEntityDeath: function(entity, response) {
+  print("OnEntityDeath works!");
+}
 ```
 
 ``` python
 def OnEntityDeath(self, entity, response):
-    print "OnEntityDeath works!"
+  print "OnEntityDeath works!"
 ```
 
- * Called from Entity.OnEntityDeath
  * Called when an entity has died
  * No return behavior

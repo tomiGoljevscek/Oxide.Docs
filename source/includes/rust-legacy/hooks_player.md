@@ -25,9 +25,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called from ConnectionAcceptor.uLink_OnPlayerApproval
  * Returning a non-null value overrides default behavior, plugin should call approval.Deny if it does this
- * Used by RustLegacyCore and abstracted into CanClientLogin
 
 ## CanClientLogin
 
@@ -38,19 +36,22 @@ void CanClientLogin(ClientConnection connection, uLink.NetworkPlayerApproval app
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from RustLegacyCore.OnUserApprove
  * Returning a uLink.NetworkConnectionError will reject the connection, returning anything else will allow the connection
 
 ## OnPlayerConnected
@@ -62,21 +63,24 @@ void OnPlayerConnected(NetUser netuser)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from ServerManagement.OnUserConnected
- * No return behavior
  * Called before the player object is created, but after the player has been approved
+ * No return behavior
 
 ## OnPlayerDisconnected
 
@@ -87,21 +91,24 @@ void OnPlayerDisconected(uLink.NetworkPlayer networkPlayer)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from ConnectionAcceptor.uLink_OnPlayerDisconnected
- * No return behavior
  * Called after the player has disconnected from the server
+ * No return behavior
 
 ## OnPlayerSpawn
 
@@ -112,21 +119,24 @@ void OnPlayerSpawn(PlayerClient client, bool usecamp, RustProto.Avatar avatar)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from ServerManagement.SpawnPlayer
- * No return behavior
  * Called when the player spawns
+ * No return behavior
 
 ## OnPlayerChat
 
@@ -137,19 +147,22 @@ void OnPlayerChat(NetUser netuser, string message)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from RustLegacyCore.OnRunCommand
  * Called when a player sends chat to the server
  * Returning a non-null value overrides default behavior of chat, not commands
 
@@ -162,19 +175,22 @@ void OnPlayerVoice(NetUser netuser, List<uLink.NetworkPlayer> players)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from RustLegacyCore.OnClientSpeak
  * Called when a player uses in-game voice communication
 
 ## OnItemCraft
@@ -186,21 +202,24 @@ void OnItemCraft(CraftingInventory inventory, BlueprintDataBlock blueprint, int 
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from CraftingInventory.OnItemCraft
- * Returning non-null overrides default behavior
  * Called when a player starts crafting an item
+ * Returning a non-null value overrides default behavior
 
 ## OnBlueprintUse
 
@@ -211,21 +230,24 @@ void OnBlueprintUse(BlueprintDataBlock blueprint, IBlueprintItem item)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from BlueprintDataBlock.UseItem
- * Returning non-null overrides default behavior
  * Called when a player tries to study a blueprint
+ * Returning a non-null value overrides default behavior
 
 ## OnResearchItem
 
@@ -236,18 +258,21 @@ void OnResearchItem(ResearchToolItem<T> item, IInventoryItem otherItem)
 }
 ```
 
+``` lua
+We need a Lua example here
+```
+
 ``` javascript
 We need a JavaScript example here
 ```
 
-``` lua
-We need a Lua example here
+``` coffeescript
+We need a CoffeeScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from ResearchToolItem<T>.TryCombine
- * Returning a InventoryItem.MergeResult will cancel default behavior
  * Called when a player tries to research an item
+ * Returning a InventoryItem.MergeResult will cancel default behavior

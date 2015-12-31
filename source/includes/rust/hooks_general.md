@@ -15,24 +15,23 @@ function PLUGIN:OnRunCommand(arg)
 end
 ```
 
-``` javascript
-OnRunCommand: function(arg) {
-    print("OnRunCommand works!");
-}
+``` coffeescript
+OnRunCommand: (arg) =>
+  print "OnRunCommand works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnRunCommand: function(arg) {
+  print("OnRunCommand works!");
+}
 ```
 
 ``` python
 def OnRunCommand(self, arg):
-    print "OnRunCommand works!"
+  print "OnRunCommand works!"
 ```
 
- * Called from ConsoleSystem.Run_Internal, ConsoleSystem.Run_Unrestricted, and ConsoleSystem.SystemRealm_Normal
  * Useful for intercepting commands before they get to their intended target (like chat.say)
- * Used by RustCore to implement chat commands
  * Return true to override the command handling system
 
 ## OnTick
@@ -50,21 +49,21 @@ function PLUGIN:OnTick()
 end
 ```
 
-``` javascript
-OnTick: function() {
-    print("OnTick works!");
-}
+``` coffeescript
+OnTick: ->
+  print "OnTick works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnTick: function() {
+  print("OnTick works!");
+}
 ```
 
 ``` python
 def OnTick(self):
-    print "OnTick works!"
+  print "OnTick works!"
 ```
 
- * Called from ServerMgr.DoTick
  * Called every tick (defined by the tick rate of the server)
  * No return behavior

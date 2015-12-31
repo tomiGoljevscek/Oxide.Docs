@@ -25,7 +25,6 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called from ??
  * Returning a non-null value overrides default behavior, plugin should call approval.Deny if it does this
 
 ## OnPlayerConnected
@@ -53,7 +52,6 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called from ??
  * No return behavior
  * Called before the player object is created, but after the player has been approved
 
@@ -82,7 +80,6 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called from ??
  * No return behavior
  * Called after the player has disconnected from the server
 
@@ -111,7 +108,6 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called from ??
  * No return behavior
  * Called when the player spawns
 
@@ -140,6 +136,5 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called from ??
  * Called when a player sends chat to the server
  * Returning a non-null value overrides default behavior of chat, not commands

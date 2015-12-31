@@ -12,12 +12,12 @@ rust.QuoteSafe("Use /kick \"Player Name\" to kick player");
 rust.QuoteSafe("Use /kick \"Player Name\" to kick player")
 ```
 
-``` javascript
-rust.QuoteSafe("Use /kick \"Player Name\" to kick player");
-```
-
 ``` coffeescript
 We need a CoffeeScript example here
+```
+
+``` javascript
+rust.QuoteSafe("Use /kick \"Player Name\" to kick player");
 ```
 
 ``` python
@@ -38,14 +38,14 @@ We need a CSharp example here
 We need a Lua example here
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 // Get value of private property
 var field = myObject.GetType().GetField("propertyName", rust.PrivateBindingFlag());
 var privateFieldValue = field.GetValue(myObject);
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python

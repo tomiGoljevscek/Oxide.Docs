@@ -15,22 +15,22 @@ function PLUGIN:CanUseDoor(player, door)
 end
 ```
 
-``` javascript
-CanUseDoor: function(player, door) {
-    print("CanUseDoor works!");
-}
+``` coffeescript
+CanUseDoor: (player, door) =>
+  print "CanUseDoor works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+CanUseDoor: function(player, door) {
+  print("CanUseDoor works!");
+}
 ```
 
 ``` python
 def CanUseDoor(self, player, door):
-    print "CanUseDoor works!"
+  print "CanUseDoor works!"
 ```
 
- * Called from BaseLock.OnTryToOpen and BaseLock.OnTryToClose
  * Called when a player tries to use a locked door
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
@@ -49,14 +49,14 @@ function PLUGIN:CanUseDoor(player, door)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -64,7 +64,6 @@ def CanUseDoor(self, player, door):
     print "CanUseDoor works!"
 ```
 
- * Called from CodeLock.OnTryToOpen and CodeLock.OnTryToClose
  * Called when a player tries to use a door with a code lock
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
@@ -83,14 +82,14 @@ function PLUGIN:CanUseDoor(player, door)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 CanUseDoor: function(player, door) {
     print("CanUseDoor works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -98,7 +97,6 @@ def CanUseDoor(self, player, door):
     print "CanUseDoor works!"
 ```
 
- * Called from KeyLock.OnTryToOpen and KeyLock.OnTryToClose
  * Called when a player tries to use a door with a key lock
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
@@ -117,14 +115,14 @@ function PLUGIN:OnDoorClosed(door, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnDoorClosed: function(door, player) {
     print("OnDoorClosed works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -132,7 +130,6 @@ def OnDoorClosed(self, door, player):
     print "OnDoorClosed works!"
 ```
 
- * Called from RustCore.IOnDoorClosed
  * Called when a player closed a door
  * No return behavior
 
@@ -151,14 +148,14 @@ function PLUGIN:OnDoorOpened(door, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnDoorOpened: function(door, player) {
     print("OnDoorOpened works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -166,7 +163,6 @@ def OnDoorOpened(self, door, player):
     print "OnDoorOpened works!"
 ```
 
- * Called from RustCore.IOnDoorOpened
  * Called when a player opened a door
  * No return behavior
 
@@ -185,14 +181,14 @@ function PLUGIN:OnCupboardAuthorize(priviledge, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnCupboardAuthorize: function(priviledge, player) {
     print("OnCupboardAuthorize works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -200,7 +196,6 @@ def OnCupboardAuthorize(self, priviledge, player):
     print "OnCupboardAuthorize works!"
 ```
 
- * Called from BuildingPrivlidge.AddSelfAuthorize
  * Called when a cupboard attempts to authorize a player
  * Returning a non-null value cancels the authorization
 
@@ -219,14 +214,14 @@ function PLUGIN:OnCupboardDeauthorize(priviledge, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnCupboardDeauthorize: function(priviledge, player) {
     print("OnCupboardDeauthorize works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -234,7 +229,6 @@ def OnCupboardDeauthorize(self, priviledge, player):
     print "OnCupboardDeauthorize works!"
 ```
 
- * Called from BuildingPrivlidge.RemoveSelfAuthorize
  * Called when a cupboard attempts to deauthorize a player
  * Returning a non-null value cancels the deauthorization
 
@@ -253,14 +247,14 @@ function PLUGIN:OnEntityBuilt(plan, obj)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnEntityBuilt: function(plan, obj) {
     print("OnEntityBuilt works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -268,7 +262,6 @@ def OnEntityBuilt(self, planner, component):
     print "OnEntityBuilt works!"
 ```
 
- * Called from Planner.DoBuild
  * Called when any structure is built (walls, ceilings, stairs, etc.)
  * No return behavior
 
@@ -287,14 +280,14 @@ function PLUGIN:OnHammerHit(player, info)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnHammerHit: function(player, info) {
     print("OnHammerHit works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -302,7 +295,6 @@ def OnHammerHit(self, player, info):
     print "OnHammerHit works!"
 ```
 
- * Called from RustCore.IOnHammerHit
  * Called when the player has hit something with a hammer
  * No return behavior
 
@@ -321,14 +313,14 @@ function PLUGIN:OnStructureDemolish(block, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnStructureDemolish: function(block, player) {
     print("OnStructureDemolish works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -336,7 +328,6 @@ def OnStructureDemolish(self, block, player):
     print "OnStructureDemolish works!"
 ```
 
- * Called from BuildingBlock.DoImmediateDemolish
  * Called when a player selects DemolishImmediate from the BuildingBlock menu
  * Returning true will cancel the demolition
 
@@ -355,14 +346,14 @@ function PLUGIN:OnStructureRepair(block, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnStructureRepair: function(block, player) {
     print("OnStructureRepair works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -370,7 +361,6 @@ def OnStructureRepair(self, block, player):
     print "OnStructureRepair works!"
 ```
 
- * Called from BuildingBlock.DoRepair
  * Called when a player repairs a BuildingBlock
  * No return behavior
 
@@ -389,14 +379,14 @@ function PLUGIN:OnStructureRotate(block, player)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnStructureRotate: function(block, player) {
     print("OnStructureRotate works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -404,7 +394,6 @@ def OnStructureRotate(self, block, player):
     print "OnStructureRotate works!"
 ```
 
- * Called from BuildingBlock.DoRotation
  * Called when a player rotates a BuildingBlock
  * No return behavior
 
@@ -423,14 +412,14 @@ function PLUGIN:OnStructureUpgrade(block, player, grade)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
 ``` javascript
 OnStructureUpgrade: function(block, player, grade) {
     print("OnStructureUpgrade works!");
 }
-```
-
-``` coffeescript
-We need a CoffeeScript example here
 ```
 
 ``` python
@@ -438,6 +427,5 @@ def OnStructureUpgrade(self, block, player, grade):
     print "OnStructureUpgrade works!"
 ```
 
- * Called from BuildingBlock.DoUpgradeToGrade
  * Called when a player upgrades the grade of a BuildingBlock
  * Returning true will cancel the upgrade

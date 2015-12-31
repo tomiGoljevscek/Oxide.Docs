@@ -5,8 +5,8 @@ short_code: blockstorm
 language_tabs:
   - csharp
   - lua
-  - javascript
   - coffeescript
+  - javascript
   - python
 
 includes:

@@ -10,19 +10,18 @@ using Oxide.Core.Libraries;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Unknown", 1.0)]
     [Description("This example illustrates how to use a GET WebRequest.")]
-    class EpicPlugin : CovalencePlugin
-    {
-        private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
+    class EpicPlugin : RustPlugin
+    {
         [ChatCommand("getrequest")]
-        void ExampleGetRequest(BasePlayer player, string command, string[] args)
+        void GetRequest(BasePlayer player, string command, string[] args)
         {
-            webRequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", (code, response) => WebRequestCallback(code, response, player), this);
+            webrequests.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this);
         }
 
-        void WebRequestCallback(int code, string response, BasePlayer player)
+        void GetCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {
@@ -36,7 +35,7 @@ namespace Oxide.Plugins
 ```
 
 ``` lua
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response)
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response)
     if response == nil or code ~= 200 then 
         print("Couldn't get an answer from Google!") 
         return 
@@ -46,7 +45,7 @@ end, self.Plugin)
 ```
 
 ``` javascript
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", function(code, response) {
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response) {
     if (response == null || code != 200) {
         print("Couldn't get an answer from Google!");
         return
@@ -66,7 +65,7 @@ def response_handler(code, response):
         print "Couldn't get an answer from Google!" 
         return 
     print "Google answered: " + response
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide+mod", Action[Int32,String](response_handler), self.Plugin);
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide", Action[Int32,String](response_handler), self.Plugin);
 ```
 
 This uses the raw connection to a web page as you would on your browser.
@@ -81,19 +80,17 @@ using Oxide.Core.Libraries;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Unknown", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest.")]
-    class EpicPlugin : CovalencePlugin
+    class EpicPlugin : RustPlugin
     {
-        private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
-
         [ChatCommand("postrequest")]
-        void ExamplePostRequest(BasePlayer player, string command, string[] args)
+        void PostRequest(BasePlayer player, string command, string[] args)
         {
-            webRequests.EnqueuePost("http://www.google.com/search?q=Oxide+Mod", "param1=value1&param2=value2", (code, response) => WebRequestCallback(code, response, player), this);
+            webrequests.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => PostCallback(code, response, player), this);
         }
 
-        void WebRequestCallback(int code, string response, BasePlayer player)
+        void PostCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {

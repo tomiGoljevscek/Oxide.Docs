@@ -10,24 +10,29 @@ void OnStructureBuilt(StructureComponent component, IStructureComponentItem item
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnStructureBuilt(component, item)
+    print("OnStructureBuilt works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnStructureBuilt: (component, item) =>
+  print "OnStructureBuilt works!"
+```
+
+``` javascript
+OnStructureBuilt: function(component, item) {
+  print("OnStructureBuilt works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnStructureBuilt(self, component, item):
+  print "OnStructureBuilt works!"
 ```
 
- * Called from StructureComponentDataBlock.DoAction1
- * No return behavior
  * Called when an structure was built by a player
+ * No return behavior
 
 ## OnStructureDecay
 
@@ -42,21 +47,20 @@ void OnStructureDecay(StructureMaster master)
 We need a Lua example here
 ```
 
-``` javascript
-We need a JavaScript example here
-```
-
 ``` coffeescript
 We need a CoffeeScript example here
+```
+
+``` javascript
+We need a JavaScript example here
 ```
 
 ``` python
 We need a Python example here
 ```
 
- * Called from StructureMaster.DoDecay
- * Returning a non-null value overrides default behavior
  * Called when a structure tries to decay
+ * Returning a non-null value overrides default behavior
 
 ## OnDoorToggle
 
@@ -68,21 +72,26 @@ void OnDoorToggle(BasicDoor door, ulong timestamp, Controllable controllable)
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnDoorToggle(door, timestamp, controllable)
+    print("OnDoorToggle works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnDoorToggle: (door, timestamp, controllable) =>
+  print "OnDoorToggle works!"
+```
+
+``` javascript
+OnDoorToggle: function(door, timestamp, controllable) {
+  print("OnDoorToggle works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnDoorToggle(self, door, timestamp, controllable):
+  print "OnDoorToggle works!"
 ```
 
- * Called from BasicDoor.ToggleStateServer
- * Returning true allows the state of the door to be toggled and returning false denies the state of the door being toggled, returning anything else will resume default behavior
  * Called when a player attempts to open or close a door
+ * Returning true allows the state of the door to be toggled and returning false denies the state of the door being toggled, returning anything else will resume default behavior

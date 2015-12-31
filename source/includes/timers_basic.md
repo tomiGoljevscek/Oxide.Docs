@@ -5,28 +5,33 @@ Timers are great for delaying code, allowing it to be run later.
 ## Single timer
 
 ``` csharp
-timer.Once(3, () => PrintToChat("Hello world!"));
+timer.Once(3f, () =>
+{
+    Puts("Hello world!")
+});
 ```
 
 ``` lua
 timer.Once(3, function()
-    rust.BroadcastChat("SERVER", "Hello world!")
-end, self.Plugin)
+    print("Hello world!")
+end)
+```
+
+``` coffeescript
+timer.Once 3, ->
+  print "Hello world!"
 ```
 
 ``` javascript
 timer.Once(3, function() {
-    rust.BroadcastChat("SERVER", "Hello world!");
-}, this.Plugin);
-```
-
-``` coffeescript
-We need a CoffeeScript example here
+  print("Hello world!");
+});
 ```
 
 ``` python
 def my_callback_func():
-    rust.BroadcastChat("SERVER", "Hello world!")
+  print("Hello world!")
+
 timer.Once(3, Action(my_callback_func), self.Plugin)
 ```
 
@@ -35,29 +40,35 @@ Executes the specified function once after the specified delay.
 ## Repeating timer
 
 ``` csharp
-timer.Repeat(10, 0, () => PrintToChat("Hello world!"));
+timer.Repeat(5f, 0, () =>
+{
+    Puts("Hello world!")
+});
 ```
 
 ``` lua
-timer.Repeat(10, 0, function()
-    rust.BroadcastChat("SERVER", "Hello world!")
+timer.Repeat(5, 0, function()
+    print("Hello world!")
 end, self.Plugin)
 ```
 
-``` javascript
-timer.Repeat(10, 0, function() {
-    rust.BroadcastChat("SERVER", "Hello world!");
-}, this.Plugin);
+``` coffeescript
+timer.Repeat 5, 0, (->
+  print "Hello world!"
+), @Plugin
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+timer.Repeat(5, 0, function() {
+  print("Hello world!");
+}, this.Plugin);
 ```
 
 ``` python
 def my_callback_func():
-    rust.BroadcastChat("SERVER", "Hello world!")
-timer.Repeat(10, 0, Action(my_callback_func), self.Plugin)
+  print("Hello world!")
+
+timer.Repeat(5, 0, Action(my_callback_func), self.Plugin)
 ```
 
 Executes the specified function every "delay" seconds.
@@ -68,59 +79,34 @@ If "repeats" is specified, the function will only be called "repeats" times.
 
 ``` csharp
 // This is not implemented for C#, the following can be used instead:
-timer.Once(1, 0.0f, () => PrintToChat("Hello world"));
+timer.Once(1f, 0, () =>
+{
+    Puts("Hello world!")
+});
 ```
 
 ``` lua
 timer.NextFrame(function()
-    rust.BroadcastChat("SERVER", "Hello world!")
+    print("Hello world!")
 );
 ```
 
-``` javascript
-We need a JavaScript example here
+``` coffeescript
+timer.NextFrame ->
+  print "Hello world!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+timer.NextFrame(function() {
+  print("Hello world!");
+});
 ```
 
 ``` python
-We need a Python example here
+def my_callback_func():
+  print("Hello world!")
+
+timer.NextFrame(Action(my_callback_func), self.Plugin)
 ```
 
 Executes the specified function at the next frame.  
-
-## Destroying a timer
-
-``` csharp
-if (timerVariable != null)
-{
-    timerVariable.Destroy();
-}
-```
-
-``` lua
-if timerVariable then
-    timerVariable:Destroy()
-end
-```
-
-``` javascript
-if (timerVariable) {
-    timerVariable.Destroy();
-}
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-if timerVariable:
-    timerVariable.Destroy()
-```
-
-When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
-
-If you need to stop a timer manually, you can do so by destroying the instance of the timer.

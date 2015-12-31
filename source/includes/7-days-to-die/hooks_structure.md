@@ -15,21 +15,21 @@ function PLUGIN:OnDoorUse(door, steamId)
 end
 ```
 
-``` javascript
-OnDoorUse: function(door, steamId) {
-    print("OnDoorUse works!");
-}
+``` coffeescript
+OnDoorUse: (door, userid) =>
+  print "OnDoorUse works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnDoorUse: function(door, steamId) {
+  print("OnDoorUse works!");
+}
 ```
 
 ``` python
 def OnDoorUse(self, door, steamId):
-    print "OnDoorUse works!"
+  print "OnDoorUse works!"
 ```
 
- * Called from TileEntitySecure.IsUserAllowed
  * Called when a player tries to use a door
  * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage

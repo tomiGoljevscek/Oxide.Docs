@@ -3,32 +3,36 @@
 ## OnRunCommand
 
 ``` csharp
-void OnRunCommand(ConsoleSystem.Arg arg, bool wantReply)
+void OnRunCommand(ConsoleSystem.Arg arg, bool reply)
 {
     Puts("OnRunCommand works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnRunCommand(arg, reply)
+    print("OnRunCommand works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeScript example here
+OnRunCommand: (arg, reply) =>
+  print "OnRunCommand works!"
+```
+
+``` javascript
+OnRunCommand: function(arg, reply) {
+  print("OnRunCommand works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnRunCommand(self, arg, reply):
+  print "OnRunCommand works!"
 ```
 
- * Called from ConsoleSystem.RunCommand
- * Return true to override Rust's command handling system
  * Useful for intercepting commands before they get to their intended target (like chat.say)
- * Used by RustLegacyCore to implement chat commands
+ * Return true to override Rust's command handling system
 
 ## OnDatablocksInitialized
 
@@ -47,16 +51,11 @@ We need a Lua example here
 We need a JavaScript example here
 ```
 
-``` coffeescript
-We need a CoffeScript example here
-```
-
 ``` python
 We need a Python example here
 ```
- * Called from DatablockDictionary.Initialize
- * No return behavior
  * Called when all datablocks have been loaded
+ * No return behavior
 
 ## OnResourceNodeLoaded
 
@@ -68,21 +67,26 @@ void OnResourceNodeLoaded(ResourceTarget resource)
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+function PLUGIN:OnResourceNodeLoaded(resource)
+    print("OnResourceNodeLoaded works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeScript example here
+OnResourceNodeLoaded: (resource) =>
+  print "OnResourceNodeLoaded works!"
+```
+
+``` javascript
+OnResourceNodeLoaded: function(resource) {
+  print("OnResourceNodeLoaded works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnResourceNodeLoaded(self, resource):
+  print "OnResourceNodeLoaded works!"
 ```
 
- * Called from ResourceTarget.Awake
- * No return behavior
  * Called when a resource is initializing
+ * No return behavior

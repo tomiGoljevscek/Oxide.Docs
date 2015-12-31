@@ -15,22 +15,22 @@ function PLUGIN:OnAirdrop(plane, location)
 end
 ```
 
-``` javascript
-OnAirdrop: function(plane, location) {
-    print("OnAirdrop works!");
-}
+``` coffeescript
+OnAirdrop: (plane, location) =>
+  print "OnAirdrop works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnAirdrop: function(plane, location) {
+  print("OnAirdrop works!");
+}
 ```
 
 ``` python
 def OnAirdrop(self, plane, location):
-    print "OnAirdrop works!"
+  print "OnAirdrop works!"
 ```
 
- * Called from CargoPlane.UpdateDropPosition
  * Called when an airdrop has been called
  * No return behavior
 
@@ -64,7 +64,6 @@ def OnEntityDeath(self, entity, info):
     print "OnEntityDeath works!"
 ```
 
- * Called from BaseCombatEntity.Die
  * hitInfo might be null, check it before use
  * Editing hitInfo has no effect because the death has already happened
  * No return behavior
@@ -99,7 +98,6 @@ def OnEntityEnter(self, trigger, entity):
     print "OnEntityEnter works!"
 ```
 
- * Called from TriggerBase.OnEntityEnter
  * Called when an entity enters an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
  * No return behavior
 
@@ -133,7 +131,6 @@ def OnEntityGroundMissing(self, entity):
     print "OnEntityGroundMissing works!"
 ```
 
- * Called from DestroyOnGroundMissing.OnGroundMissing
  * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
  * Returning a non-null value overides default server behavior
 
@@ -167,7 +164,6 @@ def OnEntityLeave(self, trigger, entity):
     print "OnEntityLeave works!"
 ```
 
- * Called from TriggerBase.OnEntityLeave
  * Called when an entity leaves an area/zone (building privilege zone, water area, radiation zone, hurt zone, etc.)
  * No return behavior
 
@@ -201,7 +197,6 @@ def OnEntitySpawned(self, entity):
     print "OnEntitySpawned works!"
 ```
 
- * Called from BaseNetworkable.Spawn
  * Called after any networked entity has spawned (including trees)
  * No return behavior
 
@@ -235,7 +230,6 @@ def OnEntityTakeDamage(self, entity, info):
     print "OnEntityTakeDamage works!"
 ```
 
- * Called from BaseCombatEntity.Hurt
  * Alternatively, modify the hitInfo object to change the damage
  * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
@@ -271,6 +265,5 @@ def OnResourceDepositCreated(self, deposit):
     print "OnResourceDepositCreated works!"
 ```
 
- * Called from ResourceDepositManager.CreateFromPosition
  * Called when a resource deposit has been created
  * No return behavior

@@ -15,21 +15,21 @@ function PLUGIN:OnRunCommand(client, args)
 end
 ```
 
-``` javascript
-OnRunCommand: function(client, args) {
-    print("OnRunCommand works!");
-}
+``` coffeescript
+OnRunCommand: (client, args) =>
+  print "OnRunCommand works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnRunCommand: function(client, args) {
+  print("OnRunCommand works!");
+}
 ```
 
 ``` python
 def OnRunCommand(self, client, args):
-    print "OnRunCommand works!"
+  print "OnRunCommand works!"
 ```
 
- * Called from ConnectionManager.ServerConsoleCommand
  * Useful for intercepting commands before they get to their intended target
  * Return true to override the command handling system

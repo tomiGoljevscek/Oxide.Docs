@@ -15,22 +15,22 @@ function PLUGIN:CanUpdateSign(sign, player)
 end
 ```
 
-``` javascript
-CanUpdateSign: function(sign, player) {
-    print("CanUpdateSign works!");
-}
+``` coffeescript
+CanUpdateSign: (sign, player) =>
+  print "CanUpdateSign works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+CanUpdateSign: function(sign, player) {
+  print("CanUpdateSign works!");
+}
 ```
 
 ``` python
 def CanUpdateSign(self, sign, player):
-    print "CanUpdateSign works!"
+  print "CanUpdateSign works!"
 ```
 
- * Called from Signage.CanUpdateSign
  * Called before the player changes the text on a sign or locks it
  * Returning true or false will override Rust's check
 
@@ -49,22 +49,22 @@ function PLUGIN:OnSignLocked(sign, player)
 end
 ```
 
-``` javascript
-OnSignLocked: function(sign, player) {
-    print("OnSignLocked works!");
-}
+``` coffeescript
+OnSignLocked: (sign, player) =>
+  print "OnSignLocked works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnSignLocked: function(sign, player) {
+  print("OnSignLocked works!");
+}
 ```
 
 ``` python
 def OnSignLocked(self, sign, player):
-    print "OnSignLocked works!"
+  print "OnSignLocked works!"
 ```
 
- * Called from Signage.LockSign
  * Called after the player has locked a sign
  * No return behavior
 
@@ -83,21 +83,21 @@ function PLUGIN:OnSignUpdated(sign, player, text)
 end
 ```
 
-``` javascript
-OnSignUpdated: function(sign, player, text) {
-    print("OnSignUpdated works!");
-}
+``` coffeescript
+OnSignUpdated: (sign, player, text) =>
+  print "OnSignUpdated works!"
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
+``` javascript
+OnSignUpdated: function(sign, player, text) {
+  print("OnSignUpdated works!");
+}
 ```
 
 ``` python
 def OnSignUpdated(self, sign, player, text):
-    print "OnSignUpdated works!"
+  print "OnSignUpdated works!"
 ```
 
- * Called from Signage.UpdateSign
  * Called after the player has changed the text on a sign
  * No return behavior

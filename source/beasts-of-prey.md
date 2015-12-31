@@ -5,8 +5,8 @@ short_code: beasts-of-prey
 language_tabs:
   - csharp
   - lua
-  - javascript
   - coffeescript
+  - javascript
   - python
 
 includes:

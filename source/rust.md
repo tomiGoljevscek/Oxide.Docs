@@ -1,12 +1,12 @@
 ---
-title: Oxide API for Rust
+title: Rust
 short_code: rust
 
 language_tabs:
   - csharp
   - lua
-  - javascript
   - coffeescript
+  - javascript
   - python
 
 includes:

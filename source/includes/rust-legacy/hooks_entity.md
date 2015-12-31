@@ -10,79 +10,94 @@ void OnAirdrop(Vector3 position)
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+PLUGIN:OnAirdrop(position)
+    print("OnAirdrop works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnAirdrop: (position) =>
+  print "OnAirdrop works!"
+```
+
+``` javascript
+OnAirdrop: function(position) {
+  print("OnAirdrop works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnAirDrop(self, position):
+  print "OnAirDrop works!"
 ```
 
- * Called from SupplyDropZone.CallAirDropAt
- * No return behavior
  * Called when an airdrop has been called
+ * No return behavior
 
 ## OnHurt
 
 ``` csharp
-void OnHurt(TakeDamage takeDamage, DamageEvent damage)
+void OnHurt(TakeDamage damage, DamageEvent evt)
 {
     Puts("OnHurt works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+PLUGIN:OnHurt(damage, evt)
+    print("OnHurt works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnHurt: (damage, evt) =>
+  print "OnHurt works!"
+```
+
+``` javascript
+OnHurt: function(damage, evt) {
+  print("OnHurt works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnHurt(self, damage, evt):
+  print "OnHurt works!"
 ```
 
- * Called from RustLegacyCore.OnProcessDamageEvent
- * No return behavior
  * Called when any kind of entity takes damage
+ * No return behavior
 
 ## OnKilled
 
 ``` csharp
-void OnKilled(TakeDamage takeDamage, DamageEvent damage)
+void OnKilled(TakeDamage damage, DamageEvent evt)
 {
     Puts("OnKilled works!");
 }
 ```
 
 ``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
+PLUGIN:OnKilled(damage, evt)
+    print("OnKilled works!")
+end
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnKilled: (damage, evt) =>
+  print "OnKilled works!"
+```
+
+``` javascript
+OnKilled: function(damage, evt) {
+  print("OnKilled works!");
+}
 ```
 
 ``` python
-We need a Python example here
+def OnKilled(self, damage, evt):
+  print "OnKilled works!"
 ```
 
- * Called from RustLegacyCore.OnProcessDamageEvent
- * No return behavior
  * Called when any kind of entity was killed
+ * No return behavior

@@ -121,3 +121,38 @@ if timerVariable:
 When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
 
 If you need to stop a timer manually, you can do so by destroying the instance of the timer.
+
+## Destroying a timer
+
+``` csharp
+if (variable != null)
+{
+    variable.Destroy();
+}
+```
+
+``` lua
+if variable then
+    variable:Destroy()
+end
+```
+
+``` coffeescript
+if variable?
+    variable.Destroy()
+```
+
+``` javascript
+if (variable) {
+    variable.Destroy();
+}
+```
+
+``` python
+if variable:
+    variable.Destroy()
+```
+
+When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
+
+If you need to stop a timer manually, you can do so by destroying the instance of the timer.
