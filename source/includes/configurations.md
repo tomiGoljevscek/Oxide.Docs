@@ -5,9 +5,10 @@
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Oxide Team", 1.0)]
     [Description("This example illustrates how to use a basic configuration file.")]
-    class Example : CovalencePlugin
+
+    class EpicPlugin : CovalencePlugin
     {
         protected override void LoadDefaultConfig()
         {
@@ -24,7 +25,7 @@ namespace Oxide.Plugins
 ```
 
 ``` javascript
-var PluginName = {
+var EpicPlugin = {
     Init: function() {
         this.LoadDefaultConfig();
     },
@@ -66,9 +67,10 @@ Since many users won't want to (or can't) edit the plugin directly to change the
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0)] 
+    [Info("EpicPlugin", "Oxide Team", 1.0)] 
     [Description("This example illustrates how to update a value in a configuration file.")]
-    class Example : CovalencePlugin
+
+    class EpicPlugin : CovalencePlugin
     {
         [ChatCommand("Test")]
         void Test(BasePlayer player, string command, string[] args)

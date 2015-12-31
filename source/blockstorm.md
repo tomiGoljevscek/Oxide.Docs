@@ -12,10 +12,6 @@ language_tabs:
 includes:
   - blockstorm/getting_started
   - universal_hooks
-  - commands
-  - configurations
-  - storing_data
-  - permissions
   - timers
   - web_requests
 

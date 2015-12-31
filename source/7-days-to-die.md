@@ -16,10 +16,6 @@ includes:
   - 7-days-to-die/hooks_player
   - 7-days-to-die/hooks_entity
   - 7-days-to-die/library_functions
-  - commands
-  - configurations
-  - storing_data
-  - permissions
   - timers
   - web_requests
 

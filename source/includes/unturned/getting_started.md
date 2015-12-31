@@ -4,11 +4,11 @@
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 0.1)]
-    [Description("This is what the plugin does")]
+    [Description("Makes epic stuff happen")]
 
-    class PluginName : UnturnedPlugin
+    class EpicPlugin : UnturnedPlugin
     {
-        // This is where your plugin will do its magic
+        // The rest of the code and magic
     }
 }
 ```
@@ -17,19 +17,19 @@ namespace Oxide.Plugins
 PLUGIN.Title = "EpicPlugin"
 PLUGIN.Author = "Unknown"
 PLUGIN.Version = V(0, 1, 0)
-PLUGIN.Description = "This is what the plugin does"
+PLUGIN.Description = "Makes epic stuff happen"
 
--- This is where your plugin will do its magic
+-- The rest of the code and magic
 ```
 
 ``` javascript
-var PluginName = {
+var EpicPlugin = {
     Title : "EpicPlugin",
     Author : "Unknown",
     Version : V(0, 1, 0),
-    Description : "This is what the plugin does",
+    Description : "Makes epic stuff happen",
 
-    // This is where your plugin will do its magic
+    // The rest of the code and magic
 }
 ```
 
@@ -37,20 +37,20 @@ var PluginName = {
 Title: "EpicPlugin"
 Author: "Unknown"
 Version: V(0, 1, 0)
-Description: "This is what the plugin does"
+Description: "Makes epic stuff happen"
 
-# This is where your plugin will do its magic
+# The rest of the code and magic
 ```
 
 ``` python
-class PluginName:
+class EpicPlugin:
     def __init__(self):
         self.Title = "EpicPlugin"
         self.Author = "Unknown"
         self.Version = V(0, 1, 0)
-        self.Description = "This is what the plugin does"
+        self.Description = "Makes epic stuff happen"
 
-    # This is where your plugin will do its magic
+    # The rest of the code and magic
 ```
 
 The Title variable is what defines your plugin. This can be either a "codename" such as "Casper" or a short description such as "InvisibleAdmin", just make sure to pick something that uniquely identifies your plugin.

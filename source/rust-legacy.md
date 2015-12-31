@@ -18,10 +18,6 @@ includes:
   - rust-legacy/hooks_item
   - rust-legacy/hooks_structure
   - rust-legacy/library_functions
-  - commands
-  - configurations
-  - storing_data
-  - permissions
   - timers
   - web_requests
 

@@ -17,10 +17,6 @@ includes:
   - reign-of-kings/hooks_entity
   - reign-of-kings/hooks_structure
   - reign-of-kings/library_functions
-  - commands
-  - configurations
-  - storing_data
-  - permissions
   - timers
   - web_requests
 

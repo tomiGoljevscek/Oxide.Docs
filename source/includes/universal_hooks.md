@@ -34,7 +34,8 @@ Init: function() {
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+Init: () =>
+    print "Init works!"
 ```
 
 ``` python
@@ -42,9 +43,9 @@ def Init():
     print "Init works!"
 ```
 
- * Called when the plugin is being loaded
+ * Called when a plugin is being loaded
  * Other plugins may or may not be present, dependant on load order
- * Other plugins WILL have been executed though, so globals exposed by them will be present
+ * Other plugins will have been executed though, so globals exposed by them will be present
 
 ## LoadDefaultConfig
 
@@ -68,7 +69,8 @@ LoadDefaultConfig: function() {
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+LoadDefaultConfig: () =>
+    print "LoadDefaultConfig works!"
 ```
 
 ``` python
@@ -76,7 +78,7 @@ def LoadDefaultConfig():
     print "LoadDefaultConfig works!"
 ```
 
- * Called when the config for the plugin should be initialized
+ * Called when the config for a plugin should be initialized
  * Only called if the config file does not already exist
 
 ## OnFrame
@@ -101,7 +103,8 @@ OnFrame: function() {
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnFrame: () =>
+    print "OnFrame works!"
 ```
 
 ``` python
@@ -111,98 +114,233 @@ def OnFrame():
 
  * Placeholder
 
-## Unload
-
-``` csharp
-void Unload()
-{
-    Puts("Unload works!");
-}
-```
-
-``` lua
-function PLUGIN:Unload()
-    print("Unload works!")
-end
-```
-
-``` javascript
-Unload: function() {
-    print("Unload works!");
-}
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-def Unload():
-    print "Unload works!"
-```
-
- * Called when the plugin is being unloaded
-
 ## OnPluginLoaded
 
 ``` csharp
-void OnPluginLoaded(Plugin pluginName)
+void OnPluginLoaded(Plugin name)
 {
     Puts("OnPluginLoaded works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPluginLoaded()
+function PLUGIN:OnPluginLoaded(name)
     print("OnPluginLoaded works!")
 end
 ```
 
 ``` javascript
-OnPluginLoaded: function() {
+OnPluginLoaded: function(name) {
     print("OnPluginLoaded works!");
 }
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnPluginLoaded: (name) =>
+    print "Plugin '#{name}' has been loaded"
 ```
 
 ``` python
-def OnPluginLoaded():
+def OnPluginLoaded(name):
     print "OnPluginLoaded works!"
 ```
 
- * Called when specified plugin has been loaded
+ * Called when a plugin has been loaded
 
 ## OnPluginUnloaded
 
 ``` csharp
-void OnPluginUnloaded(Plugin pluginName)
+void OnPluginUnloaded(Plugin name)
 {
-    Puts("OnPluginUnloaded works!");
+    Puts("Plugin '" + name + "' has been unloaded);
 }
 ```
 
 ``` lua
-function PLUGIN:OnPluginUnloaded()
-    print("OnPluginUnloaded works!")
+function PLUGIN:OnPluginUnloaded(name)
+    print("Plugin '" .. name .. "' has been unloaded")
 end
 ```
 
 ``` javascript
-OnPluginUnloaded: function() {
+OnPluginUnloaded: function(name) {
     print("OnPluginUnloaded works!");
 }
 ```
 
 ``` coffeescript
-We need a CoffeeScript example here
+OnPluginUnloaded: (name) =>
+    print "Plugin '#{name}' has been unloaded"
 ```
 
 ``` python
-def OnPluginUnloaded():
+def OnPluginUnloaded(name):
     print "OnPluginUnloaded works!"
 ```
 
- * Called when specified plugin has been unloaded
+ * Called when a plugin has been unloaded
+
+## OnUserPermissionGranted
+
+``` csharp
+void OnUserPermissionGranted(string name, string perm)
+{
+    Puts("OnUserPermissionGranted works!");
+}
+```
+
+``` lua
+function PLUGIN:OnUserPermissionGranted(name, perm)
+    print("OnUserPermissionGranted works!")
+end
+```
+
+``` javascript
+OnUserPermissionGranted: function(name, perm) {
+    print("OnUserPermissionGranted works!");
+}
+```
+
+``` coffeescript
+OnUserPermissionGranted: (name, perm) =>
+    print "User '#{name}' granted permission: #{perm}"
+```
+
+``` python
+def OnUserPermissionGranted(name, perm):
+    print "OnUserPermissionGranted works!"
+```
+
+ * Called when a permission has been granted to a user
+
+## OnUserPermissionRevoked
+
+``` csharp
+void OnUserPermissionRevoked(string name, string perm)
+{
+    Puts("OnUserPermissionRevoked works!");
+}
+```
+
+``` lua
+function PLUGIN:OnUserPermissionRevoked(name, perm)
+    print("OnUserPermissionRevoked works!")
+end
+```
+
+``` javascript
+OnUserPermissionRevoked: function(name, perm) {
+    print("OnUserPermissionRevoked works!");
+}
+```
+
+``` coffeescript
+OnUserPermissionRevoked: (name, perm) =>
+    print "User '#{name}' revoked permission: #{perm}"
+```
+
+``` python
+def OnUserPermissionRevoked(name, perm):
+    print "OnUserPermissionRevoked works!"
+```
+
+ * Called when a permission has been revoked from a user
+
+## OnGroupPermissionGranted
+
+``` csharp
+void OnGroupPermissionGranted(string name, string perm)
+{
+    Puts("OnGroupPermissionGranted works!");
+}
+```
+
+``` lua
+function PLUGIN:OnGroupPermissionGranted(name, perm)
+    print("OnGroupPermissionGranted works!")
+end
+```
+
+``` javascript
+OnGroupPermissionGranted: function(name, perm) {
+    print("OnGroupPermissionGranted works!");
+}
+```
+
+``` coffeescript
+OnGroupPermissionGranted: (name, perm) =>
+    print "Group '#{name}' granted permission: #{perm}"
+```
+
+``` python
+def OnGroupPermissionGranted(name, perm):
+    print "OnGroupPermissionGranted works!"
+```
+
+ * Called when a permission has been granted to a group
+
+## OnGroupPermissionRevoked
+
+``` csharp
+void OnGroupPermissionRevoked(string name, string perm)
+{
+    Puts("OnGroupPermissionRevoked works!");
+}
+```
+
+``` lua
+function PLUGIN:OnGroupPermissionRevoked(name, perm)
+    print("OnGroupPermissionRevoked works!")
+end
+```
+
+``` javascript
+OnGroupPermissionRevoked: function(name, perm) {
+    print("OnGroupPermissionRevoked works!");
+}
+```
+
+``` coffeescript
+OnGroupPermissionRevoked: (name, perm) =>
+    print "Group '#{name}' revoked permission: #{perm}"
+```
+
+``` python
+def OnGroupPermissionRevoked(name, perm):
+    print "OnGroupPermissionRevoked works!"
+```
+
+ * Called when a permission has been revoked from a group
+
+## Unload
+
+``` csharp
+void Unload()
+{
+    Puts("Save files, destroy timers, etc.");
+}
+```
+
+``` lua
+function PLUGIN:Unload()
+    print("Save files, destroy timers, etc.")
+end
+```
+
+``` javascript
+Unload: function() {
+    print("Save files, destroy timers, etc.");
+}
+```
+
+``` coffeescript
+Unload: () =>
+    print "Save files, destroy timers, etc."
+```
+
+``` python
+def Unload():
+    print "Save files, destroy timers, etc."
+```
+
+ * Called when a plugin is being unloaded

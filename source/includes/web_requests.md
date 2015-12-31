@@ -10,9 +10,9 @@ using Oxide.Core.Libraries;
 
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Oxide Team", 1.0)]
     [Description("This example illustrates how to use a GET WebRequest.")]
-    class Example : CovalencePlugin
+    class EpicPlugin : CovalencePlugin
     {
         private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 
@@ -81,9 +81,9 @@ using Oxide.Core.Libraries;
 
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Oxide Team", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest.")]
-    class Example : CovalencePlugin
+    class EpicPlugin : CovalencePlugin
     {
         private readonly WebRequests webRequests = Interface.Oxide.GetLibrary<WebRequests>("WebRequests");
 

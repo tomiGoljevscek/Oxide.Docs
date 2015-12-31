@@ -23,7 +23,6 @@ includes:
   - commands
   - configurations
   - storing_data
-  - permissions
   - timers
   - web_requests
   - rust/item_list

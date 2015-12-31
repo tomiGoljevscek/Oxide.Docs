@@ -22,9 +22,9 @@ version or oxide.version
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Oxide Team", 1.0)]
     [Description("This example illustrates how to create a chat command.")]
-    class Example : CovalencePlugin
+    class EpicPlugin : CovalencePlugin
     {
         [ChatCommand("save")]
         void SaveCommand(BasePlayer player, string command, string[] args)
@@ -74,9 +74,9 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("Example", "Oxide Team", 1.0)]
+    [Info("EpicPlugin", "Oxide Team", 1.0)]
     [Description("This example illustrates how to create a console command.")]
-    class Example : CovalencePlugin
+    class EpicPlugin : CovalencePlugin
     {
         [ConsoleCommand("plugin.save")]
         void SaveCommand(ConsoleSystem.Arg arg)
