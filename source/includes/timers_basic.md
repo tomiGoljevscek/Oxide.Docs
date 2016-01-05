@@ -78,10 +78,9 @@ If "repeats" is specified, the function will only be called "repeats" times.
 ## Next frame timer
 
 ``` csharp
-// This is not implemented for C#, the following can be used instead:
-timer.Once(1f, 0, () =>
+NextFrame(() =>
 {
-    Puts("Hello world!")
+    Puts("Hello world!");
 });
 ```
 
@@ -103,10 +102,9 @@ timer.NextFrame(function() {
 ```
 
 ``` python
-def my_callback_func():
+timer.NextFrame((lambda:
   print("Hello world!")
-
-timer.NextFrame(Action(my_callback_func), self.Plugin)
+), self.Plugin)
 ```
 
 Executes the specified function at the next frame.  

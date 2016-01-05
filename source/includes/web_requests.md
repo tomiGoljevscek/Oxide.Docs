@@ -18,7 +18,7 @@ namespace Oxide.Plugins
         [ChatCommand("getrequest")]
         void GetRequest(BasePlayer player, string command, string[] args)
         {
-            webrequests.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this);
+            webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this);
         }
 
         void GetCallback(int code, string response, BasePlayer player)
@@ -35,7 +35,7 @@ namespace Oxide.Plugins
 ```
 
 ``` lua
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response)
+webrequest.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response)
     if response == nil or code ~= 200 then 
         print("Couldn't get an answer from Google!") 
         return 
@@ -45,7 +45,7 @@ end, self.Plugin)
 ```
 
 ``` javascript
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response) {
+webrequest.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response) {
     if (response == null || code != 200) {
         print("Couldn't get an answer from Google!");
         return
@@ -65,7 +65,7 @@ def response_handler(code, response):
         print "Couldn't get an answer from Google!" 
         return 
     print "Google answered: " + response
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide", Action[Int32,String](response_handler), self.Plugin);
+webrequest.EnqueueGet("http://www.google.com/search?q=oxide", Action[Int32,String](response_handler), self.Plugin);
 ```
 
 This uses the raw connection to a web page as you would on your browser.
@@ -87,7 +87,7 @@ namespace Oxide.Plugins
         [ChatCommand("postrequest")]
         void PostRequest(BasePlayer player, string command, string[] args)
         {
-            webrequests.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => PostCallback(code, response, player), this);
+            webrequest.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => PostCallback(code, response, player), this);
         }
 
         void PostCallback(int code, string response, BasePlayer player)
