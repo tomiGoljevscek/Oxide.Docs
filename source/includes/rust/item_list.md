@@ -36,6 +36,8 @@
 | 1024486167    | Barbed Wooden Barricade      | barricade.woodwire       |
 | 2021568998    | Battery - Small              | battery.small            |
 | 1325935999    | Bear Meat                    | bearmeat                 |
+| -2066726403   | Burnt Bear Meat              | bearmeat.burned          |
+| -2043730634   | Bear Meat Cooked             | bearmeat.cooked          |
 | 97409         | Bed                          | bed                      |
 | 1611480185    | Black Raspberries            | black.raspberries        |
 | 93832698      | Blood                        | blood                    |
