@@ -163,6 +163,7 @@
 | 1987447227    | Research Table               | research.table           |
 | -1461508848   | Assault Rifle                | rifle.ak                 |
 | -55660037     | Bolt Action Rifle            | rifle.bolt               |
+| -1745053053   | Semi-Automatic Rifle         | rifle.semiauto           |
 | 340009023     | Riot Helmet                  | riot.helmet              |
 | -288010497    | Road Sign Jacket             | roadsign.jacket          |
 | -1595790889   | Road Sign Kilt               | roadsign.kilt            |
