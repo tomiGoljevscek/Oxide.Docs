@@ -235,7 +235,9 @@
 | 112903447     | Water                        | water                    |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |
+| 1229879204    | Weapon Flashlight            | weapon.mod.flashlight    |
 | -465236267    | Holosight                    | weapon.mod.holosight     |
+| 516382256     | Weapon Lasersight            | weapon.mod.lasersight    |
 | 1213686767    | Silencer                     | weapon.mod.silencer      |
 | -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
 | -1691991080   | Cooked Wolf Meat             | wolfmeat.cooked          |
