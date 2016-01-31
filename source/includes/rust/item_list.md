@@ -82,6 +82,9 @@
 | 2123300234    | Crossbow                     | crossbow                 |
 | 1983936587    | Crude Oil                    | crude.oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
+| -1598790097   | Sheet Metal Double Door      | door.double.hinged.metal |
+| -933236257    | Armored Double Door          | door.double.hinged.toptier|
+| -1575287163   | Wood Double Door             | door.double.hinged.wood  |
 | -2104481870   | Sheet Metal Door             | door.hinged.metal        |
 | -1571725662   | Armored Door                 | door.hinged.toptier      |
 | 1456441506    | Wooden Door                  | door.hinged.wood         |
@@ -229,6 +232,11 @@
 | 1660607208    | Longsleeve T-Shirt           | tshirt.long              |
 | -1792066367   | High External Wooden Wall    | wall.external.high       |
 | -496055048    | High External Stone Wall     | wall.external.high.stone |
+| -427925529    | Prison Cell Wall             | wall.frame.cell          |
+| 562888306     | Prison Cell Gate             | wall.frame.cell.gate     |
+| -378017204    | Chainlink Fence              | wall.frame.fence         |
+| 995306285     | Chainlink Fence Gate         | wall.frame.fence.gate    |
+| 1175970190    | Shop Front                   | wall.frame.shopfront     |
 | -1021702157   | Metal Window Bars            | wall.window.bars.metal   |
 | -402507101    | Reinforced Window Bars       | wall.window.bars.toptier |
 | -1556671423   | Wooden Window Bars           | wall.window.bars.wood    |
@@ -239,6 +247,7 @@
 | -465236267    | Holosight                    | weapon.mod.holosight     |
 | 516382256     | Weapon Lasersight            | weapon.mod.lasersight    |
 | 1213686767    | Silencer                     | weapon.mod.silencer      |
+| -141135377    | 4x Zoom Scope                | weapon.mod.small.scope   |
 | -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
 | -1691991080   | Cooked Wolf Meat             | wolfmeat.cooked          |
 | 179448791     | Raw Wolf Meat                | wolfmeat.raw             |
