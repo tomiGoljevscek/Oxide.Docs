@@ -93,6 +93,8 @@
 | 1755466030    | Explosives                   | explosives               |
 | -1034048911   | Animal Fat                   | fat.animal               |
 | 97513422      | Flare                        | flare                    |
+| -1722829188   | A floor grill                | floor.grill              |
+| 1849912854    | Ladder Hatch                 | floor.ladder.hatch       |
 | -217113639    | Acoustic Guitar              | fun.guitar               |
 | -505639592    | Furnace                      | furnace                  |
 | 1598149413    | Large Furnace                | furnace.large            |
