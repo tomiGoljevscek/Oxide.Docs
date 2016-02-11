@@ -18,6 +18,11 @@
 |--------------|-----------------------------------|
 | 10128        | Boxer's Bandages                  |
 
+## Burlap Shirt
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10136        | Pirate Vest & Shirt               |
+
 ## Beenie Hat
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -51,6 +56,7 @@
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
 | 14072        | Green Hoodie                      |
+| 10132        | Rhinocrunch Hoodie                |
 | 10086        | Skeleton Hoodie                   |
 
 ## Jacket
@@ -88,6 +94,7 @@
 | 10090        | Skin Balaclava                    |
 | 10110        | Stitched Skin                     |
 | 10084        | The Rust Knight                   |
+| 10139        | Valentine Balaclava               |
 | 10111        | Zipper Face                       |
 
 ## Bandana Mask
@@ -128,6 +135,13 @@
 | 10108        | Halloween Bat                     |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
+
+## Assault Rifle
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10135        | Digital Camo AK47                 |
+| 10137        | Military Camo AK47                |
+| 10138        | Tempered AK47                     |
 
 ## Bolt Action Rifle
 | Skin Id      | Skin name                         |
@@ -170,6 +184,7 @@
 ## T-Shirt
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 10130        | Argyle Scavenger                  |
 | 10033        | Baseball Tshirt                   |
 | 10003        | Black Tshirt                      |
 | 14177        | Blue Tshirt                       |
@@ -182,6 +197,7 @@
 | 101          | Red Tshirt                        |
 | 10025        | Russia Tshirt                     |
 | 10002        | Sandbox Game Shirt                |
+| 10134        | Ser Winter TShirt                 |
 | 10041        | Skull & Bones TShirt              |
 | 10053        | Smile T-Shirt                     |
 | 10039        | Target Practice T-Shirt           |
