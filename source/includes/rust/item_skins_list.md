@@ -55,8 +55,10 @@
 | 14179        | Black Hoodie                      |
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
+| 10133        | Cuda87 Hoodie                     |
 | 14072        | Green Hoodie                      |
 | 10132        | Rhinocrunch Hoodie                |
+| 10129        | Safety Crew                       |
 | 10086        | Skeleton Hoodie                   |
 
 ## Jacket
@@ -198,6 +200,7 @@
 | 10025        | Russia Tshirt                     |
 | 10002        | Sandbox Game Shirt                |
 | 10134        | Ser Winter TShirt                 |
+| 10131        | Shadowfrax TShirt                 |
 | 10041        | Skull & Bones TShirt              |
 | 10053        | Smile T-Shirt                     |
 | 10039        | Target Practice T-Shirt           |
