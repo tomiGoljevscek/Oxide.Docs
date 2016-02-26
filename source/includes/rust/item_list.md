@@ -225,6 +225,7 @@
 | -1625468793   | Supply Signal                | supply.signal            |
 | 1293049486    | Survey Charge                | surveycharge             |
 | 586484018     | Medical Syringe              | syringe.medical          |
+| 2069925558    | Reactive Target              | target.reactive          |
 | 1490499512    | Targeting Computer           | targeting.computer       |
 | -1342405573   | Camera                       | tool.camera              |
 | 110547964     | Torch                        | torch                    |
