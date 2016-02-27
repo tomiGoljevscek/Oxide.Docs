@@ -185,7 +185,7 @@ def OnPluginLoaded(name):
 ``` csharp
 void OnPluginUnloaded(Plugin name)
 {
-    Puts("Plugin '" + name + "' has been unloaded);
+    Puts("Plugin '" + name + "' has been unloaded");
 }
 ```
 
