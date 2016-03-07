@@ -20,18 +20,18 @@ namespace Oxide.Plugins
         [ChatCommand("getrequest")]
         void GetRequest(BasePlayer player, string command, string[] args)
         {
-            this.webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => this.GetCallback(code, response, player), this);
+            webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this);
         }
 
         void GetCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {
-                this.Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
                 return;
             }
 
-            this.Puts($"Google answered for {player.displayName}: {response}");
+            Puts($"Google answered for {player.displayName}: {response}");
         }
     }
 }
@@ -97,7 +97,7 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                this.Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
                 return;
             }
             Puts("Google answered for " + player.displayName + ": " + response);
@@ -124,8 +124,6 @@ We need a Python example here
 
 Returns true/false
 
-
-
 ## Advanced Get method
 
 ``` csharp
@@ -148,18 +146,18 @@ namespace Oxide.Plugins
             // Set some custom request headers (eg. for HTTP Basic Auth)
             var headers = new Dictionary<string, string> { { "header", "value" } };
 
-            this.webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => this.GetCallback(code, response, player), this, headers, timeout);
+            webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this, headers, timeout);
         }
 
         void GetCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {
-                this.Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
                 return;
             }
 
-            this.Puts($"Google answered for {player.displayName}: {response}");
+            Puts($"Google answered for {player.displayName}: {response}");
         }
     }
 }
@@ -204,14 +202,14 @@ namespace Oxide.Plugins
             // Set some custom request headers (eg. for HTTP Basic Auth)
             var headers = new Dictionary<string, string> { { "header", "value" } };
 
-            this.webrequest.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => this.PostCallback(code, response, player), this, headers, timeout);
+            webrequest.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => PostCallback(code, response, player), this, headers, timeout);
         }
 
         void PostCallback(int code, string response, BasePlayer player)
         {
             if (response == null || code != 200)
             {
-                this.Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
                 return;
             }
             Puts("Google answered for " + player.displayName + ": " + response);
