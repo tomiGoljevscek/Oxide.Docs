@@ -6,6 +6,7 @@
 | 10124        | Ammo Wooden Box                   |
 | 10122        | Christmas Storage                 |
 | 10123        | First Aid Green                   |
+| 10141        | Gun Box                           |
 
 ## Bucket Helmet
 | Skin Id      | Skin name                         |
@@ -52,6 +53,7 @@
 ## Hoodie
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 10142        | BCHILLZ! Hoodie                   |
 | 14179        | Black Hoodie                      |
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
@@ -166,6 +168,12 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10074        | Chieftain Pump Shotgun            |
+| 10140        | The Swampmaster                   |
+
+## Waterpipe Shotgun
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10143        | The Peace Pipe                    |
 
 ## Sleeping Bag
 | Skin Id      | Skin name                         |
