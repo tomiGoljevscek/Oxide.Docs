@@ -12,7 +12,7 @@ group <add|set> <name> [title] [rank]
 group <remove> <name>
 group <parent> <name> <parentname>
 usergroup <add|remove> <username> <groupname>
-show <group|user> <name>
+show <group|user|perm> <name>
 show <groups|perms>
 version or oxide.version
 ```
