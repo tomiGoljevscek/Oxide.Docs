@@ -69,6 +69,7 @@
 | 1050986417    | Empty Tuna Can               | can.tuna.empty           |
 | 523409530     | Candy Cane                   | candycane                |
 | 1300054961    | CCTV Camera                  | cctv.camera              |
+| -2095387015   | Ceiling Light                | ceilinglight             |
 | 1436001773    | Charcoal                     | charcoal                 |
 | 1711323399    | Burned Chicken               | chicken.burned           |
 | 1734319168    | Cooked Chicken.              | chicken.cooked           |
