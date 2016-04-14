@@ -56,6 +56,7 @@
 | -770311783    | Wood Storage Box             | box.wooden               |
 | 271534758     | Large Wood Box               | box.wooden.large         |
 | 1260209393    | Bucket Helmet                | bucket.helmet            |
+| -1192532973   | Water Bucket                 | bucket.water             |
 | -307490664    | Building Plan                | building.planner         |
 | 115739308     | Leather Gloves               | burlap.gloves            |
 | -1035315940   | Burlap Headwrap              | burlap.headwrap          |
@@ -93,6 +94,7 @@
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
 | 1755466030    | Explosives                   | explosives               |
 | -1034048911   | Animal Fat                   | fat.animal               |
+| 1045869440    | Flame Thrower                | flamethrower             |
 | 97513422      | Flare                        | flare                    |
 | -1722829188   | A floor grill                | floor.grill              |
 | 1849912854    | Ladder Hatch                 | floor.ladder.hatch       |
@@ -245,6 +247,7 @@
 | -402507101    | Reinforced Window Bars       | wall.window.bars.toptier |
 | -1556671423   | Wooden Window Bars           | wall.window.bars.wood    |
 | 112903447     | Water                        | water                    |
+| -1628526499   | Water Barrel                 | water.barrel             |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |
 | 1229879204    | Weapon Flashlight            | weapon.mod.flashlight    |
