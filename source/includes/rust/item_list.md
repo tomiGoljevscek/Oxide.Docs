@@ -177,7 +177,6 @@
 | -1595790889   | Road Sign Kilt               | roadsign.kilt            |
 | 3506021       | Rock                         | rock                     |
 | 649603450     | Rocket Launcher              | rocket.launcher          |
-| 192371071     | Salt Water                   | salt.water               |
 | -1775234707   | Salvaged Cleaver             | salvaged.cleaver         |
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 2007564590    | Santa Hat                    | santahat                 |
@@ -250,6 +249,8 @@
 | -1628526499   | Water Barrel                 | water.barrel             |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |
+| 1916127949    | Salt Water                   | water.salt               |
+| 547302405     | Water Jug                    | waterjug                 |
 | 1229879204    | Weapon Flashlight            | weapon.mod.flashlight    |
 | -465236267    | Holosight                    | weapon.mod.holosight     |
 | 516382256     | Weapon Lasersight            | weapon.mod.lasersight    |
