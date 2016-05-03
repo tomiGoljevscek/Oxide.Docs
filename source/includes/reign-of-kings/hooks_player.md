@@ -25,7 +25,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Returning a non-null value overrides default behavior, plugin should call approval.Deny if it does this
+ * Returning true overrides default behavior, plugin should call approval.Deny if it does this
 
 ## OnPlayerConnected
 
@@ -137,4 +137,4 @@ We need a Python example here
 ```
 
  * Called when a player sends chat to the server
- * Returning a non-null value overrides default behavior of chat, not commands
+ * Returning true overrides default behavior of chat, not commands

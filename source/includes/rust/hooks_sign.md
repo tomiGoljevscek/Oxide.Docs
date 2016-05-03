@@ -32,7 +32,7 @@ def CanUpdateSign(self, sign, player):
 ```
 
  * Called before the player changes the text on a sign or locks it
- * Returning true or false will override Rust's check
+ * Returning true overrides default behavior
 
 ## OnSignLocked
 

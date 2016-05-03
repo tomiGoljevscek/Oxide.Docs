@@ -3,6 +3,40 @@
 ## CanUseDoor
 
 ``` csharp
+void CanBuild(Planner plan, Construction prefab)
+{
+    Puts("CanBuild works!");
+}
+```
+
+``` lua
+function PLUGIN:CanBuild(player, door)
+    print("CanBuild works!")
+end
+```
+
+``` coffeescript
+CanBuild: (player, door) =>
+  print "CanBuild works!"
+```
+
+``` javascript
+CanBuild: function(player, door) {
+  print("CanBuild works!");
+}
+```
+
+``` python
+def CanBuild(self, player, door):
+  print "CanBuild works!"
+```
+
+ * Called when a player tries to use a locked door
+ * Returning true overrides default behavior
+
+## CanUseDoor
+
+``` csharp
 void CanUseDoor(BasePlayer player, BaseLock door)
 {
     Puts("CanUseDoor works!");
@@ -32,7 +66,7 @@ def CanUseDoor(self, player, door):
 ```
 
  * Called when a player tries to use a locked door
- * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## CanUseDoor
 
@@ -65,7 +99,7 @@ def CanUseDoor(self, player, door):
 ```
 
  * Called when a player tries to use a door with a code lock
- * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## CanUseDoor
 
@@ -98,7 +132,40 @@ def CanUseDoor(self, player, door):
 ```
 
  * Called when a player tries to use a door with a key lock
- * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+
+## OnCupboardClearList
+
+``` csharp
+void OnCupboardClearList(BuildingPrivlidge priviledge, BasePlayer player)
+{
+    Puts("OnCupboardClearList works!");
+}
+```
+
+``` lua
+function PLUGIN:OnCupboardClearList(priviledge, player)
+    print("OnCupboardClearList works!")
+end
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` javascript
+OnCupboardClearList: function(priviledge, player) {
+    print("OnCupboardClearList works!");
+}
+```
+
+``` python
+def OnCupboardClearList(self, priviledge, player):
+    print "OnCupboardClearList works!"
+```
+
+ * Called when an attempt is made to clear a cupboard authorized list
+ * Returning true overrides default behavior
 
 ## OnDoorClosed
 
@@ -197,7 +264,7 @@ def OnCupboardAuthorize(self, priviledge, player):
 ```
 
  * Called when a cupboard attempts to authorize a player
- * Returning a non-null value cancels the authorization
+ * Returning true cancels the authorization
 
 ## OnCupboardDeauthorize
 
@@ -230,7 +297,7 @@ def OnCupboardDeauthorize(self, priviledge, player):
 ```
 
  * Called when a cupboard attempts to deauthorize a player
- * Returning a non-null value cancels the deauthorization
+ * Returning true cancels the deauthorization
 
 ## OnEntityBuilt
 
@@ -329,7 +396,7 @@ def OnStructureDemolish(self, block, player):
 ```
 
  * Called when a player selects DemolishImmediate from the BuildingBlock menu
- * Returning true will cancel the demolition
+ * Returning true overrides the demolition
 
 ## OnStructureRepair
 
@@ -428,4 +495,4 @@ def OnStructureUpgrade(self, block, player, grade):
 ```
 
  * Called when a player upgrades the grade of a BuildingBlock
- * Returning true will cancel the upgrade
+ * Returning true overrides the upgrade

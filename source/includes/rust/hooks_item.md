@@ -1,5 +1,38 @@
 # Item Hooks
 
+## CanAcceptItem
+
+``` csharp
+void CanAcceptItem(ItemContainer container, Item item)
+{
+    Puts("CanAcceptItem works!");
+}
+```
+
+``` lua
+function PLUGIN:CanAcceptItem(container, item)
+    print("CanAcceptItem works!")
+end
+```
+
+``` javascript
+CanAcceptItem: function(container, item) {
+    print("CanAcceptItem works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanAcceptItem(self, container, item):
+    print "CanAcceptItem works!"
+```
+
+ * Called when attempting to put an item in a container
+ * Returning true overrides default behavior
+
 ## OnBlueprintReveal
 
 ``` csharp
@@ -30,7 +63,6 @@ def OnBlueprintReveal(self, item):
     print "OnBlueprintReveal works!"
 ```
 
- * Called from ItemModReveal.ServerCommand
  * Called when a player attempts to reveal a blueprint
  * No return behavior
 
@@ -64,7 +96,6 @@ def OnConsumableUse(self, item):
     print "OnConsumableUse works!"
 ```
 
- * Called from Item.UseOneItem
  * Called right after a consumable item is used
  * No return behavior
  
@@ -98,7 +129,6 @@ def OnConsumeFuel(self, oven, fuel, burnable):
     print "OnConsumeFuel works!"
 ```
 
- * Called from BaseOven.ConsumeFuel
  * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
  * No return behavior
 
@@ -132,7 +162,6 @@ def OnDispenserGather(self, dispenser, entity, item):
     print "OnDispenserGather works!"
 ```
 
- * Called from ResourceDispenser.GiveResourceFromItem
  * Called before the player is given items from a resource
  * No return behavior
 
@@ -166,9 +195,8 @@ def OnHealingItemUse(self, item, target):
     print "OnHealingItemUse works!"
 ```
 
- * Called from SyringeWeapon.GiveEffectsTo and MedicalTool.GiveEffectsTo
  * Called right before a Syringe or Medkit item is used
- * Returning a non-null value will cancel default behavior
+ * Returning true overrides default behavior
 
 ## OnItemAddedToContainer
 
@@ -200,7 +228,6 @@ def OnItemAddedToContainer(self, container, item):
     print "OnItemAddedToContainer works!"
 ```
 
- * Called from ItemContainer.Insert
  * Called right after an item was added to a container
  * An entire stack has to be created, not just adding more wood to a wood stack for example
  * No return behavior
@@ -235,7 +262,6 @@ def OnItemCraft(self, item):
     print "OnItemCraft works!"
 ```
 
- * Called from ItemCrafter.CraftItem
  * Called right after an item is added to the crafting queue
  * Return an ItemCraftTask object to modify behavior or outcome
 
@@ -269,9 +295,8 @@ def OnItemCraftCancelled(self, task):
     print "OnItemCraftCancelled works!"
 ```
 
- * Called from ItemCrafter.CancelTask
  * Called before an item has been crafted
- * Returning a non-null value will cancel default behavior
+ * Returning true overrides default behavior
 
 ## OnItemCraftFinished
 
@@ -303,7 +328,6 @@ def OnItemCraftFinished(self, task, item):
     print "OnItemCraftFinished works!"
 ```
 
- * Called from ItemCrafter.FinishCrafting
  * Called right after an item has been crafted
  * No return behavior
 
@@ -337,7 +361,6 @@ def OnItemDeployed(self, deployer, entity):
     print "OnItemDeployed works!"
 ```
 
- * Called from Deployer.DoDeploy_Regular and Deployer.DoDeploy_Slot
  * Called right after an item has been deployed
  * No return behavior
 
@@ -371,7 +394,6 @@ def OnCollectiblePickup(self, item, player):
     print "OnCollectiblePickup works!"
 ```
 
- * Called from RustCore.IOnItemPickup
  * Called when a player collects an item
  * No return behavior
 
@@ -405,9 +427,8 @@ def OnItemResearch(self, item, player):
     print "OnItemResearch works!"
 ```
 
- * Called from ResearchTable.DoResearch
  * Called right before a player begins to research an item
- * Returning a non-null value will cancel default behavior
+ * Returning true overrides default behavior
 
 ## OnItemResearchEnd
 
@@ -443,7 +464,6 @@ def OnItemResearchEnd(self, table, chance):
     return chance
 ```
 
- * Called from RustCore.IOnItemResearchEnd
  * Called right before a player finishes researching an item
  * Returning a float will affect if researching is successful or not
 
@@ -477,7 +497,6 @@ def OnItemResearchStart(self, table):
     print "OnItemResearchStart works!"
 ```
 
- * Called from ResearchTable.DoResearch
  * Called when a player has started researching an item
  * No return behavior
 
@@ -511,9 +530,41 @@ def OnItemRemovedFromContainer(self, container, item):
     print "OnItemRemovedFromContainer works!"
 ```
 
- * Called from ItemContainer.Remove
  * Called right after an item was removed from a container
  * The entire stack has to be removed for this to be called, not just a little bit
+ * No return behavior
+
+## OnItemSplit
+
+``` csharp
+void OnItemSplit(Item item, int amount)
+{
+    Puts("OnItemSplit works!");
+}
+```
+
+``` lua
+function PLUGIN:OnItemSplit(item, amount)
+    print("OnItemSplit works!")
+end
+```
+
+``` javascript
+OnItemSplit: function(item, amount) {
+    print("OnItemSplit works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnItemSplit(self, item, amount):
+    print "OnItemSplit works!"
+```
+
+ * Called right before an item is upgraded
  * No return behavior
 
 ## OnItemUpgrade
@@ -526,13 +577,13 @@ void OnItemUpgrade(Item item, Item upgraded, BasePlayer player)
 ```
 
 ``` lua
-function PLUGIN:OnItemUpgrade(item, upgraded, item)
+function PLUGIN:OnItemUpgrade(item, upgraded, player)
     print("OnItemUpgrade works!")
 end
 ```
 
 ``` javascript
-OnItemUpgrade: function(item, upgraded, item) {
+OnItemUpgrade: function(item, upgraded, player) {
     print("OnItemUpgrade works!");
 }
 ```
@@ -542,11 +593,10 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnItemUpgrade(self, item, upgraded, item):
+def OnItemUpgrade(self, item, upgraded, player):
     print "OnItemUpgrade works!"
 ```
 
- * Called from ItemModUpgrade.ServerCommand
  * Called right before an item is upgraded
  * No return behavior
 
@@ -580,7 +630,6 @@ def OnLoseCondition(self, item, amount):
     print "OnLoseCondition works!"
 ```
 
- * Called from Item.LoseCondition
  * Called right before the condition of the item is modified
  * No return behavior
 
@@ -614,7 +663,6 @@ def OnPlantGather(self, plant, item, player):
     print "OnPlantGather works!"
 ```
 
- * Called from RustCore.IOnPlantGather
  * Called when a player gathers a plant
  * No return behavior
 
@@ -648,7 +696,6 @@ def OnQuarryGather(self, quarry, item):
     print "OnQuarryGather works!"
 ```
 
- * Called from MiningQuarry.SetOn
  * Called when a mining quarry is turned on/enabled
  * No return behavior
 
@@ -682,7 +729,6 @@ def OnQuarryGather(self, quarry, item):
     print "OnQuarryGather works!"
 ```
 
- * Called from MiningQuarry.ProcessResources
  * Called before items are gathered from a quarry
  * No return behavior
 
@@ -716,7 +762,6 @@ def OnSurveyGather(self, survey, item):
     print "OnSurveyGather works!"
 ```
 
- * Called from SurveyCharge.Explode
  * Called before items are gathered from a survey charge
  * No return behavior
 
@@ -750,7 +795,6 @@ def OnTrapArm(self, trap, player):
     print "OnTrapArm works!"
 ```
 
- * Called from RustCore.IOnTrapArm
  * Called when a player arms a bear trap
  * No return behavior
 
@@ -784,7 +828,6 @@ def OnTrapDisarm(self, trap, player):
     print "OnTrapDisarm works!"
 ```
 
- * Called from RustCore.IOnTrapDisarm
  * Called when a player disarms a land mine
  * No return behavior
 
@@ -818,7 +861,6 @@ def OnTrapSnapped(self, trap, player):
     print "OnTrapSnapped works!"
 ```
 
- * Called from BaseTrapTrigger.OnObjectAdded
  * Called when a trap is triggered by a game object
  * No return behavior
 
@@ -852,6 +894,5 @@ def OnTrapTrigger(self, trap, go):
     print "OnTrapTrigger works!"
 ```
 
- * Called from BaseTrap.ObjectEntered
  * Called when a trap is triggered by a game object
  * No return behavior

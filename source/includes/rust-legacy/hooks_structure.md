@@ -60,7 +60,7 @@ We need a Python example here
 ```
 
  * Called when a structure tries to decay
- * Returning a non-null value overrides default behavior
+ * Returning true overrides default behavior
 
 ## OnDoorToggle
 

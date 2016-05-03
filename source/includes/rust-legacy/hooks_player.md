@@ -25,7 +25,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Returning a non-null value overrides default behavior, plugin should call approval.Deny if it does this
+ * Returning true overrides default behavior, plugin should call approval.Deny if it does this
 
 ## CanClientLogin
 
@@ -164,7 +164,7 @@ We need a Python example here
 ```
 
  * Called when a player sends chat to the server
- * Returning a non-null value overrides default behavior of chat, not commands
+ * Returning true overrides default behavior of chat, not commands
 
 ## OnPlayerVoice
 
@@ -219,7 +219,7 @@ We need a Python example here
 ```
 
  * Called when a player starts crafting an item
- * Returning a non-null value overrides default behavior
+ * Returning true overrides default behavior
 
 ## OnBlueprintUse
 
@@ -247,7 +247,7 @@ We need a Python example here
 ```
 
  * Called when a player tries to study a blueprint
- * Returning a non-null value overrides default behavior
+ * Returning true overrides default behavior
 
 ## OnResearchItem
 

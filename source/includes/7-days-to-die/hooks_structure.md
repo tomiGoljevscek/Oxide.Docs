@@ -32,4 +32,4 @@ def OnDoorUse(self, door, steamId):
 ```
 
  * Called when a player tries to use a door
- * Returning true will allow door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage

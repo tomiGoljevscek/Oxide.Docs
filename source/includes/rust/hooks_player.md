@@ -30,9 +30,8 @@ def CanBeWounded(self, player, info):
     print "CanBeWounded works!"
 ```
 
- * Called from BasePlayer.EligibleForWounding
- * Called when a player dies
- * Returning true or false will cancel default behavior
+ * Called when any damage is attempted on player
+ * Returning true overrides default behavior
 
 ## CanClientLogin
 
@@ -64,9 +63,8 @@ def CanClientLogin(self, connection):
     print "CanClientLogin works!"
 ```
 
- * Called from RustCore.IOnUserApprove
  * Returning a string will use the string as the error message
- * Returning true will allow the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
+ * Returning true allowsthe connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
 
 ## CanLootPlayer
 
@@ -98,9 +96,8 @@ def CanLootPlayer(self, player, target):
     print "CanLootPlayer works!"
 ```
 
- * Called from BasePlayer.CanBeLooted
  * Called when a player attempts to loot another player
- * Returning true or false will cancel default behavior
+ * Returning true overrides default behavior
 
 ## OnFindSpawnPoint
 
@@ -132,7 +129,6 @@ def OnFindSpawnPoint(self):
     print "OnFindSpawnPoint works!"
 ```
 
- * Called from ServerMgr.BasePlayer/SpawnPoint
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
  * Return a BasePlayer.SpawnPoint object to use that spawnpoint
 
@@ -166,7 +162,6 @@ def OnPlayerAttack(self, attacker, info):
     print "OnPlayerAttack works!"
 ```
 
- * Called from BasePlayer.SharedProjectileAttack and BaseMelee.DoAttackShared
  * Useful for modifying an attack before it goes out
  * hitInfo.HitEntity should be the entity that this attack would hit
  * Returning true cancels the attack
@@ -201,9 +196,8 @@ def OnPlayerChat(self, arg):
     print "OnPlayerChat works!"
 ```
 
- * Called from chat.say
  * Called when a player sends chat to the server
- * Returning a non-null value overrides default behavior of chat, not commands
+ * Returning true overrides default behavior of chat, not commands
 
 ## OnPlayerConnected
 
@@ -235,7 +229,6 @@ def OnPlayerConnected(self, packet):
     print "OnPlayerConnected works!"
 ```
 
- * Called from ServerMgr.ClientReady
  * Called before the player object is created, but after the player has been approved to join the game
  * Can get the connection from packet.connection
  * No return behavior
@@ -270,7 +263,6 @@ def OnPlayerDisconnected(self, player, reason):
     print "OnPlayerDisconnected works!"
 ```
 
- * Called from BasePlayer.OnDisconnected
  * Called after the player has disconnected from the server
  * No return behavior
 
@@ -304,7 +296,6 @@ def OnPlayerInit(self, player):
     print "OnPlayerInit works!"
 ```
 
- * Called from BasePlayer.PlayerInit
  * Called when the player is initializing (after they've connected, before they wake up)
  * No return behavior
 
@@ -338,7 +329,6 @@ def OnPlayerInput(self, player, input):
     print "OnPlayerInput works!"
 ```
 
- * Called from BasePlayer.OnReceiveTick
  * Called when input is received from a connected client
  * No return behavior
 
@@ -372,7 +362,6 @@ def OnPlayerRespawned(self, player):
     print "OnPlayerRespawned works!"
 ```
 
- * Called from BasePlayer.Respawn
  * Called when the player spawns (specifically when they click the "Respawn" button)
  * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
@@ -408,7 +397,6 @@ def OnPlayerLoot(self, inventory, target):
     print "OnPlayerLoot works!"
 ```
 
- * Called from PlayerLoot.StartLootingEntity
  * Called when the player starts looting an entity
  * No return behavior
 
@@ -442,7 +430,6 @@ def OnPlayerLoot(self, inventory, target):
     print "OnPlayerLoot works!"
 ```
 
- * Called from PlayerLoot.StartLootingPlayer
  * Called when the player starts looting another player
  * No return behavior
 
@@ -476,7 +463,6 @@ def OnPlayerLoot(self, inventory, target):
     print "OnPlayerLoot works!"
 ```
 
- * Called from PlayerLoot.StartLootingItem
  * Called when the player starts looting an item
  * No return behavior
 
@@ -510,7 +496,6 @@ def OnPlayerSleepEnded(self, player):
     print "OnPlayerSleepEnded works!"
 ```
 
- * Called from BasePlayer.EndSleeping
  * Called when a player awakes
  * No return behavior
 
@@ -544,7 +529,6 @@ def OnRocketLaunched(self, player, entity):
     print "OnRocketLaunched works!"
 ```
 
- * Called from RustCore.IOnRocketLaunched
  * Called when a player launches a rocket
  * No return behavior
 
@@ -578,7 +562,6 @@ def OnRunPlayerMetabolism(self, metabolism):
     print "OnRunPlayerMetabolism works!"
 ```
 
- * Called from PlayerMetabolism.RunMetabolism
  * Called before a metabolism update occurs for the specified player
  * Metabolism update consists of managing the player's temperature, health etc.
  * You can use this to turn off or change certain aspects of the metabolism, either by editing values before returning, or taking complete control of the method
@@ -615,9 +598,8 @@ def OnNewConnection(self, connection):
     print "OnNewConnection works!"
 ```
 
- * Called from ConnectionAuth.OnNewConnection
  * Called when a new connection is made by a user, after token, but before other checks.
- * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
+ * Returning true overrides default behavior, plugin should call Reject if it does this
 
 ## OnUserApprove
 
@@ -649,9 +631,8 @@ def OnUserApprove(self, connection):
     print "OnUserApprove works!"
 ```
 
- * Called from ConnectionAuth.OnNewConnection
  * Used by RustCore and abstracted into CanClientLogin
- * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
+ * Returning true overrides default behavior, plugin should call Reject if it does this
 
 ## OnWeaponFired
 
@@ -683,7 +664,6 @@ def OnWeaponFired(self, projectile, player, mod, projectiles):
     print "OnWeaponFired works!"
 ```
 
- * Called from RustCore.IOnWeaponFired
  * Called when a player fires a weapon
  * No return behavior
 
@@ -717,6 +697,5 @@ def OnWeaponThrown(self, player, entity):
     print "OnWeaponThrown works!"
 ```
 
- * Called from RustCore.IOnWeaponThrown
  * Called when a player throws a weapon (grenade, c4, ...)
  * No return behavior

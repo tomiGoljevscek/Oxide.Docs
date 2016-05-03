@@ -132,7 +132,7 @@ def OnEntityGroundMissing(self, entity):
 ```
 
  * Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed
- * Returning a non-null value overides default server behavior
+ * Returning true overides default behavior
 
 ## OnEntityLeave
 
@@ -233,7 +233,40 @@ def OnEntityTakeDamage(self, entity, info):
  * Alternatively, modify the hitInfo object to change the damage
  * It should be okay to set the damage to 0, but if you don't return non-null, the player's client will receive a damage indicator (if entity is a BasePlayer)
  * hitInfo has all kinds of useful things in it, such as hitInfo.Weapon, hitInfo.damageAmount or hitInfo.damageType
- * Returning a non-null value overrides default server behavior (useful for godmode etc.)
+ * Returning true overrides default behavior (useful for godmode etc.)
+
+## OnHelicopterTarget
+
+``` csharp
+void OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
+{
+    Puts("OnHelicopterTarget works!");
+}
+```
+
+``` lua
+function PLUGIN:OnHelicopterTarget(turret, BaseCombatEntity entity)
+    print("OnHelicopterTarget works!")
+end
+```
+
+``` javascript
+OnHelicopterTarget: function(turret, BaseCombatEntity entity) {
+    print("OnHelicopterTarget works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnHelicopterTarget(self, turret, BaseCombatEntity entity):
+    print "OnHelicopterTarget works!"
+```
+
+ * Called when a helicopter attempts to target an entity
+ * Returning true overrides default behavior
 
 ## OnResourceDepositCreated
 
@@ -267,3 +300,36 @@ def OnResourceDepositCreated(self, deposit):
 
  * Called when a resource deposit has been created
  * No return behavior
+
+## OnTurretTarget
+
+``` csharp
+void OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
+{
+    Puts("OnTurretTarget works!");
+}
+```
+
+``` lua
+function PLUGIN:OnTurretTarget(turret, BaseCombatEntity entity)
+    print("OnTurretTarget works!")
+end
+```
+
+``` javascript
+OnTurretTarget: function(turret, BaseCombatEntity entity) {
+    print("OnTurretTarget works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnTurretTarget(self, turret, BaseCombatEntity entity):
+    print "OnTurretTarget works!"
+```
+
+ * Called when an autoturret attempts to target an entity
+ * Returning true overrides default behavior
