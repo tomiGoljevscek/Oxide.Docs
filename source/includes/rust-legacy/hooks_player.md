@@ -85,7 +85,7 @@ We need a Python example here
 ## OnPlayerDisconnected
 
 ``` csharp
-void OnPlayerDisconected(uLink.NetworkPlayer networkPlayer)
+void OnPlayerDisconnected(uLink.NetworkPlayer networkPlayer)
 {
     Puts("OnPlayerDisconnected works!");
 }

@@ -58,7 +58,7 @@ We need a Python example here
 ## OnPlayerDisconnected
 
 ``` csharp
-void OnPlayerDisconected(Player player)
+void OnPlayerDisconnected(Player player)
 {
     Puts("OnPlayerDisconnected works!");
 }

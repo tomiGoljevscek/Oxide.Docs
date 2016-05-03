@@ -3,7 +3,7 @@
 ## OnRunCommand
 
 ``` csharp
-void OnRunCommand(ClientInfo client, String[] args)
+void OnRunCommand(ClientInfo client, string[] args)
 {
     Puts("OnRunCommand works!");
 }
