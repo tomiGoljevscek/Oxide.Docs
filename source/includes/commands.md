@@ -23,14 +23,14 @@ version or oxide.version
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", "1.0.0")]
-    [Description("A basic chat command.")]
+    [Description("A basic chat command")]
 
-    class EpicPlugin : RustPlugin
+    class EpicPlugin : CovalencePlugin
     {
-        [ChatCommand("test")]
-        void TestCommand(BasePlayer player, string command, string[] args)
+        [Command("test")]
+        void TestCommand(IPlayer player, string command, string[] args)
         {
-            SendReply(player, "Test successful!");
+            player.Reply("Test successful!");
         }
     }
 }
@@ -49,7 +49,7 @@ var EpicPlugin {
   Title : "EpicPlugin",
   Author : "Unknown",
   Version : V(0, 1, 0),
-  Description : "A basic chat command.",
+  Description : "A basic chat command",
 
   Init: function ()
   {
@@ -58,7 +58,7 @@ var EpicPlugin {
 
   TestCommand: function (player, cmd, arg)
   {
-      rust.SendChatMessage(player.ToPlayer(), 'Test successful!');
+      player.Reply('Test successful!');
   }
 }
 ```
@@ -75,15 +75,14 @@ using UnityEngine;
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", "1.0.0")]
-    [Description("A basic console command.")]
+    [Description("A basic console command")]
 
-    class EpicPlugin : RustPlugin
+    class EpicPlugin : CovalencePlugin
     {
-        [ConsoleCommand("global.test")]
-        void TestCommand(ConsoleSystem.Arg arg)
+        [Command("global.test")]
+        void TestCommand(IPlayer player)
         {
-            if (args.Player() == null) return;
-            SendReply(arg.Player(), "Test successful!");
+            Puts("Test successful!");
         }
     }
 }
@@ -102,7 +101,7 @@ var EpicPlugin {
   Title : "EpicPlugin",
   Author : "Unknown",
   Version : V(0, 1, 0),
-  Description : "A basic console command.",
+  Description : "A basic console command",
 
   Init: function ()
   {
@@ -111,8 +110,7 @@ var EpicPlugin {
 
   TestCommand: function (arg)
   {
-    if (arg.Player() == null)
-    SendReply(arg.Player(), 'Test successful!');
+    Puts('Test successful!');
   }
 }
 ```
