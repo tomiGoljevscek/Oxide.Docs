@@ -1,5 +1,5 @@
 ---
-title: Rust
+title: Oxide API for Rust
 short_code: rust
 
 language_tabs:
