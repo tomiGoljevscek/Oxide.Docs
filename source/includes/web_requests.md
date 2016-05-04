@@ -13,25 +13,25 @@ using Oxide.Core.Libraries;
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
-    [Description("This example illustrates how to use a GET WebRequest.")]
+    [Description("This example illustrates how to use a GET WebRequest")]
 
-    class EpicPlugin : RustPlugin
+    class EpicPlugin : CovalencePlugin
     {
-        [ChatCommand("getrequest")]
-        void GetRequest(BasePlayer player, string command, string[] args)
+        [Command("get")]
+        void GetRequest(IPlayer player, string command, string[] args)
         {
             webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this);
         }
 
-        void GetCallback(int code, string response, BasePlayer player)
+        void GetCallback(int code, string response, IPlayer player)
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
                 return;
             }
 
-            Puts($"Google answered for {player.displayName}: {response}");
+            Puts($"Google answered for {player.Nickname}: {response}");
         }
     }
 }
@@ -73,8 +73,6 @@ webrequest.EnqueueGet("http://www.google.com/search?q=oxide", Action[Int32,Strin
 
 This uses the raw connection to a web page as you would on your browser.
 
-Returns true/false
-
 ## Basic Post method
 
 ``` csharp
@@ -84,23 +82,23 @@ using Oxide.Core.Libraries;
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
-    [Description("This example illustrates how to use a POST WebRequest.")]
-    class EpicPlugin : RustPlugin
+    [Description("This example illustrates how to use a POST WebRequest")]
+    class EpicPlugin : CovalencePlugin
     {
-        [ChatCommand("postrequest")]
-        void PostRequest(BasePlayer player, string command, string[] args)
+        [Command("post")]
+        void PostRequest(IPlayer player, string command, string[] args)
         {
             webrequest.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => PostCallback(code, response, player), this);
         }
 
-        void PostCallback(int code, string response, BasePlayer player)
+        void PostCallback(int code, string response, IPlayer player)
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
                 return;
             }
-            Puts("Google answered for " + player.displayName + ": " + response);
+            Puts("Google answered for " + player.Nickname + ": " + response);
         }
     }
 }
@@ -121,8 +119,6 @@ We need a CoffeeScript example here
 ``` python
 We need a Python example here
 ```
-
-Returns true/false
 
 ## Advanced Get method
 
@@ -133,12 +129,12 @@ using Oxide.Core.Libraries;
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
-    [Description("This example illustrates how to use a GET WebRequest.")]
+    [Description("This example illustrates how to use a GET WebRequest")]
 
-    class EpicPlugin : RustPlugin
+    class EpicPlugin : CovalencePlugin
     {
-        [ChatCommand("getrequest")]
-        void GetRequest(BasePlayer player, string command, string[] args)
+        [Command("get")]
+        void GetRequest(IPlayer player, string command, string[] args)
         {
             // Set a custom timeout (in milliseconds)
             var timeout = 200f;
@@ -149,15 +145,15 @@ namespace Oxide.Plugins
             webrequest.EnqueueGet("http://www.google.com/search?q=oxide", (code, response) => GetCallback(code, response, player), this, headers, timeout);
         }
 
-        void GetCallback(int code, string response, BasePlayer player)
+        void GetCallback(int code, string response, IPlayer player)
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
                 return;
             }
 
-            Puts($"Google answered for {player.displayName}: {response}");
+            Puts($"Google answered for {player.Nickname}: {response}");
         }
     }
 }
@@ -178,8 +174,6 @@ We need a CoffeeScript example here
 ``` python
 We need a Python example here
 ```
-
-Returns true/false
 
 ## Advanced Post method
 
@@ -190,11 +184,11 @@ using Oxide.Core.Libraries;
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
-    [Description("This example illustrates how to use a POST WebRequest.")]
-    class EpicPlugin : RustPlugin
+    [Description("This example illustrates how to use a POST WebRequest")]
+    class EpicPlugin : CovalencePlugin
     {
-        [ChatCommand("postrequest")]
-        void PostRequest(BasePlayer player, string command, string[] args)
+        [Command("post")]
+        void PostRequest(IPlayer player, string command, string[] args)
         {
             // Set a timeout (in milliseconds)
             var timeout = 200f;
@@ -205,14 +199,14 @@ namespace Oxide.Plugins
             webrequest.EnqueuePost("http://www.google.com/search?q=oxide", "param1=value1&param2=value2", (code, response) => PostCallback(code, response, player), this, headers, timeout);
         }
 
-        void PostCallback(int code, string response, BasePlayer player)
+        void PostCallback(int code, string response, IPlayer player)
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.displayName}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
                 return;
             }
-            Puts("Google answered for " + player.displayName + ": " + response);
+            Puts("Google answered for " + player.Nickname + ": " + response);
         }
     }
 }
@@ -233,5 +227,3 @@ We need a CoffeeScript example here
 ``` python
 We need a Python example here
 ```
-
-Returns true/false
