@@ -2,15 +2,9 @@
 
 ## 7 Days to Die
 
-Oxide support for 7 Days to Die is currently limited, and in a very alpha state. More hooks will be added soon.
+Oxide support for 7 Days to Die is currently limited, and in an alpha state. More hooks will be added soon.
 
 **[Homepage](http://7daystodie.com/) | [Steam Page](http://store.steampowered.com/app/251570/) | [API documentation](/7-days-to-die/)**
-
-## Beasts of Prey
-
-Oxide support for Beasts of Prey is currently limited, and in a very alpha state. More hooks will be added soon.
-
-**[Homepage](http://www.beastsofprey.com/) | [Steam Page](http://store.steampowered.com/app/299860/) | [API documentation](/beasts-of-prey/)**
 
 ## Blockstorm
 
@@ -18,9 +12,15 @@ Oxide support for Blockstorm is currently limited, and in a very alpha state. Mo
 
 **[Homepage](http://www.playblockstorm.com/) | [Steam Page](http://store.steampowered.com/app/263060/) | [API documentation](/blockstorm/)**
 
+## Hide & Hold Out
+
+Oxide support for Hide & Hold Out is actively developed, but in a very alpha state. More hooks will be added soon.
+
+**[Homepage](http://h2o-game.net/) | [Steam Page](http://store.steampowered.com/app/377140/) | [API documentation](/hide-hold-out/)**
+
 ## Hurtworld
 
-Oxide support for Hurtworld is actively developed, but in a very alpha state. More hooks will be added soon.
+Oxide support for Hurtworld is actively developed, but in an alpha state. More hooks will be added soon.
 
 **[Homepage](http://hurtworld.com/) | [Steam Page](http://store.steampowered.com/app/393420/) | [API documentation](/hurtworld/)**
 
