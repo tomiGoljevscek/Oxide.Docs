@@ -1,5 +1,71 @@
 # Player Hooks
 
+## CanBeTargeted (autoturret)
+
+``` csharp
+void CanBeTargeted(BasePlayer player, AutoTurret turret) 
+{
+    Puts("CanBeTargeted works!");
+}
+```
+
+``` lua
+function PLUGIN:CanBeTargeted(player, turret)
+    print("CanBeTargeted works!")
+end
+```
+
+``` javascript
+CanBeTargeted: function(player, turret) {
+    print("CanBeTargeted works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanBeTargeted(self, player, turret):
+    print "CanBeTargeted works!"
+```
+
+ * Called when an autoturrent is attempting to target the player
+ * Returning true overrides default behavior
+
+## CanBeTargeted (helicopter)
+
+``` csharp
+void CanBeTargeted(BasePlayer player, HelicopterTurret turret) 
+{
+    Puts("CanBeTargeted works!");
+}
+```
+
+``` lua
+function PLUGIN:CanBeTargeted(player, turret)
+    print("CanBeTargeted works!")
+end
+```
+
+``` javascript
+CanBeTargeted: function(player, turret) {
+    print("CanBeTargeted works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanBeTargeted(self, player, turret):
+    print "CanBeTargeted works!"
+```
+
+ * Called when a helicopter is attempting to target the player
+ * Returning true overrides default behavior
+
 ## CanBeWounded
 
 ``` csharp
@@ -66,6 +132,39 @@ def CanClientLogin(self, connection):
  * Returning a string will use the string as the error message
  * Returning true allowsthe connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
 
+## CanEquipItem
+
+``` csharp
+void CanEquipItem(PlayerInventory inventory, Item item)
+{
+    Puts("CanEquipItem works!");
+}
+```
+
+``` lua
+function PLUGIN:CanEquipItem(inventory, item)
+    print("CanEquipItem works!")
+end
+```
+
+``` javascript
+CanEquipItem: function(inventory, item) {
+    print("CanEquipItem works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanEquipItem(self, inventory, item):
+    print "CanEquipItem works!"
+```
+
+ * Called when a player attempts to equip an item
+ * Returning true overrides default behavior
+
 ## CanLootPlayer
 
 ``` csharp
@@ -98,6 +197,72 @@ def CanLootPlayer(self, player, target):
 
  * Called when a player attempts to loot another player
  * Returning true overrides default behavior
+
+## CanWearItem
+
+``` csharp
+void CanWearItem(PlayerInventory inventory, Item item)
+{
+    Puts("CanWearItem works!");
+}
+```
+
+``` lua
+function PLUGIN:CanWearItem(inventory, item)
+    print("CanWearItem works!")
+end
+```
+
+``` javascript
+CanWearItem: function(inventory, item) {
+    print("CanWearItem works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanWearItem(self, inventory, item):
+    print "CanWearItem works!"
+```
+
+ * Called when a player attempts to equip an item
+ * Returning true overrides default behavior
+
+## OnExplosiveThrown
+
+``` csharp
+void OnExplosiveThrown(BasePlayer player, BaseEntity entity)
+{
+    Puts("OnExplosiveThrown works!");
+}
+```
+
+``` lua
+function PLUGIN:OnExplosiveThrown(player, entity)
+    print("OnExplosiveThrown works!")
+end
+```
+
+``` javascript
+OnExplosiveThrown: function(player, entity) {
+    print("OnExplosiveThrown works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnExplosiveThrown(self, player, entity):
+    print "OnExplosiveThrown works!"
+```
+
+ * Called when a player throws an explosive item (C4, grenade, ...)
+ * No return behavior
 
 ## OnFindSpawnPoint
 
@@ -332,6 +497,40 @@ def OnPlayerInput(self, player, input):
  * Called when input is received from a connected client
  * No return behavior
 
+## OnPlayerLanded
+
+``` csharp
+void OnPlayerLanded(BasePlayer player)
+{
+    Puts("OnPlayerLanded works!");
+}
+```
+
+``` lua
+function PLUGIN:OnPlayerLanded(player)
+    print("OnPlayerLanded works!")
+end
+```
+
+``` javascript
+OnPlayerLanded: function(player) {
+    print("OnPlayerLanded works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnPlayerLanded(self, player):
+    print "OnPlayerLanded works!"
+```
+
+ * Called when the player lands on the ground
+ * No return behavior
+
+
 ## OnPlayerRespawned
 
 ``` csharp
@@ -367,24 +566,24 @@ def OnPlayerRespawned(self, player):
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
  * No return behavior
 
-## OnPlayerLoot
+## OnLootEntity
 
 ``` csharp
-void OnPlayerLoot(PlayerLoot inventory, BaseEntity target)
+void OnLootEntity(BasePlayer player, BaseEntity entity)
 {
-    Puts("OnPlayerLoot works!");
+    Puts("OnLootEntity works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerLoot(inventory, target)
-    print("OnPlayerLoot works!")
+function PLUGIN:OnLootEntity(player, target)
+    print("OnLootEntity works!")
 end
 ```
 
 ``` javascript
-OnPlayerLoot: function(inventory, target) {
-    print("OnPlayerLoot works!");
+OnLootEntity: function(player, target) {
+    print("OnLootEntity works!");
 }
 ```
 
@@ -393,31 +592,31 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnPlayerLoot(self, inventory, target):
-    print "OnPlayerLoot works!"
+def OnLootEntity(self, player, target):
+    print "OnLootEntity works!"
 ```
 
  * Called when the player starts looting an entity
  * No return behavior
 
-## OnPlayerLoot
+## OnLootPlayer
 
 ``` csharp
-void OnPlayerLoot(PlayerLoot inventory, BasePlayer target)
+void OnLootPlayer(BasePlayer player, BasePlayer target)
 {
-    Puts("OnPlayerLoot works!");
+    Puts("OnLootPlayer works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerLoot(inventory, target)
-    print("OnPlayerLoot works!")
+function PLUGIN:OnLootPlayer(player, target)
+    print("OnLootPlayer works!")
 end
 ```
 
 ``` javascript
-OnPlayerLoot: function(inventory, target) {
-    print("OnPlayerLoot works!");
+OnLootPlayer: function(player, target) {
+    print("OnLootPlayer works!");
 }
 ```
 
@@ -426,31 +625,31 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnPlayerLoot(self, inventory, target):
-    print "OnPlayerLoot works!"
+def OnLootPlayer(self, player, target):
+    print "OnLootPlayer works!"
 ```
 
  * Called when the player starts looting another player
  * No return behavior
 
-## OnPlayerLoot
+## OnLootItem
 
 ``` csharp
-void OnPlayerLoot(PlayerLoot inventory, Item item)
+void OnLootItem(BasePlayer player, Item item)
 {
-    Puts("OnPlayerLoot works!");
+    Puts("OnLootItem works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerLoot(inventory, item)
-    print("OnPlayerLoot works!")
+function PLUGIN:OnLootItem(player, item)
+    print("OnLootItem works!")
 end
 ```
 
 ``` javascript
-OnPlayerLoot: function(inventory, item) {
-    print("OnPlayerLoot works!");
+OnLootItem: function(player, item) {
+    print("OnLootItem works!");
 }
 ```
 
@@ -459,11 +658,44 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnPlayerLoot(self, inventory, target):
-    print "OnPlayerLoot works!"
+def OnLootItem(self, player, target):
+    print "OnLootItem works!"
 ```
 
  * Called when the player starts looting an item
+ * No return behavior
+
+## OnMeleeThrown
+
+``` csharp
+void OnMeleeThrown(BasePlayer player, Item item)
+{
+    Puts("OnMeleeThrown works!");
+}
+```
+
+``` lua
+function PLUGIN:OnMeleeThrown(player, item)
+    print("OnMeleeThrown works!")
+end
+```
+
+``` javascript
+OnMeleeThrown: function(player, item) {
+    print("OnMeleeThrown works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnMeleeThrown(self, player, item):
+    print "OnMeleeThrown works!"
+```
+
+ * Called when a player throws a melee item (axe, rock, ...)
  * No return behavior
 
 ## OnPlayerSleepEnded
@@ -665,37 +897,4 @@ def OnWeaponFired(self, projectile, player, mod, projectiles):
 ```
 
  * Called when a player fires a weapon
- * No return behavior
-
-## OnWeaponThrown
-
-``` csharp
-void OnWeaponThrown(BasePlayer player, BaseEntity entity)
-{
-    Puts("OnWeaponThrown works!");
-}
-```
-
-``` lua
-function PLUGIN:OnWeaponThrown(player, entity)
-    print("OnWeaponThrown works!")
-end
-```
-
-``` javascript
-OnWeaponThrown: function(player, entity) {
-    print("OnWeaponThrown works!");
-}
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-def OnWeaponThrown(self, player, entity):
-    print "OnWeaponThrown works!"
-```
-
- * Called when a player throws a weapon (grenade, c4, ...)
  * No return behavior

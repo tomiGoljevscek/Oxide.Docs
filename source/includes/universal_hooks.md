@@ -5,6 +5,7 @@
 [![7 Days to Die](7-days-to-die/favicon-32x32.png)](/7-days-to-die/)
 [![Beasts of Prey](beasts-of-prey/favicon-32x32.png)](/beasts-of-prey/)
 [![Blockstorm](blockstorm/favicon-32x32.png)](/blockstorm/)
+[![Hide & Hold Out](hide-hold-out/favicon-32x32.png)](/hide-hold-out/)
 [![Hurtworld](hurtworld/favicon-32x32.png)](/hurtworld/)
 [![Reign of Kings](reign-of-kings/favicon-32x32.png)](/reign-of-kings/)
 [![Rust](rust/favicon-32x32.png)](/rust/)
@@ -43,9 +44,42 @@ def Init():
   print "Init works!"
 ```
 
- * Called when a plugin is being loaded
+ * Called when a plugin is being initialized
  * Other plugins may or may not be present, dependant on load order
- * Other plugins will have been executed though, so globals exposed by them will be present
+
+## Loaded
+
+``` csharp
+void Loaded()
+{
+    Puts("Loaded works!");
+}
+```
+
+``` lua
+function PLUGIN:Loaded()
+    print("Loaded works!")
+end
+```
+
+``` javascript
+Loaded: function() {
+  print("Loaded works!");
+}
+```
+
+``` coffeescript
+Loaded: ->
+  print "Loaded works!"
+```
+
+``` python
+def Loaded():
+  print "Loaded works!"
+```
+
+ * Called when a plugin has finished loading
+ * Other plugins may or may not be present, dependant on load order
 
 ## Unload
 

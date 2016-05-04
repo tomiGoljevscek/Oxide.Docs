@@ -1,5 +1,38 @@
 # Entity Hooks
 
+## CanNetworkTo
+
+``` csharp
+void CanNetworkTo(BaseNetworkable entity, BasePlayer target)
+{
+    Puts("CanNetworkTo works!");
+}
+```
+
+``` lua
+function PLUGIN:CanNetworkTo(entity, player)
+    print("CanNetworkTo works!")
+end
+```
+
+``` javascript
+CanNetworkTo: function(entity, player) {
+    print("CanNetworkTo works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanNetworkTo(self, entity, player):
+    print "CanNetworkTo works!"
+```
+
+ * Called when an entity attempts to network with a player
+ * Returning true overrides default behavior
+
 ## OnAirdrop
 
 ``` csharp
