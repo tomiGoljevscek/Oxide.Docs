@@ -6,13 +6,13 @@
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
-    [Description("This example illustrates how to use a basic configuration file.")]
+    [Description("This example illustrates how to use a basic configuration file")]
 
     class EpicPlugin : RustPlugin
     {
         protected override void LoadDefaultConfig()
         {
-            PrintWarning("Creating a new configuration file.");
+            PrintWarning("Creating a new configuration file");
             Config.Clear();
             Config["ShowJoinMessage"] = true;
             Config["ShowLeaveMessage"] = true;
@@ -68,7 +68,7 @@ Since many users won't want to (or can't) edit the plugin directly to change the
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)] 
-    [Description("This example illustrates how to update a value in a configuration file.")]
+    [Description("This example illustrates how to update a value in a configuration file")]
 
     class EpicPlugin : RustPlugin
     {

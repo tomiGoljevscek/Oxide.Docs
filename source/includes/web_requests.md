@@ -7,8 +7,7 @@ The request will return true if the web request was sent, false if not. The call
 ## Basic Get method
 
 ``` csharp
-using Oxide.Core;
-using Oxide.Core.Libraries;
+using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
@@ -73,16 +72,16 @@ webrequest.EnqueueGet("http://www.google.com/search?q=oxide", Action[Int32,Strin
 
 This uses the raw connection to a web page as you would on your browser.
 
-## Basic Post method
+## Basic POST method
 
 ``` csharp
-using Oxide.Core;
-using Oxide.Core.Libraries;
+using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest")]
+
     class EpicPlugin : CovalencePlugin
     {
         [Command("post")]
@@ -120,11 +119,10 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
-## Advanced Get method
+## Advanced GET method
 
 ``` csharp
-using Oxide.Core;
-using Oxide.Core.Libraries;
+using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
@@ -175,16 +173,16 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
-## Advanced Post method
+## Advanced POST method
 
 ``` csharp
-using Oxide.Core;
-using Oxide.Core.Libraries;
+using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
     [Info("EpicPlugin", "Unknown", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest")]
+
     class EpicPlugin : CovalencePlugin
     {
         [Command("post")]

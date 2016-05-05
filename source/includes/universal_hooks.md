@@ -85,13 +85,13 @@ def Loaded():
 ``` csharp
 void Unload()
 {
-    Puts("Save files, destroy timers, etc.");
+    Puts("Save files, destroy timers, etc");
 }
 ```
 
 ``` lua
 function PLUGIN:Unload()
-    print("Save files, destroy timers, etc.")
+    print("Save files, destroy timers, etc")
 end
 ```
 
@@ -102,7 +102,7 @@ Unload: ->
 
 ``` javascript
 Unload: function() {
-  print("Save files, destroy timers, etc.");
+  print("Save files, destroy timers, etc");
 }
 ```
 
@@ -185,7 +185,7 @@ def OnFrame():
 ``` csharp
 void OnPluginLoaded(Plugin name)
 {
-    Puts("Plugin '" + name + "' has been loaded");
+    Puts($"Plugin '{name}' has been loaded");
 }
 ```
 
@@ -218,7 +218,7 @@ def OnPluginLoaded(name):
 ``` csharp
 void OnPluginUnloaded(Plugin name)
 {
-    Puts("Plugin '" + name + "' has been unloaded");
+    Puts($"Plugin '{name}' has been unloaded");
 }
 ```
 
@@ -319,7 +319,7 @@ def OnServerSave():
 ``` csharp
 void OnUserPermissionGranted(string name, string perm)
 {
-    Puts("User '" + name + "' granted permission: " + perm);
+    Puts($"User '{name}' granted permission: {perm}");
 }
 ```
 
@@ -352,7 +352,7 @@ def OnUserPermissionGranted(name, perm):
 ``` csharp
 void OnUserPermissionRevoked(string name, string perm)
 {
-    Puts("User '" + name + "' revoked permission: " + perm);
+    Puts($"User '{name}' revoked permission: {perm}");
 }
 ```
 
@@ -385,7 +385,7 @@ def OnUserPermissionRevoked(name, perm):
 ``` csharp
 void OnGroupPermissionGranted(string name, string perm)
 {
-    Puts("Group '" + name + "' granted permission: " + perm);
+    Puts($"Group '{name}' granted permission: {perm}");
 }
 ```
 
@@ -418,7 +418,7 @@ def OnGroupPermissionGranted(name, perm):
 ``` csharp
 void OnGroupPermissionRevoked(string name, string perm)
 {
-    Puts("Group '" + name + "' revoked permission: " + perm);
+    Puts($"Group '{name}' revoked permission: {perm}");
 }
 ```
 

@@ -57,7 +57,7 @@ We need a Python example here
 ## OnPlayerConnected
 
 ``` csharp
-void OnPlayerConnected(NetUser netuser)
+void OnPlayerConnected(NetUser netUser)
 {
     Puts("OnPlayerConnected works!");
 }
@@ -141,7 +141,7 @@ We need a Python example here
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(NetUser netuser, string message)
+void OnPlayerChat(NetUser netUser, string message)
 {
     Puts("OnPlayerChat works!");
 }
@@ -169,7 +169,7 @@ We need a Python example here
 ## OnPlayerVoice
 
 ``` csharp
-void OnPlayerVoice(NetUser netuser, List<uLink.NetworkPlayer> players)
+void OnPlayerVoice(NetUser netUser, List<uLink.NetworkPlayer> players)
 {
     Puts("OnPlayerVoice works!");
 }

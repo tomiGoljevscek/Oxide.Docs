@@ -7,7 +7,7 @@ There are a few functions that have been added to wrap 7 Days to Die functions, 
 ``` csharp
 void OnPlayerConnected(ClientInfo client)
 {
-    PrintToChat(string.Format("{0} has joined the server", client.playerName));
+    PrintToChat($"{client.playerName} has joined the server");
 }
 ```
 

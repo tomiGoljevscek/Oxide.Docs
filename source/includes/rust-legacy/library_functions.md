@@ -5,16 +5,15 @@ There are a few functions that have been added to wrap Rust Legacy functions, cr
 ## BroadcastChat
 
 ``` csharp
-void OnPlayerConnected(NetUser netuser)
+void OnPlayerConnected(NetUser netUser)
 {
-    var message = string.Format("{0} has joined the server", netuser.displayName);
-    rust.BroadcastChat({ message });
+    PrintToChat($"{netUser.displayName} has joined the server"));
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerConnected(netuser)
-    rust.BroadcastChat(netuser.displayName .. " has joined the server")
+function PLUGIN:OnPlayerConnected(netUser)
+    rust.BroadcastChat(netUser.displayName .. " has joined the server")
 end
 ```
 
@@ -23,14 +22,14 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnPlayerConnected: function(netuser) {
-    rust.BroadcastChat(netuser.displayName + " has joined the server");
+OnPlayerConnected: function(netUser) {
+    rust.BroadcastChat(netUser.displayName + " has joined the server");
 }
 ```
 
 ``` python
-def OnPlayerConnected(self, netuser):
-    rust.BroadcastChat(netuser.displayName + " has joined the server")
+def OnPlayerConnected(self, netUser):
+    rust.BroadcastChat(netUser.displayName + " has joined the server")
 ```
 
 Sends a chat message to all players.
@@ -40,16 +39,15 @@ Sends a chat message to all players.
 ## BroadcastConsole
 
 ``` csharp
-void OnPlayerConnected(NetUser netuser)
+void OnPlayerConnected(NetUser netUser)
 {
-    var message = string.Format("{0} has joined the server", netuser.displayName);
-    rust.BroadcastConsole({ message });
+    PrintToConsole($"{netUser.displayName} has joined the server");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerConnected(netuser)
-    rust.BroadcastConsole(netuser.displayName .. " has joined the server")
+function PLUGIN:OnPlayerConnected(netUser)
+    rust.BroadcastConsole(netUser.displayName .. " has joined the server")
 end
 ```
 
@@ -58,14 +56,14 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnPlayerConnected: function(netuser) {
-    rust.BroadcastConsole(netuser.displayName + " has joined the server");
+OnPlayerConnected: function(netUser) {
+    rust.BroadcastConsole(netUser.displayName + " has joined the server");
 }
 ```
 
 ``` python
-def OnPlayerConnected(self, netuser):
-    rust.BroadcastConsole(netuser.displayName + " has joined the server")
+def OnPlayerConnected(self, netUser):
+    rust.BroadcastConsole(netUser.displayName + " has joined the server")
 ```
 
 Prints a message to all players' in-game console
@@ -75,7 +73,7 @@ Prints a message to all players' in-game console
 ## FindPlayer
 ``` csharp
 [ChatCommand("ex")
-void Example(NetUser netuser, string command, string[] args)
+void Example(NetUser netUser, string command, string[] args)
 {
     NetUser target = rust.FindPlayer(args[0]);
 }
@@ -85,7 +83,7 @@ void Example(NetUser netuser, string command, string[] args)
 function PLUGIN:Init()
     cmd.AddChatCommand("ex",  self.Plugin, "Example")
 end
-function PLUGIN:Example(netuser, command, args)
+function PLUGIN:Example(netUser, command, args)
     target = rust.FindPlayer(args[0])
 end
 ```
@@ -98,7 +96,7 @@ We need a CoffeeScript example here
 Init: function() {
     cmd.AddChatCommand("ex",  self.Plugin, "Example");
 },
-Example: function(netuser, command, args) {
+Example: function(netUser, command, args) {
     target = rust.FindPlayer(args[0]);
 }
 ```
@@ -106,11 +104,11 @@ Example: function(netuser, command, args) {
 ``` python
 def Init(self):
     cmd.AddChatCommand("ex",  self.Plugin, "Example")
-def Example(self, netuser, command, args):
+def Example(self, netUser, command, args):
     target = rust.FindPlayer(args[0])
 ```
 
-Searches for an online player by name, steam id or ip. Returns a netuser if a player is found, otherwise null is returned.
+Searches for an online player by name, steam id or ip. Returns a netUser if a player is found, otherwise null is returned.
 
 `rust.FindPlayer(string nameOrSteamIdOrIp)`
 
@@ -170,16 +168,16 @@ Used to safely save text or send a message that contains quotation marks.
 ## SendChatMessage
 
 ``` csharp
-void OnPlayerSpawn(NetUser netuser)
+void OnPlayerSpawn(NetUser netUser)
 {
     var message = "You've respawned from a terrible death";
-    rust.SendChatMessage({ netuser, message });
+    rust.SendChatMessage({ netUser, message });
 }
 ```
 
 ``` lua
 function PLUGIN:OnPlayerSpawn(player)
-    rust.SendChatMessage(netuser, "You've respawned from a terrible death")
+    rust.SendChatMessage(netUser, "You've respawned from a terrible death")
 end
 ```
 
@@ -188,33 +186,33 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnPlayerSpawn: function(netuser) {
-    rust.SendChatMessage(netuser, "You've respawned from a terrible death");
+OnPlayerSpawn: function(netUser) {
+    rust.SendChatMessage(netUser, "You've respawned from a terrible death");
 }
 ```
 
 ``` python
 def OnPlayerSpawn(self, player):
-    rust.SendChatMessage(netuser, "You've respawned from a terrible death")
+    rust.SendChatMessage(netUser, "You've respawned from a terrible death")
 ```
 
 Sends a chat message to specified player.
 
-`rust.SendChatMessage(NetUser netuser, string message, object[] args)`
+`rust.SendChatMessage(NetUser netUser, string message, object[] args)`
 
 ## SendConsoleMessage
 
 ``` csharp
-void OnPlayerSpawn(NetUser netuser)
+void OnPlayerSpawn(NetUser netUser)
 {
     var message = "You've respawned from a terrible death";
-    rust.SendConsoleMessage({ netuser, message });
+    rust.SendConsoleMessage({ netUser, message });
 }
 ```
 
 ``` lua
 function PLUGIN:OnPlayerSpawn(player)
-    rust.SendConsoleMessage(netuser, "You've respawned from a terrible death")
+    rust.SendConsoleMessage(netUser, "You've respawned from a terrible death")
 end
 ```
 
@@ -223,36 +221,36 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnPlayerSpawn: function(netuser) {
-    rust.SendConsoleMessage(netuser, "You've respawned from a terrible death");
+OnPlayerSpawn: function(netUser) {
+    rust.SendConsoleMessage(netUser, "You've respawned from a terrible death");
 }
 ```
 
 ``` python
 def OnPlayerSpawn(self, player):
-    rust.SendConsoleMessage(netuser, "You've respawned from a terrible death")
+    rust.SendConsoleMessage(netUser, "You've respawned from a terrible death")
 ```
 
 Sends a console message to specified player's console.
 
-`rust.SendConsoleMessage(NetUser netuser, string message, object[] args)`
+`rust.SendConsoleMessage(NetUser netUser, string message, object[] args)`
 
 ## UserIDFromPlayer
 
 ``` csharp
-[ChatCommand("steamid")]
-void cmdChatSteamid(NetUser netuser, string command, string[] args)
+[ChatCommand("id")]
+void ChatId(NetUser netUser, string command, string[] args)
 {
-    SendReply(netuser, "Your SteamID is: " + netuser.userID.ToString());
+    SendReply(netUser, "Your ID is: " + netUser.userID.ToString());
 }
 ```
 
 ``` lua
 function PLUGIN:Init()
-    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
+    cmd.AddChatCommand("steamid",  self.Plugin, "ChatId")
 end
-function PLUGIN:cmdSteamId(netuser, command, arg)
-    rust.SendChatMessage(netuser, "Your Steam ID is: " .. rust.UserIDFromPlayer(netuser))
+function PLUGIN:ChatId(netUser, command, arg)
+    rust.SendChatMessage(netUser, "Your ID is: " .. rust.UserIDFromPlayer(netUser))
 end
 ```
 
@@ -262,34 +260,34 @@ We need a CoffeeScript example here
 
 ``` javascript
 Init: function() {
-    cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId");
+    cmd.AddChatCommand("steamid",  self.Plugin, "ChatId");
 },
-cmdSteamId: function(netuser, command, arg) {
-    rust.SendChatMessage(netuser, "Your Steam ID is: " + rust.UserIDFromPlayer(netuser));
+ChatId: function(netUser, command, arg) {
+    rust.SendChatMessage(netUser, "Your ID is: " + rust.UserIDFromPlayer(netUser));
 }
 ```
 
 ``` python
 def Init(self):
     cmd.AddChatCommand("steamid",  self.Plugin, "cmdSteamId")
-def cmdSteamId(self, netuser, command, arg):
-    rust.SendChatMessage(netuser, "Your Steam ID is: " + rust.UserIDFromPlayer(netuser))
+def cmdSteamId(self, netUser, command, arg):
+    rust.SendChatMessage(netUser, "Your Steam ID is: " + rust.UserIDFromPlayer(netUser))
 ```
 
 Gets the user ID (64-bit SteamID) as a string of an online player.
 
-`rust.UserIDFromPlayer(NetUser netuser)`
+`rust.UserIDFromPlayer(NetUser netUser)`
 
 ## Notice
 
 ``` csharp
 [ChatCommand("notice")]
-void cmdNotice(NetUser netuser, string command, string[] args)
+void cmdNotice(NetUser netUser, string command, string[] args)
 {
     var message = "Notice Demo";
     var icon = "!";
     var duration = 4f;
-    rust.Notice(netuser, message, icon, duration);
+    rust.Notice(netUser, message, icon, duration);
 }
 ```
 
@@ -297,8 +295,8 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 function PLUGIN:Init()
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
 end
-function PLUGIN:cmdNotice(netuser, command, arg)
-    rust.Notice(netuser, "Notice Demo", "!", 4);
+function PLUGIN:cmdNotice(netUser, command, arg)
+    rust.Notice(netUser, "Notice Demo", "!", 4);
 end
 ```
 
@@ -310,30 +308,30 @@ We need a CoffeeScript example here
 Init: function() {
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice");
 },
-cmdNotice: function(netuser, command, arg) {
-    rust.Notice(netuser, "Notice Demo", "!", 4);
+cmdNotice: function(netUser, command, arg) {
+    rust.Notice(netUser, "Notice Demo", "!", 4);
 }
 ```
 
 ``` python
 def Init(self):
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
-def cmdNotice(self, netuser, command, arg):
-    rust.Notice(netuser, "Notice Demo", "!", 4);
+def cmdNotice(self, netUser, command, arg):
+    rust.Notice(netUser, "Notice Demo", "!", 4);
 ```
 
 Sends a notice to the player at the top of the screen.
 
-`rust.Notice(NetUser netuser, string message, string icon, float duration)`
+`rust.Notice(NetUser netUser, string message, string icon, float duration)`
 
 ## InventoryNotice
 
 ``` csharp
 [ChatCommand("notice")]
-void cmdNotice(NetUser netuser, string command, string[] args)
+void cmdNotice(NetUser netUser, string command, string[] args)
 {
     var message = "InventoryNotice Demo";
-    rust.InventoryNotice(netuser, message);
+    rust.InventoryNotice(netUser, message);
 }
 ```
 
@@ -341,8 +339,8 @@ void cmdNotice(NetUser netuser, string command, string[] args)
 function PLUGIN:Init()
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
 end
-function PLUGIN:cmdNotice(netuser, command, arg)
-    rust.InventoryNotice(netuser, "InventoryNotice Demo");
+function PLUGIN:cmdNotice(netUser, command, arg)
+    rust.InventoryNotice(netUser, "InventoryNotice Demo");
 end
 ```
 
@@ -354,18 +352,18 @@ We need a CoffeeScript example here
 Init: function() {
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice");
 },
-cmdNotice: function(netuser, command, arg) {
-    rust.InventoryNotice(netuser, "InventoryNotice Demo");
+cmdNotice: function(netUser, command, arg) {
+    rust.InventoryNotice(netUser, "InventoryNotice Demo");
 }
 ```
 
 ``` python
 def Init(self):
     cmd.AddChatCommand("notice",  self.Plugin, "cmdNotice")
-def cmdNotice(self, netuser, command, arg):
-    rust.InventoryNotice(netuser, "InventoryNotice Demo");
+def cmdNotice(self, netUser, command, arg):
+    rust.InventoryNotice(netUser, "InventoryNotice Demo");
 ```
 
 Sends a notice to the player on the right side of the screen right above the player's health bar.
 
-`rust.InventoryNotice(NetUser netuser, string message)`
+`rust.InventoryNotice(NetUser netUser, string message)`
