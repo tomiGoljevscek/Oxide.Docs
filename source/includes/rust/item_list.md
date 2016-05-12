@@ -22,8 +22,10 @@
 | -1280058093   | High Velocity Arrow          | arrow.hv                 |
 | -420273765    | Wooden Arrow                 | arrow.wooden             |
 | -148163128    | Hide Boots                   | attire.hide.boots        |
+| 936777834     | Hide Halterneck              | attire.hide.helterneck   |
 | -135651869    | Hide Pants                   | attire.hide.pants        |
 | 102672084     | Hide Poncho                  | attire.hide.poncho       |
+| -132588262    | Hide Skirt                   | attire.hide.skirt        |
 | -1666761111   | Hide Vest                    | attire.hide.vest         |
 | 563023711     | Auto Turret                  | autoturret               |
 | 790921853     | Salvaged Axe                 | axe.salvaged             |
@@ -94,6 +96,11 @@
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
 | 1755466030    | Explosives                   | explosives               |
 | -1034048911   | Animal Fat                   | fat.animal               |
+| -2078972355   | Cooked Fish                  | fish.cooked              |
+| 88869913      | Minnows                      | fish.minnows             |
+| -533484654    | Raw Fish                     | fish.raw                 |
+| 865679437     | Small Trout                  | fish.troutsmall          |
+| 1369769822    | Survival Fish Trap           | fishtrap.small           |
 | 1045869440    | Flame Thrower                | flamethrower             |
 | 97513422      | Flare                        | flare                    |
 | -1722829188   | A floor grill                | floor.grill              |
@@ -181,6 +188,7 @@
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 2007564590    | Santa Hat                    | santahat                 |
 | 583366917     | Corn Seed                    | seed.corn                |
+| 583506109     | Hemp Seed                    | seed.hemp                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
 | 2057749608    | Salvaged Shelves             | shelves                  |
 | 2107229499    | Boots                        | shoes.boots              |
@@ -249,6 +257,7 @@
 | -1628526499   | Water Barrel                 | water.barrel             |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
 | 1824679850    | Small Water Catcher          | water.catcher.small      |
+| 1840561315    | Water Purifier               | water.purifier           |
 | 1916127949    | Salt Water                   | water.salt               |
 | 547302405     | Water Jug                    | waterjug                 |
 | 1229879204    | Weapon Flashlight            | weapon.mod.flashlight    |
