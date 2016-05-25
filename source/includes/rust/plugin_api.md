@@ -15,14 +15,14 @@ namespace Oxide.Plugins
         // The HookMethod parameter is the name of the hook exposed
         // In this case, our hook is called "GetReturn"
         [HookMethod("GetReturn")]
-        private bool GetReturn()
+        bool GetReturn()
         {
             return true;
         }
 
         // Hooks can take parameters and return simple types
         [HookMethod("TakeParam")]
-        private string TakeParam(string param, int secondParam)
+        string TakeParam(string param, int secondParam)
         {
             if (param == "first parameter") return param;
             else return "First parameter didn't match!";
@@ -31,7 +31,7 @@ namespace Oxide.Plugins
         // To return complex types, they need to first be converted
         // into JSON.net types (JObject, JArray, etc)
         [HookMethod("ReturnObject")]
-        private JObject ReturnObject()
+        JObject ReturnObject()
         {
             var myObject = new JObject();
             myObject["key"] = "value";
@@ -41,9 +41,9 @@ namespace Oxide.Plugins
 
         // Hooks don't have to return anything
         [HookMethod("SendMessage")]
-        private void SendMessage(BasePlayer player)
+        void SendMessage(BasePlayer player)
         {
-            SendReply(player, "You just called the 'SendMessage' hook!");
+            PrintToChat(player, "You just called the 'SendMessage' hook!");
         }
     }
 }
@@ -75,19 +75,18 @@ For example, you could write a plugin that does some player management, then all
 namespace Oxide.Plugins
 {
     [Info("SecondEpicPlugin", "Unknown", 0.1)]
-    [Description("Makes epic stuff happen")]
+    [Description("Makes more epic stuff happen")]
 
     class SecondEpicPlugin : RustPlugin
     {
         // First, add a reference to the plugin you are trying to hook into
         // The name of this field needs to be the exact name of the desired plugin
         // eg. We are referencing the example plugin above which is called 'EpicPlugin'
-        [PluginReference]
-        private Plugin EpicPlugin;
+        [PluginReference] EpicPlugin;
         
         // It's a good idea to check if the plugin you're trying to hook into
         // has been loaded by oxide (otherwise you can't call the hook)
-        private void OnServerInitialized()
+        void OnServerInitialized()
         {
             // Note: Trying to do this check in the plugin Init() method may
             // fail, as the plugin load order may be different each time
@@ -97,17 +96,17 @@ namespace Oxide.Plugins
             }
         }
 
-        private void CallApi()
+        void CallApi()
         {
             // Plugin hooks return objects, so cast the API call to the type
             // you're expecting
-            bool getTypedReturn = (bool)EpicPlugin?.Call("GetReturn");
+            var getTypedReturn = (bool)EpicPlugin?.Call("GetReturn");
 
             // Send parameters through as variables after the hook name
-            string takeParam = (string)EpicPlugin?.Call("TakeParam", "param1", 1024);
+            var takeParam = (string)EpicPlugin?.Call("TakeParam", "param1", 1024);
 
             // Use JSON.net to process the returned object
-            object returnedObject = EpicPlugin?.Call("ReturnObject");
+            var returnedObject = EpicPlugin?.Call("ReturnObject");
 
             // Call a plugin to do some work without returning anything
             EpicPlugin?.Call("SendMessage", player);
@@ -132,4 +131,4 @@ We need a javascript example here
 We need a Python example here
 ```
 
-Calling an API hook allows you to access results from another plugin
+Calling an API hook allows you to access results from another plugin.
