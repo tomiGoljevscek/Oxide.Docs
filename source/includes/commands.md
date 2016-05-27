@@ -89,7 +89,18 @@ namespace Oxide.Plugins
 ```
 
 ``` lua
-We need a Lua example here
+PLUGIN.Title = "EpicPlugin"
+PLUGIN.Author = "Unknown"
+PLUGIN.Version = V(0, 1, 0)
+PLUGIN.Description = "Makes epic stuff happen"
+
+function PLUGIN:Init()
+  command.AddConsoleCommand("global.test", self.Plugin, "TestCommand")
+end
+
+function PLUGIN:TestCommand(arg)
+  print("Test successful!")
+end
 ```
 
 ``` coffeescript
