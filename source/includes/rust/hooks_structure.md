@@ -137,14 +137,14 @@ def CanUseDoor(self, player, door):
 ## OnCupboardClearList
 
 ``` csharp
-void OnCupboardClearList(BuildingPrivlidge priviledge, BasePlayer player)
+void OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardClearList works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnCupboardClearList(priviledge, player)
+function PLUGIN:OnCupboardClearList(privilege, player)
     print("OnCupboardClearList works!")
 end
 ```
@@ -154,13 +154,13 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnCupboardClearList: function(priviledge, player) {
+OnCupboardClearList: function(privilege, player) {
     print("OnCupboardClearList works!");
 }
 ```
 
 ``` python
-def OnCupboardClearList(self, priviledge, player):
+def OnCupboardClearList(self, privilege, player):
     print "OnCupboardClearList works!"
 ```
 
@@ -236,14 +236,14 @@ def OnDoorOpened(self, door, player):
 ## OnCupboardAuthorize
 
 ``` csharp
-void OnCupboardAuthorize(BuildingPrivlidge priviledge, BasePlayer player)
+void OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardAuthorize works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnCupboardAuthorize(priviledge, player)
+function PLUGIN:OnCupboardAuthorize(privilege, player)
     print("OnCupboardAuthorize works!")
 end
 ```
@@ -253,13 +253,13 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnCupboardAuthorize: function(priviledge, player) {
+OnCupboardAuthorize: function(privilege, player) {
     print("OnCupboardAuthorize works!");
 }
 ```
 
 ``` python
-def OnCupboardAuthorize(self, priviledge, player):
+def OnCupboardAuthorize(self, privilege, player):
     print "OnCupboardAuthorize works!"
 ```
 
@@ -269,14 +269,14 @@ def OnCupboardAuthorize(self, priviledge, player):
 ## OnCupboardDeauthorize
 
 ``` csharp
-void OnCupboardDeauthorize(BuildingPrivlidge priviledge, BasePlayer player)
+void OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardAuthorize works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnCupboardDeauthorize(priviledge, player)
+function PLUGIN:OnCupboardDeauthorize(privilege, player)
     print("OnCupboardDeauthorize works!")
 end
 ```
@@ -286,13 +286,13 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnCupboardDeauthorize: function(priviledge, player) {
+OnCupboardDeauthorize: function(privilege, player) {
     print("OnCupboardDeauthorize works!");
 }
 ```
 
 ``` python
-def OnCupboardDeauthorize(self, priviledge, player):
+def OnCupboardDeauthorize(self, privilege, player):
     print "OnCupboardDeauthorize works!"
 ```
 
