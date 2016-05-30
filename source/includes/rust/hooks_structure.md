@@ -271,7 +271,7 @@ def OnCupboardAuthorize(self, privilege, player):
 ``` csharp
 void OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
-    Puts("OnCupboardAuthorize works!");
+    Puts("OnCupboardDeauthorize works!");
 }
 ```
 
