@@ -834,7 +834,7 @@ def OnTrapDisarm(self, trap, player):
 ## OnTrapSnapped
 
 ``` csharp
-void OnTrapSnapped(BearTrap trap, GameObject go)
+void OnTrapSnapped(BaseTrapTrigger trap, GameObject go)
 {
     Puts("OnTrapSnapped works!");
 }
@@ -867,7 +867,7 @@ def OnTrapSnapped(self, trap, player):
 ## OnTrapTrigger
 
 ``` csharp
-void OnTrapTrigger(BearTrap trap, GameObject go)
+void OnTrapTrigger(BaseTrap trap, GameObject go)
 {
     Puts("OnTrapTrigger works!");
 }
