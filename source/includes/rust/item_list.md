@@ -263,6 +263,8 @@
 | 1229879204    | Weapon Flashlight            | weapon.mod.flashlight    |
 | -465236267    | Holosight                    | weapon.mod.holosight     |
 | 516382256     | Weapon Lasersight            | weapon.mod.lasersight    |
+| -1569356508   | Muzzle Boost                 | weapon.mod.muzzleboost   |
+| -1569280852   | Muzzle Brake                 | weapon.mod.muzzlebrake   |
 | 1213686767    | Silencer                     | weapon.mod.silencer      |
 | -141135377    | 4x Zoom Scope                | weapon.mod.small.scope   |
 | -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
