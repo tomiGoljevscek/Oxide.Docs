@@ -28,8 +28,9 @@ namespace Oxide.Plugins
             else return "First parameter didn't match!";
         }
 
-        // To return complex types, they need to first be converted
-        // into JSON.net types (JObject, JArray, etc)
+        // To return complex types, they should first be converted
+        // into builtin types (e.g. JSON.net types like JObject, JArray, etc. or builtin
+        // collections like System.Collections.Generic.Dictionary)
         [HookMethod("ReturnObject")]
         JObject ReturnObject()
         {
@@ -39,7 +40,7 @@ namespace Oxide.Plugins
             return myObject;
         }
 
-        // Hooks don't have to return anything
+        // Hooks don't have to return something
         [HookMethod("SendMessage")]
         void SendMessage(BasePlayer player)
         {
@@ -62,7 +63,37 @@ We need a javascript example here
 ```
 
 ``` python
-We need a Python example here
+from System.Collections.Generic import Dictionary
+from System.Collections.Generic import List
+
+class EpicPlugin:
+  def __init__(self):
+    self.Title = "EpicPlugin"
+    self.Description = "Makes epic stuff happen"
+    self.Author = "Unknown"
+    self.Version = V(0, 1, 0)
+
+  # Every method can be used in other plugins
+  def GetReturn(self):
+    return True
+
+  # Hooks can take parameters and return simple types
+  def TakeParam(self, param, secondParam):
+    if param == "first parameter":
+      return param
+    else:
+      return "First parameter didn't match!"
+
+  # To return complex types, they should first be converted
+  # into C# builtin types (e.g. System.Collections.Generic.Dictionary)
+  def ReturnObject(self):
+    myObject = Dictionary[str, object]()
+    myObject["key"] = "value"
+    myObject["array"] = List[object]()
+    return myObject
+
+  def SendMessage(self):
+    print("You just called the 'SendMessage' hook!")
 ```
 
 Exposing an API hook allows other plugins to call that hook.
@@ -128,7 +159,32 @@ We need a javascript example here
 ```
 
 ``` python
-We need a Python example here
+class SecondEpicPlugin:
+  def __init__(self):
+    self.Title = "SecondEpicPlugin"
+    self.Description = "Makes more epic stuff happen"
+    self.Author = "Unknown"
+    self.Version = V(0, 1, 0)
+
+  def Init(self):
+    self.EpicPlugin = plugins.Find("EpicPlugin")
+
+  def CallApi(self):
+    if self.EpicPlugin is None:
+      return
+
+    # Python is dynamically typed, so casting is not necessary:
+    # the structure of the type matters, not the name
+    getReturn = self.EpicPlugin.Call("GetReturn")
+
+    # Send parameters through as variables after the hook name
+    takeParam = self.EpicPlugin.Call("TakeParam", "param1", 1024)
+
+    # Access returned object like dictionary
+    returnedObject = self.EpicPlugin.Call("ReturnObject")
+
+    # Call a plugin to do some work without returning anything
+    self.EpicPlugin.Call("SendMessage")
 ```
 
 Calling an API hook allows you to access results from another plugin.
