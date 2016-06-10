@@ -1,4 +1,5 @@
-sudo: false
+sudo: required
+dist: trusty
 cache: bundler
 rvm: 2.0.0
 
@@ -8,7 +9,7 @@ notifications:
   email: false
   slack:
     rooms:
-      secure: "MqRvOkEqet1efaTaWstcB+2NAkn8cATwopYoCj1vlJSEsncdkwDf/mQK+2g/mvWE8xr0I93VxR/QxkQOvRb6e9eImTWUPPvw6RmvM905GxSmoPQUi3XOoj8ETUhBzPkTrvfp25o6DxUy4Rd5TZgMQxyWplla8fewkuSSbeuv83I="
+      secure: "j+F9pdJK3PlIbx7RL60MQp/qySXaEpNk+80AOc5gwUM2+P43C7wX44Vo9L1PrCRqjCkXRaP7YlNC8KywW/8iu4DTTbDZQu9HVl4ueh3isTj6ma4gKq+pFh/xKCEXCw4VE1eRiTv0z/d6TrIj0s5s1mNfatc5SVeO5FE5r2XFJpQ="
 
 env:
   global:
