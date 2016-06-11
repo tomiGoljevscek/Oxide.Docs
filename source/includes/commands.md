@@ -45,7 +45,7 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-var EpicPlugin {
+var EpicPlugin = {
   Title : "EpicPlugin",
   Author : "Unknown",
   Version : V(0, 1, 0),
@@ -53,18 +53,29 @@ var EpicPlugin {
 
   Init: function ()
   {
-      cmd.AddChatCommand('test', this.Plugin, 'TestCommand');
+    command.AddChatCommand('test', this.Plugin, 'TestCommand');
   },
 
   TestCommand: function (player, cmd, arg)
   {
-      player.Reply('Test successful!');
+    player.Reply('Test successful!');
   }
 }
 ```
 
 ``` python
-We need a Python example here
+class EpicPlugin:
+  def __init__(self):
+    self.Title = "EpicPlugin"
+    self.Description = "A basic chat command"
+    self.Author = "Unknown"
+    self.Version = V(1, 0, 0)
+
+  def Init(self):
+    command.AddChatCommand("test", self.Plugin, "TestCommand")
+
+  def TestCommand(self, player, cmd, args):
+    player.Reply("Test successful!")
 ```
 
 ## Console commands
@@ -108,7 +119,7 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-var EpicPlugin {
+var EpicPlugin = {
   Title : "EpicPlugin",
   Author : "Unknown",
   Version : V(0, 1, 0),
@@ -127,5 +138,16 @@ var EpicPlugin {
 ```
 
 ``` python
-We need a Python example here
+class EpicPlugin:
+  def __init__(self):
+    self.Title = "EpicPlugin"
+    self.Description = "A basic chat command"
+    self.Author = "Unknown"
+    self.Version = V(1, 0, 0)
+
+  def Init(self):
+    command.AddConsoleCommand("global.test", self.Plugin, "TestCommand")
+
+  def TestCommand(self, player, cmd, args):
+    print("Test successful!")
 ```
