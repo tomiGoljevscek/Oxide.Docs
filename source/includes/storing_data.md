@@ -48,17 +48,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` javascript
-Init: function() {
-    this.LoadDataFiles();
-}
-
-var dataTable
-LoadDataFiles: function() {
-    dataTable = data.GetData("pluginName");
-}
-```
-
 ``` lua
 function PLUGIN:Init()
     self:LoadDataFiles()
@@ -66,12 +55,28 @@ end
 
 local dataTable
 function PLUGIN:LoadDataFiles()
-    dataTable = datafile.GetDataTable("pluginName") or {}
+    dataTable = datafile.GetDataTable("EpicPlugin") or {}
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` javascript
+Init: function() {
+  this.LoadDataFiles();
+}
+
+var dataTable
+LoadDataFiles: function() {
+  dataTable = data.GetData("EpicPlugin");
+}
+```
+
 ``` python
-We need a Python example here
+def Init(self):
+  self.dataTable = data.GetData("EpicPlugin")
 ```
 To store plugin related data to use in your plugin, you want to create a data file.
 
@@ -137,30 +142,29 @@ namespace Oxide.Plugins
 }
 ```
 
-``` javascript
-SaveDataFiles: function() {
-    data.SaveData("pluginName");
-}
-
-cmdTest: function(player, cmd, args) {
-    var name = player.displayName;
-    dataTable[name] = true;
-    this.SaveDataFiles();
-}
-```
-
 ``` lua
-function PLUGIN:SaveDataFiles()
-    datafile.SaveDataTable("pluginName")
-end
-
 function PLUGIN:cmdTest(player, cmd, args)
     local name = player.displayName
     dataTable[name] = true
-    self:SaveDataFiles()
+    datafile.SaveDataTable("EpicPlugin")
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` javascript
+cmdTest: function(player, cmd, args) {
+  var name = player.displayName;
+  dataTable[name] = true;
+  data.SaveData("EpicPlugin");
+}
+```
+
 ``` python
-We need a Python example here
+def Init(self):
+  self.dataTable = data.GetData("EpicPlugin")
+  self.dataTable["name"] = True
+  data.SaveData("EpicPlugin")
 ```
