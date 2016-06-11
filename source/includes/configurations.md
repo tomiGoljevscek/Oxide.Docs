@@ -24,23 +24,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` javascript
-var EpicPlugin = {
-    Init: function() {
-        this.LoadDefaultConfig();
-    },
-
-    LoadDefaultConfig: function() {
-        this.Config.ShowJoinMessage = this.Config.ShowJoinMessage || "true";
-        this.Config.ShowLeaveMessage = this.Config.ShowLeaveMessage || "true";
-        this.Config.Messages = this.Config.Messages || {};
-        this.Config.Messages.Join = this.Config.Messages.Join || "Welcome to this server";
-        this.Config.Messages.Leave = this.Config.Messages.Leave || "Goodbye";
-        this:SaveConfig();
-    }
-}
-```
-
 ``` lua
 function PLUGIN:Init()
     self:LoadDefaultConfig()
@@ -56,8 +39,43 @@ function PLUGIN:LoadDefaultConfig()
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` javascript
+var EpicPlugin = {
+  Init: function() {
+    this.LoadDefaultConfig();
+  },
+
+  LoadDefaultConfig: function() {
+    this.Config.ShowJoinMessage = this.Config.ShowJoinMessage || "true";
+    this.Config.ShowLeaveMessage = this.Config.ShowLeaveMessage || "true";
+    this.Config.Messages = this.Config.Messages || {};
+    this.Config.Messages.Join = this.Config.Messages.Join || "Welcome to this server";
+    this.Config.Messages.Leave = this.Config.Messages.Leave || "Goodbye";
+    this:SaveConfig();
+  }
+}
+```
+
 ``` python
-We need a Python example here
+class EpicPlugin:
+  def __init__(self):
+    self.Title = "EpicPlugin"
+    self.Description = "This example illustrates how to use a basic configuration file"
+    self.Author = "Unknown"
+    self.Version = V(1, 0, 0)
+
+  def LoadDefaultConfig(self):
+    default_cfg = {
+      "ShowJoinMessage": True,
+      "ShowLeaveMessage": True,
+      "Messages": ("Hello", "World")
+    }
+    self.Config = default_cfg
+    self.SaveConfig()
 ```
 
 Since many users won't want to (or can't) edit the plugin directly to change the default configuration, it's best to offer to offer them a configuration file that can easily be edited without worrying about messing up the plugin.
@@ -85,17 +103,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` javascript
-cmdTest: function(player, cmd, args) {
-    if (this.Config.ShowJoinMessage == "true") {
-        this.Config.ShowJoinMessage = "false";
-    } else {
-        this.Config.ShowJoinMessage = "true";
-    }
-    this:SaveConfig();
-}
-```
-
 ``` lua
 function PLUGIN:cmdTest(player, cmd, args)
     if self.Config.ShowJoinMessage == "true" then
@@ -107,8 +114,32 @@ function PLUGIN:cmdTest(player, cmd, args)
 end
 ```
 
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` javascript
+cmdTest: function(player, cmd, args) {
+  if (this.Config.ShowJoinMessage == "true") {
+    this.Config.ShowJoinMessage = "false";
+  } else {
+    this.Config.ShowJoinMessage = "true";
+  }
+  this:SaveConfig();
+}
+```
+
 ``` python
-We need a Python example here
+class EpicPlugin:
+  def __init__(self):
+    self.Title = "EpicPlugin"
+    self.Description = "This example illustrates how to update a value in a configuration file"
+    self.Author = "Unknown"
+    self.Version = V(1, 0, 0)
+
+  def Test(self, player, cmd, args):
+    self.Config["ShowJoinMessage"] = not self.Config["ShowJoinMessage"]
+    self.SaveConfig()
 ```
 
 You can change and save configuration entries by simply assigning the new values and calling the save function.
