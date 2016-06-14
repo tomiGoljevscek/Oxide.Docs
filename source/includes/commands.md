@@ -46,36 +46,36 @@ We need a CoffeeScript example here
 
 ``` javascript
 var EpicPlugin = {
-  Title : "EpicPlugin",
-  Author : "Unknown",
-  Version : V(0, 1, 0),
-  Description : "A basic chat command",
+    Title : "EpicPlugin",
+    Author : "Unknown",
+    Version : V(0, 1, 0),
+    Description : "A basic chat command",
 
-  Init: function ()
-  {
-    command.AddChatCommand('test', this.Plugin, 'TestCommand');
-  },
+    Init: function ()
+    {
+        command.AddChatCommand('test', this.Plugin, 'TestCommand');
+    },
 
-  TestCommand: function (player, cmd, arg)
-  {
-    player.Reply('Test successful!');
-  }
+    TestCommand: function (player, cmd, arg)
+    {
+        player.Reply('Test successful!');
+    }
 }
 ```
 
 ``` python
 class EpicPlugin:
-  def __init__(self):
-    self.Title = "EpicPlugin"
-    self.Description = "A basic chat command"
-    self.Author = "Unknown"
-    self.Version = V(1, 0, 0)
+    def __init__(self):
+        self.Title = "EpicPlugin"
+        self.Description = "A basic chat command"
+        self.Author = "Unknown"
+        self.Version = V(1, 0, 0)
 
-  def Init(self):
-    command.AddChatCommand("test", self.Plugin, "TestCommand")
+    def Init(self):
+        command.AddChatCommand("test", self.Plugin, "TestCommand")
 
-  def TestCommand(self, player, cmd, args):
-    player.Reply("Test successful!")
+    def TestCommand(self, player, cmd, args):
+        player.Reply("Test successful!")
 ```
 
 ## Console commands
@@ -120,34 +120,34 @@ We need a CoffeeScript example here
 
 ``` javascript
 var EpicPlugin = {
-  Title : "EpicPlugin",
-  Author : "Unknown",
-  Version : V(0, 1, 0),
-  Description : "A basic console command",
+    Title : "EpicPlugin",
+    Author : "Unknown",
+    Version : V(0, 1, 0),
+    Description : "A basic console command",
 
-  Init: function ()
-  {
-    command.AddConsoleCommand('global.test', this.Plugin, 'TestCommand');
-  },
+    Init: function ()
+    {
+        command.AddConsoleCommand('global.test', this.Plugin, 'TestCommand');
+    },
 
-  TestCommand: function (arg)
-  {
-    Puts('Test successful!');
-  }
+    TestCommand: function (arg)
+    {
+        Puts('Test successful!');
+    }
 }
 ```
 
 ``` python
 class EpicPlugin:
-  def __init__(self):
-    self.Title = "EpicPlugin"
-    self.Description = "A basic chat command"
-    self.Author = "Unknown"
-    self.Version = V(1, 0, 0)
+    def __init__(self):
+        self.Title = "EpicPlugin"
+        self.Description = "A basic chat command"
+        self.Author = "Unknown"
+        self.Version = V(1, 0, 0)
 
-  def Init(self):
-    command.AddConsoleCommand("global.test", self.Plugin, "TestCommand")
+    def Init(self):
+        command.AddConsoleCommand("global.test", self.Plugin, "TestCommand")
 
-  def TestCommand(self, player, cmd, args):
-    print("Test successful!")
+    def TestCommand(self, player, cmd, args):
+        print("Test successful!")
 ```

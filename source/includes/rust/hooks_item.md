@@ -36,7 +36,7 @@ def CanAcceptItem(self, container, item):
 ## OnBlueprintReveal
 
 ``` csharp
-void OnBlueprintReveal(Item item, Item revealed, BasePlayer player)
+void OnBlueprintReveal(Item item, BasePlayer player)
 {
     Puts("OnBlueprintReveal works!");
 }
@@ -63,7 +63,40 @@ def OnBlueprintReveal(self, item):
     print "OnBlueprintReveal works!"
 ```
 
- * Called when a player attempts to reveal a blueprint
+ * Called when the player attempts to reveal a blueprint
+ * Returning true overrides default behavior
+
+## OnBlueprintRevealed
+
+``` csharp
+void OnBlueprintRevealed(Item item, Item revealed, BasePlayer player)
+{
+    Puts("OnBlueprintRevealed works!");
+}
+```
+
+``` lua
+function PLUGIN:OnBlueprintRevealed(item)
+    print("OnBlueprintRevealed works!")
+end
+```
+
+``` javascript
+OnBlueprintRevealed: function(item) {
+    print("OnBlueprintRevealed works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnBlueprintRevealed(self, item):
+    print "OnBlueprintRevealed works!"
+```
+
+ * Called when the player has revealed a blueprint
  * No return behavior
 
 ## OnConsumableUse
@@ -394,7 +427,7 @@ def OnCollectiblePickup(self, item, player):
     print "OnCollectiblePickup works!"
 ```
 
- * Called when a player collects an item
+ * Called when the player collects an item
  * No return behavior
 
 ## OnItemResearch
@@ -497,7 +530,7 @@ def OnItemResearchStart(self, table):
     print "OnItemResearchStart works!"
 ```
 
- * Called when a player has started researching an item
+ * Called when the player has started researching an item
  * No return behavior
 
 ## OnItemRemovedFromContainer
@@ -663,7 +696,7 @@ def OnPlantGather(self, plant, item, player):
     print "OnPlantGather works!"
 ```
 
- * Called when a player gathers a plant
+ * Called when the player gathers a plant
  * No return behavior
 
 ## OnQuarryEnabled
@@ -795,7 +828,7 @@ def OnTrapArm(self, trap, player):
     print "OnTrapArm works!"
 ```
 
- * Called when a player arms a bear trap
+ * Called when the player arms a bear trap
  * No return behavior
 
 ## OnTrapDisarm
@@ -828,7 +861,7 @@ def OnTrapDisarm(self, trap, player):
     print "OnTrapDisarm works!"
 ```
 
- * Called when a player disarms a land mine
+ * Called when the player disarms a land mine
  * No return behavior
 
 ## OnTrapSnapped

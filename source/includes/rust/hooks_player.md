@@ -99,6 +99,39 @@ def CanBeWounded(self, player, info):
  * Called when any damage is attempted on player
  * Returning true overrides default behavior
 
+## CanBypassQueue
+
+``` csharp
+void CanBypassQueue(Network.Connection connection)
+{
+    Puts("CanBypassQueue works!");
+}
+```
+
+``` lua
+function PLUGIN:CanBypassQueue(connection)
+    print("CanBypassQueue works!")
+end
+```
+
+``` javascript
+CanBypassQueue: function(connection) {
+    print("CanBypassQueue works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def CanBypassQueue(self, connection):
+    print "CanBypassQueue works!"
+```
+
+ * Called before a player is added to the connection queue
+ * Returning true will bypass the queue, returning nothing will by default queue the player
+
 ## CanClientLogin
 
 ``` csharp
@@ -129,8 +162,9 @@ def CanClientLogin(self, connection):
     print "CanClientLogin works!"
 ```
 
+ * Called when the player is attempting to login
  * Returning a string will use the string as the error message
- * Returning true allowsthe connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
+ * Returning true allows the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
 
 ## CanEquipItem
 
@@ -162,7 +196,7 @@ def CanEquipItem(self, inventory, item):
     print "CanEquipItem works!"
 ```
 
- * Called when a player attempts to equip an item
+ * Called when the player attempts to equip an item
  * Returning true overrides default behavior
 
 ## CanLootPlayer
@@ -195,7 +229,7 @@ def CanLootPlayer(self, player, target):
     print "CanLootPlayer works!"
 ```
 
- * Called when a player attempts to loot another player
+ * Called when the player attempts to loot another player
  * Returning true overrides default behavior
 
 ## CanWearItem
@@ -228,7 +262,7 @@ def CanWearItem(self, inventory, item):
     print "CanWearItem works!"
 ```
 
- * Called when a player attempts to equip an item
+ * Called when the player attempts to equip an item
  * Returning true overrides default behavior
 
 ## OnExplosiveThrown
@@ -261,7 +295,7 @@ def OnExplosiveThrown(self, player, entity):
     print "OnExplosiveThrown works!"
 ```
 
- * Called when a player throws an explosive item (C4, grenade, ...)
+ * Called when the player throws an explosive item (C4, grenade, ...)
  * No return behavior
 
 ## OnFindSpawnPoint
@@ -361,7 +395,7 @@ def OnPlayerChat(self, arg):
     print "OnPlayerChat works!"
 ```
 
- * Called when a player sends chat to the server
+ * Called when the player sends chat to the server
  * Returning true overrides default behavior of chat, not commands
 
 ## OnPlayerConnected
@@ -530,6 +564,38 @@ def OnPlayerLanded(self, player):
  * Called when the player lands on the ground
  * No return behavior
 
+## OnPlayerRespawn
+
+``` csharp
+void OnPlayerRespawn(BasePlayer player)
+{
+    Puts("OnPlayerRespawn works!");
+}
+```
+
+``` lua
+function PLUGIN:OnPlayerRespawn(player)
+    print("OnPlayerRespawn works!")
+end
+```
+
+``` javascript
+OnPlayerRespawn: function(player) {
+    print("OnPlayerRespawn works!");
+}
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+def OnPlayerRespawn(self, player):
+    print "OnPlayerRespawn works!"
+```
+
+ * Called when the player is attempting to respawn
+ * Returning true overrides the default behavior
 
 ## OnPlayerRespawned
 
@@ -561,7 +627,7 @@ def OnPlayerRespawned(self, player):
     print "OnPlayerRespawned works!"
 ```
 
- * Called when the player spawns (specifically when they click the "Respawn" button)
+ * Called when the player has respawned (specifically when they click the "Respawn" button)
  * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
  * No return behavior
@@ -695,7 +761,7 @@ def OnMeleeThrown(self, player, item):
     print "OnMeleeThrown works!"
 ```
 
- * Called when a player throws a melee item (axe, rock, ...)
+ * Called when the player throws a melee item (axe, rock, ...)
  * No return behavior
 
 ## OnPlayerSleepEnded
@@ -728,7 +794,7 @@ def OnPlayerSleepEnded(self, player):
     print "OnPlayerSleepEnded works!"
 ```
 
- * Called when a player awakes
+ * Called when the player awakes
  * No return behavior
 
 ## OnRocketLaunched
@@ -761,7 +827,7 @@ def OnRocketLaunched(self, player, entity):
     print "OnRocketLaunched works!"
 ```
 
- * Called when a player launches a rocket
+ * Called when the player launches a rocket
  * No return behavior
 
 ## OnRunPlayerMetabolism
@@ -896,5 +962,5 @@ def OnWeaponFired(self, projectile, player, mod, projectiles):
     print "OnWeaponFired works!"
 ```
 
- * Called when a player fires a weapon
+ * Called when the player fires a weapon
  * No return behavior

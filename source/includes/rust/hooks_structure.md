@@ -17,21 +17,21 @@ end
 
 ``` coffeescript
 CanBuild: (player, door) =>
-  print "CanBuild works!"
+    print "CanBuild works!"
 ```
 
 ``` javascript
 CanBuild: function(player, door) {
-  print("CanBuild works!");
+    print("CanBuild works!");
 }
 ```
 
 ``` python
 def CanBuild(self, player, door):
-  print "CanBuild works!"
+    print "CanBuild works!"
 ```
 
- * Called when a player tries to use a locked door
+ * Called when the player tries to use a locked door
  * Returning true overrides default behavior
 
 ## CanUseDoor
@@ -51,21 +51,21 @@ end
 
 ``` coffeescript
 CanUseDoor: (player, door) =>
-  print "CanUseDoor works!"
+    print "CanUseDoor works!"
 ```
 
 ``` javascript
 CanUseDoor: function(player, door) {
-  print("CanUseDoor works!");
+    print("CanUseDoor works!");
 }
 ```
 
 ``` python
 def CanUseDoor(self, player, door):
-  print "CanUseDoor works!"
+    print "CanUseDoor works!"
 ```
 
- * Called when a player tries to use a locked door
+ * Called when the player tries to use a locked door
  * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## CanUseDoor
@@ -98,7 +98,7 @@ def CanUseDoor(self, player, door):
     print "CanUseDoor works!"
 ```
 
- * Called when a player tries to use a door with a code lock
+ * Called when the player tries to use a door with a code lock
  * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## CanUseDoor
@@ -131,7 +131,7 @@ def CanUseDoor(self, player, door):
     print "CanUseDoor works!"
 ```
 
- * Called when a player tries to use a door with a key lock
+ * Called when the player tries to use a door with a key lock
  * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
 ## OnCupboardClearList
@@ -197,7 +197,7 @@ def OnDoorClosed(self, door, player):
     print "OnDoorClosed works!"
 ```
 
- * Called when a player closed a door
+ * Called when the player closed a door
  * No return behavior
 
 ## OnDoorOpened
@@ -230,7 +230,7 @@ def OnDoorOpened(self, door, player):
     print "OnDoorOpened works!"
 ```
 
- * Called when a player opened a door
+ * Called when the player opened a door
  * No return behavior
 
 ## OnCupboardAuthorize
@@ -395,7 +395,7 @@ def OnStructureDemolish(self, block, player):
     print "OnStructureDemolish works!"
 ```
 
- * Called when a player selects DemolishImmediate from the BuildingBlock menu
+ * Called when the player selects DemolishImmediate from the BuildingBlock menu
  * Returning true overrides the demolition
 
 ## OnStructureRepair
@@ -428,7 +428,7 @@ def OnStructureRepair(self, block, player):
     print "OnStructureRepair works!"
 ```
 
- * Called when a player repairs a BuildingBlock
+ * Called when the player repairs a BuildingBlock
  * No return behavior
 
 ## OnStructureRotate
@@ -461,7 +461,7 @@ def OnStructureRotate(self, block, player):
     print "OnStructureRotate works!"
 ```
 
- * Called when a player rotates a BuildingBlock
+ * Called when the player rotates a BuildingBlock
  * No return behavior
 
 ## OnStructureUpgrade
@@ -494,5 +494,5 @@ def OnStructureUpgrade(self, block, player, grade):
     print "OnStructureUpgrade works!"
 ```
 
- * Called when a player upgrades the grade of a BuildingBlock
+ * Called when the player upgrades the grade of a BuildingBlock
  * Returning true overrides the upgrade

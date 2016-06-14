@@ -136,5 +136,5 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called when a player sends chat to the server
+ * Called when the player sends chat to the server
  * Returning true overrides default behavior of chat, not commands

@@ -17,21 +17,21 @@ end
 
 ``` coffeescript
 OnPlayerConnected: (player) =>
-  print "OnPlayerConnected works!"
+    print "OnPlayerConnected works!"
 ```
 
 ``` javascript
 OnPlayerConnected: function(player) {
-  print("OnPlayerConnected works!");
+    print("OnPlayerConnected works!");
 }
 ```
 
 ``` python
 def OnPlayerConnected(self, player):
-  print "OnPlayerConnected works!"
+    print "OnPlayerConnected works!"
 ```
 
- * Called when a player has connected to the server
+ * Called when the player has connected to the server
  * No return behavior
 
 ## OnPlayerDisconnected
@@ -51,21 +51,21 @@ end
 
 ``` coffeescript
 OnPlayerDisconnected: (player) =>
-  print "OnPlayerDisconnected works!"
+    print "OnPlayerDisconnected works!"
 ```
 
 ``` javascript
 OnPlayerDisconnected: function(player) {
-  print("OnPlayerDisconnected works!");
+    print("OnPlayerDisconnected works!");
 }
 ```
 
 ``` python
 def OnPlayerDisconnected(self, player):
-  print "OnPlayerDisconnected works!"
+    print "OnPlayerDisconnected works!"
 ```
 
- * Called when a player has disconnected from the server
+ * Called when the player has disconnected from the server
  * No return behavior
 
 ## OnPlayerChat
@@ -85,21 +85,21 @@ end
 
 ``` coffeescript
 OnPlayerChat: (message, name) =>
-  print "OnPlayerConnected works!"
+    print "OnPlayerConnected works!"
 ```
 
 ``` javascript
 OnPlayerChat: function(message, name) {
-  print("OnPlayerChat works!");
+    print("OnPlayerChat works!");
 }
 ```
 
 ``` python
 def OnPlayerChat(self, message, name):
-  print "OnPlayerChat works!"
+    print "OnPlayerChat works!"
 ```
 
- * Called when a player sends chat to the server
+ * Called when the player sends chat to the server
  * No return behavior
 
 ## OnPlayerRespawned
@@ -119,21 +119,21 @@ end
 
 ``` coffeescript
 OnPlayerRespawned: (player, reason) =>
-  print "OnPlayerRespawned works!"
+    print "OnPlayerRespawned works!"
 ```
 
 ``` javascript
 OnPlayerRespawned: function(player, reason) {
-  print("OnPlayerRespawned works!");
+    print("OnPlayerRespawned works!");
 }
 ```
 
 ``` python
 def OnPlayerRespawned(self, player, reason):
-  print "OnPlayerRespawned works!"
+    print "OnPlayerRespawned works!"
 ```
 
- * Called when a player has respawned
+ * Called when the player has respawned
  * No return behavior
 
 ## OnExperienceGained
@@ -153,19 +153,19 @@ end
 
 ``` coffeescript
 OnExperienceGained: (player, exp) =>
-  print "OnExperienceGained works!"
+    print "OnExperienceGained works!"
 ```
 
 ``` javascript
 OnExperienceGained: function(player, exp) {
-  print("OnExperienceGained works!");
+    print("OnExperienceGained works!");
 }
 ```
 
 ``` python
 def OnExperienceGained(self, player, exp):
-  print "OnExperienceGained works!"
+    print "OnExperienceGained works!"
 ```
 
- * Called when a player has gained experience
+ * Called when the player has gained experience
  * No return behavior

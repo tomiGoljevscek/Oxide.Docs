@@ -65,18 +65,18 @@ We need a CoffeeScript example here
 
 ``` javascript
 Init: function() {
-  this.LoadDataFiles();
+    this.LoadDataFiles();
 }
 
 var dataTable
 LoadDataFiles: function() {
-  dataTable = data.GetData("EpicPlugin");
+    dataTable = data.GetData("EpicPlugin");
 }
 ```
 
 ``` python
 def Init(self):
-  self.dataTable = data.GetData("EpicPlugin")
+    self.dataTable = data.GetData("EpicPlugin")
 ```
 To store plugin related data to use in your plugin, you want to create a data file.
 
@@ -156,15 +156,15 @@ We need a CoffeeScript example here
 
 ``` javascript
 cmdTest: function(player, cmd, args) {
-  var name = player.displayName;
-  dataTable[name] = true;
-  data.SaveData("EpicPlugin");
+    var name = player.displayName;
+    dataTable[name] = true;
+    data.SaveData("EpicPlugin");
 }
 ```
 
 ``` python
 def Init(self):
-  self.dataTable = data.GetData("EpicPlugin")
-  self.dataTable["name"] = True
-  data.SaveData("EpicPlugin")
+    self.dataTable = data.GetData("EpicPlugin")
+    self.dataTable["name"] = True
+    data.SaveData("EpicPlugin")
 ```

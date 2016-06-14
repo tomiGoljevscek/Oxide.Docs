@@ -17,18 +17,18 @@ end
 
 ``` coffeescript
 OnRunCommand: (client, args) =>
-  print "OnRunCommand works!"
+    print "OnRunCommand works!"
 ```
 
 ``` javascript
 OnRunCommand: function(client, args) {
-  print("OnRunCommand works!");
+    print("OnRunCommand works!");
 }
 ```
 
 ``` python
 def OnRunCommand(self, client, args):
-  print "OnRunCommand works!"
+    print "OnRunCommand works!"
 ```
 
  * Useful for intercepting commands before they get to their intended target

@@ -29,18 +29,18 @@ end
 
 ``` javascript
 Init: function() {
-  print("Init works!");
+    print("Init works!");
 }
 ```
 
 ``` coffeescript
 Init: ->
-  print "Init works!"
+    print "Init works!"
 ```
 
 ``` python
 def Init():
-  print "Init works!"
+    print "Init works!"
 ```
 
  * Called when a plugin is being initialized
@@ -63,18 +63,18 @@ end
 
 ``` javascript
 Loaded: function() {
-  print("Loaded works!");
+    print("Loaded works!");
 }
 ```
 
 ``` coffeescript
 Loaded: ->
-  print "Loaded works!"
+    print "Loaded works!"
 ```
 
 ``` python
 def Loaded():
-  print "Loaded works!"
+    print "Loaded works!"
 ```
 
  * Called when a plugin has finished loading
@@ -97,18 +97,18 @@ end
 
 ``` coffeescript
 Unload: ->
-  print "Save files, destroy timers, etc."
+    print "Save files, destroy timers, etc."
 ```
 
 ``` javascript
 Unload: function() {
-  print("Save files, destroy timers, etc");
+    print("Save files, destroy timers, etc");
 }
 ```
 
 ``` python
 def Unload():
-  print "Save files, destroy timers, etc."
+    print "Save files, destroy timers, etc."
 ```
 
  * Called when a plugin is being unloaded
@@ -130,18 +130,18 @@ end
 
 ``` coffeescript
 LoadDefaultConfig: ->
-  print "Default configuration created"
+    print "Default configuration created"
 ```
 
 ``` javascript
 LoadDefaultConfig: function() {
-  print("Default configuration created");
+    print("Default configuration created");
 }
 ```
 
 ``` python
 def LoadDefaultConfig():
-  print "Default configuration created"
+    print "Default configuration created"
 ```
 
  * Called when the config for a plugin should be initialized
@@ -164,18 +164,18 @@ end
 
 ``` coffeescript
 OnFrame: ->
-  print "OnFrame works!"
+    print "OnFrame works!"
 ```
 
 ``` javascript
 OnFrame: function() {
-  print("OnFrame works!");
+    print("OnFrame works!");
 }
 ```
 
 ``` python
 def OnFrame():
-  print "OnFrame works!"
+    print "OnFrame works!"
 ```
 
  * Placeholder
@@ -197,18 +197,18 @@ end
 
 ``` coffeescript
 OnPluginLoaded: (name) =>
-  print "Plugin '#{name}' has been loaded"
+    print "Plugin '#{name}' has been loaded"
 ```
 
 ``` javascript
 OnPluginLoaded: function(name) {
-  print("Plugin '" + name + "' has been loaded");
+    print("Plugin '" + name + "' has been loaded");
 }
 ```
 
 ``` python
 def OnPluginLoaded(name):
-  print "OnPluginLoaded works!"
+    print "OnPluginLoaded works!"
 ```
 
  * Called when a plugin has been loaded
@@ -230,18 +230,18 @@ end
 
 ``` coffeescript
 OnPluginUnloaded: (name) =>
-  print "Plugin '#{name}' has been unloaded"
+    print "Plugin '#{name}' has been unloaded"
 ```
 
 ``` javascript
 OnPluginUnloaded: function(name) {
-  print("Plugin '" + name + "' has been unloaded");
+    print("Plugin '" + name + "' has been unloaded");
 }
 ```
 
 ``` python
 def OnPluginUnloaded(name):
-  print "OnPluginUnloaded works!"
+    print "OnPluginUnloaded works!"
 ```
 
  * Called when a plugin has been unloaded
@@ -263,18 +263,18 @@ end
 
 ``` coffeescript
 OnServerInitialized: ->
-  print "OnServerInitialized works!"
+    print "OnServerInitialized works!"
 ```
 
 ``` javascript
 OnServerInitialized: function() {
-  print("OnServerInitialized works!");
+    print("OnServerInitialized works!");
 }
 ```
 
 ``` python
 def OnServerInitialized():
-  print "OnServerInitialized works!"
+    print "OnServerInitialized works!"
 ```
 
  * No return behavior
@@ -297,18 +297,18 @@ end
 
 ``` coffeescript
 OnServerSave: ->
-  print "OnServerSave works!"
+    print "OnServerSave works!"
 ```
 
 ``` javascript
 OnServerSave: function() {
-  print("OnServerSave works!");
+    print("OnServerSave works!");
 }
 ```
 
 ``` python
 def OnServerSave():
-  print "OnServerSave works!"
+    print "OnServerSave works!"
 ```
 
  * No return behavior
@@ -331,18 +331,18 @@ end
 
 ``` coffeescript
 OnUserPermissionGranted: (name, perm) =>
-  print "User '#{name}' granted permission: #{perm}"
+    print "User '#{name}' granted permission: #{perm}"
 ```
 
 ``` javascript
 OnUserPermissionGranted: function(name, perm) {
-  print("User '" + name + "' granted permission: " + perm);
+    print("User '" + name + "' granted permission: " + perm);
 }
 ```
 
 ``` python
 def OnUserPermissionGranted(name, perm):
-  print "OnUserPermissionGranted works!"
+    print "OnUserPermissionGranted works!"
 ```
 
  * Called when a permission has been granted to a user
@@ -364,18 +364,18 @@ end
 
 ``` coffeescript
 OnUserPermissionRevoked: (name, perm) =>
-  print "User '#{name}' revoked permission: #{perm}"
+    print "User '#{name}' revoked permission: #{perm}"
 ```
 
 ``` javascript
 OnUserPermissionRevoked: function(name, perm) {
-  print("User '" + name + "' revoked permission: " + perm);
+    print("User '" + name + "' revoked permission: " + perm);
 }
 ```
 
 ``` python
 def OnUserPermissionRevoked(name, perm):
-  print "OnUserPermissionRevoked works!"
+    print "OnUserPermissionRevoked works!"
 ```
 
  * Called when a permission has been revoked from a user
@@ -397,18 +397,18 @@ end
 
 ``` coffeescript
 OnGroupPermissionGranted: (name, perm) =>
-  print "Group '#{name}' granted permission: #{perm}"
+    print "Group '#{name}' granted permission: #{perm}"
 ```
 
 ``` javascript
 OnGroupPermissionGranted: function(name, perm) {
-  print("Group '" + name + "' granted permission: " + perm);
+    print("Group '" + name + "' granted permission: " + perm);
 }
 ```
 
 ``` python
 def OnGroupPermissionGranted(name, perm):
-  print "OnGroupPermissionGranted works!"
+    print "OnGroupPermissionGranted works!"
 ```
 
  * Called when a permission has been granted to a group
@@ -430,18 +430,18 @@ end
 
 ``` coffeescript
 OnGroupPermissionRevoked: (name, perm) =>
-  print "Group '#{name}' revoked permission: #{perm}"
+    print "Group '#{name}' revoked permission: #{perm}"
 ```
 
 ``` javascript
 OnGroupPermissionRevoked: function(name, perm) {
-  print("Group '" + name + "' revoked permission: " + perm);
+    print("Group '" + name + "' revoked permission: " + perm);
 }
 ```
 
 ``` python
 def OnGroupPermissionRevoked(name, perm):
-  print "OnGroupPermissionRevoked works!"
+    print "OnGroupPermissionRevoked works!"
 ```
 
  * Called when a permission has been revoked from a group

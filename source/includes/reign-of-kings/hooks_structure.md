@@ -17,18 +17,18 @@ end
 
 ``` coffeescript
 OnCubePlacement: (evt) =>
-  print "OnCubePlacement works!"
+    print "OnCubePlacement works!"
 ```
 
 ``` javascript
 OnCubePlacement: function(evt) {
-  print("OnCubePlacement works!");
+    print("OnCubePlacement works!");
 }
 ```
 
 ``` python
 def OnCubePlacement(self, evt):
-  print "OnCubePlacement works!"
+    print "OnCubePlacement works!"
 ```
 
  * Help! This is missing a description!
@@ -50,18 +50,18 @@ end
 
 ``` coffeescript
 OnCubeTakeDamage: (evt) =>
-  print "OnCubeTakeDamage works!"
+    print "OnCubeTakeDamage works!"
 ```
 
 ``` javascript
 OnCubeTakeDamage: function(evt) {
-  print("OnCubeTakeDamage works!");
+    print("OnCubeTakeDamage works!");
 }
 ```
 
 ``` python
 def OnCubeTakeDamage(self, evt):
-  print "OnCubeTakeDamage works!"
+    print "OnCubeTakeDamage works!"
 ```
 
  * Help! This is missing a description!
@@ -83,18 +83,18 @@ end
 
 ``` coffeescript
 OnCubeDestroyed: (evt) =>
-  print "OnCubeDestroyed works!"
+    print "OnCubeDestroyed works!"
 ```
 
 ``` javascript
 OnCubeDestroyed: function(evt) {
-  print("OnCubeDestroyed works!");
+    print("OnCubeDestroyed works!");
 }
 ```
 
 ``` python
 def OnCubeDestroyed(self, evt):
-  print "OnCubeDestroyed works!"
+    print "OnCubeDestroyed works!"
 ```
 
  * Help! This is missing a description!

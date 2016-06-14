@@ -42,6 +42,18 @@ Oxide support for Rust Legacy is mostly complete, but it may receive fixes as ne
 
 **[Homepage](http://playrust.com/) | [Steam Page](http://store.steampowered.com/app/252490/) | [API documentation](/rust-legacy/)**
 
+## Space Engineers
+
+Oxide support for Space Engineers is currently limited, and in a very alpha state. More hooks will be added soon.
+
+**[Homepage](http://www.spaceengineersgame.com/) | [Steam Page](http://store.steampowered.com/app/244850/) | [API documentation](/space-engineers/)**
+
+## Terraria
+
+Oxide support for Terraria is currently limited, and in a very alpha state. More hooks will be added soon.
+
+**[Homepage](https://terraria.org/) | [Steam Page](http://store.steampowered.com/app/105600/) | [API documentation](/terraria/)**
+
 ## The Forest
 
 Oxide support for The Forest is currently limited, and in a very alpha state. More hooks will be added soon.

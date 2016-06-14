@@ -17,18 +17,18 @@ end
 
 ``` coffeescript
 OnTerrainInitialized: ->
-  print "OnTerrainInitialized works!"
+    print "OnTerrainInitialized works!"
 ```
 
 ``` javascript
 OnTerrainInitialized: function() {
-  print("OnTerrainInitialized works!");
+    print("OnTerrainInitialized works!");
 }
 ```
 
 ``` python
 def OnTerrainInitialized(self):
-  print "OnTerrainInitialized works!"
+    print "OnTerrainInitialized works!"
 ```
 
  * Called after the terrain generation process has completed

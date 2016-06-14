@@ -17,18 +17,18 @@ end
 
 ``` coffeescript
 OnRunCommand: (arg, reply) =>
-  print "OnRunCommand works!"
+    print "OnRunCommand works!"
 ```
 
 ``` javascript
 OnRunCommand: function(arg, reply) {
-  print("OnRunCommand works!");
+    print("OnRunCommand works!");
 }
 ```
 
 ``` python
 def OnRunCommand(self, arg, reply):
-  print "OnRunCommand works!"
+    print "OnRunCommand works!"
 ```
 
  * Useful for intercepting commands before they get to their intended target (like chat.say)
@@ -74,18 +74,18 @@ end
 
 ``` coffeescript
 OnResourceNodeLoaded: (resource) =>
-  print "OnResourceNodeLoaded works!"
+    print "OnResourceNodeLoaded works!"
 ```
 
 ``` javascript
 OnResourceNodeLoaded: function(resource) {
-  print("OnResourceNodeLoaded works!");
+    print("OnResourceNodeLoaded works!");
 }
 ```
 
 ``` python
 def OnResourceNodeLoaded(self, resource):
-  print "OnResourceNodeLoaded works!"
+    print "OnResourceNodeLoaded works!"
 ```
 
  * Called when a resource is initializing

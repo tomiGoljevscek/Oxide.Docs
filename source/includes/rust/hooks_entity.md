@@ -50,18 +50,18 @@ end
 
 ``` coffeescript
 OnAirdrop: (plane, location) =>
-  print "OnAirdrop works!"
+    print "OnAirdrop works!"
 ```
 
 ``` javascript
 OnAirdrop: function(plane, location) {
-  print("OnAirdrop works!");
+    print("OnAirdrop works!");
 }
 ```
 
 ``` python
 def OnAirdrop(self, plane, location):
-  print "OnAirdrop works!"
+    print "OnAirdrop works!"
 ```
 
  * Called when an airdrop has been called

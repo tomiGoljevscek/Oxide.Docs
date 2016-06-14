@@ -19,18 +19,18 @@ end)
 
 ``` coffeescript
 timer.Once 3, ->
-  print "Hello world!"
+    print "Hello world!"
 ```
 
 ``` javascript
 timer.Once(3, function() {
-  print("Hello world!");
+    print("Hello world!");
 });
 ```
 
 ``` python
 def my_callback_func():
-  print("Hello world!")
+    print("Hello world!")
 
 timer.Once(3, Action(my_callback_func), self.Plugin)
 ```
@@ -54,19 +54,19 @@ end, self.Plugin)
 
 ``` coffeescript
 timer.Repeat 5, 0, (->
-  print "Hello world!"
+    print "Hello world!"
 ), @Plugin
 ```
 
 ``` javascript
 timer.Repeat(5, 0, function() {
-  print("Hello world!");
+    print("Hello world!");
 }, this.Plugin);
 ```
 
 ``` python
 def my_callback_func():
-  print("Hello world!")
+    print("Hello world!")
 
 timer.Repeat(5, 0, Action(my_callback_func), self.Plugin)
 ```
@@ -92,18 +92,18 @@ timer.NextFrame(function()
 
 ``` coffeescript
 timer.NextFrame ->
-  print "Hello world!"
+    print "Hello world!"
 ```
 
 ``` javascript
 timer.NextFrame(function() {
-  print("Hello world!");
+    print("Hello world!");
 });
 ```
 
 ``` python
 timer.NextFrame((lambda:
-  print("Hello world!")
+    print("Hello world!")
 ), self.Plugin)
 ```
 

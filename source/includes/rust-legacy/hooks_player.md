@@ -163,7 +163,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called when a player sends chat to the server
+ * Called when the player sends chat to the server
  * Returning true overrides default behavior of chat, not commands
 
 ## OnPlayerVoice
@@ -191,7 +191,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called when a player uses in-game voice communication
+ * Called when the player uses in-game voice communication
 
 ## OnItemCraft
 
@@ -218,7 +218,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called when a player starts crafting an item
+ * Called when the player starts crafting an item
  * Returning true overrides default behavior
 
 ## OnBlueprintUse
@@ -246,7 +246,7 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called when a player tries to study a blueprint
+ * Called when the player tries to study a blueprint
  * Returning true overrides default behavior
 
 ## OnResearchItem
@@ -274,5 +274,5 @@ We need a CoffeeScript example here
 We need a Python example here
 ```
 
- * Called when a player tries to research an item
+ * Called when the player tries to research an item
  * Returning a InventoryItem.MergeResult will cancel default behavior

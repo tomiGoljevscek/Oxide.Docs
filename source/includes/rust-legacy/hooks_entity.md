@@ -17,18 +17,18 @@ end
 
 ``` coffeescript
 OnAirdrop: (position) =>
-  print "OnAirdrop works!"
+    print "OnAirdrop works!"
 ```
 
 ``` javascript
 OnAirdrop: function(position) {
-  print("OnAirdrop works!");
+    print("OnAirdrop works!");
 }
 ```
 
 ``` python
 def OnAirDrop(self, position):
-  print "OnAirDrop works!"
+    print "OnAirDrop works!"
 ```
 
  * Called when an airdrop has been called
@@ -51,18 +51,18 @@ end
 
 ``` coffeescript
 OnHurt: (damage, evt) =>
-  print "OnHurt works!"
+    print "OnHurt works!"
 ```
 
 ``` javascript
 OnHurt: function(damage, evt) {
-  print("OnHurt works!");
+    print("OnHurt works!");
 }
 ```
 
 ``` python
 def OnHurt(self, damage, evt):
-  print "OnHurt works!"
+    print "OnHurt works!"
 ```
 
  * Called when any kind of entity takes damage
@@ -85,18 +85,18 @@ end
 
 ``` coffeescript
 OnKilled: (damage, evt) =>
-  print "OnKilled works!"
+    print "OnKilled works!"
 ```
 
 ``` javascript
 OnKilled: function(damage, evt) {
-  print("OnKilled works!");
+    print("OnKilled works!");
 }
 ```
 
 ``` python
 def OnKilled(self, damage, evt):
-  print "OnKilled works!"
+    print "OnKilled works!"
 ```
 
  * Called when any kind of entity was killed

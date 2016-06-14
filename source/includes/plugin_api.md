@@ -62,34 +62,34 @@ from System.Collections.Generic import Dictionary
 from System.Collections.Generic import List
 
 class EpicPlugin:
-  def __init__(self):
-    self.Title = "EpicPlugin"
-    self.Description = "Makes epic stuff happen"
-    self.Author = "Unknown"
-    self.Version = V(0, 1, 0)
+    def __init__(self):
+        self.Title = "EpicPlugin"
+        self.Description = "Makes epic stuff happen"
+        self.Author = "Unknown"
+        self.Version = V(0, 1, 0)
 
-  # Plugin methods can be a simple bool that is returned
-  def GetReturn(self):
-    return True
+    # Plugin methods can be a simple bool that is returned
+    def GetReturn(self):
+        return True
 
-  # Plugin methods can take parameters and return simple types
-  def TakeParam(self, param, secondParam):
-    if param == "first parameter":
-      return param
-    else:
-      return "First parameter didn't match!"
+    # Plugin methods can take parameters and return simple types
+    def TakeParam(self, param, secondParam):
+        if param == "first parameter":
+            return param
+        else:
+            return "First parameter didn't match!"
 
-  # To return complex types, they should first be converted
-  # into C# builtin types (e.g. System.Collections.Generic.Dictionary)
-  def ReturnObject(self):
-    myObject = Dictionary[str, object]()
-    myObject["key"] = "value"
-    myObject["array"] = List[object]()
-    return myObject
+    # To return complex types, they should first be converted
+    # into C# builtin types (e.g. System.Collections.Generic.Dictionary)
+    def ReturnObject(self):
+        myObject = Dictionary[str, object]()
+        myObject["key"] = "value"
+        myObject["array"] = List[object]()
+        return myObject
 
-  # Plugin methods don't have to return something
-  def SendMessage(self):
-    print("You just called the 'SendMessage' method!")
+    # Plugin methods don't have to return something
+    def SendMessage(self):
+        print("You just called the 'SendMessage' method!")
 ```
 
 Exposing an API method allows other plugins to call that method.
@@ -156,31 +156,31 @@ We need a javascript example here
 
 ``` python
 class SecondEpicPlugin:
-  def __init__(self):
-    self.Title = "SecondEpicPlugin"
-    self.Description = "Makes more epic stuff happen"
-    self.Author = "Unknown"
-    self.Version = V(0, 1, 0)
+    def __init__(self):
+        self.Title = "SecondEpicPlugin"
+        self.Description = "Makes more epic stuff happen"
+        self.Author = "Unknown"
+        self.Version = V(0, 1, 0)
 
-  def Init(self):
-    self.EpicPlugin = plugins.Find("EpicPlugin")
+    def Init(self):
+        self.EpicPlugin = plugins.Find("EpicPlugin")
 
-  def CallApi(self):
-    if self.EpicPlugin is None:
-      return
+    def CallApi(self):
+        if self.EpicPlugin is None:
+            return
 
-    # Python is dynamically typed, so casting is not necessary:
-    # the structure of the type matters, not the name
-    getReturn = self.EpicPlugin.Call("GetReturn")
+        # Python is dynamically typed, so casting is not necessary:
+        # the structure of the type matters, not the name
+        getReturn = self.EpicPlugin.Call("GetReturn")
 
-    # Send parameters through as variables after the method name
-    takeParam = self.EpicPlugin.Call("TakeParam", "param1", 1024)
+        # Send parameters through as variables after the method name
+        takeParam = self.EpicPlugin.Call("TakeParam", "param1", 1024)
 
-    # Access returned object like dictionary
-    returnedObject = self.EpicPlugin.Call("ReturnObject")
+        # Access returned object like dictionary
+        returnedObject = self.EpicPlugin.Call("ReturnObject")
 
-    # Call a plugin to do some work without returning anything
-    self.EpicPlugin.Call("SendMessage")
+        # Call a plugin to do some work without returning anything
+        self.EpicPlugin.Call("SendMessage")
 ```
 
 Calling an API method allows you to access results from another plugin.

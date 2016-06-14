@@ -17,18 +17,18 @@ end
 
 ``` coffeescript
 OnItemAdded: (inventory, slot, item) =>
-  print "OnItemAdded works!"
+    print "OnItemAdded works!"
 ```
 
 ``` javascript
 OnItemAdded: function(inventory, slot, item) {
-  print("OnItemAdded works!");
+    print("OnItemAdded works!");
 }
 ```
 
 ``` python
 def OnItemAdded(self, inventory, slot, item):
-  print "OnItemAdded works!"
+    print "OnItemAdded works!"
 ```
 
  * Called when an item was added to an inventory
@@ -51,18 +51,18 @@ end
 
 ``` coffeescript
 OnItemRemoved: (inventory, slot, item) =>
-  print "OnItemRemoved works!"
+    print "OnItemRemoved works!"
 ```
 
 ``` javascript
 OnItemRemoved: function(inventory, slot, item) {
-  print("OnItemRemoved works!");
+    print("OnItemRemoved works!");
 }
 ```
 
 ``` python
 def OnItemRemoved(self, inventory, slot, item):
-  print "OnItemRemoved works!"
+    print "OnItemRemoved works!"
 ```
 
  * Called when an item was removed from an inventory
@@ -85,18 +85,18 @@ end
 
 ``` coffeescript
 OnItemDeployed: (deployable, item) =>
-  print "OnItemDeployed works!"
+    print "OnItemDeployed works!"
 ```
 
 ``` javascript
 OnItemDeployed: function(deployable, item) {
-  print("OnItemDeployed works!");
+    print("OnItemDeployed works!");
 }
 ```
 
 ``` python
 def OnItemDeployed(self, deployable, item):
-  print "OnItemDeployed works!"
+    print "OnItemDeployed works!"
 ```
 
  * Called when an item was deployed by a player
