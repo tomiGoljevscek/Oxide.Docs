@@ -14,6 +14,7 @@ includes:
   - universal_hooks
   - timers_basic
   - web_requests
+  - plugin_api
   - styling_messages
 
 search: true

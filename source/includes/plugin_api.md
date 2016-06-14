@@ -1,8 +1,8 @@
 # Plugin API
 
-Oxide allows you to expose hooks in your plugin and make them available to other plugins. This allows you to access objects or properties from other plugins without having to replicate functionality yourself.
+Oxide allows you to expose methods in your plugin and make them available to other plugins. This allows you to access objects or properties from other plugins without having to replicate functionality yourself.
 
-## Exposing an API Hook
+## Exposing an API method
 
 ``` csharp
 namespace Oxide.Plugins
@@ -10,19 +10,16 @@ namespace Oxide.Plugins
     [Info("EpicPlugin", "Unknown", 0.1)]
     [Description("Makes epic stuff happen")]
 
-    class EpicPlugin : RustPlugin
+    class EpicPlugin : CovalencePlugin
     {
-        // The HookMethod parameter is the name of the hook exposed
-        // In this case, our hook is called "GetReturn"
-        [HookMethod("GetReturn")]
-        bool GetReturn()
+        // Plugin methods can be a simple bool that is returned
+        public bool GetReturn()
         {
             return true;
         }
 
-        // Hooks can take parameters and return simple types
-        [HookMethod("TakeParam")]
-        string TakeParam(string param, int secondParam)
+        // Plugin methods can take parameters and return simple types
+        public string TakeParam(string param, int secondParam)
         {
             if (param == "first parameter") return param;
             else return "First parameter didn't match!";
@@ -31,8 +28,7 @@ namespace Oxide.Plugins
         // To return complex types, they should first be converted
         // into builtin types (e.g. JSON.net types like JObject, JArray, etc. or builtin
         // collections like System.Collections.Generic.Dictionary)
-        [HookMethod("ReturnObject")]
-        JObject ReturnObject()
+        public JObject ReturnObject()
         {
             var myObject = new JObject();
             myObject["key"] = "value";
@@ -40,11 +36,10 @@ namespace Oxide.Plugins
             return myObject;
         }
 
-        // Hooks don't have to return something
-        [HookMethod("SendMessage")]
-        void SendMessage(BasePlayer player)
+        // Plugin methods don't have to return something
+        public void SendMessage()
         {
-            PrintToChat(player, "You just called the 'SendMessage' hook!");
+            Puts("You just called the 'SendMessage' method!");
         }
     }
 }
@@ -73,11 +68,11 @@ class EpicPlugin:
     self.Author = "Unknown"
     self.Version = V(0, 1, 0)
 
-  # Every method can be used in other plugins
+  # Plugin methods can be a simple bool that is returned
   def GetReturn(self):
     return True
 
-  # Hooks can take parameters and return simple types
+  # Plugin methods can take parameters and return simple types
   def TakeParam(self, param, secondParam):
     if param == "first parameter":
       return param
@@ -92,15 +87,16 @@ class EpicPlugin:
     myObject["array"] = List[object]()
     return myObject
 
+  # Plugin methods don't have to return something
   def SendMessage(self):
-    print("You just called the 'SendMessage' hook!")
+    print("You just called the 'SendMessage' method!")
 ```
 
-Exposing an API hook allows other plugins to call that hook.
+Exposing an API method allows other plugins to call that method.
 
-For example, you could write a plugin that does some player management, then allow other plugins to "query" it via an API hook to get a list of players who have certain privileges set in the original plugin.
+For example, you could write a plugin that does some player management, then allow other plugins to "query" it via an API method to get a list of players who have certain privileges set in the original plugin.
 
-## Calling an API Hook
+## Calling an API method
 
 ``` csharp
 namespace Oxide.Plugins
@@ -108,15 +104,15 @@ namespace Oxide.Plugins
     [Info("SecondEpicPlugin", "Unknown", 0.1)]
     [Description("Makes more epic stuff happen")]
 
-    class SecondEpicPlugin : RustPlugin
+    class SecondEpicPlugin : CovalencePlugin
     {
-        // First, add a reference to the plugin you are trying to hook into
+        // First, add a reference to the plugin you are trying to call
         // The name of this field needs to be the exact name of the desired plugin
         // eg. We are referencing the example plugin above which is called 'EpicPlugin'
         [PluginReference] EpicPlugin;
         
-        // It's a good idea to check if the plugin you're trying to hook into
-        // has been loaded by oxide (otherwise you can't call the hook)
+        // It's a good idea to check if the plugin you're trying to call
+        // has been loaded by oxide (otherwise you can't call the method)
         void OnServerInitialized()
         {
             // Note: Trying to do this check in the plugin Init() method may
@@ -129,18 +125,18 @@ namespace Oxide.Plugins
 
         void CallApi()
         {
-            // Plugin hooks return objects, so cast the API call to the type
+            // Plugin methods return objects, so cast the API call to the type
             // you're expecting
             var getTypedReturn = (bool)EpicPlugin?.Call("GetReturn");
 
-            // Send parameters through as variables after the hook name
+            // Send parameters through as variables after the method name
             var takeParam = (string)EpicPlugin?.Call("TakeParam", "param1", 1024);
 
             // Use JSON.net to process the returned object
             var returnedObject = EpicPlugin?.Call("ReturnObject");
 
             // Call a plugin to do some work without returning anything
-            EpicPlugin?.Call("SendMessage", player);
+            EpicPlugin?.Call("SendMessage");
         }
     }
 }
@@ -177,7 +173,7 @@ class SecondEpicPlugin:
     # the structure of the type matters, not the name
     getReturn = self.EpicPlugin.Call("GetReturn")
 
-    # Send parameters through as variables after the hook name
+    # Send parameters through as variables after the method name
     takeParam = self.EpicPlugin.Call("TakeParam", "param1", 1024)
 
     # Access returned object like dictionary
@@ -187,4 +183,4 @@ class SecondEpicPlugin:
     self.EpicPlugin.Call("SendMessage")
 ```
 
-Calling an API hook allows you to access results from another plugin.
+Calling an API method allows you to access results from another plugin.

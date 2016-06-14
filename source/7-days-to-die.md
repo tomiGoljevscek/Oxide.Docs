@@ -18,6 +18,7 @@ includes:
   - 7-days-to-die/library_functions
   - timers_basic
   - web_requests
+  - plugin_api
 
 search: true
 ---

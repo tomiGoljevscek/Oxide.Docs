@@ -43,7 +43,7 @@ end, self.Plugin)
 
 ``` javascript
 timer.Repeat(10, 0, function() {
-    rust.BroadcastChat("SERVER", "Hello world!");
+  rust.BroadcastChat("SERVER", "Hello world!");
 }, this.Plugin);
 ```
 
@@ -53,7 +53,7 @@ We need a CoffeeScript example here
 
 ``` python
 def my_callback_func():
-    rust.BroadcastChat("SERVER", "Hello world!")
+  rust.BroadcastChat("SERVER", "Hello world!")
 timer.Repeat(10, 0, Action(my_callback_func), self.Plugin)
 ```
 
@@ -105,7 +105,7 @@ end
 
 ``` javascript
 if (timerVariable) {
-    timerVariable.Destroy();
+  timerVariable.Destroy();
 }
 ```
 
@@ -115,7 +115,7 @@ We need a CoffeeScript example here
 
 ``` python
 if timerVariable:
-    timerVariable.Destroy()
+  timerVariable.Destroy()
 ```
 
 When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
@@ -139,18 +139,18 @@ end
 
 ``` coffeescript
 if variable?
-    variable.Destroy()
+  variable.Destroy()
 ```
 
 ``` javascript
 if (variable) {
-    variable.Destroy();
+  variable.Destroy();
 }
 ```
 
 ``` python
 if variable:
-    variable.Destroy()
+  variable.Destroy()
 ```
 
 When used correctly, timers are automatically destroyed when the plugin is reload or unloaded.
