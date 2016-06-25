@@ -702,21 +702,21 @@ def OnPlantGather(self, plant, item, player):
 ## OnQuarryEnabled
 
 ``` csharp
-void OnQuarryGather(MiningQuarry quarry, Item item)
+void OnQuarryEnabled(MiningQuarry quarry)
 {
-    Puts("OnQuarryGather works!");
+    Puts("OnQuarryEnabled works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnQuarryGather(quarry, item)
-    print("OnQuarryGather works!")
+function PLUGIN:OnQuarryEnabled(quarry)
+    print("OnQuarryEnabled works!")
 end
 ```
 
 ``` javascript
-OnQuarryGather: function(quarry, item) {
-    print("OnQuarryGather works!");
+OnQuarryEnabled: function(quarry) {
+    print("OnQuarryEnabled works!");
 }
 ```
 
@@ -725,8 +725,8 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnQuarryGather(self, quarry, item):
-    print "OnQuarryGather works!"
+def OnQuarryEnabled(self, quarry):
+    print "OnQuarryEnabled works!"
 ```
 
  * Called when a mining quarry is turned on/enabled
