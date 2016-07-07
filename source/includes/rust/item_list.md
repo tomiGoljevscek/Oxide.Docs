@@ -44,10 +44,6 @@
 | 1611480185    | Black Raspberries            | black.raspberries        |
 | 93832698      | Blood                        | blood                    |
 | -1063412582   | Blueberries                  | blueberries              |
-| 1624763669    | Blueprint Book               | blueprint_book           |
-| 1351589500    | Blueprint Fragment           | blueprint_fragment       |
-| -845335793    | Blueprint Library            | blueprint_library        |
-| 1625167035    | Blueprint Page               | blueprint_page           |
 | 1186854727    | Bone Jacket                  | bone.armor.jacket        |
 | 459479619     | Bone Armor Pants             | bone.armor.pants         |
 | 919780768     | Bone Club                    | bone.club                |
