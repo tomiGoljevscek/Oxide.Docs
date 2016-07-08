@@ -14,6 +14,7 @@ includes:
   - universal_hooks
   - rust/hooks_general
   - rust/hooks_player
+  - rust/hooks_experience
   - rust/hooks_entity
   - rust/hooks_item
   - rust/hooks_sign
