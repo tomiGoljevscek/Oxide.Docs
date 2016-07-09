@@ -3,7 +3,7 @@
 ## OnPlayerConnected
 
 ``` csharp
-void OnPlayerConnected(EntityPlayer player)
+void OnPlayerConnected(ClientInfo info)
 {
     Puts("OnPlayerConnected works!");
 }
@@ -37,7 +37,7 @@ def OnPlayerConnected(self, player):
 ## OnPlayerDisconnected
 
 ``` csharp
-void OnPlayerDisconnected(EntityPlayer player)
+void OnPlayerDisconnected(ClientInfo info)
 {
     Puts("OnPlayerDisconnected works!");
 }
@@ -105,31 +105,31 @@ def OnPlayerChat(self, message, name):
 ## OnPlayerRespawned
 
 ``` csharp
-void OnPlayerRespawned(EntityPlayer player, string reason)
+void OnPlayerRespawned(ClientInfo info, string reason)
 {
     Puts("OnPlayerRespawned works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlayerRespawned(player, reason)
+function PLUGIN:OnPlayerRespawned(client, reason)
     print("OnPlayerRespawned works!")
 end
 ```
 
 ``` coffeescript
-OnPlayerRespawned: (player, reason) =>
+OnPlayerRespawned: (client, reason) =>
     print "OnPlayerRespawned works!"
 ```
 
 ``` javascript
-OnPlayerRespawned: function(player, reason) {
+OnPlayerRespawned: function(client, reason) {
     print("OnPlayerRespawned works!");
 }
 ```
 
 ``` python
-def OnPlayerRespawned(self, player, reason):
+def OnPlayerRespawned(self, client, reason):
     print "OnPlayerRespawned works!"
 ```
 
@@ -139,31 +139,31 @@ def OnPlayerRespawned(self, player, reason):
 ## OnExperienceGained
 
 ``` csharp
-void OnExperienceGained(EntityPlayer player, uint exp)
+void OnExperienceGained(ClientInfo info, uint exp)
 {
     Puts("OnExperienceGained works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnExperienceGained(player, exp)
+function PLUGIN:OnExperienceGained(client, exp)
     print("OnExperienceGained works!")
 end
 ```
 
 ``` coffeescript
-OnExperienceGained: (player, exp) =>
+OnExperienceGained: (client, exp) =>
     print "OnExperienceGained works!"
 ```
 
 ``` javascript
-OnExperienceGained: function(player, exp) {
+OnExperienceGained: function(client, exp) {
     print("OnExperienceGained works!");
 }
 ```
 
 ``` python
-def OnExperienceGained(self, player, exp):
+def OnExperienceGained(self, client, exp):
     print "OnExperienceGained works!"
 ```
 
