@@ -3,7 +3,7 @@
 ## CanSpendXp
 
 ``` csharp
-bool CanSpendXp(BasePlayer player, float amount) 
+bool CanSpendXp(ulong id, float amount) 
 {
     Puts("CanSpendXp works!");
     return true;
@@ -11,13 +11,13 @@ bool CanSpendXp(BasePlayer player, float amount)
 ```
 
 ``` lua
-function PLUGIN:CanSpendXp(player, amount)
+function PLUGIN:CanSpendXp(id, amount)
     print("CanSpendXp works!")
 end
 ```
 
 ``` javascript
-CanSpendXp: function(player, turret) {
+CanSpendXp: function(id, turret) {
     print("CanSpendXp works!");
 }
 ```
@@ -27,7 +27,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def CanSpendXp(self, player, turret):
+def CanSpendXp(self, id, turret):
     print "CanSpendXp works!"
 ```
 
@@ -37,7 +37,7 @@ def CanSpendXp(self, player, turret):
 ## OnXpEarn
 
 ``` csharp
-object OnXpEarn(BasePlayer player, float amount, string source)
+object OnXpEarn(ulong id, float amount, string source)
 {
     Puts("OnXpEarn works!");
     return 1f;
@@ -45,13 +45,13 @@ object OnXpEarn(BasePlayer player, float amount, string source)
 ```
 
 ``` lua
-function PLUGIN:OnXpEarn(player, info)
+function PLUGIN:OnXpEarn(id, info)
     print("OnXpEarn works!")
 end
 ```
 
 ``` javascript
-OnXpEarn: function(player, info) {
+OnXpEarn: function(id, info) {
     print("OnXpEarn works!");
 }
 ```
@@ -61,7 +61,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnXpEarn(self, player, info):
+def OnXpEarn(self, id, info):
     print "OnXpEarn works!"
 ```
 
@@ -71,7 +71,7 @@ def OnXpEarn(self, player, info):
 ## OnXpEarned
 
 ``` csharp
-void OnXpEarned(BasePlayer player, float amount, string source)
+void OnXpEarned(ulong id, float amount, string source)
 {
     Puts("OnXpEarned works!");
 }
@@ -137,7 +137,7 @@ def OnXpReset(self, connection):
 ## OnXpSet
 
 ``` csharp
-void OnXpSet(BasePlayer player, float amount)
+void OnXpSet(ulong id, float amount)
 {
     Puts("OnXpSet works!");
 }
@@ -170,7 +170,7 @@ def OnXpSet(self, connection):
 ## OnXpSpent
 
 ``` csharp
-void OnXpSpent(BasePlayer player, float amount)
+void OnXpSpent(ulong id, float amount)
 {
     Puts("OnXpSpent works!");
 }
