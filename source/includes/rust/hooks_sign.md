@@ -112,24 +112,24 @@ void OnSignLocked(Signage sign, BasePlayer player)
 ```
 
 ``` lua
-function PLUGIN:OnSignLocked(player, sign)
+function PLUGIN:OnSignLocked(sign, player)
     print("OnSignLocked works!")
 end
 ```
 
 ``` coffeescript
-OnSignLocked: (player, sign) =>
+OnSignLocked: (sign, player) =>
     print "OnSignLocked works!"
 ```
 
 ``` javascript
-OnSignLocked: function(player, sign) {
+OnSignLocked: function(sign, player) {
     print("OnSignLocked works!");
 }
 ```
 
 ``` python
-def OnSignLocked(self, player, sign):
+def OnSignLocked(self, sign, player):
     print "OnSignLocked works!"
 ```
 
@@ -146,24 +146,24 @@ void OnSignUpdate(Signage sign, BasePlayer player)
 ```
 
 ``` lua
-function PLUGIN:OnSignUpdate(player, sign, text)
+function PLUGIN:OnSignUpdate(sign, player, text)
     print("OnSignUpdate works!")
 end
 ```
 
 ``` coffeescript
-OnSignUpdate: (player, sign, text) =>
+OnSignUpdate: (sign, player, text) =>
     print "OnSignUpdate works!"
 ```
 
 ``` javascript
-OnSignUpdate: function(player, sign, text) {
+OnSignUpdate: function(sign, player, text) {
     print("OnSignUpdate works!");
 }
 ```
 
 ``` python
-def OnSignUpdate(self, player, sign, text):
+def OnSignUpdate(self, sign, player, text):
     print "OnSignUpdate works!"
 ```
 
@@ -180,24 +180,24 @@ void OnSignUpdated(Signage sign, BasePlayer player, string text)
 ```
 
 ``` lua
-function PLUGIN:OnSignUpdated(player, sign, text)
+function PLUGIN:OnSignUpdated(sign, player, text)
     print("OnSignUpdated works!")
 end
 ```
 
 ``` coffeescript
-OnSignUpdated: (player, sign, text) =>
+OnSignUpdated: (sign, player, text) =>
     print "OnSignUpdated works!"
 ```
 
 ``` javascript
-OnSignUpdated: function(player, sign, text) {
+OnSignUpdated: function(sign, player, text) {
     print("OnSignUpdated works!");
 }
 ```
 
 ``` python
-def OnSignUpdated(self, player, sign, text):
+def OnSignUpdated(self, sign, player, text):
     print "OnSignUpdated works!"
 ```
 
