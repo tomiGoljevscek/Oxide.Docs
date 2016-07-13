@@ -3,7 +3,7 @@
 ## CanSpendXp
 
 ``` csharp
-bool CanSpendXp(ulong id, float amount) 
+bool CanSpendXp(ulong id, int amount, string item) 
 {
     Puts("CanSpendXp works!");
     return true;
@@ -11,13 +11,13 @@ bool CanSpendXp(ulong id, float amount)
 ```
 
 ``` lua
-function PLUGIN:CanSpendXp(id, amount)
+function PLUGIN:CanSpendXp(id, amount, item)
     print("CanSpendXp works!")
 end
 ```
 
 ``` javascript
-CanSpendXp: function(id, turret) {
+CanSpendXp: function(id, amount, item) {
     print("CanSpendXp works!");
 }
 ```
@@ -27,7 +27,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def CanSpendXp(self, id, turret):
+def CanSpendXp(self, id, amount, item):
     print "CanSpendXp works!"
 ```
 
@@ -45,13 +45,13 @@ object OnXpEarn(ulong id, float amount, string source)
 ```
 
 ``` lua
-function PLUGIN:OnXpEarn(id, info)
+function PLUGIN:OnXpEarn(id, amount, category)
     print("OnXpEarn works!")
 end
 ```
 
 ``` javascript
-OnXpEarn: function(id, info) {
+OnXpEarn: function(id, amount, category) {
     print("OnXpEarn works!");
 }
 ```
@@ -61,7 +61,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnXpEarn(self, id, info):
+def OnXpEarn(self, id, amount, category):
     print "OnXpEarn works!"
 ```
 
@@ -78,13 +78,13 @@ void OnXpEarned(ulong id, float amount, string source)
 ```
 
 ``` lua
-function PLUGIN:OnXpEarned(connection)
+function PLUGIN:OnXpEarned(id, amount, source)
     print("OnXpEarned works!")
 end
 ```
 
 ``` javascript
-OnXpEarned: function(connection) {
+OnXpEarned: function(id, amount, source) {
     print("OnXpEarned works!");
 }
 ```
@@ -94,7 +94,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnXpEarned(self, connection):
+def OnXpEarned(self, id, amount, source):
     print "OnXpEarned works!"
 ```
 
@@ -111,13 +111,13 @@ void OnXpReset(BasePlayer player)
 ```
 
 ``` lua
-function PLUGIN:OnXpReset(connection)
+function PLUGIN:OnXpReset(player)
     print("OnXpReset works!")
 end
 ```
 
 ``` javascript
-OnXpReset: function(connection) {
+OnXpReset: function(player) {
     print("OnXpReset works!");
 }
 ```
@@ -127,7 +127,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnXpReset(self, connection):
+def OnXpReset(self, player):
     print "OnXpReset works!"
 ```
 
@@ -144,13 +144,13 @@ void OnXpSet(ulong id, float amount)
 ```
 
 ``` lua
-function PLUGIN:OnXpSet(connection)
+function PLUGIN:OnXpSet(id, amount)
     print("OnXpSet works!")
 end
 ```
 
 ``` javascript
-OnXpSet: function(connection) {
+OnXpSet: function(id, amount) {
     print("OnXpSet works!");
 }
 ```
@@ -160,7 +160,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnXpSet(self, connection):
+def OnXpSet(self, id, amount):
     print "OnXpSet works!"
 ```
 
@@ -170,20 +170,20 @@ def OnXpSet(self, connection):
 ## OnXpSpent
 
 ``` csharp
-void OnXpSpent(ulong id, float amount)
+void OnXpSpent(ulong id, int amount, string item)
 {
     Puts("OnXpSpent works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnXpSpent(connection)
+function PLUGIN:OnXpSpent(id, amount, item)
     print("OnXpSpent works!")
 end
 ```
 
 ``` javascript
-OnXpSpent: function(connection) {
+OnXpSpent: function(id, amount, item) {
     print("OnXpSpent works!");
 }
 ```
@@ -193,7 +193,7 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnXpSpent(self, connection):
+def OnXpSpent(self, id, amount, item):
     print "OnXpSpent works!"
 ```
 
