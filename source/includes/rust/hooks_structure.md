@@ -1,6 +1,6 @@
 # Structure Hooks
 
-## CanUseDoor
+## CanBuild
 
 ``` csharp
 void CanBuild(Planner plan, Construction prefab)
@@ -10,28 +10,28 @@ void CanBuild(Planner plan, Construction prefab)
 ```
 
 ``` lua
-function PLUGIN:CanBuild(player, door)
+function PLUGIN:CanBuild(player, prefab)
     print("CanBuild works!")
 end
 ```
 
 ``` coffeescript
-CanBuild: (player, door) =>
+CanBuild: (player, prefab) =>
     print "CanBuild works!"
 ```
 
 ``` javascript
-CanBuild: function(player, door) {
+CanBuild: function(player, prefab) {
     print("CanBuild works!");
 }
 ```
 
 ``` python
-def CanBuild(self, player, door):
+def CanBuild(self, player, prefab):
     print "CanBuild works!"
 ```
 
- * Called when the player tries to use a locked door
+ * Called when the player tries to build something
  * Returning true overrides default behavior
 
 ## CanUseDoor

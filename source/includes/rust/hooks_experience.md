@@ -3,10 +3,10 @@
 ## CanSpendXp
 
 ``` csharp
-bool CanSpendXp(ulong id, int amount, string item) 
+object CanSpendXp(ulong id, int amount, string item) 
 {
     Puts("CanSpendXp works!");
-    return true;
+    return null;
 }
 ```
 
