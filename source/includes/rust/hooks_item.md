@@ -597,7 +597,7 @@ def OnItemSplit(self, item, amount):
     print "OnItemSplit works!"
 ```
 
- * Called right before an item is upgraded
+ * Called right before an item is split into multiple stacks
  * No return behavior
 
 ## OnItemUpgrade
