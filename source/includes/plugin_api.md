@@ -109,7 +109,7 @@ namespace Oxide.Plugins
         // First, add a reference to the plugin you are trying to call
         // The name of this field needs to be the exact name of the desired plugin
         // eg. We are referencing the example plugin above which is called 'EpicPlugin'
-        [PluginReference] EpicPlugin;
+        [PluginReference] Plugin EpicPlugin;
         
         // It's a good idea to check if the plugin you're trying to call
         // has been loaded by oxide (otherwise you can't call the method)
