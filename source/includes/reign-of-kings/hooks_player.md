@@ -111,6 +111,34 @@ We need a Python example here
  * No return behavior
  * Called when the player spawns
 
+## OnPlayerRespawn
+
+``` csharp
+void OnPlayerRespawn(PlayerRespawnEvent e)
+{
+    Puts("OnPlayerRespawn works!");
+}
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * No return behavior
+ * Called when the player respawns
+
 ## OnPlayerChat
 
 ``` csharp
