@@ -89,6 +89,7 @@
 | -1571725662   | Armored Door                 | door.hinged.toptier      |
 | 1456441506    | Wooden Door                  | door.hinged.wood         |
 | 1200628767    | Door Key                     | door.key                 |
+| 1295154089    | Satchel Charge               | explosive.satchel        |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
 | 1755466030    | Explosives                   | explosives               |
 | -1034048911   | Animal Fat                   | fat.animal               |
@@ -188,6 +189,7 @@
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
 | 2057749608    | Salvaged Shelves             | shelves                  |
 | 2107229499    | Boots                        | shoes.boots              |
+| 191795897     | Double Barrel Shotgun        | shotgun.double           |
 | -1009492144   | Pump Shotgun                 | shotgun.pump             |
 | 2077983581    | Waterpipe Shotgun            | shotgun.waterpipe        |
 | -529054135    | Metal horizontal embrasure   | shutter.metal.embrasure.a|
