@@ -397,7 +397,7 @@ def OnItemDeployed(self, deployer, entity):
  * Called right after an item has been deployed
  * No return behavior
 
-## OnItemPickup
+## OnCollectiblePickup
 
 ``` csharp
 void OnCollectiblePickup(Item item, BasePlayer player)
