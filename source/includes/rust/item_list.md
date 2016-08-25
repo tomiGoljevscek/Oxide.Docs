@@ -44,6 +44,7 @@
 | 1611480185    | Black Raspberries            | black.raspberries        |
 | 93832698      | Blood                        | blood                    |
 | -1063412582   | Blueberries                  | blueberries              |
+| -1887162396   | Blueprint                    | blueprintbase            |
 | 1186854727    | Bone Jacket                  | bone.armor.jacket        |
 | 459479619     | Bone Armor Pants             | bone.armor.pants         |
 | 919780768     | Bone Club                    | bone.club                |
@@ -173,8 +174,10 @@
 | 640562379     | Pookie Bear                  | pookie.bear              |
 | -225085592    | Pumpkin                      | pumpkin                  |
 | 1987447227    | Research Table               | research.table           |
+| 540154065     | Research Paper               | researchpaper            |
 | -1461508848   | Assault Rifle                | rifle.ak                 |
 | -55660037     | Bolt Action Rifle            | rifle.bolt               |
+| -1716193401   | LR-300 Assault Rifle         | rifle.lr300              |
 | -1745053053   | Semi-Automatic Rifle         | rifle.semiauto           |
 | 340009023     | Riot Helmet                  | riot.helmet              |
 | -288010497    | Road Sign Jacket             | roadsign.jacket          |
