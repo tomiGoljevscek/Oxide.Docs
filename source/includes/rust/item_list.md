@@ -47,6 +47,7 @@
 | -1887162396   | Blueprint                    | blueprintbase            |
 | 1186854727    | Bone Jacket                  | bone.armor.jacket        |
 | 459479619     | Bone Armor Pants             | bone.armor.pants         |
+| 569119686     | Bone Armor                   | bone.armor.suit          |
 | 919780768     | Bone Club                    | bone.club                |
 | -365801095    | Bone Fragments               | bone.fragments           |
 | 68998734      | Bota Bag                     | botabag                  |
@@ -62,6 +63,7 @@
 | 707427396     | Burlap Shirt                 | burlap.shirt             |
 | 707432758     | Burlap Shoes                 | burlap.shoes             |
 | 1767561705    | Burlap Trousers              | burlap.trousers          |
+| -2079677721   | Cactus Flesh                 | cactusflesh              |
 | -139769801    | Camp Fire                    | campfire                 |
 | -1043746011   | Can of Beans                 | can.beans                |
 | 2080339268    | Empty Can Of Beans           | can.beans.empty          |
@@ -83,6 +85,7 @@
 | 2123300234    | Crossbow                     | crossbow                 |
 | 1983936587    | Crude Oil                    | crude.oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
+| -1178289187   | Bone Helmet                  | deer.skull.mask          |
 | -1598790097   | Sheet Metal Double Door      | door.double.hinged.metal |
 | -933236257    | Armored Double Door          | door.double.hinged.toptier|
 | -1575287163   | Wood Double Door             | door.double.hinged.wood  |
