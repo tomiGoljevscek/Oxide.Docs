@@ -166,3 +166,57 @@ We need a Python example here
 
  * Called when the player sends chat to the server
  * Returning true overrides default behavior of chat, not commands
+
+## OnPlayerCapture
+
+``` csharp
+void OnPlayerCapture(PlayerCaptureEvent e)
+{
+    Puts("OnPlayerCapture works!");
+}
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called once the loading bar of roping a player is completed.
+
+## OnPlayerRelease
+
+``` csharp
+void OnPlayerRelease(PlayerEscapeEvent e)
+{
+    Puts("OnPlayerRelease works!");
+}
+```
+
+``` lua
+We need a Lua example here
+```
+
+``` javascript
+We need a JavaScript example here
+```
+
+``` coffeescript
+We need a CoffeeScript example here
+```
+
+``` python
+We need a Python example here
+```
+
+ * Called when a roped player gets freed from the rope.
