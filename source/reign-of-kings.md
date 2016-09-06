@@ -15,6 +15,7 @@ includes:
   - reign-of-kings/hooks_player
   - reign-of-kings/hooks_entity
   - reign-of-kings/hooks_structure
+  - reign-of-kings/hooks_throne
   - reign-of-kings/library_functions
   - timers_basic
   - web_requests
