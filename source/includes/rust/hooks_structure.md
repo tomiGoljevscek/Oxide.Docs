@@ -368,14 +368,14 @@ def OnHammerHit(self, player, info):
 ## OnStructureDemolish
 
 ``` csharp
-void OnStructureDemolish(BuildingBlock block, BasePlayer player)
+void OnStructureDemolish(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("OnStructureDemolish works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnStructureDemolish(block, player)
+function PLUGIN:OnStructureDemolish(entity, player)
     print("OnStructureDemolish works!")
 end
 ```
@@ -385,30 +385,30 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnStructureDemolish: function(block, player) {
+OnStructureDemolish: function(entity, player) {
     print("OnStructureDemolish works!");
 }
 ```
 
 ``` python
-def OnStructureDemolish(self, block, player):
+def OnStructureDemolish(self, entity, player):
     print "OnStructureDemolish works!"
 ```
 
- * Called when the player selects DemolishImmediate from the BuildingBlock menu
+ * Called when the player selects DemolishImmediate from the BuildingBlock or BaseCombatEntity menu
  * Returning true overrides the demolition
 
 ## OnStructureRepair
 
 ``` csharp
-void OnStructureRepair(BuildingBlock block, BasePlayer player)
+void OnStructureRepair(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("OnStructureRepair works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnStructureRepair(block, player)
+function PLUGIN:OnStructureRepair(entity, player)
     print("OnStructureRepair works!")
 end
 ```
@@ -418,30 +418,30 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnStructureRepair: function(block, player) {
+OnStructureRepair: function(entity, player) {
     print("OnStructureRepair works!");
 }
 ```
 
 ``` python
-def OnStructureRepair(self, block, player):
+def OnStructureRepair(self, entity, player):
     print "OnStructureRepair works!"
 ```
 
- * Called when the player repairs a BuildingBlock
+ * Called when the player repairs a BuildingBlock or BaseCombatEntity
  * No return behavior
 
 ## OnStructureRotate
 
 ``` csharp
-void OnStructureRotate(BuildingBlock block, BasePlayer player)
+void OnStructureRotate(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("OnStructureRotate works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnStructureRotate(block, player)
+function PLUGIN:OnStructureRotate(entity, player)
     print("OnStructureRotate works!")
 end
 ```
@@ -451,23 +451,23 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-OnStructureRotate: function(block, player) {
+OnStructureRotate: function(entity, player) {
     print("OnStructureRotate works!");
 }
 ```
 
 ``` python
-def OnStructureRotate(self, block, player):
+def OnStructureRotate(self, entity, player):
     print "OnStructureRotate works!"
 ```
 
- * Called when the player rotates a BuildingBlock
+ * Called when the player rotates a BuildingBlock or BaseCombatEntity
  * No return behavior
 
 ## OnStructureUpgrade
 
 ``` csharp
-void OnStructureUpgrade(BuildingBlock block, BasePlayer player, BuildingGrade.Enum grade)
+void OnStructureUpgrade(BaseCombatEntity entity, BasePlayer player, BuildingGrade.Enum grade)
 {
     Puts("OnStructureUpgrade works!");
 }
@@ -494,5 +494,5 @@ def OnStructureUpgrade(self, block, player, grade):
     print "OnStructureUpgrade works!"
 ```
 
- * Called when the player upgrades the grade of a BuildingBlock
+ * Called when the player upgrades the grade of a BuildingBlock or BaseCombatEntity
  * Returning true overrides the upgrade
