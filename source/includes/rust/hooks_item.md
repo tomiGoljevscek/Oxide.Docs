@@ -666,24 +666,24 @@ def OnLoseCondition(self, item, amount):
  * Called right before the condition of the item is modified
  * No return behavior
 
-## OnPlantGather
+## OnCropGather
 
 ``` csharp
-void OnPlantGather(PlantEntity plant, Item item, BasePlayer player)
+void OnCropGather(PlantEntity plant, Item item, BasePlayer player)
 {
-    Puts("OnPlantGather works!");
+    Puts("OnCropGather works!");
 }
 ```
 
 ``` lua
-function PLUGIN:OnPlantGather(plant, item, player)
-    print("OnPlantGather works!")
+function PLUGIN:OnCropGather(plant, item, player)
+    print("OnCropGather works!")
 end
 ```
 
 ``` javascript
-OnPlantGather: function(plant, item, player) {
-    print("OnPlantGather works!");
+OnCropGather: function(plant, item, player) {
+    print("OnCropGather works!");
 }
 ```
 
@@ -692,8 +692,8 @@ We need a CoffeeScript example here
 ```
 
 ``` python
-def OnPlantGather(self, plant, item, player):
-    print "OnPlantGather works!"
+def OnCropGather(self, plant, item, player):
+    print "OnCropGather works!"
 ```
 
  * Called when the player gathers a plant
