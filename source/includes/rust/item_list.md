@@ -45,8 +45,6 @@
 | 93832698      | Blood                        | blood                    |
 | -1063412582   | Blueberries                  | blueberries              |
 | -1887162396   | Blueprint                    | blueprintbase            |
-| 1186854727    | Bone Jacket                  | bone.armor.jacket        |
-| 459479619     | Bone Armor Pants             | bone.armor.pants         |
 | 569119686     | Bone Armor                   | bone.armor.suit          |
 | 919780768     | Bone Club                    | bone.club                |
 | -365801095    | Bone Fragments               | bone.fragments           |
@@ -224,6 +222,7 @@
 | 470729623     | Small Oil Refinery           | small.oil.refinery       |
 | 927253046     | Small Water Bottle           | smallwaterbottle         |
 | 109552593     | Custom SMG                   | smg.2                    |
+| -2094080303   | MP5A4                        | smg.mp5                  |
 | 456448245     | Thompson                     | smg.thompson             |
 | -2118132208   | Stone Spear                  | spear.stone              |
 | -1127699509   | Wooden Spear                 | spear.wooden             |
