@@ -47,7 +47,7 @@ end, self.Plugin)
 ```
 
 ``` javascript
-webrequest.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response) {
+webrequests.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response) {
     if (response == null || code != 200) {
         print("Couldn't get an answer from Google!");
         return
