@@ -198,7 +198,6 @@
 | 10033        | Baseball Tshirt                   |
 | 10003        | Black Tshirt                      |
 | 14177        | Blue Tshirt                       |
-| 10056        | Facepunch TShirt                  |
 | 14181        | Forest Camo Tshirt                |
 | 10024        | German Tshirt                     |
 | 10035        | Hacker Valley Veteran             |

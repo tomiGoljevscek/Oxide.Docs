@@ -42,6 +42,7 @@
 | -2043730634   | Bear Meat Cooked             | bearmeat.cooked          |
 | 97409         | Bed                          | bed                      |
 | 1611480185    | Black Raspberries            | black.raspberries        |
+| -1386464949   | Bleach                       | bleach                   |
 | 93832698      | Blood                        | blood                    |
 | -1063412582   | Blueberries                  | blueberries              |
 | -1887162396   | Blueprint                    | blueprintbase            |
@@ -91,6 +92,7 @@
 | -1571725662   | Armored Door                 | door.hinged.toptier      |
 | 1456441506    | Wooden Door                  | door.hinged.wood         |
 | 1200628767    | Door Key                     | door.key                 |
+| 1891056868    | Duct Tape                    | ducttape                 |
 | 1295154089    | Satchel Charge               | explosive.satchel        |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
 | 1755466030    | Explosives                   | explosives               |
@@ -109,7 +111,9 @@
 | 1598149413    | Large Furnace                | furnace.large            |
 | -1779401418   | High External Stone Gate     | gates.external.high.stone|
 | -57285700     | High External Wooden Gate    | gates.external.high.wood |
+| 98228420      | Gears                        | gears                    |
 | 277631078     | Wind Turbine                 | generator.wind.scrap     |
+| 3175989       | Glue                         | glue                     |
 | 718197703     | Granola Bar                  | granolabar               |
 | 384204160     | Beancan Grenade              | grenade.beancan          |
 | -1308622549   | F1 Grenade                   | grenade.f1               |
@@ -162,17 +166,22 @@
 | -1059362949   | Metal Ore                    | metal.ore                |
 | 1265861812    | Metal Chest Plate            | metal.plate.torso        |
 | 374890416     | High Quality Metal           | metal.refined            |
+| 1567404401    | Metal Blade                  | metalblade               |
+| -1057402571   | Metal Pipe                   | metalpipe                |
+| 1835797460    | Metal Spring                 | metalspring              |
 | -758925787    | Pump Jack                    | mining.pumpjack          |
 | -1411620422   | Mining Quarry                | mining.quarry            |
 | 843418712     | Mushroom                     | mushroom                 |
 | 3387378       | Note                         | note                     |
 | 106433500     | Pants                        | pants                    |
+| -459156023    | Shorts                       | pants.shorts             |
 | 106434956     | Paper                        | paper                    |
 | -578028723    | Pick Axe                     | pickaxe                  |
 | -1379225193   | Eoka Pistol                  | pistol.eoka              |
 | -930579334    | Revolver                     | pistol.revolver          |
 | 548699316     | Semi-Automatic Pistol        | pistol.semiauto          |
 | 640562379     | Pookie Bear                  | pookie.bear              |
+| 1974032895    | Empty Propane Tank           | propanetank              |
 | -225085592    | Pumpkin                      | pumpkin                  |
 | 1987447227    | Research Table               | research.table           |
 | 540154065     | Research Paper               | researchpaper            |
@@ -180,18 +189,25 @@
 | -55660037     | Bolt Action Rifle            | rifle.bolt               |
 | -1716193401   | LR-300 Assault Rifle         | rifle.lr300              |
 | -1745053053   | Semi-Automatic Rifle         | rifle.semiauto           |
+| 1939428458    | Rifle Body                   | riflebody                |
 | 340009023     | Riot Helmet                  | riot.helmet              |
 | -288010497    | Road Sign Jacket             | roadsign.jacket          |
 | -1595790889   | Road Sign Kilt               | roadsign.kilt            |
+| -847065290    | Road Signs                   | roadsigns                |
 | 3506021       | Rock                         | rock                     |
 | 649603450     | Rocket Launcher              | rocket.launcher          |
+| 3506418       | Rope                         | rope                     |
 | -1775234707   | Salvaged Cleaver             | salvaged.cleaver         |
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 2007564590    | Santa Hat                    | santahat                 |
 | 583366917     | Corn Seed                    | seed.corn                |
 | 583506109     | Hemp Seed                    | seed.hemp                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
+| -419069863    | Sewing Kit                   | sewingkit                |
+| -1617374968   | Sheet Metal                  | sheetmetal               |
 | 2057749608    | Salvaged Shelves             | shelves                  |
+| 24576628      | Shirt                        | shirt.collared           |
+| -1659202509   | Tank Top                     | shirt.tanktop            |
 | 2107229499    | Boots                        | shoes.boots              |
 | 191795897     | Double Barrel Shotgun        | shotgun.double           |
 | -1009492144   | Pump Shotgun                 | shotgun.pump             |
@@ -224,10 +240,12 @@
 | 109552593     | Custom SMG                   | smg.2                    |
 | -2094080303   | MP5A4                        | smg.mp5                  |
 | 456448245     | Thompson                     | smg.thompson             |
+| -2092529553   | SMG Body                     | smgbody                  |
 | -2118132208   | Stone Spear                  | spear.stone              |
 | -1127699509   | Wooden Spear                 | spear.wooden             |
 | -685265909    | Wooden Floor Spikes          | spikes.floor             |
 | 1051155022    | Small Stash                  | stash.small              |
+| -892259869    | Sticks                       | sticks                   |
 | -1623330855   | SUPER Stocking               | stocking.large           |
 | -1616524891   | Small Stocking               | stocking.small           |
 | 789892804     | Stone Pick Axe               | stone.pickaxe            |
@@ -240,6 +258,8 @@
 | 586484018     | Medical Syringe              | syringe.medical          |
 | 2069925558    | Reactive Target              | target.reactive          |
 | 1490499512    | Targeting Computer           | targeting.computer       |
+| 3552619       | Tarp                         | tarp                     |
+| 1471284746    | Tech Trash                   | techparts                |
 | -1342405573   | Camera                       | tool.camera              |
 | 110547964     | Torch                        | torch                    |
 | 1046072789    | Snap Trap                    | trap.bear                |
