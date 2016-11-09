@@ -768,7 +768,7 @@ def OnQuarryGather(self, quarry, item):
 ## OnSurveyGather
 
 ``` csharp
-void OnSurveyGather(SurveryCharge survey, Item item)
+void OnSurveyGather(SurveyCharge survey, Item item)
 {
     Puts("OnSurveyGather works!");
 }
