@@ -34,52 +34,52 @@ def CanBuild(self, player, prefab):
  * Called when the player tries to build something
  * Returning true overrides default behavior
 
-## CanUseDoor
+## CanUseLock
 
 ``` csharp
-void CanUseDoor(BasePlayer player, BaseLock door)
+void CanUseLock(BasePlayer player, BaseLock @lock)
 {
-    Puts("CanUseDoor works!");
+    Puts("CanUseLock works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanUseDoor(player, door)
-    print("CanUseDoor works!")
+function PLUGIN:CanUseLock(player, lock)
+    print("CanUseLock works!")
 end
 ```
 
 ``` coffeescript
-CanUseDoor: (player, door) =>
-    print "CanUseDoor works!"
+CanUseLock: (player, lock) =>
+    print "CanUseLock works!"
 ```
 
 ``` javascript
-CanUseDoor: function(player, door) {
-    print("CanUseDoor works!");
+CanUseLock: function(player, lock) {
+    print("CanUseLock works!");
 }
 ```
 
 ``` python
-def CanUseDoor(self, player, door):
-    print "CanUseDoor works!"
+def CanUseLock(self, player, lock):
+    print "CanUseLock works!"
 ```
 
- * Called when the player tries to use a locked door
- * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Called when the player tries to use a locked entity
+ * Returning true bypasses lock handling, nothing will by default will allow normal handling, returning anything else will reject lock usage
 
-## CanUseDoor
+## CanUseLock
 
 ``` csharp
-void CanUseDoor(BasePlayer player, CodeLock door)
+void CanUseLock(BasePlayer player, CodeLock @lock)
 {
-    Puts("CanUseDoor works!");
+    Puts("CanUseLock works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanUseDoor(player, door)
-    print("CanUseDoor works!")
+function PLUGIN:CanUseLock(player, lock)
+    print("CanUseLock works!")
 end
 ```
 
@@ -88,31 +88,31 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-CanUseDoor: function(player, door) {
-    print("CanUseDoor works!");
+CanUseLock: function(player, lock) {
+    print("CanUseLock works!");
 }
 ```
 
 ``` python
-def CanUseDoor(self, player, door):
-    print "CanUseDoor works!"
+def CanUseLock(self, player, lock):
+    print "CanUseLock works!"
 ```
 
  * Called when the player tries to use a door with a code lock
  * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
 
-## CanUseDoor
+## CanUseLock
 
 ``` csharp
-void CanUseDoor(BasePlayer player, KeyLock door)
+void CanUseLock(BasePlayer player, KeyLock @lock)
 {
-    Puts("CanUseDoor works!");
+    Puts("CanUseLock works!");
 }
 ```
 
 ``` lua
-function PLUGIN:CanUseDoor(player, door)
-    print("CanUseDoor works!")
+function PLUGIN:CanUseLock(player, lock)
+    print("CanUseLock works!")
 end
 ```
 
@@ -121,14 +121,14 @@ We need a CoffeeScript example here
 ```
 
 ``` javascript
-CanUseDoor: function(player, door) {
-    print("CanUseDoor works!");
+CanUseLock: function(player, lock) {
+    print("CanUseLock works!");
 }
 ```
 
 ``` python
-def CanUseDoor(self, player, door):
-    print "CanUseDoor works!"
+def CanUseLock(self, player, lock):
+    print "CanUseLock works!"
 ```
 
  * Called when the player tries to use a door with a key lock
@@ -193,7 +193,7 @@ OnDoorClosed: function(door, player) {
 ```
 
 ``` python
-def OnDoorClosed(self, door, player):
+def OnDoorClosed(self, lock, player):
     print "OnDoorClosed works!"
 ```
 
@@ -226,7 +226,7 @@ OnDoorOpened: function(door, player) {
 ```
 
 ``` python
-def OnDoorOpened(self, door, player):
+def OnDoorOpened(self, lock, player):
     print "OnDoorOpened works!"
 ```
 
