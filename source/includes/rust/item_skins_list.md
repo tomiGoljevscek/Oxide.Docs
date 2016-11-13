@@ -50,6 +50,11 @@
 | 10115        | Ghost Bolt Rifle                  |
 | 10116        | Tundra Bolt Rifle                 |
 
+## Bone Club
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20017        | Little Friend                     |
+
 ## Bone Helmet
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -67,6 +72,7 @@
 | 10023        | Black Boots                       |
 | 10088        | Bloody Boots                      |
 | 10034        | Punk Boots                        |
+| 20015        | Rock Star Boots                   |
 | 10044        | Scavenged Sneaker Boots           |
 | 10022        | Tan Boots                         |
 
@@ -84,6 +90,7 @@
 ## Burlap Shirt
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20016        | Captain's Vest and Shirt          |
 | 10136        | Pirate Vest & Shirt               |
 
 ## Coffee Can Helmet
