@@ -132,6 +132,7 @@
 | 1079752220    | Hazmat Helmet                | hazmat.helmet            |
 | 1133046397    | Hazmat Jacket                | hazmat.jacket            |
 | -1066276787   | Hazmat Pants                 | hazmat.pants             |
+| 523855532     | Hazmat Suit                  | hazmatsuit               |
 | -1211618504   | Hoodie                       | hoodie                   |
 | 2133577942    | High Quality Metal Ore       | hq.metal.ore             |
 | -1014825244   | Burned Human Meat            | humanmeat.burned         |
@@ -203,6 +204,7 @@
 | 583366917     | Corn Seed                    | seed.corn                |
 | 583506109     | Hemp Seed                    | seed.hemp                |
 | 466113771     | Pumpkin Seed                 | seed.pumpkin             |
+| 1223860752    | Semi Automatic Body          | semibody                 |
 | -419069863    | Sewing Kit                   | sewingkit                |
 | -1617374968   | Sheet Metal                  | sheetmetal               |
 | 2057749608    | Salvaged Shelves             | shelves                  |
