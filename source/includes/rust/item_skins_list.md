@@ -50,16 +50,6 @@
 | 10115        | Ghost Bolt Rifle                  |
 | 10116        | Tundra Bolt Rifle                 |
 
-## Bone Club (bone.club)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20017        | Little Friend                     |
-
-## Bone Helmet (deer.skull.mask)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20002        | Demonic Deer Skull                |
-
 ## Boonie Hat (hat.boonie)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -72,7 +62,6 @@
 | 10023        | Black Boots                       |
 | 10088        | Bloody Boots                      |
 | 10034        | Punk Boots                        |
-| 20015        | Rock Star Boots                   |
 | 10044        | Scavenged Sneaker Boots           |
 | 10022        | Tan Boots                         |
 
@@ -82,26 +71,10 @@
 | 10127        | Medic Helmet                      |
 | 10126        | Wooden Bucket                     |
 
-## Burlap Headwrap (burlap.headwrap)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20004        | SandPrince                        |
-
 ## Burlap Shirt (burlap.shirt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 20016        | Captain's Vest and Shirt          |
 | 10136        | Pirate Vest & Shirt               |
-
-## Coffee Can Helmet (coffeecan.helmet)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20005        | Skull Hazard                      |
-
-## Hide Boots (attire.hide.boots)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20018        | Native American Hide Shoes        |
 
 ## Hoodie (hoodie)
 | Skin Id      | Skin name                         |
@@ -112,7 +85,6 @@
 | 14178        | Blue Hoodie                       |
 | 10133        | Cuda87 Hoodie                     |
 | 14072        | Green Hoodie                      |
-| 20003        | Ranger's Vest                     |
 | 10132        | Rhinocrunch Hoodie                |
 | 10129        | Safety Crew                       |
 | 10086        | Skeleton Hoodie                   |
@@ -120,7 +92,6 @@
 ## Improvised Balaclava (mask.balaclava)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10105        | Burlap Brains Balaclava           |
 | 10069        | Desert Camo Balaclava             |
 | 10071        | Double Yellow Balaclava           |
 | 10068        | Forest Camo Balaclava             |
@@ -129,7 +100,6 @@
 | 10070        | Red Check Balaclava               |
 | 10054        | Rorschach Skull                   |
 | 10090        | Skin Balaclava                    |
-| 10110        | Stitched Skin                     |
 | 10084        | The Rust Knight                   |
 | 10139        | Valentine Balaclava               |
 | 10111        | Zipper Face                       |
@@ -170,36 +140,12 @@
 | 10050        | Frankensteins Sweater             |
 | 10032        | Green Checkered Shirt             |
 | 10005        | Grey Longsleeve T-Shirt           |
-| 10125        | Lawman                            |
 | 10118        | Merry Reindeer                    |
 | 10051        | Nightmare Sweater                 |
 | 10006        | Orange Longsleeve T-Shirt         |
 | 10036        | Sign Painter                      |
 | 10042        | Varsity Jacket                    |
 | 10007        | Yellow Longsleeve T-Shirt         |
-
-## Longsword (longsword)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20008        | Hot-tempered Longsword            |
-
-## Metal Chest Plate (metal.plate.torso)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20010        | Forest Camo Chest Plate           |
-
-## Metal Facemask (metal.facemask)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20001        | Big Grin                          |
-| 20009        | Glowing Skull                     |
-| 20013        | Sacrificial Mask                  |
-
-## MP5A4 (smg.mp5)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20011        | Digital Camo MP5                  |
-| 20012        | Military Camo MP5                 |
 
 ## Pants (pants)
 | Skin Id      | Skin name                         |
@@ -217,22 +163,11 @@
 |--------------|-----------------------------------|
 | 10074        | Chieftain Pump Shotgun            |
 | 10140        | The Swampmaster                   |
-| 20014        | Urban Afterburn Pump Shotgun      |
 
 ## Revolver (pistol.revolver)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10114        | Outback revolver                  |
-
-## Road Sign Jacket (roadsign.jacket)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20006        | Hazard Protection Vest            |
-
-## Road Sign Kilt (roadsign.kilt)
-| Skin Id      | Skin name                         |
-|--------------|-----------------------------------|
-| 20007        | Hazard Cover Pants                |
 
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
@@ -248,7 +183,6 @@
 | 10121        | Aston Christmas                   |
 | 10037        | Blue Plaid Sleeping Bag           |
 | 10119        | Christmas Bag                     |
-| 10109        | Freshly Dug Grave                 |
 | 10107        | Horror Bag                        |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 10076        | Wood Camo Sleeping Bag            |
@@ -256,9 +190,7 @@
 ## Snow Jacket - Red (jacket.snow)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 10082        | 60's Army Jacket                  |
 | 10113        | Black                             |
-| 10083        | Salvaged Shirt, Coat and Tie      |
 | 10112        | Woodland                          |
 
 ## Thompson (smg.thompson)
@@ -273,7 +205,6 @@
 | 10033        | Baseball Tshirt                   |
 | 10003        | Black Tshirt                      |
 | 14177        | Blue Tshirt                       |
-| 10056        | Facepunch TShirt                  |
 | 14181        | Forest Camo Tshirt                |
 | 10024        | German Tshirt                     |
 | 10035        | Hacker Valley Veteran             |
