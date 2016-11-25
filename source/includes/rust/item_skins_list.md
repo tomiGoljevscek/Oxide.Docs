@@ -1,5 +1,13 @@
 # Item Skins
 
+## Armored Door (door.hinged.toptier)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20077        | Corroded Bronze Door              |
+| 20046        | High Voltage                      |
+| 20045        | Incarceration Armored Door        |
+| 20043        | Laboratory Armored Door           |
+
 ## Assault Rifle (rifle.ak)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -118,10 +126,12 @@
 | 14178        | Blue Hoodie                       |
 | 10133        | Cuda87 Hoodie                     |
 | 14072        | Green Hoodie                      |
+| 20034        | Official Vertiigo Hoodie          |
 | 20003        | Ranger's Vest                     |
 | 10132        | Rhinocrunch Hoodie                |
 | 10129        | Safety Crew                       |
 | 10086        | Skeleton Hoodie                   |
+| 20076        | Unknown Territory Hoodie          |
 
 ## Improvised Balaclava (mask.balaclava)
 | Skin Id      | Skin name                         |
@@ -167,11 +177,14 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10128        | Boxer's Bandages                  |
+| 20039        | Duelist Gloves                    |
+| 20038        | Motorcycle Gloves                 |
 
 ## Longsleeve T-Shirt (tshirt.long)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10047        | Aztec Long T-Shirt                |
+| 20081        | Battle Worn Long TShirt           |
 | 10004        | Black Longsleeve T-Shirt          |
 | 10089        | Christmas Jumper                  |
 | 10106        | Creepy Jack                       |
@@ -194,17 +207,23 @@
 ## Metal Chest Plate (metal.plate.torso)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20040        | Flak Vest - Green                 |
 | 20010        | Forest Camo Chest Plate           |
+| 20041        | Plate Carrier - Black             |
+| 20035        | Racing Stripes Chest Plate        |
 
 ## Metal Facemask (metal.facemask)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20024        | Aztek Night Hunter                |
 | 20001        | Big Grin                          |
+| 20036        | Blingin Grill                     |
 | 20023        | Death Facemask                    |
 | 20009        | Glowing Skull                     |
+| 20044        | Punishment Mask                   |
 | 20025        | Rusted Smile                      |
 | 20013        | Sacrificial Mask                  |
+| 20082        | Tempered Mask                     |
 
 ## Miners Hat (hat.miner)
 | Skin Id      | Skin name                         |
@@ -216,6 +235,7 @@
 |--------------|-----------------------------------|
 | 20011        | Digital Camo MP5                  |
 | 20012        | Military Camo MP5                 |
+| 20083        | Tempered Mp5                      |
 
 ## Pants (pants)
 | Skin Id      | Skin name                         |
@@ -226,6 +246,7 @@
 | 10078        | Old Prisoner Pants                |
 | 10048        | Punk Rock Pants                   |
 | 10021        | Snow Camo Pants                   |
+| 20037        | Steppe Camo Pants                 |
 | 10020        | Urban Camo Pants                  |
 
 ## Pump Shotgun (shotgun.pump)
@@ -240,6 +261,11 @@
 |--------------|-----------------------------------|
 | 10114        | Outback revolver                  |
 
+## Riot Helmet (riot.helmet)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20042        | Captain's Helmet                  |
+
 ## Road Sign Jacket (roadsign.jacket)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -249,12 +275,14 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20007        | Hazard Cover Pants                |
+| 20085        | Military Camo Roadsign Kilt       |
 
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10087        | Contamination Pistol              |
 | 10108        | Halloween Bat                     |
+| 20086        | Paint Rush SAP                    |
 | 20033        | Polymer SAP                       |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
@@ -263,6 +291,9 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20019        | Charitable Rust 2016 Shirt        |
+| 20078        | Green Lumberjack                  |
+| 20079        | Red Lumberjack                    |
+| 20080        | The Blue Death                    |
 
 ## Shorts (pants.shorts)
 | Skin Id      | Skin name                         |
