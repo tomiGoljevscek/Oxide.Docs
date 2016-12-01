@@ -179,6 +179,7 @@
 | 106434956     | Paper                        | paper                    |
 | -578028723    | Pick Axe                     | pickaxe                  |
 | -1379225193   | Eoka Pistol                  | pistol.eoka              |
+| 371156815     | M92 Pistol                   | pistol.m92               |
 | -930579334    | Revolver                     | pistol.revolver          |
 | 548699316     | Semi-Automatic Pistol        | pistol.semiauto          |
 | 640562379     | Pookie Bear                  | pookie.bear              |

@@ -1,5 +1,10 @@
 # Item Skins
 
+## Acoustic Guitar (fun.guitar)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20116        | Black Acoustic Guitar             |
+
 ## Armored Door (door.hinged.toptier)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -7,12 +12,15 @@
 | 20046        | High Voltage                      |
 | 20045        | Incarceration Armored Door        |
 | 20043        | Laboratory Armored Door           |
+| 20103        | Radioactive Armored Door          |
 
 ## Assault Rifle (rifle.ak)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20104        | Battle-Scarred AKS47              |
 | 10135        | Digital Camo AK47                 |
 | 10137        | Military Camo AK47                |
+| 20105        | Rustpunk AK47                     |
 | 10138        | Tempered AK47                     |
 
 ## Bandana Mask (mask.bandana)
@@ -47,6 +55,7 @@
 | 14180        | Black Beenie Hat                  |
 | 10018        | Blue Beenie Hat                   |
 | 10017        | Green Beenie Hat                  |
+| 20084        | Gunner Beanie                     |
 | 10040        | Rasta Beenie                      |
 | 10016        | Red Beenie Hat                    |
 | 10085        | Winter Deers                      |
@@ -67,6 +76,11 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20002        | Demonic Deer Skull                |
+
+## Bone Knife (knife.bone)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20111        | Etched Edge Bone Knife            |
 
 ## Boonie Hat (hat.boonie)
 | Skin Id      | Skin name                         |
@@ -89,6 +103,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10127        | Medic Helmet                      |
+| 20020        | Smilin' Jack                      |
 | 10126        | Wooden Bucket                     |
 
 ## Burlap Headwrap (burlap.headwrap)
@@ -99,18 +114,50 @@
 ## Burlap Shirt (burlap.shirt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20117        | Burlap and Leather Vest           |
 | 20016        | Captain's Vest and Shirt          |
 | 10136        | Pirate Vest & Shirt               |
+
+## Burlap Shoes (burlap.shoes)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20106        | Burlap Ninja Slippers             |
+
+## Burlap Trousers (burlap.trousers)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20122        | Recycled Tarp Pants               |
 
 ## Coffee Can Helmet (coffeecan.helmet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20120        | Rusty Coffee Can Helmet           |
 | 20005        | Skull Hazard                      |
+
+## Concrete Barricade (barricade.concrete)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20087        | Road Barrier                      |
+
+## Crossbow (crossbow)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20107        | HazardCross                       |
 
 ## Hide Boots (attire.hide.boots)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20018        | Native American Hide Shoes        |
+
+## Hide Halterneck (attire.hide.helterneck)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20108        | Caution Tape Top                  |
+
+## Hide Poncho (attire.hide.poncho)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20088        | Grey Wolf Hide Poncho             |
 
 ## Hide Skirt (attire.hide.skirt)
 | Skin Id      | Skin name                         |
@@ -169,6 +216,7 @@
 | 10124        | Ammo Wooden Box                   |
 | 10122        | Christmas Storage                 |
 | 20026        | Explosives Box                    |
+| 20121        | First Aid Box                     |
 | 10123        | First Aid Green                   |
 | 10141        | Gun Box                           |
 | 20027        | Large Stone Box                   |
@@ -220,6 +268,7 @@
 | 20036        | Blingin Grill                     |
 | 20023        | Death Facemask                    |
 | 20009        | Glowing Skull                     |
+| 20102        | Industrial Protection Mask        |
 | 20044        | Punishment Mask                   |
 | 20025        | Rusted Smile                      |
 | 20013        | Sacrificial Mask                  |
@@ -235,6 +284,7 @@
 |--------------|-----------------------------------|
 | 20011        | Digital Camo MP5                  |
 | 20012        | Military Camo MP5                 |
+| 20115        | Polymer MP5                       |
 | 20083        | Tempered Mp5                      |
 
 ## Pants (pants)
@@ -259,6 +309,7 @@
 ## Revolver (pistol.revolver)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20118        | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
 
 ## Riot Helmet (riot.helmet)
@@ -269,18 +320,27 @@
 ## Road Sign Jacket (roadsign.jacket)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20124        | British Sign Vest                 |
 | 20006        | Hazard Protection Vest            |
 
 ## Road Sign Kilt (roadsign.kilt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20123        | British Sign Pants                |
 | 20007        | Hazard Cover Pants                |
 | 20085        | Military Camo Roadsign Kilt       |
+
+## Rock (rock)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20109        | Gold Rock                         |
+| 20110        | Meteorite                         |
 
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10087        | Contamination Pistol              |
+| 20101        | Golden Leaf SAP                   |
 | 10108        | Halloween Bat                     |
 | 20086        | Paint Rush SAP                    |
 | 20033        | Polymer SAP                       |
@@ -293,6 +353,7 @@
 | 20019        | Charitable Rust 2016 Shirt        |
 | 20078        | Green Lumberjack                  |
 | 20079        | Red Lumberjack                    |
+| 20119        | Survival Shirt                    |
 | 20080        | The Blue Death                    |
 
 ## Shorts (pants.shorts)
@@ -310,6 +371,7 @@
 | 10119        | Christmas Bag                     |
 | 10109        | Freshly Dug Grave                 |
 | 10107        | Horror Bag                        |
+| 20114        | Jungle Camo Sleeping Bag          |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 10076        | Wood Camo Sleeping Bag            |
 
@@ -359,3 +421,9 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10143        | The Peace Pipe                    |
+
+## Wooden Door (door.hinged.wood)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20112        | Door to Heaven                    |
+| 20113        | Old Heavy Wooden Door             |
