@@ -317,26 +317,26 @@ def OnServerSave():
 ## OnUserPermissionGranted
 
 ``` csharp
-void OnUserPermissionGranted(string name, string perm)
+void OnUserPermissionGranted(string id, string perm)
 {
-    Puts($"User '{name}' granted permission: {perm}");
+    Puts($"User '{id}' granted permission: {perm}");
 }
 ```
 
 ``` lua
-function PLUGIN:OnUserPermissionGranted(name, perm)
-    print("User '" .. name .. "' granted permission: " .. perm)
+function PLUGIN:OnUserPermissionGranted(id, perm)
+    print("User '" .. id .. "' granted permission: " .. perm)
 end
 ```
 
 ``` coffeescript
-OnUserPermissionGranted: (name, perm) =>
-    print "User '#{name}' granted permission: #{perm}"
+OnUserPermissionGranted: (id, perm) =>
+    print "User '#{id}' granted permission: #{perm}"
 ```
 
 ``` javascript
-OnUserPermissionGranted: function(name, perm) {
-    print("User '" + name + "' granted permission: " + perm);
+OnUserPermissionGranted: function(id, perm) {
+    print("User '" + id + "' granted permission: " + perm);
 }
 ```
 
@@ -350,35 +350,102 @@ def OnUserPermissionGranted(name, perm):
 ## OnUserPermissionRevoked
 
 ``` csharp
-void OnUserPermissionRevoked(string name, string perm)
+void OnUserPermissionRevoked(string id, string perm)
 {
-    Puts($"User '{name}' revoked permission: {perm}");
+    Puts($"User '{id}' revoked permission: {perm}");
 }
 ```
 
 ``` lua
-function PLUGIN:OnUserPermissionRevoked(name, perm)
-    print("User '" .. name .. "' revoked permission: " .. perm)
+function PLUGIN:OnUserPermissionRevoked(id, perm)
+    print("User '" .. id .. "' revoked permission: " .. perm)
 end
 ```
 
 ``` coffeescript
-OnUserPermissionRevoked: (name, perm) =>
-    print "User '#{name}' revoked permission: #{perm}"
+OnUserPermissionRevoked: (id, perm) =>
+    print "User '#{id}' revoked permission: #{perm}"
 ```
 
 ``` javascript
-OnUserPermissionRevoked: function(name, perm) {
-    print("User '" + name + "' revoked permission: " + perm);
+OnUserPermissionRevoked: function(id, perm) {
+    print("User '" + id + "' revoked permission: " + perm);
 }
 ```
 
 ``` python
-def OnUserPermissionRevoked(name, perm):
+def OnUserPermissionRevoked(id, perm):
     print "OnUserPermissionRevoked works!"
 ```
 
  * Called when a permission has been revoked from a user
+
+## OnUserGroupAdded
+
+``` csharp
+void OnUserGroupAdded(string id, string name)
+{
+    Puts($"User '{id}' added to group: {name}");
+}
+```
+
+``` lua
+function PLUGIN:OnUserGroupAdded(id, name)
+    print("User '" .. id .. "' added to group: " .. name)
+end
+```
+
+``` coffeescript
+OnUserGroupAdded: (id, name) =>
+    print "User '#{id}' added to group: #{name}"
+```
+
+``` javascript
+OnUserGroupAdded: function(id, name) {
+    print("User '" + id + "' added to group: " + name);
+}
+```
+
+``` python
+def OnUserGroupAdded(id, name):
+    print "OnUserGroupAdded works!"
+```
+
+ * Called when a user has been added to a group
+ 
+
+## OnUserGroupRemoved
+
+``` csharp
+void OnUserGroupRemoved(string id, string name)
+{
+    Puts($"User '{id}' removed from group: {name}");
+}
+```
+
+``` lua
+function PLUGIN:OnUserGroupRemoved(id, name)
+    print("User '" .. id .. "' removed from group: " .. name)
+end
+```
+
+``` coffeescript
+OnUserGroupRemoved: (id, name) =>
+    print "User '#{id}' removed from group: #{name}"
+```
+
+``` javascript
+OnUserGroupRemoved: function(id, name) {
+    print("User '" + id + "' removed from group: " + name);
+}
+```
+
+``` python
+def OnUserGroupRemoved(id, name):
+    print "OnUserGroupRemoved works!"
+```
+
+ * Called when a user has been removed from a group
 
 ## OnGroupPermissionGranted
 
