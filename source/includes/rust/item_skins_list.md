@@ -3,6 +3,7 @@
 ## Acoustic Guitar (fun.guitar)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20212        | Addicted Guitarist                |
 | 20116        | Black Acoustic Guitar             |
 
 ## Armored Door (door.hinged.toptier)
@@ -12,6 +13,7 @@
 | 20046        | High Voltage                      |
 | 20045        | Incarceration Armored Door        |
 | 20043        | Laboratory Armored Door           |
+| 20209        | No Escape                         |
 | 20103        | Radioactive Armored Door          |
 
 ## Assault Rifle (rifle.ak)
@@ -86,6 +88,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10058        | Farmer Hat                        |
+| 20217        | Fisherman Boonie Hat              |
 
 ## Boots (shoes.boots)
 | Skin Id      | Skin name                         |
@@ -191,6 +194,7 @@
 | 10075        | Nightmare Balaclava               |
 | 10070        | Red Check Balaclava               |
 | 10054        | Rorschach Skull                   |
+| 20210        | Santa Balaclava                   |
 | 10090        | Skin Balaclava                    |
 | 10110        | Stitched Skin                     |
 | 10084        | The Rust Knight                   |
@@ -214,9 +218,10 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10124        | Ammo Wooden Box                   |
+| 20201        | Christmas Holiday LWB             |
 | 10122        | Christmas Storage                 |
+| 20215        | D.O.A Trunk                       |
 | 20026        | Explosives Box                    |
-| 20121        | First Aid Box                     |
 | 10123        | First Aid Green                   |
 | 10141        | Gun Box                           |
 | 20027        | Large Stone Box                   |
@@ -234,6 +239,7 @@
 | 10047        | Aztec Long T-Shirt                |
 | 20081        | Battle Worn Long TShirt           |
 | 10004        | Black Longsleeve T-Shirt          |
+| 20203        | Christmas Elf                     |
 | 10089        | Christmas Jumper                  |
 | 10106        | Creepy Jack                       |
 | 10050        | Frankensteins Sweater             |
@@ -267,6 +273,7 @@
 | 20001        | Big Grin                          |
 | 20036        | Blingin Grill                     |
 | 20023        | Death Facemask                    |
+| 20204        | Frostbite                         |
 | 20009        | Glowing Skull                     |
 | 20102        | Industrial Protection Mask        |
 | 20044        | Punishment Mask                   |
@@ -303,8 +310,15 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10074        | Chieftain Pump Shotgun            |
+| 20214        | Native Gold                       |
+| 20213        | Native Yellow                     |
 | 10140        | The Swampmaster                   |
 | 20014        | Urban Afterburn Pump Shotgun      |
+
+## Reactive Target (target.reactive)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20211        | On Target                         |
 
 ## Revolver (pistol.revolver)
 | Skin Id      | Skin name                         |
@@ -335,6 +349,17 @@
 |--------------|-----------------------------------|
 | 20109        | Gold Rock                         |
 | 20110        | Meteorite                         |
+
+## Rocket Launcher (rocket.launcher)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20208        | Army Surplus Rocket Launcher      |
+| 20207        | ThatGermanGuy Warhawk             |
+
+## Sandbag Barricade (barricade.sandbags)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20200        | Grandmother's Gift Barricade      |
 
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
@@ -369,6 +394,7 @@
 | 10121        | Aston Christmas                   |
 | 10037        | Blue Plaid Sleeping Bag           |
 | 10119        | Christmas Bag                     |
+| 20216        | Christmas Holiday Bag             |
 | 10109        | Freshly Dug Grave                 |
 | 10107        | Horror Bag                        |
 | 20114        | Jungle Camo Sleeping Bag          |
@@ -382,6 +408,11 @@
 | 10113        | Black                             |
 | 10083        | Salvaged Shirt, Coat and Tie      |
 | 10112        | Woodland                          |
+
+## Stone Hatchet (stonehatchet)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20205        | Ice Tooth                         |
 
 ## Tank Top (shirt.tanktop)
 | Skin Id      | Skin name                         |
@@ -422,8 +453,14 @@
 |--------------|-----------------------------------|
 | 10143        | The Peace Pipe                    |
 
+## Wood Storage Box (box.wooden)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20121        | First Aid Box                     |
+
 ## Wooden Door (door.hinged.wood)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20206        | Christmas Tree Door               |
 | 20112        | Door to Heaven                    |
 | 20113        | Old Heavy Wooden Door             |
