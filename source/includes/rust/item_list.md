@@ -182,6 +182,8 @@
 | 371156815     | M92 Pistol                   | pistol.m92               |
 | -930579334    | Revolver                     | pistol.revolver          |
 | 548699316     | Semi-Automatic Pistol        | pistol.semiauto          |
+| 142147109     | Large Planter Box            | planter.large            |
+| 148953073     | Small Planter Box            | planter.small            |
 | 640562379     | Pookie Bear                  | pookie.bear              |
 | 1974032895    | Empty Propane Tank           | propanetank              |
 | -225085592    | Pumpkin                      | pumpkin                  |

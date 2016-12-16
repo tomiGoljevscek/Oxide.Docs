@@ -100,6 +100,7 @@
 | 10034        | Punk Boots                        |
 | 20015        | Rock Star Boots                   |
 | 10044        | Scavenged Sneaker Boots           |
+| 20307        | Tactical Boots                    |
 | 10022        | Tan Boots                         |
 
 ## Bucket Helmet (bucket.helmet)
@@ -136,6 +137,7 @@
 |--------------|-----------------------------------|
 | 20120        | Rusty Coffee Can Helmet           |
 | 20005        | Skull Hazard                      |
+| 20303        | Spare Parts                       |
 
 ## Concrete Barricade (barricade.concrete)
 | Skin Id      | Skin name                         |
@@ -146,6 +148,22 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20107        | HazardCross                       |
+
+## Custom SMG (smg.2)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20301        | Firestarter Custom SMG            |
+
+## F1 Grenade (grenade.f1)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20305        | Voodoo Grenade                    |
+
+## Hatchet (hatchet)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20300        | Firefighter Hatchet               |
+| 20302        | Military Hatchet                  |
 
 ## Hide Boots (attire.hide.boots)
 | Skin Id      | Skin name                         |
@@ -190,6 +208,7 @@
 | 10069        | Desert Camo Balaclava             |
 | 10071        | Double Yellow Balaclava           |
 | 10068        | Forest Camo Balaclava             |
+| 20311        | Knitted Balaclava                 |
 | 10057        | Murica Balaclava                  |
 | 10075        | Nightmare Balaclava               |
 | 10070        | Red Check Balaclava               |
@@ -217,6 +236,7 @@
 ## Large Wood Box (box.wooden.large)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20309        | Ammo Box                          |
 | 10124        | Ammo Wooden Box                   |
 | 20201        | Christmas Holiday LWB             |
 | 10122        | Christmas Storage                 |
@@ -275,10 +295,12 @@
 | 20023        | Death Facemask                    |
 | 20204        | Frostbite                         |
 | 20009        | Glowing Skull                     |
+| 20306        | Human Sacrifice Mask              |
 | 20102        | Industrial Protection Mask        |
 | 20044        | Punishment Mask                   |
 | 20025        | Rusted Smile                      |
 | 20013        | Sacrificial Mask                  |
+| 20304        | Steampunk Leather Mask            |
 | 20082        | Tempered Mask                     |
 
 ## Miners Hat (hat.miner)
@@ -323,6 +345,7 @@
 ## Revolver (pistol.revolver)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20308        | Handmade Revolver                 |
 | 20118        | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
 
@@ -371,6 +394,11 @@
 | 20033        | Polymer SAP                       |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
+
+## Semi-Automatic Rifle (rifle.semiauto)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20310        | Workbench SAR                     |
 
 ## Shirt (shirt.collared)
 | Skin Id      | Skin name                         |
