@@ -65,8 +65,10 @@
 ## Bolt Action Rifle (rifle.bolt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20409        | Army Bolt Rifle                   |
 | 10117        | Dreamcatcher                      |
 | 10115        | Ghost Bolt Rifle                  |
+| 20408        | Rustpunk Rifle                    |
 | 10116        | Tundra Bolt Rifle                 |
 
 ## Bone Club (bone.club)
@@ -147,17 +149,26 @@
 ## Crossbow (crossbow)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20406        | Engraved Crossbow                 |
 | 20107        | HazardCross                       |
 
 ## Custom SMG (smg.2)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20413        | Alien Relic SMG                   |
+| 20412        | Anarchy SMG                       |
 | 20301        | Firestarter Custom SMG            |
+| 20401        | tRUSTy Friend                     |
 
 ## F1 Grenade (grenade.f1)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20305        | Voodoo Grenade                    |
+
+## Hammer (hammer)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20402        | Welded Hammer                     |
 
 ## Hatchet (hatchet)
 | Skin Id      | Skin name                         |
@@ -249,6 +260,7 @@
 ## Leather Gloves (burlap.gloves)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20415        | Black Alligator                   |
 | 10128        | Boxer's Bandages                  |
 | 20039        | Duelist Gloves                    |
 | 20038        | Motorcycle Gloves                 |
@@ -283,6 +295,8 @@
 |--------------|-----------------------------------|
 | 20040        | Flak Vest - Green                 |
 | 20010        | Forest Camo Chest Plate           |
+| 20417        | Hazardous Grater Chest Plate      |
+| 20411        | Metal Barrel Chest Plate          |
 | 20041        | Plate Carrier - Black             |
 | 20035        | Racing Stripes Chest Plate        |
 
@@ -323,6 +337,7 @@
 | 10049        | Blue Track Pants                  |
 | 10019        | Forest Camo Pants                 |
 | 10078        | Old Prisoner Pants                |
+| 20414        | One Percenter Chaps               |
 | 10048        | Punk Rock Pants                   |
 | 10021        | Snow Camo Pants                   |
 | 20037        | Steppe Camo Pants                 |
@@ -358,12 +373,14 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20124        | British Sign Vest                 |
+| 20405        | Chopshop Body Armor               |
 | 20006        | Hazard Protection Vest            |
 
 ## Road Sign Kilt (roadsign.kilt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 20123        | British Sign Pants                |
+| 20404        | Chopshop Kilt                     |
 | 20007        | Hazard Cover Pants                |
 | 20085        | Military Camo Roadsign Kilt       |
 
@@ -378,6 +395,11 @@
 |--------------|-----------------------------------|
 | 20208        | Army Surplus Rocket Launcher      |
 | 20207        | ThatGermanGuy Warhawk             |
+
+## Salvaged Icepick (icepick.salvaged)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 20410        | Inferno Hazard Salvaged Icepick   |
 
 ## Sandbag Barricade (barricade.sandbags)
 | Skin Id      | Skin name                         |
@@ -406,6 +428,7 @@
 | 20019        | Charitable Rust 2016 Shirt        |
 | 20078        | Green Lumberjack                  |
 | 20079        | Red Lumberjack                    |
+| 20416        | Sergeant Shirt                    |
 | 20119        | Survival Shirt                    |
 | 20080        | The Blue Death                    |
 
@@ -414,6 +437,7 @@
 |--------------|-----------------------------------|
 | 20029        | Camo Shorts                       |
 | 20030        | Cutoff Shorts                     |
+| 20403        | Homemade Shorts                   |
 | 20028        | Snow Camo Shorts                  |
 
 ## Sleeping Bag (sleepingbag)
@@ -479,6 +503,7 @@
 ## Waterpipe Shotgun (shotgun.waterpipe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 20407        | Rustpunk Scattergun               |
 | 10143        | The Peace Pipe                    |
 
 ## Wood Storage Box (box.wooden)
