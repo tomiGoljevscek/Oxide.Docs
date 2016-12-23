@@ -26,11 +26,11 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Name}");
                 return;
             }
 
-            Puts($"Google answered for {player.Nickname}: {response}");
+            Puts($"Google answered for {player.Name}: {response}");
         }
     }
 }
@@ -94,10 +94,10 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Name}");
                 return;
             }
-            Puts("Google answered for " + player.Nickname + ": " + response);
+            Puts("Google answered for " + player.Name + ": " + response);
         }
     }
 }
@@ -147,11 +147,11 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Name}");
                 return;
             }
 
-            Puts($"Google answered for {player.Nickname}: {response}");
+            Puts($"Google answered for {player.Name}: {response}");
         }
     }
 }
@@ -201,10 +201,10 @@ namespace Oxide.Plugins
         {
             if (response == null || code != 200)
             {
-                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Nickname}");
+                Puts($"Error: {code} - Couldn't get an answer from Google for {player.Name}");
                 return;
             }
-            Puts("Google answered for " + player.Nickname + ": " + response);
+            Puts("Google answered for " + player.Name + ": " + response);
         }
     }
 }
