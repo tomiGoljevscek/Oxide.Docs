@@ -6,6 +6,7 @@
 | 809801196    | Addicted Guitarist                |
 | 826914904    | Army Acoustic Guitar              |
 | 809938266    | Black Acoustic Guitar             |
+| 844914652    | No War Guitar                     |
 
 ## Armored Door (door.hinged.toptier)
 | Skin Id      | Skin name                         |
@@ -14,6 +15,7 @@
 | 801889927    | High Voltage                      |
 | 801937986    | Incarceration Armored Door        |
 | 801831553    | Laboratory Armored Door           |
+| 839925176    | Military Armored Door             |
 | 809638761    | No Escape                         |
 | 807729959    | Radioactive Armored Door          |
 
@@ -142,6 +144,7 @@
 ## Coffee Can Helmet (coffeecan.helmet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 843676357    | Lizard Skull                      |
 | 806212029    | Rusty Coffee Can Helmet           |
 | 784910461    | Skull Hazard                      |
 | 814098474    | Spare Parts                       |
@@ -197,6 +200,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 798669794    | Caution Tape Top                  |
+| 845019310    | Leopard Top                       |
 
 ## Hide Pants (attire.hide.pants)
 | Skin Id      | Skin name                         |
@@ -230,11 +234,13 @@
 | 10132        | Rhinocrunch Hoodie                |
 | 10129        | Safety Crew                       |
 | 10086        | Skeleton Hoodie                   |
+| 677636990    | Tank Crew Hoodie                  |
 | 803249256    | Unknown Territory Hoodie          |
 
 ## Improvised Balaclava (mask.balaclava)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 843976918    | Burglar Mask                      |
 | 539536877    | Burlap Brains Balaclava           |
 | 10069        | Desert Camo Balaclava             |
 | 10071        | Double Yellow Balaclava           |
@@ -277,6 +283,7 @@
 | 10123        | First Aid Green                   |
 | 10141        | Gun Box                           |
 | 797422750    | Large Stone Box                   |
+| 842083350    | Military Crate                    |
 
 ## Leather Gloves (burlap.gloves)
 | Skin Id      | Skin name                         |
@@ -317,6 +324,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 832233112    | Chainmail                         |
+| 842577956    | Chest Resistance                  |
 | 796728308    | Flak Vest - Green                 |
 | 794169855    | Forest Camo Chest Plate           |
 | 823132085    | Hazardous Grater Chest Plate      |
@@ -339,6 +347,7 @@
 | 812933296    | Human Sacrifice Mask              |
 | 806983252    | Industrial Protection Mask        |
 | 828888629    | Machina Mask                      |
+| 841012325    | Mask of Sacrifice                 |
 | 803894027    | Punishment Mask                   |
 | 792905158    | Rusted Smile                      |
 | 792827436    | Sacrificial Mask                  |
@@ -436,6 +445,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 820810719    | Inferno Hazard Salvaged Icepick   |
+| 844666224    | Lavapick                          |
 
 ## Salvaged Sword (salvaged.sword)
 | Skin Id      | Skin name                         |
@@ -512,6 +522,7 @@
 | 530154777    | 60's Army Jacket                  |
 | 10113        | Black                             |
 | 530159711    | Salvaged Shirt, Coat and Tie      |
+| 839466039    | Telogreika Jacket                 |
 | 10112        | Woodland                          |
 
 ## Stone Hatchet (stonehatchet)
@@ -533,6 +544,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 561462394    | Santa's Little Helper             |
+| 839819171    | Wasteland Hunter                  |
 
 ## T-Shirt (tshirt)
 | Skin Id      | Skin name                         |

@@ -77,6 +77,9 @@
 | -1658459025   | Raw Chicken Breast           | chicken.raw              |
 | -726947205    | Spoiled Chicken              | chicken.spoiled          |
 | -341443994    | Chocolate Bar                | chocholate               |
+| 2045107609    | Corn Clone                   | clone.corn               |
+| 2045246801    | Hemp Clone                   | clone.hemp               |
+| 509654999     | Pumpkin Plant Clone          | clone.pumpkin            |
 | 94756378      | Cloth                        | cloth                    |
 | 3059095       | Coal :(                      | coal                     |
 | -2128719593   | Coffee Can Helmet            | coffeecan.helmet         |
@@ -180,6 +183,7 @@
 | -578028723    | Pick Axe                     | pickaxe                  |
 | -1379225193   | Eoka Pistol                  | pistol.eoka              |
 | 371156815     | M92 Pistol                   | pistol.m92               |
+| 2033918259    | Python Revolver              | pistol.python            |
 | -930579334    | Revolver                     | pistol.revolver          |
 | 548699316     | Semi-Automatic Pistol        | pistol.semiauto          |
 | 142147109     | Large Planter Box            | planter.large            |
