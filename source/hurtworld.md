@@ -4,10 +4,6 @@ short_code: hurtworld
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - hurtworld/getting_started

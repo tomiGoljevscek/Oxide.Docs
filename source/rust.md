@@ -4,10 +4,6 @@ short_code: rust
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - rust/getting_started

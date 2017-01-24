@@ -4,10 +4,6 @@ short_code: blockstorm
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - blockstorm/getting_started

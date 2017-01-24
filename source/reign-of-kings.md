@@ -4,10 +4,6 @@ short_code: reign-of-kings
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - reign-of-kings/getting_started

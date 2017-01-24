@@ -4,10 +4,6 @@ short_code: hide-hold-out
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - hide-hold-out/getting_started

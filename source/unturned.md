@@ -4,10 +4,6 @@ short_code: unturned
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - unturned/getting_started

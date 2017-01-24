@@ -4,10 +4,6 @@ short_code: rust-legacy
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - rust-legacy/getting_started

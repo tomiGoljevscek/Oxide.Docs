@@ -4,10 +4,6 @@ short_code: the-forest
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - the-forest/getting_started

@@ -4,10 +4,6 @@ short_code: 7-days-to-die
 
 language_tabs:
   - csharp
-  - lua
-  - coffeescript
-  - javascript
-  - python
 
 includes:
   - 7-days-to-die/getting_started
