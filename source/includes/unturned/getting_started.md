@@ -3,54 +3,14 @@
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 0.1)]
+    [Info("EpicStuff", "Unknown", 0.1)]
     [Description("Makes epic stuff happen")]
 
-    class EpicPlugin : UnturnedPlugin
+    class EpicStuff : UnturnedPlugin
     {
         // The rest of the code and magic
     }
 }
-```
-
-``` lua
-PLUGIN.Title = "EpicPlugin"
-PLUGIN.Author = "Unknown"
-PLUGIN.Version = V(0, 1, 0)
-PLUGIN.Description = "Makes epic stuff happen"
-
--- The rest of the code and magic
-```
-
-``` coffeescript
-Title: "EpicPlugin"
-Author: "Unknown"
-Version: V(0, 1, 0)
-Description: "Makes epic stuff happen"
-
-# The rest of the code and magic
-```
-
-``` javascript
-var EpicPlugin = {
-  Title : "EpicPlugin",
-  Author : "Unknown",
-  Version : V(0, 1, 0),
-  Description : "Makes epic stuff happen",
-
-  // The rest of the code and magic
-}
-```
-
-``` python
-class EpicPlugin:
-  def __init__(self):
-    self.Title = "EpicPlugin"
-    self.Author = "Unknown"
-    self.Version = V(0, 1, 0)
-    self.Description = "Makes epic stuff happen"
-
-  # The rest of the code and magic
 ```
 
 The Title variable is what defines your plugin. This should be a unique codename or short description such as Pets.

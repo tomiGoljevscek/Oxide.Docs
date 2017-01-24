@@ -7,23 +7,6 @@ void OnThroneCapture(AncientThroneCaptureEvent e)
 {
     Puts("OnThroneCapture works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when a player starts capturing the throne.
 
@@ -34,23 +17,6 @@ void OnThroneCaptured(AncientThroneCaptureEvent e)
 {
     Puts("OnThroneCaptured works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when a player captured the throne.
 
@@ -61,23 +27,6 @@ void OnThroneReleased(AncientThroneReleaseEvent e)
 {
     Puts("OnThroneReleased works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when the king dies or renounces the throne.
 
@@ -88,23 +37,6 @@ void OnThroneRename(AncientThroneRenameEvent e)
 {
     Puts("OnThroneRename works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when the king renames the realm.
 
@@ -115,22 +47,5 @@ void OnThroneTax(AncientThroneTaxEvent e)
 {
     Puts("OnThroneTax works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when the king changes the tax.

@@ -9,28 +9,6 @@ void CanUpdateSign(BasePlayer player, Signage sign)
 }
 ```
 
-``` lua
-function PLUGIN:CanUpdateSign(player, sign)
-    print("CanUpdateSign works!")
-end
-```
-
-``` coffeescript
-CanUpdateSign: (player, sign) =>
-    print "CanUpdateSign works!"
-```
-
-``` javascript
-CanUpdateSign: function(player, sign) {
-    print("CanUpdateSign works!");
-}
-```
-
-``` python
-def CanUpdateSign(self, player, sign):
-    print "CanUpdateSign works!"
-```
-
  * Called when the player attempts to change the text on a sign or lock it
  * Returning true overrides default behavior
 
@@ -41,28 +19,6 @@ void CanLockSign(BasePlayer player, Signage sign)
 {
     Puts("CanLockSign works!");
 }
-```
-
-``` lua
-function PLUGIN:CanLockSign(player, sign)
-    print("CanLockSign works!")
-end
-```
-
-``` coffeescript
-CanLockSign: (player, sign) =>
-    print "CanLockSign works!"
-```
-
-``` javascript
-CanLockSign: function(player, sign) {
-    print("CanLockSign works!");
-}
-```
-
-``` python
-def CanLockSign(self, player, sign):
-    print "CanLockSign works!"
 ```
 
  * Called when the player attempts to lock a sign
@@ -77,28 +33,6 @@ void CanUnlockSign(BasePlayer player, Signage sign)
 }
 ```
 
-``` lua
-function PLUGIN:CanUnlockSign(player, sign)
-    print("CanUnlockSign works!")
-end
-```
-
-``` coffeescript
-CanUnlockSign: (player, sign) =>
-    print "CanUnlockSign works!"
-```
-
-``` javascript
-CanUnlockSign: function(player, sign) {
-    print("CanUnlockSign works!");
-}
-```
-
-``` python
-def CanUnlockSign(self, player, sign):
-    print "CanUnlockSign works!"
-```
-
  * Called when the player attempts to unlock a sign
  * Returning true overrides default behavior
  
@@ -109,28 +43,6 @@ void OnSignLocked(Signage sign, BasePlayer player)
 {
     Puts("OnSignLocked works!");
 }
-```
-
-``` lua
-function PLUGIN:OnSignLocked(sign, player)
-    print("OnSignLocked works!")
-end
-```
-
-``` coffeescript
-OnSignLocked: (sign, player) =>
-    print "OnSignLocked works!"
-```
-
-``` javascript
-OnSignLocked: function(sign, player) {
-    print("OnSignLocked works!");
-}
-```
-
-``` python
-def OnSignLocked(self, sign, player):
-    print "OnSignLocked works!"
 ```
 
  * Called after the player has locked a sign
@@ -145,28 +57,6 @@ void OnSignUpdate(Signage sign, BasePlayer player)
 }
 ```
 
-``` lua
-function PLUGIN:OnSignUpdate(sign, player, text)
-    print("OnSignUpdate works!")
-end
-```
-
-``` coffeescript
-OnSignUpdate: (sign, player, text) =>
-    print "OnSignUpdate works!"
-```
-
-``` javascript
-OnSignUpdate: function(sign, player, text) {
-    print("OnSignUpdate works!");
-}
-```
-
-``` python
-def OnSignUpdate(self, sign, player, text):
-    print "OnSignUpdate works!"
-```
-
  * Called when the player attempts to update a sign
  * Returning true cancels the default behavior
 
@@ -177,28 +67,6 @@ void OnSignUpdated(Signage sign, BasePlayer player, string text)
 {
     Puts("OnSignUpdated works!");
 }
-```
-
-``` lua
-function PLUGIN:OnSignUpdated(sign, player, text)
-    print("OnSignUpdated works!")
-end
-```
-
-``` coffeescript
-OnSignUpdated: (sign, player, text) =>
-    print "OnSignUpdated works!"
-```
-
-``` javascript
-OnSignUpdated: function(sign, player, text) {
-    print("OnSignUpdated works!");
-}
-```
-
-``` python
-def OnSignUpdated(self, sign, player, text):
-    print "OnSignUpdated works!"
 ```
 
  * Called after the player has changed the text on a sign

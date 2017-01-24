@@ -11,10 +11,10 @@ using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 1.0)]
+    [Info("EpicStuff", "Unknown", 1.0)]
     [Description("This example illustrates how to use a GET WebRequest")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicStuff : CovalencePlugin
     {
         [Command("get")]
         void GetRequest(IPlayer player, string command, string[] args)
@@ -36,40 +36,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` lua
-webrequest.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response)
-    if response == nil or code ~= 200 then 
-        print("Couldn't get an answer from Google!") 
-        return 
-    end
-    print("Google answered: " .. tostring(response))
-end, self.Plugin)
-```
-
-``` javascript
-webrequests.EnqueueGet("http://www.google.com/search?q=oxide", function(code, response) {
-    if (response == null || code != 200) {
-        print("Couldn't get an answer from Google!");
-        return
-    }
-    print("Google answered: " + response);
-}.bind(this), this.Plugin);
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-from System import Action, Int32, String
-def response_handler(code, response):
-    if response == None or code != 200:
-        print "Couldn't get an answer from Google!" 
-        return 
-    print "Google answered: " + response
-webrequest.EnqueueGet("http://www.google.com/search?q=oxide", Action[Int32,String](response_handler), self.Plugin);
-```
-
 This uses the raw connection to a web page as you would on your browser.
 
 ## Basic POST method
@@ -79,10 +45,10 @@ using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 1.0)]
+    [Info("EpicStuff", "Unknown", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicStuff : CovalencePlugin
     {
         [Command("post")]
         void PostRequest(IPlayer player, string command, string[] args)
@@ -103,22 +69,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
-
 ## Advanced GET method
 
 ``` csharp
@@ -126,10 +76,10 @@ using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 1.0)]
+    [Info("EpicStuff", "Unknown", 1.0)]
     [Description("This example illustrates how to use a GET WebRequest")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicStuff : CovalencePlugin
     {
         [Command("get")]
         void GetRequest(IPlayer player, string command, string[] args)
@@ -157,22 +107,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
-
 ## Advanced POST method
 
 ``` csharp
@@ -180,10 +114,10 @@ using Oxide.Core.Libraries.Covalence;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 1.0)]
+    [Info("EpicStuff", "Unknown", 1.0)]
     [Description("This example illustrates how to use a POST WebRequest")]
 
-    class EpicPlugin : CovalencePlugin
+    class EpicStuff : CovalencePlugin
     {
         [Command("post")]
         void PostRequest(IPlayer player, string command, string[] args)
@@ -208,20 +142,4 @@ namespace Oxide.Plugins
         }
     }
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
 ```

@@ -21,28 +21,6 @@ void Init()
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    print("Init works!")
-end
-```
-
-``` javascript
-Init: function() {
-    print("Init works!");
-}
-```
-
-``` coffeescript
-Init: ->
-    print "Init works!"
-```
-
-``` python
-def Init():
-    print "Init works!"
-```
-
  * Called when a plugin is being initialized
  * Other plugins may or may not be present, dependant on load order
 
@@ -53,28 +31,6 @@ void Loaded()
 {
     Puts("Loaded works!");
 }
-```
-
-``` lua
-function PLUGIN:Loaded()
-    print("Loaded works!")
-end
-```
-
-``` javascript
-Loaded: function() {
-    print("Loaded works!");
-}
-```
-
-``` coffeescript
-Loaded: ->
-    print "Loaded works!"
-```
-
-``` python
-def Loaded():
-    print "Loaded works!"
 ```
 
  * Called when a plugin has finished loading
@@ -89,28 +45,6 @@ void Unload()
 }
 ```
 
-``` lua
-function PLUGIN:Unload()
-    print("Save files, destroy timers, etc")
-end
-```
-
-``` coffeescript
-Unload: ->
-    print "Save files, destroy timers, etc."
-```
-
-``` javascript
-Unload: function() {
-    print("Save files, destroy timers, etc");
-}
-```
-
-``` python
-def Unload():
-    print "Save files, destroy timers, etc."
-```
-
  * Called when a plugin is being unloaded
 
 ## LoadDefaultConfig
@@ -120,28 +54,6 @@ protected override void LoadDefaultConfig()
 {
     Puts("Default configuration created");
 }
-```
-
-``` lua
-function PLUGIN:LoadDefaultConfig()
-    print("Default configuration created")
-end
-```
-
-``` coffeescript
-LoadDefaultConfig: ->
-    print "Default configuration created"
-```
-
-``` javascript
-LoadDefaultConfig: function() {
-    print("Default configuration created");
-}
-```
-
-``` python
-def LoadDefaultConfig():
-    print "Default configuration created"
 ```
 
  * Called when the config for a plugin should be initialized
@@ -156,28 +68,6 @@ void OnFrame()
 }
 ```
 
-``` lua
-function PLUGIN:OnFrame()
-    print("OnFrame works!")
-end
-```
-
-``` coffeescript
-OnFrame: ->
-    print "OnFrame works!"
-```
-
-``` javascript
-OnFrame: function() {
-    print("OnFrame works!");
-}
-```
-
-``` python
-def OnFrame():
-    print "OnFrame works!"
-```
-
  * Placeholder
 
 ## OnPluginLoaded
@@ -187,28 +77,6 @@ void OnPluginLoaded(Plugin name)
 {
     Puts($"Plugin '{name}' has been loaded");
 }
-```
-
-``` lua
-function PLUGIN:OnPluginLoaded(name)
-    print("Plugin '" .. name .. "' has been loaded")
-end
-```
-
-``` coffeescript
-OnPluginLoaded: (name) =>
-    print "Plugin '#{name}' has been loaded"
-```
-
-``` javascript
-OnPluginLoaded: function(name) {
-    print("Plugin '" + name + "' has been loaded");
-}
-```
-
-``` python
-def OnPluginLoaded(name):
-    print "OnPluginLoaded works!"
 ```
 
  * Called when a plugin has been loaded
@@ -222,28 +90,6 @@ void OnPluginUnloaded(Plugin name)
 }
 ```
 
-``` lua
-function PLUGIN:OnPluginUnloaded(name)
-    print("Plugin '" .. name .. "' has been unloaded")
-end
-```
-
-``` coffeescript
-OnPluginUnloaded: (name) =>
-    print "Plugin '#{name}' has been unloaded"
-```
-
-``` javascript
-OnPluginUnloaded: function(name) {
-    print("Plugin '" + name + "' has been unloaded");
-}
-```
-
-``` python
-def OnPluginUnloaded(name):
-    print "OnPluginUnloaded works!"
-```
-
  * Called when a plugin has been unloaded
 
 ## OnServerInitialized
@@ -253,28 +99,6 @@ void OnServerInitialized()
 {
     Puts("OnServerInitialized works!");
 }
-```
-
-``` lua
-function PLUGIN:OnServerInitialized()
-    print("OnServerInitialized works!")
-end
-```
-
-``` coffeescript
-OnServerInitialized: ->
-    print "OnServerInitialized works!"
-```
-
-``` javascript
-OnServerInitialized: function() {
-    print("OnServerInitialized works!");
-}
-```
-
-``` python
-def OnServerInitialized():
-    print "OnServerInitialized works!"
 ```
 
  * No return behavior
@@ -289,28 +113,6 @@ void OnServerSave
 }
 ```
 
-``` lua
-function PLUGIN:OnServerSave()
-    print("OnServerSave works!")
-end
-```
-
-``` coffeescript
-OnServerSave: ->
-    print "OnServerSave works!"
-```
-
-``` javascript
-OnServerSave: function() {
-    print("OnServerSave works!");
-}
-```
-
-``` python
-def OnServerSave():
-    print "OnServerSave works!"
-```
-
  * No return behavior
  * Called before the server saves and shuts down
 
@@ -321,28 +123,6 @@ void OnUserPermissionGranted(string id, string perm)
 {
     Puts($"User '{id}' granted permission: {perm}");
 }
-```
-
-``` lua
-function PLUGIN:OnUserPermissionGranted(id, perm)
-    print("User '" .. id .. "' granted permission: " .. perm)
-end
-```
-
-``` coffeescript
-OnUserPermissionGranted: (id, perm) =>
-    print "User '#{id}' granted permission: #{perm}"
-```
-
-``` javascript
-OnUserPermissionGranted: function(id, perm) {
-    print("User '" + id + "' granted permission: " + perm);
-}
-```
-
-``` python
-def OnUserPermissionGranted(name, perm):
-    print "OnUserPermissionGranted works!"
 ```
 
  * Called when a permission has been granted to a user
@@ -356,28 +136,6 @@ void OnUserPermissionRevoked(string id, string perm)
 }
 ```
 
-``` lua
-function PLUGIN:OnUserPermissionRevoked(id, perm)
-    print("User '" .. id .. "' revoked permission: " .. perm)
-end
-```
-
-``` coffeescript
-OnUserPermissionRevoked: (id, perm) =>
-    print "User '#{id}' revoked permission: #{perm}"
-```
-
-``` javascript
-OnUserPermissionRevoked: function(id, perm) {
-    print("User '" + id + "' revoked permission: " + perm);
-}
-```
-
-``` python
-def OnUserPermissionRevoked(id, perm):
-    print "OnUserPermissionRevoked works!"
-```
-
  * Called when a permission has been revoked from a user
 
 ## OnUserGroupAdded
@@ -387,28 +145,6 @@ void OnUserGroupAdded(string id, string name)
 {
     Puts($"User '{id}' added to group: {name}");
 }
-```
-
-``` lua
-function PLUGIN:OnUserGroupAdded(id, name)
-    print("User '" .. id .. "' added to group: " .. name)
-end
-```
-
-``` coffeescript
-OnUserGroupAdded: (id, name) =>
-    print "User '#{id}' added to group: #{name}"
-```
-
-``` javascript
-OnUserGroupAdded: function(id, name) {
-    print("User '" + id + "' added to group: " + name);
-}
-```
-
-``` python
-def OnUserGroupAdded(id, name):
-    print "OnUserGroupAdded works!"
 ```
 
  * Called when a user has been added to a group
@@ -423,28 +159,6 @@ void OnUserGroupRemoved(string id, string name)
 }
 ```
 
-``` lua
-function PLUGIN:OnUserGroupRemoved(id, name)
-    print("User '" .. id .. "' removed from group: " .. name)
-end
-```
-
-``` coffeescript
-OnUserGroupRemoved: (id, name) =>
-    print "User '#{id}' removed from group: #{name}"
-```
-
-``` javascript
-OnUserGroupRemoved: function(id, name) {
-    print("User '" + id + "' removed from group: " + name);
-}
-```
-
-``` python
-def OnUserGroupRemoved(id, name):
-    print "OnUserGroupRemoved works!"
-```
-
  * Called when a user has been removed from a group
 
 ## OnGroupPermissionGranted
@@ -456,28 +170,6 @@ void OnGroupPermissionGranted(string name, string perm)
 }
 ```
 
-``` lua
-function PLUGIN:OnGroupPermissionGranted(name, perm)
-    print("Group '" .. name .. "' granted permission: " .. perm)
-end
-```
-
-``` coffeescript
-OnGroupPermissionGranted: (name, perm) =>
-    print "Group '#{name}' granted permission: #{perm}"
-```
-
-``` javascript
-OnGroupPermissionGranted: function(name, perm) {
-    print("Group '" + name + "' granted permission: " + perm);
-}
-```
-
-``` python
-def OnGroupPermissionGranted(name, perm):
-    print "OnGroupPermissionGranted works!"
-```
-
  * Called when a permission has been granted to a group
 
 ## OnGroupPermissionRevoked
@@ -487,28 +179,6 @@ void OnGroupPermissionRevoked(string name, string perm)
 {
     Puts($"Group '{name}' revoked permission: {perm}");
 }
-```
-
-``` lua
-function PLUGIN:OnGroupPermissionRevoked(name, perm)
-    print("Group '" .. name .. "' revoked permission: " .. perm)
-end
-```
-
-``` coffeescript
-OnGroupPermissionRevoked: (name, perm) =>
-    print "Group '#{name}' revoked permission: #{perm}"
-```
-
-``` javascript
-OnGroupPermissionRevoked: function(name, perm) {
-    print("Group '" + name + "' revoked permission: " + perm);
-}
-```
-
-``` python
-def OnGroupPermissionRevoked(name, perm):
-    print "OnGroupPermissionRevoked works!"
 ```
 
  * Called when a permission has been revoked from a group

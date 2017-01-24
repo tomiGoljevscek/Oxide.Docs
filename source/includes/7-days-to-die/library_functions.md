@@ -11,27 +11,6 @@ void OnPlayerConnected(ClientInfo client)
 }
 ```
 
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` lua
-function PLUGIN:OnPlayerConnected(client)
-    sdtd.BroadcastChat(client.playerName .. " has joined the server")
-end
-```
-
-``` javascript
-OnPlayerConnected: function(client) {
-    sdtd.BroadcastChat(client.playerName + " has joined the server");
-}
-```
-
-``` python
-def OnPlayerConnected(self, client):
-    sdtd.BroadcastChat(client.playerName + " has joined the server")
-```
-
 Sends a chat message to all players. The name parameter is optional and will be blank if not provided.
 
 `sdtd.BroadcastChat(name, message)`

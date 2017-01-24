@@ -7,23 +7,6 @@ void OnUserApprove(ConnectionLoginData data)
 {
     Puts("OnUserApprove works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Returning true overrides default behavior, plugin should call approval.Deny if it does this
 
@@ -34,23 +17,6 @@ void OnPlayerConnected(Player player)
 {
     Puts("OnPlayerConnected works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * No return behavior
  * Called before the player object is created, but after the player has been approved
@@ -62,23 +28,6 @@ void OnPlayerDisconnected(Player player)
 {
     Puts("OnPlayerDisconnected works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * No return behavior
  * Called after the player has disconnected from the server
@@ -90,23 +39,6 @@ void OnPlayerSpawn(PlayerFirstSpawnEvent e)
 {
     Puts("OnPlayerSpawn works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * No return behavior
  * Called when the player spawns
@@ -118,23 +50,6 @@ void OnPlayerRespawn(PlayerRespawnEvent e)
 {
     Puts("OnPlayerRespawn works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * No return behavior
  * Called when the player respawns
@@ -146,23 +61,6 @@ void OnPlayerChat(PlayerEvent e)
 {
     Puts("OnPlayerChat works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when the player sends chat to the server
  * Returning true overrides default behavior of chat, not commands
@@ -174,23 +72,6 @@ void OnPlayerCapture(PlayerCaptureEvent e)
 {
     Puts("OnPlayerCapture works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called once the loading bar of roping a player is completed.
 
@@ -201,22 +82,5 @@ void OnPlayerRelease(PlayerEscapeEvent e)
 {
     Puts("OnPlayerRelease works!");
 }
-```
-
-``` lua
-We need a Lua example here
-```
-
-``` javascript
-We need a JavaScript example here
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` python
-We need a Python example here
-```
 
  * Called when a roped player gets freed from the rope.

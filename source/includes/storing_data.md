@@ -8,10 +8,10 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 1.0)] 
+    [Info("EpicStuff", "Unknown", 1.0)] 
     [Description("This example illustrates how to create a data file")]
 
-    class EpicPlugin : RustPlugin
+    class EpicStuff : RustPlugin
     {
         class StoredData
         {
@@ -48,36 +48,6 @@ namespace Oxide.Plugins
 }
 ```
 
-``` lua
-function PLUGIN:Init()
-    self:LoadDataFiles()
-end
-
-local dataTable
-function PLUGIN:LoadDataFiles()
-    dataTable = datafile.GetDataTable("EpicPlugin") or {}
-end
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` javascript
-Init: function() {
-    this.LoadDataFiles();
-}
-
-var dataTable
-LoadDataFiles: function() {
-    dataTable = data.GetData("EpicPlugin");
-}
-```
-
-``` python
-def Init(self):
-    self.dataTable = data.GetData("EpicPlugin")
-```
 To store plugin related data to use in your plugin, you want to create a data file.
 
 ## Saving a data table
@@ -88,10 +58,10 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicPlugin", "Unknown", 1.0)] 
+    [Info("EpicStuff", "Unknown", 1.0)] 
     [Description("This example illustrates how to save to a data file")]
 
-    class EpicPlugin : RustPlugin
+    class EpicStuff : RustPlugin
     {
         class StoredData
         {
@@ -140,31 +110,4 @@ namespace Oxide.Plugins
         }
     }
 }
-```
-
-``` lua
-function PLUGIN:cmdTest(player, cmd, args)
-    local name = player.displayName
-    dataTable[name] = true
-    datafile.SaveDataTable("EpicPlugin")
-end
-```
-
-``` coffeescript
-We need a CoffeeScript example here
-```
-
-``` javascript
-cmdTest: function(player, cmd, args) {
-    var name = player.displayName;
-    dataTable[name] = true;
-    data.SaveData("EpicPlugin");
-}
-```
-
-``` python
-def Init(self):
-    self.dataTable = data.GetData("EpicPlugin")
-    self.dataTable["name"] = True
-    data.SaveData("EpicPlugin")
 ```
