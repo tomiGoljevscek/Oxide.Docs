@@ -10,7 +10,7 @@ includes:
   - universal_hooks
   - timers_basic
   - web_requests
-  - plugin_api
+  - plugin_calling
   - styling_messages
 
 search: true

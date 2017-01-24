@@ -21,7 +21,7 @@ includes:
   - storing_data
   - timers_basic
   - web_requests
-  - plugin_api
+  - plugin_calling
   - rust/item_list
   - rust/item_skins_list
   - rust/prefab_list

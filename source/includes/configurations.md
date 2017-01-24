@@ -39,7 +39,7 @@ namespace Oxide.Plugins
         [ChatCommand("Test")]
         void Test(BasePlayer player, string command, string[] args)
         {
-            if ((bool) Config["ShowJoinMessage"])
+            if ((bool)Config["ShowJoinMessage"])
                 Config["ShowJoinMessage"] = false;
             else
                 Config["ShowJoinMessage"] = true;

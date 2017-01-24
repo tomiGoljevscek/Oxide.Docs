@@ -15,7 +15,7 @@ includes:
   - reign-of-kings/library_functions
   - timers_basic
   - web_requests
-  - plugin_api
+  - plugin_calling
 
 search: true
 ---

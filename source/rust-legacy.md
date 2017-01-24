@@ -16,7 +16,7 @@ includes:
   - rust-legacy/library_functions
   - timers_basic
   - web_requests
-  - plugin_api
+  - plugin_calling
 
 search: true
 ---
