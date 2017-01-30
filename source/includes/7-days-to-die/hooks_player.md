@@ -3,7 +3,7 @@
 ## OnPlayerConnected
 
 ``` csharp
-void OnPlayerConnected(ClientInfo info)
+void OnPlayerConnected(ClientInfo client)
 {
     Puts("OnPlayerConnected works!");
 }
@@ -15,7 +15,7 @@ void OnPlayerConnected(ClientInfo info)
 ## OnPlayerDisconnected
 
 ``` csharp
-void OnPlayerDisconnected(ClientInfo info)
+void OnPlayerDisconnected(ClientInfo client)
 {
     Puts("OnPlayerDisconnected works!");
 }
@@ -27,7 +27,7 @@ void OnPlayerDisconnected(ClientInfo info)
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(string message, string name)
+void OnPlayerChat(ClientInfo client, string message)
 {
     Puts("OnPlayerChat works!");
 }
@@ -39,7 +39,7 @@ void OnPlayerChat(string message, string name)
 ## OnPlayerRespawned
 
 ``` csharp
-void OnPlayerRespawned(ClientInfo info, string reason)
+void OnPlayerRespawned(ClientInfo client, string reason)
 {
     Puts("OnPlayerRespawned works!");
 }
@@ -51,7 +51,7 @@ void OnPlayerRespawned(ClientInfo info, string reason)
 ## OnExperienceGained
 
 ``` csharp
-void OnExperienceGained(ClientInfo info, uint exp)
+void OnExperienceGained(ClientInfo client, uint exp)
 {
     Puts("OnExperienceGained works!");
 }
