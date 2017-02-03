@@ -97,6 +97,7 @@
 |--------------|-----------------------------------|
 | 10058        | Farmer Hat                        |
 | 587812040    | Fisherman Boonie Hat              |
+| 844289539    | Flower Hat                        |
 
 ## Boots (shoes.boots)
 | Skin Id      | Skin name                         |
@@ -127,6 +128,7 @@
 ## Burlap Shirt (burlap.shirt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 849866944    | Biker Dad                         |
 | 809909900    | Burlap and Leather Vest           |
 | 654502725    | Captain's Vest and Shirt          |
 | 10136        | Pirate Vest & Shirt               |
@@ -144,6 +146,7 @@
 ## Coffee Can Helmet (coffeecan.helmet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 848645884    | Apocalypse Helmet                 |
 | 843676357    | Lizard Skull                      |
 | 806212029    | Rusty Coffee Can Helmet           |
 | 784910461    | Skull Hazard                      |
@@ -153,6 +156,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 828182621    | Metal Barricade                   |
+| 846663258    | Military Barricade                |
 | 791070521    | Road Barrier                      |
 
 ## Crossbow (crossbow)
@@ -167,7 +171,13 @@
 | 820350952    | Alien Relic SMG                   |
 | 820402694    | Anarchy SMG                       |
 | 816728172    | Firestarter Custom SMG            |
+| 854914986    | Tank SMG                          |
 | 822943156    | tRUSTy Friend                     |
+
+## Double Barrel Shotgun (shotgun.double)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 854987948    | Heat Double Shotgun               |
 
 ## F1 Grenade (grenade.f1)
 | Skin Id      | Skin name                         |
@@ -210,6 +220,7 @@
 ## Hide Poncho (attire.hide.poncho)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 833524594    | Camo Netting                      |
 | 788732722    | Grey Wolf Hide Poncho             |
 | 825459163    | Toymaker Poncho                   |
 | 837191793    | Uprising Hide Poncho              |
@@ -254,6 +265,7 @@
 | 10090        | Skin Balaclava                    |
 | 539562549    | Stitched Skin                     |
 | 10084        | The Rust Knight                   |
+| 851779943    | Toupee                            |
 | 10139        | Valentine Balaclava               |
 | 10111        | Zipper Face                       |
 
@@ -278,6 +290,7 @@
 | 10124        | Ammo Wooden Box                   |
 | 810383121    | Christmas Holiday LWB             |
 | 10122        | Christmas Storage                 |
+| 854002617    | Components Storage                |
 | 576569265    | D.O.A Trunk                       |
 | 798455489    | Explosives Box                    |
 | 10123        | First Aid Green                   |
@@ -331,6 +344,7 @@
 | 828888000    | Machina Plate                     |
 | 817022417    | Metal Barrel Chest Plate          |
 | 797410767    | Plate Carrier - Black             |
+| 798736321    | Press Vest                        |
 | 799657859    | Racing Stripes Chest Plate        |
 
 ## Metal Facemask (metal.facemask)
@@ -404,6 +418,7 @@
 | 809865395    | Handmade Revolver                 |
 | 809822151    | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
+| 809897611    | Outlaw Revolver                   |
 
 ## Riot Helmet (riot.helmet)
 | Skin Id      | Skin name                         |
@@ -430,6 +445,7 @@
 ## Rock (rock)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 839261320    | Fresh Brain                       |
 | 804791902    | Gold Rock                         |
 | 807372963    | Meteorite                         |
 | 834287924    | Ripe Watermelon                   |
@@ -457,6 +473,11 @@
 |--------------|-----------------------------------|
 | 809144507    | Grandmother's Gift Barricade      |
 
+## Satchel Charge (explosive.satchel)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 855084816    | Military Satchel Charge           |
+
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -464,6 +485,7 @@
 | 805925675    | Golden Leaf SAP                   |
 | 10108        | Halloween Bat                     |
 | 830255284    | LCD Marine Sidearm                |
+| 853927198    | Nightmare                         |
 | 804337360    | Paint Rush SAP                    |
 | 798375117    | Polymer SAP                       |
 | 10081        | Reaper Note Pistol                |
@@ -481,6 +503,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 827190175    | Doomsday Door                     |
+| 849614068    | Hazard Metal Door                 |
 | 832957536    | Metal Shutter Door                |
 | 835119969    | Recycled Garage Door              |
 
@@ -553,6 +576,7 @@
 | 10033        | Baseball Tshirt                   |
 | 10003        | Black Tshirt                      |
 | 14177        | Blue Tshirt                       |
+| 851890495    | Crossbone Crew                    |
 | 489329801    | Facepunch TShirt                  |
 | 14181        | Forest Camo Tshirt                |
 | 10024        | German Tshirt                     |

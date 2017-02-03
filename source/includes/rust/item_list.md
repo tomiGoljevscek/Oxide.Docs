@@ -106,6 +106,7 @@
 | 865679437     | Small Trout                  | fish.troutsmall          |
 | 1369769822    | Survival Fish Trap           | fishtrap.small           |
 | 1045869440    | Flame Thrower                | flamethrower             |
+| 1985408483    | Flame Turret                 | flameturret              |
 | 97513422      | Flare                        | flare                    |
 | -1722829188   | A floor grill                | floor.grill              |
 | 1849912854    | Ladder Hatch                 | floor.ladder.hatch       |
@@ -275,6 +276,7 @@
 | 255101535     | Land Mine                    | trap.landmine            |
 | -864578046    | T-Shirt                      | tshirt                   |
 | 1660607208    | Longsleeve T-Shirt           | tshirt.long              |
+| 260214178     | Tuna Can Lamp                | tunalight                |
 | -1792066367   | High External Wooden Wall    | wall.external.high       |
 | -496055048    | High External Stone Wall     | wall.external.high.stone |
 | -427925529    | Prison Cell Wall             | wall.frame.cell          |
