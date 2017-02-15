@@ -7,6 +7,7 @@ void OnUserApprove(ClientConnection connection, uLink.NetworkPlayerApproval appr
 {
     Puts("OnUserApprove works!");
 }
+```
 
  * Returning true overrides default behavior, plugin should call approval.Deny if it does this
 
@@ -17,6 +18,7 @@ void CanClientLogin(ClientConnection connection, uLink.NetworkPlayerApproval app
 {
     Puts("CanClientLogin works!");
 }
+```
 
  * Returning a uLink.NetworkConnectionError will reject the connection, returning anything else will allow the connection
 
@@ -27,6 +29,7 @@ void OnPlayerConnected(NetUser netUser)
 {
     Puts("OnPlayerConnected works!");
 }
+```
 
  * Called before the player object is created, but after the player has been approved
  * No return behavior
@@ -38,6 +41,7 @@ void OnPlayerDisconnected(uLink.NetworkPlayer networkPlayer)
 {
     Puts("OnPlayerDisconnected works!");
 }
+```
 
  * Called after the player has disconnected from the server
  * No return behavior
@@ -49,6 +53,7 @@ void OnPlayerSpawn(PlayerClient client, bool usecamp, RustProto.Avatar avatar)
 {
     Puts("OnPlayerSpawn works!");
 }
+```
 
  * Called when the player spawns
  * No return behavior
@@ -60,6 +65,7 @@ void OnPlayerChat(NetUser netUser, string message)
 {
     Puts("OnPlayerChat works!");
 }
+```
 
  * Called when the player sends chat to the server
  * Returning true overrides default behavior of chat, not commands
@@ -71,6 +77,7 @@ void OnPlayerVoice(NetUser netUser, List<uLink.NetworkPlayer> players)
 {
     Puts("OnPlayerVoice works!");
 }
+```
 
  * Called when the player uses in-game voice communication
 
@@ -81,6 +88,7 @@ void OnItemCraft(CraftingInventory inventory, BlueprintDataBlock blueprint, int 
 {
     Puts("OnItemCraft works!");
 }
+```
 
  * Called when the player starts crafting an item
  * Returning true overrides default behavior
@@ -92,6 +100,7 @@ void OnBlueprintUse(BlueprintDataBlock blueprint, IBlueprintItem item)
 {
     Puts("OnBlueprintUse works!");
 }
+```
 
  * Called when the player tries to study a blueprint
  * Returning true overrides default behavior
@@ -103,6 +112,7 @@ void OnResearchItem(ResearchToolItem<T> item, IInventoryItem otherItem)
 {
     Puts("OnResearchItem works!");
 }
+```
 
  * Called when the player tries to research an item
  * Returning a InventoryItem.MergeResult will cancel default behavior

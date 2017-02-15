@@ -19,6 +19,7 @@ void OnStructureDecay(StructureMaster master)
 {
     Puts("OnStructureDecay works!");
 }
+```
 
  * Called when a structure tries to decay
  * Returning true overrides default behavior

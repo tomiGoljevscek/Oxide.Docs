@@ -29,6 +29,7 @@ Prints a message to all players' in-game console
 `rust.BroadcastConsole(string message, object[] args)`
 
 ## FindPlayer
+
 ``` csharp
 [ChatCommand("ex")
 void Example(NetUser netUser, string command, string[] args)
@@ -44,6 +45,8 @@ Searches for an online player by name, steam id or ip. Returns a netUser if a pl
 ## PrivateBindingFlag
 
 ``` csharp
+rust.PrivateBindingFlag()
+```
 This should not be used in C# plugins, Reflection should be used instead
 
 Used to get/set private methods, fields, and properties through Reflection.

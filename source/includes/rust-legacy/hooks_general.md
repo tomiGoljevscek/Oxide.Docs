@@ -19,6 +19,8 @@ void OnDatablocksInitialized()
 {
     Puts("OnDatablocksInitialized works!");
 }
+```
+
  * Called when all datablocks have been loaded
  * No return behavior
 

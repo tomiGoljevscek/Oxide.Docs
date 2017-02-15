@@ -123,6 +123,30 @@ void OnResourceDepositCreated(ResourceDepositManager.ResourceDeposit deposit)
  * Called when a resource deposit has been created
  * No return behavior
 
+## OnTurretShutdown
+
+``` csharp
+void OnTurretShutdown(AutoTurret turret)
+{
+    Puts("OnTurretShutdown works!");
+}
+```
+
+ * Called when an autoturret shutsdown
+ * Returning true overrides default behavior
+
+## OnTurretStartup
+ 
+ ``` csharp
+void OnTurretStartup(AutoTurret turret)
+{
+    Puts("OnTurretStartup works!");
+}
+```
+
+ * Called when an autoturret starts up
+ * Returning true overrides default behavior
+ 
 ## OnTurretTarget
 
 ``` csharp
@@ -133,4 +157,16 @@ void OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
 ```
 
  * Called when an autoturret attempts to target an entity
+ * Returning true overrides default behavior
+
+## OnTurretToggle
+
+ ``` csharp
+void OnTurretToggle(AutoTurret turret)
+{
+    Puts("OnTurretToggle works!");
+}
+```
+
+ * Called when an autoturret toggles powerstate (on/off)
  * Returning true overrides default behavior

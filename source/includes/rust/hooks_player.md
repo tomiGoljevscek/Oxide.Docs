@@ -12,6 +12,18 @@ void CanBeTargeted(BasePlayer player, AutoTurret turret)
  * Called when an autoturrent is attempting to target the player
  * Returning true overrides default behavior
 
+## CanBeTargeted (flameturret)
+
+``` csharp
+void CanBeTargeted(BasePlayer player, FlameTurret turret) 
+{
+    Puts("CanBeTargeted works!");
+}
+```
+
+ * Called when a flameturret is attempting to target the player
+ * Returning true overrides default behavior
+ 
 ## CanBeTargeted (helicopter)
 
 ``` csharp
@@ -159,6 +171,19 @@ void OnPlayerConnected(Network.Message packet)
  * Can get the connection from packet.connection
  * No return behavior
 
+## OnPlayerDie
+
+``` csharp
+void OnPlayerDie(BasePlayer player, HitInfo info)
+{
+    Puts("OnPlayerDie works!");
+}
+```
+
+ * Called when a player is about to die
+ * HitInfo may be null
+ * Returning a non-null value lets the player cheat death
+ 
 ## OnPlayerDisconnected
 
 ``` csharp
@@ -171,6 +196,18 @@ void OnPlayerDisconnected(BasePlayer player, string reason)
  * Called after the player has disconnected from the server
  * No return behavior
 
+## OnPlayerHealthChange
+
+``` csharp
+void OnPlayerHealthChange(BasePlayer player, float oldValue, float newValue)
+{
+    Puts("OnPlayerHealthChange works!");
+}
+```
+ 
+ * Called just before a player's health changes
+ * Returning a non-null value cancels the health change
+ 
 ## OnPlayerInit
 
 ``` csharp
@@ -198,6 +235,18 @@ void OnPlayerInput(BasePlayer player, InputState input)
 ## OnPlayerLanded
 
 ``` csharp
+void OnPlayerLand(BasePlayer player)
+{
+    Puts("OnPlayerLand works!");
+}
+```
+
+ * Called just before a player lands on the ground
+ * Returning a non-null value overrides default behaviour
+ 
+## OnPlayerLanded
+
+``` csharp
 void OnPlayerLanded(BasePlayer player)
 {
     Puts("OnPlayerLanded works!");
@@ -206,7 +255,31 @@ void OnPlayerLanded(BasePlayer player)
 
  * Called when the player lands on the ground
  * No return behavior
+ 
+## OnPlayerLootEnd
 
+``` csharp
+void OnPlayerLootEnd(BasePlayer player)
+{
+    Puts("OnPlayerLootEnd works!");
+}
+```
+ 
+ * Called when a player stops looting
+ * No return behaviour
+ 
+## OnPlayerRecover
+
+``` csharp
+void OnPlayerRecover(BasePlayer player)
+{
+    Puts("OnPlayerRecover works!");
+}
+```
+
+ * Called when a player is about to recover from the 'wounded' state
+ * Returning a non-null value stops them from recovering
+ 
 ## OnPlayerRespawn
 
 ``` csharp
@@ -233,6 +306,77 @@ void OnPlayerRespawned(BasePlayer player)
  * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
  * No return behavior
 
+## OnPlayerSleep
+
+``` csharp
+void OnPlayerSleep(BasePlayer player)
+{
+    Puts("OnPlayerSleep works!");
+}
+```
+
+ * Called when a player is about to go to sleep
+ * Returning a non-null value keeps them awake
+ 
+## OnPlayerSleepEnded
+
+``` csharp
+void OnPlayerSleepEnded(BasePlayer player)
+{
+    Puts("OnPlayerSleepEnded works!");
+}
+```
+
+ * Called when the player awakes
+ * No return behavior
+ 
+## OnPlayerSpectate
+
+``` csharp
+void OnPlayerSpectate(BasePlayer player, string spectateFilter)
+{
+    Puts("OnPlayerSpectate works!");
+}
+```
+
+ * Called when a player starts spectating
+ * Returning a non-null value cancels the spectate
+ 
+## OnPlayerSpectateEnd
+
+``` csharp
+void OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
+{
+    Puts("OnPlayerSpectateEnd works!");
+}
+```
+ 
+ * Called when a player stops spectating
+ * Returning a non-null value stops the spectate from ending
+
+## OnPlayerTick
+
+``` csharp
+void OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
+{
+    Puts("OnPlayerTick works!");
+}
+```
+
+ * Returning a non-null value overrides default behavior
+ 
+## OnPlayerWound
+
+``` csharp
+void OnPlayerWound(BasePlayer player)
+{
+    Puts("OnPlayerWound works!");
+}
+```
+
+ * Called when a player is about to go down to the 'wounded' state
+ * Returning a non-null value cancels the wounded state
+ 
 ## OnLootEntity
 
 ``` csharp
@@ -279,18 +423,6 @@ void OnMeleeThrown(BasePlayer player, Item item)
 ```
 
  * Called when the player throws a melee item (axe, rock, ...)
- * No return behavior
-
-## OnPlayerSleepEnded
-
-``` csharp
-void OnPlayerSleepEnded(BasePlayer player)
-{
-    Puts("OnPlayerSleepEnded works!");
-}
-```
-
- * Called when the player awakes
  * No return behavior
 
 ## OnRocketLaunched
