@@ -22,6 +22,8 @@
 ## Assault Rifle (rifle.ak)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 849047662    | Agony Yellow                      |
+| 859845460    | Alien Red                         |
 | 809190373    | Battle-Scarred AKS47              |
 | 840477492    | Crimson King                      |
 | 10135        | Digital Camo AK47                 |
@@ -123,6 +125,7 @@
 ## Burlap Headwrap (burlap.headwrap)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 861551572    | Crimson Headwrap                  |
 | 785890135    | SandPrince                        |
 
 ## Burlap Shirt (burlap.shirt)
@@ -178,6 +181,15 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 854987948    | Heat Double Shotgun               |
+| 860153737    | Industrial DBS                    |
+| 858957151    | Nitro-Maniac DBS                  |
+
+## Eoka Pistol (pistol.eoka)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 856053892    | Banana Eoka                       |
+| 856225258    | Flintlock                         |
+| 857750032    | Primal Gun                        |
 
 ## F1 Grenade (grenade.f1)
 | Skin Id      | Skin name                         |
@@ -257,7 +269,9 @@
 | 10071        | Double Yellow Balaclava           |
 | 10068        | Forest Camo Balaclava             |
 | 813561728    | Knitted Balaclava                 |
+| 858156568    | Meat Mask                         |
 | 10057        | Murica Balaclava                  |
+| 856403207    | Nerd Glasses                      |
 | 10075        | Nightmare Balaclava               |
 | 10070        | Red Check Balaclava               |
 | 10054        | Rorschach Skull                   |
@@ -297,6 +311,7 @@
 | 10141        | Gun Box                           |
 | 797422750    | Large Stone Box                   |
 | 842083350    | Military Crate                    |
+| 854718942    | Weapons Box                       |
 
 ## Leather Gloves (burlap.gloves)
 | Skin Id      | Skin name                         |
@@ -331,6 +346,7 @@
 |--------------|-----------------------------------|
 | 825169057    | Danger Fork                       |
 | 796733487    | Hot-tempered Longsword            |
+| 855009078    | Wakizashi                         |
 | 825008040    | Xtreme Sword                      |
 
 ## Metal Chest Plate (metal.plate.torso)
@@ -355,6 +371,8 @@
 | 784316334    | Big Grin                          |
 | 799044333    | Blingin Grill                     |
 | 821441043    | BoltFace Metal Facemask           |
+| 835026584    | Bronze War Mask                   |
+| 831923884    | Carbon Facemask                   |
 | 792079554    | Death Facemask                    |
 | 807821375    | Frostbite                         |
 | 794837198    | Glowing Skull                     |
@@ -382,6 +400,7 @@
 | 833639834    | Elite Mp5                         |
 | 796687275    | Military Camo MP5                 |
 | 808554348    | Polymer MP5                       |
+| 853438134    | Tank MP5                          |
 | 800974015    | Tempered Mp5                      |
 
 ## Pants (pants)
@@ -397,12 +416,19 @@
 | 798690647    | Steppe Camo Pants                 |
 | 10020        | Urban Camo Pants                  |
 
+## Pick Axe (pickaxe)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 832799172    | Rescue Pick Axe                   |
+
 ## Pump Shotgun (shotgun.pump)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10074        | Chieftain Pump Shotgun            |
 | 813631833    | Native Gold                       |
 | 813628651    | Native Yellow                     |
+| 850130444    | Tank Pump Shotgun                 |
+| 849997025    | The Billy Baroo                   |
 | 10140        | The Swampmaster                   |
 | 731119713    | Urban Afterburn Pump Shotgun      |
 
@@ -415,6 +441,7 @@
 ## Revolver (pistol.revolver)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 855087726    | Defender                          |
 | 809865395    | Handmade Revolver                 |
 | 809822151    | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
@@ -445,8 +472,10 @@
 ## Rock (rock)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
-| 839261320    | Fresh Brain                       |
+| 864277659    | Fresh Brain                       |
+| 858285362    | Frozen Turkey                     |
 | 804791902    | Gold Rock                         |
+| 843429299    | Hot Potato                        |
 | 807372963    | Meteorite                         |
 | 834287924    | Ripe Watermelon                   |
 | 824904841    | Shard of True Ice                 |
@@ -455,6 +484,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 813795591    | Army Surplus Rocket Launcher      |
+| 853494512    | KNOCK KNOCK                       |
 | 812737524    | ThatGermanGuy Warhawk             |
 
 ## Salvaged Icepick (icepick.salvaged)
@@ -476,12 +506,16 @@
 ## Satchel Charge (explosive.satchel)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 855256664    | Bad News                          |
+| 860156815    | Box O Love                        |
+| 856333895    | Close Enough                      |
 | 855084816    | Military Satchel Charge           |
 
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10087        | Contamination Pistol              |
+| 863443112    | Desert Hunter                     |
 | 805925675    | Golden Leaf SAP                   |
 | 10108        | Halloween Bat                     |
 | 830255284    | LCD Marine Sidearm                |
@@ -497,14 +531,17 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 828616457    | Army SAR                          |
+| 839302795    | Bandito SAR                       |
 | 818613234    | Workbench SAR                     |
 
 ## Sheet Metal Door (door.hinged.metal)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 836815358    | Army Metal Door                   |
 | 827190175    | Doomsday Door                     |
 | 849614068    | Hazard Metal Door                 |
 | 832957536    | Metal Shutter Door                |
+| 859864870    | Prison Door                       |
 | 835119969    | Recycled Garage Door              |
 
 ## Shirt (shirt.collared)
@@ -552,11 +589,13 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 797445687    | Ice Tooth                         |
+| 854688691    | Large Fruit Pit Hatchet           |
 
 ## Stone Pick Axe (stone.pickaxe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 840380436    | Bloody Tooth Pickaxe              |
+| 837149011    | Uprising Stone Pickaxe            |
 
 ## Tank Top (shirt.tanktop)
 | Skin Id      | Skin name                         |
@@ -594,6 +633,18 @@
 | 584379       | Urban Camo                        |
 | 10043        | Vyshyvanka Shirt                  |
 
+## Vending Machine (vending.machine)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 860916780    | Rox Black Vending Machine         |
+| 862291005    | RustyCola Machine                 |
+| 861548229    | Sand Tone Vending Machine         |
+
+## Water Purifier (water.purifier)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 786826476    | Radioactive Water Purifier        |
+
 ## Waterpipe Shotgun (shotgun.waterpipe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -608,6 +659,8 @@
 ## Wooden Door (door.hinged.wood)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 838700836    | Bleached Ebony Door               |
 | 804991715    | Christmas Tree Door               |
 | 809253752    | Door to Heaven                    |
 | 804854812    | Old Heavy Wooden Door             |
+| 847902281    | Porthole Door                     |

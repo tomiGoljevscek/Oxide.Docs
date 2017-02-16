@@ -88,6 +88,7 @@
 | 1983936587    | Crude Oil                    | crude.oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
 | -1178289187   | Bone Helmet                  | deer.skull.mask          |
+| -778796102    | Door Closer                  | door.closer              |
 | -1598790097   | Sheet Metal Double Door      | door.double.hinged.metal |
 | -933236257    | Armored Double Door          | door.double.hinged.toptier|
 | -1575287163   | Wood Double Door             | door.double.hinged.wood  |
@@ -110,6 +111,7 @@
 | 97513422      | Flare                        | flare                    |
 | -1722829188   | A floor grill                | floor.grill              |
 | 1849912854    | Ladder Hatch                 | floor.ladder.hatch       |
+| -1266285051   | Fridge                       | fridge                   |
 | -217113639    | Acoustic Guitar              | fun.guitar               |
 | -505639592    | Furnace                      | furnace                  |
 | 1598149413    | Large Furnace                | furnace.large            |
@@ -277,6 +279,7 @@
 | -864578046    | T-Shirt                      | tshirt                   |
 | 1660607208    | Longsleeve T-Shirt           | tshirt.long              |
 | 260214178     | Tuna Can Lamp                | tunalight                |
+| -1847536522   | Vending Machine              | vending.machine          |
 | -1792066367   | High External Wooden Wall    | wall.external.high       |
 | -496055048    | High External Stone Wall     | wall.external.high.stone |
 | -427925529    | Prison Cell Wall             | wall.frame.cell          |
@@ -284,6 +287,7 @@
 | -378017204    | Chainlink Fence              | wall.frame.fence         |
 | 995306285     | Chainlink Fence Gate         | wall.frame.fence.gate    |
 | 1175970190    | Shop Front                   | wall.frame.shopfront     |
+| 525244071     | Metal Shop Front             | wall.frame.shopfront.metal|
 | -1021702157   | Metal Window Bars            | wall.window.bars.metal   |
 | -402507101    | Reinforced Window Bars       | wall.window.bars.toptier |
 | -1556671423   | Wooden Window Bars           | wall.window.bars.wood    |
