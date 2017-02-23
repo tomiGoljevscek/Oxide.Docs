@@ -71,6 +71,7 @@
 | 523409530     | Candy Cane                   | candycane                |
 | 1300054961    | CCTV Camera                  | cctv.camera              |
 | -2095387015   | Ceiling Light                | ceilinglight             |
+| 94623429      | Chair                        | chair                    |
 | 1436001773    | Charcoal                     | charcoal                 |
 | 1711323399    | Burned Chicken               | chicken.burned           |
 | 1734319168    | Cooked Chicken.              | chicken.cooked           |
@@ -139,6 +140,9 @@
 | 1133046397    | Hazmat Jacket                | hazmat.jacket            |
 | -1066276787   | Hazmat Pants                 | hazmat.pants             |
 | 523855532     | Hazmat Suit                  | hazmatsuit               |
+| 1351172108    | Heavy Plate Helmet           | heavy.plate.helmet       |
+| 1404466285    | Heavy Plate Jacket           | heavy.plate.jacket       |
+| -1334615971   | Heavy Plate Pants            | heavy.plate.pants        |
 | -1211618504   | Hoodie                       | hoodie                   |
 | 2133577942    | High Quality Metal Ore       | hq.metal.ore             |
 | -1014825244   | Burned Human Meat            | humanmeat.burned         |
@@ -208,6 +212,8 @@
 | 3506021       | Rock                         | rock                     |
 | 649603450     | Rocket Launcher              | rocket.launcher          |
 | 3506418       | Rope                         | rope                     |
+| 113284        | Rug                          | rug                      |
+| 569935070     | Rug Bear Skin                | rug.bear                 |
 | -1775234707   | Salvaged Cleaver             | salvaged.cleaver         |
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 2007564590    | Santa Hat                    | santahat                 |
@@ -268,6 +274,7 @@
 | -1625468793   | Supply Signal                | supply.signal            |
 | 1293049486    | Survey Charge                | surveycharge             |
 | 586484018     | Medical Syringe              | syringe.medical          |
+| 110115790     | Table                        | table                    |
 | 2069925558    | Reactive Target              | target.reactive          |
 | 1490499512    | Targeting Computer           | targeting.computer       |
 | 3552619       | Tarp                         | tarp                     |

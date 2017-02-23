@@ -104,6 +104,7 @@
 ## Boots (shoes.boots)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 869090082    | Army Armored Boots                |
 | 10080        | Army Boots                        |
 | 10023        | Black Boots                       |
 | 10088        | Bloody Boots                      |
@@ -119,6 +120,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 10127        | Medic Helmet                      |
+| 867605376    | Rusty Bucket Helmet               |
 | 784438982    | Smilin' Jack                      |
 | 564826303    | Wooden Bucket                     |
 
@@ -154,6 +156,7 @@
 | 806212029    | Rusty Coffee Can Helmet           |
 | 784910461    | Skull Hazard                      |
 | 814098474    | Spare Parts                       |
+| 854460770    | Welding Helmet                    |
 
 ## Concrete Barricade (barricade.concrete)
 | Skin Id      | Skin name                         |
@@ -180,6 +183,7 @@
 ## Double Barrel Shotgun (shotgun.double)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 865019380    | Bespoke DBS                       |
 | 854987948    | Heat Double Shotgun               |
 | 860153737    | Industrial DBS                    |
 | 858957151    | Nitro-Maniac DBS                  |
@@ -420,6 +424,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 832799172    | Rescue Pick Axe                   |
+| 863455081    | Tarnished Sun Pick Axe            |
 
 ## Pump Shotgun (shotgun.pump)
 | Skin Id      | Skin name                         |
@@ -450,11 +455,13 @@
 ## Riot Helmet (riot.helmet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 849872204    | Born To Loot                      |
 | 801095823    | Captain's Helmet                  |
 
 ## Road Sign Jacket (roadsign.jacket)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 865659101    | Army Sign Vest                    |
 | 801873550    | British Sign Vest                 |
 | 818611894    | Chopshop Body Armor               |
 | 784581113    | Hazard Protection Vest            |
@@ -463,6 +470,7 @@
 ## Road Sign Kilt (roadsign.kilt)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 865679836    | Army Sign Kilt                    |
 | 801837047    | British Sign Pants                |
 | 818612271    | Chopshop Kilt                     |
 | 784577443    | Hazard Cover Pants                |
@@ -492,6 +500,7 @@
 |--------------|-----------------------------------|
 | 820810719    | Inferno Hazard Salvaged Icepick   |
 | 844666224    | Lavapick                          |
+| 843454856    | Runic Ice Pick                    |
 
 ## Salvaged Sword (salvaged.sword)
 | Skin Id      | Skin name                         |
@@ -520,8 +529,10 @@
 | 10108        | Halloween Bat                     |
 | 830255284    | LCD Marine Sidearm                |
 | 853927198    | Nightmare                         |
+| 830606037    | Ol' Greasy                        |
 | 804337360    | Paint Rush SAP                    |
 | 798375117    | Polymer SAP                       |
+| 868298519    | Poseidon Semi Auto Pistol         |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
 | 827533196    | Salt Shaker SAP                   |
@@ -636,6 +647,8 @@
 ## Vending Machine (vending.machine)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 861029759    | Army Vending Machine              |
+| 862137836    | Base Invaders                     |
 | 860916780    | Rox Black Vending Machine         |
 | 862291005    | RustyCola Machine                 |
 | 861548229    | Sand Tone Vending Machine         |
