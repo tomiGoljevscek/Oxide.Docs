@@ -162,6 +162,7 @@
 | 193190034     | M249                         | lmg.m249                 |
 | -975723312    | Code Lock                    | lock.code                |
 | 1908195100    | Lock                         | lock.key                 |
+| -1097452776   | Locker                       | locker                   |
 | 146685185     | Longsword                    | longsword                |
 | 28178745      | Low Grade Fuel               | lowgradefuel             |
 | 3343606       | Mace                         | mace                     |

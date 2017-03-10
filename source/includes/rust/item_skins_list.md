@@ -11,6 +11,7 @@
 ## Armored Door (door.hinged.toptier)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 869475498    | Clockwork Portal                  |
 | 804286931    | Corroded Bronze Door              |
 | 801889927    | High Voltage                      |
 | 801937986    | Incarceration Armored Door        |
@@ -25,6 +26,7 @@
 | 849047662    | Agony Yellow                      |
 | 859845460    | Alien Red                         |
 | 809190373    | Battle-Scarred AKS47              |
+| 875130056    | Claw AK47                         |
 | 840477492    | Crimson King                      |
 | 10135        | Digital Camo AK47                 |
 | 10137        | Military Camo AK47                |
@@ -100,6 +102,7 @@
 | 10058        | Farmer Hat                        |
 | 587812040    | Fisherman Boonie Hat              |
 | 844289539    | Flower Hat                        |
+| 833565406    | PVC Hat                           |
 
 ## Boots (shoes.boots)
 | Skin Id      | Skin name                         |
@@ -119,6 +122,7 @@
 ## Bucket Helmet (bucket.helmet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 831798567    | Graffiti Bucket Helmet            |
 | 10127        | Medic Helmet                      |
 | 867605376    | Rusty Bucket Helmet               |
 | 784438982    | Smilin' Jack                      |
@@ -128,6 +132,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 861551572    | Crimson Headwrap                  |
+| 868014709    | Outlaw Headwrap                   |
 | 785890135    | SandPrince                        |
 
 ## Burlap Shirt (burlap.shirt)
@@ -147,6 +152,12 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 809968188    | Recycled Tarp Pants               |
+
+## Chair (chair)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 871339422    | Danger Chair                      |
+| 871271807    | Red Leather Chair                 |
 
 ## Coffee Can Helmet (coffeecan.helmet)
 | Skin Id      | Skin name                         |
@@ -168,6 +179,7 @@
 ## Crossbow (crossbow)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 874268567    | Chrome Crossbow                   |
 | 818070371    | Engraved Crossbow                 |
 | 809964230    | HazardCross                       |
 
@@ -176,6 +188,7 @@
 |--------------|-----------------------------------|
 | 820350952    | Alien Relic SMG                   |
 | 820402694    | Anarchy SMG                       |
+| 866745136    | Bandito SMG                       |
 | 816728172    | Firestarter Custom SMG            |
 | 854914986    | Tank SMG                          |
 | 822943156    | tRUSTy Friend                     |
@@ -201,6 +214,13 @@
 | 836745325    | Fire and Brimstone Grenade        |
 | 815252048    | Voodoo Grenade                    |
 
+## Fridge (fridge)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 869398873    | Aircraft Parts Fridge             |
+| 864918396    | Biohazard Fridge                  |
+| 873612402    | Urban Fridge                      |
+
 ## Hammer (hammer)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -215,6 +235,7 @@
 | 816715928    | Military Hatchet                  |
 | 826402867    | Veteran Hatchet                   |
 | 814713259    | Vikings Tomahawk                  |
+| 825033005    | Vintage Hatchet                   |
 
 ## Hide Boots (attire.hide.boots)
 | Skin Id      | Skin name                         |
@@ -315,15 +336,23 @@
 | 10141        | Gun Box                           |
 | 797422750    | Large Stone Box                   |
 | 842083350    | Military Crate                    |
+| 878850459    | Recyclables Box                   |
 | 854718942    | Weapons Box                       |
 
 ## Leather Gloves (burlap.gloves)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 874488180    | Army Armored Gloves               |
 | 816473273    | Black Alligator                   |
 | 10128        | Boxer's Bandages                  |
 | 661317919    | Duelist Gloves                    |
 | 610098458    | Motorcycle Gloves                 |
+
+## Locker (locker)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 879343335    | Army Locker                       |
+| 879533969    | Grid Locker                       |
 
 ## Longsleeve T-Shirt (tshirt.long)
 | Skin Id      | Skin name                         |
@@ -350,6 +379,7 @@
 |--------------|-----------------------------------|
 | 825169057    | Danger Fork                       |
 | 796733487    | Hot-tempered Longsword            |
+| 831965423    | Kryss Longsword                   |
 | 855009078    | Wakizashi                         |
 | 825008040    | Xtreme Sword                      |
 
@@ -363,6 +393,7 @@
 | 823132085    | Hazardous Grater Chest Plate      |
 | 828888000    | Machina Plate                     |
 | 817022417    | Metal Barrel Chest Plate          |
+| 819160334    | Oil Barrel Chest Plate            |
 | 797410767    | Plate Carrier - Black             |
 | 798736321    | Press Vest                        |
 | 799657859    | Racing Stripes Chest Plate        |
@@ -447,6 +478,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 855087726    | Defender                          |
+| 873242795    | Frostbitten Revolver              |
 | 809865395    | Handmade Revolver                 |
 | 809822151    | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
@@ -455,8 +487,10 @@
 ## Riot Helmet (riot.helmet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 869125904    | Biker Goth Helmet                 |
 | 849872204    | Born To Loot                      |
 | 801095823    | Captain's Helmet                  |
+| 869709888    | Ruthless Riot Helmet              |
 
 ## Road Sign Jacket (roadsign.jacket)
 | Skin Id      | Skin name                         |
@@ -492,8 +526,20 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 813795591    | Army Surplus Rocket Launcher      |
+| 875930670    | Hot Topic                         |
 | 853494512    | KNOCK KNOCK                       |
 | 812737524    | ThatGermanGuy Warhawk             |
+
+## Rug (rug)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 871072156    | Soviet Carpet                     |
+| 870851438    | Tailor`s Carpet                   |
+
+## Rug Bear Skin (rug.bear)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 870446546    | Panda Rug                         |
 
 ## Salvaged Icepick (icepick.salvaged)
 | Skin Id      | Skin name                         |
@@ -505,6 +551,7 @@
 ## Salvaged Sword (salvaged.sword)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 828885909    | Metal Roses Short Sword           |
 | 825240467    | Wooden Sword                      |
 
 ## Sandbag Barricade (barricade.sandbags)
@@ -543,6 +590,7 @@
 |--------------|-----------------------------------|
 | 828616457    | Army SAR                          |
 | 839302795    | Bandito SAR                       |
+| 840023839    | Hazard Semi Auto Rifle            |
 | 818613234    | Workbench SAR                     |
 
 ## Sheet Metal Door (door.hinged.metal)
@@ -601,12 +649,18 @@
 |--------------|-----------------------------------|
 | 797445687    | Ice Tooth                         |
 | 854688691    | Large Fruit Pit Hatchet           |
+| 878257758    | Volcanic Stone Hatchet            |
 
 ## Stone Pick Axe (stone.pickaxe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 840380436    | Bloody Tooth Pickaxe              |
 | 837149011    | Uprising Stone Pickaxe            |
+
+## Table (table)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 872346354    | Off The Grid                      |
 
 ## Tank Top (shirt.tanktop)
 | Skin Id      | Skin name                         |
@@ -649,9 +703,11 @@
 |--------------|-----------------------------------|
 | 861029759    | Army Vending Machine              |
 | 862137836    | Base Invaders                     |
+| 869474635    | Brass Vending Machine             |
 | 860916780    | Rox Black Vending Machine         |
 | 862291005    | RustyCola Machine                 |
 | 861548229    | Sand Tone Vending Machine         |
+| 871927557    | Urban Vending Machine             |
 
 ## Water Purifier (water.purifier)
 | Skin Id      | Skin name                         |
@@ -662,7 +718,9 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 819137470    | Rustpunk Scattergun               |
+| 661319648    | RustPunk Waterpipe Shotgun        |
 | 10143        | The Peace Pipe                    |
+| 832764933    | Western Waterpipe Shotgun         |
 
 ## Wood Storage Box (box.wooden)
 | Skin Id      | Skin name                         |
