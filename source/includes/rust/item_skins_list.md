@@ -76,6 +76,7 @@
 | 818403150    | Army Bolt Rifle                   |
 | 10117        | Dreamcatcher                      |
 | 10115        | Ghost Bolt Rifle                  |
+| 875259050    | Great War Service Rifle           |
 | 840105253    | Polymer BAR                       |
 | 819149392    | Rustpunk Rifle                    |
 | 10116        | Tundra Bolt Rifle                 |
@@ -89,6 +90,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 784259585    | Demonic Deer Skull                |
+| 882204381    | The Plague Doctor                 |
 | 837166252    | Uprising Deer Skull Mask          |
 
 ## Bone Knife (knife.bone)
@@ -107,6 +109,7 @@
 ## Boots (shoes.boots)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 882570089    | Armored Boots                     |
 | 869090082    | Army Armored Boots                |
 | 10080        | Army Boots                        |
 | 10023        | Black Boots                       |
@@ -142,6 +145,7 @@
 | 809909900    | Burlap and Leather Vest           |
 | 654502725    | Captain's Vest and Shirt          |
 | 10136        | Pirate Vest & Shirt               |
+| 882451685    | Sleazy Rider                      |
 
 ## Burlap Shoes (burlap.shoes)
 | Skin Id      | Skin name                         |
@@ -156,6 +160,7 @@
 ## Chair (chair)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 875258235    | Antique Dining Chair              |
 | 871339422    | Danger Chair                      |
 | 871271807    | Red Leather Chair                 |
 
@@ -180,6 +185,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 874268567    | Chrome Crossbow                   |
+| 883141682    | Doomwing Crossbow                 |
 | 818070371    | Engraved Crossbow                 |
 | 809964230    | HazardCross                       |
 
@@ -268,6 +274,11 @@
 | 831920129    | Blue Tarp Skirt                   |
 | 793180528    | Irish Kilt                        |
 
+## Hide Vest (attire.hide.vest)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 878319804    | Celtic Hide Shirt                 |
+
 ## Hoodie (hoodie)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -333,10 +344,13 @@
 | 576569265    | D.O.A Trunk                       |
 | 798455489    | Explosives Box                    |
 | 10123        | First Aid Green                   |
+| 882223700    | First Aid Large Box               |
 | 10141        | Gun Box                           |
 | 797422750    | Large Stone Box                   |
+| 851053322    | Medieval Box                      |
 | 842083350    | Military Crate                    |
 | 878850459    | Recyclables Box                   |
+| 881249489    | Royal Wooden Box                  |
 | 854718942    | Weapons Box                       |
 
 ## Leather Gloves (burlap.gloves)
@@ -353,6 +367,7 @@
 |--------------|-----------------------------------|
 | 879343335    | Army Locker                       |
 | 879533969    | Grid Locker                       |
+| 881997061    | Muertos Locker                    |
 
 ## Longsleeve T-Shirt (tshirt.long)
 | Skin Id      | Skin name                         |
@@ -412,6 +427,7 @@
 | 807821375    | Frostbite                         |
 | 794837198    | Glowing Skull                     |
 | 812933296    | Human Sacrifice Mask              |
+| 881687672    | Hunter Mask                       |
 | 806983252    | Industrial Protection Mask        |
 | 828888629    | Machina Mask                      |
 | 841012325    | Mask of Sacrifice                 |
@@ -499,6 +515,7 @@
 | 801873550    | British Sign Vest                 |
 | 818611894    | Chopshop Body Armor               |
 | 784581113    | Hazard Protection Vest            |
+| 879861502    | Junker's Vest                     |
 | 828175620    | Spiked Metal Vest                 |
 
 ## Road Sign Kilt (roadsign.kilt)
@@ -508,6 +525,7 @@
 | 801837047    | British Sign Pants                |
 | 818612271    | Chopshop Kilt                     |
 | 784577443    | Hazard Cover Pants                |
+| 879861153    | Junker's Kilt                     |
 | 794291485    | Military Camo Roadsign Kilt       |
 | 828173323    | Spiked Metal Kilt                 |
 
@@ -525,6 +543,7 @@
 ## Rocket Launcher (rocket.launcher)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 879708939    | Aircraft Parts RL                 |
 | 813795591    | Army Surplus Rocket Launcher      |
 | 875930670    | Hot Topic                         |
 | 853494512    | KNOCK KNOCK                       |
@@ -591,6 +610,7 @@
 | 828616457    | Army SAR                          |
 | 839302795    | Bandito SAR                       |
 | 840023839    | Hazard Semi Auto Rifle            |
+| 875259741    | Sublime SAR                       |
 | 818613234    | Workbench SAR                     |
 
 ## Sheet Metal Door (door.hinged.metal)
@@ -660,6 +680,7 @@
 ## Table (table)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 875258582    | Antique Dining Table              |
 | 872346354    | Off The Grid                      |
 
 ## Tank Top (shirt.tanktop)

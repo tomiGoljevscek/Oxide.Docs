@@ -263,6 +263,7 @@
 | -2118132208   | Stone Spear                  | spear.stone              |
 | -1127699509   | Wooden Spear                 | spear.wooden             |
 | -685265909    | Wooden Floor Spikes          | spikes.floor             |
+| 552706886     | Spinning wheel               | spinner.wheel            |
 | 1051155022    | Small Stash                  | stash.small              |
 | -892259869    | Sticks                       | sticks                   |
 | -1623330855   | SUPER Stocking               | stocking.large           |
@@ -294,6 +295,7 @@
 | 562888306     | Prison Cell Gate             | wall.frame.cell.gate     |
 | -378017204    | Chainlink Fence              | wall.frame.fence         |
 | 995306285     | Chainlink Fence Gate         | wall.frame.fence.gate    |
+| 313836902     | Netting                      | wall.frame.netting       |
 | 1175970190    | Shop Front                   | wall.frame.shopfront     |
 | 525244071     | Metal Shop Front             | wall.frame.shopfront.metal|
 | -1021702157   | Metal Window Bars            | wall.window.bars.metal   |
