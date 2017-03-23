@@ -319,7 +319,7 @@ void OnPlayerLanded(BasePlayer player)
 ## OnPlayerLootEnd
 
 ``` csharp
-void OnPlayerLootEnd(BasePlayer player)
+void OnPlayerLootEnd(PlayerLoot inventory)
 {
     Puts("OnPlayerLootEnd works!");
 }
