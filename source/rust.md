@@ -12,9 +12,12 @@ includes:
   - rust/hooks_player
   - rust/hooks_entity
   - rust/hooks_item
+  - rust/hooks_resources
   - rust/hooks_sign
   - rust/hooks_structure
   - rust/hooks_terrain
+  - rust/hooks_vendingmachine
+  - rust/hooks_weapon
   - rust/library_functions
   - commands
   - configurations

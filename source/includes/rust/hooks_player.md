@@ -1,39 +1,27 @@
 # Player Hooks
 
+## CanAttack
+
+``` csharp
+void CanAttack(BasePlayer player) 
+{
+    Puts("CanAttack works!");
+}
+```
+
+ * Called when a player is attempting to attack
+ * Returning true or falseoverrides default behavior
+
 ## CanBeTargeted (autoturret)
 
 ``` csharp
-void CanBeTargeted(BasePlayer player, AutoTurret turret) 
+void CanBeTargeted(BaseCombatEntity player, MonoBehaviour turret) 
 {
     Puts("CanBeTargeted works!");
 }
 ```
 
- * Called when an autoturrent is attempting to target the player
- * Returning true overrides default behavior
-
-## CanBeTargeted (flameturret)
-
-``` csharp
-void CanBeTargeted(BasePlayer player, FlameTurret turret) 
-{
-    Puts("CanBeTargeted works!");
-}
-```
-
- * Called when a flameturret is attempting to target the player
- * Returning true overrides default behavior
- 
-## CanBeTargeted (helicopter)
-
-``` csharp
-void CanBeTargeted(BasePlayer player, HelicopterTurret turret) 
-{
-    Puts("CanBeTargeted works!");
-}
-```
-
- * Called when a helicopter is attempting to target the player
+ * Called when an autoturret, flameturret or helicopterturret is attempting to target the player
  * Returning true overrides default behavior
 
 ## CanBeWounded
@@ -46,7 +34,7 @@ void CanBeWounded(BasePlayer player, HitInfo info)
 ```
 
  * Called when any damage is attempted on player
- * Returning true overrides default behavior
+ * Returning true or false overrides default behavior
 
 ## CanBypassQueue
 
@@ -59,6 +47,18 @@ void CanBypassQueue(Network.Connection connection)
 
  * Called before a player is added to the connection queue
  * Returning true will bypass the queue, returning nothing will by default queue the player
+
+## CanCraft
+
+``` csharp
+void CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
+{
+    Puts("CanCraft works!");
+}
+```
+
+ * Called when a player attempts to craft an item
+ * Returning true or false overrides default behavior
 
 ## CanClientLogin
 
@@ -83,7 +83,7 @@ void CanEquipItem(PlayerInventory inventory, Item item)
 ```
 
  * Called when the player attempts to equip an item
- * Returning true overrides default behavior
+ * Returning true or false overrides default behavior
 
 ## CanLootPlayer
 
@@ -107,18 +107,18 @@ void CanWearItem(PlayerInventory inventory, Item item)
 ```
 
  * Called when the player attempts to equip an item
- * Returning true overrides default behavior
+ * Returning true or false overrides default behavior
 
-## OnExplosiveThrown
+## OnConnectionAuth
 
 ``` csharp
-void OnExplosiveThrown(BasePlayer player, BaseEntity entity)
+void OnConnectionAuth(Message.Connection connection)
 {
-    Puts("OnExplosiveThrown works!");
+    Puts("OnConnectionAuth works!");
 }
 ```
 
- * Called when the player throws an explosive item (C4, grenade, ...)
+ * Called when a player attempts to connect to the server
  * No return behavior
 
 ## OnFindSpawnPoint
@@ -133,6 +133,54 @@ void OnFindSpawnPoint()
  * Useful for controlling player spawnpoints (like making all spawns occur in a set area)
  * Return a BasePlayer.SpawnPoint object to use that spawnpoint
 
+## OnLootEntity
+
+``` csharp
+void OnLootEntity(BasePlayer player, BaseEntity entity)
+{
+    Puts("OnLootEntity works!");
+}
+```
+
+ * Called when the player starts looting an entity
+ * No return behavior
+
+## OnLootEntityEnd
+
+``` csharp
+void OnLootEntityEnd(BasePlayer player, BaseCombatEntity entity)
+{
+    Puts("OnLootEntityEnd works!");
+}
+```
+
+ * Called when the player stops looting an entity
+ * No return behavior
+
+## OnLootPlayer
+
+``` csharp
+void OnLootPlayer(BasePlayer player, BasePlayer target)
+{
+    Puts("OnLootPlayer works!");
+}
+```
+
+ * Called when the player starts looting another player
+ * No return behavior
+
+## OnLootItem
+
+``` csharp
+void OnLootItem(BasePlayer player, Item item)
+{
+    Puts("OnLootItem works!");
+}
+```
+
+ * Called when the player starts looting an item
+ * No return behavior
+
 ## OnPlayerAttack
 
 ``` csharp
@@ -144,7 +192,19 @@ void OnPlayerAttack(BasePlayer attacker, HitInfo info)
 
  * Useful for modifying an attack before it goes out
  * hitInfo.HitEntity should be the entity that this attack would hit
- * Returning true cancels the attack
+ * Returning a non-null value overrides default behavior
+
+## OnPlayerBanned
+
+``` csharp
+void OnPlayerBanned(Connection connection, string reason)
+{
+    Puts("OnPlayerBanned works!");
+}
+```
+
+ * Called when a player is banned
+ * No return behavior
 
 ## OnPlayerChat
 
@@ -156,7 +216,7 @@ void OnPlayerChat(ConsoleSystem.Arg arg)
 ```
 
  * Called when the player sends chat to the server
- * Returning true overrides default behavior of chat, not commands
+ * Returning a non-null value overrides default behavior of chat, not commands
 
 ## OnPlayerConnected
 
@@ -182,7 +242,7 @@ void OnPlayerDie(BasePlayer player, HitInfo info)
 
  * Called when a player is about to die
  * HitInfo may be null
- * Returning a non-null value lets the player cheat death
+ * Returning a non-null value overrides default behavior
  
 ## OnPlayerDisconnected
 
@@ -232,7 +292,7 @@ void OnPlayerInput(BasePlayer player, InputState input)
  * Called when input is received from a connected client
  * No return behavior
 
-## OnPlayerLanded
+## OnPlayerLand
 
 ``` csharp
 void OnPlayerLand(BasePlayer player)
@@ -242,7 +302,7 @@ void OnPlayerLand(BasePlayer player)
 ```
 
  * Called just before a player lands on the ground
- * Returning a non-null value overrides default behaviour
+ * Returning a non-null value overrides default behavior
  
 ## OnPlayerLanded
 
@@ -253,7 +313,7 @@ void OnPlayerLanded(BasePlayer player)
 }
 ```
 
- * Called when the player lands on the ground
+ * Called when the player landed on the ground
  * No return behavior
  
 ## OnPlayerLootEnd
@@ -266,7 +326,7 @@ void OnPlayerLootEnd(BasePlayer player)
 ```
  
  * Called when a player stops looting
- * No return behaviour
+ * No return behavior
  
 ## OnPlayerRecover
 
@@ -278,7 +338,7 @@ void OnPlayerRecover(BasePlayer player)
 ```
 
  * Called when a player is about to recover from the 'wounded' state
- * Returning a non-null value stops them from recovering
+ * Returning a non-null value overrides default behavior
  
 ## OnPlayerRespawn
 
@@ -290,7 +350,7 @@ void OnPlayerRespawn(BasePlayer player)
 ```
 
  * Called when the player is attempting to respawn
- * Returning true overrides the default behavior
+ * Returning a non-null value overrides the default behavior
 
 ## OnPlayerRespawned
 
@@ -316,7 +376,7 @@ void OnPlayerSleep(BasePlayer player)
 ```
 
  * Called when a player is about to go to sleep
- * Returning a non-null value keeps them awake
+ * Returning a non-null value overrides default behavior
  
 ## OnPlayerSleepEnded
 
@@ -330,6 +390,18 @@ void OnPlayerSleepEnded(BasePlayer player)
  * Called when the player awakes
  * No return behavior
  
+## OnPlayerSpawn
+
+``` csharp
+void OnPlayerSpawn(BasePlayer player)
+{
+    Puts("OnPlayerSpawn works!");
+}
+```
+
+ * Called when a player spawns for the first time on the server
+ * Returning a non-null value overrides default behavior
+ 
 ## OnPlayerSpectate
 
 ``` csharp
@@ -340,7 +412,7 @@ void OnPlayerSpectate(BasePlayer player, string spectateFilter)
 ```
 
  * Called when a player starts spectating
- * Returning a non-null value cancels the spectate
+ * Returning a non-null value overrides default behavior
  
 ## OnPlayerSpectateEnd
 
@@ -376,66 +448,6 @@ void OnPlayerWound(BasePlayer player)
 
  * Called when a player is about to go down to the 'wounded' state
  * Returning a non-null value cancels the wounded state
- 
-## OnLootEntity
-
-``` csharp
-void OnLootEntity(BasePlayer player, BaseEntity entity)
-{
-    Puts("OnLootEntity works!");
-}
-```
-
- * Called when the player starts looting an entity
- * No return behavior
-
-## OnLootPlayer
-
-``` csharp
-void OnLootPlayer(BasePlayer player, BasePlayer target)
-{
-    Puts("OnLootPlayer works!");
-}
-```
-
- * Called when the player starts looting another player
- * No return behavior
-
-## OnLootItem
-
-``` csharp
-void OnLootItem(BasePlayer player, Item item)
-{
-    Puts("OnLootItem works!");
-}
-```
-
- * Called when the player starts looting an item
- * No return behavior
-
-## OnMeleeThrown
-
-``` csharp
-void OnMeleeThrown(BasePlayer player, Item item)
-{
-    Puts("OnMeleeThrown works!");
-}
-```
-
- * Called when the player throws a melee item (axe, rock, ...)
- * No return behavior
-
-## OnRocketLaunched
-
-``` csharp
-void OnRocketLaunched(BasePlayer player, BaseEntity entity)
-{
-    Puts("OnRocketLaunched works!");
-}
-```
-
- * Called when the player launches a rocket
- * No return behavior
 
 ## OnRunPlayerMetabolism
 
@@ -452,18 +464,6 @@ void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
  * Access the player object using metabolism:GetComponent("BasePlayer")
  * Returning true cancels the update
 
-## OnNewConnection
-
-``` csharp
-void OnNewConnection(Network.Connection connection)
-{
-    Puts("OnNewConnection works!");
-}
-```
-
- * Called when a new connection is made by a user, after token, but before other checks.
- * Returning true overrides default behavior, plugin should call Reject if it does this
-
 ## OnUserApprove
 
 ``` csharp
@@ -475,15 +475,3 @@ void OnUserApprove(Network.Connection connection)
 
  * Used by RustCore and abstracted into CanClientLogin
  * Returning true overrides default behavior, plugin should call Reject if it does this
-
-## OnWeaponFired
-
-``` csharp
-void OnWeaponFired(BaseProjectile projectile, BasePlayer player, ItemModProjectile mod, ProtoBuf.ProjectileShoot projectiles)
-{
-    Puts("OnWeaponFired works!");
-}
-```
-
- * Called when the player fires a weapon
- * No return behavior

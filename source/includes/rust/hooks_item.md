@@ -10,44 +10,32 @@ void CanAcceptItem(ItemContainer container, Item item)
 ```
 
  * Called when attempting to put an item in a container
- * Returning true overrides default behavior
+ * Returning a CanAcceptResult enum value overrides default behavior
 
-## OnBlueprintReveal
+## CanMoveItem
 
 ``` csharp
-void OnBlueprintReveal(Item item, BasePlayer player)
+void CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
 {
-    Puts("OnBlueprintReveal works!");
+    Puts("CanMoveItem works!");
 }
 ```
 
- * Called when the player attempts to reveal a blueprint
- * Returning true overrides default behavior
+ * Called when moving an item from one inventory slot to another
+ * Returning a non-null value overrides default behavior
 
-## OnBlueprintRevealed
+## CanStackItem
 
 ``` csharp
-void OnBlueprintRevealed(Item item, Item revealed, BasePlayer player)
+void CanStackItem(Item item, Item targetItem)
 {
-    Puts("OnBlueprintRevealed works!");
+    Puts("CanStackItem works!");
 }
 ```
 
- * Called when the player has revealed a blueprint
- * No return behavior
+ * Called when moving an item onto another item
+ * Returning true or false overrides default behavior
 
-## OnConsumableUse
-
-``` csharp
-void OnConsumableUse(Item item)
-{
-    Puts("OnConsumableUse works!");
-}
-```
-
- * Called right after a consumable item is used
- * No return behavior
- 
 ## OnConsumeFuel
 
 ``` csharp
@@ -60,17 +48,17 @@ void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
  * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
  * No return behavior
 
-## OnDispenserGather
+## OnFindBurnable
 
 ``` csharp
-void OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
+void OnFindBurnable(BaseOven oven, Item fuel, ItemModBurnable burnable)
 {
-    Puts("OnDispenserGather works!");
+    Puts("OnFindBurnable works!");
 }
 ```
 
- * Called before the player is given items from a resource
- * No return behavior
+ * Called when looking for fuel for the oven
+ * Returning an item overrides default behavior
 
 ## OnHealingItemUse
 
@@ -82,7 +70,19 @@ void OnHealingItemUse(HeldEntity item, BasePlayer target)
 ```
 
  * Called right before a Syringe or Medkit item is used
- * Returning true overrides default behavior
+ * Returning a non-null value overrides default behavior
+
+## OnItemAction
+
+``` csharp
+void OnItemAction(Item item, string action)
+{
+    Puts("OnItemAction works!");
+}
+```
+
+ * Called when a button is clicked on an item in the inventory (drop, unwrap, ...)
+ * Returning a non-null value overrides default behavior
 
 ## OnItemAddedToContainer
 
@@ -107,7 +107,7 @@ void OnItemCraft(ItemCraftTask item)
 ```
 
  * Called right after an item is added to the crafting queue
- * Return an ItemCraftTask object to modify behavior or outcome
+ * Returning true or false overrides default behavior
 
 ## OnItemCraftCancelled
 
@@ -119,7 +119,7 @@ void OnItemCraftCancelled(ItemCraftTask task)
 ```
 
  * Called before an item has been crafted
- * Returning true overrides default behavior
+ * No return behavior
 
 ## OnItemCraftFinished
 
@@ -145,16 +145,53 @@ void OnItemDeployed(Deployer deployer, BaseEntity entity)
  * Called right after an item has been deployed
  * No return behavior
 
-## OnCollectiblePickup
+## OnItemDropped
 
 ``` csharp
-void OnCollectiblePickup(Item item, BasePlayer player)
+void OnItemDropped(Deployer deployer, BaseEntity entity)
 {
-    Puts("OnCollectiblePickup works!");
+    Puts("OnItemDropped works!");
 }
 ```
 
- * Called when the player collects an item
+ * Called right after an item has been dropped
+ * No return behavior
+
+## OnItemPickup
+
+``` csharp
+void OnItemPickup(Item item, BasePlayer player)
+{
+    Puts("OnItemPickup works!");
+}
+```
+
+ * Called right after an item has been picked up
+ * No return behavior
+
+## OnItemRemovedFromContainer
+
+``` csharp
+void OnItemRemovedFromContainer(ItemContainer container, Item item)
+{
+    Puts("OnItemRemovedFromContainer works!");
+}
+```
+
+ * Called right after an item was removed from a container
+ * The entire stack has to be removed for this to be called, not just a little bit
+ * No return behavior
+
+## OnItemRepair
+
+``` csharp
+void OnItemRepair(BasePlayer player, Item item)
+{
+    Puts("OnItemRepair works!");
+}
+```
+
+ * Called right after an item has been picked up
  * No return behavior
 
 ## OnItemResearch
@@ -167,7 +204,7 @@ void OnItemResearch(Item item, BasePlayer player)
 ```
 
  * Called right before a player begins to research an item
- * Returning true overrides default behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnItemResearchEnd
 
@@ -194,19 +231,6 @@ void OnItemResearchStart(ResearchTable table)
  * Called when the player has started researching an item
  * No return behavior
 
-## OnItemRemovedFromContainer
-
-``` csharp
-void OnItemRemovedFromContainer(ItemContainer container, Item item)
-{
-    Puts("OnItemRemovedFromContainer works!");
-}
-```
-
- * Called right after an item was removed from a container
- * The entire stack has to be removed for this to be called, not just a little bit
- * No return behavior
-
 ## OnItemSplit
 
 ``` csharp
@@ -217,7 +241,7 @@ void OnItemSplit(Item item, int amount)
 ```
 
  * Called right before an item is split into multiple stacks
- * No return behavior
+ * Returning an item overrides default behavior
 
 ## OnItemUpgrade
 
@@ -229,6 +253,18 @@ void OnItemUpgrade(Item item, Item upgraded, BasePlayer player)
 ```
 
  * Called right before an item is upgraded
+ * No return behavior
+
+## OnItemUse
+
+``` csharp
+void OnItemUse(Item item, int amountToUse)
+{
+    Puts("OnItemUse works!");
+}
+```
+
+ * Called when an item is used
  * No return behavior
 
 ## OnLoseCondition
@@ -243,54 +279,6 @@ void OnLoseCondition(Item item, ref float amount)
  * Called right before the condition of the item is modified
  * No return behavior
 
-## OnCropGather
-
-``` csharp
-void OnCropGather(PlantEntity plant, Item item, BasePlayer player)
-{
-    Puts("OnCropGather works!");
-}
-```
-
- * Called when the player gathers a plant
- * No return behavior
-
-## OnQuarryEnabled
-
-``` csharp
-void OnQuarryEnabled(MiningQuarry quarry)
-{
-    Puts("OnQuarryEnabled works!");
-}
-```
-
- * Called when a mining quarry is turned on/enabled
- * No return behavior
-
-## OnQuarryGather
-
-``` csharp
-void OnQuarryGather(MiningQuarry quarry, Item item)
-{
-    Puts("OnQuarryGather works!");
-}
-```
-
- * Called before items are gathered from a quarry
- * No return behavior
-
-## OnSurveyGather
-
-``` csharp
-void OnSurveyGather(SurveyCharge survey, Item item)
-{
-    Puts("OnSurveyGather works!");
-}
-```
-
- * Called before items are gathered from a survey charge
- * No return behavior
-
 ## OnTrapArm
 
 ``` csharp
@@ -301,7 +289,7 @@ void OnTrapArm(BearTrap trap, BasePlayer player)
 ```
 
  * Called when the player arms a bear trap
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnTrapDisarm
 
@@ -313,7 +301,7 @@ void OnTrapDisarm(Landmine trap, BasePlayer player)
 ```
 
  * Called when the player disarms a land mine
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnTrapSnapped
 
@@ -337,4 +325,4 @@ void OnTrapTrigger(BaseTrap trap, GameObject go)
 ```
 
  * Called when a trap is triggered by a game object
- * No return behavior
+ * Returning a non-null value overrides default behavior

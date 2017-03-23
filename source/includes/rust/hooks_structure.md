@@ -1,5 +1,17 @@
 # Structure Hooks
 
+## CanAssignBed
+
+``` csharp
+void CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
+{
+    Puts("CanAssignBed works!");
+}
+```
+
+ * Called when a player attempts to assign a bed or sleepingbag to another player
+ * Returning a non-null value overrides default behavior
+
 ## CanBuild
 
 ``` csharp
@@ -10,43 +22,91 @@ void CanBuild(Planner plan, Construction prefab)
 ```
 
  * Called when the player tries to build something
- * Returning true overrides default behavior
+ * Returning a non-null value overrides default behavior
 
-## CanUseLock
+## CanChangeCode
 
 ``` csharp
-void CanUseLock(BasePlayer player, BaseLock @lock)
+void CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool isGuestCode)
 {
-    Puts("CanUseLock works!");
+    Puts("CanChangeCode works!");
 }
 ```
 
- * Called when the player tries to use a locked entity
- * Returning true bypasses lock handling, nothing will by default will allow normal handling, returning anything else will reject lock usage
+ * Called when a player tries to change the code on a codelock
+ * Returning a non-null value overrides default behavior
 
-## CanUseLock
+## CanLock
 
 ``` csharp
-void CanUseLock(BasePlayer player, CodeLock @lock)
+void CanLock(BaseLock baseLock, BasePlayer player)
 {
-    Puts("CanUseLock works!");
+    Puts("CanLock works!");
 }
 ```
 
- * Called when the player tries to use a door with a code lock
- * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Called when the player tries to lock a keylock or codelock
+ * Returning a non-null value overrides default behavior
 
-## CanUseLock
+## CanSetBedPublic
 
 ``` csharp
-void CanUseLock(BasePlayer player, KeyLock @lock)
+void CanSetBedPublic(SleepingBag bed, BasePlayer player)
 {
-    Puts("CanUseLock works!");
+    Puts("CanSetBedPublic works!");
 }
 ```
 
- * Called when the player tries to use a door with a key lock
- * Returning true allows door usage, nothing will by default will allow door usage, returning anything else will reject door usage
+ * Called when a player tries to set a bed public
+ * Returning a non-null value overrides default behavior
+
+## CanUnlock
+
+``` csharp
+void CanUnlock(BaseLock baseLock, BasePlayer player)
+{
+    Puts("CanUnlock works!");
+}
+```
+
+ * Called when the player tries to unlock a keylock or codelock
+ * Returning a non-null value overrides default behavior
+
+## CanUseLockedEntity
+
+``` csharp
+void CanUseLockedEntity(BasePlayer player, BaseLock baseLock)
+{
+    Puts("CanUseLockedEntity works!");
+}
+```
+
+ * Called when the player tries to use an entity that is locked
+ * Returning true or false overrides default behavior
+
+## OnCodeEntered
+
+``` csharp
+void OnCodeEntered(CodeLock codeLock, BasePlayer player, string code)
+{
+    Puts("OnCodeEntered works!");
+}
+```
+
+ * Called when the player has entered a code in a codelock
+ * Returning a non-null value overrides default behavior
+
+## OnCupboardAuthorize
+
+``` csharp
+void OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
+{
+    Puts("OnCupboardAuthorize works!");
+}
+```
+
+ * Called when a cupboard attempts to authorize a player
+ * Returning a non-null value overrides default behavior
 
 ## OnCupboardClearList
 
@@ -58,7 +118,19 @@ void OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
 ```
 
  * Called when an attempt is made to clear a cupboard authorized list
- * Returning true overrides default behavior
+ * Returning a non-null value overrides default behavior
+
+## OnCupboardDeauthorize
+
+``` csharp
+void OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
+{
+    Puts("OnCupboardDeauthorize works!");
+}
+```
+
+ * Called when a cupboard attempts to deauthorize a player
+ * Returning a non-null value overrides default behavior
 
 ## OnDoorClosed
 
@@ -83,30 +155,6 @@ void OnDoorOpened(Door door, BasePlayer player)
 
  * Called when the player opened a door
  * No return behavior
-
-## OnCupboardAuthorize
-
-``` csharp
-void OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
-{
-    Puts("OnCupboardAuthorize works!");
-}
-```
-
- * Called when a cupboard attempts to authorize a player
- * Returning true cancels the authorization
-
-## OnCupboardDeauthorize
-
-``` csharp
-void OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
-{
-    Puts("OnCupboardDeauthorize works!");
-}
-```
-
- * Called when a cupboard attempts to deauthorize a player
- * Returning true cancels the deauthorization
 
 ## OnEntityBuilt
 
@@ -142,7 +190,7 @@ void OnStructureDemolish(BaseCombatEntity entity, BasePlayer player)
 ```
 
  * Called when the player selects DemolishImmediate from the BuildingBlock or BaseCombatEntity menu
- * Returning true overrides the demolition
+ * Returning a non-null value overrides default behavior
 
 ## OnStructureRepair
 
@@ -178,4 +226,4 @@ void OnStructureUpgrade(BaseCombatEntity entity, BasePlayer player, BuildingGrad
 ```
 
  * Called when the player upgrades the grade of a BuildingBlock or BaseCombatEntity
- * Returning true overrides the upgrade
+ * Returning a non-null value overrides default behavior

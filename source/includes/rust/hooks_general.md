@@ -10,7 +10,43 @@ void OnMessagePlayer(string message, BasePlayer player)
 ```
 
  * Useful for intercepting server messages before they get to their intended target
- * Return true to override the default behavior
+ * Returning a non-null value overrides default behavior
+
+## OnNewSave
+
+``` csharp
+void OnNewSave(string filename)
+{
+    Puts("OnNewSave works!");
+}
+```
+
+ * Called when a new savefile is created
+ * No return behavior
+
+## OnRconConnection
+
+``` csharp
+void OnRconConnection(IPEndPoint ip)
+{
+    Puts("OnRconConnection works!");
+}
+```
+
+ * Called when a new RCon connection is opened
+ * Returning a non-null value overrides default behavior
+
+## OnSaveLoad
+
+``` csharp
+void OnSaveLoad(Dictionary<BaseEntity, Entity> entities)
+{
+    Puts("OnSaveLoad works!");
+}
+```
+
+ * Called when a savefile is loaded
+ * Returning true or false overrides default behavior
 
 ## OnServerCommand
 
