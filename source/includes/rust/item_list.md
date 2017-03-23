@@ -281,6 +281,7 @@
 | 1490499512    | Targeting Computer           | targeting.computer       |
 | 3552619       | Tarp                         | tarp                     |
 | 1471284746    | Tech Trash                   | techparts                |
+| -1480119738   | Binoculars                   | tool.binoculars          |
 | -1342405573   | Camera                       | tool.camera              |
 | 110547964     | Torch                        | torch                    |
 | 1046072789    | Snap Trap                    | trap.bear                |
@@ -314,6 +315,7 @@
 | -1569356508   | Muzzle Boost                 | weapon.mod.muzzleboost   |
 | -1569280852   | Muzzle Brake                 | weapon.mod.muzzlebrake   |
 | 1213686767    | Silencer                     | weapon.mod.silencer      |
+| 386382445     | Simple Handmade Sight        | weapon.mod.simplesight   |
 | -141135377    | 4x Zoom Scope                | weapon.mod.small.scope   |
 | -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
 | -1691991080   | Cooked Wolf Meat             | wolfmeat.cooked          |
