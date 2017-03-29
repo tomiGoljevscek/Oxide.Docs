@@ -8,7 +8,7 @@ namespace Oxide.Plugins
     [Info("EpicStuff", "Unknown", 1.0)]
     [Description("This example illustrates how to use a basic configuration file")]
 
-    class EpicStuff : RustPlugin
+    class EpicStuff : CovalencePlugin
     {
         protected override void LoadDefaultConfig()
         {
@@ -34,10 +34,10 @@ namespace Oxide.Plugins
     [Info("EpicStuff", "Unknown", 1.0)] 
     [Description("This example illustrates how to update a value in a configuration file")]
 
-    class EpicStuff : RustPlugin
+    class EpicStuff : CovalencePlugin
     {
-        [ChatCommand("Test")]
-        void Test(BasePlayer player, string command, string[] args)
+        [Command("Test")]
+        void Test(IPlayer player, string command, string[] args)
         {
             if ((bool)Config["ShowJoinMessage"])
                 Config["ShowJoinMessage"] = false;

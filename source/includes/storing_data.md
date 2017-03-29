@@ -11,7 +11,7 @@ namespace Oxide.Plugins
     [Info("EpicStuff", "Unknown", 1.0)] 
     [Description("This example illustrates how to create a data file")]
 
-    class EpicStuff : RustPlugin
+    class EpicStuff : CovalencePlugin
     {
         class StoredData
         {
@@ -61,7 +61,7 @@ namespace Oxide.Plugins
     [Info("EpicStuff", "Unknown", 1.0)] 
     [Description("This example illustrates how to save to a data file")]
 
-    class EpicStuff : RustPlugin
+    class EpicStuff : CovalencePlugin
     {
         class StoredData
         {
@@ -81,10 +81,10 @@ namespace Oxide.Plugins
             {
             }
 
-            public PlayerInfo(BasePlayer player)
+            public PlayerInfo(IPlayer player)
             {
-                UserId = player.userID.ToString();
-                Name = player.displayName;
+                UserId = player.Id;
+                Name = player.Name;
             }
         }
 
@@ -95,8 +95,8 @@ namespace Oxide.Plugins
             storedData = Interface.Oxide.DataFileSystem.ReadObject<StoredData>("MyDataFile");
         }
 
-        [ChatCommand("Test")]
-        void Test(BasePlayer player, string command, string[] args)
+        [Command("Test")]
+        void Test(IPlayer player, string command, string[] args)
         {
             var info = new PlayerInfo(player);
             if (storedData.Players.Contains(info))
