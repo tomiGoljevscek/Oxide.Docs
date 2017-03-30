@@ -17,6 +17,10 @@ build/
 
 # YARD artifacts
 .yardoc
-_yardoc
+_yardoc/
 doc/
 .idea/
+
+.bundle
+_site/
+vendor/
