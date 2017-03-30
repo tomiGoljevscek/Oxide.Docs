@@ -36,6 +36,18 @@ void CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool is
  * Called when a player tries to change the code on a codelock
  * Returning a non-null value overrides default behavior
 
+## CanHideStash
+
+``` csharp
+void CanHideStash(StashContainer stash, BasePlayer player)
+{
+    Puts("CanHideStash works!");
+}
+```
+
+ * Called when a player tries to hide a stash
+ * Returning a non-null value overrides default behavior
+
 ## CanLock
 
 ``` csharp
@@ -46,6 +58,18 @@ void CanLock(BaseLock baseLock, BasePlayer player)
 ```
 
  * Called when the player tries to lock a keylock or codelock
+ * Returning a non-null value overrides default behavior
+
+## CanSeeStash
+
+``` csharp
+void CanSeeStash(StashContainer stash, BasePlayer player)
+{
+    Puts("CanSeeStash works!");
+}
+```
+
+ * Called when a player is looking at a hidden stash
  * Returning a non-null value overrides default behavior
 
 ## CanSetBedPublic
