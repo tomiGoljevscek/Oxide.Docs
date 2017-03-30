@@ -25,6 +25,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 849047662    | Agony Yellow                      |
+| 887494035    | Aircraft Parts AK47               |
 | 859845460    | Alien Red                         |
 | 809190373    | Battle-Scarred AKS47              |
 | 875130056    | Claw AK47                         |
@@ -60,6 +61,7 @@
 | 10026        | Grey Cap                          |
 | 10028        | Red Cap                           |
 | 10045        | Rescue Cap                        |
+| 890772638    | Toothy Hat                        |
 
 ## Beenie Hat (hat.beenie)
 | Skin Id      | Skin name                         |
@@ -133,6 +135,7 @@
 | 867605376    | Rusty Bucket Helmet               |
 | 784438982    | Smilin' Jack                      |
 | 885450077    | Super Happy Bucket                |
+| 889767601    | The King's Bucket                 |
 | 564826303    | Wooden Bucket                     |
 
 ## Burlap Headwrap (burlap.headwrap)
@@ -201,6 +204,7 @@
 | 820402694    | Anarchy SMG                       |
 | 866745136    | Bandito SMG                       |
 | 816728172    | Firestarter Custom SMG            |
+| 892212957    | Hunter SMG                        |
 | 854914986    | Tank SMG                          |
 | 822943156    | tRUSTy Friend                     |
 
@@ -231,6 +235,7 @@
 | 869398873    | Aircraft Parts Fridge             |
 | 864918396    | Biohazard Fridge                  |
 | 873612402    | Urban Fridge                      |
+| 886416273    | Victorian Food Vault              |
 
 ## Hammer (hammer)
 | Skin Id      | Skin name                         |
@@ -292,6 +297,7 @@
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
 | 10133        | Cuda87 Hoodie                     |
+| 889718910    | Desert Conqueror Hoodie           |
 | 14072        | Green Hoodie                      |
 | 797128321    | Official Vertiigo Hoodie          |
 | 661319427    | Ranger's Vest                     |
@@ -356,6 +362,7 @@
 | 842083350    | Military Crate                    |
 | 878850459    | Recyclables Box                   |
 | 881249489    | Royal Wooden Box                  |
+| 890915277    | Urban Large Wood Storage          |
 | 854718942    | Weapons Box                       |
 
 ## Leather Gloves (burlap.gloves)
@@ -449,6 +456,7 @@
 ## Miners Hat (hat.miner)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 886968007    | Army Miner Hat                    |
 | 788260164    | Train Conductor Miner's Hat       |
 | 886318490    | Workman's Safety Hat              |
 
@@ -467,6 +475,7 @@
 |--------------|-----------------------------------|
 | 10001        | Blue Jeans                        |
 | 10049        | Blue Track Pants                  |
+| 889714798    | Desert Conqueror Pants            |
 | 10019        | Forest Camo Pants                 |
 | 10078        | Old Prisoner Pants                |
 | 823154911    | One Percenter Chaps               |
@@ -478,6 +487,7 @@
 ## Pick Axe (pickaxe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 828884658    | Gold Digger                       |
 | 859743520    | Military Pick Axe                 |
 | 832799172    | Rescue Pick Axe                   |
 | 863455081    | Tarnished Sun Pick Axe            |
@@ -509,6 +519,7 @@
 | 809822151    | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
 | 809897611    | Outlaw Revolver                   |
+| 887846629    | Western Revolver Gold             |
 
 ## Riot Helmet (riot.helmet)
 | Skin Id      | Skin name                         |
@@ -600,6 +611,7 @@
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 883156158    | Base Invaders SAP                 |
 | 876007573    | Chrome SAP                        |
 | 10087        | Contamination Pistol              |
 | 863443112    | Desert Hunter                     |
@@ -681,6 +693,7 @@
 ## Stone Hatchet (stonehatchet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 887663210    | Chieftain Stone Hatchet           |
 | 797445687    | Ice Tooth                         |
 | 854688691    | Large Fruit Pit Hatchet           |
 | 878257758    | Volcanic Stone Hatchet            |
