@@ -51,7 +51,7 @@ void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
 ## OnFindBurnable
 
 ``` csharp
-void OnFindBurnable(BaseOven oven, Item fuel, ItemModBurnable burnable)
+void OnFindBurnable(BaseOven oven)
 {
     Puts("OnFindBurnable works!");
 }
