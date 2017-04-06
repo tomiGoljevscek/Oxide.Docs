@@ -3,7 +3,7 @@
 ## CanAttack
 
 ``` csharp
-void CanAttack(BasePlayer player) 
+void CanAttack(BasePlayer player)
 {
     Puts("CanAttack works!");
 }
@@ -15,7 +15,7 @@ void CanAttack(BasePlayer player)
 ## CanBeTargeted (autoturret)
 
 ``` csharp
-void CanBeTargeted(BaseCombatEntity player, MonoBehaviour turret) 
+void CanBeTargeted(BaseCombatEntity player, MonoBehaviour turret)
 {
     Puts("CanBeTargeted works!");
 }
@@ -27,7 +27,7 @@ void CanBeTargeted(BaseCombatEntity player, MonoBehaviour turret)
 ## CanBeWounded
 
 ``` csharp
-void CanBeWounded(BasePlayer player, HitInfo info) 
+void CanBeWounded(BasePlayer player, HitInfo info)
 {
     Puts("CanBeWounded works!");
 }
@@ -88,7 +88,7 @@ void CanEquipItem(PlayerInventory inventory, Item item)
 ## CanLootPlayer
 
 ``` csharp
-void CanLootPlayer(BasePlayer target, BasePlayer looter) 
+void CanLootPlayer(BasePlayer target, BasePlayer looter)
 {
     Puts("CanLootPlayer works!");
 }
@@ -243,7 +243,7 @@ void OnPlayerDie(BasePlayer player, HitInfo info)
  * Called when a player is about to die
  * HitInfo may be null
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerDisconnected
 
 ``` csharp
@@ -264,10 +264,10 @@ void OnPlayerHealthChange(BasePlayer player, float oldValue, float newValue)
     Puts("OnPlayerHealthChange works!");
 }
 ```
- 
+
  * Called just before a player's health changes
  * Returning a non-null value cancels the health change
- 
+
 ## OnPlayerInit
 
 ``` csharp
@@ -295,7 +295,7 @@ void OnPlayerInput(BasePlayer player, InputState input)
 ## OnPlayerLand
 
 ``` csharp
-void OnPlayerLand(BasePlayer player)
+void OnPlayerLand(BasePlayer player, float num)
 {
     Puts("OnPlayerLand works!");
 }
@@ -303,11 +303,11 @@ void OnPlayerLand(BasePlayer player)
 
  * Called just before a player lands on the ground
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerLanded
 
 ``` csharp
-void OnPlayerLanded(BasePlayer player)
+void OnPlayerLanded(BasePlayer player, float num)
 {
     Puts("OnPlayerLanded works!");
 }
@@ -315,7 +315,7 @@ void OnPlayerLanded(BasePlayer player)
 
  * Called when the player landed on the ground
  * No return behavior
- 
+
 ## OnPlayerLootEnd
 
 ``` csharp
@@ -324,10 +324,10 @@ void OnPlayerLootEnd(PlayerLoot inventory)
     Puts("OnPlayerLootEnd works!");
 }
 ```
- 
+
  * Called when a player stops looting
  * No return behavior
- 
+
 ## OnPlayerRecover
 
 ``` csharp
@@ -339,7 +339,7 @@ void OnPlayerRecover(BasePlayer player)
 
  * Called when a player is about to recover from the 'wounded' state
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerRespawn
 
 ``` csharp
@@ -377,7 +377,7 @@ void OnPlayerSleep(BasePlayer player)
 
  * Called when a player is about to go to sleep
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerSleepEnded
 
 ``` csharp
@@ -389,7 +389,7 @@ void OnPlayerSleepEnded(BasePlayer player)
 
  * Called when the player awakes
  * No return behavior
- 
+
 ## OnPlayerSpawn
 
 ``` csharp
@@ -401,7 +401,7 @@ void OnPlayerSpawn(BasePlayer player)
 
  * Called when a player spawns for the first time on the server
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerSpectate
 
 ``` csharp
@@ -413,7 +413,7 @@ void OnPlayerSpectate(BasePlayer player, string spectateFilter)
 
  * Called when a player starts spectating
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerSpectateEnd
 
 ``` csharp
@@ -422,7 +422,7 @@ void OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
     Puts("OnPlayerSpectateEnd works!");
 }
 ```
- 
+
  * Called when a player stops spectating
  * Returning a non-null value stops the spectate from ending
 
@@ -436,7 +436,7 @@ void OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
 ```
 
  * Returning a non-null value overrides default behavior
- 
+
 ## OnPlayerWound
 
 ``` csharp

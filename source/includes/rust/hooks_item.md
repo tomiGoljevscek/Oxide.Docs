@@ -148,7 +148,7 @@ void OnItemDeployed(Deployer deployer, BaseEntity entity)
 ## OnItemDropped
 
 ``` csharp
-void OnItemDropped(Deployer deployer, BaseEntity entity)
+void OnItemDropped(Item item, BaseEntity entity)
 {
     Puts("OnItemDropped works!");
 }
