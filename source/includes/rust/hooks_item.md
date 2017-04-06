@@ -191,7 +191,7 @@ void OnItemRepair(BasePlayer player, Item item)
 }
 ```
 
- * Called right after an item has been picked up
+ * Called right before an item is repaired
  * No return behavior
 
 ## OnItemResearch
