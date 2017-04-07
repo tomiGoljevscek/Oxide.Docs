@@ -12,6 +12,18 @@ void CanAcceptItem(ItemContainer container, Item item)
  * Called when attempting to put an item in a container
  * Returning a CanAcceptResult enum value overrides default behavior
 
+## CanCombineDroppedItem
+
+``` csharp
+void CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
+{
+    Puts("CanCombineDroppedItem works!");
+}
+```
+
+ * Called when an item is dropped on another item
+ * Returning a non-null value overrides default behavior
+
 ## CanMoveItem
 
 ``` csharp
