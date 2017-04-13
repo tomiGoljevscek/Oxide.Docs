@@ -179,7 +179,7 @@ void OnItemPickup(Item item, BasePlayer player)
 ```
 
  * Called right after an item has been picked up
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnItemRemovedFromContainer
 

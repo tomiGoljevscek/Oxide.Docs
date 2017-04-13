@@ -33,6 +33,7 @@
 | 885146172    | Dark Flames                       |
 | 10135        | Digital Camo AK47                 |
 | 10137        | Military Camo AK47                |
+| 895307805    | Retro Car Parts AK47              |
 | 654502185    | Rustpunk AK47                     |
 | 10138        | Tempered AK47                     |
 
@@ -78,6 +79,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 818403150    | Army Bolt Rifle                   |
+| 897023403    | Deadly Rose BAR                   |
 | 10117        | Dreamcatcher                      |
 | 10115        | Ghost Bolt Rifle                  |
 | 875259050    | Great War Service Rifle           |
@@ -119,6 +121,7 @@
 | 10080        | Army Boots                        |
 | 10023        | Black Boots                       |
 | 10088        | Bloody Boots                      |
+| 899942107    | Caravanner Boots                  |
 | 838205144    | Combat Boots                      |
 | 784559403    | Hazard Move Boots                 |
 | 10034        | Punk Boots                        |
@@ -141,6 +144,7 @@
 ## Burlap Headwrap (burlap.headwrap)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 896506958    | Brotherhood Headwrap              |
 | 861551572    | Crimson Headwrap                  |
 | 868014709    | Outlaw Headwrap                   |
 | 785890135    | SandPrince                        |
@@ -169,6 +173,7 @@
 |--------------|-----------------------------------|
 | 875258235    | Antique Dining Chair              |
 | 871339422    | Danger Chair                      |
+| 897656037    | Muerto Chair                      |
 | 871271807    | Red Leather Chair                 |
 
 ## Coffee Can Helmet (coffeecan.helmet)
@@ -179,6 +184,7 @@
 | 806212029    | Rusty Coffee Can Helmet           |
 | 784910461    | Skull Hazard                      |
 | 814098474    | Spare Parts                       |
+| 809816871    | Warboy Helmet                     |
 | 854460770    | Welding Helmet                    |
 
 ## Concrete Barricade (barricade.concrete)
@@ -204,6 +210,7 @@
 | 820402694    | Anarchy SMG                       |
 | 866745136    | Bandito SMG                       |
 | 816728172    | Firestarter Custom SMG            |
+| 897099822    | Hailstorm SMG                     |
 | 892212957    | Hunter SMG                        |
 | 854914986    | Tank SMG                          |
 | 822943156    | tRUSTy Friend                     |
@@ -220,6 +227,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 856053892    | Banana Eoka                       |
+| 898387222    | Birch Eoka                        |
 | 856225258    | Flintlock                         |
 | 857750032    | Primal Gun                        |
 
@@ -246,6 +254,7 @@
 ## Hatchet (hatchet)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 892263562    | Ancient Artifact Hatchet          |
 | 814630559    | Firefighter Hatchet               |
 | 824552943    | Golden Axe                        |
 | 816715928    | Military Hatchet                  |
@@ -299,10 +308,12 @@
 | 10133        | Cuda87 Hoodie                     |
 | 889718910    | Desert Conqueror Hoodie           |
 | 14072        | Green Hoodie                      |
+| 895065994    | Leather Strapped Hoodie           |
 | 797128321    | Official Vertiigo Hoodie          |
 | 661319427    | Ranger's Vest                     |
 | 10132        | Rhinocrunch Hoodie                |
 | 10129        | Safety Crew                       |
+| 835836079    | Scudpunk Hoodie                   |
 | 10086        | Skeleton Hoodie                   |
 | 677636990    | Tank Crew Hoodie                  |
 | 803249256    | Unknown Territory Hoodie          |
@@ -349,6 +360,7 @@
 |--------------|-----------------------------------|
 | 813269955    | Ammo Box                          |
 | 10124        | Ammo Wooden Box                   |
+| 892062620    | Cabin Chest                       |
 | 810383121    | Christmas Holiday LWB             |
 | 10122        | Christmas Storage                 |
 | 854002617    | Components Storage                |
@@ -420,16 +432,19 @@
 | 796728308    | Flak Vest - Green                 |
 | 794169855    | Forest Camo Chest Plate           |
 | 823132085    | Hazardous Grater Chest Plate      |
+| 895066686    | Looter's Chain and Plate          |
 | 828888000    | Machina Plate                     |
 | 817022417    | Metal Barrel Chest Plate          |
 | 819160334    | Oil Barrel Chest Plate            |
 | 797410767    | Plate Carrier - Black             |
 | 798736321    | Press Vest                        |
 | 799657859    | Racing Stripes Chest Plate        |
+| 900807753    | Salvaged Plating Armor            |
 
 ## Metal Facemask (metal.facemask)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 901668040    | Army Armored Facemask             |
 | 832021670    | Army Facemask                     |
 | 792649975    | Aztek Night Hunter                |
 | 784316334    | Big Grin                          |
@@ -443,11 +458,14 @@
 | 812933296    | Human Sacrifice Mask              |
 | 881687672    | Hunter Mask                       |
 | 806983252    | Industrial Protection Mask        |
+| 899001394    | Juggernaut Mask                   |
+| 895067146    | Looter's Mask                     |
 | 828888629    | Machina Mask                      |
 | 841012325    | Mask of Sacrifice                 |
 | 803894027    | Punishment Mask                   |
 | 792905158    | Rusted Smile                      |
 | 792827436    | Sacrificial Mask                  |
+| 896211631    | Scavenger Facemask                |
 | 824898622    | Stainless Facemask                |
 | 816530945    | Steampunk Leather Mask            |
 | 800980236    | Tempered Mask                     |
@@ -467,6 +485,7 @@
 | 833639834    | Elite Mp5                         |
 | 796687275    | Military Camo MP5                 |
 | 808554348    | Polymer MP5                       |
+| 892100306    | Spitfire MP5                      |
 | 853438134    | Tank MP5                          |
 | 800974015    | Tempered Mp5                      |
 
@@ -593,6 +612,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 828885909    | Metal Roses Short Sword           |
+| 893871715    | Roadsign Sword                    |
 | 825240467    | Wooden Sword                      |
 
 ## Sandbag Barricade (barricade.sandbags)
@@ -611,13 +631,16 @@
 ## Semi-Automatic Pistol (pistol.semiauto)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 902487409    | Aircraft Parts SAP                |
 | 883156158    | Base Invaders SAP                 |
 | 876007573    | Chrome SAP                        |
 | 10087        | Contamination Pistol              |
 | 863443112    | Desert Hunter                     |
+| 893118140    | Fire Walk SAP                     |
 | 805925675    | Golden Leaf SAP                   |
 | 10108        | Halloween Bat                     |
 | 830255284    | LCD Marine Sidearm                |
+| 899942580    | Looter's SAP                      |
 | 853927198    | Nightmare                         |
 | 830606037    | Ol' Greasy                        |
 | 804337360    | Paint Rush SAP                    |
@@ -633,6 +656,7 @@
 |--------------|-----------------------------------|
 | 828616457    | Army SAR                          |
 | 839302795    | Bandito SAR                       |
+| 900921542    | Fire Starter SAR                  |
 | 840023839    | Hazard Semi Auto Rifle            |
 | 875259741    | Sublime SAR                       |
 | 818613234    | Workbench SAR                     |
@@ -646,6 +670,7 @@
 | 832957536    | Metal Shutter Door                |
 | 859864870    | Prison Door                       |
 | 835119969    | Recycled Garage Door              |
+| 897274189    | School Bus Door                   |
 | 883741993    | Shipping Container Door           |
 
 ## Shirt (shirt.collared)
@@ -777,6 +802,7 @@
 |--------------|-----------------------------------|
 | 787716105    | First Aid Box                     |
 | 885103417    | Medieval Small Wooden Box         |
+| 889212734    | Seed Box                          |
 
 ## Wooden Door (door.hinged.wood)
 | Skin Id      | Skin name                         |

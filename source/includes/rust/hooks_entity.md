@@ -27,7 +27,7 @@ void CanNetworkTo(BaseNetworkable entity, BasePlayer target)
 ## CanNpcAttack
 
 ``` csharp
-void CanNpcAttack(BaseNPC npc, BaseCombatEntity target)
+void CanNpcAttack(BaseNPC npc, BaseEntity target)
 {
     Puts("CanNpcAttack works!");
 }
@@ -36,16 +36,16 @@ void CanNpcAttack(BaseNPC npc, BaseCombatEntity target)
  * Called when a NPC attempts to attack another entity
  * Returning true or false overrides default behavior
 
-## CanNpcFear
+## CanNpcEat
 
 ``` csharp
-void CanNpcFear(BaseNPC npc, BaseCombatEntity target)
+void CanNpcEat(BaseNPC npc, BaseCombatEntity target)
 {
-    Puts("CanNpcFear works!");
+    Puts("CanNpcEat works!");
 }
 ```
 
- * Called when a NPC attempts to run away from another entity
+ * Called when a NPC attempts to eat another entity
  * Returning true or false overrides default behavior
 
 ## CanPickupEntity
@@ -83,6 +83,18 @@ void OnAirdrop(CargoPlane plane, Vector3 dropPosition)
 
  * Called when an airdrop has been called
  * No return behavior
+
+## OnContainerDropItems
+
+``` csharp
+void OnContainerDropItems(ItemContainer container)
+{
+    Puts("OnContainerDropItems works!");
+}
+```
+
+ * Called when a container is destroyed and all items are about to be dropped
+ * Returning a non-null value overrides default behavior
 
 ## OnEntityDeath
 

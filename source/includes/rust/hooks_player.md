@@ -9,7 +9,7 @@ void CanAttack(BasePlayer player)
 }
 ```
 
- * Called when a player is attempting to attack
+ * Called when a player is attempting to perform a melee attack
  * Returning true or falseoverrides default behavior
 
 ## CanBeTargeted (autoturret)

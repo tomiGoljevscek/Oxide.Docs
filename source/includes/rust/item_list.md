@@ -89,6 +89,9 @@
 | 1983936587    | Crude Oil                    | crude.oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
 | -1178289187   | Bone Helmet                  | deer.skull.mask          |
+| -225234813    | Burned Deer Meat             | deermeat.burned          |
+| -202239044    | Cooked Deer Meat             | deermeat.cooked          |
+| -322501005    | Raw Deer Meat                | deermeat.raw             |
 | -778796102    | Door Closer                  | door.closer              |
 | -1598790097   | Sheet Metal Double Door      | door.double.hinged.metal |
 | -933236257    | Armored Double Door          | door.double.hinged.toptier|
@@ -134,11 +137,6 @@
 | -450738836    | Miners Hat                   | hat.miner                |
 | 124310981     | Wolf Headdress               | hat.wolf                 |
 | 698310895     | Hatchet                      | hatchet                  |
-| -1078788046   | Hazmat Boots                 | hazmat.boots             |
-| 1057685737    | Hazmat Gloves                | hazmat.gloves            |
-| 1079752220    | Hazmat Helmet                | hazmat.helmet            |
-| 1133046397    | Hazmat Jacket                | hazmat.jacket            |
-| -1066276787   | Hazmat Pants                 | hazmat.pants             |
 | 523855532     | Hazmat Suit                  | hazmatsuit               |
 | 1351172108    | Heavy Plate Helmet           | heavy.plate.helmet       |
 | 1404466285    | Heavy Plate Jacket           | heavy.plate.jacket       |
@@ -170,7 +168,7 @@
 | 107868        | Paper Map                    | map                      |
 | 997973965     | Improvised Balaclava         | mask.balaclava           |
 | -46188931     | Bandana Mask                 | mask.bandana             |
-| -253819519    | Pork                         | meat.boar                |
+| -253819519    | Raw Pork                     | meat.boar                |
 | 968732481     | Burned Pork                  | meat.pork.burned         |
 | 991728250     | Cooked Pork                  | meat.pork.cooked         |
 | -46848560     | Metal Facemask               | metal.facemask           |
@@ -323,6 +321,7 @@
 | 179448791     | Raw Wolf Meat                | wolfmeat.raw             |
 | 431617507     | Spoiled Wolf Meat            | wolfmeat.spoiled         |
 | 3655341       | Wood                         | wood                     |
+| 1501403549    | Wood Armor Helmet            | wood.armor.helmet        |
 | 1554697726    | Wood Chestplate              | wood.armor.jacket        |
 | -1883959124   | Wood Armor Pants             | wood.armor.pants         |
 | -1732316031   | Large Present                | xmas.present.large       |
