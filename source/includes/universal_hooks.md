@@ -4,7 +4,6 @@
 
 [![7 Days to Die](7-days-to-die/favicon-32x32.png)](/7-days-to-die/)
 [![Blockstorm](blockstorm/favicon-32x32.png)](/blockstorm/)
-[![Hide & Hold Out](hide-hold-out/favicon-32x32.png)](/hide-hold-out/)
 [![Hurtworld](hurtworld/favicon-32x32.png)](/hurtworld/)
 [![Reign of Kings](reign-of-kings/favicon-32x32.png)](/reign-of-kings/)
 [![Rust](rust/favicon-32x32.png)](/rust/)
