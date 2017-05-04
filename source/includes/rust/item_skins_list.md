@@ -13,6 +13,7 @@
 |--------------|-----------------------------------|
 | 869475498    | Clockwork Portal                  |
 | 804286931    | Corroded Bronze Door              |
+| 911652483    | Green Armored Container Door      |
 | 801889927    | High Voltage                      |
 | 801937986    | Incarceration Armored Door        |
 | 801831553    | Laboratory Armored Door           |
@@ -32,6 +33,8 @@
 | 840477492    | Crimson King                      |
 | 885146172    | Dark Flames                       |
 | 10135        | Digital Camo AK47                 |
+| 889710179    | Glory AK47                        |
+| 908297014    | Lonewolf AK47 - Blue              |
 | 10137        | Military Camo AK47                |
 | 895307805    | Retro Car Parts AK47              |
 | 654502185    | Rustpunk AK47                     |
@@ -63,6 +66,7 @@
 | 10028        | Red Cap                           |
 | 10045        | Rescue Cap                        |
 | 890772638    | Toothy Hat                        |
+| 893188334    | Top Cap                           |
 
 ## Beenie Hat (hat.beenie)
 | Skin Id      | Skin name                         |
@@ -104,6 +108,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 808955868    | Etched Edge Bone Knife            |
+| 909612594    | Paititi Bone Knife                |
 
 ## Boonie Hat (hat.boonie)
 | Skin Id      | Skin name                         |
@@ -161,6 +166,7 @@
 ## Burlap Shoes (burlap.shoes)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 906443871    | Broken Ankles Cast                |
 | 790679533    | Burlap Ninja Slippers             |
 
 ## Burlap Trousers (burlap.trousers)
@@ -212,6 +218,7 @@
 | 816728172    | Firestarter Custom SMG            |
 | 897099822    | Hailstorm SMG                     |
 | 892212957    | Hunter SMG                        |
+| 904964438    | Looter's SMG                      |
 | 854914986    | Tank SMG                          |
 | 822943156    | tRUSTy Friend                     |
 
@@ -258,6 +265,7 @@
 | 814630559    | Firefighter Hatchet               |
 | 824552943    | Golden Axe                        |
 | 816715928    | Military Hatchet                  |
+| 910196839    | Red Chopper                       |
 | 826402867    | Veteran Hatchet                   |
 | 814713259    | Vikings Tomahawk                  |
 | 825033005    | Vintage Hatchet                   |
@@ -301,6 +309,7 @@
 ## Hoodie (hoodie)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 897890977    | Army Armored Hoodie               |
 | 10142        | BCHILLZ! Hoodie                   |
 | 14179        | Black Hoodie                      |
 | 10052        | Bloody Hoodie                     |
@@ -325,6 +334,7 @@
 | 539536877    | Burlap Brains Balaclava           |
 | 10069        | Desert Camo Balaclava             |
 | 10071        | Double Yellow Balaclava           |
+| 884484239    | Executioner Latex                 |
 | 10068        | Forest Camo Balaclava             |
 | 813561728    | Knitted Balaclava                 |
 | 858156568    | Meat Mask                         |
@@ -368,8 +378,10 @@
 | 798455489    | Explosives Box                    |
 | 10123        | First Aid Green                   |
 | 882223700    | First Aid Large Box               |
+| 809975811    | Food Box Large                    |
 | 10141        | Gun Box                           |
 | 797422750    | Large Stone Box                   |
+| 904962497    | Long Hauler's Trunk               |
 | 851053322    | Medieval Box                      |
 | 842083350    | Military Crate                    |
 | 878850459    | Recyclables Box                   |
@@ -384,6 +396,7 @@
 | 816473273    | Black Alligator                   |
 | 10128        | Boxer's Bandages                  |
 | 883476299    | Bruiser Gloves                    |
+| 904961862    | Caravanner Gloves                 |
 | 661317919    | Duelist Gloves                    |
 | 610098458    | Motorcycle Gloves                 |
 
@@ -462,6 +475,7 @@
 | 895067146    | Looter's Mask                     |
 | 828888629    | Machina Mask                      |
 | 841012325    | Mask of Sacrifice                 |
+| 900645045    | Mosaic Mask                       |
 | 803894027    | Punishment Mask                   |
 | 792905158    | Rusted Smile                      |
 | 792827436    | Sacrificial Mask                  |
@@ -481,6 +495,7 @@
 ## MP5A4 (smg.mp5)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 904404578    | Dead Fish MP5                     |
 | 796679172    | Digital Camo MP5                  |
 | 833639834    | Elite Mp5                         |
 | 796687275    | Military Camo MP5                 |
@@ -492,8 +507,10 @@
 ## Pants (pants)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 888360095    | Army Armored Pants                |
 | 10001        | Blue Jeans                        |
 | 10049        | Blue Track Pants                  |
+| 909888619    | Caravanner Pants                  |
 | 889714798    | Desert Conqueror Pants            |
 | 10019        | Forest Camo Pants                 |
 | 10078        | Old Prisoner Pants                |
@@ -506,6 +523,7 @@
 ## Pick Axe (pickaxe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 904296143    | Ancient Artifact Pick Axe         |
 | 828884658    | Gold Digger                       |
 | 859743520    | Military Pick Axe                 |
 | 832799172    | Rescue Pick Axe                   |
@@ -531,6 +549,7 @@
 ## Revolver (pistol.revolver)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 910665268    | Bandito Revolver                  |
 | 855087726    | Defender                          |
 | 815532676    | Eightball                         |
 | 873242795    | Frostbitten Revolver              |
@@ -546,6 +565,7 @@
 | 869125904    | Biker Goth Helmet                 |
 | 849872204    | Born To Loot                      |
 | 801095823    | Captain's Helmet                  |
+| 911015530    | Digger Helmet                     |
 | 887283623    | Hardline Helmet                   |
 | 869709888    | Ruthless Riot Helmet              |
 
@@ -593,6 +613,7 @@
 ## Rug (rug)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 907327964    | Rubber Hazard Mat                 |
 | 871072156    | Soviet Carpet                     |
 | 870851438    | Tailor`s Carpet                   |
 
@@ -604,6 +625,7 @@
 ## Salvaged Icepick (icepick.salvaged)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 911446362    | Dark Arts Icepick                 |
 | 820810719    | Inferno Hazard Salvaged Icepick   |
 | 844666224    | Lavapick                          |
 | 843454856    | Runic Ice Pick                    |
@@ -624,6 +646,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 855256664    | Bad News                          |
+| 908893157    | BadaBoom Satchel Charge           |
 | 860156815    | Box O Love                        |
 | 856333895    | Close Enough                      |
 | 855084816    | Military Satchel Charge           |
@@ -636,6 +659,7 @@
 | 876007573    | Chrome SAP                        |
 | 10087        | Contamination Pistol              |
 | 863443112    | Desert Hunter                     |
+| 904356033    | Fight Like a Girl                 |
 | 893118140    | Fire Walk SAP                     |
 | 805925675    | Golden Leaf SAP                   |
 | 10108        | Halloween Bat                     |
@@ -664,6 +688,7 @@
 ## Sheet Metal Door (door.hinged.metal)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 901194793    | Ambulance Door                    |
 | 836815358    | Army Metal Door                   |
 | 827190175    | Doomsday Door                     |
 | 849614068    | Hazard Metal Door                 |
@@ -697,6 +722,7 @@
 |--------------|-----------------------------------|
 | 10121        | Aston Christmas                   |
 | 10037        | Blue Plaid Sleeping Bag           |
+| 909889024    | Caravanner Bedroll                |
 | 10119        | Christmas Bag                     |
 | 809186722    | Christmas Holiday Bag             |
 | 539536110    | Freshly Dug Grave                 |
@@ -735,6 +761,7 @@
 |--------------|-----------------------------------|
 | 875258582    | Antique Dining Table              |
 | 872346354    | Off The Grid                      |
+| 909129983    | Parquet Table                     |
 
 ## Tank Top (shirt.tanktop)
 | Skin Id      | Skin name                         |
@@ -792,6 +819,8 @@
 ## Waterpipe Shotgun (shotgun.waterpipe)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 907070012    | Hot Topic Waterpipe Shotgun       |
+| 912464069    | Riveted Pipe Shotgun              |
 | 819137470    | Rustpunk Scattergun               |
 | 661319648    | RustPunk Waterpipe Shotgun        |
 | 10143        | The Peace Pipe                    |

@@ -216,6 +216,7 @@
 | -1775234707   | Salvaged Cleaver             | salvaged.cleaver         |
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 2007564590    | Santa Hat                    | santahat                 |
+| 109266897     | Scrap                        | scrap                    |
 | -527558546    | Search Light                 | searchlight              |
 | 583366917     | Corn Seed                    | seed.corn                |
 | 583506109     | Hemp Seed                    | seed.hemp                |
