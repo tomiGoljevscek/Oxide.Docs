@@ -165,6 +165,7 @@
 | 28178745      | Low Grade Fuel               | lowgradefuel             |
 | 3343606       | Mace                         | mace                     |
 | 825308669     | Machete                      | machete                  |
+| 830965940     | Mail Box                     | mailbox                  |
 | 107868        | Paper Map                    | map                      |
 | 997973965     | Improvised Balaclava         | mask.balaclava           |
 | -46188931     | Bandana Mask                 | mask.bandana             |

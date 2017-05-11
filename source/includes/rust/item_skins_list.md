@@ -33,9 +33,11 @@
 | 840477492    | Crimson King                      |
 | 885146172    | Dark Flames                       |
 | 10135        | Digital Camo AK47                 |
+| 920472848    | Doombringer AK47                  |
 | 889710179    | Glory AK47                        |
 | 908297014    | Lonewolf AK47 - Blue              |
 | 10137        | Military Camo AK47                |
+| 911726740    | Rabble Rouser AK47                |
 | 895307805    | Retro Car Parts AK47              |
 | 654502185    | Rustpunk AK47                     |
 | 10138        | Tempered AK47                     |
@@ -50,6 +52,7 @@
 | 10066        | Desert Camo Bandana               |
 | 10063        | Forest Camo Bandana               |
 | 10059        | Green Bandana                     |
+| 903595865    | Jawboy                            |
 | 10065        | Red Skull Bandana                 |
 | 10064        | Skull Bandana                     |
 | 10062        | Snow Camo Bandana                 |
@@ -128,6 +131,7 @@
 | 10088        | Bloody Boots                      |
 | 899942107    | Caravanner Boots                  |
 | 838205144    | Combat Boots                      |
+| 919261524    | Explorer Boots                    |
 | 784559403    | Hazard Move Boots                 |
 | 10034        | Punk Boots                        |
 | 613481881    | Rock Star Boots                   |
@@ -172,6 +176,7 @@
 ## Burlap Trousers (burlap.trousers)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 921250017    | Desert Outlaw Burlap Pants        |
 | 809968188    | Recycled Tarp Pants               |
 
 ## Chair (chair)
@@ -186,6 +191,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 848645884    | Apocalypse Helmet                 |
+| 914060966    | Army Armored Helmet               |
 | 843676357    | Lizard Skull                      |
 | 806212029    | Rusty Coffee Can Helmet           |
 | 784910461    | Skull Hazard                      |
@@ -203,6 +209,7 @@
 ## Crossbow (crossbow)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 915855989    | Ancient Artifact Crossbow         |
 | 874268567    | Chrome Crossbow                   |
 | 883141682    | Doomwing Crossbow                 |
 | 818070371    | Engraved Crossbow                 |
@@ -225,6 +232,7 @@
 ## Double Barrel Shotgun (shotgun.double)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 916790605    | Aircraft Parts DBS                |
 | 865019380    | Bespoke DBS                       |
 | 854987948    | Heat Double Shotgun               |
 | 860153737    | Industrial DBS                    |
@@ -236,6 +244,7 @@
 | 856053892    | Banana Eoka                       |
 | 898387222    | Birch Eoka                        |
 | 856225258    | Flintlock                         |
+| 920310954    | Nordic Relic                      |
 | 857750032    | Primal Gun                        |
 
 ## F1 Grenade (grenade.f1)
@@ -264,6 +273,7 @@
 | 892263562    | Ancient Artifact Hatchet          |
 | 814630559    | Firefighter Hatchet               |
 | 824552943    | Golden Axe                        |
+| 915910717    | Iron Wing                         |
 | 816715928    | Military Hatchet                  |
 | 910196839    | Red Chopper                       |
 | 826402867    | Veteran Hatchet                   |
@@ -318,8 +328,10 @@
 | 889718910    | Desert Conqueror Hoodie           |
 | 14072        | Green Hoodie                      |
 | 895065994    | Leather Strapped Hoodie           |
+| 914621940    | Looter's Hoodie                   |
 | 797128321    | Official Vertiigo Hoodie          |
 | 661319427    | Ranger's Vest                     |
+| 919353761    | Regulator's Hoodie                |
 | 10132        | Rhinocrunch Hoodie                |
 | 10129        | Safety Crew                       |
 | 835836079    | Scudpunk Hoodie                   |
@@ -466,6 +478,7 @@
 | 835026584    | Bronze War Mask                   |
 | 831923884    | Carbon Facemask                   |
 | 792079554    | Death Facemask                    |
+| 915572534    | Flesh Facemask                    |
 | 807821375    | Frostbite                         |
 | 794837198    | Glowing Skull                     |
 | 812933296    | Human Sacrifice Mask              |
@@ -480,6 +493,7 @@
 | 792905158    | Rusted Smile                      |
 | 792827436    | Sacrificial Mask                  |
 | 896211631    | Scavenger Facemask                |
+| 907176719    | Scrapyard Curse                   |
 | 824898622    | Stainless Facemask                |
 | 816530945    | Steampunk Leather Mask            |
 | 800980236    | Tempered Mask                     |
@@ -499,10 +513,12 @@
 | 796679172    | Digital Camo MP5                  |
 | 833639834    | Elite Mp5                         |
 | 796687275    | Military Camo MP5                 |
+| 911612956    | Nomad MP5                         |
 | 808554348    | Polymer MP5                       |
 | 892100306    | Spitfire MP5                      |
 | 853438134    | Tank MP5                          |
 | 800974015    | Tempered Mp5                      |
+| 914624163    | Urban Camo MP5                    |
 
 ## Pants (pants)
 | Skin Id      | Skin name                         |
@@ -535,6 +551,7 @@
 | 10074        | Chieftain Pump Shotgun            |
 | 813631833    | Native Gold                       |
 | 813628651    | Native Yellow                     |
+| 921253888    | Polymer Pump Shotgun              |
 | 850130444    | Tank Pump Shotgun                 |
 | 849997025    | The Billy Baroo                   |
 | 10140        | The Swampmaster                   |
@@ -557,6 +574,7 @@
 | 809822151    | Hot-tempered Revolver             |
 | 10114        | Outback revolver                  |
 | 809897611    | Outlaw Revolver                   |
+| 911828654    | Patriot Revolver                  |
 | 887846629    | Western Revolver Gold             |
 
 ## Riot Helmet (riot.helmet)
@@ -655,6 +673,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 902487409    | Aircraft Parts SAP                |
+| 919535259    | Armageddon SAP                    |
 | 883156158    | Base Invaders SAP                 |
 | 876007573    | Chrome SAP                        |
 | 10087        | Contamination Pistol              |
@@ -683,6 +702,7 @@
 | 900921542    | Fire Starter SAR                  |
 | 840023839    | Hazard Semi Auto Rifle            |
 | 875259741    | Sublime SAR                       |
+| 899564368    | To Hell And Back                  |
 | 818613234    | Workbench SAR                     |
 
 ## Sheet Metal Door (door.hinged.metal)
@@ -691,7 +711,10 @@
 | 901194793    | Ambulance Door                    |
 | 836815358    | Army Metal Door                   |
 | 827190175    | Doomsday Door                     |
+| 915684869    | Fire Truck Door                   |
 | 849614068    | Hazard Metal Door                 |
+| 917719889    | Laboratory Door                   |
+| 921076360    | Locomotive Door                   |
 | 832957536    | Metal Shutter Door                |
 | 859864870    | Prison Door                       |
 | 835119969    | Recycled Garage Door              |
@@ -728,6 +751,7 @@
 | 539536110    | Freshly Dug Grave                 |
 | 10107        | Horror Bag                        |
 | 795398514    | Jungle Camo Sleeping Bag          |
+| 919353105    | Ranger Bedroll                    |
 | 834487561    | Red Survival Sleeping Bag         |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 10076        | Wood Camo Sleeping Bag            |
@@ -737,6 +761,7 @@
 |--------------|-----------------------------------|
 | 530154777    | 60's Army Jacket                  |
 | 10113        | Black                             |
+| 913227043    | Fireman's Jacket                  |
 | 530159711    | Salvaged Shirt, Coat and Tie      |
 | 839466039    | Telogreika Jacket                 |
 | 10112        | Woodland                          |
@@ -747,6 +772,7 @@
 | 887663210    | Chieftain Stone Hatchet           |
 | 797445687    | Ice Tooth                         |
 | 854688691    | Large Fruit Pit Hatchet           |
+| 912599650    | Soul Reaper Stone Hatchet         |
 | 878257758    | Volcanic Stone Hatchet            |
 
 ## Stone Pick Axe (stone.pickaxe)
