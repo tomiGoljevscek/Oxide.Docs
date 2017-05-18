@@ -128,6 +128,7 @@
 | 384204160     | Beancan Grenade              | grenade.beancan          |
 | -1308622549   | F1 Grenade                   | grenade.f1               |
 | -1580059655   | Gun Powder                   | gunpowder                |
+| 378365037     | Shotgun Trap                 | guntrap                  |
 | -1224598842   | Hammer                       | hammer                   |
 | -1976561211   | Salvaged Hammer              | hammer.salvaged          |
 | -1406876421   | Beenie Hat                   | hat.beenie               |
