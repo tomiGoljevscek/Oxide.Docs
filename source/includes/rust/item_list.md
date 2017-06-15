@@ -100,6 +100,7 @@
 | -1571725662   | Armored Door                 | door.hinged.toptier      |
 | 1456441506    | Wooden Door                  | door.hinged.wood         |
 | 1200628767    | Door Key                     | door.key                 |
+| 1925723260    | Drop Box                     | dropbox                  |
 | 1891056868    | Duct Tape                    | ducttape                 |
 | 1295154089    | Satchel Charge               | explosive.satchel        |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |

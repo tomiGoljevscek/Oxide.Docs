@@ -38,6 +38,8 @@
 | 10135        | Digital Camo AK47                 |
 | 920472848    | Doombringer AK47                  |
 | 928950425    | Epidemic AK47                     |
+| 940035827    | Fate Destroyer                    |
+| 903882218    | Frost Wolf                        |
 | 889710179    | Glory AK47                        |
 | 908297014    | Lonewolf AK47 - Blue              |
 | 10137        | Military Camo AK47                |
@@ -94,6 +96,7 @@
 | 10117        | Dreamcatcher                      |
 | 10115        | Ghost Bolt Rifle                  |
 | 875259050    | Great War Service Rifle           |
+| 943036098    | Hunter's Bolt                     |
 | 840105253    | Polymer BAR                       |
 | 819149392    | Rustpunk Rifle                    |
 | 10116        | Tundra Bolt Rifle                 |
@@ -103,6 +106,7 @@
 |--------------|-----------------------------------|
 | 791109245    | Little Friend                     |
 | 888839261    | Maracas Bone Club                 |
+| 945026868    | Sacrificial Club                  |
 
 ## Bone Helmet (deer.skull.mask)
 | Skin Id      | Skin name                         |
@@ -116,6 +120,7 @@
 |--------------|-----------------------------------|
 | 808955868    | Etched Edge Bone Knife            |
 | 909612594    | Paititi Bone Knife                |
+| 945031477    | Sacrificial Knife                 |
 | 933322251    | Studded Bone Knife                |
 
 ## Boonie Hat (hat.boonie)
@@ -145,6 +150,7 @@
 | 10044        | Scavenged Sneaker Boots           |
 | 809586899    | Tactical Boots                    |
 | 10022        | Tan Boots                         |
+| 944997041    | Yellow Race Boots                 |
 
 ## Bucket Helmet (bucket.helmet)
 | Skin Id      | Skin name                         |
@@ -202,6 +208,7 @@
 | 848645884    | Apocalypse Helmet                 |
 | 914060966    | Army Armored Helmet               |
 | 843676357    | Lizard Skull                      |
+| 891592450    | Nordic Beast Helmet               |
 | 806212029    | Rusty Coffee Can Helmet           |
 | 784910461    | Skull Hazard                      |
 | 814098474    | Spare Parts                       |
@@ -215,6 +222,7 @@
 | 828182621    | Metal Barricade                   |
 | 846663258    | Military Barricade                |
 | 924112225    | Outpost Concrete Barricade        |
+| 939333522    | Railway Barricade                 |
 | 791070521    | Road Barrier                      |
 
 ## Crossbow (crossbow)
@@ -264,6 +272,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 836745325    | Fire and Brimstone Grenade        |
+| 936182773    | Smile Grenade                     |
 | 815252048    | Voodoo Grenade                    |
 
 ## Fridge (fridge)
@@ -277,6 +286,7 @@
 ## Hammer (hammer)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 938806184    | Builders Guild Hammer             |
 | 833423263    | Scorched Hammer                   |
 | 822539548    | Welded Hammer                     |
 
@@ -286,9 +296,10 @@
 | 892263562    | Ancient Artifact Hatchet          |
 | 814630559    | Firefighter Hatchet               |
 | 824552943    | Golden Axe                        |
-| 924242197    | Iron Jaws                         |
+| 924242197    | Iron Jaws Hatchet                 |
 | 915910717    | Iron Wing                         |
 | 816715928    | Military Hatchet                  |
+| 944497252    | Ornate Axe                        |
 | 910196839    | Red Chopper                       |
 | 912857899    | Replacement Blade Hatchet         |
 | 928879549    | Sunrise Hatchet                   |
@@ -341,10 +352,12 @@
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
 | 10133        | Cuda87 Hoodie                     |
+| 904963081    | Denim Studded Hoodie              |
 | 889718910    | Desert Conqueror Hoodie           |
 | 14072        | Green Hoodie                      |
 | 895065994    | Leather Strapped Hoodie           |
 | 914621940    | Looter's Hoodie                   |
+| 939604165    | Nordic Beast Hoodie               |
 | 797128321    | Official Vertiigo Hoodie          |
 | 661319427    | Ranger's Vest                     |
 | 919353761    | Regulator's Hoodie                |
@@ -354,6 +367,7 @@
 | 10086        | Skeleton Hoodie                   |
 | 677636990    | Tank Crew Hoodie                  |
 | 803249256    | Unknown Territory Hoodie          |
+| 941172099    | Yellow Police Jacket              |
 | 926162531    | Yellow Racer Hoodie               |
 
 ## Improvised Balaclava (mask.balaclava)
@@ -414,6 +428,7 @@
 | 851053322    | Medieval Box                      |
 | 928502682    | Metropolitan Trunk                |
 | 842083350    | Military Crate                    |
+| 942917320    | Mini Nuke Case                    |
 | 932160919    | Padded Armor Trunk                |
 | 878850459    | Recyclables Box                   |
 | 881249489    | Royal Wooden Box                  |
@@ -477,6 +492,7 @@
 | 796728308    | Flak Vest - Green                 |
 | 794169855    | Forest Camo Chest Plate           |
 | 823132085    | Hazardous Grater Chest Plate      |
+| 944835223    | Hornet Chestplate                 |
 | 895066686    | Looter's Chain and Plate          |
 | 828888000    | Machina Plate                     |
 | 817022417    | Metal Barrel Chest Plate          |
@@ -511,6 +527,7 @@
 | 841012325    | Mask of Sacrifice                 |
 | 924019464    | Metalmute Facemask                |
 | 900645045    | Mosaic Mask                       |
+| 943128194    | Overlord Mask                     |
 | 803894027    | Punishment Mask                   |
 | 792905158    | Rusted Smile                      |
 | 792827436    | Sacrificial Mask                  |
@@ -552,6 +569,7 @@
 | 909888619    | Caravanner Pants                  |
 | 889714798    | Desert Conqueror Pants            |
 | 10019        | Forest Camo Pants                 |
+| 939586076    | Nordic Beast Pants                |
 | 10078        | Old Prisoner Pants                |
 | 823154911    | One Percenter Chaps               |
 | 10048        | Punk Rock Pants                   |
@@ -593,6 +611,7 @@
 | 910665268    | Bandito Revolver                  |
 | 855087726    | Defender                          |
 | 815532676    | Eightball                         |
+| 937338314    | Firefighter Revolver              |
 | 873242795    | Frostbitten Revolver              |
 | 809865395    | Handmade Revolver                 |
 | 809822151    | Hot-tempered Revolver             |
@@ -609,10 +628,12 @@
 | 930923611    | Blast Shield Helmet               |
 | 849872204    | Born To Loot                      |
 | 801095823    | Captain's Helmet                  |
+| 937863435    | Checkpoint Riot Helmet            |
 | 911015530    | Digger Helmet                     |
 | 887283623    | Hardline Helmet                   |
-| 920983864   | Medical Riot Helmet               |
+| 920983864    | Medical Riot Helmet               |
 | 869709888    | Ruthless Riot Helmet              |
+| 930563894    | Yellow Racer Helmet               |
 
 ## Road Sign Jacket (roadsign.jacket)
 | Skin Id      | Skin name                         |
@@ -620,6 +641,7 @@
 | 865659101    | Army Sign Vest                    |
 | 801873550    | British Sign Vest                 |
 | 818611894    | Chopshop Body Armor               |
+| 944577714    | Epidemic Roadsign Vest            |
 | 784581113    | Hazard Protection Vest            |
 | 879861502    | Junker's Vest                     |
 | 934744263    | Junkyard Samurai Vest             |
@@ -633,6 +655,7 @@
 | 865679836    | Army Sign Kilt                    |
 | 801837047    | British Sign Pants                |
 | 818612271    | Chopshop Kilt                     |
+| 944586866    | Epidemic Roadsign Pants           |
 | 784577443    | Hazard Cover Pants                |
 | 879861153    | Junker's Kilt                     |
 | 934742835    | Junkyard Samurai Pants            |
@@ -657,6 +680,7 @@
 |--------------|-----------------------------------|
 | 879708939    | Aircraft Parts RL                 |
 | 813795591    | Army Surplus Rocket Launcher      |
+| 894679426    | Beans Cannon                      |
 | 875930670    | Hot Topic                         |
 | 853494512    | KNOCK KNOCK                       |
 | 926279011    | Surge Rocket Launcher             |
@@ -687,7 +711,7 @@
 |--------------|-----------------------------------|
 | 828885909    | Metal Roses Short Sword           |
 | 893871715    | Roadsign Sword                    |
-| 930557072    | Trained to Kill                   |
+| 930557072    | Trained To Kill                   |
 | 825240467    | Wooden Sword                      |
 
 ## Sandbag Barricade (barricade.sandbags)
@@ -715,6 +739,7 @@
 | 876007573    | Chrome SAP                        |
 | 10087        | Contamination Pistol              |
 | 863443112    | Desert Hunter                     |
+| 910681058    | Direct Threat SAP                 |
 | 904356033    | Fight Like a Girl                 |
 | 893118140    | Fire Walk SAP                     |
 | 805925675    | Golden Leaf SAP                   |
@@ -728,8 +753,10 @@
 | 868298519    | Poseidon Semi Auto Pistol         |
 | 10081        | Reaper Note Pistol                |
 | 10073        | Red Shine Pistol                  |
+| 908722214    | Retro Car Parts SAP               |
 | 827533196    | Salt Shaker SAP                   |
 | 829983759    | Tehno Pistol                      |
+| 935205778    | Yellow Racer SAP                  |
 
 ## Semi-Automatic Rifle (rifle.semiauto)
 | Skin Id      | Skin name                         |
@@ -739,6 +766,7 @@
 | 900921542    | Fire Starter SAR                  |
 | 922119054    | Forgotten Warfare SAR             |
 | 840023839    | Hazard Semi Auto Rifle            |
+| 942919370    | Meridian SAR                      |
 | 875259741    | Sublime SAR                       |
 | 899564368    | To Hell And Back                  |
 | 818613234    | Workbench SAR                     |
@@ -750,7 +778,9 @@
 | 836815358    | Army Metal Door                   |
 | 827190175    | Doomsday Door                     |
 | 915684869    | Fire Truck Door                   |
+| 942658960    | Grey Fire Door                    |
 | 849614068    | Hazard Metal Door                 |
+| 928503162    | Jeweler's Security Door           |
 | 917719889    | Laboratory Door                   |
 | 921076360    | Locomotive Door                   |
 | 832957536    | Metal Shutter Door                |
@@ -795,6 +825,7 @@
 | 919353105    | Ranger Bedroll                    |
 | 834487561    | Red Survival Sleeping Bag         |
 | 10077        | Tiger Crown Sleeping Bag          |
+| 944993672    | Undead Bedroll                    |
 | 10076        | Wood Camo Sleeping Bag            |
 
 ## Snow Jacket - Red (jacket.snow)
