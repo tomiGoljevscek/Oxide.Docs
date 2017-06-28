@@ -27,7 +27,7 @@ void CanNetworkTo(BaseNetworkable entity, BasePlayer target)
 ## CanNpcAttack
 
 ``` csharp
-void CanNpcAttack(BaseNPC npc, BaseEntity target)
+void CanNpcAttack(BaseNpc npc, BaseEntity target)
 {
     Puts("CanNpcAttack works!");
 }
@@ -39,7 +39,7 @@ void CanNpcAttack(BaseNPC npc, BaseEntity target)
 ## CanNpcEat
 
 ``` csharp
-void CanNpcEat(BaseNPC npc, BaseCombatEntity target)
+void CanNpcEat(BaseNpc npc, BaseCombatEntity target)
 {
     Puts("CanNpcEat works!");
 }
