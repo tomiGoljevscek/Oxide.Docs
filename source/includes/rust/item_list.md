@@ -37,9 +37,9 @@
 | -814689390    | Wooden Barricade             | barricade.wood           |
 | 1024486167    | Barbed Wooden Barricade      | barricade.woodwire       |
 | 2021568998    | Battery - Small              | battery.small            |
-| 1325935999    | Bear Meat                    | bearmeat                 |
+| 1325935999    | Raw Bear Meat                | bearmeat                 |
 | -2066726403   | Burnt Bear Meat              | bearmeat.burned          |
-| -2043730634   | Bear Meat Cooked             | bearmeat.cooked          |
+| -2043730634   |  Cooked Bear Meat            | bearmeat.cooked          |
 | 97409         | Bed                          | bed                      |
 | 1611480185    | Black Raspberries            | black.raspberries        |
 | -1386464949   | Bleach                       | bleach                   |
@@ -73,8 +73,8 @@
 | -2095387015   | Ceiling Light                | ceilinglight             |
 | 94623429      | Chair                        | chair                    |
 | 1436001773    | Charcoal                     | charcoal                 |
-| 1711323399    | Burned Chicken               | chicken.burned           |
-| 1734319168    | Cooked Chicken.              | chicken.cooked           |
+| 1711323399    | Burnt Chicken                | chicken.burned           |
+| 1734319168    | Cooked Chicken               | chicken.cooked           |
 | -1658459025   | Raw Chicken Breast           | chicken.raw              |
 | -726947205    | Spoiled Chicken              | chicken.spoiled          |
 | -341443994    | Chocolate Bar                | chocholate               |
@@ -89,7 +89,7 @@
 | 1983936587    | Crude Oil                    | crude.oil                |
 | 1257201758    | Tool Cupboard                | cupboard.tool            |
 | -1178289187   | Bone Helmet                  | deer.skull.mask          |
-| -225234813    | Burned Deer Meat             | deermeat.burned          |
+| -225234813    | Burnt Deer Meat              | deermeat.burned          |
 | -202239044    | Cooked Deer Meat             | deermeat.cooked          |
 | -322501005    | Raw Deer Meat                | deermeat.raw             |
 | -778796102    | Door Closer                  | door.closer              |
@@ -114,7 +114,7 @@
 | 1045869440    | Flame Thrower                | flamethrower             |
 | 1985408483    | Flame Turret                 | flameturret              |
 | 97513422      | Flare                        | flare                    |
-| -1722829188   | A floor grill                | floor.grill              |
+| -1722829188   | Floor grill                  | floor.grill              |
 | 1849912854    | Ladder Hatch                 | floor.ladder.hatch       |
 | -1266285051   | Fridge                       | fridge                   |
 | -217113639    | Acoustic Guitar              | fun.guitar               |
@@ -145,7 +145,7 @@
 | -1334615971   | Heavy Plate Pants            | heavy.plate.pants        |
 | -1211618504   | Hoodie                       | hoodie                   |
 | 2133577942    | High Quality Metal Ore       | hq.metal.ore             |
-| -1014825244   | Burned Human Meat            | humanmeat.burned         |
+| -1014825244   | Burnt Human Meat             | humanmeat.burned         |
 | -991829475    | Cooked Human Meat            | humanmeat.cooked         |
 | -642008142    | Raw Human Meat               | humanmeat.raw            |
 | 661790782     | Spoiled Human Meat           | humanmeat.spoiled        |
@@ -161,7 +161,7 @@
 | 50834473      | Leather                      | leather                  |
 | 193190034     | M249                         | lmg.m249                 |
 | -975723312    | Code Lock                    | lock.code                |
-| 1908195100    | Lock                         | lock.key                 |
+| 1908195100    | Key Lock                     | lock.key                 |
 | -1097452776   | Locker                       | locker                   |
 | 146685185     | Longsword                    | longsword                |
 | 28178745      | Low Grade Fuel               | lowgradefuel             |
@@ -172,7 +172,7 @@
 | 997973965     | Improvised Balaclava         | mask.balaclava           |
 | -46188931     | Bandana Mask                 | mask.bandana             |
 | -253819519    | Raw Pork                     | meat.boar                |
-| 968732481     | Burned Pork                  | meat.pork.burned         |
+| 968732481     | Burnt Pork                   | meat.pork.burned         |
 | 991728250     | Cooked Pork                  | meat.pork.cooked         |
 | -46848560     | Metal Facemask               | metal.facemask           |
 | 688032252     | Metal Fragments              | metal.fragments          |
@@ -189,7 +189,7 @@
 | 106433500     | Pants                        | pants                    |
 | -459156023    | Shorts                       | pants.shorts             |
 | 106434956     | Paper                        | paper                    |
-| -578028723    | Pick Axe                     | pickaxe                  |
+| -578028723    | Pickaxe                      | pickaxe                  |
 | -1379225193   | Eoka Pistol                  | pistol.eoka              |
 | 371156815     | M92 Pistol                   | pistol.m92               |
 | 2033918259    | Python Revolver              | pistol.python            |
@@ -271,7 +271,7 @@
 | -892259869    | Sticks                       | sticks                   |
 | -1623330855   | SUPER Stocking               | stocking.large           |
 | -1616524891   | Small Stocking               | stocking.small           |
-| 789892804     | Stone Pick Axe               | stone.pickaxe            |
+| 789892804     | Stone Pickaxe                | stone.pickaxe            |
 | -1289478934   | Stone Hatchet                | stonehatchet             |
 | -892070738    | Stones                       | stones                   |
 | -891243783    | Sulfur                       | sulfur                   |
@@ -312,7 +312,7 @@
 | 1840561315    | Water Purifier               | water.purifier           |
 | 1916127949    | Salt Water                   | water.salt               |
 | 547302405     | Water Jug                    | waterjug                 |
-| 1229879204    | Weapon Flashlight            | weapon.mod.flashlight    |
+| 1229879204    | Weapon flashlight            | weapon.mod.flashlight    |
 | -465236267    | Holosight                    | weapon.mod.holosight     |
 | 516382256     | Weapon Lasersight            | weapon.mod.lasersight    |
 | -1569356508   | Muzzle Boost                 | weapon.mod.muzzleboost   |
@@ -320,7 +320,7 @@
 | 1213686767    | Silencer                     | weapon.mod.silencer      |
 | 386382445     | Simple Handmade Sight        | weapon.mod.simplesight   |
 | -141135377    | 4x Zoom Scope                | weapon.mod.small.scope   |
-| -1714986849   | Burned Wolf Meat             | wolfmeat.burned          |
+| -1714986849   | Burnt Wolf Meat              | wolfmeat.burned          |
 | -1691991080   | Cooked Wolf Meat             | wolfmeat.cooked          |
 | 179448791     | Raw Wolf Meat                | wolfmeat.raw             |
 | 431617507     | Spoiled Wolf Meat            | wolfmeat.spoiled         |
