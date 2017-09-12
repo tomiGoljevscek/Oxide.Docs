@@ -16,7 +16,7 @@ bool CanClientLogin(BoltConnection connection)
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(ChatEvent evt)
+void OnPlayerChat(BoltEntity entity, string message)
 {
     Puts("OnPlayerChat works!");
 }
