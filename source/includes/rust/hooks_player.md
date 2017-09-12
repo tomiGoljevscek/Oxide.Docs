@@ -3,31 +3,31 @@
 ## CanAttack
 
 ``` csharp
-void CanAttack(BasePlayer player)
+bool CanAttack(BasePlayer player)
 {
     Puts("CanAttack works!");
 }
 ```
 
  * Called when a player is attempting to perform a melee attack
- * Returning true or falseoverrides default behavior
+ * Returning true or false overrides default behavior
 
 ## CanBeTargeted (autoturret)
 
 ``` csharp
-void CanBeTargeted(BaseCombatEntity player, MonoBehaviour turret)
+bool CanBeTargeted(BaseCombatEntity player, MonoBehaviour behaviour)
 {
     Puts("CanBeTargeted works!");
 }
 ```
 
- * Called when an autoturret, flameturret or helicopterturret is attempting to target the player
- * Returning true overrides default behavior
+ * Called when an autoturret, flame turret, shotgun trap, or helicopter turret is attempting to target the player
+ * Returning true or false overrides default behavior
 
 ## CanBeWounded
 
 ``` csharp
-void CanBeWounded(BasePlayer player, HitInfo info)
+bool CanBeWounded(BasePlayer player, HitInfo info)
 {
     Puts("CanBeWounded works!");
 }
@@ -39,7 +39,7 @@ void CanBeWounded(BasePlayer player, HitInfo info)
 ## CanBypassQueue
 
 ``` csharp
-void CanBypassQueue(Network.Connection connection)
+bool CanBypassQueue(Network.Connection connection)
 {
     Puts("CanBypassQueue works!");
 }
@@ -51,7 +51,7 @@ void CanBypassQueue(Network.Connection connection)
 ## CanCraft
 
 ``` csharp
-void CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
+bool CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
 {
     Puts("CanCraft works!");
 }
@@ -63,7 +63,7 @@ void CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
 ## CanClientLogin
 
 ``` csharp
-void CanClientLogin(Network.Connection connection)
+bool CanClientLogin(Network.Connection connection)
 {
     Puts("CanClientLogin works!");
 }
@@ -76,7 +76,7 @@ void CanClientLogin(Network.Connection connection)
 ## CanEquipItem
 
 ``` csharp
-void CanEquipItem(PlayerInventory inventory, Item item)
+bool CanEquipItem(PlayerInventory inventory, Item item)
 {
     Puts("CanEquipItem works!");
 }
@@ -88,19 +88,19 @@ void CanEquipItem(PlayerInventory inventory, Item item)
 ## CanLootPlayer
 
 ``` csharp
-void CanLootPlayer(BasePlayer target, BasePlayer looter)
+bool CanLootPlayer(BasePlayer target, BasePlayer looter)
 {
     Puts("CanLootPlayer works!");
 }
 ```
 
  * Called when the player attempts to loot another player
- * Returning true overrides default behavior
+ * Returning true or false overrides default behavior
 
 ## CanWearItem
 
 ``` csharp
-void CanWearItem(PlayerInventory inventory, Item item)
+bool CanWearItem(PlayerInventory inventory, Item item)
 {
     Puts("CanWearItem works!");
 }
@@ -197,19 +197,19 @@ void OnPlayerAttack(BasePlayer attacker, HitInfo info)
 ## OnPlayerBanned
 
 ``` csharp
-void OnPlayerBanned(Connection connection, string reason)
+void OnPlayerBanned(string name, string id, string address, string reason)
 {
     Puts("OnPlayerBanned works!");
 }
 ```
 
- * Called when a player is banned
+ * Called when a player is banned (Facepunch, EAC, server ban, etc.)
  * No return behavior
 
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(ConsoleSystem.Arg arg)
+object OnPlayerChat(ConsoleSystem.Arg arg)
 {
     Puts("OnPlayerChat works!");
 }
@@ -234,7 +234,7 @@ void OnPlayerConnected(Network.Message packet)
 ## OnPlayerDie
 
 ``` csharp
-void OnPlayerDie(BasePlayer player, HitInfo info)
+object OnPlayerDie(BasePlayer player, HitInfo info)
 {
     Puts("OnPlayerDie works!");
 }
@@ -259,7 +259,7 @@ void OnPlayerDisconnected(BasePlayer player, string reason)
 ## OnPlayerHealthChange
 
 ``` csharp
-void OnPlayerHealthChange(BasePlayer player, float oldValue, float newValue)
+object OnPlayerHealthChange(BasePlayer player, float oldValue, float newValue)
 {
     Puts("OnPlayerHealthChange works!");
 }
@@ -295,7 +295,7 @@ void OnPlayerInput(BasePlayer player, InputState input)
 ## OnPlayerLand
 
 ``` csharp
-void OnPlayerLand(BasePlayer player, float num)
+object OnPlayerLand(BasePlayer player, float num)
 {
     Puts("OnPlayerLand works!");
 }
@@ -331,7 +331,7 @@ void OnPlayerLootEnd(PlayerLoot inventory)
 ## OnPlayerRecover
 
 ``` csharp
-void OnPlayerRecover(BasePlayer player)
+object OnPlayerRecover(BasePlayer player)
 {
     Puts("OnPlayerRecover works!");
 }
@@ -343,14 +343,14 @@ void OnPlayerRecover(BasePlayer player)
 ## OnPlayerRespawn
 
 ``` csharp
-void OnPlayerRespawn(BasePlayer player)
+object OnPlayerRespawn(BasePlayer player)
 {
     Puts("OnPlayerRespawn works!");
 }
 ```
 
  * Called when the player is attempting to respawn
- * Returning a non-null value overrides the default behavior
+ * Returning a BasePlayer.SpawnPoint (takes a position and rotation) overrides the respawn location
 
 ## OnPlayerRespawned
 
@@ -369,7 +369,7 @@ void OnPlayerRespawned(BasePlayer player)
 ## OnPlayerSleep
 
 ``` csharp
-void OnPlayerSleep(BasePlayer player)
+object OnPlayerSleep(BasePlayer player)
 {
     Puts("OnPlayerSleep works!");
 }
@@ -393,7 +393,7 @@ void OnPlayerSleepEnded(BasePlayer player)
 ## OnPlayerSpawn
 
 ``` csharp
-void OnPlayerSpawn(BasePlayer player)
+object OnPlayerSpawn(BasePlayer player)
 {
     Puts("OnPlayerSpawn works!");
 }
@@ -405,7 +405,7 @@ void OnPlayerSpawn(BasePlayer player)
 ## OnPlayerSpectate
 
 ``` csharp
-void OnPlayerSpectate(BasePlayer player, string spectateFilter)
+object OnPlayerSpectate(BasePlayer player, string spectateFilter)
 {
     Puts("OnPlayerSpectate works!");
 }
@@ -417,7 +417,7 @@ void OnPlayerSpectate(BasePlayer player, string spectateFilter)
 ## OnPlayerSpectateEnd
 
 ``` csharp
-void OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
+object OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
 {
     Puts("OnPlayerSpectateEnd works!");
 }
@@ -429,7 +429,7 @@ void OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
 ## OnPlayerTick
 
 ``` csharp
-void OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
+object OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
 {
     Puts("OnPlayerTick works!");
 }
@@ -437,10 +437,22 @@ void OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
 
  * Returning a non-null value overrides default behavior
 
+## OnPlayerViolation
+
+``` csharp
+object OnPlayerViolation(BasePlayer player, AntiHackType type, float amount)
+{
+    Puts("OnPlayerViolation works!");
+}
+```
+
+ * Called when a player triggers an anti-hack violation
+ * Returning a non-null value overrides default behavior
+
 ## OnPlayerWound
 
 ``` csharp
-void OnPlayerWound(BasePlayer player)
+object OnPlayerWound(BasePlayer player)
 {
     Puts("OnPlayerWound works!");
 }
@@ -452,7 +464,7 @@ void OnPlayerWound(BasePlayer player)
 ## OnRunPlayerMetabolism
 
 ``` csharp
-void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
+object OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 {
     Puts("OnRunPlayerMetabolism works!");
 }
@@ -467,11 +479,11 @@ void OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 ## OnUserApprove
 
 ``` csharp
-void OnUserApprove(Network.Connection connection)
+object OnUserApprove(Network.Connection connection)
 {
     Puts("OnUserApprove works!");
 }
 ```
 
  * Used by RustCore and abstracted into CanClientLogin
- * Returning true overrides default behavior, plugin should call Reject if it does this
+ * Returning a non-null value overrides default behavior, plugin should call Reject if it does this
