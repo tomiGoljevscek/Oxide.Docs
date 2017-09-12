@@ -360,6 +360,17 @@ void OnResourceDepositCreated(ResourceDepositManager.ResourceDeposit deposit)
  * Called when a resource deposit has been created
  * No return behavior
 
+## OnShopCompleteTrade
+``` csharp
+object OnShopCompleteTrade(ShopFront shop, BasePlayer customer)
+{
+    Puts("OnShopCompleteTrade works!");
+}
+```
+
+ * Called when a shopfront trade is complete
+ * Returning a non-null value overrides default behavior
+
 ## OnTurretAuthorize
 
 ``` csharp
