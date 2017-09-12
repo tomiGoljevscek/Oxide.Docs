@@ -277,6 +277,18 @@ object OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
  * Called when a helicopter attempts to target an entity
  * Returning true overrides default behavior
 
+## OnLiftUse
+
+``` csharp
+object OnLiftUse(Lift lift, BasePlayer player)
+{
+    Puts("OnLiftUse works!");
+}
+```
+
+ * Called when a player calls a lift
+ * Returning a non-null value overrides default behavior
+
 ## OnNpcPlayerTarget
 
 ``` csharp
