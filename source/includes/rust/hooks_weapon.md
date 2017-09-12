@@ -3,7 +3,7 @@
 ## OnCreateWorldProjectile
 
 ``` csharp
-void OnCreateWorldProjectile(HitInfo info, Item item)
+object OnCreateWorldProjectile(HitInfo info, Item item)
 {
     Puts("OnCreateWorldProjectile works!");
 }
@@ -47,6 +47,30 @@ void OnMeleeThrown(BasePlayer player, Item item)
 
  * Called when the player throws a melee item (axe, rock, ...)
  * No return behavior
+
+## OnReloadMagazine
+
+``` csharp
+object OnReloadMagazine(BasePlayer player, BaseProjectile projectile)
+{
+    Puts("OnReloadMagazine works!");
+}
+```
+
+ * Called when the player reloads a magazine
+ * Returning a non-null value overrides default behavior
+
+## OnReloadWeapon
+
+``` csharp
+object OnReloadWeapon(BasePlayer player, BaseProjectile projectile)
+{
+    Puts("OnReloadWeapon works!");
+}
+```
+
+ * Called when the player reloads a weapon
+ * Returning a non-null value overrides default behavior
 
 ## OnRocketLaunched
 
