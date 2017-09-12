@@ -3,7 +3,7 @@
 ## OnMessagePlayer
 
 ``` csharp
-void OnMessagePlayer(string message, BasePlayer player)
+object OnMessagePlayer(string message, BasePlayer player)
 {
     Puts("OnMessagePlayer works!");
 }
@@ -24,10 +24,22 @@ void OnNewSave(string filename)
  * Called when a new savefile is created
  * No return behavior
 
+## OnRconCommand
+
+``` csharp
+void OnRconCommand(string ip, string command, string args[])
+{
+    Puts("OnRconCommand works!");
+}
+```
+
+ * Called when an RCON command is run
+ * No return behavior
+
 ## OnRconConnection
 
 ``` csharp
-void OnRconConnection(IPEndPoint ip)
+object OnRconConnection(IPEndPoint ip)
 {
     Puts("OnRconConnection works!");
 }
@@ -39,38 +51,38 @@ void OnRconConnection(IPEndPoint ip)
 ## OnSaveLoad
 
 ``` csharp
-void OnSaveLoad(Dictionary<BaseEntity, Entity> entities)
+object OnSaveLoad(Dictionary<BaseEntity, Entity> entities)
 {
     Puts("OnSaveLoad works!");
 }
 ```
 
  * Called when a savefile is loaded
- * Returning true or false overrides default behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnServerCommand
 
 ``` csharp
-void OnServerCommand(ConsoleSystem.Arg arg)
+object OnServerCommand(ConsoleSystem.Arg arg)
 {
     Puts("OnServerCommand works!");
 }
 ```
 
  * Useful for intercepting commands before they get to their intended target
- * Return true to override the command handling system
+ * Returning a non-null value overrides default behavior
 
 ## OnServerMessage
 
 ``` csharp
-void OnServerMessage(string message, string name, string color, ulong id)
+object OnServerMessage(string message, string name, string color, ulong id)
 {
     Puts("OnServerMessage works!");
 }
 ```
 
  * Useful for intercepting server messages before they get to their intended target
- * Return true to override the default behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnTick
 
