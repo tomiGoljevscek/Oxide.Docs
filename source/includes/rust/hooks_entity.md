@@ -1,9 +1,21 @@
 # Entity Hooks
 
+## CanBradleyApcTarget
+
+ ``` csharp
+bool CanBradleyApcTarget(BradleyAPC apc, BaseEntity entity)
+{
+    Puts("CanBradleyApcTarget works!");
+}
+```
+
+ * Called when an APC targets an entity
+ * Returning true or false overrides default behavior
+
 ## CanHelicopterStrafeTarget
 
 ``` csharp
-void CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
+bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 {
     Puts("CanHelicopterStrafeTarget works!");
 }
@@ -15,7 +27,7 @@ void CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 ## CanNetworkTo
 
 ``` csharp
-void CanNetworkTo(BaseNetworkable entity, BasePlayer target)
+bool CanNetworkTo(BaseNetworkable entity, BasePlayer target)
 {
     Puts("CanNetworkTo works!");
 }
@@ -27,7 +39,7 @@ void CanNetworkTo(BaseNetworkable entity, BasePlayer target)
 ## CanNpcAttack
 
 ``` csharp
-void CanNpcAttack(BaseNpc npc, BaseEntity target)
+bool CanNpcAttack(BaseNpc npc, BaseEntity target)
 {
     Puts("CanNpcAttack works!");
 }
@@ -39,7 +51,7 @@ void CanNpcAttack(BaseNpc npc, BaseEntity target)
 ## CanNpcEat
 
 ``` csharp
-void CanNpcEat(BaseNpc npc, BaseCombatEntity target)
+bool CanNpcEat(BaseNpc npc, BaseCombatEntity target)
 {
     Puts("CanNpcEat works!");
 }
@@ -51,7 +63,7 @@ void CanNpcEat(BaseNpc npc, BaseCombatEntity target)
 ## CanPickupEntity
 
 ``` csharp
-void CanPickupEntity(BaseCombatEntity entity, BasePlayer player)
+bool CanPickupEntity(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("CanPickupEntity works!");
 }
@@ -63,7 +75,7 @@ void CanPickupEntity(BaseCombatEntity entity, BasePlayer player)
 ## CanRecycle
 
 ``` csharp
-void CanRecycle(Recycler recycler, Item item)
+bool CanRecycle(Recycler recycler, Item item)
 {
     Puts("CanRecycle works!");
 }
@@ -84,10 +96,46 @@ void OnAirdrop(CargoPlane plane, Vector3 dropPosition)
  * Called when an airdrop has been called
  * No return behavior
 
+## OnBradleyApcInitialize
+
+``` csharp
+object OnBradleyApcInitialize(BradleyAPC apc)
+{
+    Puts("OnBradleyApcInitialize works!");
+}
+```
+
+* Called when an APC initializes
+* Returning a non-null value overrides default behavior
+
+## OnBradleyApcHunt
+
+``` csharp
+object OnBradleyApcHunt(BradleyAPC apc)
+{
+    Puts("OnBradleyApcHunt works!");
+}
+```
+
+* Called when an APC starts hunting
+* Returning a non-null value overrides default behavior
+
+## OnBradleyApcPatrol
+
+``` csharp
+object OnBradleyApcPatrol(BradleyAPC apc)
+{
+    Puts("OnBradleyApcPatrol works!");
+}
+```
+
+* Called when an APC is starts patrolling
+* Returning a non-null value overrides default behavior
+
 ## OnContainerDropItems
 
 ``` csharp
-void OnContainerDropItems(ItemContainer container)
+object OnContainerDropItems(ItemContainer container)
 {
     Puts("OnContainerDropItems works!");
 }
@@ -124,7 +172,7 @@ void OnEntityEnter(TriggerBase trigger, BaseEntity entity)
 ## OnEntityGroundMissing
 
 ``` csharp
-void OnEntityGroundMissing(BaseEntity entity)
+object OnEntityGroundMissing(BaseEntity entity)
 {
     Puts("OnEntityGroundMissing works!");
 }
@@ -172,7 +220,7 @@ void OnEntitySpawned(BaseNetworkable entity)
 ## OnEntityTakeDamage
 
 ``` csharp
-void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
+object OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
 {
     Puts("OnEntityTakeDamage works!");
 }
@@ -186,7 +234,7 @@ void OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
 ## OnHelicopterTarget
 
 ``` csharp
-void OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
+object OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
 {
     Puts("OnHelicopterTarget works!");
 }
@@ -198,7 +246,7 @@ void OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
 ## OnOvenToggle
 
 ``` csharp
-void OnOvenToggle(BaseOven oven, BasePlayer player)
+object OnOvenToggle(BaseOven oven, BasePlayer player)
 {
     Puts("OnOvenToggle works!");
 }
@@ -210,7 +258,7 @@ void OnOvenToggle(BaseOven oven, BasePlayer player)
 ## OnRecycleItem
 
 ``` csharp
-void OnRecycleItem(Recycler recycler, Item item)
+object OnRecycleItem(Recycler recycler, Item item)
 {
     Puts("OnRecycleItem works!");
 }
@@ -222,7 +270,7 @@ void OnRecycleItem(Recycler recycler, Item item)
 ## OnRecyclerToggle
 
 ``` csharp
-void OnRecyclerToggle(Recycler recycler, BasePlayer player)
+object OnRecyclerToggle(Recycler recycler, BasePlayer player)
 {
     Puts("OnRecyclerToggle works!");
 }
@@ -246,7 +294,7 @@ void OnResourceDepositCreated(ResourceDepositManager.ResourceDeposit deposit)
 ## OnTurretAuthorize
 
 ``` csharp
-void OnTurretAuthorize(AutoTurret turret, BasePlayer player)
+object OnTurretAuthorize(AutoTurret turret, BasePlayer player)
 {
     Puts("OnTurretAuthorize works!");
 }
@@ -258,7 +306,7 @@ void OnTurretAuthorize(AutoTurret turret, BasePlayer player)
 ## OnTurretDeauthorize
 
 ``` csharp
-void OnTurretShutdown(AutoTurret turret, BasePlayer player)
+object OnTurretShutdown(AutoTurret turret, BasePlayer player)
 {
     Puts("OnTurretDeauthorize works!");
 }
@@ -270,7 +318,7 @@ void OnTurretShutdown(AutoTurret turret, BasePlayer player)
 ## OnTurretShutdown
 
 ``` csharp
-void OnTurretShutdown(AutoTurret turret)
+object OnTurretShutdown(AutoTurret turret)
 {
     Puts("OnTurretShutdown works!");
 }
@@ -280,9 +328,9 @@ void OnTurretShutdown(AutoTurret turret)
  * Returning a non-null value overrides default behavior
 
 ## OnTurretStartup
- 
- ``` csharp
-void OnTurretStartup(AutoTurret turret)
+
+``` csharp
+object OnTurretStartup(AutoTurret turret)
 {
     Puts("OnTurretStartup works!");
 }
@@ -294,7 +342,7 @@ void OnTurretStartup(AutoTurret turret)
 ## OnTurretTarget
 
 ``` csharp
-void OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
+object OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
 {
     Puts("OnTurretTarget works!");
 }
@@ -306,7 +354,7 @@ void OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
 ## OnTurretToggle
 
  ``` csharp
-void OnTurretToggle(AutoTurret turret)
+object OnTurretToggle(AutoTurret turret)
 {
     Puts("OnTurretToggle works!");
 }
