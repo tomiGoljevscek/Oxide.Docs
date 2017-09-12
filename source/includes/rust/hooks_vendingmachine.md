@@ -1,9 +1,21 @@
 # Vending Machine Hooks
 
+## CanVendingAcceptItem
+
+``` csharp
+bool CanVendingAcceptItem(VendingMachine vending, Item item)
+{
+    Puts("CanVendingAcceptItem works!");
+}
+```
+
+ * Called when a player attempts to administer a vending machine
+ * Returning true or false overrides default behavior
+
 ## CanAdministerVending
 
 ``` csharp
-void CanAdministerVending(VendingMachine machine, BasePlayer player)
+bool CanAdministerVending(VendingMachine machine, BasePlayer player)
 {
     Puts("CanAdministerVending works!");
 }
@@ -15,7 +27,7 @@ void CanAdministerVending(VendingMachine machine, BasePlayer player)
 ## CanUseVending
 
 ``` csharp
-void CanUseVending(VendingMachine machine, BasePlayer player)
+bool CanUseVending(VendingMachine machine, BasePlayer player)
 {
     Puts("CanUseVending works!");
 }
@@ -99,7 +111,7 @@ void OnRefreshVendingStock(VendingMachine machine, Item item)
 ## OnRotateVendingMachine
 
 ``` csharp
-void OnRotateVendingMachine(VendingMachine machine, BasePlayer player)
+object OnRotateVendingMachine(VendingMachine machine, BasePlayer player)
 {
     Puts("OnRotateVendingMachine works!");
 }
@@ -123,7 +135,7 @@ void OnToggleVendingBroadcast(VendingMachine machine, BasePlayer player)
 ## OnVendingTransaction
 
 ``` csharp
-void OnVendingTransaction(VendingMachine machine, BasePlayer buyer, int sellOrderId, int numberOfTransactions)
+bool OnVendingTransaction(VendingMachine machine, BasePlayer buyer, int sellOrderId, int numberOfTransactions)
 {
     Puts("OnVendingTransaction works!");
 }
