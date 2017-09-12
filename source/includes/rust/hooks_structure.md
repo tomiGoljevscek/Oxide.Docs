@@ -1,9 +1,21 @@
 # Structure Hooks
 
+## CanAffordUpgrade
+
+``` csharp
+bool CanAffordUpgrade(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grade)
+{
+    Puts("CanAffordUpgrade works!");
+}
+```
+
+ * Called when the resources for an upgrade are checked
+ * Returning true or false overrides default behavior
+
 ## CanAssignBed
 
 ``` csharp
-void CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
+object CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
 {
     Puts("CanAssignBed works!");
 }
@@ -15,7 +27,7 @@ void CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
 ## CanBuild
 
 ``` csharp
-void CanBuild(Planner plan, Construction prefab)
+object CanBuild(Planner planner, Construction prefab, Vector3 position)
 {
     Puts("CanBuild works!");
 }
@@ -27,7 +39,7 @@ void CanBuild(Planner plan, Construction prefab)
 ## CanChangeCode
 
 ``` csharp
-void CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool isGuestCode)
+object CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool isGuestCode)
 {
     Puts("CanChangeCode works!");
 }
@@ -36,10 +48,34 @@ void CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool is
  * Called when a player tries to change the code on a codelock
  * Returning a non-null value overrides default behavior
 
+## CanChangeGrade
+
+``` csharp
+bool CanChangeGrade(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grade)
+{
+    Puts("CanChangeGrade works!");
+}
+```
+
+ * Called when a player tries to change a building grade
+ * Returning true or false overrides default behavior
+
+## CanDemolish
+
+``` csharp
+bool CanDemolish(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grade)
+{
+    Puts("CanDemolish works!");
+}
+```
+
+ * Called when a player tries to demolish a building block
+ * Returning true or false overrides default behavior
+
 ## CanHideStash
 
 ``` csharp
-void CanHideStash(StashContainer stash, BasePlayer player)
+object CanHideStash(StashContainer stash, BasePlayer player)
 {
     Puts("CanHideStash works!");
 }
@@ -51,7 +87,7 @@ void CanHideStash(StashContainer stash, BasePlayer player)
 ## CanLock
 
 ``` csharp
-void CanLock(BaseLock baseLock, BasePlayer player)
+object CanLock(BaseLock baseLock, BasePlayer player)
 {
     Puts("CanLock works!");
 }
@@ -60,10 +96,22 @@ void CanLock(BaseLock baseLock, BasePlayer player)
  * Called when the player tries to lock a keylock or codelock
  * Returning a non-null value overrides default behavior
 
+## CanPickupLock
+
+``` csharp
+bool CanPickupLock(BasePlayer player, BaseLock lock)
+{
+    Puts("CanPickupLock works!");
+}
+```
+
+ * Called when a player attempts to pickup a lock
+ * Returning true or false overrides default behavior
+
 ## CanSeeStash
 
 ``` csharp
-void CanSeeStash(StashContainer stash, BasePlayer player)
+object CanSeeStash(StashContainer stash, BasePlayer player)
 {
     Puts("CanSeeStash works!");
 }
@@ -75,7 +123,7 @@ void CanSeeStash(StashContainer stash, BasePlayer player)
 ## CanSetBedPublic
 
 ``` csharp
-void CanSetBedPublic(SleepingBag bed, BasePlayer player)
+object CanSetBedPublic(SleepingBag bed, BasePlayer player)
 {
     Puts("CanSetBedPublic works!");
 }
@@ -87,7 +135,7 @@ void CanSetBedPublic(SleepingBag bed, BasePlayer player)
 ## CanUnlock
 
 ``` csharp
-void CanUnlock(BaseLock baseLock, BasePlayer player)
+object CanUnlock(BaseLock baseLock, BasePlayer player)
 {
     Puts("CanUnlock works!");
 }
@@ -99,7 +147,7 @@ void CanUnlock(BaseLock baseLock, BasePlayer player)
 ## CanUseLockedEntity
 
 ``` csharp
-void CanUseLockedEntity(BasePlayer player, BaseLock baseLock)
+bool CanUseLockedEntity(BasePlayer player, BaseLock baseLock)
 {
     Puts("CanUseLockedEntity works!");
 }
@@ -111,7 +159,7 @@ void CanUseLockedEntity(BasePlayer player, BaseLock baseLock)
 ## OnCodeEntered
 
 ``` csharp
-void OnCodeEntered(CodeLock codeLock, BasePlayer player, string code)
+object OnCodeEntered(CodeLock codeLock, BasePlayer player, string code)
 {
     Puts("OnCodeEntered works!");
 }
@@ -123,7 +171,7 @@ void OnCodeEntered(CodeLock codeLock, BasePlayer player, string code)
 ## OnCupboardAuthorize
 
 ``` csharp
-void OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
+object OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardAuthorize works!");
 }
@@ -135,7 +183,7 @@ void OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
 ## OnCupboardClearList
 
 ``` csharp
-void OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
+object OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardClearList works!");
 }
@@ -147,7 +195,7 @@ void OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
 ## OnCupboardDeauthorize
 
 ``` csharp
-void OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
+object OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardDeauthorize works!");
 }
@@ -207,7 +255,7 @@ void OnHammerHit(BasePlayer player, HitInfo info)
 ## OnStructureDemolish
 
 ``` csharp
-void OnStructureDemolish(BaseCombatEntity entity, BasePlayer player)
+object OnStructureDemolish(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("OnStructureDemolish works!");
 }
@@ -243,7 +291,7 @@ void OnStructureRotate(BaseCombatEntity entity, BasePlayer player)
 ## OnStructureUpgrade
 
 ``` csharp
-void OnStructureUpgrade(BaseCombatEntity entity, BasePlayer player, BuildingGrade.Enum grade)
+object OnStructureUpgrade(BaseCombatEntity entity, BasePlayer player, BuildingGrade.Enum grade)
 {
     Puts("OnStructureUpgrade works!");
 }
