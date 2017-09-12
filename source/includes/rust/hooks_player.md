@@ -97,6 +97,18 @@ bool CanLootPlayer(BasePlayer target, BasePlayer looter)
  * Called when the player attempts to loot another player
  * Returning true or false overrides default behavior
 
+## CanUseMailbox
+
+``` csharp
+bool CanUseMailbox(BasePlayer player, Mailbox mailbox)
+{
+    Puts("CanUseMailbox works!");
+}
+```
+
+ * Called when the player tries to use a mailbox
+ * Returning true or false overrides default behavior
+
 ## CanWearItem
 
 ``` csharp
