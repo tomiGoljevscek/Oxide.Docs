@@ -12,6 +12,18 @@ bool CanBradleyApcTarget(BradleyAPC apc, BaseEntity entity)
  * Called when an APC targets an entity
  * Returning true or false overrides default behavior
 
+## CanHelicopterStrafe
+
+ ``` csharp
+bool CanHelicopterStrafe(PatrolHelicopterAI heli) hook
+{
+    Puts("CanHelicopterStrafe works!");
+}
+```
+
+ * Called when a helicopter attempts to strafe
+ * Returning true or false overrides default behavior
+
 ## CanHelicopterStrafeTarget
 
 ``` csharp
@@ -21,7 +33,29 @@ bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 }
 ```
 
- * Called when a helicopter targets a player to attack while strafing
+ * Called when a helicopter attempts to target a player to attack while strafing
+ * Returning true or false overrides default behavior
+
+## CanHelicopterTarget
+ ``` csharp
+bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player) hook
+{
+    Puts("CanHelicopterTarget works!");
+}
+```
+
+ * Called when a helicopter attempts to target a player to attack
+ * Returning true or false overrides default behavior
+
+## CanHelicopterUseNapalm
+``` csharp
+bool CanHelicopterUseNapalm(PatrolHelicopterAI heli) hook
+{
+    Puts("CanHelicopterUseNapalm works!");
+}
+```
+
+ * Called when a helicopter attempts to use napalm
  * Returning true or false overrides default behavior
 
 ## CanNetworkTo
@@ -242,6 +276,29 @@ object OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
 
  * Called when a helicopter attempts to target an entity
  * Returning true overrides default behavior
+
+## OnNpcPlayerTarget
+
+``` csharp
+object OnNpcPlayerTarget(NPCPlayerApex npcPlayer, BaseEntity entity)
+{
+    Puts("OnNpcPlayerTarget works!");
+}
+```
+
+ * Called when an NPC player targets another entity
+ * Returning a non-null value overrides default behavior
+
+## OnNpcTarget
+``` csharp
+object OnNpcTarget(BaseNpc npc, BaseEntity entity)
+{
+    Puts("OnOvenToggle works!");
+}
+```
+
+ * Called when an NPC targets another entity
+ * Returning a non-null value overrides default behavior
 
 ## OnOvenToggle
 
