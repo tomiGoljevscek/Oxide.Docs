@@ -9,7 +9,7 @@ bool CanAttack(BasePlayer player)
 }
 ```
 
- * Called when a player is attempting to perform a melee attack
+ * Called when the player is attempting to perform a melee attack
  * Returning true or false overrides default behavior
 
 ## CanBeTargeted (autoturret)
@@ -45,7 +45,7 @@ bool CanBypassQueue(Network.Connection connection)
 }
 ```
 
- * Called before a player is added to the connection queue
+ * Called before the player is added to the connection queue
  * Returning true will bypass the queue, returning nothing will by default queue the player
 
 ## CanCraft
@@ -57,7 +57,7 @@ bool CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
 }
 ```
 
- * Called when a player attempts to craft an item
+ * Called when the player attempts to craft an item
  * Returning true or false overrides default behavior
 
 ## CanClientLogin
@@ -130,7 +130,7 @@ void OnConnectionAuth(Message.Connection connection)
 }
 ```
 
- * Called when a player attempts to connect to the server
+ * Called when the player attempts to connect to the server
  * No return behavior
 
 ## OnFindSpawnPoint
@@ -209,13 +209,13 @@ void OnPlayerAttack(BasePlayer attacker, HitInfo info)
 ## OnPlayerBanned
 
 ``` csharp
-void OnPlayerBanned(string name, string id, string address, string reason)
+void OnPlayerBanned(string name, ulong id, string address, string reason)
 {
     Puts("OnPlayerBanned works!");
 }
 ```
 
- * Called when a player is banned (Facepunch, EAC, server ban, etc.)
+ * Called when the player is banned (Facepunch, EAC, server ban, etc.)
  * No return behavior
 
 ## OnPlayerChat
@@ -252,7 +252,7 @@ object OnPlayerDie(BasePlayer player, HitInfo info)
 }
 ```
 
- * Called when a player is about to die
+ * Called when the player is about to die
  * HitInfo may be null
  * Returning a non-null value overrides default behavior
 
@@ -277,7 +277,7 @@ object OnPlayerHealthChange(BasePlayer player, float oldValue, float newValue)
 }
 ```
 
- * Called just before a player's health changes
+ * Called just before the player's health changes
  * Returning a non-null value cancels the health change
 
 ## OnPlayerInit
@@ -304,6 +304,18 @@ void OnPlayerInput(BasePlayer player, InputState input)
  * Called when input is received from a connected client
  * No return behavior
 
+## OnPlayerKicked
+
+``` csharp
+void OnPlayerKicked(BasePlayer player, string reason)
+{
+    Puts("OnPlayerKicked works!");
+}
+```
+
+ * Called after the player is kicked from the server
+ * No return behavior
+
 ## OnPlayerLand
 
 ``` csharp
@@ -313,7 +325,7 @@ object OnPlayerLand(BasePlayer player, float num)
 }
 ```
 
- * Called just before a player lands on the ground
+ * Called just before the player lands on the ground
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerLanded
@@ -337,7 +349,7 @@ void OnPlayerLootEnd(PlayerLoot inventory)
 }
 ```
 
- * Called when a player stops looting
+ * Called when the player stops looting
  * No return behavior
 
 ## OnPlayerRecover
@@ -349,7 +361,7 @@ object OnPlayerRecover(BasePlayer player)
 }
 ```
 
- * Called when a player is about to recover from the 'wounded' state
+ * Called when the player is about to recover from the 'wounded' state
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerRespawn
@@ -375,7 +387,7 @@ void OnPlayerRespawned(BasePlayer player)
 
  * Called when the player has respawned (specifically when they click the "Respawn" button)
  * ONLY called after the player has transitioned from dead to not-dead, so not when they're waking up
- * This means it's possible for a player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
+ * This means it's possible for the player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them
  * No return behavior
 
 ## OnPlayerSleep
@@ -387,7 +399,7 @@ object OnPlayerSleep(BasePlayer player)
 }
 ```
 
- * Called when a player is about to go to sleep
+ * Called when the player is about to go to sleep
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerSleepEnded
@@ -411,7 +423,7 @@ object OnPlayerSpawn(BasePlayer player)
 }
 ```
 
- * Called when a player spawns for the first time on the server
+ * Called when the player spawns for the first time on the server
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerSpectate
@@ -423,7 +435,7 @@ object OnPlayerSpectate(BasePlayer player, string spectateFilter)
 }
 ```
 
- * Called when a player starts spectating
+ * Called when the player starts spectating
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerSpectateEnd
@@ -435,7 +447,7 @@ object OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
 }
 ```
 
- * Called when a player stops spectating
+ * Called when the player stops spectating
  * Returning a non-null value stops the spectate from ending
 
 ## OnPlayerTick
@@ -449,6 +461,18 @@ object OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
 
  * Returning a non-null value overrides default behavior
 
+## OnPlayerUnbanned
+
+``` csharp
+void OnPlayerUnbanned(string name, ulong id, string address)
+{
+    Puts("OnPlayerUnbanned works!");
+}
+```
+
+ * Called when the player is unbanned (server ban only)
+ * No return behavior
+
 ## OnPlayerViolation
 
 ``` csharp
@@ -458,7 +482,7 @@ object OnPlayerViolation(BasePlayer player, AntiHackType type, float amount)
 }
 ```
 
- * Called when a player triggers an anti-hack violation
+ * Called when the player triggers an anti-hack violation
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerWound
@@ -470,7 +494,7 @@ object OnPlayerWound(BasePlayer player)
 }
 ```
 
- * Called when a player is about to go down to the 'wounded' state
+ * Called when the player is about to go down to the 'wounded' state
  * Returning a non-null value cancels the wounded state
 
 ## OnRunPlayerMetabolism
