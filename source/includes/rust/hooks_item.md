@@ -27,14 +27,14 @@ bool CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
 ## CanMoveItem
 
 ``` csharp
-bool CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
+void CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
 {
     Puts("CanMoveItem works!");
 }
 ```
 
  * Called when moving an item from one inventory slot to another
- * Returning true or false overrides default behavior
+ * Returning a non-null value overrides default behavior
 
 ## CanStackItem
 
@@ -112,14 +112,14 @@ void OnItemAddedToContainer(ItemContainer container, Item item)
 ## OnItemCraft
 
 ``` csharp
-object OnItemCraft(ItemCraftTask item)
+bool OnItemCraft(ItemCraftTask item)
 {
     Puts("OnItemCraft works!");
 }
 ```
 
  * Called right after an item is added to the crafting queue
- * Returning a non-null value overrides default behavior
+ * Returning true or false overrides default behavior
 
 ## OnItemCraftCancelled
 
