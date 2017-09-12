@@ -1,17 +1,5 @@
 # Vending Machine Hooks
 
-## CanVendingAcceptItem
-
-``` csharp
-bool CanVendingAcceptItem(VendingMachine vending, Item item)
-{
-    Puts("CanVendingAcceptItem works!");
-}
-```
-
- * Called when a player attempts to administer a vending machine
- * Returning true or false overrides default behavior
-
 ## CanAdministerVending
 
 ``` csharp
@@ -34,6 +22,18 @@ bool CanUseVending(VendingMachine machine, BasePlayer player)
 ```
 
  * Called when a player attempts to use a vending machine
+ * Returning true or false overrides default behavior
+
+## CanVendingAcceptItem
+
+``` csharp
+bool CanVendingAcceptItem(VendingMachine vending, Item item)
+{
+    Puts("CanVendingAcceptItem works!");
+}
+```
+
+ * Called when a player attempts to administer a vending machine
  * Returning true or false overrides default behavior
 
 ## OnAddVendingOffer
