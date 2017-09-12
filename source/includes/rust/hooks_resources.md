@@ -24,6 +24,17 @@ void OnCropGather(PlantEntity plant, Item item, BasePlayer player)
  * Called when the player gathers a plant
  * No return behavior
 
+## OnDispenserBonus
+``` csharp
+object OnDispenserBonus(ResourceDispenser dispenser, BasePlayer player, Item item)
+{
+    Puts("OnDispenserBonus works!");
+}
+```
+
+ * Called before the player is given a bonus item for gathering
+ * Returning a non-null value overrides default behavior
+
 ## OnDispenserGather
 
 ``` csharp
