@@ -6,7 +6,7 @@ namespace Oxide.Plugins
     [Info("EpicStuff", "Unknown", 0.1)]
     [Description("Makes epic stuff happen")]
 
-    class EpicStuff : ForestPlugin
+    class EpicStuff : TheForestPlugin
     {
         // The rest of the code and magic
     }
