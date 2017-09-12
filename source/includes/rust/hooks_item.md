@@ -3,7 +3,7 @@
 ## CanAcceptItem
 
 ``` csharp
-void CanAcceptItem(ItemContainer container, Item item)
+enum CanAcceptItem(ItemContainer container, Item item)
 {
     Puts("CanAcceptItem works!");
 }
@@ -15,31 +15,31 @@ void CanAcceptItem(ItemContainer container, Item item)
 ## CanCombineDroppedItem
 
 ``` csharp
-void CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
+bool CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
 {
     Puts("CanCombineDroppedItem works!");
 }
 ```
 
  * Called when an item is dropped on another item
- * Returning a non-null value overrides default behavior
+ * Returning true or false overrides default behavior
 
 ## CanMoveItem
 
 ``` csharp
-void CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
+bool CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
 {
     Puts("CanMoveItem works!");
 }
 ```
 
  * Called when moving an item from one inventory slot to another
- * Returning a non-null value overrides default behavior
+ * Returning true or false overrides default behavior
 
 ## CanStackItem
 
 ``` csharp
-void CanStackItem(Item item, Item targetItem)
+bool CanStackItem(Item item, Item targetItem)
 {
     Puts("CanStackItem works!");
 }
@@ -60,10 +60,22 @@ void OnConsumeFuel(BaseOven oven, Item fuel, ItemModBurnable burnable)
  * Called right before fuel is used (furnace, lanterns, camp fires, etc.)
  * No return behavior
 
+## OnContainerDropItems
+
+``` csharp
+void OnContainerDropItems(ItemContainer container)
+{
+    Puts("OnContainerDropItems works!");
+}
+```
+
+ * Called when an item is dropped from a container
+ * No return behavior
+
 ## OnFindBurnable
 
 ``` csharp
-void OnFindBurnable(BaseOven oven)
+Item OnFindBurnable(BaseOven oven)
 {
     Puts("OnFindBurnable works!");
 }
@@ -72,22 +84,10 @@ void OnFindBurnable(BaseOven oven)
  * Called when looking for fuel for the oven
  * Returning an item overrides default behavior
 
-## OnHealingItemUse
-
-``` csharp
-void OnHealingItemUse(HeldEntity item, BasePlayer target)
-{
-    Puts("OnHealingItemUse works!");
-}
-```
-
- * Called right before a Syringe or Medkit item is used
- * Returning a non-null value overrides default behavior
-
 ## OnItemAction
 
 ``` csharp
-void OnItemAction(Item item, string action)
+object OnItemAction(Item item, string action)
 {
     Puts("OnItemAction works!");
 }
@@ -112,14 +112,14 @@ void OnItemAddedToContainer(ItemContainer container, Item item)
 ## OnItemCraft
 
 ``` csharp
-void OnItemCraft(ItemCraftTask item)
+object OnItemCraft(ItemCraftTask item)
 {
     Puts("OnItemCraft works!");
 }
 ```
 
  * Called right after an item is added to the crafting queue
- * Returning true or false overrides default behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnItemCraftCancelled
 
@@ -172,7 +172,7 @@ void OnItemDropped(Item item, BaseEntity entity)
 ## OnItemPickup
 
 ``` csharp
-void OnItemPickup(Item item, BasePlayer player)
+object OnItemPickup(Item item, BasePlayer player)
 {
     Puts("OnItemPickup works!");
 }
@@ -209,7 +209,7 @@ void OnItemRepair(BasePlayer player, Item item)
 ## OnItemResearch
 
 ``` csharp
-void OnItemResearch(Item item, BasePlayer player)
+object OnItemResearch(Item item, BasePlayer player)
 {
     Puts("OnItemResearch works!");
 }
@@ -221,7 +221,7 @@ void OnItemResearch(Item item, BasePlayer player)
 ## OnItemResearchEnd
 
 ``` csharp
-void OnItemResearchEnd(ResearchTable table, float chance)
+float OnItemResearchEnd(ResearchTable table, float chance)
 {
     Puts("OnItemResearchEnd works!");
     return chance;
@@ -246,7 +246,7 @@ void OnItemResearchStart(ResearchTable table)
 ## OnItemSplit
 
 ``` csharp
-void OnItemSplit(Item item, int amount)
+Item OnItemSplit(Item item, int amount)
 {
     Puts("OnItemSplit works!");
 }
@@ -291,10 +291,22 @@ void OnLoseCondition(Item item, ref float amount)
  * Called right before the condition of the item is modified
  * No return behavior
 
+## OnMaxStackable
+
+``` csharp
+int OnMaxStackable(Item item, Item targetItem)
+{
+    Puts("OnMaxStackable works!");
+}
+```
+
+ * Called when an items max stackable is calculated
+ * Returning a numeric value (int) overrides the default value
+
 ## OnTrapArm
 
 ``` csharp
-void OnTrapArm(BearTrap trap, BasePlayer player)
+object OnTrapArm(BearTrap trap, BasePlayer player)
 {
     Puts("OnTrapArm works!");
 }
@@ -306,7 +318,7 @@ void OnTrapArm(BearTrap trap, BasePlayer player)
 ## OnTrapDisarm
 
 ``` csharp
-void OnTrapDisarm(Landmine trap, BasePlayer player)
+object OnTrapDisarm(Landmine trap, BasePlayer player)
 {
     Puts("OnTrapDisarm works!");
 }
@@ -330,7 +342,7 @@ void OnTrapSnapped(BaseTrapTrigger trap, GameObject go)
 ## OnTrapTrigger
 
 ``` csharp
-void OnTrapTrigger(BaseTrap trap, GameObject go)
+object OnTrapTrigger(BaseTrap trap, GameObject go)
 {
     Puts("OnTrapTrigger works!");
 }
