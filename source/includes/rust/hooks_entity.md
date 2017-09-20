@@ -386,7 +386,7 @@ object OnTurretAuthorize(AutoTurret turret, BasePlayer player)
 ## OnTurretDeauthorize
 
 ``` csharp
-object OnTurretShutdown(AutoTurret turret, BasePlayer player)
+object OnTurretDeauthorize(AutoTurret turret, BasePlayer player)
 {
     Puts("OnTurretDeauthorize works!");
 }
