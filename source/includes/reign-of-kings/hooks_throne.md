@@ -7,6 +7,7 @@ void OnThroneCapture(AncientThroneCaptureEvent e)
 {
     Puts("OnThroneCapture works!");
 }
+```
 
  * Called when a player starts capturing the throne.
 
@@ -17,6 +18,7 @@ void OnThroneCaptured(AncientThroneCaptureEvent e)
 {
     Puts("OnThroneCaptured works!");
 }
+```
 
  * Called when a player captured the throne.
 
@@ -27,6 +29,7 @@ void OnThroneReleased(AncientThroneReleaseEvent e)
 {
     Puts("OnThroneReleased works!");
 }
+```
 
  * Called when the king dies or renounces the throne.
 
@@ -37,6 +40,7 @@ void OnThroneRename(AncientThroneRenameEvent e)
 {
     Puts("OnThroneRename works!");
 }
+```
 
  * Called when the king renames the realm.
 
@@ -47,5 +51,6 @@ void OnThroneTax(AncientThroneTaxEvent e)
 {
     Puts("OnThroneTax works!");
 }
+```
 
  * Called when the king changes the tax.
