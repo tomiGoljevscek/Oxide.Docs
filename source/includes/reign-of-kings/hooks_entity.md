@@ -7,6 +7,7 @@ void OnEntityHealthChange(EntityDamageEvent e)
 {
     Puts("OnEntityHealthChange works!");
 }
+```
 
  * Help! This is missing a description!
 
@@ -17,5 +18,6 @@ void OnEntityDeath(EntityDeathEvent e)
 {
     Puts("OnEntityDeath works!");
 }
+```
 
  * Help! This is missing a description!
