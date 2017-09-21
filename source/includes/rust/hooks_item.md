@@ -3,7 +3,7 @@
 ## CanAcceptItem
 
 ``` csharp
-enum CanAcceptItem(ItemContainer container, Item item)
+ItemContainer.CanAcceptResult CanAcceptItem(ItemContainer container, Item item)
 {
     Puts("CanAcceptItem works!");
 }
@@ -27,7 +27,7 @@ bool CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
 ## CanMoveItem
 
 ``` csharp
-void CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
+object CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
 {
     Puts("CanMoveItem works!");
 }
@@ -82,7 +82,7 @@ Item OnFindBurnable(BaseOven oven)
 ```
 
  * Called when looking for fuel for the oven
- * Returning an item overrides default behavior
+ * Returning an Item overrides default behavior
 
 ## OnItemAction
 
@@ -253,7 +253,7 @@ Item OnItemSplit(Item item, int amount)
 ```
 
  * Called right before an item is split into multiple stacks
- * Returning an item overrides default behavior
+ * Returning an Item overrides default behavior
 
 ## OnItemUpgrade
 
