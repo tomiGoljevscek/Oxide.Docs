@@ -121,16 +121,16 @@ bool CanWearItem(PlayerInventory inventory, Item item)
  * Called when the player attempts to equip an item
  * Returning true or false overrides default behavior
 
-## OnConnectionAuth
+## OnClientAuth
 
 ``` csharp
-void OnConnectionAuth(Message.Connection connection)
+void OnClientAuth(Connection connection)
 {
-    Puts("OnConnectionAuth works!");
+    Puts("OnClientAuth works!");
 }
 ```
 
- * Called when the player attempts to connect to the server
+ * Called when the player is giving server connection authorization information
  * No return behavior
 
 ## OnFindSpawnPoint
