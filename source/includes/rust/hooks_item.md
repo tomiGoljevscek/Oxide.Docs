@@ -294,7 +294,7 @@ void OnLoseCondition(Item item, ref float amount)
 ## OnMaxStackable
 
 ``` csharp
-int OnMaxStackable(Item item, Item targetItem)
+int OnMaxStackable(Item item)
 {
     Puts("OnMaxStackable works!");
 }
