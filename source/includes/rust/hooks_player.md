@@ -169,18 +169,6 @@ void OnLootEntityEnd(BasePlayer player, BaseCombatEntity entity)
  * Called when the player stops looting an entity
  * No return behavior
 
-## OnLootPlayer
-
-``` csharp
-void OnLootPlayer(BasePlayer player, BasePlayer target)
-{
-    Puts("OnLootPlayer works!");
-}
-```
-
- * Called when the player starts looting another player
- * No return behavior
-
 ## OnLootItem
 
 ``` csharp
@@ -191,6 +179,18 @@ void OnLootItem(BasePlayer player, Item item)
 ```
 
  * Called when the player starts looting an item
+ * No return behavior
+
+## OnLootPlayer
+
+``` csharp
+void OnLootPlayer(BasePlayer player, BasePlayer target)
+{
+    Puts("OnLootPlayer works!");
+}
+```
+
+ * Called when the player starts looting another player
  * No return behavior
 
 ## OnPlayerAttack
