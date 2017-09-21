@@ -15,7 +15,7 @@ bool CanBradleyApcTarget(BradleyAPC apc, BaseEntity entity)
 ## CanHelicopterStrafe
 
  ``` csharp
-bool CanHelicopterStrafe(PatrolHelicopterAI heli) hook
+bool CanHelicopterStrafe(PatrolHelicopterAI heli)
 {
     Puts("CanHelicopterStrafe works!");
 }
@@ -38,7 +38,7 @@ bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 
 ## CanHelicopterTarget
  ``` csharp
-bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player) hook
+bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player)
 {
     Puts("CanHelicopterTarget works!");
 }
@@ -49,7 +49,7 @@ bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player) hook
 
 ## CanHelicopterUseNapalm
 ``` csharp
-bool CanHelicopterUseNapalm(PatrolHelicopterAI heli) hook
+bool CanHelicopterUseNapalm(PatrolHelicopterAI heli)
 {
     Puts("CanHelicopterUseNapalm works!");
 }
