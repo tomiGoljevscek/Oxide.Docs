@@ -99,7 +99,7 @@ object CanLock(BaseLock baseLock, BasePlayer player)
 ## CanPickupLock
 
 ``` csharp
-bool CanPickupLock(BasePlayer player, BaseLock lock)
+bool CanPickupLock(BasePlayer player, BaseLock baseLock)
 {
     Puts("CanPickupLock works!");
 }
