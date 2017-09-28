@@ -85,7 +85,7 @@ bool CanNpcAttack(BaseNpc npc, BaseEntity target)
 ## CanNpcEat
 
 ``` csharp
-bool CanNpcEat(BaseNpc npc, BaseCombatEntity target)
+bool CanNpcEat(BaseNpc npc, BaseEntity target)
 {
     Puts("CanNpcEat works!");
 }
