@@ -3,7 +3,7 @@
 ## OnAirdrop
 
 ``` csharp
-void OnAirdrop(Vector3 location)
+void OnAirdrop(AIAirDrop airdrop, Vector3 location)
 {
     Puts("OnAirdrop works!");
 }
