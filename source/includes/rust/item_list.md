@@ -328,6 +328,9 @@
 | 1501403549    | Wood Armor Helmet            | wood.armor.helmet        |
 | 1554697726    | Wood Chestplate              | wood.armor.jacket        |
 | -1883959124   | Wood Armor Pants             | wood.armor.pants         |
+| -481416622    | Work Bench Level 1           | workbench1               |
+| -481416621    | Work Bench Level 2           | workbench2               |
+| -481416620    | Work Bench Level 3           | workbench3               |
 | -1732316031   | Large Present                | xmas.present.large       |
 | -2130280721   | Medium Present               | xmas.present.medium      |
 | -1725510067   | Small Present                | xmas.present.small       |
