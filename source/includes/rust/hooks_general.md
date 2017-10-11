@@ -27,7 +27,7 @@ void OnNewSave(string filename)
 ## OnRconCommand
 
 ``` csharp
-void OnRconCommand(string ip, string command, string[] args)
+void OnRconCommand(IPAddress ip, string command, string[] args)
 {
     Puts("OnRconCommand works!");
 }
