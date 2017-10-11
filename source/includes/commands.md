@@ -3,18 +3,18 @@
 ## Default commands
 
 ```
-load *|<pluginname>+
-unload *|<pluginname>+
-reload *|<pluginname>+
-grant <group|user> <name|id> *|<permission>
-revoke <group|user> <name|id> *|<permission>
-group <add|set> <name> [title] [rank]
-group <remove> <name>
-group <parent> <name> <parentname>
-usergroup <add|remove> <username> <groupname>
-show <group|user|perm> <name>
-show <groups|perms>
-version or oxide.version
+oxide.load *|<pluginname>+
+oxide.unload *|<pluginname>+
+oxide.reload *|<pluginname>+
+oxide.grant <group|user> <name|id> *|<permission>
+oxide.revoke <group|user> <name|id> *|<permission>
+oxide.group <add|set> <name> [title] [rank]
+oxide.group <remove> <name>
+oxide.group <parent> <name> <parentname>
+oxide.usergroup <add|remove> <username> <groupname>
+oxide.show <group|user|perm> <name>
+oxide.show <groups|perms>
+oxide.version
 ```
 
 ## Chat commands
