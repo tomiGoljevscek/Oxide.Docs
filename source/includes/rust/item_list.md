@@ -37,6 +37,7 @@
 | -814689390    | Wooden Barricade             | barricade.wood           |
 | 1024486167    | Barbed Wooden Barricade      | barricade.woodwire       |
 | 2021568998    | Battery - Small              | battery.small            |
+| 97329         | Barbeque                     | bbq                      |
 | 1325935999    | Raw Bear Meat                | bearmeat                 |
 | -2066726403   | Burnt Bear Meat              | bearmeat.burned          |
 | -2043730634   |  Cooked Bear Meat            | bearmeat.cooked          |
@@ -105,7 +106,13 @@
 | 1295154089    | Satchel Charge               | explosive.satchel        |
 | 498591726     | Timed Explosive Charge       | explosive.timed          |
 | 1755466030    | Explosives                   | explosives               |
+| 726730162     | m-facialhair01               | facialhair.style01       |
 | -1034048911   | Animal Fat                   | fat.animal               |
+| 305916740     | f-hairstyle-1                | female_hairstyle_01      |
+| 305916741     | f-hairstyle-2                | female_hairstyle_02      |
+| 252529905     | f-armpit01                   | femalearmpithair.style01 |
+| 471582113     | f-eyebrow01                  | femaleeyebrow.style01    |
+| -1138648591   | f-pubic01                    | femalepubichair.style01  |
 | -2078972355   | Cooked Fish                  | fish.cooked              |
 | 88869913      | Minnows                      | fish.minnows             |
 | -533484654    | Raw Fish                     | fish.raw                 |
@@ -168,6 +175,11 @@
 | 3343606       | Mace                         | mace                     |
 | 825308669     | Machete                      | machete                  |
 | 830965940     | Mail Box                     | mailbox                  |
+| -1832205789   | m-hairstyle-1                | male_hairstyle_01        |
+| -1832205788   | m-hairstyle-2                | male_hairstyle_02        |
+| 1625090418    | m-armpit01                   | malearmpithair.style01   |
+| -1269800768   | m-eyebrow01                  | maleeyebrow.style01      |
+| 429648208     | m-pubic01                    | malepubichair.style01    |
 | 107868        | Paper Map                    | map                      |
 | 997973965     | Improvised Balaclava         | mask.balaclava           |
 | -46188931     | Bandana Mask                 | mask.bandana             |
