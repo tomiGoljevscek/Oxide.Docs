@@ -21,7 +21,7 @@ void OnNewSave(string filename)
 }
 ```
 
- * Called when a new savefile is created
+ * Called when a new savefile is created (usually when map has wiped)
  * No return behavior
 
 ## OnRconCommand
@@ -94,4 +94,5 @@ void OnTick()
 ```
 
  * Called every tick (defined by the tick rate of the server)
+ * For better performance, avoid using heavy calculations in this hook.
  * No return behavior
