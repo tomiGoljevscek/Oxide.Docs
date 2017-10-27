@@ -131,6 +131,7 @@
 | -57285700     | High External Wooden Gate    | gates.external.high.wood |
 | 98228420      | Gears                        | gears                    |
 | 277631078     | Wind Turbine                 | generator.wind.scrap     |
+| -522149009    | Glowing Eyes                 | gloweyes                 |
 | 3175989       | Glue                         | glue                     |
 | 718197703     | Granola Bar                  | granolabar               |
 | 384204160     | Beancan Grenade              | grenade.beancan          |
@@ -231,6 +232,7 @@
 | -1775234707   | Salvaged Cleaver             | salvaged.cleaver         |
 | -388967316    | Salvaged Sword               | salvaged.sword           |
 | 2007564590    | Santa Hat                    | santahat                 |
+| -1705696613   | Scarecrow                    | scarecrow                |
 | 109266897     | Scrap                        | scrap                    |
 | -527558546    | Search Light                 | searchlight              |
 | 583366917     | Corn Seed                    | seed.corn                |
@@ -268,6 +270,7 @@
 | -698499648    | Small Wooden Sign            | sign.wooden.small        |
 | 960793436     | Human Skull                  | skull.human              |
 | 1001265731    | Wolf Skull                   | skull.wolf               |
+| 1859976884    | Skull Fire Pit               | skull_fire_pit           |
 | 1253290621    | Sleeping Bag                 | sleepingbag              |
 | 470729623     | Small Oil Refinery           | small.oil.refinery       |
 | 927253046     | Small Water Bottle           | smallwaterbottle         |
@@ -311,6 +314,7 @@
 | 562888306     | Prison Cell Gate             | wall.frame.cell.gate     |
 | -378017204    | Chainlink Fence              | wall.frame.fence         |
 | 995306285     | Chainlink Fence Gate         | wall.frame.fence.gate    |
+| 447918618     | Garage Door                  | wall.frame.garagedoor    |
 | 313836902     | Netting                      | wall.frame.netting       |
 | 1175970190    | Shop Front                   | wall.frame.shopfront     |
 | 525244071     | Metal Shop Front             | wall.frame.shopfront.metal|

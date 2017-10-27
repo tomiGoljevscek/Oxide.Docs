@@ -61,6 +61,7 @@
 | 895307805    | Retro Car Parts AK47              |
 | 654502185    | Rustpunk AK47                     |
 | 934891737    | Sandstorm AK47                    |
+| 1175238674   | Santa Muerte                      |
 | 1076214414   | Soul Taker AK47                   |
 | 10138        | Tempered AK47                     |
 | 1088459232   | The Beast AK47                    |
@@ -318,6 +319,7 @@
 | 948113632    | Grandfather DBS                   |
 | 854987948    | Heat Double Shotgun               |
 | 860153737    | Industrial DBS                    |
+| 1174675399   | Military Boomstick                |
 | 858957151    | Nitro-Maniac DBS                  |
 | 1127266590   | Quick Death DBS                   |
 
@@ -327,6 +329,7 @@
 | 856053892    | Banana Eoka                       |
 | 898387222    | Birch Eoka                        |
 | 1171935313   | Flintlock                         |
+| 1174673119   | Gurkha Eoka                       |
 | 926184643    | Japanese Tanegashima              |
 | 920310954    | Nordic Relic                      |
 | 857750032    | Primal Gun                        |
@@ -347,6 +350,12 @@
 | 873612402    | Urban Fridge                      |
 | 886416273    | Victorian Food Vault              |
 
+## Garage Door (wall.frame.garagedoor)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1180981036   | Chop Shop Garage Door             |
+| 1180968592   | Defense Garage Door               |
+
 ## Hammer (hammer)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -366,6 +375,7 @@
 | 892263562    | Ancient Artifact Hatchet          |
 | 1145547996   | Beast Hunter Hatchet              |
 | 1143274085   | Damascus Steel Hatchet            |
+| 1171956705   | Eater Hatchet                     |
 | 814630559    | Firefighter Hatchet               |
 | 824552943    | Golden Axe                        |
 | 950020589    | Hunter Hatchet                    |
@@ -478,6 +488,7 @@
 | 10071        | Double Yellow Balaclava           |
 | 884484239    | Executioner Latex                 |
 | 10068        | Forest Camo Balaclava             |
+| 1175131736   | Frankenstein Mask                 |
 | 813561728    | Knitted Balaclava                 |
 | 858156568    | Meat Mask                         |
 | 10057        | Murica Balaclava                  |
@@ -485,6 +496,7 @@
 | 10075        | Nightmare Balaclava               |
 | 10070        | Red Check Balaclava               |
 | 10054        | Rorschach Skull                   |
+| 1174877663   | Rotten Scalp                      |
 | 807719156    | Santa Balaclava                   |
 | 10090        | Skin Balaclava                    |
 | 539562549    | Stitched Skin                     |
@@ -644,6 +656,7 @@
 | 1084823878   | Elder's Metal Facemask            |
 | 915572534    | Flesh Facemask                    |
 | 807821375    | Frostbite                         |
+| 1172409741   | Glowing Metal Pumpkin Mask        |
 | 794837198    | Glowing Skull                     |
 | 932233099    | Heavy Industry                    |
 | 812933296    | Human Sacrifice Mask              |
@@ -992,6 +1005,7 @@
 | 1113987623   | Hero's SAR                        |
 | 942919370    | Meridian SAR                      |
 | 1135415770   | Pharaoh SAR                       |
+| 1170719113   | SAR Scarecrow                     |
 | 875259741    | Sublime SAR                       |
 | 1112906123   | Suzy-Q SAR                        |
 | 899564368    | To Hell And Back                  |
@@ -1005,10 +1019,12 @@
 | 1109694864   | Blue Puzzle Door                  |
 | 1066783524   | Brass Sentinel Door               |
 | 1124738987   | Dead Room Door                    |
+| 1175547229   | Death Crypt Door                  |
 | 827190175    | Doomsday Door                     |
 | 948930384    | Door to Death                     |
 | 915684869    | Fire Truck Door                   |
 | 942658960    | Grey Fire Door                    |
+| 1176406578   | Halloween Door                    |
 | 849614068    | Hazard Metal Door                 |
 | 1120339199   | Hideout Door                      |
 | 928503162    | Jeweler's Security Door           |
@@ -1068,6 +1084,7 @@
 | 919353105    | Ranger Bedroll                    |
 | 834487561    | Red Survival Sleeping Bag         |
 | 1102195403   | Sleep Catcher                     |
+| 1174407153   | Spooky Pumpkin Bed                |
 | 1132190812   | Star Bedroll                      |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 944993672    | Undead Bedroll                    |
@@ -1204,4 +1221,5 @@
 | 1100886818   | Red Decorative Wood Door          |
 | 923763807    | Riveted Wooden Door               |
 | 1127631900   | Sacrificial door                  |
+| 1176899114   | Trick Or Treat Door               |
 | 950184212    | Wise Door                         |
