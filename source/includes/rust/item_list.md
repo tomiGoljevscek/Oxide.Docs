@@ -3,6 +3,7 @@
 | Item Id       | Item Name                    | Item Shortname           |
 |---------------|------------------------------|--------------------------|
 | 2115555558    | Handmade Shell               | ammo.handmade.shell      |
+| 590532217     | Nailgun Nails                | ammo.nailgun.nails       |
 | -533875561    | Pistol Bullet                | ammo.pistol              |
 | 1621541165    | Incendiary Pistol Bullet     | ammo.pistol.fire         |
 | -422893115    | HV Pistol Ammo               | ammo.pistol.hv           |
@@ -205,6 +206,7 @@
 | -578028723    | Pickaxe                      | pickaxe                  |
 | -1379225193   | Eoka Pistol                  | pistol.eoka              |
 | 371156815     | M92 Pistol                   | pistol.m92               |
+| 449769971     | Nailgun                      | pistol.nailgun           |
 | 2033918259    | Python Revolver              | pistol.python            |
 | -930579334    | Revolver                     | pistol.revolver          |
 | 548699316     | Semi-Automatic Pistol        | pistol.semiauto          |

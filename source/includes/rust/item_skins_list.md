@@ -15,6 +15,7 @@
 | 930478674    | Armored Vault Door                |
 | 948938468    | Bunker Door                       |
 | 869475498    | Clockwork Portal                  |
+| 1176460121   | Cobalt Graffiti Door              |
 | 804286931    | Corroded Bronze Door              |
 | 911652483    | Green Armored Container Door      |
 | 801889927    | High Voltage                      |
@@ -68,6 +69,7 @@
 | 1129886223   | The Beast Of The East             |
 | 1124932043   | The Reptile                       |
 | 1140366289   | War Machine AK47                  |
+| 1159593268   | Wyrm Rifle                        |
 
 ## Bandana Mask (mask.bandana)
 | Skin Id      | Skin name                         |
@@ -259,6 +261,8 @@
 | 1129809202   | Funhouse Helmet                   |
 | 970583835    | Junkyard Samurai Helmet           |
 | 843676357    | Lizard Skull                      |
+| 1154453278   | Mad Helmet                        |
+| 1174375607   | Metalhunter Can Helmet            |
 | 891592450    | Nordic Beast Helmet               |
 | 1104118217   | Plywood Helmet                    |
 | 948491992    | Roadsign Warrior Helmet           |
@@ -289,6 +293,7 @@
 | 809964230    | HazardCross                       |
 | 1127389810   | Lone Wulf Crossbow                |
 | 1115959202   | Mad Crossbow                      |
+| 1184318659   | Marauder                          |
 | 1097642159   | Northwind Crossbow                |
 | 1089558546   | POP Crossbow                      |
 | 856029421    | Tank Crossbow                     |
@@ -301,6 +306,7 @@
 | 866745136    | Bandito SMG                       |
 | 1081305198   | Bone Shaman SMG                   |
 | 931547202    | Engineer SMG                      |
+| 1185311263   | Finish Line SMG                   |
 | 816728172    | Firestarter Custom SMG            |
 | 897099822    | Hailstorm SMG                     |
 | 892212957    | Hunter SMG                        |
@@ -355,6 +361,7 @@
 |--------------|-----------------------------------|
 | 1180981036   | Chop Shop Garage Door             |
 | 1180968592   | Defense Garage Door               |
+| 1183127702   | Rolling Exit Door                 |
 
 ## Hammer (hammer)
 | Skin Id      | Skin name                         |
@@ -833,6 +840,7 @@
 | 1159597292   | Heavy Alloy Vest                  |
 | 879861502    | Junker's Vest                     |
 | 934744263    | Junkyard Samurai Vest             |
+| 1154446174   | Mad Vest                          |
 | 1119760089   | Metalhunter Roadsign Vest         |
 | 892402754    | Nordic Beast Vest                 |
 | 953124938    | Patchwork Cuirass                 |
@@ -860,6 +868,7 @@
 | 1159599284   | Heavy Alloy Pants                 |
 | 879861153    | Junker's Kilt                     |
 | 934742835    | Junkyard Samurai Pants            |
+| 1154469089   | Mad Pants                         |
 | 1106569231   | Metalhunter Roadsign Pants        |
 | 794291485    | Military Camo Roadsign Kilt       |
 | 892414125    | Nordic Beast Kilt                 |
@@ -957,6 +966,7 @@
 | 937863988    | Checkpoint SAP                    |
 | 876007573    | Chrome SAP                        |
 | 10087        | Contamination Pistol              |
+| 1183693235   | Croc Shot                         |
 | 1158943049   | Demonic Pistol                    |
 | 863443112    | Desert Hunter                     |
 | 953126981    | Dime Bag SAP                      |
@@ -1005,6 +1015,7 @@
 | 1113987623   | Hero's SAR                        |
 | 942919370    | Meridian SAR                      |
 | 1135415770   | Pharaoh SAR                       |
+| 1182015913   | Saboteur Rifle                    |
 | 1170719113   | SAR Scarecrow                     |
 | 875259741    | Sublime SAR                       |
 | 1112906123   | Suzy-Q SAR                        |
@@ -1112,6 +1123,7 @@
 | 1058431260   | Geode Hatchet                     |
 | 797445687    | Ice Tooth                         |
 | 854688691    | Large Fruit Pit Hatchet           |
+| 1184754750   | Midas Hatchet                     |
 | 912599650    | Soul Reaper Stone Hatchet         |
 | 1151551275   | Tirbal Stone Hatchet              |
 | 878257758    | Volcanic Stone Hatchet            |
@@ -1195,6 +1207,7 @@
 | 819137470    | Rustpunk Scattergun               |
 | 661319648    | RustPunk Waterpipe Shotgun        |
 | 10143        | The Peace Pipe                    |
+| 1181616781   | Twisted Pipe                      |
 | 832764933    | Western Waterpipe Shotgun         |
 
 ## Wood Storage Box (box.wooden)
