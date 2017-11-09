@@ -40,6 +40,7 @@
 | 924020531    | Cartagena AK47                    |
 | 937864743    | Checkpoint AK47                   |
 | 875130056    | Claw AK47                         |
+| 1174389582   | Cobra                             |
 | 1102750231   | Conquerer AK47                    |
 | 840477492    | Crimson King                      |
 | 885146172    | Dark Flames                       |
@@ -267,6 +268,7 @@
 | 1104118217   | Plywood Helmet                    |
 | 948491992    | Roadsign Warrior Helmet           |
 | 806212029    | Rusty Coffee Can Helmet           |
+| 1151227603   | Saboteur's Can Helmet             |
 | 784910461    | Skull Hazard                      |
 | 814098474    | Spare Parts                       |
 | 919595880    | Sunrise Helmet                    |
@@ -290,6 +292,7 @@
 | 874268567    | Chrome Crossbow                   |
 | 883141682    | Doomwing Crossbow                 |
 | 818070371    | Engraved Crossbow                 |
+| 1181976746   | Gurkha Crossbow                   |
 | 809964230    | HazardCross                       |
 | 1127389810   | Lone Wulf Crossbow                |
 | 1115959202   | Mad Crossbow                      |
@@ -360,6 +363,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 1180981036   | Chop Shop Garage Door             |
+| 1186351868   | Cobalt Space Door                 |
 | 1180968592   | Defense Garage Door               |
 | 1183127702   | Rolling Exit Door                 |
 
@@ -401,6 +405,7 @@
 | 953186726    | Refined Hatchet                   |
 | 912857899    | Replacement Blade Hatchet         |
 | 1152712210   | Soul Collector Hatchet            |
+| 1193102490   | Soulburn Hatchet                  |
 | 1107210636   | Spider King Hatchet               |
 | 928879549    | Sunrise Hatchet                   |
 | 1137482995   | Survivor Hatchet                  |
@@ -545,6 +550,7 @@
 | 1067191615   | Forgotten Temple Box              |
 | 10141        | Gun Box                           |
 | 1102266445   | Hazard Crate                      |
+| 1192724938   | Idolized Toolbox                  |
 | 797422750    | Large Stone Box                   |
 | 969292267    | Leather Bound Trunk               |
 | 904962497    | Long Hauler's Trunk               |
@@ -773,6 +779,7 @@
 | 813631833    | Native Gold                       |
 | 813628651    | Native Yellow                     |
 | 921253888    | Polymer Pump Shotgun              |
+| 1191938171   | Problem Solver Stick              |
 | 1132569603   | Rebel Shotgun                     |
 | 850130444    | Tank Pump Shotgun                 |
 | 849997025    | The Billy Baroo                   |
@@ -789,6 +796,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 910665268    | Bandito Revolver                  |
+| 1192708586   | Death Viper                       |
 | 855087726    | Defender                          |
 | 1141054826   | Dynamo Revolver                   |
 | 815532676    | Eightball                         |
@@ -846,6 +854,7 @@
 | 953124938    | Patchwork Cuirass                 |
 | 1098029034   | Plywood Vest                      |
 | 950173158    | Raider Roadsign Vest              |
+| 1151219812   | Saboteur's Vest                   |
 | 828175620    | Spiked Metal Vest                 |
 | 1130406273   | Tank Crew Roadsign Vest           |
 | 1130599258   | Utilizer Vest                     |
@@ -875,6 +884,7 @@
 | 953123363    | Patchwork War Kilt                |
 | 1103687152   | Plywood Kilt                      |
 | 950176525    | Raider Roadsign Pants             |
+| 1151205503   | Saboteur's Pants                  |
 | 828173323    | Spiked Metal Kilt                 |
 | 1130405286   | Tank Crew Roadsign Pants          |
 | 1130610212   | Utilizer Pants                    |
@@ -1017,6 +1027,7 @@
 | 1135415770   | Pharaoh SAR                       |
 | 1182015913   | Saboteur Rifle                    |
 | 1170719113   | SAR Scarecrow                     |
+| 1193105339   | Soulburn SAR                      |
 | 875259741    | Sublime SAR                       |
 | 1112906123   | Suzy-Q SAR                        |
 | 899564368    | To Hell And Back                  |
@@ -1097,6 +1108,7 @@
 | 1102195403   | Sleep Catcher                     |
 | 1174407153   | Spooky Pumpkin Bed                |
 | 1132190812   | Star Bedroll                      |
+| 1186393080   | Supply Drop Sleeping Bag          |
 | 10077        | Tiger Crown Sleeping Bag          |
 | 944993672    | Undead Bedroll                    |
 | 10076        | Wood Camo Sleeping Bag            |
@@ -1186,6 +1198,7 @@
 | 861029759    | Army Vending Machine              |
 | 862137836    | Base Invaders                     |
 | 869474635    | Brass Vending Machine             |
+| 1161727529   | Lavish Vending Machine            |
 | 860916780    | Rox Black Vending Machine         |
 | 862291005    | RustyCola Machine                 |
 | 861548229    | Sand Tone Vending Machine         |

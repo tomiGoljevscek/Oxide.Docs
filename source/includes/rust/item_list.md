@@ -177,6 +177,7 @@
 | 3343606       | Mace                         | mace                     |
 | 825308669     | Machete                      | machete                  |
 | 830965940     | Mail Box                     | mailbox                  |
+| 1662628660    | m-facialhair02               | male.facialhair.style02  |
 | -1832205789   | m-hairstyle-1                | male_hairstyle_01        |
 | -1832205788   | m-hairstyle-2                | male_hairstyle_02        |
 | 1625090418    | m-armpit01                   | malearmpithair.style01   |
