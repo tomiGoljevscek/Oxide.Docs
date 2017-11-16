@@ -59,6 +59,7 @@
 | 10137        | Military Camo AK47                |
 | 1118706219   | Night Howler AK47                 |
 | 1161844853   | Panther AK47                      |
+| 1120500163   | Piranha AK47                      |
 | 911726740    | Rabble Rouser AK47                |
 | 895307805    | Retro Car Parts AK47              |
 | 654502185    | Rustpunk AK47                     |
@@ -195,6 +196,7 @@
 | 831798567    | Graffiti Bucket Helmet            |
 | 926313433    | Green Riveted Bucket Helmet       |
 | 10127        | Medic Helmet                      |
+| 1197730661   | Punk Bucket                       |
 | 964461549    | Road Cone Helmet                  |
 | 1073904216   | Roasted Bucket Helmet             |
 | 867605376    | Rusty Bucket Helmet               |
@@ -308,6 +310,7 @@
 | 820402694    | Anarchy SMG                       |
 | 866745136    | Bandito SMG                       |
 | 1081305198   | Bone Shaman SMG                   |
+| 1128840196   | Dark Flames SMG                   |
 | 931547202    | Engineer SMG                      |
 | 1185311263   | Finish Line SMG                   |
 | 816728172    | Firestarter Custom SMG            |
@@ -541,6 +544,7 @@
 | 10122        | Christmas Storage                 |
 | 854002617    | Components Storage                |
 | 576569265    | D.O.A Trunk                       |
+| 1199632980   | Danger Box                        |
 | 1116497962   | Dead Pirates Chest                |
 | 798455489    | Explosives Box                    |
 | 942678679    | Fire Hose Box                     |
@@ -661,6 +665,7 @@
 | 799044333    | Blingin Grill                     |
 | 821441043    | BoltFace Metal Facemask           |
 | 835026584    | Bronze War Mask                   |
+| 1121237616   | Bruiser Facemask                  |
 | 831923884    | Carbon Facemask                   |
 | 939788004    | Clan Leader Mask                  |
 | 792079554    | Death Facemask                    |
@@ -936,6 +941,7 @@
 | 911446362    | Dark Arts Icepick                 |
 | 820810719    | Inferno Hazard Salvaged Icepick   |
 | 844666224    | Lavapick                          |
+| 933760454    | Raven                             |
 | 1121804393   | Rocket Scrap Salvaged Pickaxe     |
 | 843454856    | Runic Ice Pick                    |
 | 1124734833   | Voodoo Daddy Icepick              |
@@ -988,6 +994,7 @@
 | 1121906926   | Golden Dragon                     |
 | 805925675    | Golden Leaf SAP                   |
 | 10108        | Halloween Bat                     |
+| 954520976    | Khalifa SAP                       |
 | 1113544521   | Last Eclipse SAP                  |
 | 830255284    | LCD Marine Sidearm                |
 | 899942580    | Looter's SAP                      |
@@ -1024,6 +1031,7 @@
 | 1129722099   | Hellcat SAR                       |
 | 1113987623   | Hero's SAR                        |
 | 942919370    | Meridian SAR                      |
+| 1098038362   | Nightmare SAR                     |
 | 1135415770   | Pharaoh SAR                       |
 | 1182015913   | Saboteur Rifle                    |
 | 1170719113   | SAR Scarecrow                     |
@@ -1037,7 +1045,9 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 901194793    | Ambulance Door                    |
+| 950560231    | Antique Metal Door                |
 | 836815358    | Army Metal Door                   |
+| 1170684837   | Aztec Door                        |
 | 1109694864   | Blue Puzzle Door                  |
 | 1066783524   | Brass Sentinel Door               |
 | 1124738987   | Dead Room Door                    |
@@ -1137,6 +1147,7 @@
 | 854688691    | Large Fruit Pit Hatchet           |
 | 1184754750   | Midas Hatchet                     |
 | 912599650    | Soul Reaper Stone Hatchet         |
+| 1196674526   | Stonecraft Hatchet                |
 | 1151551275   | Tirbal Stone Hatchet              |
 | 878257758    | Volcanic Stone Hatchet            |
 
@@ -1147,6 +1158,7 @@
 | 1127557296   | Aztec Jade Pick Axe               |
 | 840380436    | Bloody Tooth Pickaxe              |
 | 886904592    | Jawbreaker                        |
+| 1196675392   | Stonecraft Pick Axe               |
 | 837149011    | Uprising Stone Pickaxe            |
 
 ## Table (table)
