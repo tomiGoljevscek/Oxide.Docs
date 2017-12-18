@@ -28,6 +28,7 @@
 | 102672084     | Hide Poncho                  | attire.hide.poncho       |
 | -132588262    | Hide Skirt                   | attire.hide.skirt        |
 | -1666761111   | Hide Vest                    | attire.hide.vest         |
+| -966287254    | Reindeer Antlers             | attire.reindeer.headband |
 | 563023711     | Auto Turret                  | autoturret               |
 | 790921853     | Salvaged Axe                 | axe.salvaged             |
 | -337261910    | Bandage                      | bandage                  |
@@ -41,7 +42,7 @@
 | 97329         | Barbeque                     | bbq                      |
 | 1325935999    | Raw Bear Meat                | bearmeat                 |
 | -2066726403   | Burnt Bear Meat              | bearmeat.burned          |
-| -2043730634   |  Cooked Bear Meat            | bearmeat.cooked          |
+| -2043730634   | Cooked Bear Meat             | bearmeat.cooked          |
 | 97409         | Bed                          | bed                      |
 | 1611480185    | Black Raspberries            | black.raspberries        |
 | -1386464949   | Bleach                       | bleach                   |
@@ -71,6 +72,7 @@
 | -171664558    | Can of Tuna                  | can.tuna                 |
 | 1050986417    | Empty Tuna Can               | can.tuna.empty           |
 | 523409530     | Candy Cane                   | candycane                |
+| -1693683664   | Candy Cane Club              | candycaneclub            |
 | 1300054961    | CCTV Camera                  | cctv.camera              |
 | -2095387015   | Ceiling Light                | ceilinglight             |
 | 94623429      | Chair                        | chair                    |
@@ -111,9 +113,11 @@
 | -1034048911   | Animal Fat                   | fat.animal               |
 | 305916740     | f-hairstyle-1                | female_hairstyle_01      |
 | 305916741     | f-hairstyle-2                | female_hairstyle_02      |
+| 305916742     | f-hairstyle-3                | female_hairstyle_03      |
 | 252529905     | f-armpit01                   | femalearmpithair.style01 |
 | 471582113     | f-eyebrow01                  | femaleeyebrow.style01    |
 | -1138648591   | f-pubic01                    | femalepubichair.style01  |
+| 1908328648    | Stone Fireplace              | fireplace.stone          |
 | -2078972355   | Cooked Fish                  | fish.cooked              |
 | 88869913      | Minnows                      | fish.minnows             |
 | -533484654    | Raw Fish                     | fish.raw                 |
@@ -180,6 +184,7 @@
 | 1662628660    | m-facialhair02               | male.facialhair.style02  |
 | -1832205789   | m-hairstyle-1                | male_hairstyle_01        |
 | -1832205788   | m-hairstyle-2                | male_hairstyle_02        |
+| -1832205787   | m-hairstyle-3                | male_hairstyle_03        |
 | 1625090418    | m-armpit01                   | malearmpithair.style01   |
 | -1269800768   | m-eyebrow01                  | maleeyebrow.style01      |
 | 429648208     | m-pubic01                    | malepubichair.style01    |
@@ -281,6 +286,8 @@
 | -2094080303   | MP5A4                        | smg.mp5                  |
 | 456448245     | Thompson                     | smg.thompson             |
 | -2092529553   | SMG Body                     | smgbody                  |
+| 691633666     | Snowball                     | snowball                 |
+| -2055888649   | Snowman                      | snowman                  |
 | -2118132208   | Stone Spear                  | spear.stone              |
 | -1127699509   | Wooden Spear                 | spear.wooden             |
 | -685265909    | Wooden Floor Spikes          | spikes.floor             |
@@ -324,6 +331,7 @@
 | -1021702157   | Metal Window Bars            | wall.window.bars.metal   |
 | -402507101    | Reinforced Window Bars       | wall.window.bars.toptier |
 | -1556671423   | Wooden Window Bars           | wall.window.bars.wood    |
+| 61936445      | Reinforced Glass Window      | wall.window.glass.reinforced|
 | 112903447     | Water                        | water                    |
 | -1628526499   | Water Barrel                 | water.barrel             |
 | 1817873886    | Large Water Catcher          | water.catcher.large      |
@@ -350,6 +358,17 @@
 | -481416622    | Work Bench Level 1           | workbench1               |
 | -481416621    | Work Bench Level 2           | workbench2               |
 | -481416620    | Work Bench Level 3           | workbench3               |
+| 1588977225    | Decorative Baubels           | xmas.decoration.baubels  |
+| 918540912     | Decorative Plastic Candy Canes| xmas.decoration.candycanes|
+| -471874147    | Decorative Gingerbread Men   | xmas.decoration.gingerbreadmen|
+| 205978836     | Tree Lights                  | xmas.decoration.lights   |
+| -1044400758   | Decorative Pinecones         | xmas.decoration.pinecone |
+| -2073307447   | Star Tree Topper             | xmas.decoration.star     |
+| 435230680     | Decorative Tinsel            | xmas.decoration.tinsel   |
+| -1151126752   | Christmas Lights             | xmas.lightstring         |
 | -1732316031   | Large Present                | xmas.present.large       |
 | -2130280721   | Medium Present               | xmas.present.medium      |
 | -1725510067   | Small Present                | xmas.present.small       |
+| -1926458555   | Christmas Tree               | xmas.tree                |
+| -460592212    | Festive Window Garland       | xmas.window.garland      |
+| 1540879296    | Christmas Door Wreath        | xmasdoorwreath           |

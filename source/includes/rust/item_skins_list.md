@@ -11,6 +11,8 @@
 ## Armored Door (door.hinged.toptier)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1228341388   | Apocalypse Door                   |
+| 1206145767   | Aristocratic Armored Door         |
 | 1114020299   | Armored Concrete                  |
 | 930478674    | Armored Vault Door                |
 | 948938468    | Bunker Door                       |
@@ -39,6 +41,7 @@
 | 1112904406   | Betty Lou AK47                    |
 | 924020531    | Cartagena AK47                    |
 | 937864743    | Checkpoint AK47                   |
+| 1196676446   | Chivalry AK47                     |
 | 875130056    | Claw AK47                         |
 | 1174389582   | Cobra                             |
 | 1102750231   | Conquerer AK47                    |
@@ -56,6 +59,7 @@
 | 889710179    | Glory AK47                        |
 | 925720043    | Jaws AK47                         |
 | 908297014    | Lonewolf AK47 - Blue              |
+| 1213092632   | Mandrill                          |
 | 10137        | Military Camo AK47                |
 | 1118706219   | Night Howler AK47                 |
 | 1161844853   | Panther AK47                      |
@@ -271,6 +275,8 @@
 | 948491992    | Roadsign Warrior Helmet           |
 | 806212029    | Rusty Coffee Can Helmet           |
 | 1151227603   | Saboteur's Can Helmet             |
+| 974321420    | Scrap Hazard Helmet               |
+| 1202978872   | Scrapper Helmet                   |
 | 784910461    | Skull Hazard                      |
 | 814098474    | Spare Parts                       |
 | 919595880    | Sunrise Helmet                    |
@@ -301,6 +307,7 @@
 | 1184318659   | Marauder                          |
 | 1097642159   | Northwind Crossbow                |
 | 1089558546   | POP Crossbow                      |
+| 1206661880   | Primal Crossbow                   |
 | 856029421    | Tank Crossbow                     |
 
 ## Custom SMG (smg.2)
@@ -317,6 +324,7 @@
 | 897099822    | Hailstorm SMG                     |
 | 892212957    | Hunter SMG                        |
 | 904964438    | Looter's SMG                      |
+| 1198145190   | Polymer SMG                       |
 | 1114032911   | Safari SMG                        |
 | 1107572641   | Survivor SMG                      |
 | 854914986    | Tank SMG                          |
@@ -328,12 +336,14 @@
 | 916790605    | Aircraft Parts DBS                |
 | 865019380    | Bespoke DBS                       |
 | 1119662164   | Caution DBS                       |
+| 1213074188   | Double Trouble DBS                |
 | 948113632    | Grandfather DBS                   |
 | 854987948    | Heat Double Shotgun               |
 | 860153737    | Industrial DBS                    |
 | 1174675399   | Military Boomstick                |
 | 858957151    | Nitro-Maniac DBS                  |
 | 1127266590   | Quick Death DBS                   |
+| 1225880743   | Vigilante DBS                     |
 
 ## Eoka Pistol (pistol.eoka)
 | Skin Id      | Skin name                         |
@@ -362,9 +372,17 @@
 | 873612402    | Urban Fridge                      |
 | 886416273    | Victorian Food Vault              |
 
+## Furnace (furnace)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1230386524   | Blacksmith Furnace                |
+| 1230680321   | Cannibal Furnace                  |
+| 1231071505   | Victorian Furnace                 |
+
 ## Garage Door (wall.frame.garagedoor)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1209586977   | Checkpoint Door                   |
 | 1180981036   | Chop Shop Garage Door             |
 | 1186351868   | Cobalt Space Door                 |
 | 1180968592   | Defense Garage Door               |
@@ -375,6 +393,7 @@
 |--------------|-----------------------------------|
 | 938806184    | Builders Guild Hammer             |
 | 1128710439   | Dead Hammer                       |
+| 1208606722   | Frost Hammer                      |
 | 1116103194   | God Of Builders Hammer            |
 | 1120977731   | Kitchen Tile Hammer               |
 | 1125995819   | Museum Raider Hammer              |
@@ -407,6 +426,7 @@
 | 910196839    | Red Chopper                       |
 | 953186726    | Refined Hatchet                   |
 | 912857899    | Replacement Blade Hatchet         |
+| 1220880032   | Siege Breaker                     |
 | 1152712210   | Soul Collector Hatchet            |
 | 1193102490   | Soulburn Hatchet                  |
 | 1107210636   | Spider King Hatchet               |
@@ -463,6 +483,7 @@
 | 14179        | Black Hoodie                      |
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
+| 1209453497   | Charitable Rust 2017 Hoodie       |
 | 1150818496   | Conquistador Hoodie               |
 | 10133        | Cuda87 Hoodie                     |
 | 904963081    | Denim Studded Hoodie              |
@@ -539,7 +560,9 @@
 |--------------|-----------------------------------|
 | 813269955    | Ammo Box                          |
 | 10124        | Ammo Wooden Box                   |
+| 1206100969   | Aztec Trunk                       |
 | 892062620    | Cabin Chest                       |
+| 1209454231   | Charitable Rust 2017 Relief Crate |
 | 810383121    | Christmas Holiday LWB             |
 | 10122        | Christmas Storage                 |
 | 854002617    | Components Storage                |
@@ -563,6 +586,7 @@
 | 928502682    | Metropolitan Trunk                |
 | 842083350    | Military Crate                    |
 | 942917320    | Mini Nuke Case                    |
+| 1212838382   | Muertos Chest                     |
 | 932160919    | Padded Armor Trunk                |
 | 878850459    | Recyclables Box                   |
 | 881249489    | Royal Wooden Box                  |
@@ -625,6 +649,7 @@
 ## Longsword (longsword)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1222939471   | Aztec Macuahuitl                  |
 | 825169057    | Danger Fork                       |
 | 796733487    | Hot-tempered Longsword            |
 | 831965423    | Kryss Longsword                   |
@@ -791,6 +816,15 @@
 | 10140        | The Swampmaster                   |
 | 731119713    | Urban Afterburn Pump Shotgun      |
 
+## Python Revolver (pistol.python)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1216163401   | Black Mamba                       |
+| 1228154190   | Dark Silver Python                |
+| 1215390635   | Devourer                          |
+| 1217395562   | Engraved Python                   |
+| 1214609010   | Phantom                           |
+
 ## Reactive Target (target.reactive)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
@@ -818,6 +852,7 @@
 | 1161550991   | Rebel Revolver                    |
 | 1099177489   | Shamanism Revolver                |
 | 973871108    | Sting Revolver                    |
+| 1217455695   | Tribal Revolver                   |
 | 887846629    | Western Revolver Gold             |
 
 ## Riot Helmet (riot.helmet)
@@ -860,6 +895,8 @@
 | 1098029034   | Plywood Vest                      |
 | 950173158    | Raider Roadsign Vest              |
 | 1151219812   | Saboteur's Vest                   |
+| 974336556    | Scrap Hazard Vest                 |
+| 1202977830   | Scrapper Vest                     |
 | 828175620    | Spiked Metal Vest                 |
 | 1130406273   | Tank Crew Roadsign Vest           |
 | 1130599258   | Utilizer Vest                     |
@@ -890,6 +927,8 @@
 | 1103687152   | Plywood Kilt                      |
 | 950176525    | Raider Roadsign Pants             |
 | 1151205503   | Saboteur's Pants                  |
+| 974345761    | Scrap Hazard Kilt                 |
+| 1202976443   | Scrapper Pants                    |
 | 828173323    | Spiked Metal Kilt                 |
 | 1130405286   | Tank Crew Roadsign Pants          |
 | 1130610212   | Utilizer Pants                    |
@@ -897,6 +936,7 @@
 ## Rock (rock)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1209361016   | Ancient World Rock                |
 | 1084822722   | Barb Wire Rock                    |
 | 864277659    | Fresh Brain                       |
 | 858285362    | Frozen Turkey                     |
@@ -905,6 +945,7 @@
 | 971411353    | Junkyard Rock                     |
 | 807372963    | Meteorite                         |
 | 933809748    | Mossy Fossil                      |
+| 1205671322   | My Only Friend                    |
 | 834287924    | Ripe Watermelon                   |
 | 824904841    | Shard of True Ice                 |
 | 1126754320   | Sharptooth                        |
@@ -954,6 +995,7 @@
 | 893871715    | Roadsign Sword                    |
 | 969725237    | Rusty Blade                       |
 | 1154175800   | Sheet Metal Sword                 |
+| 1212723513   | Toothed Sword                     |
 | 930557072    | Trained To Kill                   |
 | 825240467    | Wooden Sword                      |
 
@@ -1021,6 +1063,7 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 828616457    | Army SAR                          |
+| 1195821858   | Aztec SAR                         |
 | 839302795    | Bandito SAR                       |
 | 1168002579   | Blood Dragon Rifle                |
 | 900921542    | Fire Starter SAR                  |
@@ -1054,6 +1097,7 @@
 | 1175547229   | Death Crypt Door                  |
 | 827190175    | Doomsday Door                     |
 | 948930384    | Door to Death                     |
+| 1213613030   | Eisensheet Door                   |
 | 915684869    | Fire Truck Door                   |
 | 942658960    | Grey Fire Door                    |
 | 1176406578   | Halloween Door                    |
@@ -1063,6 +1107,7 @@
 | 1141051963   | KEEP OUT                          |
 | 917719889    | Laboratory Door                   |
 | 921076360    | Locomotive Door                   |
+| 1211678957   | Lost Metal Door                   |
 | 832957536    | Metal Shutter Door                |
 | 959898495    | Metalshop Scrap Door              |
 | 922419554    | Military Vehicle Door             |
@@ -1122,6 +1167,7 @@
 | 10077        | Tiger Crown Sleeping Bag          |
 | 944993672    | Undead Bedroll                    |
 | 10076        | Wood Camo Sleeping Bag            |
+| 1228238024   | Wood Sleeping Bag                 |
 
 ## Snow Jacket - Red (jacket.snow)
 | Skin Id      | Skin name                         |
@@ -1227,10 +1273,12 @@
 |--------------|-----------------------------------|
 | 1168524895   | Flaming Pipe                      |
 | 907070012    | Hot Topic Waterpipe Shotgun       |
+| 1219492103   | Junkyard Pipe                     |
 | 1147084675   | Luxuria                           |
 | 912464069    | Riveted Pipe Shotgun              |
 | 819137470    | Rustpunk Scattergun               |
 | 661319648    | RustPunk Waterpipe Shotgun        |
+| 1205464046   | Sea Hunter Shotgun                |
 | 10143        | The Peace Pipe                    |
 | 1181616781   | Twisted Pipe                      |
 | 832764933    | Western Waterpipe Shotgun         |
@@ -1238,6 +1286,7 @@
 ## Wood Storage Box (box.wooden)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1212709764   | Decorative Small Box              |
 | 787716105    | First Aid Box                     |
 | 885103417    | Medieval Small Wooden Box         |
 | 889212734    | Seed Box                          |
@@ -1252,6 +1301,7 @@
 | 838700836    | Bleached Ebony Door               |
 | 804991715    | Christmas Tree Door               |
 | 809253752    | Door to Heaven                    |
+| 962427350    | Forgotten Temple Door             |
 | 1131650209   | Lone Wolf Door                    |
 | 804854812    | Old Heavy Wooden Door             |
 | 1132144523   | Ornate Wooden Door                |
