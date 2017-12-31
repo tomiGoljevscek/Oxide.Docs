@@ -11,6 +11,29 @@ void OnUserApprove(ConnectionLoginData data)
 
  * Returning true overrides default behavior, plugin should call approval.Deny if it does this
 
+## OnPlayerCapture
+
+``` csharp
+void OnPlayerCapture(PlayerCaptureEvent e)
+{
+    Puts("OnPlayerCapture works!");
+}
+```
+
+ * Called once the loading bar of roping a player is completed.
+
+## OnPlayerChat
+
+``` csharp
+void OnPlayerChat(PlayerEvent e)
+{
+    Puts("OnPlayerChat works!");
+}
+```
+
+ * Called when the player sends chat to the server
+ * Returning true overrides default behavior of chat, not commands
+
 ## OnPlayerConnected
 
 ``` csharp
@@ -35,17 +58,37 @@ void OnPlayerDisconnected(Player player)
  * No return behavior
  * Called after the player has disconnected from the server
 
-## OnPlayerSpawn
+## OnPlayerEscape
 
 ``` csharp
-void OnPlayerSpawn(PlayerFirstSpawnEvent e)
+void OnPlayerEscape(PlayerEscapeEvent e)
 {
-    Puts("OnPlayerSpawn works!");
+    Puts("OnPlayerEscape works!");
 }
 ```
 
- * No return behavior
- * Called when the player spawns
+## OnPlayerInteract
+
+``` csharp
+void OnPlayerInteract(InteractEvent e)
+{
+    Puts("OnPlayerInteract works!");
+}
+```
+
+ * Called when a player interacts with an object, like a crafting station, loot, chests, or anything with an inventory.
+
+## OnPlayerRelease
+
+``` csharp
+void OnPlayerRelease(PlayerEscapeEvent e)
+{
+    Puts("OnPlayerRelease works!");
+}
+```
+
+ * Called when a roped player gets freed from the rope.
+ * Called when a roped player escapes.
 
 ## OnPlayerRespawn
 
@@ -59,36 +102,36 @@ void OnPlayerRespawn(PlayerRespawnEvent e)
  * No return behavior
  * Called when the player respawns
 
-## OnPlayerChat
+ ## OnPlayerSleep
 
 ``` csharp
-void OnPlayerChat(PlayerEvent e)
+void OnPlayerSleep(PlayerSleepEvent e)
 {
-    Puts("OnPlayerChat works!");
+    Puts("OnPlayerSleep works!");
 }
 ```
 
- * Called when the player sends chat to the server
- * Returning true overrides default behavior of chat, not commands
+ * Called when a player sleeps (logout).
 
-## OnPlayerCapture
+## OnPlayerSpawn
 
 ``` csharp
-void OnPlayerCapture(PlayerCaptureEvent e)
+void OnPlayerSpawn(PlayerFirstSpawnEvent e)
 {
-    Puts("OnPlayerCapture works!");
+    Puts("OnPlayerSpawn works!");
 }
 ```
 
- * Called once the loading bar of roping a player is completed.
+ * No return behavior
+ * Called when the player spawns
 
-## OnPlayerRelease
+## OnPlayerUnlock
 
 ``` csharp
-void OnPlayerRelease(PlayerEscapeEvent e)
+void OnPlayerUnlock(ObjectUnlockEvent e)
 {
-    Puts("OnPlayerRelease works!");
+    Puts("OnPlayerUnlock works!");
 }
 ```
 
- * Called when a roped player gets freed from the rope.
+ * Called when a player unlocks a door or cage with a lockpick.
