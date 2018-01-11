@@ -20,6 +20,8 @@
 | 1685058759    | Anti-Radiation Pills         | antiradpills             |
 | 93029210      | Apple                        | apple                    |
 | -1565095136   | Rotten Apple                 | apple.spoiled            |
+| -1775362679   | Bone Arrow                   | arrow.bone               |
+| -1775249157   | Fire Arrow                   | arrow.fire               |
 | -1280058093   | High Velocity Arrow          | arrow.hv                 |
 | -420273765    | Wooden Arrow                 | arrow.wooden             |
 | -148163128    | Hide Boots                   | attire.hide.boots        |
@@ -42,7 +44,7 @@
 | 97329         | Barbeque                     | bbq                      |
 | 1325935999    | Raw Bear Meat                | bearmeat                 |
 | -2066726403   | Burnt Bear Meat              | bearmeat.burned          |
-| -2043730634   | Cooked Bear Meat             | bearmeat.cooked          |
+| -2043730634   |  Cooked Bear Meat            | bearmeat.cooked          |
 | 97409         | Bed                          | bed                      |
 | 1611480185    | Black Raspberries            | black.raspberries        |
 | -1386464949   | Bleach                       | bleach                   |
@@ -126,6 +128,7 @@
 | 1045869440    | Flame Thrower                | flamethrower             |
 | 1985408483    | Flame Turret                 | flameturret              |
 | 97513422      | Flare                        | flare                    |
+| 1496470781    | Flashlight                   | flashlight.held          |
 | -1722829188   | Floor grill                  | floor.grill              |
 | 1849912854    | Ladder Hatch                 | floor.ladder.hatch       |
 | -1266285051   | Fridge                       | fridge                   |
@@ -153,6 +156,7 @@
 | 124310981     | Wolf Headdress               | hat.wolf                 |
 | 698310895     | Hatchet                      | hatchet                  |
 | 523855532     | Hazmat Suit                  | hazmatsuit               |
+| 670655301     | Scientist Suit               | hazmatsuit_scientist     |
 | 1351172108    | Heavy Plate Helmet           | heavy.plate.helmet       |
 | 1404466285    | Heavy Plate Jacket           | heavy.plate.jacket       |
 | -1334615971   | Heavy Plate Pants            | heavy.plate.pants        |
@@ -365,6 +369,7 @@
 | -1044400758   | Decorative Pinecones         | xmas.decoration.pinecone |
 | -2073307447   | Star Tree Topper             | xmas.decoration.star     |
 | 435230680     | Decorative Tinsel            | xmas.decoration.tinsel   |
+| 1526866730    | Festive Doorway Garland      | xmas.door.garland        |
 | -1151126752   | Christmas Lights             | xmas.lightstring         |
 | -1732316031   | Large Present                | xmas.present.large       |
 | -2130280721   | Medium Present               | xmas.present.medium      |
