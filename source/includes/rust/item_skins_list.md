@@ -1267,3 +1267,92 @@
 |--------------|-----------------------------------|
 | 561462394    | Santa's Little Helper             |
 | 839819171    | Wasteland Hunter                  |
+
+## T-Shirt (tshirt)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10130        | Argyle Scavenger                  |
+| 10033        | Baseball Tshirt                   |
+| 10003        | Black Tshirt                      |
+| 14177        | Blue Tshirt                       |
+| 851890495    | Crossbone Crew                    |
+| 489329801    | Facepunch TShirt                  |
+| 14181        | Forest Camo Tshirt                |
+| 10024        | German Tshirt                     |
+| 10035        | Hacker Valley Veteran             |
+| 10046        | Missing Textures TShirt           |
+| 10038        | Murderer T-Shirt                  |
+| 101          | Red Tshirt                        |
+| 10025        | Russia Tshirt                     |
+| 10002        | Sandbox Game Shirt                |
+| 10134        | Ser Winter TShirt                 |
+| 489687236    | Shadowfrax TShirt                 |
+| 10041        | Skull & Bones TShirt              |
+| 10053        | Smile T-Shirt                     |
+| 10039        | Target Practice T-Shirt           |
+| 584379       | Urban Camo                        |
+| 10043        | Vyshyvanka Shirt                  |
+
+## Vending Machine (vending.machine)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 861029759    | Army Vending Machine              |
+| 862137836    | Base Invaders                     |
+| 869474635    | Brass Vending Machine             |
+| 1161727529   | Lavish Vending Machine            |
+| 860916780    | Rox Black Vending Machine         |
+| 862291005    | RustyCola Machine                 |
+| 861548229    | Sand Tone Vending Machine         |
+| 871927557    | Urban Vending Machine             |
+
+## Water Purifier (water.purifier)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 886677071    | Distillery                        |
+| 786826476    | Radioactive Water Purifier        |
+
+## Waterpipe Shotgun (shotgun.waterpipe)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1234721165   | Apostate                          |
+| 1209128595   | Blacksmith's Pipe                 |
+| 1168524895   | Flaming Pipe                      |
+| 907070012    | Hot Topic Waterpipe Shotgun       |
+| 1219492103   | Junkyard Pipe                     |
+| 1147084675   | Luxuria                           |
+| 912464069    | Riveted Pipe Shotgun              |
+| 819137470    | Rustpunk Scattergun               |
+| 661319648    | RustPunk Waterpipe Shotgun        |
+| 1205464046   | Sea Hunter Shotgun                |
+| 10143        | The Peace Pipe                    |
+| 1181616781   | Twisted Pipe                      |
+| 832764933    | Western Waterpipe Shotgun         |
+
+## Wood Storage Box (box.wooden)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1212709764   | Decorative Small Box              |
+| 787716105    | First Aid Box                     |
+| 885103417    | Medieval Small Wooden Box         |
+| 889212734    | Seed Box                          |
+| 930694436    | Small Medical Box                 |
+| 1127078435   | Treasure Crate                    |
+
+## Wooden Door (door.hinged.wood)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1108316628   | Barricaded Door                   |
+| 1100873539   | Black Decorative Wood Door        |
+| 838700836    | Bleached Ebony Door               |
+| 804991715    | Christmas Tree Door               |
+| 809253752    | Door to Heaven                    |
+| 962427350    | Forgotten Temple Door             |
+| 1131650209   | Lone Wolf Door                    |
+| 804854812    | Old Heavy Wooden Door             |
+| 1132144523   | Ornate Wooden Door                |
+| 847902281    | Porthole Door                     |
+| 1100886818   | Red Decorative Wood Door          |
+| 923763807    | Riveted Wooden Door               |
+| 1127631900   | Sacrificial door                  |
+| 1176899114   | Trick Or Treat Door               |
+| 950184212    | Wise Door                         |
