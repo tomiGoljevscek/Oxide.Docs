@@ -54,6 +54,7 @@
 | 569119686     | Bone Armor                   | bone.armor.suit          |
 | 919780768     | Bone Club                    | bone.club                |
 | -365801095    | Bone Fragments               | bone.fragments           |
+| -1749787215   | Frog Boots                   | boots.frog               |
 | 68998734      | Bota Bag                     | botabag                  |
 | -853695669    | Hunting Bow                  | bow.hunting              |
 | -1026117678   | Repair Bench                 | box.repair.bench         |
@@ -171,6 +172,7 @@
 | -1616887133   | Snow Jacket - Red            | jacket.snow              |
 | -1284735799   | Jack O Lantern Angry         | jackolantern.angry       |
 | -1278649848   | Jack O Lantern Happy         | jackolantern.happy       |
+| -586116979    | Pickles                      | jar.pickle               |
 | 776005741     | Bone Knife                   | knife.bone               |
 | 108061910     | Wooden Ladder                | ladder.wooden.wall       |
 | -51678842     | Lantern                      | lantern                  |
