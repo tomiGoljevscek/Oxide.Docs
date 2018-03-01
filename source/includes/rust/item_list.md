@@ -16,6 +16,7 @@
 | 542276424     | High Velocity Rocket         | ammo.rocket.hv           |
 | 1594947829    | Smoke Rocket WIP!!!!         | ammo.rocket.smoke        |
 | -1035059994   | 12 Gauge Buckshot            | ammo.shotgun             |
+| 1818890814    | 12 Gauge Incendiary Shell    | ammo.shotgun.fire        |
 | 1819281075    | 12 Gauge Slug                | ammo.shotgun.slug        |
 | 1685058759    | Anti-Radiation Pills         | antiradpills             |
 | 93029210      | Apple                        | apple                    |
@@ -78,6 +79,7 @@
 | -1693683664   | Candy Cane Club              | candycaneclub            |
 | 1300054961    | CCTV Camera                  | cctv.camera              |
 | -2095387015   | Ceiling Light                | ceilinglight             |
+| 1428021640    | Chainsaw                     | chainsaw                 |
 | 94623429      | Chair                        | chair                    |
 | 1436001773    | Charcoal                     | charcoal                 |
 | 1711323399    | Burnt Chicken                | chicken.burned           |
@@ -139,6 +141,7 @@
 | -1779401418   | High External Stone Gate     | gates.external.high.stone|
 | -57285700     | High External Wooden Gate    | gates.external.high.wood |
 | 98228420      | Gears                        | gears                    |
+| 1422845239    | Geiger Counter               | geiger.counter           |
 | 277631078     | Wind Turbine                 | generator.wind.scrap     |
 | -522149009    | Glowing Eyes                 | gloweyes                 |
 | 3175989       | Glue                         | glue                     |
@@ -261,6 +264,7 @@
 | 2107229499    | Boots                        | shoes.boots              |
 | 191795897     | Double Barrel Shotgun        | shotgun.double           |
 | -1009492144   | Pump Shotgun                 | shotgun.pump             |
+| 621575320     | Spas-12 Shotgun              | shotgun.spas12           |
 | 2077983581    | Waterpipe Shotgun            | shotgun.waterpipe        |
 | -529054135    | Metal horizontal embrasure   | shutter.metal.embrasure.a|
 | -529054134    | Metal Vertical embrasure     | shutter.metal.embrasure.b|

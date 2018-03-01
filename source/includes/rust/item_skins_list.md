@@ -321,6 +321,7 @@
 | 883141682    | Doomwing Crossbow                 |
 | 818070371    | Engraved Crossbow                 |
 | 1181976746   | Gurkha Crossbow                   |
+| 1291686117   | Hawk Crossbow                     |
 | 809964230    | HazardCross                       |
 | 1127389810   | Lone Wulf Crossbow                |
 | 1115959202   | Mad Crossbow                      |
@@ -362,6 +363,7 @@
 | 854987948    | Heat Double Shotgun               |
 | 1260964187   | Hellion DBS                       |
 | 860153737    | Industrial DBS                    |
+| 1295701369   | Last Hero DBS                     |
 | 1174675399   | Military Boomstick                |
 | 858957151    | Nitro-Maniac DBS                  |
 | 1127266590   | Quick Death DBS                   |
@@ -412,6 +414,7 @@
 | 1277616284   | Iron Forge                        |
 | 1277183788   | Mosaic Furnace                    |
 | 1239083962   | Potbelly Furnace                  |
+| 1305743950   | Ritual Furnace                    |
 | 1230539924   | Snowboy                           |
 | 1282172459   | Totem Furnace                     |
 | 1261530424   | Urban Furnace                     |
@@ -425,7 +428,9 @@
 | 1186351868   | Cobalt Space Door                 |
 | 1180968592   | Defense Garage Door               |
 | 1238292260   | Factory Rolling Door              |
+| 1309406283   | Reactor Room 3 of 10              |
 | 1183127702   | Rolling Exit Door                 |
+| 1306203844   | Trash Garage Door                 |
 
 ## Hammer (hammer)
 | Skin Id      | Skin name                         |
@@ -469,6 +474,7 @@
 | 953186726    | Refined Hatchet                   |
 | 912857899    | Replacement Blade Hatchet         |
 | 1242774466   | Scrapper Hatchet                  |
+| 1291775183   | Shinobi Hatchet                   |
 | 1220880032   | Siege Breaker                     |
 | 1247701169   | Snow Valley Hatchet               |
 | 1152712210   | Soul Collector Hatchet            |
@@ -530,11 +536,13 @@
 | 10052        | Bloody Hoodie                     |
 | 14178        | Blue Hoodie                       |
 | 1209453497   | Charitable Rust 2017 Hoodie       |
+| 1305321596   | Chekist's Hoodie                  |
 | 1150818496   | Conquistador Hoodie               |
 | 10133        | Cuda87 Hoodie                     |
 | 904963081    | Denim Studded Hoodie              |
 | 889718910    | Desert Conqueror Hoodie           |
 | 1234693807   | Explorer Hoodie                   |
+| 1296608954   | Firefighter Hoodie                |
 | 954392337    | Gang Leader Hoodie                |
 | 14072        | Green Hoodie                      |
 | 959900137    | Huntsman Hoodie                   |
@@ -630,6 +638,7 @@
 | 1067191615   | Forgotten Temple Box              |
 | 10141        | Gun Box                           |
 | 1102266445   | Hazard Crate                      |
+| 1306240898   | Ichtaca Treasure Box              |
 | 1192724938   | Idolized Toolbox                  |
 | 797422750    | Large Stone Box                   |
 | 969292267    | Leather Bound Trunk               |
@@ -642,6 +651,7 @@
 | 942917320    | Mini Nuke Case                    |
 | 1212838382   | Muertos Chest                     |
 | 932160919    | Padded Armor Trunk                |
+| 1282838099   | Pandora's box                     |
 | 878850459    | Recyclables Box                   |
 | 881249489    | Royal Wooden Box                  |
 | 1169231428   | Salvaged Cargo Box                |
@@ -662,6 +672,7 @@
 | 883476299    | Bruiser Gloves                    |
 | 904961862    | Caravanner Gloves                 |
 | 661317919    | Duelist Gloves                    |
+| 1296614997   | Firefighter Gloves                |
 | 938394833    | Junklord Gloves                   |
 | 921030333    | Merciless Gloves                  |
 | 1106600389   | Metalhunter Gloves                |
@@ -716,6 +727,7 @@
 |--------------|-----------------------------------|
 | 832233112    | Chainmail                         |
 | 842577956    | Chest Resistance                  |
+| 1270065959   | Conquistador Chest Plate          |
 | 924019814    | Engineer's Chest Plate            |
 | 796728308    | Flak Vest - Green                 |
 | 794169855    | Forest Camo Chest Plate           |
@@ -748,6 +760,7 @@
 | 1121237616   | Bruiser Facemask                  |
 | 831923884    | Carbon Facemask                   |
 | 939788004    | Clan Leader Mask                  |
+| 1270065112   | Conquistador Face Mask            |
 | 792079554    | Death Facemask                    |
 | 962694769    | Deathwing Facemask                |
 | 1092671728   | Diesel Facemask                   |
@@ -781,6 +794,7 @@
 | 915693648    | Sunrise Metal Facemask            |
 | 1130407273   | Tank Crew Facemask                |
 | 800980236    | Tempered Mask                     |
+| 1203888714   | Templar                           |
 | 1135160079   | War Machine Mask                  |
 | 1113983678   | Warface Mask                      |
 | 832934294    | Where Eagles Dare                 |
@@ -817,9 +831,11 @@
 | 10001        | Blue Jeans                        |
 | 10049        | Blue Track Pants                  |
 | 909888619    | Caravanner Pants                  |
+| 1305364315   | Chekist's Pants                   |
 | 1150816693   | Conquistador Pants                |
 | 889714798    | Desert Conqueror Pants            |
 | 1234956405   | Explorer Pants                    |
+| 1296612316   | Firefighter Pants                 |
 | 10019        | Forest Camo Pants                 |
 | 969289969    | Huntsman Pants                    |
 | 1106596145   | Metalhunter Pants                 |
@@ -855,6 +871,7 @@
 | 949859819    | Ornate Pick Axe                   |
 | 1150813747   | Prospector's Pickaxe              |
 | 832799172    | Rescue Pick Axe                   |
+| 1298797381   | Shinobi Pick Axe                  |
 | 863455081    | Tarnished Sun Pick Axe            |
 | 1121521173   | Tomb Pickaxe                      |
 
@@ -872,6 +889,7 @@
 | 921253888    | Polymer Pump Shotgun              |
 | 1191938171   | Problem Solver Stick              |
 | 1132569603   | Rebel Shotgun                     |
+| 1292063367   | Royalty Pump Shotgun              |
 | 850130444    | Tank Pump Shotgun                 |
 | 849997025    | The Billy Baroo                   |
 | 10140        | The Swampmaster                   |
@@ -881,10 +899,13 @@
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 1216163401   | Black Mamba                       |
+| 1305704747   | Cold Hunter Python                |
 | 1228154190   | Dark Silver Python                |
 | 1215390635   | Devourer                          |
 | 1217395562   | Engraved Python                   |
 | 1265214612   | Holy Python                       |
+| 1296687971   | Hot Battle Steel                  |
+| 1290876678   | Necromancer Python                |
 | 1214609010   | Phantom                           |
 | 1269667577   | Relict Python                     |
 | 1276136280   | Steam Python                      |
@@ -972,6 +993,7 @@
 | 1202977830   | Scrapper Vest                     |
 | 828175620    | Spiked Metal Vest                 |
 | 1130406273   | Tank Crew Roadsign Vest           |
+| 1234957719   | The Last Viking Vest              |
 | 1130599258   | Utilizer Vest                     |
 | 932778217    | Wasteland Legionnaire             |
 
@@ -1074,6 +1096,7 @@
 | 969725237    | Rusty Blade                       |
 | 1239660381   | Scraptooth Sword                  |
 | 1154175800   | Sheet Metal Sword                 |
+| 1283812544   | Spartan Sword                     |
 | 1212723513   | Toothed Sword                     |
 | 930557072    | Trained To Kill                   |
 | 825240467    | Wooden Sword                      |
@@ -1159,11 +1182,13 @@
 | 1182015913   | Saboteur Rifle                    |
 | 1170719113   | SAR Scarecrow                     |
 | 1240340535   | Scrapper SAR                      |
+| 1298949573   | Snakebite SAR                     |
 | 1193105339   | Soulburn SAR                      |
 | 875259741    | Sublime SAR                       |
 | 1112906123   | Suzy-Q SAR                        |
 | 899564368    | To Hell And Back                  |
 | 1279791283   | Urban Light SAR                   |
+| 1300137383   | Warbeast SAR                      |
 | 818613234    | Workbench SAR                     |
 
 ## Sheet Metal Door (door.hinged.metal)
@@ -1173,6 +1198,7 @@
 | 950560231    | Antique Metal Door                |
 | 836815358    | Army Metal Door                   |
 | 1170684837   | Aztec Door                        |
+| 1309566989   | Aztec Gold Door                   |
 | 1109694864   | Blue Puzzle Door                  |
 | 1066783524   | Brass Sentinel Door               |
 | 1290467327   | Brutal Door                       |
@@ -1186,6 +1212,7 @@
 | 915684869    | Fire Truck Door                   |
 | 1281626747   | Fretwork Door                     |
 | 942658960    | Grey Fire Door                    |
+| 1294718018   | Grid Door                         |
 | 1176406578   | Halloween Door                    |
 | 849614068    | Hazard Metal Door                 |
 | 1120339199   | Hideout Door                      |
@@ -1206,6 +1233,7 @@
 | 1117884427   | Salvaged APC Door                 |
 | 962391797    | Salvation Door                    |
 | 897274189    | School Bus Door                   |
+| 1306412169   | Scrap Robot Door                  |
 | 1119310953   | Scrap Tanker Door                 |
 | 883741993    | Shipping Container Door           |
 | 914869833    | Truck Door                        |
@@ -1287,6 +1315,7 @@
 | 912599650    | Soul Reaper Stone Hatchet         |
 | 1196674526   | Stonecraft Hatchet                |
 | 1151551275   | Tirbal Stone Hatchet              |
+| 1306176753   | Tree Killer                       |
 | 878257758    | Volcanic Stone Hatchet            |
 
 ## Stone Pickaxe (stone.pickaxe)
@@ -1298,6 +1327,7 @@
 | 840380436    | Bloody Tooth Pickaxe              |
 | 886904592    | Jawbreaker                        |
 | 1290539482   | Megalodon Totem Pickaxe           |
+| 1306179593   | Stone Killer                      |
 | 1196675392   | Stonecraft Pick Axe               |
 | 837149011    | Uprising Stone Pickaxe            |
 
