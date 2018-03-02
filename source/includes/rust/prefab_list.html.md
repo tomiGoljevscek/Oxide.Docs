@@ -1,3 +1,7 @@
+---
+title: Prefabs List
+---
+
 # Prefabs List
 
 ## Autospawn
@@ -52,7 +56,7 @@ assets/bundled/prefabs/autospawn/\<category\>/\<subcategory\>/\<name\>.prefab
 | collectable    | mushrooms                 | mushroom-cluster-6       |
 | collectable    | stone                     | metalore-2               |
 | collectable    | stone                     | stone-1                  |
-| collectable    | stone                     | sulfurore-3              | 
+| collectable    | stone                     | sulfurore-3              |
 | collectable    | stone                     | wood                     |
 | decor          | beach-arctic              | bush-a-1-snow            |
 | decor          | beach-arid                | bush-a-1                 |

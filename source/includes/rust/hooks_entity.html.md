@@ -1,3 +1,7 @@
+---
+title: Entity Hooks
+---
+
 # Entity Hooks
 
 ## CanBradleyApcTarget
@@ -419,7 +423,7 @@ object OnTurretStartup(AutoTurret turret)
 
  * Called when an autoturret starts up
  * Returning a non-null value overrides default behavior
- 
+
 ## OnTurretTarget
 
 ``` csharp

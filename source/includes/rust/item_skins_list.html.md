@@ -1,3 +1,7 @@
+---
+title: Item Skins
+---
+
 # Item Skins
 
 ## Acoustic Guitar (fun.guitar)

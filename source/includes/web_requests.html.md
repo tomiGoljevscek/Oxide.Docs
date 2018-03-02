@@ -1,3 +1,7 @@
+---
+title: Web Requests
+---
+
 # Web Requests
 
 Web requests allow you to send a HTTP GET or POST to a specified URL.

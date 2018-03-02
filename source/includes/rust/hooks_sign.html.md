@@ -1,3 +1,7 @@
+---
+title: Sign Hooks
+---
+
 # Sign Hooks
 
 ## CanUpdateSign

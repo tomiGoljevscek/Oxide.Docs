@@ -1,3 +1,7 @@
+---
+title: Vending Machine Hooks
+---
+
 # Vending Machine Hooks
 
 ## CanAdministerVending

@@ -1,3 +1,7 @@
+---
+title: Contributing
+---
+
 # Contributing
 
  * Got an idea or suggestion? Use our [community forums](https://oxidemod.org/) to share and discuss it.

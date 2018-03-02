@@ -1,3 +1,7 @@
+---
+title: Player Hooks
+---
+
 # Player Hooks
 
 ## CanClientLogin

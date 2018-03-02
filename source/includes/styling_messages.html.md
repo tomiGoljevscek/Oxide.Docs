@@ -1,3 +1,7 @@
+---
+title: Styling Messages
+---
+
 # Styling Messages
 
 > Render the text in boldface

@@ -1,3 +1,7 @@
+---
+title: Storing Data
+---
+
 # Storing Data
 
 ## Creating a data table

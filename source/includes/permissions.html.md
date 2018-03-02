@@ -1,3 +1,7 @@
+---
+title: Permissions
+---
+
 # Permissions
 
 ## Getting/setting user data

@@ -1,3 +1,7 @@
+---
+title: Structure Hooks
+---
+
 # Structure Hooks
 
 ## OnStructureBuilt

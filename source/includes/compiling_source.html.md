@@ -1,3 +1,7 @@
+---
+title: Compiling Source
+---
+
 # Compiling Source
 
 While we recommend using one of the [official release builds](https://oxidemod.org/downloads/), you can compile your own builds if you'd like. Keep in mind that only official builds are supported by the Oxide team and community. _Good luck!_

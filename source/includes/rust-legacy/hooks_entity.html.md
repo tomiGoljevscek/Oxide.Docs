@@ -1,3 +1,7 @@
+---
+title: Entity Hooks
+---
+
 # Entity Hooks
 
 ## OnAirdrop

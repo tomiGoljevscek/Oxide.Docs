@@ -1,3 +1,7 @@
+---
+title: Terrain Hooks
+---
+
 # Terrain Hooks
 
 ## OnTerrainInitialized

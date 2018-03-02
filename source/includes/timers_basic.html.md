@@ -1,3 +1,7 @@
+---
+title: Basic Timers
+---
+
 # Timers (Basic)
 
 Timers are great for delaying code, allowing it to be run later.
@@ -11,7 +15,7 @@ timer.Once(3f, () =>
 });
 ```
 
-Executes the specified function once after the specified delay.  
+Executes the specified function once after the specified delay.
 
 ## Repeating timer
 
@@ -24,7 +28,7 @@ timer.Repeat(5f, 0, () =>
 
 Executes the specified function every "delay" seconds.
 
-If "repeats" is specified, the function will only be called "repeats" times.  
+If "repeats" is specified, the function will only be called "repeats" times.
 
 ## Next frame timer
 
@@ -35,4 +39,4 @@ NextFrame(() =>
 });
 ```
 
-Executes the specified function at the next frame.  
+Executes the specified function at the next frame.

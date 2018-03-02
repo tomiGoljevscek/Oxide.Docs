@@ -1,3 +1,7 @@
+---
+title: Universal Hooks
+---
+
 # Universal Hooks
 
 **Available for all supported games**

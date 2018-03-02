@@ -1,3 +1,7 @@
+---
+title: Server Hooks
+---
+
 # Server Hooks
 
 ## OnRunCommand

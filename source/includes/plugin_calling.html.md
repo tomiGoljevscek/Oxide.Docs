@@ -1,3 +1,7 @@
+---
+title: Pulling Calling
+---
+
 # Plugin Calling
 
 Oxide allows you to expose methods in your plugin and make them available to other plugins. This allows you to access objects or properties from other plugins without having to replicate functionality yourself.

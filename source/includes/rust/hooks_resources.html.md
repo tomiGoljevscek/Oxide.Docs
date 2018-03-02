@@ -1,3 +1,7 @@
+---
+title: Resource Gathering Hooks
+---
+
 # Resource Gathering Hooks
 
 ## OnCollectiblePickup

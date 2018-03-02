@@ -1,3 +1,7 @@
+---
+title: Item Hooks
+---
+
 # Item Hooks
 
 ## CanAcceptItem

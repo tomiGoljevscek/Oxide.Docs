@@ -1,3 +1,7 @@
+---
+title: Supported Games
+---
+
 # Supported Games
 
 ## 7 Days to Die

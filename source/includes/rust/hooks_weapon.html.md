@@ -1,3 +1,7 @@
+---
+title: Weapon Hooks
+---
+
 # Weapon Hooks
 
 ## OnCreateWorldProjectile
