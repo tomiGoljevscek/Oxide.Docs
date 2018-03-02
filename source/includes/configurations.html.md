@@ -5,9 +5,8 @@
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("EpicStuff", "Unknown", 1.0)]
+    [Info("Epic Stuff", "Unknown", 1.0)]
     [Description("This example illustrates how to use a basic configuration file")]
-
     class EpicStuff : CovalencePlugin
     {
         protected override void LoadDefaultConfig()
@@ -31,9 +30,8 @@ Since many users won't want to (or can't) edit the plugin directly to change the
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("EpicStuff", "Unknown", 1.0)] 
+    [Info("Epic Stuff", "Unknown", 1.0)]
     [Description("This example illustrates how to update a value in a configuration file")]
-
     class EpicStuff : CovalencePlugin
     {
         [Command("Test")]

@@ -9,7 +9,6 @@ namespace Oxide.Plugins
 {
     [Info("EpicStuff", "Unknown", 0.1)]
     [Description("Makes epic stuff happen")]
-
     class EpicStuff : CovalencePlugin
     {
         // Plugin methods can be a simple bool that is returned
@@ -56,14 +55,14 @@ namespace Oxide.Plugins
 {
     [Info("SecondEpicStuff", "Unknown", 0.1)]
     [Description("Makes more epic stuff happen")]
-
     class SecondEpicStuff : CovalencePlugin
     {
         // First, add a reference to the plugin you are trying to call
         // The name of this field needs to be the exact name of the desired plugin
         // eg. We are referencing the example plugin above which is called 'EpicStuff'
-        [PluginReference] Plugin EpicStuff;
-        
+        [PluginReference]
+        Plugin EpicStuff;
+
         // It's a good idea to check if the plugin you're trying to call
         // has been loaded by oxide (otherwise you can't call the method)
         void OnServerInitialized()

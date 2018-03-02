@@ -2,14 +2,14 @@
 
 **Available for all supported games**
 
-[![7 Days to Die](7-days-to-die/favicon-32x32.png)](/7-days-to-die/)
-[![Blockstorm](blockstorm/favicon-32x32.png)](/blockstorm/)
-[![Hurtworld](hurtworld/favicon-32x32.png)](/hurtworld/)
-[![Reign of Kings](reign-of-kings/favicon-32x32.png)](/reign-of-kings/)
-[![Rust](rust/favicon-32x32.png)](/rust/)
-[![Rust Legacy](rust-legacy/favicon-32x32.png)](/rust-legacy/)
-[![The Forest](the-forest/favicon-32x32.png)](/the-forest/)
-[![Unturned](unturned/favicon-32x32.png)](/unturned/)
+[![7 Days to Die](7-days-to-die/favicon-32x32.png)](/7-days-to-die)
+[![Blockstorm](blockstorm/favicon-32x32.png)](/blockstorm)
+[![Hurtworld](hurtworld/favicon-32x32.png)](/hurtworld)
+[![Reign of Kings](reign-of-kings/favicon-32x32.png)](/reign-of-kings)
+[![Rust](rust/favicon-32x32.png)](/rust)
+[![Rust Legacy](rust-legacy/favicon-32x32.png)](/rust-legacy)
+[![The Forest](the-forest/favicon-32x32.png)](/the-forest)
+[![Unturned](unturned/favicon-32x32.png)](/unturned)
 
 ## Init
 
@@ -60,6 +60,22 @@ protected override void LoadDefaultConfig()
 
  * Called when the config for a plugin should be initialized
  * Only called if the config file does not already exist
+ * No return behavior
+
+## LoadDefaultConfig
+
+``` csharp
+private new void LoadDefaultMessages()
+{
+    lang.RegisterMessages(new Dictionary<string, string>
+    {
+        ["Example"] = "This is an example message!",
+        ["AnotherExample"] = "Here is another example"
+    }, this);
+}
+```
+
+ * Called when the localization for a plugin should be registered
  * No return behavior
 
 ## OnFrame

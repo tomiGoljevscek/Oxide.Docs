@@ -22,9 +22,8 @@ oxide.version
 ``` csharp
 namespace Oxide.Plugins
 {
-    [Info("EpicStuff", "Unknown", "1.0.0")]
+    [Info("Epic Stuff", "Unknown", "1.0.0")]
     [Description("A basic chat command")]
-
     class EpicStuff : CovalencePlugin
     {
         [Command("test")]
@@ -43,9 +42,8 @@ using UnityEngine;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicStuff", "Unknown", "1.0.0")]
+    [Info("Epic Stuff", "Unknown", "1.0.0")]
     [Description("A basic console command")]
-
     class EpicStuff : CovalencePlugin
     {
         [Command("global.test")]

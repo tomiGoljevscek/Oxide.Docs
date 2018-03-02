@@ -8,9 +8,8 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicStuff", "Unknown", 1.0)] 
+    [Info("Epic Stuff", "Unknown", 1.0)]
     [Description("This example illustrates how to create a data file")]
-
     class EpicStuff : CovalencePlugin
     {
         class StoredData
@@ -58,9 +57,8 @@ using Oxide.Core;
 
 namespace Oxide.Plugins
 {
-    [Info("EpicStuff", "Unknown", 1.0)] 
+    [Info("Epic Stuff", "Unknown", 1.0)]
     [Description("This example illustrates how to save to a data file")]
-
     class EpicStuff : CovalencePlugin
     {
         class StoredData
