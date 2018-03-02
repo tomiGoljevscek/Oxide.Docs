@@ -67,8 +67,8 @@ $phone-width: $tablet-width - $nav-width; // min width before reverting to mobil
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
 }
 
 %header-font {
@@ -85,8 +85,8 @@ $phone-width: $tablet-width - $nav-width; // min width before reverting to mobil
 
 // OTHER
 ////////////////////
-$nav-footer-border-color: #666;
-$search-box-border-color: #666;
+$nav-footer-border-color: #666 !default;
+$search-box-border-color: #666 !default;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -95,10 +95,6 @@ $search-box-border-color: #666;
 // These settings are probably best left alone.
 
 %break-words {
-     word-break: break-all;
-
-     /* Non standard for webkit */
-     word-break: break-word;
-
-        hyphens: auto;
+    word-break: break-all;
+    hyphens: auto;
 }
