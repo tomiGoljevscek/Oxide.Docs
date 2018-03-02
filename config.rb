@@ -1,3 +1,6 @@
+# Unique header generation
+require './lib/unique_head.rb'
+
 # Markdown
 set :markdown_engine, :redcarpet
 set :markdown,
@@ -7,33 +10,48 @@ set :markdown,
     prettify: true,
     tables: true,
     with_toc_data: true,
-    no_intra_emphasis: true
+    no_intra_emphasis: true,
+    renderer: UniqueHeadCounter
 
-# Asset locations
+# Assets
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 set :fonts_dir, 'fonts'
 
-# Activate automatic page reloading
-activate :livereload
-
-# Create folders for each page
-activate :directory_indexes
-
 # Activate the syntax highlighter
 activate :syntax
+ready do
+  require './lib/multilang.rb'
+end
 
-# GitHub pages require relative links
+activate :sprockets
+
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 version', 'Firefox ESR']
+  config.cascade  = false
+  config.inline   = true
+end
+
+# Github pages require relative links
 activate :relative_assets
 set :relative_links, true
 
-# Build configuration
+# Build Configuration
 configure :build do
+  # If you're having trouble with Middleman hanging, commenting
+  # out the following two lines has been known to help
   activate :minify_css
-  # activate :minify_html
   activate :minify_javascript
   # activate :relative_assets
   # activate :asset_hash
   # activate :gzip
+end
+
+# Deploy Configuration
+# If you want Middleman to listen on a different port, you can set that below
+set :port, 4567
+
+helpers do
+  require './lib/toc_data.rb'
 end
