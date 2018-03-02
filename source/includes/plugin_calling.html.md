@@ -1,5 +1,5 @@
 ---
-title: Pulling Calling
+title: Plugin Calling
 ---
 
 # Plugin Calling
