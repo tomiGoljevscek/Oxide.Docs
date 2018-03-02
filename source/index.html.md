@@ -12,14 +12,14 @@ search: true
 # Overview
 
 >
-[![7 Days to Die](7-days-to-die/favicon-96x96.png)](/7-days-to-die/)
-[![Blockstorm](blockstorm/favicon-96x96.png)](/blockstorm/)
-[![Hurtworld](hurtworld/favicon-96x96.png)](/hurtworld/)
-[![Reign of Kings](reign-of-kings/favicon-96x96.png)](/reign-of-kings/)
-[![Rust](rust/favicon-96x96.png)](/rust/)
-[![Rust Legacy](rust-legacy/favicon-96x96.png)](/rust-legacy/)
-[![The Forest](the-forest/favicon-96x96.png)](/the-forest/)
-[![Unturned](unturned/favicon-96x96.png)](/unturned/)
+[![7 Days to Die](7-days-to-die/favicon-96x96.png)](/7-days-to-die)
+[![Blockstorm](blockstorm/favicon-96x96.png)](/blockstorm)
+[![Hurtworld](hurtworld/favicon-96x96.png)](/hurtworld)
+[![Reign of Kings](reign-of-kings/favicon-96x96.png)](/reign-of-kings)
+[![Rust](rust/favicon-96x96.png)](/rust)
+[![Rust Legacy](rust-legacy/favicon-96x96.png)](/rust-legacy)
+[![The Forest](the-forest/favicon-96x96.png)](/the-forest)
+[![Unturned](unturned/favicon-96x96.png)](/unturned)
 
 Oxide is a complete rewrite of the popular, original Oxide API and Lua plugin framework. Previously only available for the legacy Rust game, Oxide now supports numerous games. Oxide's focus is on modularity and extensibility. The core is highly abstracted and loosely coupled, and could be used to mod any game that uses the .NET Framework.
 
