@@ -77,10 +77,34 @@ bool CanClientLogin(Network.Connection connection)
  * Returning a string will use the string as the error message
  * Returning true allows the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message
 
+## CanDropActiveItem
+
+``` csharp
+bool CanDropActiveItem(BasePlayer player)
+{
+    Puts("CanDropActiveItem works!");
+}
+```
+
+ * Called when the player attempts drop their active held item
+ * Returning true or false overrides default behavior
+
+## CanDismountEntity
+
+``` csharp
+object CanDismountEntity(BaseMountable entity, BasePlayer player)
+{
+    Puts("CanDismountEntity works!");
+}
+```
+
+ * Called when the player attempts to dismount an entity
+ * Returning a non-null value overrides default behavior
+
 ## CanEquipItem
 
 ``` csharp
-bool CanEquipItem(PlayerInventory inventory, Item item)
+bool CanEquipItem(PlayerInventory inventory, Item item, int targetPos)
 {
     Puts("CanEquipItem works!");
 }
@@ -101,6 +125,18 @@ bool CanLootPlayer(BasePlayer target, BasePlayer looter)
  * Called when the player attempts to loot another player
  * Returning true or false overrides default behavior
 
+## CanMountEntity
+
+``` csharp
+object CanMountEntity(BaseMountable entity, BasePlayer player)
+{
+    Puts("CanMountEntity works!");
+}
+```
+
+ * Called when the player attempts to mount an entity
+ * Returning a non-null value overrides default behavior
+
 ## CanUseMailbox
 
 ``` csharp
@@ -116,7 +152,7 @@ bool CanUseMailbox(BasePlayer player, Mailbox mailbox)
 ## CanWearItem
 
 ``` csharp
-bool CanWearItem(PlayerInventory inventory, Item item)
+bool CanWearItem(PlayerInventory inventory, Item item, int targetPos)
 {
     Puts("CanWearItem works!");
 }
@@ -270,6 +306,18 @@ void OnPlayerDisconnected(BasePlayer player, string reason)
 ```
 
  * Called after the player has disconnected from the server
+ * No return behavior
+
+## OnPlayerDropActiveItem
+
+``` csharp
+void OnPlayerDropActiveItem(BasePlayer player, Item item)
+{
+    Puts("OnPlayerDropActiveItem works!");
+}
+```
+
+ * Called when the player drops their active held item
  * No return behavior
 
 ## OnPlayerHealthChange
@@ -487,6 +535,18 @@ object OnPlayerViolation(BasePlayer player, AntiHackType type, float amount)
 ```
 
  * Called when the player triggers an anti-hack violation
+ * Returning a non-null value overrides default behavior
+
+## OnPlayerViolation
+
+``` csharp
+object OnPlayerVoice(BasePlayer player, Byte[] data)
+{
+    Puts("OnPlayerVoice works!");
+}
+```
+
+ * Called when the player uses the in-game voice chat
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerWound

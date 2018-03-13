@@ -31,7 +31,7 @@ bool CanUseVending(VendingMachine machine, BasePlayer player)
 ## CanVendingAcceptItem
 
 ``` csharp
-bool CanVendingAcceptItem(VendingMachine vending, Item item)
+bool CanVendingAcceptItem(VendingMachine vending, Item item, int targetPos)
 {
     Puts("CanVendingAcceptItem works!");
 }

@@ -25,13 +25,13 @@ object CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
 }
 ```
 
- * Called when a player attempts to assign a bed or sleepingbag to another player
+ * Called when a player attempts to assign a bed or sleeping bag to another player
  * Returning a non-null value overrides default behavior
 
 ## CanBuild
 
 ``` csharp
-object CanBuild(Planner planner, Construction prefab, Vector3 position)
+object CanBuild(Planner planner, Construction prefab, Contruction.Target target)
 {
     Puts("CanBuild works!");
 }
@@ -230,6 +230,18 @@ void OnDoorOpened(Door door, BasePlayer player)
 ```
 
  * Called when the player opened a door
+ * No return behavior
+
+## OnDoorKnocked
+
+``` csharp
+void OnDoorKnocked(Door door, BasePlayer player)
+{
+    Puts("OnDoorKnocked works!");
+}
+```
+
+ * Called when the player knocks on a door
  * No return behavior
 
 ## OnEntityBuilt

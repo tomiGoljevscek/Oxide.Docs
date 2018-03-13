@@ -7,7 +7,7 @@ title: Item Hooks
 ## CanAcceptItem
 
 ``` csharp
-ItemContainer.CanAcceptResult CanAcceptItem(ItemContainer container, Item item)
+ItemContainer.CanAcceptResult CanAcceptItem(ItemContainer container, Item item, int targetPos)
 {
     Puts("CanAcceptItem works!");
 }
@@ -213,7 +213,7 @@ void OnItemRepair(BasePlayer player, Item item)
 ## OnItemResearch
 
 ``` csharp
-object OnItemResearch(Item item, BasePlayer player)
+object OnItemResearch(ResearchTable table, Item, targetItem, BasePlayer player)
 {
     Puts("OnItemResearch works!");
 }
@@ -222,12 +222,12 @@ object OnItemResearch(Item item, BasePlayer player)
  * Called right before a player begins to research an item
  * Returning a non-null value overrides default behavior
 
-## OnItemResearchEnd
+## OnItemResearched
 
 ``` csharp
-float OnItemResearchEnd(ResearchTable table, float chance)
+float OnItemResearched(ResearchTable table, float chance)
 {
-    Puts("OnItemResearchEnd works!");
+    Puts("OnItemResearched works!");
     return chance;
 }
 ```
@@ -246,6 +246,18 @@ void OnItemResearchStart(ResearchTable table)
 
  * Called when the player has started researching an item
  * No return behavior
+
+## OnItemScrap
+
+``` csharp
+object OnItemScrap(ResearchTable table, Item item)
+{
+    Puts("OnItemResearchStart works!");
+}
+```
+
+ * Called when an item is being scrapped at a research table
+ * Returning a non-null value overrides default behavior
 
 ## OnItemSplit
 

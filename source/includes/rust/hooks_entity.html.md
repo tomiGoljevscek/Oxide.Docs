@@ -41,6 +41,7 @@ bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
  * Returning true or false overrides default behavior
 
 ## CanHelicopterTarget
+
  ``` csharp
 bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player)
 {
@@ -52,6 +53,7 @@ bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player)
  * Returning true or false overrides default behavior
 
 ## CanHelicopterUseNapalm
+
 ``` csharp
 bool CanHelicopterUseNapalm(PatrolHelicopterAI heli)
 {
@@ -61,6 +63,54 @@ bool CanHelicopterUseNapalm(PatrolHelicopterAI heli)
 
  * Called when a helicopter attempts to use napalm
  * Returning true or false overrides default behavior
+
+## CanLootEntity (LootableCorpse)
+
+``` csharp
+object CanLootEntity(LootableCorpse corpse, BasePlayer player)
+{
+    Puts("CanLootEntity works!");
+}
+```
+
+ * Called when the player starts looting a LootableCorpse entity
+ * No return behavior
+
+## CanLootEntity (ResourceContainer)
+
+``` csharp
+object CanLootEntity(ResourceContainer container, BasePlayer player)
+{
+    Puts("CanLootEntity works!");
+}
+```
+
+ * Called when the player starts looting a ResourceContainer entity
+ * No return behavior
+
+## CanLootEntity (DroppedItemContainer)
+
+``` csharp
+object CanLootEntity(DroppedItemContainer container, BasePlayer player)
+{
+    Puts("CanLootEntity works!");
+}
+```
+
+ * Called when the player starts looting a DroppedItemContainer entity
+ * No return behavior
+
+## CanLootEntity (StorageContainer)
+
+``` csharp
+object CanLootEntity(StorageContainer container, BasePlayer player)
+{
+    Puts("CanLootEntity works!");
+}
+```
+
+ * Called when the player starts looting a StorageContainer entity
+ * No return behavior
 
 ## CanNetworkTo
 
@@ -196,6 +246,18 @@ void OnEntityDeath(BaseCombatEntity entity, HitInfo info)
  * Editing hitInfo has no effect because the death has already happened
  * No return behavior
 
+## OnEntityDismounted
+
+``` csharp
+void OnEntityDismounted(BaseMountable entity, BasePlayer player)
+{
+    Puts("OnEntityDismounted works!");
+}
+```
+
+ * Called when an entity is dismounted by a player
+ * No return behavior
+
 ## OnEntityEnter
 
 ``` csharp
@@ -244,6 +306,18 @@ void OnEntityLeave(TriggerBase trigger, BaseEntity entity)
  * Called when an entity leaves a trigger (building privilege zone, water area, radiation zone, hurt zone, etc.)
  * No return behavior
 
+## OnEntityMounted
+
+``` csharp
+void OnEntityMounted(BaseMountable entity, BasePlayer player)
+{
+    Puts("OnEntityMounted works!");
+}
+```
+
+ * Called when an entity is mounted by a player
+ * No return behavior
+
 ## OnEntitySpawned
 
 ``` csharp
@@ -282,7 +356,7 @@ object OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
  * Called when a helicopter attempts to target an entity
  * Returning true overrides default behavior
 
-## OnLiftUse
+## OnLiftUse (Lift)
 
 ``` csharp
 object OnLiftUse(Lift lift, BasePlayer player)
@@ -292,6 +366,30 @@ object OnLiftUse(Lift lift, BasePlayer player)
 ```
 
  * Called when a player calls a lift
+ * Returning a non-null value overrides default behavior
+
+## OnLiftUse (ProceduralLift)
+
+``` csharp
+object OnLiftUse(ProceduralLift lift, BasePlayer player)
+{
+    Puts("OnLiftUse works!");
+}
+```
+
+ * Called when a player calls a procedural lift
+ * Returning a non-null value overrides default behavior
+
+## OnLootSpawn
+
+``` csharp
+object OnLootSpawn(LootContainer container)
+{
+    Puts("OnLootSpawn works!");
+}
+```
+
+ * Called when loot spawns in a container
  * Returning a non-null value overrides default behavior
 
 ## OnNpcPlayerTarget
