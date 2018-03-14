@@ -66,7 +66,7 @@ protected override void LoadDefaultConfig()
  * Only called if the config file does not already exist
  * No return behavior
 
-## LoadDefaultConfig
+## LoadDefaultMessages
 
 ``` csharp
 private new void LoadDefaultMessages()
