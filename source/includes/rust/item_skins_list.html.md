@@ -87,6 +87,7 @@ title: Item Skins
 | 1088459232   | The Beast AK47                    |
 | 1129886223   | The Beast Of The East             |
 | 1124932043   | The Reptile                       |
+| 1324932956   | Urban Ice AK47                    |
 | 1140366289   | War Machine AK47                  |
 | 1159593268   | Wyrm Rifle                        |
 
@@ -102,6 +103,7 @@ title: Item Skins
 | 10059        | Green Bandana                     |
 | 903595865    | Jawboy                            |
 | 10065        | Red Skull Bandana                 |
+| 1323640876   | Road Raider Bandana               |
 | 1185794212   | Santa Bandana                     |
 | 10064        | Skull Bandana                     |
 | 10062        | Snow Camo Bandana                 |
@@ -249,6 +251,7 @@ title: Item Skins
 | 1294811936   | It is Wednesday, my dudes         |
 | 10136        | Pirate Vest & Shirt               |
 | 1145786859   | Rioter's Jacket                   |
+| 1323654151   | Road Raider Shirt                 |
 | 1229561297   | Santa's Helper Shirt              |
 | 882451685    | Sleazy Rider                      |
 | 1294812700   | Whens Whip?                       |
@@ -266,6 +269,7 @@ title: Item Skins
 | 921250017    | Desert Outlaw Burlap Pants        |
 | 809968188    | Recycled Tarp Pants               |
 | 1145780081   | Rioter's Pants                    |
+| 1323664071   | Road Raider Pants                 |
 
 ## Chair (chair)
 | Skin Id      | Skin name                         |
@@ -335,6 +339,7 @@ title: Item Skins
 | 1269230939   | Phoenix Crossbow                  |
 | 1089558546   | POP Crossbow                      |
 | 1206661880   | Primal Crossbow                   |
+| 1328219905   | Ronin                             |
 | 856029421    | Tank Crossbow                     |
 
 ## Custom SMG (smg.2)
@@ -418,6 +423,7 @@ title: Item Skins
 | 1230272984   | Furnace of the Shaman             |
 | 1260305347   | Hydraulic Furnace                 |
 | 1277616284   | Iron Forge                        |
+| 1320779999   | Military Furnace                  |
 | 1277183788   | Mosaic Furnace                    |
 | 1239083962   | Potbelly Furnace                  |
 | 1305743950   | Ritual Furnace                    |
@@ -494,6 +500,7 @@ title: Item Skins
 | 826402867    | Veteran Hatchet                   |
 | 814713259    | Vikings Tomahawk                  |
 | 825033005    | Vintage Hatchet                   |
+| 1325481133   | Virulent Hatchet                  |
 | 1258108678   | Widowmaker Hatchet                |
 
 ## Hide Boots (attire.hide.boots)
@@ -619,6 +626,7 @@ title: Item Skins
 | 10010        | Red Jacket                        |
 | 10008        | Snowcamo Jacket                   |
 | 10014        | Urban Camo Jacket                 |
+| 1317555901   | Urban Ice Jacket                  |
 
 ## Large Wood Box (box.wooden.large)
 | Skin Id      | Skin name                         |
@@ -627,6 +635,7 @@ title: Item Skins
 | 10124        | Ammo Wooden Box                   |
 | 1285113124   | Aztec Gold Chest                  |
 | 1206100969   | Aztec Trunk                       |
+| 1320924107   | Bone Collector Box                |
 | 892062620    | Cabin Chest                       |
 | 1261541803   | Captain's Treasure                |
 | 1315566388   | Carpenter's Chest                 |
@@ -885,6 +894,7 @@ title: Item Skins
 | 1298797381   | Shinobi Pick Axe                  |
 | 863455081    | Tarnished Sun Pick Axe            |
 | 1121521173   | Tomb Pickaxe                      |
+| 1325483813   | Virulent Pick Axe                 |
 
 ## Pump Shotgun (shotgun.pump)
 | Skin Id      | Skin name                         |
@@ -919,6 +929,7 @@ title: Item Skins
 | 1290876678   | Necromancer Python                |
 | 1277518447   | Outlaw Python                     |
 | 1214609010   | Phantom                           |
+| 1328632407   | Punk Python                       |
 | 1269667577   | Relict Python                     |
 | 1276136280   | Steam Python                      |
 | 1223105431   | Trausi's Python                   |
@@ -1112,6 +1123,7 @@ title: Item Skins
 | 1283812544   | Spartan Sword                     |
 | 1212723513   | Toothed Sword                     |
 | 930557072    | Trained To Kill                   |
+| 1313755167   | Trash Sword                       |
 | 825240467    | Wooden Sword                      |
 
 ## Sandbag Barricade (barricade.sandbags)
@@ -1191,3 +1203,272 @@ title: Item Skins
 | 1113987623   | Hero's SAR                        |
 | 942919370    | Meridian SAR                      |
 | 1098038362   | Nightmare SAR                     |
+| 1135415770   | Pharaoh SAR                       |
+| 1182015913   | Saboteur Rifle                    |
+| 1170719113   | SAR Scarecrow                     |
+| 1240340535   | Scrapper SAR                      |
+| 1298949573   | Snakebite SAR                     |
+| 1193105339   | Soulburn SAR                      |
+| 1300239738   | Soulkeeper SAR                    |
+| 875259741    | Sublime SAR                       |
+| 1112906123   | Suzy-Q SAR                        |
+| 899564368    | To Hell And Back                  |
+| 1279791283   | Urban Light SAR                   |
+| 1300137383   | Warbeast SAR                      |
+| 818613234    | Workbench SAR                     |
+
+## Sheet Metal Door (door.hinged.metal)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 901194793    | Ambulance Door                    |
+| 950560231    | Antique Metal Door                |
+| 836815358    | Army Metal Door                   |
+| 1170684837   | Aztec Door                        |
+| 1309566989   | Aztec Gold Door                   |
+| 1313458951   | Blacksmith's Door                 |
+| 1109694864   | Blue Puzzle Door                  |
+| 1066783524   | Brass Sentinel Door               |
+| 1290467327   | Brutal Door                       |
+| 1124738987   | Dead Room Door                    |
+| 1175547229   | Death Crypt Door                  |
+| 827190175    | Doomsday Door                     |
+| 948930384    | Door to Death                     |
+| 1227441654   | Dragon Relic Door                 |
+| 1213613030   | Eisensheet Door                   |
+| 1260208160   | Engineer's Door                   |
+| 915684869    | Fire Truck Door                   |
+| 1281626747   | Fretwork Door                     |
+| 942658960    | Grey Fire Door                    |
+| 1294718018   | Grid Door                         |
+| 1176406578   | Halloween Door                    |
+| 849614068    | Hazard Metal Door                 |
+| 1120339199   | Hideout Door                      |
+| 928503162    | Jeweler's Security Door           |
+| 1141051963   | KEEP OUT                          |
+| 917719889    | Laboratory Door                   |
+| 921076360    | Locomotive Door                   |
+| 1211678957   | Lost Metal Door                   |
+| 1239808532   | Lost Treasure Door                |
+| 832957536    | Metal Shutter Door                |
+| 959898495    | Metalshop Scrap Door              |
+| 922419554    | Military Vehicle Door             |
+| 1083653685   | Polar Station Door                |
+| 859864870    | Prison Door                       |
+| 961909886    | Quarantine Door                   |
+| 835119969    | Recycled Garage Door              |
+| 934924536    | Roadsign Door                     |
+| 1117884427   | Salvaged APC Door                 |
+| 962391797    | Salvation Door                    |
+| 897274189    | School Bus Door                   |
+| 1306412169   | Scrap Robot Door                  |
+| 1119310953   | Scrap Tanker Door                 |
+| 883741993    | Shipping Container Door           |
+| 1321264697   | Submarine Door                    |
+| 914869833    | Truck Door                        |
+
+## Shirt (shirt.collared)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 885078753    | Autumn Hunter's Shirt             |
+| 797241160    | Charitable Rust 2016 Shirt        |
+| 802078252    | Green Lumberjack                  |
+| 802073199    | Red Lumberjack                    |
+| 819818852    | Sergeant Shirt                    |
+| 809704306    | Survival Shirt                    |
+| 801955689    | The Blue Death                    |
+
+## Shorts (pants.shorts)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 794678401    | Camo Shorts                       |
+| 793871235    | Cutoff Shorts                     |
+| 818068257    | Homemade Shorts                   |
+| 799006291    | Snow Camo Shorts                  |
+
+## Sleeping Bag (sleepingbag)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10121        | Aston Christmas                   |
+| 1127084512   | Bear Bag                          |
+| 10037        | Blue Plaid Sleeping Bag           |
+| 1165339422   | Cannibal Survival Bag             |
+| 909889024    | Caravanner Bedroll                |
+| 10119        | Christmas Bag                     |
+| 809186722    | Christmas Holiday Bag             |
+| 1152883867   | Cobalt Survival Bag               |
+| 1140342335   | Fisher Sleeping Bag               |
+| 1137518723   | Freefolk Bedroll                  |
+| 539536110    | Freshly Dug Grave                 |
+| 10107        | Horror Bag                        |
+| 795398514    | Jungle Camo Sleeping Bag          |
+| 1283724154   | Muertos Sleeping Bag              |
+| 1269426600   | Nuke Bag                          |
+| 919353105    | Ranger Bedroll                    |
+| 834487561    | Red Survival Sleeping Bag         |
+| 1102195403   | Sleep Catcher                     |
+| 1174407153   | Spooky Pumpkin Bed                |
+| 1132190812   | Star Bedroll                      |
+| 1186393080   | Supply Drop Sleeping Bag          |
+| 10077        | Tiger Crown Sleeping Bag          |
+| 944993672    | Undead Bedroll                    |
+| 10076        | Wood Camo Sleeping Bag            |
+| 1228238024   | Wood Sleeping Bag                 |
+
+## Snow Jacket - Red (jacket.snow)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 530154777    | 60's Army Jacket                  |
+| 10113        | Black                             |
+| 913227043    | Fireman's Jacket                  |
+| 530159711    | Salvaged Shirt, Coat and Tie      |
+| 839466039    | Telogreika Jacket                 |
+| 10112        | Woodland                          |
+
+## Stone Hatchet (stonehatchet)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1092741003   | Ancient Gods Stone Hatchet        |
+| 1269563695   | Artisan's Stone Hatchet           |
+| 1117098080   | Aztec Jade Hachet                 |
+| 1114895505   | Blood Feud                        |
+| 955692135    | Bone Hatchet                      |
+| 887663210    | Chieftain Stone Hatchet           |
+| 947950887    | Fossil Tooth Hatchet              |
+| 1058431260   | Geode Hatchet                     |
+| 797445687    | Ice Tooth                         |
+| 854688691    | Large Fruit Pit Hatchet           |
+| 1290344811   | Megalodon Totem Hatchet           |
+| 1184754750   | Midas Hatchet                     |
+| 1235107175   | Sea Monster                       |
+| 912599650    | Soul Reaper Stone Hatchet         |
+| 1196674526   | Stonecraft Hatchet                |
+| 1151551275   | Tirbal Stone Hatchet              |
+| 1306176753   | Tree Killer                       |
+| 878257758    | Volcanic Stone Hatchet            |
+
+## Stone Pickaxe (stone.pickaxe)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1100085862   | Ancient Gods Stone Pickaxe        |
+| 1269582427   | Artisan's Stone Pickaxe           |
+| 1127557296   | Aztec Jade Pick Axe               |
+| 840380436    | Bloody Tooth Pickaxe              |
+| 886904592    | Jawbreaker                        |
+| 1290539482   | Megalodon Totem Pickaxe           |
+| 1306179593   | Stone Killer                      |
+| 1196675392   | Stonecraft Pick Axe               |
+| 837149011    | Uprising Stone Pickaxe            |
+
+## Table (table)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 875258582    | Antique Dining Table              |
+| 872346354    | Off The Grid                      |
+| 909129983    | Parquet Table                     |
+
+## Tank Top (shirt.tanktop)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 784578916    | Black Mesh Crop Top               |
+
+## Thompson (smg.thompson)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 561462394    | Santa's Little Helper             |
+| 839819171    | Wasteland Hunter                  |
+
+## T-Shirt (tshirt)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 10130        | Argyle Scavenger                  |
+| 10033        | Baseball Tshirt                   |
+| 10003        | Black Tshirt                      |
+| 14177        | Blue Tshirt                       |
+| 851890495    | Crossbone Crew                    |
+| 489329801    | Facepunch TShirt                  |
+| 14181        | Forest Camo Tshirt                |
+| 10024        | German Tshirt                     |
+| 10035        | Hacker Valley Veteran             |
+| 10046        | Missing Textures TShirt           |
+| 10038        | Murderer T-Shirt                  |
+| 101          | Red Tshirt                        |
+| 10025        | Russia Tshirt                     |
+| 10002        | Sandbox Game Shirt                |
+| 10134        | Ser Winter TShirt                 |
+| 489687236    | Shadowfrax TShirt                 |
+| 10041        | Skull & Bones TShirt              |
+| 10053        | Smile T-Shirt                     |
+| 10039        | Target Practice T-Shirt           |
+| 584379       | Urban Camo                        |
+| 10043        | Vyshyvanka Shirt                  |
+
+## Vending Machine (vending.machine)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 861029759    | Army Vending Machine              |
+| 862137836    | Base Invaders                     |
+| 869474635    | Brass Vending Machine             |
+| 1161727529   | Lavish Vending Machine            |
+| 860916780    | Rox Black Vending Machine         |
+| 862291005    | RustyCola Machine                 |
+| 861548229    | Sand Tone Vending Machine         |
+| 871927557    | Urban Vending Machine             |
+
+## Water Purifier (water.purifier)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 886677071    | Distillery                        |
+| 786826476    | Radioactive Water Purifier        |
+
+## Waterpipe Shotgun (shotgun.waterpipe)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1234721165   | Apostate                          |
+| 1209128595   | Blacksmith's Pipe                 |
+| 1274179291   | Cannibal Tribe Musket             |
+| 1168524895   | Flaming Pipe                      |
+| 907070012    | Hot Topic Waterpipe Shotgun       |
+| 1320685736   | Industrial Pipe Shotgun           |
+| 1219492103   | Junkyard Pipe                     |
+| 1250809355   | KOI                               |
+| 1147084675   | Luxuria                           |
+| 912464069    | Riveted Pipe Shotgun              |
+| 819137470    | Rustpunk Scattergun               |
+| 661319648    | RustPunk Waterpipe Shotgun        |
+| 1205464046   | Sea Hunter Shotgun                |
+| 10143        | The Peace Pipe                    |
+| 1181616781   | Twisted Pipe                      |
+| 832764933    | Western Waterpipe Shotgun         |
+
+## Wood Storage Box (box.wooden)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1316294242   | Carpenter's Small Box             |
+| 1212709764   | Decorative Small Box              |
+| 787716105    | First Aid Box                     |
+| 885103417    | Medieval Small Wooden Box         |
+| 889212734    | Seed Box                          |
+| 930694436    | Small Medical Box                 |
+| 1127078435   | Treasure Crate                    |
+
+## Wooden Door (door.hinged.wood)
+| Skin Id      | Skin name                         |
+|--------------|-----------------------------------|
+| 1108316628   | Barricaded Door                   |
+| 1100873539   | Black Decorative Wood Door        |
+| 838700836    | Bleached Ebony Door               |
+| 1320929144   | Bone Collector Door               |
+| 804991715    | Christmas Tree Door               |
+| 809253752    | Door to Heaven                    |
+| 1313604647   | Dreamcatcher Door                 |
+| 962427350    | Forgotten Temple Door             |
+| 1131650209   | Lone Wolf Door                    |
+| 804854812    | Old Heavy Wooden Door             |
+| 1132144523   | Ornate Wooden Door                |
+| 847902281    | Porthole Door                     |
+| 1100886818   | Red Decorative Wood Door          |
+| 923763807    | Riveted Wooden Door               |
+| 1127631900   | Sacrificial door                  |
+| 1176899114   | Trick Or Treat Door               |
+| 1260913194   | Wisdom Door                       |
+| 950184212    | Wise Door                         |
