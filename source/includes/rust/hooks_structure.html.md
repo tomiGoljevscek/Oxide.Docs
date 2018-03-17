@@ -31,7 +31,7 @@ object CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
 ## CanBuild
 
 ``` csharp
-object CanBuild(Planner planner, Construction prefab, Contruction.Target target)
+object CanBuild(Planner planner, Construction prefab, Construction.Target target)
 {
     Puts("CanBuild works!");
 }
