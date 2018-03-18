@@ -16,7 +16,7 @@ void CanClientLogin(PlayerSession session)
 ## CanCraft
 
 ``` csharp
-void CanCraft(PlayerSession session, CrafterServer)
+void CanCraft(PlayerSession session, CrafterServer crafter)
 {
     Puts("CanCraft works!");
 }
