@@ -90,6 +90,7 @@ title: Item Skins
 | 1324932956   | Urban Ice AK47                    |
 | 1140366289   | War Machine AK47                  |
 | 1159593268   | Wyrm Rifle                        |
+| 1309470544   | X-RAY AK47                        |
 
 ## Bandana Mask (mask.bandana)
 | Skin Id      | Skin name                         |
@@ -423,6 +424,7 @@ title: Item Skins
 | 1230272984   | Furnace of the Shaman             |
 | 1260305347   | Hydraulic Furnace                 |
 | 1277616284   | Iron Forge                        |
+| 1335260783   | Junkyard Furnace                  |
 | 1320779999   | Military Furnace                  |
 | 1277183788   | Mosaic Furnace                    |
 | 1239083962   | Potbelly Furnace                  |
@@ -435,6 +437,7 @@ title: Item Skins
 ## Garage Door (wall.frame.garagedoor)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1334974046   | Cargo Truck Garage Door           |
 | 1209586977   | Checkpoint Door                   |
 | 1180981036   | Chop Shop Garage Door             |
 | 1186351868   | Cobalt Space Door                 |
@@ -564,6 +567,7 @@ title: Item Skins
 | 914621940    | Looter's Hoodie                   |
 | 1106582025   | Metalhunter Hoodie                |
 | 939604165    | Nordic Beast Hoodie               |
+| 1328751626   | Northern Forester Hoodie          |
 | 797128321    | Official Vertiigo Hoodie          |
 | 1150760640   | Predator Hoodie                   |
 | 1274163900   | Prospector's Hoodie               |
@@ -792,6 +796,7 @@ title: Item Skins
 | 881687672    | Hunter Mask                       |
 | 806983252    | Industrial Protection Mask        |
 | 899001394    | Juggernaut Mask                   |
+| 1313529548   | Legendary Gold Facemask           |
 | 895067146    | Looter's Mask                     |
 | 828888629    | Machina Mask                      |
 | 841012325    | Mask of Sacrifice                 |
@@ -858,6 +863,7 @@ title: Item Skins
 | 969289969    | Huntsman Pants                    |
 | 1106596145   | Metalhunter Pants                 |
 | 939586076    | Nordic Beast Pants                |
+| 1328753424   | Northern Forester Pants           |
 | 10078        | Old Prisoner Pants                |
 | 823154911    | One Percenter Chaps               |
 | 1150763210   | Predator Pants                    |
@@ -926,6 +932,7 @@ title: Item Skins
 | 1217395562   | Engraved Python                   |
 | 1265214612   | Holy Python                       |
 | 1296687971   | Hot Battle Steel                  |
+| 1335582211   | Ivory Python                      |
 | 1290876678   | Necromancer Python                |
 | 1277518447   | Outlaw Python                     |
 | 1214609010   | Phantom                           |
@@ -1201,6 +1208,7 @@ title: Item Skins
 | 840023839    | Hazard Semi Auto Rifle            |
 | 1129722099   | Hellcat SAR                       |
 | 1113987623   | Hero's SAR                        |
+| 1217394290   | Hot Rod SAR                       |
 | 942919370    | Meridian SAR                      |
 | 1098038362   | Nightmare SAR                     |
 | 1135415770   | Pharaoh SAR                       |
@@ -1223,6 +1231,7 @@ title: Item Skins
 | 901194793    | Ambulance Door                    |
 | 950560231    | Antique Metal Door                |
 | 836815358    | Army Metal Door                   |
+| 1328395850   | Artist's Door                     |
 | 1170684837   | Aztec Door                        |
 | 1309566989   | Aztec Gold Door                   |
 | 1313458951   | Blacksmith's Door                 |
@@ -1265,6 +1274,7 @@ title: Item Skins
 | 883741993    | Shipping Container Door           |
 | 1321264697   | Submarine Door                    |
 | 914869833    | Truck Door                        |
+| 1328566466   | Urban Night Door                  |
 
 ## Shirt (shirt.collared)
 | Skin Id      | Skin name                         |
@@ -1408,6 +1418,7 @@ title: Item Skins
 | 861029759    | Army Vending Machine              |
 | 862137836    | Base Invaders                     |
 | 869474635    | Brass Vending Machine             |
+| 1335113551   | Carpenter's Vending Machine       |
 | 1161727529   | Lavish Vending Machine            |
 | 860916780    | Rox Black Vending Machine         |
 | 862291005    | RustyCola Machine                 |
@@ -1462,6 +1473,7 @@ title: Item Skins
 | 809253752    | Door to Heaven                    |
 | 1313604647   | Dreamcatcher Door                 |
 | 962427350    | Forgotten Temple Door             |
+| 1328425419   | Fortified Castle Door             |
 | 1131650209   | Lone Wolf Door                    |
 | 804854812    | Old Heavy Wooden Door             |
 | 1132144523   | Ornate Wooden Door                |
