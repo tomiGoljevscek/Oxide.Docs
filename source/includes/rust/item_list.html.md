@@ -123,6 +123,7 @@ title: Item List
 | 305916740     | f-hairstyle-1                | female_hairstyle_01      |
 | 305916741     | f-hairstyle-2                | female_hairstyle_02      |
 | 305916742     | f-hairstyle-3                | female_hairstyle_03      |
+| 305916744     | f-hairstyle-5                | female_hairstyle_05      |
 | 252529905     | f-armpit01                   | femalearmpithair.style01 |
 | 471582113     | f-eyebrow01                  | femaleeyebrow.style01    |
 | -1138648591   | f-pubic01                    | femalepubichair.style01  |
@@ -131,6 +132,7 @@ title: Item List
 | 88869913      | Minnows                      | fish.minnows             |
 | -533484654    | Raw Fish                     | fish.raw                 |
 | 865679437     | Small Trout                  | fish.troutsmall          |
+| 1571660245    | Handmade Fishing Rod         | fishingrod.handmade      |
 | 1369769822    | Survival Fish Trap           | fishtrap.small           |
 | 1045869440    | Flame Thrower                | flamethrower             |
 | 1985408483    | Flame Turret                 | flameturret              |
@@ -169,6 +171,9 @@ title: Item List
 | 1404466285    | Heavy Plate Jacket           | heavy.plate.jacket       |
 | -1334615971   | Heavy Plate Pants            | heavy.plate.pants        |
 | -1211618504   | Hoodie                       | hoodie                   |
+| -1851058636   | Burnt Horse Meat             | horsemeat.burned         |
+| -1828062867   | Cooked Horse Meat            | horsemeat.cooked         |
+| -1966381470   | Raw Horse Meat               | horsemeat.raw            |
 | 2133577942    | High Quality Metal Ore       | hq.metal.ore             |
 | -1014825244   | Burnt Human Meat             | humanmeat.burned         |
 | -991829475    | Cooked Human Meat            | humanmeat.cooked         |
@@ -195,9 +200,13 @@ title: Item List
 | 825308669     | Machete                      | machete                  |
 | 830965940     | Mail Box                     | mailbox                  |
 | 1662628660    | m-facialhair02               | male.facialhair.style02  |
+| 1662628661    | m-facialhair03               | male.facialhair.style03  |
+| 1662628662    | m-facialhair04               | male.facialhair.style04  |
 | -1832205789   | m-hairstyle-1                | male_hairstyle_01        |
 | -1832205788   | m-hairstyle-2                | male_hairstyle_02        |
 | -1832205787   | m-hairstyle-3                | male_hairstyle_03        |
+| -1832205786   | m-hairstyle-4                | male_hairstyle_04        |
+| -1832205785   | m-hairstyle-5                | male_hairstyle_05        |
 | 1625090418    | m-armpit01                   | malearmpithair.style01   |
 | -1269800768   | m-eyebrow01                  | maleeyebrow.style01      |
 | 429648208     | m-pubic01                    | malepubichair.style01    |

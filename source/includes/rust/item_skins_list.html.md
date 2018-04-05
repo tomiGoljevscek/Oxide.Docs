@@ -46,6 +46,7 @@ title: Item Skins
 | 809190373    | Battle-Scarred AKS47              |
 | 1112904406   | Betty Lou AK47                    |
 | 924020531    | Cartagena AK47                    |
+| 1349512142   | Caution AK47                      |
 | 937864743    | Checkpoint AK47                   |
 | 1196676446   | Chivalry AK47                     |
 | 875130056    | Claw AK47                         |
@@ -71,6 +72,7 @@ title: Item Skins
 | 908297014    | Lonewolf AK47 - Blue              |
 | 1213092632   | Mandrill                          |
 | 10137        | Military Camo AK47                |
+| 1338305091   | Mystic AK47                       |
 | 1118706219   | Night Howler AK47                 |
 | 1161844853   | Panther AK47                      |
 | 1120500163   | Piranha AK47                      |
@@ -288,9 +290,11 @@ title: Item Skins
 |--------------|-----------------------------------|
 | 848645884    | Apocalypse Helmet                 |
 | 914060966    | Army Armored Helmet               |
+| 1342122459   | Caution Helmet                    |
 | 1121458604   | Cobalt Armor Helmet               |
 | 1251411840   | Defender Helmet                   |
 | 938020581    | Desert Patrol Helmet              |
+| 1332335200   | Dominator Helmet                  |
 | 955675586    | Epidemic Helmet                   |
 | 1129809202   | Funhouse Helmet                   |
 | 970583835    | Junkyard Samurai Helmet           |
@@ -330,6 +334,7 @@ title: Item Skins
 | 1242702498   | Dead Man Crossbow                 |
 | 883141682    | Doomwing Crossbow                 |
 | 818070371    | Engraved Crossbow                 |
+| 1349337546   | Gold Spirit Crossbow              |
 | 1181976746   | Gurkha Crossbow                   |
 | 1291686117   | Hawk Crossbow                     |
 | 809964230    | HazardCross                       |
@@ -415,6 +420,7 @@ title: Item Skins
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 1260546874   | Ancient Furnace                   |
+| 1335598661   | Ancient Gods Furnace              |
 | 1247357204   | Angry Furnace                     |
 | 1241065527   | Aztec Furnace                     |
 | 1230386524   | Blacksmith Furnace                |
@@ -430,6 +436,7 @@ title: Item Skins
 | 1239083962   | Potbelly Furnace                  |
 | 1305743950   | Ritual Furnace                    |
 | 1230539924   | Snowboy                           |
+| 1349367380   | Soul Burner                       |
 | 1282172459   | Totem Furnace                     |
 | 1261530424   | Urban Furnace                     |
 | 1231071505   | Victorian Furnace                 |
@@ -522,6 +529,7 @@ title: Item Skins
 ## Hide Pants (attire.hide.pants)
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
+| 1269154354   | Tribesman Hide Pants              |
 | 837179220    | Uprising Hide Pants               |
 
 ## Hide Poncho (attire.hide.poncho)
@@ -530,6 +538,7 @@ title: Item Skins
 | 833524594    | Camo Netting                      |
 | 788732722    | Grey Wolf Hide Poncho             |
 | 825459163    | Toymaker Poncho                   |
+| 1269162578   | Tribesman Poncho                  |
 | 837191793    | Uprising Hide Poncho              |
 
 ## Hide Skirt (attire.hide.skirt)
@@ -542,6 +551,7 @@ title: Item Skins
 | Skin Id      | Skin name                         |
 |--------------|-----------------------------------|
 | 878319804    | Celtic Hide Shirt                 |
+| 1269172413   | Tribesman Hide Shirt              |
 
 ## Hoodie (hoodie)
 | Skin Id      | Skin name                         |
@@ -674,6 +684,7 @@ title: Item Skins
 | 1212838382   | Muertos Chest                     |
 | 932160919    | Padded Armor Trunk                |
 | 1282838099   | Pandora's box                     |
+| 1342462175   | Railway Box                       |
 | 878850459    | Recyclables Box                   |
 | 881249489    | Royal Wooden Box                  |
 | 1169231428   | Salvaged Cargo Box                |
@@ -750,8 +761,10 @@ title: Item Skins
 | 832233112    | Chainmail                         |
 | 842577956    | Chest Resistance                  |
 | 1270065959   | Conquistador Chest Plate          |
+| 1335770974   | Dwarf Chestplate                  |
 | 924019814    | Engineer's Chest Plate            |
 | 796728308    | Flak Vest - Green                 |
+| 1349989767   | Flyer Vest                        |
 | 794169855    | Forest Camo Chest Plate           |
 | 823132085    | Hazardous Grater Chest Plate      |
 | 944835223    | Hornet Chestplate                 |
@@ -786,8 +799,10 @@ title: Item Skins
 | 792079554    | Death Facemask                    |
 | 962694769    | Deathwing Facemask                |
 | 1092671728   | Diesel Facemask                   |
+| 1335769610   | Dwarf Facemask                    |
 | 1084823878   | Elder's Metal Facemask            |
 | 915572534    | Flesh Facemask                    |
+| 1349988105   | Flyer Mask                        |
 | 807821375    | Frostbite                         |
 | 1172409741   | Glowing Metal Pumpkin Mask        |
 | 794837198    | Glowing Skull                     |
@@ -932,6 +947,7 @@ title: Item Skins
 | 1217395562   | Engraved Python                   |
 | 1265214612   | Holy Python                       |
 | 1296687971   | Hot Battle Steel                  |
+| 1342464644   | Industrial Python                 |
 | 1335582211   | Ivory Python                      |
 | 1290876678   | Necromancer Python                |
 | 1277518447   | Outlaw Python                     |
@@ -999,12 +1015,14 @@ title: Item Skins
 | 953104456    | Apocalypse Vest                   |
 | 865659101    | Army Sign Vest                    |
 | 801873550    | British Sign Vest                 |
+| 1342125487   | Caution Vest                      |
 | 818611894    | Chopshop Body Armor               |
 | 1121456497   | Cobalt Armor Vest                 |
 | 1102966153   | Deathwing Vest                    |
 | 1251431494   | Defender Vest                     |
 | 934926427    | Desert Patrol Vest                |
 | 1084394793   | Diesel Roadsign Vest              |
+| 1332334593   | Dominator Vest                    |
 | 944577714    | Epidemic Roadsign Vest            |
 | 947950933    | Freebooter Vest                   |
 | 784581113    | Hazard Protection Vest            |
@@ -1034,12 +1052,14 @@ title: Item Skins
 | 953112839    | Apocalypse Kilt                   |
 | 865679836    | Army Sign Kilt                    |
 | 801837047    | British Sign Pants                |
+| 1342123902   | Caution Pants                     |
 | 818612271    | Chopshop Kilt                     |
 | 1121447954   | Cobalt Armor Pants                |
 | 1102986622   | Deathwing Pants                   |
 | 1251419748   | Defender Pants                    |
 | 934937654    | Desert Patrol Pants               |
 | 1084396407   | Diesel Roadsign Pants             |
+| 1332333384   | Dominator Pants                   |
 | 944586866    | Epidemic Roadsign Pants           |
 | 947949717    | Freebooter Pants                  |
 | 784577443    | Hazard Cover Pants                |
@@ -1090,6 +1110,7 @@ title: Item Skins
 | 853494512    | KNOCK KNOCK                       |
 | 926279011    | Surge Rocket Launcher             |
 | 812737524    | ThatGermanGuy Warhawk             |
+| 1162085821   | Troglodyte                        |
 | 1137393412   | Wood Barreled                     |
 
 ## Rug (rug)
@@ -1179,6 +1200,7 @@ title: Item Skins
 | 972059802    | Oink SAP                          |
 | 830606037    | Ol' Greasy                        |
 | 804337360    | Paint Rush SAP                    |
+| 1328323548   | Poison Jaws SAP                   |
 | 798375117    | Polymer SAP                       |
 | 868298519    | Poseidon Semi Auto Pistol         |
 | 10081        | Reaper Note Pistol                |
@@ -1211,6 +1233,7 @@ title: Item Skins
 | 1217394290   | Hot Rod SAR                       |
 | 942919370    | Meridian SAR                      |
 | 1098038362   | Nightmare SAR                     |
+| 1310522106   | Payback SAR                       |
 | 1135415770   | Pharaoh SAR                       |
 | 1182015913   | Saboteur Rifle                    |
 | 1170719113   | SAR Scarecrow                     |
@@ -1264,6 +1287,7 @@ title: Item Skins
 | 1083653685   | Polar Station Door                |
 | 859864870    | Prison Door                       |
 | 961909886    | Quarantine Door                   |
+| 1342459239   | Railway Door                      |
 | 835119969    | Recycled Garage Door              |
 | 934924536    | Roadsign Door                     |
 | 1117884427   | Salvaged APC Door                 |
@@ -1301,6 +1325,7 @@ title: Item Skins
 | 10121        | Aston Christmas                   |
 | 1127084512   | Bear Bag                          |
 | 10037        | Blue Plaid Sleeping Bag           |
+| 1296042340   | Brony Bag                         |
 | 1165339422   | Cannibal Survival Bag             |
 | 909889024    | Caravanner Bedroll                |
 | 10119        | Christmas Bag                     |
@@ -1349,6 +1374,7 @@ title: Item Skins
 | 854688691    | Large Fruit Pit Hatchet           |
 | 1290344811   | Megalodon Totem Hatchet           |
 | 1184754750   | Midas Hatchet                     |
+| 1340282993   | Ritual Stone Hatchet              |
 | 1235107175   | Sea Monster                       |
 | 912599650    | Soul Reaper Stone Hatchet         |
 | 1196674526   | Stonecraft Hatchet                |
