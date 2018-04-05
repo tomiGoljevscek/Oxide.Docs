@@ -15,7 +15,7 @@ void OnEntityDeath(AnimalStatManager stats, EntityEffectSourceData source)
 ## OnEntitySpawned
 
 ``` csharp
-void OnEntitySpawned(NetworkViewData data)
+void OnEntitySpawned(HNetworkView data)
 {
     Puts("OnEntitySpawned works!");
 }
