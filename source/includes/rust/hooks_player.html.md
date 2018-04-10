@@ -113,6 +113,30 @@ bool CanEquipItem(PlayerInventory inventory, Item item, int targetPos)
  * Called when the player attempts to equip an item
  * Returning true or false overrides default behavior
 
+## CanExperiment
+
+``` csharp
+bool CanExperiment(BasePlayer player, ItemDefinition item)
+{
+    Puts("CanExperiment works!");
+}
+```
+
+ * Called when the player attempts to experiment with at a workbench
+ * Returning true or false overrides default behavior
+
+## CanHackCrate
+
+``` csharp
+bool CanHackCrate(BasePlayer player, HackableLockedCrate crate)
+{
+    Puts("CanHackCrate works!");
+}
+```
+
+ * Called when the player attempts to hack a locked crate from the CH47 (Chinook)
+ * Returning true or false overrides default behavior
+
 ## CanLootPlayer
 
 ``` csharp

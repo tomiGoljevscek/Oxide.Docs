@@ -233,6 +233,54 @@ object OnContainerDropItems(ItemContainer container)
  * Called when a container is destroyed and all items are about to be dropped
  * Returning a non-null value overrides default behavior
 
+## OnCrateDropped
+
+``` csharp
+void OnCrateDropped(HackableLockedCrate crate)
+{
+    Puts("OnCrateDropped works!");
+}
+```
+
+ * Called when a locked crate from the CH47 (Chinook) has dropped
+ * No return behavior
+
+## OnCrateHack
+
+``` csharp
+void OnCrateHack(HackableLockedCrate crate)
+{
+    Puts("OnCrateHack works!");
+}
+```
+
+ * Called when a locked crate from the CH47 (Chinook) starts being hacked
+ * No return behavior
+
+## OnCrateHackEnd
+
+``` csharp
+void OnCrateHackEnd(HackableLockedCrate crate)
+{
+    Puts("OnCrateHackEnd works!");
+}
+```
+
+ * Called when a locked crate from the CH47 (Chinook) is no longer being hacked
+ * No return behavior
+
+## OnCrateLanded
+
+``` csharp
+void OnCrateLanded(HackableLockedCrate crate)
+{
+    Puts("OnCrateLanded works!");
+}
+```
+
+ * Called when a locked crate from the CH47 (Chinook) has landed
+ * No return behavior
+
 ## OnEntityDeath
 
 ``` csharp
