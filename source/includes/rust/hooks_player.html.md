@@ -116,7 +116,7 @@ bool CanEquipItem(PlayerInventory inventory, Item item, int targetPos)
 ## CanExperiment
 
 ``` csharp
-object CanExperiment(BasePlayer player, ItemDefinition item)
+object CanExperiment(BasePlayer player, Workbench workbench)
 {
     Puts("CanExperiment works!");
 }
