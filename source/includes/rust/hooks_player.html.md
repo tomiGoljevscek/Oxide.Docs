@@ -561,7 +561,7 @@ object OnPlayerViolation(BasePlayer player, AntiHackType type, float amount)
  * Called when the player triggers an anti-hack violation
  * Returning a non-null value overrides default behavior
 
-## OnPlayerViolation
+## OnPlayerVoice
 
 ``` csharp
 object OnPlayerVoice(BasePlayer player, Byte[] data)
