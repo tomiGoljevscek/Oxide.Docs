@@ -456,7 +456,7 @@ object OnNpcPlayerTarget(NPCPlayerApex npcPlayer, BaseEntity entity)
 ``` csharp
 object OnNpcTarget(BaseNpc npc, BaseEntity entity)
 {
-    Puts("OnOvenToggle works!");
+    Puts("OnNpcTarget works!");
 }
 ```
 
