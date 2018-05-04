@@ -105,6 +105,10 @@ title: Item List
 | -225234813    | Burnt Deer Meat              | deermeat.burned          |
 | -202239044    | Cooked Deer Meat             | deermeat.cooked          |
 | -322501005    | Raw Deer Meat                | deermeat.raw             |
+| -1144743963   | Diving Fins                  | diving.fins              |
+| -1144542967   | Diving Mask                  | diving.mask              |
+| -1144334585   | Diving Tank                  | diving.tank              |
+| 1066729526    | Wetsuit                      | diving.wetsuit           |
 | -778796102    | Door Closer                  | door.closer              |
 | -1598790097   | Sheet Metal Double Door      | door.double.hinged.metal |
 | -933236257    | Armored Double Door          | door.double.hinged.toptier|
@@ -167,6 +171,7 @@ title: Item List
 | 698310895     | Hatchet                      | hatchet                  |
 | 523855532     | Hazmat Suit                  | hazmatsuit               |
 | 670655301     | Scientist Suit               | hazmatsuit_scientist     |
+| 1148128486    | Scientist Suit               | hazmatsuit_scientist_peacekeeper|
 | 1351172108    | Heavy Plate Helmet           | heavy.plate.helmet       |
 | 1404466285    | Heavy Plate Jacket           | heavy.plate.jacket       |
 | -1334615971   | Heavy Plate Pants            | heavy.plate.pants        |
