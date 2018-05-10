@@ -142,6 +142,18 @@ void OnServerSave()
  * Called before the server saves and shuts down
  * No return behavior
 
+## OnPermissionRegistered
+
+``` csharp
+void OnPermissionRegistered(string name, Plugin owner)
+{
+    Puts($"Permission '{name}' has been registered {(owner != null ? $"for {owner.Title}" : "")}");
+}
+```
+
+ * Called when a permission has been registered
+ * No return behavior
+
 ## OnGroupPermissionGranted
 
 ``` csharp
@@ -166,28 +178,76 @@ void OnGroupPermissionRevoked(string name, string perm)
  * Called when a permission has been revoked from a group
  * No return behavior
 
-## OnUserPermissionGranted
+## OnGroupCreated
 
 ``` csharp
-void OnUserPermissionGranted(string id, string perm)
+void OnGroupCreated(string name)
 {
-    Puts($"User '{id}' granted permission: {perm}");
+    Puts($"Group '{name}' created!");
 }
 ```
 
- * Called when a permission has been granted to a player
+ * Called when a group has been created successfully
  * No return behavior
 
-## OnUserPermissionRevoked
+## OnGroupDeleted
 
 ``` csharp
-void OnUserPermissionRevoked(string id, string perm)
+void OnGroupDeleted(string name)
 {
-    Puts($"User '{id}' revoked permission: {perm}");
+    Puts($"Group '{name}' deleted!");
 }
 ```
 
- * Called when a permission has been revoked from a player
+ * Called when a group has been deleted successfully
+ * No return behavior
+
+## OnGroupTitleSet
+
+``` csharp
+void OnGroupTitleSet(string name, string title)
+{
+    Puts($"Title '{title}' set on group '{name}'");
+}
+```
+
+ * Called when a group title has been updated
+ * No return behavior
+
+## OnGroupRankSet
+
+``` csharp
+void OnGroupRankSet(string name, int rank)
+{
+    Puts($"Rank '{rank}' set on group '{name}'");
+}
+```
+
+ * Called when a group rank has been updated
+ * No return behavior
+
+## OnGroupParentSet
+
+``` csharp
+void OnGroupParentSet(string name, string parent)
+{
+    Puts($"Parent '{parent}' set on group '{name}'");
+}
+```
+
+ * Called when a group parent has been updated
+ * No return behavior
+
+## OnUserNameUpdated
+
+``` csharp
+void OnUserNameUpdated(string id, string oldName, string newName)
+{
+    Puts($"Player name changed from {oldName} to {newName} for ID {id}");
+}
+```
+
+ * Called when the LastSeenNickname has been updated in oxides datafile
  * No return behavior
 
 ## OnUserGroupAdded
@@ -212,6 +272,30 @@ void OnUserGroupRemoved(string id, string name)
 ```
 
  * Called when a player has been removed from a group
+ * No return behavior
+
+## OnUserPermissionGranted
+
+``` csharp
+void OnUserPermissionGranted(string id, string perm)
+{
+    Puts($"User '{id}' granted permission: {perm}");
+}
+```
+
+ * Called when a permission has been granted to a player
+ * No return behavior
+
+## OnUserPermissionRevoked
+
+``` csharp
+void OnUserPermissionRevoked(string id, string perm)
+{
+    Puts($"User '{id}' revoked permission: {perm}");
+}
+```
+
+ * Called when a permission has been revoked from a player
  * No return behavior
 
 ## OnUserKicked
