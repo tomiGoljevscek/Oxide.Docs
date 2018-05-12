@@ -4,6 +4,19 @@ title: Weapon Hooks
 
 # Weapon Hooks
 
+## CanCreateWorldProjectile
+
+``` csharp
+object CanCreateWorldProjectile(HitInfo info, ItemDefinition itemDef)
+{
+    Puts("CanCreateWorldProjectile works!");
+    return null;
+}
+```
+
+ * Called when the item creates a projectile in the world
+ * Returning a non-null value overrides default behavior
+
 ## OnCreateWorldProjectile
 
 ``` csharp
@@ -90,6 +103,19 @@ void OnRocketLaunched(BasePlayer player, BaseEntity entity)
 
  * Called when the player launches a rocket
  * No return behavior
+
+## OnSwitchAmmo
+
+``` csharp
+object OnSwitchAmmo(BasePlayer player, BaseProjectile projectile)
+{
+    Puts("OnSwitchAmmo works!");
+    return null;
+}
+```
+
+ * Called when the player starts to switch the ammo in a weapon
+ * Returning a non-null value overrides default behavior
 
 ## OnWeaponFired
 

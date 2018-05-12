@@ -174,6 +174,18 @@ object CanMountEntity(BaseMountable entity, BasePlayer player)
  * Called when the player attempts to mount an entity
  * Returning a non-null value overrides default behavior
 
+## CanRenameBed
+
+``` csharp
+object CanRenameBed(SleepingBag bed, BasePlayer player, string bedName)
+    Puts("CanRenameBed works!");
+    return null;
+}
+```
+
+ * Called when the player attempts to rename a bed or sleeping bag
+ * Returning a non-null value overrides default behavior
+
 ## CanResearchItem
 
 ``` csharp
@@ -183,7 +195,7 @@ object CanResearchItem(Item targetItem, BasePlayer player){
 }
 ```
 
- * Called when a player attempts to research an item
+ * Called when the player attempts to research an item
  * Returning a non-null value overrides default behavior
 
 ## CanUseMailbox

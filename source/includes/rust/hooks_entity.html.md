@@ -17,6 +17,19 @@ bool CanBradleyApcTarget(BradleyAPC apc, BaseEntity entity)
  * Called when an APC targets an entity
  * Returning true or false overrides default behavior
 
+## CanHelicopterDropCrate
+
+ ``` csharp
+bool CanHelicopterDropCrate(CH47HelicopterAIController heli)
+{
+    Puts("CanHelicopterDropCrate works!");
+    return true;
+}
+```
+
+ * Called when a CH47 helicopter attempts to drop a crate
+ * Returning true or false overrides default behavior
+
 ## CanHelicopterStrafe
 
  ``` csharp
@@ -27,7 +40,7 @@ bool CanHelicopterStrafe(PatrolHelicopterAI heli)
 }
 ```
 
- * Called when a helicopter attempts to strafe
+ * Called when a patrol helicopter attempts to strafe
  * Returning true or false overrides default behavior
 
 ## CanHelicopterStrafeTarget
@@ -40,7 +53,7 @@ bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 }
 ```
 
- * Called when a helicopter attempts to target a player to attack while strafing
+ * Called when a patrol helicopter attempts to target a player to attack while strafing
  * Returning true or false overrides default behavior
 
 ## CanHelicopterTarget
@@ -53,7 +66,7 @@ bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player)
 }
 ```
 
- * Called when a helicopter attempts to target a player to attack
+ * Called when a patrol helicopter attempts to target a player to attack
  * Returning true or false overrides default behavior
 
 ## CanHelicopterUseNapalm
@@ -66,7 +79,7 @@ bool CanHelicopterUseNapalm(PatrolHelicopterAI heli)
 }
 ```
 
- * Called when a helicopter attempts to use napalm
+ * Called when a patrol helicopter attempts to use napalm
  * Returning true or false overrides default behavior
 
 ## CanLootEntity (LootableCorpse)
@@ -127,6 +140,7 @@ object CanLootEntity(StorageContainer container, BasePlayer player)
 bool CanNetworkTo(BaseNetworkable entity, BasePlayer target)
 {
     Puts("CanNetworkTo works!");
+    return true;
 }
 ```
 
@@ -140,6 +154,7 @@ bool CanNetworkTo(BaseNetworkable entity, BasePlayer target)
 bool CanNpcAttack(BaseNpc npc, BaseEntity target)
 {
     Puts("CanNpcAttack works!");
+    reture true;
 }
 ```
 
@@ -152,6 +167,7 @@ bool CanNpcAttack(BaseNpc npc, BaseEntity target)
 bool CanNpcEat(BaseNpc npc, BaseEntity target)
 {
     Puts("CanNpcEat works!");
+    return true;
 }
 ```
 
@@ -164,6 +180,7 @@ bool CanNpcEat(BaseNpc npc, BaseEntity target)
 bool CanPickupEntity(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("CanPickupEntity works!");
+    return true;
 }
 ```
 
@@ -176,6 +193,7 @@ bool CanPickupEntity(BaseCombatEntity entity, BasePlayer player)
 bool CanRecycle(Recycler recycler, Item item)
 {
     Puts("CanRecycle works!");
+    return true;
 }
 ```
 
@@ -213,6 +231,7 @@ object OnBradleyApcInitialize(BradleyAPC apc)
 object OnBradleyApcHunt(BradleyAPC apc)
 {
     Puts("OnBradleyApcHunt works!");
+    return null;
 }
 ```
 
@@ -225,6 +244,7 @@ object OnBradleyApcHunt(BradleyAPC apc)
 object OnBradleyApcPatrol(BradleyAPC apc)
 {
     Puts("OnBradleyApcPatrol works!");
+    return null;
 }
 ```
 
@@ -237,6 +257,7 @@ object OnBradleyApcPatrol(BradleyAPC apc)
 object OnContainerDropItems(ItemContainer container)
 {
     Puts("OnContainerDropItems works!");
+    return null;
 }
 ```
 
@@ -334,6 +355,7 @@ void OnEntityEnter(TriggerBase trigger, BaseEntity entity)
 object OnEntityGroundMissing(BaseEntity entity)
 {
     Puts("OnEntityGroundMissing works!");
+    return null;
 }
 ```
 
@@ -394,6 +416,7 @@ void OnEntitySpawned(BaseNetworkable entity)
 object OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
 {
     Puts("OnEntityTakeDamage works!");
+    return null;
 }
 ```
 
@@ -402,17 +425,83 @@ object OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
  * HitInfo has all kinds of useful things in it, such as Weapon, damageProperties or damageTypes
  * Returning true overrides default behavior (useful for godmode etc.)
 
+## OnHelicopterAttacked
+
+``` csharp
+object OnHelicopterAttacked(CH47HelicopterAIController heli)
+{
+    Puts("OnHelicopterAttacked works!");
+    return null;
+}
+```
+
+ * Called when a CH47 helicopter is being attacked
+ * Returning a non-null value overrides default behavior
+
+## OnHelicopterDropCrate
+
+``` csharp
+object OnHelicopterDropCrate(CH47HelicopterAIController heli)
+{
+    Puts("OnHelicopterDropCrate works!");
+    return null;
+}
+```
+
+ * Called when a CH47 helicopter is dropping a crate
+ * Returning a non-null value overrides default behavior
+
+## OnHelicopterDropDoorOpen
+
+``` csharp
+object OnHelicopterDropDoorOpen(CH47HelicopterAIController heli)
+{
+    Puts("OnHelicopterDropDoorOpen works!");
+    return null;
+}
+```
+
+ * Called when a CH47 helicopter is opening its drop door
+ * Returning a non-null value overrides default behavior
+
+## OnHelicopterKilled
+
+``` csharp
+object OnHelicopterKilled(CH47HelicopterAIController heli)
+{
+    Puts("OnHelicopterKilled works!");
+    return null;
+}
+```
+
+ * Called when a CH47 helicopter is going to be killed
+ * Returning a non-null value overrides default behavior
+
+## OnHelicopterOutOfCrates
+
+``` csharp
+bool OnHelicopterOutOfCrates(CH47HelicopterAIController heli)
+{
+    Puts("OnHelicopterOutOfCrates works!");
+    return null;
+}
+```
+
+ * Called when a CH47 helicopter runs out of crates
+ * Returning a non-null value overrides default behavior
+
 ## OnHelicopterTarget
 
 ``` csharp
 object OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
 {
     Puts("OnHelicopterTarget works!");
+    return null;
 }
 ```
 
- * Called when a helicopter attempts to target an entity
- * Returning true overrides default behavior
+ * Called when a helicopter turret attempts to target an entity
+ * Returning a non-null value overrides default behavior
 
 ## OnLiftUse (Lift)
 
@@ -420,6 +509,7 @@ object OnHelicopterTarget(HelicopterTurret turret, BaseCombatEntity entity)
 object OnLiftUse(Lift lift, BasePlayer player)
 {
     Puts("OnLiftUse works!");
+    return null;
 }
 ```
 
@@ -432,6 +522,7 @@ object OnLiftUse(Lift lift, BasePlayer player)
 object OnLiftUse(ProceduralLift lift, BasePlayer player)
 {
     Puts("OnLiftUse works!");
+    return null;
 }
 ```
 
@@ -444,6 +535,7 @@ object OnLiftUse(ProceduralLift lift, BasePlayer player)
 object OnLootSpawn(LootContainer container)
 {
     Puts("OnLootSpawn works!");
+    return null;
 }
 ```
 
@@ -456,6 +548,7 @@ object OnLootSpawn(LootContainer container)
 object OnNpcPlayerTarget(NPCPlayerApex npcPlayer, BaseEntity entity)
 {
     Puts("OnNpcPlayerTarget works!");
+    return null;
 }
 ```
 
@@ -463,10 +556,12 @@ object OnNpcPlayerTarget(NPCPlayerApex npcPlayer, BaseEntity entity)
  * Returning a non-null value overrides default behavior
 
 ## OnNpcTarget
+
 ``` csharp
 object OnNpcTarget(BaseNpc npc, BaseEntity entity)
 {
     Puts("OnNpcTarget works!");
+    return null;
 }
 ```
 
@@ -479,6 +574,7 @@ object OnNpcTarget(BaseNpc npc, BaseEntity entity)
 object OnOvenToggle(BaseOven oven, BasePlayer player)
 {
     Puts("OnOvenToggle works!");
+    return null;
 }
 ```
 
@@ -491,6 +587,7 @@ object OnOvenToggle(BaseOven oven, BasePlayer player)
 object OnRecycleItem(Recycler recycler, Item item)
 {
     Puts("OnRecycleItem works!");
+    return null;
 }
 ```
 
@@ -503,6 +600,7 @@ object OnRecycleItem(Recycler recycler, Item item)
 object OnRecyclerToggle(Recycler recycler, BasePlayer player)
 {
     Puts("OnRecyclerToggle works!");
+    return null;
 }
 ```
 
@@ -522,10 +620,12 @@ void OnResourceDepositCreated(ResourceDepositManager.ResourceDeposit deposit)
  * No return behavior
 
 ## OnShopCompleteTrade
+
 ``` csharp
 object OnShopCompleteTrade(ShopFront shop, BasePlayer customer)
 {
     Puts("OnShopCompleteTrade works!");
+    return null;
 }
 ```
 
@@ -538,10 +638,24 @@ object OnShopCompleteTrade(ShopFront shop, BasePlayer customer)
 object OnTurretAuthorize(AutoTurret turret, BasePlayer player)
 {
     Puts("OnTurretAuthorize works!");
+    return null;
 }
 ```
 
  * Called when a player is authorized on a turret
+ * Returning a non-null value overrides default behavior
+
+## OnTurretClearList
+
+``` csharp
+object OnTurretClearList(AutoTurret turret, BasePlayer player)
+{
+    Puts("OnTurretClearList works!");
+    return null;
+}
+```
+
+ * Called when a player attempts to clear an autoturret's authorized list
  * Returning a non-null value overrides default behavior
 
 ## OnTurretDeauthorize
@@ -550,11 +664,24 @@ object OnTurretAuthorize(AutoTurret turret, BasePlayer player)
 object OnTurretDeauthorize(AutoTurret turret, BasePlayer player)
 {
     Puts("OnTurretDeauthorize works!");
+    return null;
 }
 ```
 
- * Called when a player is deauthorized on a turret
+ * Called when a player is deauthorized on an autoturret
  * Returning a non-null value overrides default behavior
+
+## OnTurretModeToggle
+
+``` csharp
+void OnTurretModeToggle(AutoTurret turret)
+{
+    Puts("OnTurretModeToggle works!");
+}
+```
+
+ * Called when the mode of an autoturrent is toggled
+ * No return behavior
 
 ## OnTurretShutdown
 
@@ -562,10 +689,11 @@ object OnTurretDeauthorize(AutoTurret turret, BasePlayer player)
 object OnTurretShutdown(AutoTurret turret)
 {
     Puts("OnTurretShutdown works!");
+    return null;
 }
 ```
 
- * Called when an autoturret shutsdown
+ * Called when an autoturret is shut down
  * Returning a non-null value overrides default behavior
 
 ## OnTurretStartup
@@ -574,6 +702,7 @@ object OnTurretShutdown(AutoTurret turret)
 object OnTurretStartup(AutoTurret turret)
 {
     Puts("OnTurretStartup works!");
+    return null;
 }
 ```
 
@@ -586,6 +715,7 @@ object OnTurretStartup(AutoTurret turret)
 object OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
 {
     Puts("OnTurretTarget works!");
+    return null;
 }
 ```
 
@@ -598,6 +728,7 @@ object OnTurretTarget(AutoTurret turret, BaseCombatEntity entity)
 object OnTurretToggle(AutoTurret turret)
 {
     Puts("OnTurretToggle works!");
+    return null;
 }
 ```
 

@@ -93,6 +93,19 @@ Item OnFindBurnable(BaseOven oven)
  * Called when looking for fuel for the oven
  * Returning an Item overrides default behavior
 
+## OnHealingItemUse
+
+``` csharp
+object OnHealingItemUse(MedicalTool tool, BasePlayer player)
+{
+    Puts("OnHealingItemUse works!");
+    return null;
+}
+```
+
+ * Called when a player attempts to use a medical tool
+ * Returning a non-null value overrides default behavior
+
 ## OnItemAction
 
 ``` csharp
