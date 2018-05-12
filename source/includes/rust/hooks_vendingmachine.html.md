@@ -46,13 +46,13 @@ bool CanVendingAcceptItem(VendingMachine vending, Item item, int targetPos)
 ## OnAddVendingOffer
 
 ``` csharp
-void OnAddVendingOffer(VendingMachine machine, BasePlayer player, ProtoBuf.VendingMachine.SellOrder sellOrder)
+void OnAddVendingOffer(VendingMachine machine, ProtoBuf.VendingMachine.SellOrder sellOrder)
 {
     Puts("OnAddVendingOffer works!");
 }
 ```
 
- * Called when a player adds a sell order to a vending machine
+ * Called when a sell order/offer is added to a vending machine
  * No return behavior
 
 ## OnBuyVendingItem
@@ -71,13 +71,13 @@ object OnBuyVendingItem(VendingMachine machine, BasePlayer player, int sellOrder
 ## OnDeleteVendingOffer
 
 ``` csharp
-void OnDeleteVendingOffer(VendingMachine machine, BasePlayer player)
+void OnDeleteVendingOffer(VendingMachine machine, int offerId)
 {
     Puts("OnDeleteVendingOffer works!");
 }
 ```
 
- * Called when a player deletes an offer from a vending machine
+ * Called when a sell order/offer is deleted from a vending machine
  * No return behavior
 
 ## OnOpenVendingAdmin

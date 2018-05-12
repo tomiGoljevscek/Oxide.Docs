@@ -425,6 +425,42 @@ object OnEntityTakeDamage(BaseCombatEntity entity, HitInfo info)
  * HitInfo has all kinds of useful things in it, such as Weapon, damageProperties or damageTypes
  * Returning true overrides default behavior (useful for godmode etc.)
 
+## OnFireBallDamage
+
+``` csharp
+void OnFireBallDamage(FireBall fire, BaseCombatEntity entity, HitInfo info)
+{
+    Puts("OnFireBallDamage works!");
+}
+```
+
+ * Called when a fire ball does damage to another entity
+ * No return behavior
+
+## OnFireBallSpread
+
+``` csharp
+void OnFireBallSpread(FireBall ball, BaseEntity fire)
+{
+    Puts("OnFireBallSpread works!");
+}
+```
+
+ * Called when a fire ball fire spreads
+ * No return behavior
+
+## OnFlameExplosion
+
+``` csharp
+void OnFlameExplosion(FlameExplosive explosive, BaseEntity flame)
+{
+    Puts("OnFlameExplosion works!");
+}
+```
+
+ * Called when a flame explodes
+ * No return behavior
+
 ## OnHelicopterAttacked
 
 ``` csharp

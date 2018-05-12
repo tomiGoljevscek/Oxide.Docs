@@ -54,6 +54,18 @@ void OnExplosiveThrown(BasePlayer player, BaseEntity entity)
  * Called when the player throws an explosive item (C4, grenade, ...)
  * No return behavior
 
+## OnFlameThrowerBurn
+
+``` csharp
+void OnFlameThrowerBurn(FlameThrower thrower, BaseEntity flame)
+{
+    Puts("OnFlameThrowerBurn works!");
+}
+```
+
+ * Called when the burn from a flame thrower spreads
+ * No return behavior
+
 ## OnMeleeThrown
 
 ``` csharp

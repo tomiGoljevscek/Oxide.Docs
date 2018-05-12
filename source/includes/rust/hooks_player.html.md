@@ -174,6 +174,19 @@ object CanMountEntity(BaseMountable entity, BasePlayer player)
  * Called when the player attempts to mount an entity
  * Returning a non-null value overrides default behavior
 
+## CanPlayerUI
+
+``` csharp
+object CanPlayerUI(BasePlayer player, string json)
+{
+    Puts("CanPlayerUI works!");
+    return null;
+}
+```
+
+ * Called when the player attempts to use a custom UI
+ * Returning a non-null value overrides default behavior
+
 ## CanRenameBed
 
 ``` csharp
@@ -359,6 +372,18 @@ void OnPlayerConnected(Network.Message packet)
  * Can get the connection from packet.connection
  * No return behavior
 
+## OnPlayerDestroyUI
+
+``` csharp
+void OnPlayerDestroyUI(BasePlayer player, string json)
+{
+    Puts("OnPlayerDestroyUI works!");
+}
+```
+
+ * Called when the player closes/destroys a custom UI
+ * No return behavior
+
 ## OnPlayerDie
 
 ``` csharp
@@ -370,7 +395,7 @@ object OnPlayerDie(BasePlayer player, HitInfo info)
 ```
 
  * Called when the player is about to die
- * HitInfo may be null
+ * HitInfo may be null sometimes
  * Returning a non-null value overrides default behavior
 
 ## OnPlayerDisconnected
@@ -481,6 +506,18 @@ void OnPlayerLootEnd(PlayerLoot inventory)
 ```
 
  * Called when the player stops looting
+ * No return behavior
+
+## OnPlayerMetabolize
+
+``` csharp
+void OnPlayerMetabolize(PlayerMetabolism metabolism, BaseCombatEntity entity, float delta)
+{
+    Puts("OnPlayerMetabolize works!");
+}
+```
+
+ * Called after the player's metabolism has been changed
  * No return behavior
 
 ## OnPlayerRecover
