@@ -10,6 +10,7 @@ title: Entity Hooks
 bool CanBradleyApcTarget(BradleyAPC apc, BaseEntity entity)
 {
     Puts("CanBradleyApcTarget works!");
+    return true;
 }
 ```
 
@@ -22,6 +23,7 @@ bool CanBradleyApcTarget(BradleyAPC apc, BaseEntity entity)
 bool CanHelicopterStrafe(PatrolHelicopterAI heli)
 {
     Puts("CanHelicopterStrafe works!");
+    return true;
 }
 ```
 
@@ -34,6 +36,7 @@ bool CanHelicopterStrafe(PatrolHelicopterAI heli)
 bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 {
     Puts("CanHelicopterStrafeTarget works!");
+    return true;
 }
 ```
 
@@ -46,6 +49,7 @@ bool CanHelicopterStrafeTarget(PatrolHelicopterAI entity, BasePlayer target)
 bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player)
 {
     Puts("CanHelicopterTarget works!");
+    return true;
 }
 ```
 
@@ -58,6 +62,7 @@ bool CanHelicopterTarget(PatrolHelicopterAI heli, BasePlayer player)
 bool CanHelicopterUseNapalm(PatrolHelicopterAI heli)
 {
     Puts("CanHelicopterUseNapalm works!");
+    return true;
 }
 ```
 
@@ -70,11 +75,12 @@ bool CanHelicopterUseNapalm(PatrolHelicopterAI heli)
 object CanLootEntity(LootableCorpse corpse, BasePlayer player)
 {
     Puts("CanLootEntity works!");
+    return null;
 }
 ```
 
  * Called when the player starts looting a LootableCorpse entity
- * No return behavior
+* Returning a non-null value overrides default behavior
 
 ## CanLootEntity (ResourceContainer)
 
@@ -82,11 +88,12 @@ object CanLootEntity(LootableCorpse corpse, BasePlayer player)
 object CanLootEntity(ResourceContainer container, BasePlayer player)
 {
     Puts("CanLootEntity works!");
+    return null;
 }
 ```
 
  * Called when the player starts looting a ResourceContainer entity
- * No return behavior
+* Returning a non-null value overrides default behavior
 
 ## CanLootEntity (DroppedItemContainer)
 
@@ -94,11 +101,12 @@ object CanLootEntity(ResourceContainer container, BasePlayer player)
 object CanLootEntity(DroppedItemContainer container, BasePlayer player)
 {
     Puts("CanLootEntity works!");
+    return null;
 }
 ```
 
  * Called when the player starts looting a DroppedItemContainer entity
- * No return behavior
+* Returning a non-null value overrides default behavior
 
 ## CanLootEntity (StorageContainer)
 
@@ -106,11 +114,12 @@ object CanLootEntity(DroppedItemContainer container, BasePlayer player)
 object CanLootEntity(StorageContainer container, BasePlayer player)
 {
     Puts("CanLootEntity works!");
+    return null;
 }
 ```
 
  * Called when the player starts looting a StorageContainer entity
- * No return behavior
+* Returning a non-null value overrides default behavior
 
 ## CanNetworkTo
 
@@ -191,6 +200,7 @@ void OnAirdrop(CargoPlane plane, Vector3 dropPosition)
 object OnBradleyApcInitialize(BradleyAPC apc)
 {
     Puts("OnBradleyApcInitialize works!");
+    return null;
 }
 ```
 

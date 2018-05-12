@@ -10,6 +10,7 @@ title: Vending Machine Hooks
 bool CanAdministerVending(VendingMachine machine, BasePlayer player)
 {
     Puts("CanAdministerVending works!");
+    return true;
 }
 ```
 
@@ -22,6 +23,7 @@ bool CanAdministerVending(VendingMachine machine, BasePlayer player)
 bool CanUseVending(VendingMachine machine, BasePlayer player)
 {
     Puts("CanUseVending works!");
+    return true;
 }
 ```
 
@@ -34,6 +36,7 @@ bool CanUseVending(VendingMachine machine, BasePlayer player)
 bool CanVendingAcceptItem(VendingMachine vending, Item item, int targetPos)
 {
     Puts("CanVendingAcceptItem works!");
+    return true;
 }
 ```
 
@@ -55,14 +58,15 @@ void OnAddVendingOffer(VendingMachine machine, BasePlayer player, ProtoBuf.Vendi
 ## OnBuyVendingItem
 
 ``` csharp
-void OnBuyVendingItem(VendingMachine machine, BasePlayer player, int sellOrderId, int numberOfTransactions)
+object OnBuyVendingItem(VendingMachine machine, BasePlayer player, int sellOrderId, int numberOfTransactions)
 {
     Puts("OnBuyVendingItem works!");
+    return null;
 }
 ```
 
  * Called when a player buys an item from a vending machine
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnDeleteVendingOffer
 
@@ -118,6 +122,7 @@ void OnRefreshVendingStock(VendingMachine machine, Item item)
 object OnRotateVendingMachine(VendingMachine machine, BasePlayer player)
 {
     Puts("OnRotateVendingMachine works!");
+    return null;
 }
 ```
 
@@ -142,6 +147,7 @@ void OnToggleVendingBroadcast(VendingMachine machine, BasePlayer player)
 bool OnVendingTransaction(VendingMachine machine, BasePlayer buyer, int sellOrderId, int numberOfTransactions)
 {
     Puts("OnVendingTransaction works!");
+    return true;
 }
 ```
 

@@ -10,6 +10,7 @@ title: Item Hooks
 ItemContainer.CanAcceptResult CanAcceptItem(ItemContainer container, Item item, int targetPos)
 {
     Puts("CanAcceptItem works!");
+    return null;
 }
 ```
 
@@ -22,6 +23,7 @@ ItemContainer.CanAcceptResult CanAcceptItem(ItemContainer container, Item item, 
 bool CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
 {
     Puts("CanCombineDroppedItem works!");
+    return true;
 }
 ```
 
@@ -34,6 +36,7 @@ bool CanCombineDroppedItem(DroppedItem item, DroppedItem targetItem)
 object CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, int targetSlot)
 {
     Puts("CanMoveItem works!");
+    return null;
 }
 ```
 
@@ -46,6 +49,7 @@ object CanMoveItem(Item item, PlayerInventory playerLoot, uint targetContainer, 
 bool CanStackItem(Item item, Item targetItem)
 {
     Puts("CanStackItem works!");
+    return true;
 }
 ```
 
@@ -82,6 +86,7 @@ void OnContainerDropItems(ItemContainer container)
 Item OnFindBurnable(BaseOven oven)
 {
     Puts("OnFindBurnable works!");
+    return null;
 }
 ```
 
@@ -91,9 +96,10 @@ Item OnFindBurnable(BaseOven oven)
 ## OnItemAction
 
 ``` csharp
-object OnItemAction(Item item, string action)
+object OnItemAction(Item item, string action, BasePlayer player)
 {
     Puts("OnItemAction works!");
+    return null;
 }
 ```
 
@@ -119,6 +125,7 @@ void OnItemAddedToContainer(ItemContainer container, Item item)
 bool OnItemCraft(ItemCraftTask item)
 {
     Puts("OnItemCraft works!");
+    return true;
 }
 ```
 
@@ -179,6 +186,7 @@ void OnItemDropped(Item item, BaseEntity entity)
 object OnItemPickup(Item item, BasePlayer player)
 {
     Puts("OnItemPickup works!");
+    return null;
 }
 ```
 
@@ -213,14 +221,14 @@ void OnItemRepair(BasePlayer player, Item item)
 ## OnItemResearch
 
 ``` csharp
-object OnItemResearch(ResearchTable table, Item, targetItem, BasePlayer player)
+void OnItemResearch(ResearchTable table, Item, targetItem, BasePlayer player)
 {
     Puts("OnItemResearch works!");
 }
 ```
 
  * Called right before a player begins to research an item
- * Returning a non-null value overrides default behavior
+ * No return behavior
 
 ## OnItemResearched
 
@@ -228,7 +236,7 @@ object OnItemResearch(ResearchTable table, Item, targetItem, BasePlayer player)
 float OnItemResearched(ResearchTable table, float chance)
 {
     Puts("OnItemResearched works!");
-    return chance;
+    return 1;
 }
 ```
 
@@ -253,6 +261,7 @@ void OnItemResearchStart(ResearchTable table)
 object OnItemScrap(ResearchTable table, Item item)
 {
     Puts("OnItemResearchStart works!");
+    return null;
 }
 ```
 
@@ -265,6 +274,7 @@ object OnItemScrap(ResearchTable table, Item item)
 Item OnItemSplit(Item item, int amount)
 {
     Puts("OnItemSplit works!");
+    return null;
 }
 ```
 
@@ -313,6 +323,7 @@ void OnLoseCondition(Item item, ref float amount)
 int OnMaxStackable(Item item)
 {
     Puts("OnMaxStackable works!");
+    return 1;
 }
 ```
 
@@ -325,6 +336,7 @@ int OnMaxStackable(Item item)
 object OnTrapArm(BearTrap trap, BasePlayer player)
 {
     Puts("OnTrapArm works!");
+    return null;
 }
 ```
 
@@ -337,6 +349,7 @@ object OnTrapArm(BearTrap trap, BasePlayer player)
 object OnTrapDisarm(Landmine trap, BasePlayer player)
 {
     Puts("OnTrapDisarm works!");
+    return null;
 }
 ```
 
@@ -361,6 +374,7 @@ void OnTrapSnapped(BaseTrapTrigger trap, GameObject go)
 object OnTrapTrigger(BaseTrap trap, GameObject go)
 {
     Puts("OnTrapTrigger works!");
+    return null;
 }
 ```
 

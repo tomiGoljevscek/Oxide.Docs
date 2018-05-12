@@ -10,6 +10,7 @@ title: Structure Hooks
 bool CanAffordUpgrade(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grade)
 {
     Puts("CanAffordUpgrade works!");
+    return true;
 }
 ```
 
@@ -22,6 +23,7 @@ bool CanAffordUpgrade(BasePlayer player, BuildingBlock block, BuildingGrade.Enum
 object CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
 {
     Puts("CanAssignBed works!");
+    return null;
 }
 ```
 
@@ -34,6 +36,7 @@ object CanAssignBed(SleepingBag bag, BasePlayer player, ulong targetPlayerId)
 object CanBuild(Planner planner, Construction prefab, Construction.Target target)
 {
     Puts("CanBuild works!");
+    return null;
 }
 ```
 
@@ -46,6 +49,7 @@ object CanBuild(Planner planner, Construction prefab, Construction.Target target
 object CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool isGuestCode)
 {
     Puts("CanChangeCode works!");
+    return null;
 }
 ```
 
@@ -58,6 +62,7 @@ object CanChangeCode(CodeLock codeLock, BasePlayer player, string newCode, bool 
 bool CanChangeGrade(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grade)
 {
     Puts("CanChangeGrade works!");
+    return true;
 }
 ```
 
@@ -70,6 +75,7 @@ bool CanChangeGrade(BasePlayer player, BuildingBlock block, BuildingGrade.Enum g
 bool CanDemolish(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grade)
 {
     Puts("CanDemolish works!");
+    return true;
 }
 ```
 
@@ -82,6 +88,7 @@ bool CanDemolish(BasePlayer player, BuildingBlock block, BuildingGrade.Enum grad
 object CanHideStash(StashContainer stash, BasePlayer player)
 {
     Puts("CanHideStash works!");
+    return null;
 }
 ```
 
@@ -94,6 +101,7 @@ object CanHideStash(StashContainer stash, BasePlayer player)
 object CanLock(BaseLock baseLock, BasePlayer player)
 {
     Puts("CanLock works!");
+    return null;
 }
 ```
 
@@ -106,6 +114,7 @@ object CanLock(BaseLock baseLock, BasePlayer player)
 bool CanPickupLock(BasePlayer player, BaseLock baseLock)
 {
     Puts("CanPickupLock works!");
+    return true;
 }
 ```
 
@@ -118,6 +127,7 @@ bool CanPickupLock(BasePlayer player, BaseLock baseLock)
 object CanSeeStash(StashContainer stash, BasePlayer player)
 {
     Puts("CanSeeStash works!");
+    return null;
 }
 ```
 
@@ -130,6 +140,7 @@ object CanSeeStash(StashContainer stash, BasePlayer player)
 object CanSetBedPublic(SleepingBag bed, BasePlayer player)
 {
     Puts("CanSetBedPublic works!");
+    return null;
 }
 ```
 
@@ -142,6 +153,7 @@ object CanSetBedPublic(SleepingBag bed, BasePlayer player)
 object CanUnlock(BaseLock baseLock, BasePlayer player)
 {
     Puts("CanUnlock works!");
+    return null;
 }
 ```
 
@@ -154,6 +166,7 @@ object CanUnlock(BaseLock baseLock, BasePlayer player)
 bool CanUseLockedEntity(BasePlayer player, BaseLock baseLock)
 {
     Puts("CanUseLockedEntity works!");
+    return true;
 }
 ```
 
@@ -166,6 +179,7 @@ bool CanUseLockedEntity(BasePlayer player, BaseLock baseLock)
 object OnCodeEntered(CodeLock codeLock, BasePlayer player, string code)
 {
     Puts("OnCodeEntered works!");
+    return null;
 }
 ```
 
@@ -178,6 +192,7 @@ object OnCodeEntered(CodeLock codeLock, BasePlayer player, string code)
 object OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardAuthorize works!");
+    return null;
 }
 ```
 
@@ -190,6 +205,7 @@ object OnCupboardAuthorize(BuildingPrivlidge privilege, BasePlayer player)
 object OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardClearList works!");
+    return null;
 }
 ```
 
@@ -202,6 +218,7 @@ object OnCupboardClearList(BuildingPrivlidge privilege, BasePlayer player)
 object OnCupboardDeauthorize(BuildingPrivlidge privilege, BasePlayer player)
 {
     Puts("OnCupboardDeauthorize works!");
+    return null;
 }
 ```
 
@@ -274,6 +291,7 @@ void OnHammerHit(BasePlayer player, HitInfo info)
 object OnStructureDemolish(BaseCombatEntity entity, BasePlayer player)
 {
     Puts("OnStructureDemolish works!");
+    return null;
 }
 ```
 
@@ -310,6 +328,7 @@ void OnStructureRotate(BaseCombatEntity entity, BasePlayer player)
 object OnStructureUpgrade(BaseCombatEntity entity, BasePlayer player, BuildingGrade.Enum grade)
 {
     Puts("OnStructureUpgrade works!");
+    return null;
 }
 ```
 

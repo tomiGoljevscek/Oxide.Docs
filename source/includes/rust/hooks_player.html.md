@@ -10,6 +10,7 @@ title: Player Hooks
 bool CanAttack(BasePlayer player)
 {
     Puts("CanAttack works!");
+    return true;
 }
 ```
 
@@ -22,6 +23,7 @@ bool CanAttack(BasePlayer player)
 bool CanBeTargeted(BaseCombatEntity player, MonoBehaviour behaviour)
 {
     Puts("CanBeTargeted works!");
+    return true;
 }
 ```
 
@@ -34,6 +36,7 @@ bool CanBeTargeted(BaseCombatEntity player, MonoBehaviour behaviour)
 bool CanBeWounded(BasePlayer player, HitInfo info)
 {
     Puts("CanBeWounded works!");
+    return true;
 }
 ```
 
@@ -46,6 +49,7 @@ bool CanBeWounded(BasePlayer player, HitInfo info)
 bool CanBypassQueue(Network.Connection connection)
 {
     Puts("CanBypassQueue works!");
+    return true;
 }
 ```
 
@@ -58,6 +62,7 @@ bool CanBypassQueue(Network.Connection connection)
 bool CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
 {
     Puts("CanCraft works!");
+    return true;
 }
 ```
 
@@ -70,6 +75,7 @@ bool CanCraft(ItemCrafter itemCrafter, ItemBlueprint bp, int amount)
 bool CanClientLogin(Network.Connection connection)
 {
     Puts("CanClientLogin works!");
+    return true;
 }
 ```
 
@@ -83,6 +89,7 @@ bool CanClientLogin(Network.Connection connection)
 bool CanDropActiveItem(BasePlayer player)
 {
     Puts("CanDropActiveItem works!");
+    return true;
 }
 ```
 
@@ -95,6 +102,7 @@ bool CanDropActiveItem(BasePlayer player)
 object CanDismountEntity(BaseMountable entity, BasePlayer player)
 {
     Puts("CanDismountEntity works!");
+    return null;
 }
 ```
 
@@ -107,6 +115,7 @@ object CanDismountEntity(BaseMountable entity, BasePlayer player)
 bool CanEquipItem(PlayerInventory inventory, Item item, int targetPos)
 {
     Puts("CanEquipItem works!");
+    return true;
 }
 ```
 
@@ -119,6 +128,7 @@ bool CanEquipItem(PlayerInventory inventory, Item item, int targetPos)
 object CanExperiment(BasePlayer player, Workbench workbench)
 {
     Puts("CanExperiment works!");
+    return null;
 }
 ```
 
@@ -131,6 +141,7 @@ object CanExperiment(BasePlayer player, Workbench workbench)
 object CanHackCrate(BasePlayer player, HackableLockedCrate crate)
 {
     Puts("CanHackCrate works!");
+    return null;
 }
 ```
 
@@ -143,6 +154,7 @@ object CanHackCrate(BasePlayer player, HackableLockedCrate crate)
 bool CanLootPlayer(BasePlayer target, BasePlayer looter)
 {
     Puts("CanLootPlayer works!");
+    return true;
 }
 ```
 
@@ -155,10 +167,23 @@ bool CanLootPlayer(BasePlayer target, BasePlayer looter)
 object CanMountEntity(BaseMountable entity, BasePlayer player)
 {
     Puts("CanMountEntity works!");
+    return null;
 }
 ```
 
  * Called when the player attempts to mount an entity
+ * Returning a non-null value overrides default behavior
+
+## CanResearchItem
+
+``` csharp
+object CanResearchItem(Item targetItem, BasePlayer player){
+    Puts("CanResearchItem works!");
+    return null;
+}
+```
+
+ * Called when a player attempts to research an item
  * Returning a non-null value overrides default behavior
 
 ## CanUseMailbox
@@ -167,6 +192,7 @@ object CanMountEntity(BaseMountable entity, BasePlayer player)
 bool CanUseMailbox(BasePlayer player, Mailbox mailbox)
 {
     Puts("CanUseMailbox works!");
+    return true;
 }
 ```
 
@@ -179,6 +205,7 @@ bool CanUseMailbox(BasePlayer player, Mailbox mailbox)
 bool CanWearItem(PlayerInventory inventory, Item item, int targetPos)
 {
     Puts("CanWearItem works!");
+    return true;
 }
 ```
 
@@ -257,6 +284,18 @@ void OnLootPlayer(BasePlayer player, BasePlayer target)
  * Called when the player starts looting another player
  * No return behavior
 
+## OnPlayerActiveItemChanged
+
+``` csharp
+void OnPlayerActiveItemChanged(BasePlayer player, Item oldItem, Item newItem)
+{
+    Puts("OnPlayerActiveItemChanged works!");
+}
+```
+
+ * Called when the player changes their active held item
+ * No return behavior
+
 ## OnPlayerAttack
 
 ``` csharp
@@ -288,6 +327,7 @@ void OnPlayerBanned(string name, ulong id, string address, string reason)
 object OnPlayerChat(ConsoleSystem.Arg arg)
 {
     Puts("OnPlayerChat works!");
+    return null;
 }
 ```
 
@@ -313,6 +353,7 @@ void OnPlayerConnected(Network.Message packet)
 object OnPlayerDie(BasePlayer player, HitInfo info)
 {
     Puts("OnPlayerDie works!");
+    return null;
 }
 ```
 
@@ -350,6 +391,7 @@ void OnPlayerDropActiveItem(BasePlayer player, Item item)
 object OnPlayerHealthChange(BasePlayer player, float oldValue, float newValue)
 {
     Puts("OnPlayerHealthChange works!");
+    return null;
 }
 ```
 
@@ -398,6 +440,7 @@ void OnPlayerKicked(BasePlayer player, string reason)
 object OnPlayerLand(BasePlayer player, float num)
 {
     Puts("OnPlayerLand works!");
+    return null;
 }
 ```
 
@@ -434,6 +477,7 @@ void OnPlayerLootEnd(PlayerLoot inventory)
 object OnPlayerRecover(BasePlayer player)
 {
     Puts("OnPlayerRecover works!");
+    return null;
 }
 ```
 
@@ -446,6 +490,7 @@ object OnPlayerRecover(BasePlayer player)
 object OnPlayerRespawn(BasePlayer player)
 {
     Puts("OnPlayerRespawn works!");
+    return null;
 }
 ```
 
@@ -472,6 +517,7 @@ void OnPlayerRespawned(BasePlayer player)
 object OnPlayerSleep(BasePlayer player)
 {
     Puts("OnPlayerSleep works!");
+    return null;
 }
 ```
 
@@ -496,6 +542,7 @@ void OnPlayerSleepEnded(BasePlayer player)
 object OnPlayerSpawn(BasePlayer player)
 {
     Puts("OnPlayerSpawn works!");
+    return null;
 }
 ```
 
@@ -508,6 +555,7 @@ object OnPlayerSpawn(BasePlayer player)
 object OnPlayerSpectate(BasePlayer player, string spectateFilter)
 {
     Puts("OnPlayerSpectate works!");
+    return null;
 }
 ```
 
@@ -520,6 +568,7 @@ object OnPlayerSpectate(BasePlayer player, string spectateFilter)
 object OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
 {
     Puts("OnPlayerSpectateEnd works!");
+    return null;
 }
 ```
 
@@ -532,6 +581,7 @@ object OnPlayerSpectateEnd(BasePlayer player, string spectateFilter)
 object OnPlayerTick(BasePlayer player, PlayerTick msg, bool wasPlayerStalled)
 {
     Puts("OnPlayerTick works!");
+    return null;
 }
 ```
 
@@ -555,6 +605,7 @@ void OnPlayerUnbanned(string name, ulong id, string address)
 object OnPlayerViolation(BasePlayer player, AntiHackType type, float amount)
 {
     Puts("OnPlayerViolation works!");
+    return null;
 }
 ```
 
@@ -567,6 +618,7 @@ object OnPlayerViolation(BasePlayer player, AntiHackType type, float amount)
 object OnPlayerVoice(BasePlayer player, Byte[] data)
 {
     Puts("OnPlayerVoice works!");
+    return null;
 }
 ```
 
@@ -579,6 +631,7 @@ object OnPlayerVoice(BasePlayer player, Byte[] data)
 object OnPlayerWound(BasePlayer player)
 {
     Puts("OnPlayerWound works!");
+    return null;
 }
 ```
 
@@ -591,6 +644,7 @@ object OnPlayerWound(BasePlayer player)
 object OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 {
     Puts("OnRunPlayerMetabolism works!");
+    return null;
 }
 ```
 
@@ -606,6 +660,7 @@ object OnRunPlayerMetabolism(PlayerMetabolism metabolism)
 object OnUserApprove(Network.Connection connection)
 {
     Puts("OnUserApprove works!");
+    return null;
 }
 ```
 

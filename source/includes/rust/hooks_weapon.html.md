@@ -10,6 +10,7 @@ title: Weapon Hooks
 object OnCreateWorldProjectile(HitInfo info, Item item)
 {
     Puts("OnCreateWorldProjectile works!");
+    return null;
 }
 ```
 
@@ -58,6 +59,7 @@ void OnMeleeThrown(BasePlayer player, Item item)
 object OnReloadMagazine(BasePlayer player, BaseProjectile projectile)
 {
     Puts("OnReloadMagazine works!");
+    return null;
 }
 ```
 
@@ -70,6 +72,7 @@ object OnReloadMagazine(BasePlayer player, BaseProjectile projectile)
 object OnReloadWeapon(BasePlayer player, BaseProjectile projectile)
 {
     Puts("OnReloadWeapon works!");
+    return null;
 }
 ```
 

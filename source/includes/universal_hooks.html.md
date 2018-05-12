@@ -267,7 +267,7 @@ void OnUserGroupAdded(string id, string name)
 ``` csharp
 void OnUserGroupRemoved(string id, string name)
 {
-    Puts($"User '{id}' removed from group: {name}");
+    Puts($"Player '{id}' removed from group: {name}");
 }
 ```
 
@@ -279,7 +279,7 @@ void OnUserGroupRemoved(string id, string name)
 ``` csharp
 void OnUserPermissionGranted(string id, string perm)
 {
-    Puts($"User '{id}' granted permission: {perm}");
+    Puts($"Player '{id}' granted permission: {perm}");
 }
 ```
 
@@ -291,7 +291,7 @@ void OnUserPermissionGranted(string id, string perm)
 ``` csharp
 void OnUserPermissionRevoked(string id, string perm)
 {
-    Puts($"User '{id}' revoked permission: {perm}");
+    Puts($"Player '{id}' revoked permission: {perm}");
 }
 ```
 
@@ -303,7 +303,7 @@ void OnUserPermissionRevoked(string id, string perm)
 ``` csharp
 void OnUserKicked(IPlayer player, string reason)
 {
-    Puts($"User {player.Name} ({player.Id}) was kicked");
+    Puts($"Player {player.Name} ({player.Id}) was kicked");
 }
 ```
 
@@ -315,7 +315,7 @@ void OnUserKicked(IPlayer player, string reason)
 ``` csharp
 void OnUserBanned(string name, string id, string address, string reason)
 {
-    Puts($"User {name} ({id}) was banned: {reason}");
+    Puts($"Player {name} ({id}) was banned: {reason}");
 }
 ```
 

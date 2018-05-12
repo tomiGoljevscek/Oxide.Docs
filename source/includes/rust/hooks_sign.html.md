@@ -10,6 +10,7 @@ title: Sign Hooks
 bool CanUpdateSign(BasePlayer player, Signage sign)
 {
     Puts("CanUpdateSign works!");
+    return true;
 }
 ```
 

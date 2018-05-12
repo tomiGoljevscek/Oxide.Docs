@@ -7,32 +7,36 @@ title: Resource Gathering Hooks
 ## OnCollectiblePickup
 
 ``` csharp
-void OnCollectiblePickup(Item item, BasePlayer player)
+object OnCollectiblePickup(Item item, BasePlayer player)
 {
     Puts("OnCollectiblePickup works!");
+    return null;
 }
 ```
 
  * Called when the player collects an item
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnCropGather
 
 ``` csharp
-void OnCropGather(PlantEntity plant, Item item, BasePlayer player)
+object OnCropGather(PlantEntity plant, Item item, BasePlayer player)
 {
     Puts("OnCropGather works!");
+    return null;
 }
 ```
 
  * Called when the player gathers a plant
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnDispenserBonus
+
 ``` csharp
 object OnDispenserBonus(ResourceDispenser dispenser, BasePlayer player, Item item)
 {
     Puts("OnDispenserBonus works!");
+    return null;
 }
 ```
 
@@ -42,14 +46,15 @@ object OnDispenserBonus(ResourceDispenser dispenser, BasePlayer player, Item ite
 ## OnDispenserGather
 
 ``` csharp
-void OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
+object OnDispenserGather(ResourceDispenser dispenser, BaseEntity entity, Item item)
 {
     Puts("OnDispenserGather works!");
+    return null;
 }
 ```
 
  * Called before the player is given items from a resource
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnQuarryEnabled
 

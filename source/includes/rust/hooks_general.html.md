@@ -10,6 +10,7 @@ title: Server Hooks
 object OnMessagePlayer(string message, BasePlayer player)
 {
     Puts("OnMessagePlayer works!");
+    return null;
 }
 ```
 
@@ -46,6 +47,7 @@ void OnRconCommand(IPAddress ip, string command, string[] args)
 object OnRconConnection(IPEndPoint ip)
 {
     Puts("OnRconConnection works!");
+    return null;
 }
 ```
 
@@ -58,6 +60,7 @@ object OnRconConnection(IPEndPoint ip)
 object OnSaveLoad(Dictionary<BaseEntity, Entity> entities)
 {
     Puts("OnSaveLoad works!");
+    return null;
 }
 ```
 
@@ -70,6 +73,7 @@ object OnSaveLoad(Dictionary<BaseEntity, Entity> entities)
 object OnServerCommand(ConsoleSystem.Arg arg)
 {
     Puts("OnServerCommand works!");
+    return null;
 }
 ```
 
@@ -82,6 +86,7 @@ object OnServerCommand(ConsoleSystem.Arg arg)
 object OnServerMessage(string message, string name, string color, ulong id)
 {
     Puts("OnServerMessage works!");
+    return null;
 }
 ```
 
