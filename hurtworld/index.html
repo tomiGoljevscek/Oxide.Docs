@@ -1,0 +1,2841 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Oxide API for Hurtworld</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all.js"></script>
+  </head>
+
+  <body class="hurtworld hurtworld_index" data-languages="[&quot;csharp&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../images/logo.png" class="logo" alt="Logo" />
+      </a>
+        <div class="lang-selector">
+              <a href="#" data-language-name="csharp">csharp</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
+          </li>
+          <li>
+            <a href="#universal-hooks" class="toc-h1 toc-link" data-title="Universal Hooks">Universal Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#init" class="toc-h2 toc-link" data-title="Init">Init</a>
+                  </li>
+                  <li>
+                    <a href="#loaded" class="toc-h2 toc-link" data-title="Loaded">Loaded</a>
+                  </li>
+                  <li>
+                    <a href="#unload" class="toc-h2 toc-link" data-title="Unload">Unload</a>
+                  </li>
+                  <li>
+                    <a href="#loaddefaultconfig" class="toc-h2 toc-link" data-title="LoadDefaultConfig">LoadDefaultConfig</a>
+                  </li>
+                  <li>
+                    <a href="#loaddefaultmessages" class="toc-h2 toc-link" data-title="LoadDefaultMessages">LoadDefaultMessages</a>
+                  </li>
+                  <li>
+                    <a href="#onframe" class="toc-h2 toc-link" data-title="OnFrame">OnFrame</a>
+                  </li>
+                  <li>
+                    <a href="#onpluginloaded" class="toc-h2 toc-link" data-title="OnPluginLoaded">OnPluginLoaded</a>
+                  </li>
+                  <li>
+                    <a href="#onpluginunloaded" class="toc-h2 toc-link" data-title="OnPluginUnloaded">OnPluginUnloaded</a>
+                  </li>
+                  <li>
+                    <a href="#onserverinitialized" class="toc-h2 toc-link" data-title="OnServerInitialized">OnServerInitialized</a>
+                  </li>
+                  <li>
+                    <a href="#onserversave" class="toc-h2 toc-link" data-title="OnServerSave">OnServerSave</a>
+                  </li>
+                  <li>
+                    <a href="#onpermissionregistered" class="toc-h2 toc-link" data-title="OnPermissionRegistered">OnPermissionRegistered</a>
+                  </li>
+                  <li>
+                    <a href="#ongrouppermissiongranted" class="toc-h2 toc-link" data-title="OnGroupPermissionGranted">OnGroupPermissionGranted</a>
+                  </li>
+                  <li>
+                    <a href="#ongrouppermissionrevoked" class="toc-h2 toc-link" data-title="OnGroupPermissionRevoked">OnGroupPermissionRevoked</a>
+                  </li>
+                  <li>
+                    <a href="#ongroupcreated" class="toc-h2 toc-link" data-title="OnGroupCreated">OnGroupCreated</a>
+                  </li>
+                  <li>
+                    <a href="#ongroupdeleted" class="toc-h2 toc-link" data-title="OnGroupDeleted">OnGroupDeleted</a>
+                  </li>
+                  <li>
+                    <a href="#ongrouptitleset" class="toc-h2 toc-link" data-title="OnGroupTitleSet">OnGroupTitleSet</a>
+                  </li>
+                  <li>
+                    <a href="#ongrouprankset" class="toc-h2 toc-link" data-title="OnGroupRankSet">OnGroupRankSet</a>
+                  </li>
+                  <li>
+                    <a href="#ongroupparentset" class="toc-h2 toc-link" data-title="OnGroupParentSet">OnGroupParentSet</a>
+                  </li>
+                  <li>
+                    <a href="#onusernameupdated" class="toc-h2 toc-link" data-title="OnUserNameUpdated">OnUserNameUpdated</a>
+                  </li>
+                  <li>
+                    <a href="#onusergroupadded" class="toc-h2 toc-link" data-title="OnUserGroupAdded">OnUserGroupAdded</a>
+                  </li>
+                  <li>
+                    <a href="#onusergroupremoved" class="toc-h2 toc-link" data-title="OnUserGroupRemoved">OnUserGroupRemoved</a>
+                  </li>
+                  <li>
+                    <a href="#onuserpermissiongranted" class="toc-h2 toc-link" data-title="OnUserPermissionGranted">OnUserPermissionGranted</a>
+                  </li>
+                  <li>
+                    <a href="#onuserpermissionrevoked" class="toc-h2 toc-link" data-title="OnUserPermissionRevoked">OnUserPermissionRevoked</a>
+                  </li>
+                  <li>
+                    <a href="#onuserkicked" class="toc-h2 toc-link" data-title="OnUserKicked">OnUserKicked</a>
+                  </li>
+                  <li>
+                    <a href="#onuserbanned" class="toc-h2 toc-link" data-title="OnUserBanned">OnUserBanned</a>
+                  </li>
+                  <li>
+                    <a href="#onuserunbanned" class="toc-h2 toc-link" data-title="OnUserUnbanned">OnUserUnbanned</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#server-hooks" class="toc-h1 toc-link" data-title="Server Hooks">Server Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#onservercommand" class="toc-h2 toc-link" data-title="OnServerCommand">OnServerCommand</a>
+                  </li>
+                  <li>
+                    <a href="#onremotecommand" class="toc-h2 toc-link" data-title="OnRemoteCommand">OnRemoteCommand</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#player-hooks" class="toc-h1 toc-link" data-title="Player Hooks">Player Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canclientlogin" class="toc-h2 toc-link" data-title="CanClientLogin">CanClientLogin</a>
+                  </li>
+                  <li>
+                    <a href="#cancraft" class="toc-h2 toc-link" data-title="CanCraft">CanCraft</a>
+                  </li>
+                  <li>
+                    <a href="#canusemachine" class="toc-h2 toc-link" data-title="CanUseMachine">CanUseMachine</a>
+                  </li>
+                  <li>
+                    <a href="#onfindspawnpoint" class="toc-h2 toc-link" data-title="OnFindSpawnPoint">OnFindSpawnPoint</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerchat" class="toc-h2 toc-link" data-title="OnPlayerChat">OnPlayerChat</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerconnected" class="toc-h2 toc-link" data-title="OnPlayerConnected">OnPlayerConnected</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdeath" class="toc-h2 toc-link" data-title="OnPlayerDeath">OnPlayerDeath</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdisconnected" class="toc-h2 toc-link" data-title="OnPlayerDisconnected">OnPlayerDisconnected</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerinput" class="toc-h2 toc-link" data-title="OnPlayerInput">OnPlayerInput</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerrespawn" class="toc-h2 toc-link" data-title="OnPlayerRespawn">OnPlayerRespawn</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerspawn" class="toc-h2 toc-link" data-title="OnPlayerSpawn">OnPlayerSpawn</a>
+                  </li>
+                  <li>
+                    <a href="#onplayersuicide" class="toc-h2 toc-link" data-title="OnPlayerSuicide">OnPlayerSuicide</a>
+                  </li>
+                  <li>
+                    <a href="#onplayertakedamage" class="toc-h2 toc-link" data-title="OnPlayerTakeDamage">OnPlayerTakeDamage</a>
+                  </li>
+                  <li>
+                    <a href="#onplayervoice" class="toc-h2 toc-link" data-title="OnPlayerVoice">OnPlayerVoice</a>
+                  </li>
+                  <li>
+                    <a href="#onuserapprove" class="toc-h2 toc-link" data-title="OnUserApprove">OnUserApprove</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#entity-hooks" class="toc-h1 toc-link" data-title="Entity Hooks">Entity Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#onentitydeath" class="toc-h2 toc-link" data-title="OnEntityDeath">OnEntityDeath</a>
+                  </li>
+                  <li>
+                    <a href="#onentityspawned" class="toc-h2 toc-link" data-title="OnEntitySpawned">OnEntitySpawned</a>
+                  </li>
+                  <li>
+                    <a href="#onentitytakedamage" class="toc-h2 toc-link" data-title="OnEntityTakeDamage">OnEntityTakeDamage</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#item-hooks" class="toc-h1 toc-link" data-title="Item Hooks">Item Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#onitemdrop" class="toc-h2 toc-link" data-title="OnItemDrop">OnItemDrop</a>
+                  </li>
+                  <li>
+                    <a href="#onitemequipped" class="toc-h2 toc-link" data-title="OnItemEquipped">OnItemEquipped</a>
+                  </li>
+                  <li>
+                    <a href="#onitempickup" class="toc-h2 toc-link" data-title="OnItemPickup">OnItemPickup</a>
+                  </li>
+                  <li>
+                    <a href="#onitemselected" class="toc-h2 toc-link" data-title="OnItemSelected">OnItemSelected</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#resource-gathering-hooks" class="toc-h1 toc-link" data-title="Resource Gathering Hooks">Resource Gathering Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#oncollectiblepickup" class="toc-h2 toc-link" data-title="OnCollectiblePickup">OnCollectiblePickup</a>
+                  </li>
+                  <li>
+                    <a href="#ondispensergather" class="toc-h2 toc-link" data-title="OnDispenserGather">OnDispenserGather</a>
+                  </li>
+                  <li>
+                    <a href="#onplantgather" class="toc-h2 toc-link" data-title="OnPlantGather">OnPlantGather</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#structure-hooks" class="toc-h1 toc-link" data-title="Structure Hooks">Structure Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canusedoubledoor" class="toc-h2 toc-link" data-title="CanUseDoubleDoor">CanUseDoubleDoor</a>
+                  </li>
+                  <li>
+                    <a href="#canusegaragedoor" class="toc-h2 toc-link" data-title="CanUseGarageDoor">CanUseGarageDoor</a>
+                  </li>
+                  <li>
+                    <a href="#canusepillboxdoor" class="toc-h2 toc-link" data-title="CanUsePillboxDoor">CanUsePillboxDoor</a>
+                  </li>
+                  <li>
+                    <a href="#canusesingledoor" class="toc-h2 toc-link" data-title="CanUseSingleDoor">CanUseSingleDoor</a>
+                  </li>
+                  <li>
+                    <a href="#ondoubledoorused" class="toc-h2 toc-link" data-title="OnDoubleDoorUsed">OnDoubleDoorUsed</a>
+                  </li>
+                  <li>
+                    <a href="#ongaragedoorused" class="toc-h2 toc-link" data-title="OnGarageDoorUsed">OnGarageDoorUsed</a>
+                  </li>
+                  <li>
+                    <a href="#onsingledoorused" class="toc-h2 toc-link" data-title="OnSingleDoorUsed">OnSingleDoorUsed</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#vehicle-hooks" class="toc-h1 toc-link" data-title="Vehicle Hooks">Vehicle Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canentervehicle" class="toc-h2 toc-link" data-title="CanEnterVehicle">CanEnterVehicle</a>
+                  </li>
+                  <li>
+                    <a href="#canexitvehicle" class="toc-h2 toc-link" data-title="CanExitVehicle">CanExitVehicle</a>
+                  </li>
+                  <li>
+                    <a href="#onentervehicle" class="toc-h2 toc-link" data-title="OnEnterVehicle">OnEnterVehicle</a>
+                  </li>
+                  <li>
+                    <a href="#onexitvehicle" class="toc-h2 toc-link" data-title="OnExitVehicle">OnExitVehicle</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#commands" class="toc-h1 toc-link" data-title="Commands">Commands</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#default-commands" class="toc-h2 toc-link" data-title="Default commands">Default commands</a>
+                  </li>
+                  <li>
+                    <a href="#chat-commands" class="toc-h2 toc-link" data-title="Chat commands">Chat commands</a>
+                  </li>
+                  <li>
+                    <a href="#console-commands" class="toc-h2 toc-link" data-title="Console commands">Console commands</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#configurations" class="toc-h1 toc-link" data-title="Configurations">Configurations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-a-configuration" class="toc-h2 toc-link" data-title="Creating a configuration">Creating a configuration</a>
+                  </li>
+                  <li>
+                    <a href="#saving-a-configuration" class="toc-h2 toc-link" data-title="Saving a configuration">Saving a configuration</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#storing-data" class="toc-h1 toc-link" data-title="Storing Data">Storing Data</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#creating-a-data-table" class="toc-h2 toc-link" data-title="Creating a data table">Creating a data table</a>
+                  </li>
+                  <li>
+                    <a href="#saving-a-data-table" class="toc-h2 toc-link" data-title="Saving a data table">Saving a data table</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#timers-basic" class="toc-h1 toc-link" data-title="Timers (Basic)">Timers (Basic)</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#single-timer" class="toc-h2 toc-link" data-title="Single timer">Single timer</a>
+                  </li>
+                  <li>
+                    <a href="#repeating-timer" class="toc-h2 toc-link" data-title="Repeating timer">Repeating timer</a>
+                  </li>
+                  <li>
+                    <a href="#next-frame-timer" class="toc-h2 toc-link" data-title="Next frame timer">Next frame timer</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#web-requests" class="toc-h1 toc-link" data-title="Web Requests">Web Requests</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#basic-get-method" class="toc-h2 toc-link" data-title="Basic Get method">Basic Get method</a>
+                  </li>
+                  <li>
+                    <a href="#basic-post-method" class="toc-h2 toc-link" data-title="Basic POST method">Basic POST method</a>
+                  </li>
+                  <li>
+                    <a href="#advanced-get-method" class="toc-h2 toc-link" data-title="Advanced GET method">Advanced GET method</a>
+                  </li>
+                  <li>
+                    <a href="#advanced-post-method" class="toc-h2 toc-link" data-title="Advanced POST method">Advanced POST method</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#plugin-calling" class="toc-h1 toc-link" data-title="Plugin Calling">Plugin Calling</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#exposing-a-plugin-39-s-method" class="toc-h2 toc-link" data-title="Exposing a plugin's method">Exposing a plugin's method</a>
+                  </li>
+                  <li>
+                    <a href="#calling-a-plugin-39-s-method" class="toc-h2 toc-link" data-title="Calling a plugin's method">Calling a plugin's method</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#item-list" class="toc-h1 toc-link" data-title="Item List">Item List</a>
+          </li>
+          <li>
+            <a href="#styling-messages" class="toc-h1 toc-link" data-title="Styling Messages">Styling Messages</a>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='getting-started'>Getting Started</h1><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"EpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">0.1</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"Makes epic stuff happen"</span><span class="p">)]</span>
+
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">HurtworldPlugin</span>
+    <span class="p">{</span>
+        <span class="c1">// The rest of the code and magic</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>The Title variable is what defines your plugin. This should be a unique codename or short description such as Pets.</p>
+
+<p>The Author variable is used to show who made the plugin. This should match your <a href="http://oxidemod.org/">OxideMod.org</a> username if releasing.</p>
+
+<p>The Version variable is used to tell if the plugin is outdated or not, and is incremented with each release. <a href="http://semver.org/">Semantic Versioning</a> recommended.</p>
+
+<p>The Description variable helps explain to users what your plugin does, in case the title isn&#39;t enough. Make it good, but not too long!</p>
+<h1 id='universal-hooks'>Universal Hooks</h1>
+<p><strong>Available for all supported games</strong></p>
+
+<p><a href="/7-days-to-die"><img src="../images/7-days-to-die/favicon-32x32.png" alt="7 Days to Die" /></a>
+<a href="/blockstorm"><img src="../images/blockstorm/favicon-32x32.png" alt="Blockstorm" /></a>
+<a href="/hurtworld"><img src="../images/hurtworld/favicon-32x32.png" alt="Hurtworld" /></a>
+<a href="/reign-of-kings"><img src="../images/reign-of-kings/favicon-32x32.png" alt="Reign of Kings" /></a>
+<a href="/rust"><img src="../images/rust/favicon-32x32.png" alt="Rust" /></a>
+<a href="/rust-legacy"><img src="../images/rust-legacy/favicon-32x32.png" alt="Rust Legacy" /></a>
+<a href="/the-forest"><img src="../images/the-forest/favicon-32x32.png" alt="The Forest" /></a>
+<a href="/unturned"><img src="../images/unturned/favicon-32x32.png" alt="Unturned" /></a></p>
+<h2 id='init'>Init</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">Init</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Init works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a plugin is being initialized</li>
+<li>Other plugins may or may not be present, dependant on load order</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='loaded'>Loaded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">Loaded</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Loaded works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a plugin has finished loading</li>
+<li>Other plugins may or may not be present, dependant on load order</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='unload'>Unload</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">Unload</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Save files, destroy timers, etc"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a plugin is being unloaded</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='loaddefaultconfig'>LoadDefaultConfig</h2><pre class="highlight csharp tab-csharp"><code><span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">LoadDefaultConfig</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Default configuration created"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the config for a plugin should be initialized</li>
+<li>Only called if the config file does not already exist</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='loaddefaultmessages'>LoadDefaultMessages</h2><pre class="highlight csharp tab-csharp"><code><span class="k">private</span> <span class="k">new</span> <span class="k">void</span> <span class="nf">LoadDefaultMessages</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">lang</span><span class="p">.</span><span class="nf">RegisterMessages</span><span class="p">(</span><span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="s">"Example"</span><span class="p">]</span> <span class="p">=</span> <span class="s">"This is an example message!"</span><span class="p">,</span>
+        <span class="p">[</span><span class="s">"AnotherExample"</span><span class="p">]</span> <span class="p">=</span> <span class="s">"Here is another example"</span>
+    <span class="p">},</span> <span class="k">this</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the localization for a plugin should be registered</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onframe'>OnFrame</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFrame</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFrame works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called each frame</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onpluginloaded'>OnPluginLoaded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPluginLoaded</span><span class="p">(</span><span class="n">Plugin</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Plugin '{name}' has been loaded"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a plugin has been loaded</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onpluginunloaded'>OnPluginUnloaded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPluginUnloaded</span><span class="p">(</span><span class="n">Plugin</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Plugin '{name}' has been unloaded"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a plugin has been unloaded</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onserverinitialized'>OnServerInitialized</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnServerInitialized</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnServerInitialized works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called after the server startup has been completed and is awaiting connections</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onserversave'>OnServerSave</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnServerSave</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnServerSave works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before the server saves and shuts down</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onpermissionregistered'>OnPermissionRegistered</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPermissionRegistered</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="n">Plugin</span> <span class="n">owner</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Permission '{name}' has been registered {(owner != null ? $"</span><span class="k">for</span> <span class="p">{</span><span class="n">owner</span><span class="p">.</span><span class="n">Title</span><span class="p">}</span><span class="s">" : "")}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a permission has been registered</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongrouppermissiongranted'>OnGroupPermissionGranted</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupPermissionGranted</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">perm</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Group '{name}' granted permission: {perm}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a permission has been granted to a group</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongrouppermissionrevoked'>OnGroupPermissionRevoked</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupPermissionRevoked</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">perm</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Group '{name}' revoked permission: {perm}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a permission has been revoked from a group</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongroupcreated'>OnGroupCreated</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupCreated</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Group '{name}' created!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a group has been created successfully</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongroupdeleted'>OnGroupDeleted</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupDeleted</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Group '{name}' deleted!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a group has been deleted successfully</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongrouptitleset'>OnGroupTitleSet</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupTitleSet</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">title</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Title '{title}' set on group '{name}'"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a group title has been updated</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongrouprankset'>OnGroupRankSet</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupRankSet</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">rank</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Rank '{rank}' set on group '{name}'"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a group rank has been updated</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongroupparentset'>OnGroupParentSet</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGroupParentSet</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">parent</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Parent '{parent}' set on group '{name}'"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a group parent has been updated</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onusernameupdated'>OnUserNameUpdated</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserNameUpdated</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">oldName</span><span class="p">,</span> <span class="kt">string</span> <span class="n">newName</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player name changed from {oldName} to {newName} for ID {id}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the LastSeenNickname has been updated in oxides datafile</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onusergroupadded'>OnUserGroupAdded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserGroupAdded</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"User '{id}' added to group: {name}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player has been added to a group</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onusergroupremoved'>OnUserGroupRemoved</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserGroupRemoved</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player '{id}' removed from group: {name}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player has been removed from a group</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onuserpermissiongranted'>OnUserPermissionGranted</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserPermissionGranted</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">perm</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player '{id}' granted permission: {perm}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a permission has been granted to a player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onuserpermissionrevoked'>OnUserPermissionRevoked</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserPermissionRevoked</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">perm</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player '{id}' revoked permission: {perm}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a permission has been revoked from a player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onuserkicked'>OnUserKicked</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserKicked</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">reason</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player {player.Name} ({player.Id}) was kicked"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player has been kicked from the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onuserbanned'>OnUserBanned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserBanned</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">address</span><span class="p">,</span> <span class="kt">string</span> <span class="n">reason</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player {name} ({id}) was banned: {reason}"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player has been banned from the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onuserunbanned'>OnUserUnbanned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserUnbanned</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">ip</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Player {name} ({id}) was unbanned"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player has been unbanned from the server</li>
+<li>No return behavior</li>
+</ul>
+<h1 id='server-hooks'>Server Hooks</h1><h2 id='onservercommand'>OnServerCommand</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnServerCommand</span><span class="p">(</span><span class="kt">string</span> <span class="n">command</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnServerCommand works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for intercepting console commands before they are executed</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onremotecommand'>OnRemoteCommand</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnRemoteCommand</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnRemoteCommand works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for intercepting remote commands before they are executed</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h1 id='player-hooks'>Player Hooks</h1><h2 id='canclientlogin'>CanClientLogin</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanClientLogin</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanClientLogin works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to connect to the server</li>
+<li>Returning a string will use the string as the error message</li>
+<li>Returning false will reject the connection with a default error message</li>
+</ul>
+<h2 id='cancraft'>CanCraft</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanCraft</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">CrafterServer</span> <span class="n">crafter</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanCraft works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to craft an item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canusemachine'>CanUseMachine</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanUseMachine</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="kt">object</span> <span class="n">machine</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseMachine works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to use a machine</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onfindspawnpoint'>OnFindSpawnPoint</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFindSpawnPoint</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFindSpawnPoint works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a spawnpoint is looked up for the player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerchat'>OnPlayerChat</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerChat</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="kt">string</span> <span class="n">message</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerChat works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player sends chat to the server</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerconnected'>OnPlayerConnected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerConnected</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerConnected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has connected to the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdeath'>OnPlayerDeath</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDeath</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">EntityEffectSourceData</span> <span class="n">source</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDeath works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player dies</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdisconnected'>OnPlayerDisconnected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDisconnected</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDisconnected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has disconnected from the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerinput'>OnPlayerInput</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerInput</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">InputControls</span> <span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerInput works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when input is received the player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerrespawn'>OnPlayerRespawn</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerRespawn</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">spawnLocation</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerRespawn works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to respawn</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerspawn'>OnPlayerSpawn</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSpawn</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSpawn works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to spawn</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayersuicide'>OnPlayerSuicide</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSuicide</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSuicide works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player suicides</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayertakedamage'>OnPlayerTakeDamage</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerTakeDamage</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">EntityEffectSourceData</span> <span class="n">source</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerTakeDamage works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is about to take damage</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayervoice'>OnPlayerVoice</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerVoice</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerVoice works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is using in-game voice communication</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onuserapprove'>OnUserApprove</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserApprove</span><span class="p">(</span><span class="n">Network</span><span class="p">.</span><span class="n">Connection</span> <span class="n">connection</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnUserApprove works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Used by HurtworldCore and abstracted into CanClientLogin</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h1 id='entity-hooks'>Entity Hooks</h1><h2 id='onentitydeath'>OnEntityDeath</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityDeath</span><span class="p">(</span><span class="n">AnimalStatManager</span> <span class="n">stats</span><span class="p">,</span> <span class="n">EntityEffectSourceData</span> <span class="n">source</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityDeath works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity has died</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentityspawned'>OnEntitySpawned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntitySpawned</span><span class="p">(</span><span class="n">HNetworkView</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntitySpawned works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity has spawned</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitytakedamage'>OnEntityTakeDamage</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityTakeDamage</span><span class="p">(</span><span class="n">AIEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">EntityEffectSourceData</span> <span class="n">source</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityTakeDamage works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity is about to take damage</li>
+<li>No return behavior</li>
+</ul>
+<h1 id='item-hooks'>Item Hooks</h1><h2 id='onitemdrop'>OnItemDrop</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemDrop</span><span class="p">(</span><span class="n">Inventory</span> <span class="n">inventory</span><span class="p">,</span> <span class="kt">int</span> <span class="n">slot</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemDrop works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is about to be dropped from an inventory</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onitemequipped'>OnItemEquipped</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemEquipped</span><span class="p">(</span><span class="n">ItemInstance</span> <span class="n">item</span><span class="p">,</span> <span class="n">EquippedHandlerServer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">int</span> <span class="n">slot</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemEquipped works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is equipped into a gear slot</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitempickup'>OnItemPickup</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemPickup</span><span class="p">(</span><span class="n">IStorable</span> <span class="n">inventory</span><span class="p">,</span> <span class="n">WorldItemInteractServer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemPickup works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is picked up</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemselected'>OnItemSelected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemSelected</span><span class="p">(</span><span class="n">ItemInstance</span> <span class="n">item</span><span class="p">,</span> <span class="n">EquippedHandlerServer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">int</span> <span class="n">slot</span><span class="p">,</span> <span class="kt">byte</span> <span class="n">sessionId</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemSelected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player selected an item on the action bar</li>
+<li>No return behavior</li>
+</ul>
+<h1 id='resource-gathering-hooks'>Resource Gathering Hooks</h1><h2 id='oncollectiblepickup'>OnCollectiblePickup</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnCollectiblePickup</span><span class="p">(</span><span class="n">LootOnPickup</span> <span class="n">node</span><span class="p">,</span> <span class="n">WorldItemInteractServer</span> <span class="n">player</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ItemInstance</span><span class="p">&gt;</span> <span class="n">items</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCollectiblePickup works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player collects an item</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ondispensergather'>OnDispenserGather</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnDispenserGather</span><span class="p">(</span><span class="n">GameObject</span> <span class="n">resourceNode</span><span class="p">,</span> <span class="n">HurtMonoBehavior</span> <span class="n">player</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ItemInstance</span><span class="p">&gt;</span> <span class="n">items</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnDispenserGather works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before the player is given items from a resource node</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplantgather'>OnPlantGather</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlantGather</span><span class="p">(</span><span class="n">GrowingPlantUsable</span> <span class="n">plant</span><span class="p">,</span> <span class="n">WorldItemInteractServer</span> <span class="n">player</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">ItemInstance</span><span class="p">&gt;</span> <span class="n">items</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlantGather works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before the player is given items from a plant</li>
+<li>No return behavior</li>
+</ul>
+<h1 id='structure-hooks'>Structure Hooks</h1><h2 id='canusedoubledoor'>CanUseDoubleDoor</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanUseDoubleDoor</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">DoubleDoorServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseDoubleDoor works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to open a double door</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canusegaragedoor'>CanUseGarageDoor</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanUseGarageDoor</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">GarageDoorServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseGarageDoor works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to open a garage door</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canusepillboxdoor'>CanUsePillboxDoor</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanUsePillboxDoor</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">DoorPillboxServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUsePillboxDoor works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to open a pillbox door</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canusesingledoor'>CanUseSingleDoor</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanUseSingleDoor</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">SingleDoorServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseSingleDoor works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to open a single door</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='ondoubledoorused'>OnDoubleDoorUsed</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnDoubleDoorUsed</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">DoubleDoorServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnDoubleDoorUsed works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player opened a double door</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ongaragedoorused'>OnGarageDoorUsed</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnGarageDoorUsed</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">GarageDoorServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnGarageDoorUsed works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player opened a garage door</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onsingledoorused'>OnSingleDoorUsed</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnSingleDoorUsed</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">SingleDoorServer</span> <span class="n">door</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnSingleDoorUsed works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player opened a single door</li>
+<li>No return behavior</li>
+</ul>
+<h1 id='vehicle-hooks'>Vehicle Hooks</h1><h2 id='canentervehicle'>CanEnterVehicle</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanEnterVehicle</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">VehiclePassenger</span> <span class="n">vehicle</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanEnterVehicle works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to enter a vehicle</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canexitvehicle'>CanExitVehicle</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanExitVehicle</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">VehiclePassenger</span> <span class="n">vehicle</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanExitVehicle works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to exit a vehicle</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onentervehicle'>OnEnterVehicle</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEnterVehicle</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">VehiclePassenger</span> <span class="n">vehicle</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEnterVehicle works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player enters a vehicle</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onexitvehicle'>OnExitVehicle</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnExitVehicle</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">VehiclePassenger</span> <span class="n">vehicle</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnExitVehicle works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player exits a vehicle</li>
+<li>No return behavior</li>
+</ul>
+<h1 id='commands'>Commands</h1><h2 id='default-commands'>Default commands</h2><pre class="highlight plaintext"><code>oxide.load *|&lt;pluginname&gt;+
+oxide.unload *|&lt;pluginname&gt;+
+oxide.reload *|&lt;pluginname&gt;+
+oxide.grant &lt;group|user&gt; &lt;name|id&gt; *|&lt;permission&gt;
+oxide.revoke &lt;group|user&gt; &lt;name|id&gt; *|&lt;permission&gt;
+oxide.group &lt;add|set&gt; &lt;name&gt; [title] [rank]
+oxide.group &lt;remove&gt; &lt;name&gt;
+oxide.group &lt;parent&gt; &lt;name&gt; &lt;parentname&gt;
+oxide.usergroup &lt;add|remove&gt; &lt;username&gt; &lt;groupname&gt;
+oxide.show &lt;group|user|perm&gt; &lt;name&gt;
+oxide.show &lt;groups|perms&gt;
+oxide.version
+</code></pre><h2 id='chat-commands'>Chat commands</h2><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="s">"1.0.0"</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"A basic chat command"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"test"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">TestCommand</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">player</span><span class="p">.</span><span class="nf">Reply</span><span class="p">(</span><span class="s">"Test successful!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h2 id='console-commands'>Console commands</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="s">"1.0.0"</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"A basic console command"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"global.test"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">TestCommand</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="nf">Puts</span><span class="p">(</span><span class="s">"Test successful!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h1 id='configurations'>Configurations</h1><h2 id='creating-a-configuration'>Creating a configuration</h2><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to use a basic configuration file"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">LoadDefaultConfig</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">PrintWarning</span><span class="p">(</span><span class="s">"Creating a new configuration file"</span><span class="p">);</span>
+            <span class="n">Config</span><span class="p">.</span><span class="nf">Clear</span><span class="p">();</span>
+            <span class="n">Config</span><span class="p">[</span><span class="s">"ShowJoinMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="n">Config</span><span class="p">[</span><span class="s">"ShowLeaveMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="n">Config</span><span class="p">[</span><span class="s">"JoinMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="s">"Welcome to this server"</span><span class="p">;</span>
+            <span class="n">Config</span><span class="p">[</span><span class="s">"LeaveMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="s">"Goodbye"</span><span class="p">;</span>
+            <span class="nf">SaveConfig</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>Since many users won&#39;t want to (or can&#39;t) edit the plugin directly to change the default configuration, it&#39;s best to offer to offer them a configuration file that can easily be edited without worrying about messing up the plugin.</p>
+<h2 id='saving-a-configuration'>Saving a configuration</h2><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to update a value in a configuration file"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"Test"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">Test</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">((</span><span class="kt">bool</span><span class="p">)</span><span class="n">Config</span><span class="p">[</span><span class="s">"ShowJoinMessage"</span><span class="p">])</span>
+                <span class="n">Config</span><span class="p">[</span><span class="s">"ShowJoinMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+            <span class="k">else</span>
+                <span class="n">Config</span><span class="p">[</span><span class="s">"ShowJoinMessage"</span><span class="p">]</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+            <span class="nf">SaveConfig</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>You can change and save configuration entries by simply assigning the new values and calling the save function.</p>
+<h1 id='storing-data'>Storing Data</h1><h2 id='creating-a-data-table'>Creating a data table</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Oxide.Core</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to create a data file"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="k">class</span> <span class="nc">StoredData</span>
+        <span class="p">{</span>
+            <span class="k">public</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="n">PlayerInfo</span><span class="p">&gt;</span> <span class="n">Players</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="n">PlayerInfo</span><span class="p">&gt;();</span>
+
+            <span class="k">public</span> <span class="nf">StoredData</span><span class="p">()</span>
+            <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">class</span> <span class="nc">PlayerInfo</span>
+        <span class="p">{</span>
+            <span class="k">public</span> <span class="kt">string</span> <span class="n">UserId</span><span class="p">;</span>
+            <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span><span class="p">;</span>
+
+            <span class="k">public</span> <span class="nf">PlayerInfo</span><span class="p">()</span>
+            <span class="p">{</span>
+            <span class="p">}</span>
+
+            <span class="k">public</span> <span class="nf">PlayerInfo</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">UserId</span> <span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">userID</span><span class="p">.</span><span class="nf">ToString</span><span class="p">();</span>
+                <span class="n">Name</span> <span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">displayName</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">StoredData</span> <span class="n">storedData</span><span class="p">;</span>
+
+        <span class="k">void</span> <span class="nf">Loaded</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">storedData</span> <span class="p">=</span> <span class="n">Interface</span><span class="p">.</span><span class="n">Oxide</span><span class="p">.</span><span class="n">DataFileSystem</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">&lt;</span><span class="n">StoredData</span><span class="p">&gt;(</span><span class="s">"MyDataFile"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>To store plugin related data to use in your plugin, you want to create a data file.</p>
+<h2 id='saving-a-data-table'>Saving a data table</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">Oxide.Core</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to save to a data file"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="k">class</span> <span class="nc">StoredData</span>
+        <span class="p">{</span>
+            <span class="k">public</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="n">PlayerInfo</span><span class="p">&gt;</span> <span class="n">Players</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="n">PlayerInfo</span><span class="p">&gt;();</span>
+
+            <span class="k">public</span> <span class="nf">StoredData</span><span class="p">()</span>
+            <span class="p">{</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">class</span> <span class="nc">PlayerInfo</span>
+        <span class="p">{</span>
+            <span class="k">public</span> <span class="kt">string</span> <span class="n">UserId</span><span class="p">;</span>
+            <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span><span class="p">;</span>
+
+            <span class="k">public</span> <span class="nf">PlayerInfo</span><span class="p">()</span>
+            <span class="p">{</span>
+            <span class="p">}</span>
+
+            <span class="k">public</span> <span class="nf">PlayerInfo</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">UserId</span> <span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+                <span class="n">Name</span> <span class="p">=</span> <span class="n">player</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="n">StoredData</span> <span class="n">storedData</span><span class="p">;</span>
+
+        <span class="k">void</span> <span class="nf">Loaded</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="n">storedData</span> <span class="p">=</span> <span class="n">Interface</span><span class="p">.</span><span class="n">Oxide</span><span class="p">.</span><span class="n">DataFileSystem</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">&lt;</span><span class="n">StoredData</span><span class="p">&gt;(</span><span class="s">"MyDataFile"</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"Test"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">Test</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">info</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">PlayerInfo</span><span class="p">(</span><span class="n">player</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">storedData</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="nf">Contains</span><span class="p">(</span><span class="n">info</span><span class="p">))</span>
+                <span class="nf">PrintToChat</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="s">"Your data has already been added to the file"</span><span class="p">);</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="nf">PrintToChat</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="s">"Saving your data to the file"</span><span class="p">);</span>
+                <span class="n">storedData</span><span class="p">.</span><span class="n">Players</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">info</span><span class="p">);</span>
+                <span class="n">Interface</span><span class="p">.</span><span class="n">Oxide</span><span class="p">.</span><span class="n">DataFileSystem</span><span class="p">.</span><span class="nf">WriteObject</span><span class="p">(</span><span class="s">"MyDataFile"</span><span class="p">,</span> <span class="n">storedData</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h1 id='timers-basic'>Timers (Basic)</h1>
+<p>Timers are great for delaying code, allowing it to be run later.</p>
+<h2 id='single-timer'>Single timer</h2><pre class="highlight csharp tab-csharp"><code><span class="n">timer</span><span class="p">.</span><span class="nf">Once</span><span class="p">(</span><span class="m">3f</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
+<span class="p">});</span>
+</code></pre>
+<p>Executes the specified function once after the specified delay.</p>
+<h2 id='repeating-timer'>Repeating timer</h2><pre class="highlight csharp tab-csharp"><code><span class="n">timer</span><span class="p">.</span><span class="nf">Repeat</span><span class="p">(</span><span class="m">5f</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">)</span>
+<span class="p">});</span>
+</code></pre>
+<p>Executes the specified function every &quot;delay&quot; seconds.</p>
+
+<p>If &quot;repeats&quot; is specified, the function will only be called &quot;repeats&quot; times.</p>
+<h2 id='next-frame-timer'>Next frame timer</h2><pre class="highlight csharp tab-csharp"><code><span class="nf">NextFrame</span><span class="p">(()</span> <span class="p">=&gt;</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+<p>Executes the specified function at the next frame.</p>
+<h1 id='web-requests'>Web Requests</h1>
+<p>Web requests allow you to send a HTTP GET or POST to a specified URL.</p>
+
+<p>The request will return true if the web request was sent, false if not. The callback is called with 2 parameters - an integer HTTP response code and a string response.</p>
+<h2 id='basic-get-method'>Basic Get method</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">Oxide.Core.Libraries.Covalence</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"EpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to use a GET WebRequest"</span><span class="p">)]</span>
+
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"get"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">GetRequest</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">webrequest</span><span class="p">.</span><span class="nf">EnqueueGet</span><span class="p">(</span><span class="s">"http://www.google.com/search?q=oxide"</span><span class="p">,</span> <span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nf">GetCallback</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span> <span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">void</span> <span class="nf">GetCallback</span><span class="p">(</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="kt">string</span> <span class="n">response</span><span class="p">,</span> <span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">response</span> <span class="p">==</span> <span class="k">null</span> <span class="p">||</span> <span class="n">code</span> <span class="p">!=</span> <span class="m">200</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Error: {code} - Couldn't get an answer from Google for {player.Name}"</span><span class="p">);</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Google answered for {player.Name}: {response}"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>This uses the raw connection to a web page as you would on your browser.</p>
+<h2 id='basic-post-method'>Basic POST method</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">Oxide.Core.Libraries.Covalence</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"EpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to use a POST WebRequest"</span><span class="p">)]</span>
+
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"post"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">PostRequest</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">webrequest</span><span class="p">.</span><span class="nf">EnqueuePost</span><span class="p">(</span><span class="s">"http://www.google.com/search?q=oxide"</span><span class="p">,</span> <span class="s">"param1=value1&amp;param2=value2"</span><span class="p">,</span> <span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nf">PostCallback</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span> <span class="k">this</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">void</span> <span class="nf">PostCallback</span><span class="p">(</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="kt">string</span> <span class="n">response</span><span class="p">,</span> <span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">response</span> <span class="p">==</span> <span class="k">null</span> <span class="p">||</span> <span class="n">code</span> <span class="p">!=</span> <span class="m">200</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Error: {code} - Couldn't get an answer from Google for {player.Name}"</span><span class="p">);</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nf">Puts</span><span class="p">(</span><span class="s">"Google answered for "</span> <span class="p">+</span> <span class="n">player</span><span class="p">.</span><span class="n">Name</span> <span class="p">+</span> <span class="s">": "</span> <span class="p">+</span> <span class="n">response</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h2 id='advanced-get-method'>Advanced GET method</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">Oxide.Core.Libraries.Covalence</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"EpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to use a GET WebRequest"</span><span class="p">)]</span>
+
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"get"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">GetRequest</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Set a custom timeout (in milliseconds)</span>
+            <span class="kt">var</span> <span class="n">timeout</span> <span class="p">=</span> <span class="m">200f</span><span class="p">;</span>
+
+            <span class="c1">// Set some custom request headers (eg. for HTTP Basic Auth)</span>
+            <span class="kt">var</span> <span class="n">headers</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="p">{</span> <span class="p">{</span> <span class="s">"header"</span><span class="p">,</span> <span class="s">"value"</span> <span class="p">}</span> <span class="p">};</span>
+
+            <span class="n">webrequest</span><span class="p">.</span><span class="nf">EnqueueGet</span><span class="p">(</span><span class="s">"http://www.google.com/search?q=oxide"</span><span class="p">,</span> <span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nf">GetCallback</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span> <span class="k">this</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">void</span> <span class="nf">GetCallback</span><span class="p">(</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="kt">string</span> <span class="n">response</span><span class="p">,</span> <span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">response</span> <span class="p">==</span> <span class="k">null</span> <span class="p">||</span> <span class="n">code</span> <span class="p">!=</span> <span class="m">200</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Error: {code} - Couldn't get an answer from Google for {player.Name}"</span><span class="p">);</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Google answered for {player.Name}: {response}"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h2 id='advanced-post-method'>Advanced POST method</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">Oxide.Core.Libraries.Covalence</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"EpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">1.0</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"This example illustrates how to use a POST WebRequest"</span><span class="p">)]</span>
+
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"post"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">PostRequest</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// Set a timeout (in milliseconds)</span>
+            <span class="kt">var</span> <span class="n">timeout</span> <span class="p">=</span> <span class="m">200f</span><span class="p">;</span>
+
+            <span class="c1">// Set some custom request headers (eg. for HTTP Basic Auth)</span>
+            <span class="kt">var</span> <span class="n">headers</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="p">{</span> <span class="p">{</span> <span class="s">"header"</span><span class="p">,</span> <span class="s">"value"</span> <span class="p">}</span> <span class="p">};</span>
+
+            <span class="n">webrequest</span><span class="p">.</span><span class="nf">EnqueuePost</span><span class="p">(</span><span class="s">"http://www.google.com/search?q=oxide"</span><span class="p">,</span> <span class="s">"param1=value1&amp;param2=value2"</span><span class="p">,</span> <span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nf">PostCallback</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">player</span><span class="p">),</span> <span class="k">this</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">timeout</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">void</span> <span class="nf">PostCallback</span><span class="p">(</span><span class="kt">int</span> <span class="n">code</span><span class="p">,</span> <span class="kt">string</span> <span class="n">response</span><span class="p">,</span> <span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">response</span> <span class="p">==</span> <span class="k">null</span> <span class="p">||</span> <span class="n">code</span> <span class="p">!=</span> <span class="m">200</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nf">Puts</span><span class="p">(</span><span class="err">$</span><span class="s">"Error: {code} - Couldn't get an answer from Google for {player.Name}"</span><span class="p">);</span>
+                <span class="k">return</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="nf">Puts</span><span class="p">(</span><span class="s">"Google answered for "</span> <span class="p">+</span> <span class="n">player</span><span class="p">.</span><span class="n">Name</span> <span class="p">+</span> <span class="s">": "</span> <span class="p">+</span> <span class="n">response</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h1 id='plugin-calling'>Plugin Calling</h1>
+<p>Oxide allows you to expose methods in your plugin and make them available to other plugins. This allows you to access objects or properties from other plugins without having to replicate functionality yourself.</p>
+<h2 id='exposing-a-plugin-39-s-method'>Exposing a plugin&#39;s method</h2><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"EpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">0.1</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"Makes epic stuff happen"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="c1">// Plugin methods can be a simple bool that is returned</span>
+        <span class="kt">bool</span> <span class="nf">GetReturn</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Plugin methods can take parameters and return simple types</span>
+        <span class="kt">string</span> <span class="nf">TakeParam</span><span class="p">(</span><span class="kt">string</span> <span class="n">param</span><span class="p">,</span> <span class="kt">int</span> <span class="n">secondParam</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">param</span> <span class="p">==</span> <span class="s">"first parameter"</span><span class="p">)</span> <span class="k">return</span> <span class="n">param</span><span class="p">;</span>
+            <span class="k">else</span> <span class="k">return</span> <span class="s">"First parameter didn't match!"</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// To return complex types, they should first be converted</span>
+        <span class="c1">// into builtin types (e.g. JSON.net types like JObject, JArray, etc. or builtin</span>
+        <span class="c1">// collections like System.Collections.Generic.Dictionary)</span>
+        <span class="n">JObject</span> <span class="nf">ReturnObject</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">myObject</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">JObject</span><span class="p">();</span>
+            <span class="n">myObject</span><span class="p">[</span><span class="s">"key"</span><span class="p">]</span> <span class="p">=</span> <span class="s">"value"</span><span class="p">;</span>
+            <span class="n">myObject</span><span class="p">[</span><span class="s">"array"</span><span class="p">]</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">JArray</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">myObject</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Plugin methods don't have to return something</span>
+        <span class="k">void</span> <span class="nf">SendMessage</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">Puts</span><span class="p">(</span><span class="s">"You just called the 'SendMessage' method!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>Exposing a plugin&#39;s method allows other plugins to call that method.</p>
+
+<p>For example, you could write a plugin that does some player management, then allow other plugins to &quot;query&quot; it to get a list of players who have certain privileges set in the original plugin.</p>
+<h2 id='calling-a-plugin-39-s-method'>Calling a plugin&#39;s method</h2><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"SecondEpicStuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="m">0.1</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"Makes more epic stuff happen"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">SecondEpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="c1">// First, add a reference to the plugin you are trying to call</span>
+        <span class="c1">// The name of this field needs to be the exact name of the desired plugin</span>
+        <span class="c1">// eg. We are referencing the example plugin above which is called 'EpicStuff'</span>
+        <span class="p">[</span><span class="n">PluginReference</span><span class="p">]</span>
+        <span class="n">Plugin</span> <span class="n">EpicStuff</span><span class="p">;</span>
+
+        <span class="c1">// It's a good idea to check if the plugin you're trying to call</span>
+        <span class="c1">// has been loaded by oxide (otherwise you can't call the method)</span>
+        <span class="k">void</span> <span class="nf">OnServerInitialized</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Note: Trying to do this check in the plugin Init() method may</span>
+            <span class="c1">// fail, as the plugin load order may be different each time</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">EpicStuff</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="nf">PrintWarning</span><span class="p">(</span><span class="s">"Plugin 'EpicStuff' was not found!"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">void</span> <span class="nf">CallPlugin</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="c1">// Plugin methods return objects, so cast the API call to the type</span>
+            <span class="c1">// you're expecting</span>
+            <span class="kt">var</span> <span class="n">getTypedReturn</span> <span class="p">=</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="n">EpicStuff</span><span class="p">?.</span><span class="nf">Call</span><span class="p">(</span><span class="s">"GetReturn"</span><span class="p">);</span>
+
+            <span class="c1">// Send parameters through as variables after the method name</span>
+            <span class="kt">var</span> <span class="n">takeParam</span> <span class="p">=</span> <span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">EpicStuff</span><span class="p">?.</span><span class="nf">Call</span><span class="p">(</span><span class="s">"TakeParam"</span><span class="p">,</span> <span class="s">"param1"</span><span class="p">,</span> <span class="m">1024</span><span class="p">);</span>
+
+            <span class="c1">// Use JSON.net to process the returned object</span>
+            <span class="kt">var</span> <span class="n">returnedObject</span> <span class="p">=</span> <span class="n">EpicStuff</span><span class="p">?.</span><span class="nf">Call</span><span class="p">(</span><span class="s">"ReturnObject"</span><span class="p">);</span>
+
+            <span class="c1">// Call a plugin to do some work without returning anything</span>
+            <span class="n">EpicStuff</span><span class="p">?.</span><span class="nf">Call</span><span class="p">(</span><span class="s">"SendMessage"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>Calling a plugin&#39;s method allows you to access results from another plugin.</p>
+<h1 id='item-list'>Item List</h1>
+<table><thead>
+<tr>
+<th>Item Id</th>
+<th>Item Name</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>289</td>
+<td>Albino Tokar Mask</td>
+</tr>
+<tr>
+<td>87</td>
+<td>Amber</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Animal Fat</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Animal Tendon</td>
+</tr>
+<tr>
+<td>278</td>
+<td>AR Bullet</td>
+</tr>
+<tr>
+<td>229</td>
+<td>Arctic Pelt</td>
+</tr>
+<tr>
+<td>283</td>
+<td>Arctic Shigi Mask</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Arrow</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Ash</td>
+</tr>
+<tr>
+<td>98</td>
+<td>Assault Rifle Auto</td>
+</tr>
+<tr>
+<td>225</td>
+<td>Assault Rifle Semi</td>
+</tr>
+<tr>
+<td>214</td>
+<td>Aussie Hat</td>
+</tr>
+<tr>
+<td>88</td>
+<td>Backpack</td>
+</tr>
+<tr>
+<td>303</td>
+<td>Baldness Hat</td>
+</tr>
+<tr>
+<td>96</td>
+<td>Basic Boots</td>
+</tr>
+<tr>
+<td>140</td>
+<td>Basic Pants</td>
+</tr>
+<tr>
+<td>128</td>
+<td>Basic Spear</td>
+</tr>
+<tr>
+<td>142</td>
+<td>Beacon</td>
+</tr>
+<tr>
+<td>167</td>
+<td>Billycart Wheel</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Blast Furnace</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Blue Beanie</td>
+</tr>
+<tr>
+<td>290</td>
+<td>Blue Tokar Mask</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Bolt Action Rifle</td>
+</tr>
+<tr>
+<td>276</td>
+<td>Bor Backpack</td>
+</tr>
+<tr>
+<td>286</td>
+<td>Bor Mask</td>
+</tr>
+<tr>
+<td>146</td>
+<td>Bow of Punishment</td>
+</tr>
+<tr>
+<td>119</td>
+<td>Brown Sneakers</td>
+</tr>
+<tr>
+<td>107</td>
+<td>Brown TShirt</td>
+</tr>
+<tr>
+<td>144</td>
+<td>C4</td>
+</tr>
+<tr>
+<td>154</td>
+<td>Campfire</td>
+</tr>
+<tr>
+<td>92</td>
+<td>Car Hunting Bow</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Chemsuit Jacket</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Chemsuit Pants</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Clay</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Clean Shave</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Coal</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Concrete</td>
+</tr>
+<tr>
+<td>91</td>
+<td>Construction Hammer</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cooked Steak</td>
+</tr>
+<tr>
+<td>152</td>
+<td>Crude Coolant</td>
+</tr>
+<tr>
+<td>323</td>
+<td>Cut Diamond</td>
+</tr>
+<tr>
+<td>299</td>
+<td>Damaged Goat Engine</td>
+</tr>
+<tr>
+<td>176</td>
+<td>Damaged Roach Engine</td>
+</tr>
+<tr>
+<td>90</td>
+<td>Debug Backpack</td>
+</tr>
+<tr>
+<td>231</td>
+<td>Detonator Cap</td>
+</tr>
+<tr>
+<td>324</td>
+<td>Diamond Dust</td>
+</tr>
+<tr>
+<td>325</td>
+<td>Diamond Saw</td>
+</tr>
+<tr>
+<td>95</td>
+<td>Dirty Doubleshirt</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Dirtyer Doubleshirt</td>
+</tr>
+<tr>
+<td>192</td>
+<td>Drifting Sand Hopper</td>
+</tr>
+<tr>
+<td>127</td>
+<td>Drill</td>
+</tr>
+<tr>
+<td>308</td>
+<td>Drill Blue</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Drill Green</td>
+</tr>
+<tr>
+<td>155</td>
+<td>Dynamite</td>
+</tr>
+<tr>
+<td>148</td>
+<td>Earth Magnet</td>
+</tr>
+<tr>
+<td>103</td>
+<td>EmoHair</td>
+</tr>
+<tr>
+<td>309</td>
+<td>Fabricator</td>
+</tr>
+<tr>
+<td>270</td>
+<td>Feather A</td>
+</tr>
+<tr>
+<td>271</td>
+<td>Feather B</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Fire Pit</td>
+</tr>
+<tr>
+<td>316</td>
+<td>Fireplace</td>
+</tr>
+<tr>
+<td>216</td>
+<td>Flannel Shirt</td>
+</tr>
+<tr>
+<td>311</td>
+<td>Flare Gun</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Flint</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Flint Hatchet</td>
+</tr>
+<tr>
+<td>285</td>
+<td>Forest Shigi Mask</td>
+</tr>
+<tr>
+<td>149</td>
+<td>Fridge</td>
+</tr>
+<tr>
+<td>151</td>
+<td>Frozen Cooked Steak</td>
+</tr>
+<tr>
+<td>150</td>
+<td>Frozen Raw Steak</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Gas Mask</td>
+</tr>
+<tr>
+<td>147</td>
+<td>Gasoline</td>
+</tr>
+<tr>
+<td>180</td>
+<td>Goat Camo Paint Design</td>
+</tr>
+<tr>
+<td>181</td>
+<td>Goat Flames Paint Design</td>
+</tr>
+<tr>
+<td>223</td>
+<td>Goat Flat Paint Design</td>
+</tr>
+<tr>
+<td>186</td>
+<td>Goat Judge Backpanel</td>
+</tr>
+<tr>
+<td>185</td>
+<td>Goat Judge Frontpanel</td>
+</tr>
+<tr>
+<td>224</td>
+<td>Goat Maze Paint Design</td>
+</tr>
+<tr>
+<td>300</td>
+<td>Goat Offroad Gearbox</td>
+</tr>
+<tr>
+<td>190</td>
+<td>Goat Racer Backpanel</td>
+</tr>
+<tr>
+<td>189</td>
+<td>Goat Racer Frontpanel</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Goat Road Gearbox</td>
+</tr>
+<tr>
+<td>182</td>
+<td>Goat Side Stripe Paint Design</td>
+</tr>
+<tr>
+<td>183</td>
+<td>Goat Skull Paint Design</td>
+</tr>
+<tr>
+<td>188</td>
+<td>Goat Stasher Backpanel</td>
+</tr>
+<tr>
+<td>187</td>
+<td>Goat Stasher Frontpanel</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Goat Twin Stripes Paint Design</td>
+</tr>
+<tr>
+<td>79</td>
+<td>Gold Axe</td>
+</tr>
+<tr>
+<td>109</td>
+<td>Gray TShirt</td>
+</tr>
+<tr>
+<td>129</td>
+<td>Gray Winter Jacket</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Green TShirt</td>
+</tr>
+<tr>
+<td>102</td>
+<td>Grey Beanie</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Grey Sneakers</td>
+</tr>
+<tr>
+<td>113</td>
+<td>HairColor2</td>
+</tr>
+<tr>
+<td>114</td>
+<td>HairColor3</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Hunting Bow</td>
+</tr>
+<tr>
+<td>226</td>
+<td>Ice Spear</td>
+</tr>
+<tr>
+<td>78</td>
+<td>Iron Axe</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Iron Ore</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Iron Pickaxe</td>
+</tr>
+<tr>
+<td>277</td>
+<td>Irradiated Bor Backpack</td>
+</tr>
+<tr>
+<td>287</td>
+<td>Irradiated Bor Mask</td>
+</tr>
+<tr>
+<td>294</td>
+<td>Irradiated Owrong Seeds</td>
+</tr>
+<tr>
+<td>342</td>
+<td>Kanga Angelica Design</td>
+</tr>
+<tr>
+<td>336</td>
+<td>Kanga Crow Frontpanel</td>
+</tr>
+<tr>
+<td>337</td>
+<td>Kanga Crow Rearpanel</td>
+</tr>
+<tr>
+<td>330</td>
+<td>Kanga Damaged Engine</td>
+</tr>
+<tr>
+<td>338</td>
+<td>Kanga Earwig Frontpanel</td>
+</tr>
+<tr>
+<td>339</td>
+<td>Kanga Earwig Rearpanel</td>
+</tr>
+<tr>
+<td>345</td>
+<td>Kanga Eva Design</td>
+</tr>
+<tr>
+<td>343</td>
+<td>Kanga Grade80 Design</td>
+</tr>
+<tr>
+<td>334</td>
+<td>Kanga Knobbler Wheel</td>
+</tr>
+<tr>
+<td>332</td>
+<td>Kanga Offroad Gearbox</td>
+</tr>
+<tr>
+<td>335</td>
+<td>Kanga Paddlin Wheel</td>
+</tr>
+<tr>
+<td>328</td>
+<td>Kanga Powerful Engine</td>
+</tr>
+<tr>
+<td>340</td>
+<td>Kanga Raider Frontpanel</td>
+</tr>
+<tr>
+<td>341</td>
+<td>Kanga Raider Rearpanel</td>
+</tr>
+<tr>
+<td>331</td>
+<td>Kanga Road Gearbox</td>
+</tr>
+<tr>
+<td>344</td>
+<td>Kanga Rocketto Design</td>
+</tr>
+<tr>
+<td>333</td>
+<td>Kanga Saw Wheel</td>
+</tr>
+<tr>
+<td>329</td>
+<td>Kanga Standard Engine</td>
+</tr>
+<tr>
+<td>327</td>
+<td>Kanga Weak Engine</td>
+</tr>
+<tr>
+<td>346</td>
+<td>Kanga ZebraTech Design</td>
+</tr>
+<tr>
+<td>273</td>
+<td>Landcrab Mine</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Leather</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Limestone</td>
+</tr>
+<tr>
+<td>314</td>
+<td>Machine Wrench</td>
+</tr>
+<tr>
+<td>306</td>
+<td>Mangler Wheel</td>
+</tr>
+<tr>
+<td>275</td>
+<td>Medusa Seeds</td>
+</tr>
+<tr>
+<td>138</td>
+<td>Mining Bow</td>
+</tr>
+<tr>
+<td>227</td>
+<td>Molten Spear</td>
+</tr>
+<tr>
+<td>132</td>
+<td>Mondinium Ore</td>
+</tr>
+<tr>
+<td>137</td>
+<td>Mondinium Pickaxe</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Mouldy Owrong</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Moustache</td>
+</tr>
+<tr>
+<td>221</td>
+<td>Mullet</td>
+</tr>
+<tr>
+<td>117</td>
+<td>Orange Beanie</td>
+</tr>
+<tr>
+<td>93</td>
+<td>Ownership Stake</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Owrong</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Owrong Seeds</td>
+</tr>
+<tr>
+<td>232</td>
+<td><div style="float: left">Paint #001</div> <div style="background-color: #DB9494; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>233</td>
+<td><div style="float: left">Paint #002</div> <div style="background-color: #DB94BE; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>234</td>
+<td><div style="float: left">Paint #003</div> <div style="background-color: #BF94DB; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>235</td>
+<td><div style="float: left">Paint #004</div> <div style="background-color: #939ED8; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>236</td>
+<td><div style="float: left">Paint #005</div> <div style="background-color: #94D5DB; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>237</td>
+<td><div style="float: left">Paint #006</div> <div style="background-color: #94DBB1; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>238</td>
+<td><div style="float: left">Paint #007</div> <div style="background-color: #A5DB94; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>239</td>
+<td><div style="float: left">Paint #008</div> <div style="background-color: #CEDB94; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>240</td>
+<td><div style="float: left">Paint #009</div> <div style="background-color: #DBCA94; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>241</td>
+<td><div style="float: left">Paint #010</div> <div style="background-color: #8F9999; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>242</td>
+<td><div style="float: left">Paint #011</div> <div style="background-color: #A55C5C; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>243</td>
+<td><div style="float: left">Paint #012</div> <div style="background-color: #875CA5; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>244</td>
+<td><div style="float: left">Paint #013</div> <div style="background-color: #5B68A1; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>245</td>
+<td><div style="float: left">Paint #014</div> <div style="background-color: #5C9EA5; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>246</td>
+<td><div style="float: left">Paint #015</div> <div style="background-color: #5CA57A; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>247</td>
+<td><div style="float: left">Paint #016</div> <div style="background-color: #BEA55C; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>248</td>
+<td><div style="float: left">Paint #017</div> <div style="background-color: #98A55C; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>249</td>
+<td><div style="float: left">Paint #018</div> <div style="background-color: #A5925C; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>250</td>
+<td><div style="float: left">Paint #019</div> <div style="background-color: #5D5D5D; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>251</td>
+<td><div style="float: left">Paint #020</div> <div style="background-color: #634747; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>252</td>
+<td><div style="float: left">Paint #021</div> <div style="background-color: #634757; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>253</td>
+<td><div style="float: left">Paint #022</div> <div style="background-color: #574763; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>254</td>
+<td><div style="float: left">Paint #023</div> <div style="background-color: #464C61; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>255</td>
+<td><div style="float: left">Paint #024</div> <div style="background-color: #476163; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>256</td>
+<td><div style="float: left">Paint #025</div> <div style="background-color: #476353; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>257</td>
+<td><div style="float: left">Paint #026</div> <div style="background-color: #4D6347; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>258</td>
+<td><div style="float: left">Paint #027</div> <div style="background-color: #5D6347; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>259</td>
+<td><div style="float: left">Paint #028</div> <div style="background-color: #635B47; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>260</td>
+<td><div style="float: left">Paint #029</div> <div style="background-color: #595850; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>261</td>
+<td><div style="float: left">Paint #030</div> <div style="background-color: #5E4949; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>262</td>
+<td><div style="float: left">Paint #031</div> <div style="background-color: #846955; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>263</td>
+<td><div style="float: left">Paint #032</div> <div style="background-color: #697063; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>264</td>
+<td><div style="float: left">Paint #033</div> <div style="background-color: #7A6A78; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>265</td>
+<td><div style="float: left">Paint #034</div> <div style="background-color: #445957; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>266</td>
+<td><div style="float: left">Paint #035</div> <div style="background-color: #755454; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>267</td>
+<td><div style="float: left">Paint #036</div> <div style="background-color: #5D5E44; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>268</td>
+<td><div style="float: left">Paint #037</div> <div style="background-color: #303042; width: 20px; height: 20px; float: left; margin-left: 3px"></div></td>
+</tr>
+<tr>
+<td>291</td>
+<td>Parrot Tokar Mask</td>
+</tr>
+<tr>
+<td>279</td>
+<td>Pistol</td>
+</tr>
+<tr>
+<td>280</td>
+<td>Pistol Bullet</td>
+</tr>
+<tr>
+<td>153</td>
+<td>Pitcher Seeds</td>
+</tr>
+<tr>
+<td>295</td>
+<td>Poison Sac</td>
+</tr>
+<tr>
+<td>274</td>
+<td>Poison Trap</td>
+</tr>
+<tr>
+<td>112</td>
+<td>Poo TShirt</td>
+</tr>
+<tr>
+<td>296</td>
+<td>Powerfull Goat Engine</td>
+</tr>
+<tr>
+<td>173</td>
+<td>Powerfull Roach Engine</td>
+</tr>
+<tr>
+<td>184</td>
+<td>Quadbike Nipple Wheel</td>
+</tr>
+<tr>
+<td>318</td>
+<td>Raiding Drill</td>
+</tr>
+<tr>
+<td>321</td>
+<td>Raiding Drill Base</td>
+</tr>
+<tr>
+<td>320</td>
+<td>Raiding Drill Motor</td>
+</tr>
+<tr>
+<td>319</td>
+<td>Raiding Drillbit</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rancid Steak</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Raw Steak</td>
+</tr>
+<tr>
+<td>130</td>
+<td>Red Winter Jacket</td>
+</tr>
+<tr>
+<td>122</td>
+<td>Repair Bow</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Rifle Bullet</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Roach 1986 Design</td>
+</tr>
+<tr>
+<td>163</td>
+<td>Roach 44 Galon Armor</td>
+</tr>
+<tr>
+<td>199</td>
+<td>Roach Chaser Bumper</td>
+</tr>
+<tr>
+<td>200</td>
+<td>Roach Chaser Hood</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Roach Chaser Rear Panel</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Roach Chaser Roof Scoop</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Roach Chaser Side Panel</td>
+</tr>
+<tr>
+<td>178</td>
+<td>Roach Default Design</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Roach Digital Camo Design</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Roach Eyes Design</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Roach Front Seat</td>
+</tr>
+<tr>
+<td>207</td>
+<td>Roach Graff Design</td>
+</tr>
+<tr>
+<td>174</td>
+<td>Roach Offroad Gearbox</td>
+</tr>
+<tr>
+<td>175</td>
+<td>Roach Road Gearbox</td>
+</tr>
+<tr>
+<td>165</td>
+<td>Roach Roof Lights</td>
+</tr>
+<tr>
+<td>194</td>
+<td>Roach Sharkweek Bumper</td>
+</tr>
+<tr>
+<td>195</td>
+<td>Roach Sharkweek Hood</td>
+</tr>
+<tr>
+<td>198</td>
+<td>Roach Sharkweek Rear Panel</td>
+</tr>
+<tr>
+<td>197</td>
+<td>Roach Sharkweek Roof Scoop</td>
+</tr>
+<tr>
+<td>196</td>
+<td>Roach Sharkweek Side Panel</td>
+</tr>
+<tr>
+<td>164</td>
+<td>Roach Skull Bumper</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Roach Swirler Paint Design</td>
+</tr>
+<tr>
+<td>162</td>
+<td>Roach Triple Door Panel</td>
+</tr>
+<tr>
+<td>313</td>
+<td>Rocket Launcher</td>
+</tr>
+<tr>
+<td>322</td>
+<td>Rough Diamond</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Rubber Boots</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Rubber Gloves</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Ruby</td>
+</tr>
+<tr>
+<td>166</td>
+<td>Sand Hopper Wheel</td>
+</tr>
+<tr>
+<td>230</td>
+<td>Sasquach Pelt</td>
+</tr>
+<tr>
+<td>293</td>
+<td>Sasquatch Mask</td>
+</tr>
+<tr>
+<td>317</td>
+<td>Shack</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Shaped Iron</td>
+</tr>
+<tr>
+<td>135</td>
+<td>Shaped Mondinium</td>
+</tr>
+<tr>
+<td>134</td>
+<td>Shaped Titranium</td>
+</tr>
+<tr>
+<td>136</td>
+<td>Shaped Ultranium</td>
+</tr>
+<tr>
+<td>228</td>
+<td>Sharp Spear</td>
+</tr>
+<tr>
+<td>282</td>
+<td>Shigi Mask</td>
+</tr>
+<tr>
+<td>141</td>
+<td>Shitty TShirt</td>
+</tr>
+<tr>
+<td>125</td>
+<td>Shotgun</td>
+</tr>
+<tr>
+<td>191</td>
+<td>ShotgunShell</td>
+</tr>
+<tr>
+<td>310</td>
+<td>Sign</td>
+</tr>
+<tr>
+<td>217</td>
+<td>Singlet</td>
+</tr>
+<tr>
+<td>218</td>
+<td>Singlet</td>
+</tr>
+<tr>
+<td>219</td>
+<td>Skater Hat</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Snare Bow</td>
+</tr>
+<tr>
+<td>220</td>
+<td>Sombrero</td>
+</tr>
+<tr>
+<td>298</td>
+<td>Standard Goat Engine</td>
+</tr>
+<tr>
+<td>172</td>
+<td>Standard Roach Engine</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Stone</td>
+</tr>
+<tr>
+<td>139</td>
+<td>Stone Pickaxe</td>
+</tr>
+<tr>
+<td>272</td>
+<td>Storage Chest</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Storage Locker</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Strong String</td>
+</tr>
+<tr>
+<td>215</td>
+<td>Succulent Seeds</td>
+</tr>
+<tr>
+<td>213</td>
+<td>Sunscreen</td>
+</tr>
+<tr>
+<td>131</td>
+<td>Titranium Ore</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Titranium Pickaxe</td>
+</tr>
+<tr>
+<td>326</td>
+<td>Tokar Acid</td>
+</tr>
+<tr>
+<td>288</td>
+<td>Tokar Mask</td>
+</tr>
+<tr>
+<td>315</td>
+<td>Torch</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Toretto Wheel</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Tree Bark</td>
+</tr>
+<tr>
+<td>133</td>
+<td>Ultranium Ore</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Ultranium Pickaxe</td>
+</tr>
+<tr>
+<td>281</td>
+<td>Ushanka</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Vehicle Wrench</td>
+</tr>
+<tr>
+<td>94</td>
+<td>Warm Jeans</td>
+</tr>
+<tr>
+<td>297</td>
+<td>Weak Goat Engine</td>
+</tr>
+<tr>
+<td>171</td>
+<td>Weak Roach Engine</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Weak String</td>
+</tr>
+<tr>
+<td>111</td>
+<td>White TShirt</td>
+</tr>
+<tr>
+<td>284</td>
+<td>Wolf Shigi Mask</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Wood Bow</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Wood Log</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Wood Plank</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Workbench</td>
+</tr>
+<tr>
+<td>269</td>
+<td>Yeti Horn</td>
+</tr>
+<tr>
+<td>292</td>
+<td>Yeti Mask</td>
+</tr>
+</tbody></table>
+<h1 id='styling-messages'>Styling Messages</h1>
+<blockquote>
+<p>Render the text in boldface</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;b&gt;</span>not<span class="nt">&lt;/b&gt;</span> amused.
+</code></pre>
+<blockquote>
+<p>Render the text in italics</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;i&gt;</span>usually<span class="nt">&lt;/i&gt;</span> not amused.
+</code></pre>
+<blockquote>
+<p>It is possible to apply more than one style to a section of text by nesting one element inside another.</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;b&gt;&lt;i&gt;</span>definitely not<span class="nt">&lt;/i&gt;&lt;/b&gt;</span> amused
+</code></pre>
+<blockquote>
+<p>Note the ordering of the ending tags, which is in reverse to that of the starting tags. The reason for this is perhaps clearer when you consider that the inner tags need not span the whole text of the outermost element.</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;b&gt;</span>absolutely <span class="nt">&lt;i&gt;</span>definitely<span class="nt">&lt;/i&gt;</span> not<span class="nt">&lt;/b&gt;</span> amused
+</code></pre>
+<blockquote>
+<p>Change the size of text, by pixel value</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;size</span><span class="err">=</span><span class="na">50</span><span class="nt">&gt;</span>largely<span class="nt">&lt;/size&gt;</span> unaffected.
+</code></pre>
+<blockquote>
+<p>Change the color of text</p>
+</blockquote>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;color</span><span class="err">=#</span><span class="na">00ffffff</span><span class="nt">&gt;</span>Hello world<span class="nt">&lt;/color&gt;</span>
+</code></pre>
+<p>Messages sent from the server via plugins can be stylized using basic HTML. Styling is limited to bold, italic, size, and color.</p>
+
+<p>The color can be specified in the traditional HTML format. <code>#rrggbbaa</code>... where the letters correspond to pairs of hexadecimal digits denoting the red, green, blue and alpha (transparency) values for the color.</p>
+
+<p>Another option is to use the name of the color. This is easier to understand but naturally, the range of colors is limited and full opacity is always assumed. <code>&lt;color=cyan&gt;</code>... The available color names are given in the table below.</p>
+
+<table><thead>
+<tr>
+<th>Color Name</th>
+<th>Hex Value</th>
+<th>Swatch</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>aqua (same as cyan)</td>
+<td>#00ffffff</td>
+<td><img src="../images/cyan-swatch.png" alt="Cyan swatch" /></td>
+</tr>
+<tr>
+<td>black</td>
+<td>#000000ff</td>
+<td><img src="../images/black-swatch.png" alt="Black swatch" /></td>
+</tr>
+<tr>
+<td>blue</td>
+<td>#0000ffff</td>
+<td><img src="../images/blue-swatch.png" alt="Blue swatch" /></td>
+</tr>
+<tr>
+<td>brown</td>
+<td>#a52a2aff</td>
+<td><img src="../images/brown-swatch.png" alt="Brown swatch" /></td>
+</tr>
+<tr>
+<td>cyan (same as aqua)</td>
+<td>#00ffffff</td>
+<td><img src="../images/cyan-swatch.png" alt="Cyan swatch" /></td>
+</tr>
+<tr>
+<td>darkblue</td>
+<td>#0000a0ff</td>
+<td><img src="../images/darkblue-swatch.png" alt="Darkblue swatch" /></td>
+</tr>
+<tr>
+<td>fuchsia (same as magenta)</td>
+<td>#ff00ffff</td>
+<td><img src="../images/magenta-swatch.png" alt="Magenta swatch" /></td>
+</tr>
+<tr>
+<td>green</td>
+<td>#008000ff</td>
+<td><img src="../images/green-swatch.png" alt="Green swatch" /></td>
+</tr>
+<tr>
+<td>grey</td>
+<td>#808080ff</td>
+<td><img src="../images/grey-swatch.png" alt="Grey swatch" /></td>
+</tr>
+<tr>
+<td>lightblue</td>
+<td>#add8e6ff</td>
+<td><img src="../images/lightblue-swatch.png" alt="Lightblue swatch" /></td>
+</tr>
+<tr>
+<td>lime</td>
+<td>#00ff00ff</td>
+<td><img src="../images/lime-swatch.png" alt="Lime swatch" /></td>
+</tr>
+<tr>
+<td>magenta (same as fuchsia)</td>
+<td>#ff00ffff</td>
+<td><img src="../images/magenta-swatch.png" alt="Magenta swatch" /></td>
+</tr>
+<tr>
+<td>maroon</td>
+<td>#800000ff</td>
+<td><img src="../images/maroon-swatch.png" alt="Maroon swatch" /></td>
+</tr>
+<tr>
+<td>navy</td>
+<td>#000080ff</td>
+<td><img src="../images/navy-swatch.png" alt="Navy swatch" /></td>
+</tr>
+<tr>
+<td>olive</td>
+<td>#808000ff</td>
+<td><img src="../images/olive-swatch.png" alt="Olive swatch" /></td>
+</tr>
+<tr>
+<td>orange</td>
+<td>#ffa500ff</td>
+<td><img src="../images/orange-swatch.png" alt="Orange swatch" /></td>
+</tr>
+<tr>
+<td>purple</td>
+<td>#800080ff</td>
+<td><img src="../images/purple-swatch.png" alt="Purple swatch" /></td>
+</tr>
+<tr>
+<td>red</td>
+<td>#ff0000ff</td>
+<td><img src="../images/red-swatch.png" alt="Red swatch" /></td>
+</tr>
+<tr>
+<td>silver</td>
+<td>#c0c0c0ff</td>
+<td><img src="../images/silver-swatch.png" alt="Silver swatch" /></td>
+</tr>
+<tr>
+<td>teal</td>
+<td>#008080ff</td>
+<td><img src="../images/teal-swatch.png" alt="Teal swatch" /></td>
+</tr>
+<tr>
+<td>white</td>
+<td>#ffffffff</td>
+<td><img src="../images/white-swatch.png" alt="White swatch" /></td>
+</tr>
+<tr>
+<td>yellow</td>
+<td>#ffff00ff</td>
+<td><img src="../images/yellow-swatch.png" alt="Yellow swatch" /></td>
+</tr>
+</tbody></table>
+
+<p><em>Source: <a href="http://docs.unity3d.com/Manual/StyledText.html">http://docs.unity3d.com/Manual/StyledText.html</a></em></p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="csharp">csharp</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

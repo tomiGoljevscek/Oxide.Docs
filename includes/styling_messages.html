@@ -1,0 +1,387 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Styling Messages</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_styling_messages" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#styling-messages" class="toc-h1 toc-link" data-title="Styling Messages">Styling Messages</a>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='styling-messages'>Styling Messages</h1>
+<blockquote>
+<p>Render the text in boldface</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;b&gt;</span>not<span class="nt">&lt;/b&gt;</span> amused.
+</code></pre>
+<blockquote>
+<p>Render the text in italics</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;i&gt;</span>usually<span class="nt">&lt;/i&gt;</span> not amused.
+</code></pre>
+<blockquote>
+<p>It is possible to apply more than one style to a section of text by nesting one element inside another.</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;b&gt;&lt;i&gt;</span>definitely not<span class="nt">&lt;/i&gt;&lt;/b&gt;</span> amused
+</code></pre>
+<blockquote>
+<p>Note the ordering of the ending tags, which is in reverse to that of the starting tags. The reason for this is perhaps clearer when you consider that the inner tags need not span the whole text of the outermost element.</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;b&gt;</span>absolutely <span class="nt">&lt;i&gt;</span>definitely<span class="nt">&lt;/i&gt;</span> not<span class="nt">&lt;/b&gt;</span> amused
+</code></pre>
+<blockquote>
+<p>Change the size of text, by pixel value</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>We are <span class="nt">&lt;size</span><span class="err">=</span><span class="na">50</span><span class="nt">&gt;</span>largely<span class="nt">&lt;/size&gt;</span> unaffected.
+</code></pre>
+<blockquote>
+<p>Change the color of text</p>
+</blockquote>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;color</span><span class="err">=#</span><span class="na">00ffffff</span><span class="nt">&gt;</span>Hello world<span class="nt">&lt;/color&gt;</span>
+</code></pre>
+<p>Messages sent from the server via plugins can be stylized using basic HTML. Styling is limited to bold, italic, size, and color.</p>
+
+<p>The color can be specified in the traditional HTML format. <code>#rrggbbaa</code>... where the letters correspond to pairs of hexadecimal digits denoting the red, green, blue and alpha (transparency) values for the color.</p>
+
+<p>Another option is to use the name of the color. This is easier to understand but naturally, the range of colors is limited and full opacity is always assumed. <code>&lt;color=cyan&gt;</code>... The available color names are given in the table below.</p>
+
+<table><thead>
+<tr>
+<th>Color Name</th>
+<th>Hex Value</th>
+<th>Swatch</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>aqua (same as cyan)</td>
+<td>#00ffffff</td>
+<td><img src="../images/cyan-swatch.png" alt="Cyan swatch" /></td>
+</tr>
+<tr>
+<td>black</td>
+<td>#000000ff</td>
+<td><img src="../images/black-swatch.png" alt="Black swatch" /></td>
+</tr>
+<tr>
+<td>blue</td>
+<td>#0000ffff</td>
+<td><img src="../images/blue-swatch.png" alt="Blue swatch" /></td>
+</tr>
+<tr>
+<td>brown</td>
+<td>#a52a2aff</td>
+<td><img src="../images/brown-swatch.png" alt="Brown swatch" /></td>
+</tr>
+<tr>
+<td>cyan (same as aqua)</td>
+<td>#00ffffff</td>
+<td><img src="../images/cyan-swatch.png" alt="Cyan swatch" /></td>
+</tr>
+<tr>
+<td>darkblue</td>
+<td>#0000a0ff</td>
+<td><img src="../images/darkblue-swatch.png" alt="Darkblue swatch" /></td>
+</tr>
+<tr>
+<td>fuchsia (same as magenta)</td>
+<td>#ff00ffff</td>
+<td><img src="../images/magenta-swatch.png" alt="Magenta swatch" /></td>
+</tr>
+<tr>
+<td>green</td>
+<td>#008000ff</td>
+<td><img src="../images/green-swatch.png" alt="Green swatch" /></td>
+</tr>
+<tr>
+<td>grey</td>
+<td>#808080ff</td>
+<td><img src="../images/grey-swatch.png" alt="Grey swatch" /></td>
+</tr>
+<tr>
+<td>lightblue</td>
+<td>#add8e6ff</td>
+<td><img src="../images/lightblue-swatch.png" alt="Lightblue swatch" /></td>
+</tr>
+<tr>
+<td>lime</td>
+<td>#00ff00ff</td>
+<td><img src="../images/lime-swatch.png" alt="Lime swatch" /></td>
+</tr>
+<tr>
+<td>magenta (same as fuchsia)</td>
+<td>#ff00ffff</td>
+<td><img src="../images/magenta-swatch.png" alt="Magenta swatch" /></td>
+</tr>
+<tr>
+<td>maroon</td>
+<td>#800000ff</td>
+<td><img src="../images/maroon-swatch.png" alt="Maroon swatch" /></td>
+</tr>
+<tr>
+<td>navy</td>
+<td>#000080ff</td>
+<td><img src="../images/navy-swatch.png" alt="Navy swatch" /></td>
+</tr>
+<tr>
+<td>olive</td>
+<td>#808000ff</td>
+<td><img src="../images/olive-swatch.png" alt="Olive swatch" /></td>
+</tr>
+<tr>
+<td>orange</td>
+<td>#ffa500ff</td>
+<td><img src="../images/orange-swatch.png" alt="Orange swatch" /></td>
+</tr>
+<tr>
+<td>purple</td>
+<td>#800080ff</td>
+<td><img src="../images/purple-swatch.png" alt="Purple swatch" /></td>
+</tr>
+<tr>
+<td>red</td>
+<td>#ff0000ff</td>
+<td><img src="../images/red-swatch.png" alt="Red swatch" /></td>
+</tr>
+<tr>
+<td>silver</td>
+<td>#c0c0c0ff</td>
+<td><img src="../images/silver-swatch.png" alt="Silver swatch" /></td>
+</tr>
+<tr>
+<td>teal</td>
+<td>#008080ff</td>
+<td><img src="../images/teal-swatch.png" alt="Teal swatch" /></td>
+</tr>
+<tr>
+<td>white</td>
+<td>#ffffffff</td>
+<td><img src="../images/white-swatch.png" alt="White swatch" /></td>
+</tr>
+<tr>
+<td>yellow</td>
+<td>#ffff00ff</td>
+<td><img src="../images/yellow-swatch.png" alt="Yellow swatch" /></td>
+</tr>
+</tbody></table>
+
+<p><em>Source: <a href="http://docs.unity3d.com/Manual/StyledText.html">http://docs.unity3d.com/Manual/StyledText.html</a></em></p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

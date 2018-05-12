@@ -1,0 +1,281 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Commands</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_commands" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#commands" class="toc-h1 toc-link" data-title="Commands">Commands</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#default-commands" class="toc-h2 toc-link" data-title="Default commands">Default commands</a>
+                  </li>
+                  <li>
+                    <a href="#chat-commands" class="toc-h2 toc-link" data-title="Chat commands">Chat commands</a>
+                  </li>
+                  <li>
+                    <a href="#console-commands" class="toc-h2 toc-link" data-title="Console commands">Console commands</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='commands'>Commands</h1><h2 id='default-commands'>Default commands</h2><pre class="highlight plaintext"><code>oxide.load *|&lt;pluginname&gt;+
+oxide.unload *|&lt;pluginname&gt;+
+oxide.reload *|&lt;pluginname&gt;+
+oxide.grant &lt;group|user&gt; &lt;name|id&gt; *|&lt;permission&gt;
+oxide.revoke &lt;group|user&gt; &lt;name|id&gt; *|&lt;permission&gt;
+oxide.group &lt;add|set&gt; &lt;name&gt; [title] [rank]
+oxide.group &lt;remove&gt; &lt;name&gt;
+oxide.group &lt;parent&gt; &lt;name&gt; &lt;parentname&gt;
+oxide.usergroup &lt;add|remove&gt; &lt;username&gt; &lt;groupname&gt;
+oxide.show &lt;group|user|perm&gt; &lt;name&gt;
+oxide.show &lt;groups|perms&gt;
+oxide.version
+</code></pre><h2 id='chat-commands'>Chat commands</h2><pre class="highlight csharp tab-csharp"><code><span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="s">"1.0.0"</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"A basic chat command"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"test"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">TestCommand</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">player</span><span class="p">.</span><span class="nf">Reply</span><span class="p">(</span><span class="s">"Test successful!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h2 id='console-commands'>Console commands</h2><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">UnityEngine</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">Oxide.Plugins</span>
+<span class="p">{</span>
+    <span class="p">[</span><span class="nf">Info</span><span class="p">(</span><span class="s">"Epic Stuff"</span><span class="p">,</span> <span class="s">"Unknown"</span><span class="p">,</span> <span class="s">"1.0.0"</span><span class="p">)]</span>
+    <span class="p">[</span><span class="nf">Description</span><span class="p">(</span><span class="s">"A basic console command"</span><span class="p">)]</span>
+    <span class="k">class</span> <span class="nc">EpicStuff</span> <span class="p">:</span> <span class="n">CovalencePlugin</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="nf">Command</span><span class="p">(</span><span class="s">"global.test"</span><span class="p">)]</span>
+        <span class="k">void</span> <span class="nf">TestCommand</span><span class="p">(</span><span class="n">IPlayer</span> <span class="n">player</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="nf">Puts</span><span class="p">(</span><span class="s">"Test successful!"</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

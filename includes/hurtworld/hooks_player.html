@@ -1,0 +1,413 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_hurtworld includes_hurtworld_hooks_player" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#player-hooks" class="toc-h1 toc-link" data-title="Player Hooks">Player Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canclientlogin" class="toc-h2 toc-link" data-title="CanClientLogin">CanClientLogin</a>
+                  </li>
+                  <li>
+                    <a href="#cancraft" class="toc-h2 toc-link" data-title="CanCraft">CanCraft</a>
+                  </li>
+                  <li>
+                    <a href="#canusemachine" class="toc-h2 toc-link" data-title="CanUseMachine">CanUseMachine</a>
+                  </li>
+                  <li>
+                    <a href="#onfindspawnpoint" class="toc-h2 toc-link" data-title="OnFindSpawnPoint">OnFindSpawnPoint</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerchat" class="toc-h2 toc-link" data-title="OnPlayerChat">OnPlayerChat</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerconnected" class="toc-h2 toc-link" data-title="OnPlayerConnected">OnPlayerConnected</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdeath" class="toc-h2 toc-link" data-title="OnPlayerDeath">OnPlayerDeath</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdisconnected" class="toc-h2 toc-link" data-title="OnPlayerDisconnected">OnPlayerDisconnected</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerinput" class="toc-h2 toc-link" data-title="OnPlayerInput">OnPlayerInput</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerrespawn" class="toc-h2 toc-link" data-title="OnPlayerRespawn">OnPlayerRespawn</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerspawn" class="toc-h2 toc-link" data-title="OnPlayerSpawn">OnPlayerSpawn</a>
+                  </li>
+                  <li>
+                    <a href="#onplayersuicide" class="toc-h2 toc-link" data-title="OnPlayerSuicide">OnPlayerSuicide</a>
+                  </li>
+                  <li>
+                    <a href="#onplayertakedamage" class="toc-h2 toc-link" data-title="OnPlayerTakeDamage">OnPlayerTakeDamage</a>
+                  </li>
+                  <li>
+                    <a href="#onplayervoice" class="toc-h2 toc-link" data-title="OnPlayerVoice">OnPlayerVoice</a>
+                  </li>
+                  <li>
+                    <a href="#onuserapprove" class="toc-h2 toc-link" data-title="OnUserApprove">OnUserApprove</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='player-hooks'>Player Hooks</h1><h2 id='canclientlogin'>CanClientLogin</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanClientLogin</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanClientLogin works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to connect to the server</li>
+<li>Returning a string will use the string as the error message</li>
+<li>Returning false will reject the connection with a default error message</li>
+</ul>
+<h2 id='cancraft'>CanCraft</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanCraft</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">CrafterServer</span> <span class="n">crafter</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanCraft works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to craft an item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canusemachine'>CanUseMachine</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">CanUseMachine</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="kt">object</span> <span class="n">machine</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseMachine works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to use a machine</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onfindspawnpoint'>OnFindSpawnPoint</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFindSpawnPoint</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFindSpawnPoint works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a spawnpoint is looked up for the player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerchat'>OnPlayerChat</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerChat</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="kt">string</span> <span class="n">message</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerChat works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player sends chat to the server</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerconnected'>OnPlayerConnected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerConnected</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerConnected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has connected to the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdeath'>OnPlayerDeath</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDeath</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">EntityEffectSourceData</span> <span class="n">source</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDeath works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player dies</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdisconnected'>OnPlayerDisconnected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDisconnected</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDisconnected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has disconnected from the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerinput'>OnPlayerInput</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerInput</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">InputControls</span> <span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerInput works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when input is received the player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerrespawn'>OnPlayerRespawn</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerRespawn</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">spawnLocation</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerRespawn works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to respawn</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerspawn'>OnPlayerSpawn</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSpawn</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSpawn works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to spawn</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayersuicide'>OnPlayerSuicide</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSuicide</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSuicide works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player suicides</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayertakedamage'>OnPlayerTakeDamage</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerTakeDamage</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">,</span> <span class="n">EntityEffectSourceData</span> <span class="n">source</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerTakeDamage works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is about to take damage</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayervoice'>OnPlayerVoice</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerVoice</span><span class="p">(</span><span class="n">PlayerSession</span> <span class="n">session</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerVoice works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is using in-game voice communication</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onuserapprove'>OnUserApprove</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnUserApprove</span><span class="p">(</span><span class="n">Network</span><span class="p">.</span><span class="n">Connection</span> <span class="n">connection</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnUserApprove works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Used by HurtworldCore and abstracted into CanClientLogin</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

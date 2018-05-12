@@ -1,0 +1,369 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Permissions</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_permissions" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#permissions" class="toc-h1 toc-link" data-title="Permissions">Permissions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#getting-setting-user-data" class="toc-h2 toc-link" data-title="Getting/setting user data">Getting/setting user data</a>
+                  </li>
+                  <li>
+                    <a href="#getting-setting-group-data" class="toc-h2 toc-link" data-title="Getting/setting group data">Getting/setting group data</a>
+                  </li>
+                  <li>
+                    <a href="#adding-user-to-group" class="toc-h2 toc-link" data-title="Adding user to group">Adding user to group</a>
+                  </li>
+                  <li>
+                    <a href="#creating-a-group" class="toc-h2 toc-link" data-title="Creating a group">Creating a group</a>
+                  </li>
+                  <li>
+                    <a href="#getting-group-rank" class="toc-h2 toc-link" data-title="Getting group rank">Getting group rank</a>
+                  </li>
+                  <li>
+                    <a href="#getting-user-data" class="toc-h2 toc-link" data-title="Getting user data">Getting user data</a>
+                  </li>
+                  <li>
+                    <a href="#getting-user-groups" class="toc-h2 toc-link" data-title="Getting user groups">Getting user groups</a>
+                  </li>
+                  <li>
+                    <a href="#granting-permission-to-group" class="toc-h2 toc-link" data-title="Granting permission to group">Granting permission to group</a>
+                  </li>
+                  <li>
+                    <a href="#granting-permission-to-user" class="toc-h2 toc-link" data-title="Granting permission to user">Granting permission to user</a>
+                  </li>
+                  <li>
+                    <a href="#checking-if-group-exists" class="toc-h2 toc-link" data-title="Checking if group exists">Checking if group exists</a>
+                  </li>
+                  <li>
+                    <a href="#checking-if-group-has-permission" class="toc-h2 toc-link" data-title="Checking if group has permission">Checking if group has permission</a>
+                  </li>
+                  <li>
+                    <a href="#checking-if-groups-have-permission" class="toc-h2 toc-link" data-title="Checking if groups have permission">Checking if groups have permission</a>
+                  </li>
+                  <li>
+                    <a href="#checking-if-permission-exists" class="toc-h2 toc-link" data-title="Checking if permission exists">Checking if permission exists</a>
+                  </li>
+                  <li>
+                    <a href="#registering-a-permission" class="toc-h2 toc-link" data-title="Registering a permission">Registering a permission</a>
+                  </li>
+                  <li>
+                    <a href="#removing-a-group" class="toc-h2 toc-link" data-title="Removing a group">Removing a group</a>
+                  </li>
+                  <li>
+                    <a href="#removing-a-user-from-a-group" class="toc-h2 toc-link" data-title="Removing a user from a group">Removing a user from a group</a>
+                  </li>
+                  <li>
+                    <a href="#revoking-a-group-39-s-permission" class="toc-h2 toc-link" data-title="Revoking a group's permission">Revoking a group's permission</a>
+                  </li>
+                  <li>
+                    <a href="#revoking-a-user-39-s-permission" class="toc-h2 toc-link" data-title="Revoking a user's permission">Revoking a user's permission</a>
+                  </li>
+                  <li>
+                    <a href="#setting-a-group-39-s-rank" class="toc-h2 toc-link" data-title="Setting a group's rank">Setting a group's rank</a>
+                  </li>
+                  <li>
+                    <a href="#setting-a-group-39-s-title" class="toc-h2 toc-link" data-title="Setting a group's title">Setting a group's title</a>
+                  </li>
+                  <li>
+                    <a href="#checking-if-user-has-permission" class="toc-h2 toc-link" data-title="Checking if user has permission">Checking if user has permission</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='permissions'>Permissions</h1><h2 id='getting-setting-user-data'>Getting/setting user data</h2><h3 id='lastseennickname'>LastSeenNickname</h3><h3 id='perms'>Perms</h3><h3 id='groups'>Groups</h3><h2 id='getting-setting-group-data'>Getting/setting group data</h2><h3 id='title'>Title</h3><h3 id='rank'>Rank</h3><h3 id='perms-2'>Perms</h3><h2 id='adding-user-to-group'>Adding user to group</h2>
+<p>AddUserGroup(string userid, string groupname)</p>
+
+<p>Adds a user to a specified group.</p>
+<h2 id='creating-a-group'>Creating a group</h2>
+<p>CreateGroup(string name, string title, int rank)</p>
+
+<p>Creates a new usergroup.</p>
+<h2 id='getting-group-rank'>Getting group rank</h2>
+<p>GetGroupRank(string groupname)</p>
+
+<p>Returns the rank of the specified group.</p>
+<h2 id='getting-user-data'>Getting user data</h2>
+<p>GetUserData(string userid)</p>
+
+<p>Returns the data for the specified user.</p>
+<h2 id='getting-user-groups'>Getting user groups</h2>
+<p>GetUserGroups(string userid)</p>
+
+<p>Returns the groups to which the specified user belongs.</p>
+<h2 id='granting-permission-to-group'>Granting permission to group</h2>
+<p>GrantGroupPermission(string groupname, string perm, Plugin owner)</p>
+
+<p>Assigns the specified permission to the specified group.</p>
+<h2 id='granting-permission-to-user'>Granting permission to user</h2>
+<p>GrantUserPermission(string userid, string perm, Plugin owner)</p>
+
+<p>Assigns the specified permission to the specified user.</p>
+<h2 id='checking-if-group-exists'>Checking if group exists</h2>
+<p>GroupExists(string groupname)</p>
+
+<p>Returns a boolean if the specified group exists or not.</p>
+<h2 id='checking-if-group-has-permission'>Checking if group has permission</h2>
+<p>GroupHasPermission(string groupname, string perm)</p>
+
+<p>Returns a boolean if the specified group has the specified permission.</p>
+<h2 id='checking-if-groups-have-permission'>Checking if groups have permission</h2>
+<p>GroupsHavePermission</p>
+<h2 id='checking-if-permission-exists'>Checking if permission exists</h2>
+<p>PermissionExists(string name, Plugin owner)</p>
+
+<p>Returns a boolean if the specified permission exists or not.</p>
+<h2 id='registering-a-permission'>Registering a permission</h2>
+<p>RegisterPermission(string name, Plugin owner)</p>
+
+<p>Registers the specified permission.</p>
+<h2 id='removing-a-group'>Removing a group</h2>
+<p>RemoveGroup(string name)</p>
+
+<p>Removes the specified grouop.</p>
+<h2 id='removing-a-user-from-a-group'>Removing a user from a group</h2>
+<p>RemoveUserGroup(string userid, string groupname)</p>
+
+<p>Removes the specified user from the specified grooup.</p>
+<h2 id='revoking-a-group-39-s-permission'>Revoking a group&#39;s permission</h2>
+<p>RevokeGroupPermission(string groupname, string perm)</p>
+
+<p>Revokes the specified permission from the specified group.</p>
+<h2 id='revoking-a-user-39-s-permission'>Revoking a user&#39;s permission</h2>
+<p>RevokeUserPermission(string userid, string perm)</p>
+
+<p>Revokes the specified permission from the specified user.</p>
+<h2 id='setting-a-group-39-s-rank'>Setting a group&#39;s rank</h2>
+<p>SetGroupRank(string groupname, int rank)</p>
+
+<p>Sets the rank of the specified group.</p>
+<h2 id='setting-a-group-39-s-title'>Setting a group&#39;s title</h2>
+<p>SetGroupTitle(string groupname, string title)</p>
+
+<p>Sets the title of the specified group.</p>
+<h2 id='checking-if-user-has-permission'>Checking if user has permission</h2>
+<p>UserHasPermission(string userid, string perm)</p>
+
+<p>Returns a boolean if the specified user has the specified permission.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

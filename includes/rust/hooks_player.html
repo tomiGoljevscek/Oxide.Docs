@@ -1,0 +1,944 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Player Hooks</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_rust includes_rust_hooks_player" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#player-hooks" class="toc-h1 toc-link" data-title="Player Hooks">Player Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canattack" class="toc-h2 toc-link" data-title="CanAttack">CanAttack</a>
+                  </li>
+                  <li>
+                    <a href="#canbetargeted-autoturret" class="toc-h2 toc-link" data-title="CanBeTargeted (autoturret)">CanBeTargeted (autoturret)</a>
+                  </li>
+                  <li>
+                    <a href="#canbewounded" class="toc-h2 toc-link" data-title="CanBeWounded">CanBeWounded</a>
+                  </li>
+                  <li>
+                    <a href="#canbypassqueue" class="toc-h2 toc-link" data-title="CanBypassQueue">CanBypassQueue</a>
+                  </li>
+                  <li>
+                    <a href="#cancraft" class="toc-h2 toc-link" data-title="CanCraft">CanCraft</a>
+                  </li>
+                  <li>
+                    <a href="#canclientlogin" class="toc-h2 toc-link" data-title="CanClientLogin">CanClientLogin</a>
+                  </li>
+                  <li>
+                    <a href="#candropactiveitem" class="toc-h2 toc-link" data-title="CanDropActiveItem">CanDropActiveItem</a>
+                  </li>
+                  <li>
+                    <a href="#candismountentity" class="toc-h2 toc-link" data-title="CanDismountEntity">CanDismountEntity</a>
+                  </li>
+                  <li>
+                    <a href="#canequipitem" class="toc-h2 toc-link" data-title="CanEquipItem">CanEquipItem</a>
+                  </li>
+                  <li>
+                    <a href="#canexperiment" class="toc-h2 toc-link" data-title="CanExperiment">CanExperiment</a>
+                  </li>
+                  <li>
+                    <a href="#canhackcrate" class="toc-h2 toc-link" data-title="CanHackCrate">CanHackCrate</a>
+                  </li>
+                  <li>
+                    <a href="#canlootplayer" class="toc-h2 toc-link" data-title="CanLootPlayer">CanLootPlayer</a>
+                  </li>
+                  <li>
+                    <a href="#canmountentity" class="toc-h2 toc-link" data-title="CanMountEntity">CanMountEntity</a>
+                  </li>
+                  <li>
+                    <a href="#canplayerui" class="toc-h2 toc-link" data-title="CanPlayerUI">CanPlayerUI</a>
+                  </li>
+                  <li>
+                    <a href="#canrenamebed" class="toc-h2 toc-link" data-title="CanRenameBed">CanRenameBed</a>
+                  </li>
+                  <li>
+                    <a href="#canresearchitem" class="toc-h2 toc-link" data-title="CanResearchItem">CanResearchItem</a>
+                  </li>
+                  <li>
+                    <a href="#canusemailbox" class="toc-h2 toc-link" data-title="CanUseMailbox">CanUseMailbox</a>
+                  </li>
+                  <li>
+                    <a href="#canwearitem" class="toc-h2 toc-link" data-title="CanWearItem">CanWearItem</a>
+                  </li>
+                  <li>
+                    <a href="#onclientauth" class="toc-h2 toc-link" data-title="OnClientAuth">OnClientAuth</a>
+                  </li>
+                  <li>
+                    <a href="#onfindspawnpoint" class="toc-h2 toc-link" data-title="OnFindSpawnPoint">OnFindSpawnPoint</a>
+                  </li>
+                  <li>
+                    <a href="#onlootentity" class="toc-h2 toc-link" data-title="OnLootEntity">OnLootEntity</a>
+                  </li>
+                  <li>
+                    <a href="#onlootentityend" class="toc-h2 toc-link" data-title="OnLootEntityEnd">OnLootEntityEnd</a>
+                  </li>
+                  <li>
+                    <a href="#onlootitem" class="toc-h2 toc-link" data-title="OnLootItem">OnLootItem</a>
+                  </li>
+                  <li>
+                    <a href="#onlootplayer" class="toc-h2 toc-link" data-title="OnLootPlayer">OnLootPlayer</a>
+                  </li>
+                  <li>
+                    <a href="#onplayeractiveitemchanged" class="toc-h2 toc-link" data-title="OnPlayerActiveItemChanged">OnPlayerActiveItemChanged</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerattack" class="toc-h2 toc-link" data-title="OnPlayerAttack">OnPlayerAttack</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerbanned" class="toc-h2 toc-link" data-title="OnPlayerBanned">OnPlayerBanned</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerchat" class="toc-h2 toc-link" data-title="OnPlayerChat">OnPlayerChat</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerconnected" class="toc-h2 toc-link" data-title="OnPlayerConnected">OnPlayerConnected</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdestroyui" class="toc-h2 toc-link" data-title="OnPlayerDestroyUI">OnPlayerDestroyUI</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdie" class="toc-h2 toc-link" data-title="OnPlayerDie">OnPlayerDie</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdisconnected" class="toc-h2 toc-link" data-title="OnPlayerDisconnected">OnPlayerDisconnected</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerdropactiveitem" class="toc-h2 toc-link" data-title="OnPlayerDropActiveItem">OnPlayerDropActiveItem</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerhealthchange" class="toc-h2 toc-link" data-title="OnPlayerHealthChange">OnPlayerHealthChange</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerinit" class="toc-h2 toc-link" data-title="OnPlayerInit">OnPlayerInit</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerinput" class="toc-h2 toc-link" data-title="OnPlayerInput">OnPlayerInput</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerkicked" class="toc-h2 toc-link" data-title="OnPlayerKicked">OnPlayerKicked</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerland" class="toc-h2 toc-link" data-title="OnPlayerLand">OnPlayerLand</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerlanded" class="toc-h2 toc-link" data-title="OnPlayerLanded">OnPlayerLanded</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerlootend" class="toc-h2 toc-link" data-title="OnPlayerLootEnd">OnPlayerLootEnd</a>
+                  </li>
+                  <li>
+                    <a href="#onplayermetabolize" class="toc-h2 toc-link" data-title="OnPlayerMetabolize">OnPlayerMetabolize</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerrecover" class="toc-h2 toc-link" data-title="OnPlayerRecover">OnPlayerRecover</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerrespawn" class="toc-h2 toc-link" data-title="OnPlayerRespawn">OnPlayerRespawn</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerrespawned" class="toc-h2 toc-link" data-title="OnPlayerRespawned">OnPlayerRespawned</a>
+                  </li>
+                  <li>
+                    <a href="#onplayersleep" class="toc-h2 toc-link" data-title="OnPlayerSleep">OnPlayerSleep</a>
+                  </li>
+                  <li>
+                    <a href="#onplayersleepended" class="toc-h2 toc-link" data-title="OnPlayerSleepEnded">OnPlayerSleepEnded</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerspawn" class="toc-h2 toc-link" data-title="OnPlayerSpawn">OnPlayerSpawn</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerspectate" class="toc-h2 toc-link" data-title="OnPlayerSpectate">OnPlayerSpectate</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerspectateend" class="toc-h2 toc-link" data-title="OnPlayerSpectateEnd">OnPlayerSpectateEnd</a>
+                  </li>
+                  <li>
+                    <a href="#onplayertick" class="toc-h2 toc-link" data-title="OnPlayerTick">OnPlayerTick</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerunbanned" class="toc-h2 toc-link" data-title="OnPlayerUnbanned">OnPlayerUnbanned</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerviolation" class="toc-h2 toc-link" data-title="OnPlayerViolation">OnPlayerViolation</a>
+                  </li>
+                  <li>
+                    <a href="#onplayervoice" class="toc-h2 toc-link" data-title="OnPlayerVoice">OnPlayerVoice</a>
+                  </li>
+                  <li>
+                    <a href="#onplayerwound" class="toc-h2 toc-link" data-title="OnPlayerWound">OnPlayerWound</a>
+                  </li>
+                  <li>
+                    <a href="#onrunplayermetabolism" class="toc-h2 toc-link" data-title="OnRunPlayerMetabolism">OnRunPlayerMetabolism</a>
+                  </li>
+                  <li>
+                    <a href="#onuserapprove" class="toc-h2 toc-link" data-title="OnUserApprove">OnUserApprove</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='player-hooks'>Player Hooks</h1><h2 id='canattack'>CanAttack</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanAttack</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanAttack works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to perform a melee attack</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canbetargeted-autoturret'>CanBeTargeted (autoturret)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanBeTargeted</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">player</span><span class="p">,</span> <span class="n">MonoBehaviour</span> <span class="n">behaviour</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanBeTargeted works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an autoturret, flame turret, shotgun trap, or helicopter turret is attempting to target the player</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canbewounded'>CanBeWounded</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanBeWounded</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanBeWounded works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when any damage is attempted on player</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canbypassqueue'>CanBypassQueue</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanBypassQueue</span><span class="p">(</span><span class="n">Network</span><span class="p">.</span><span class="n">Connection</span> <span class="n">connection</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanBypassQueue works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before the player is added to the connection queue</li>
+<li>Returning true will bypass the queue, returning nothing will by default queue the player</li>
+</ul>
+<h2 id='cancraft'>CanCraft</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanCraft</span><span class="p">(</span><span class="n">ItemCrafter</span> <span class="n">itemCrafter</span><span class="p">,</span> <span class="n">ItemBlueprint</span> <span class="n">bp</span><span class="p">,</span> <span class="kt">int</span> <span class="n">amount</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanCraft works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to craft an item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canclientlogin'>CanClientLogin</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanClientLogin</span><span class="p">(</span><span class="n">Network</span><span class="p">.</span><span class="n">Connection</span> <span class="n">connection</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanClientLogin works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to login</li>
+<li>Returning a string will use the string as the error message</li>
+<li>Returning true allows the connection, returning nothing will by default allow the connection, returning anything else will reject it with an error message</li>
+</ul>
+<h2 id='candropactiveitem'>CanDropActiveItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanDropActiveItem</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanDropActiveItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts drop their active held item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='candismountentity'>CanDismountEntity</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanDismountEntity</span><span class="p">(</span><span class="n">BaseMountable</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanDismountEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to dismount an entity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canequipitem'>CanEquipItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanEquipItem</span><span class="p">(</span><span class="n">PlayerInventory</span> <span class="n">inventory</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetPos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanEquipItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to equip an item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canexperiment'>CanExperiment</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanExperiment</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Workbench</span> <span class="n">workbench</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanExperiment works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to experiment with at a workbench</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canhackcrate'>CanHackCrate</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanHackCrate</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">HackableLockedCrate</span> <span class="n">crate</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHackCrate works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to hack a locked crate from the CH47 (Chinook)</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canlootplayer'>CanLootPlayer</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanLootPlayer</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">target</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">looter</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanLootPlayer works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to loot another player</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canmountentity'>CanMountEntity</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanMountEntity</span><span class="p">(</span><span class="n">BaseMountable</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanMountEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to mount an entity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canplayerui'>CanPlayerUI</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanPlayerUI</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">json</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanPlayerUI works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to use a custom UI</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canrenamebed'>CanRenameBed</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanRenameBed</span><span class="p">(</span><span class="n">SleepingBag</span> <span class="n">bed</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">bedName</span><span class="p">)</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanRenameBed works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to rename a bed or sleeping bag</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canresearchitem'>CanResearchItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanResearchItem</span><span class="p">(</span><span class="n">Item</span> <span class="n">targetItem</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">){</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanResearchItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to research an item</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canusemailbox'>CanUseMailbox</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanUseMailbox</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Mailbox</span> <span class="n">mailbox</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseMailbox works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player tries to use a mailbox</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canwearitem'>CanWearItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanWearItem</span><span class="p">(</span><span class="n">PlayerInventory</span> <span class="n">inventory</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetPos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanWearItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player attempts to equip an item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onclientauth'>OnClientAuth</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnClientAuth</span><span class="p">(</span><span class="n">Connection</span> <span class="n">connection</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnClientAuth works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is giving server connection authorization information</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onfindspawnpoint'>OnFindSpawnPoint</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFindSpawnPoint</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFindSpawnPoint works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for controlling player spawnpoints (like making all spawns occur in a set area)</li>
+<li>Return a BasePlayer.SpawnPoint object to use that spawnpoint</li>
+</ul>
+<h2 id='onlootentity'>OnLootEntity</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnLootEntity</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLootEntity works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting an entity</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onlootentityend'>OnLootEntityEnd</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnLootEntityEnd</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLootEntityEnd works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player stops looting an entity</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onlootitem'>OnLootItem</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnLootItem</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLootItem works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting an item</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onlootplayer'>OnLootPlayer</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnLootPlayer</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLootPlayer works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting another player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayeractiveitemchanged'>OnPlayerActiveItemChanged</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerActiveItemChanged</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Item</span> <span class="n">oldItem</span><span class="p">,</span> <span class="n">Item</span> <span class="n">newItem</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerActiveItemChanged works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player changes their active held item</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerattack'>OnPlayerAttack</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerAttack</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">attacker</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerAttack works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for modifying an attack before it goes out</li>
+<li>hitInfo.HitEntity should be the entity that this attack would hit</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerbanned'>OnPlayerBanned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerBanned</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">ulong</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">address</span><span class="p">,</span> <span class="kt">string</span> <span class="n">reason</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerBanned works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is banned (Facepunch, EAC, server ban, etc.)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerchat'>OnPlayerChat</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerChat</span><span class="p">(</span><span class="n">ConsoleSystem</span><span class="p">.</span><span class="n">Arg</span> <span class="n">arg</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerChat works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player sends chat to the server</li>
+<li>Returning a non-null value overrides default behavior of chat, not commands</li>
+</ul>
+<h2 id='onplayerconnected'>OnPlayerConnected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerConnected</span><span class="p">(</span><span class="n">Network</span><span class="p">.</span><span class="n">Message</span> <span class="n">packet</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerConnected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before the player object is created, but after the player has been approved to join the game</li>
+<li>Can get the connection from packet.connection</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdestroyui'>OnPlayerDestroyUI</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDestroyUI</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">json</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDestroyUI works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player closes/destroys a custom UI</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdie'>OnPlayerDie</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerDie</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDie works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is about to die</li>
+<li>HitInfo may be null sometimes</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerdisconnected'>OnPlayerDisconnected</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDisconnected</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">reason</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDisconnected works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called after the player has disconnected from the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerdropactiveitem'>OnPlayerDropActiveItem</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerDropActiveItem</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerDropActiveItem works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player drops their active held item</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerhealthchange'>OnPlayerHealthChange</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerHealthChange</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">float</span> <span class="n">oldValue</span><span class="p">,</span> <span class="kt">float</span> <span class="n">newValue</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerHealthChange works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called just before the player&#39;s health changes</li>
+<li>Returning a non-null value cancels the health change</li>
+</ul>
+<h2 id='onplayerinit'>OnPlayerInit</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerInit</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerInit works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is initializing (after they&#39;ve connected, before they wake up)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerinput'>OnPlayerInput</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerInput</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">InputState</span> <span class="n">input</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerInput works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when input is received from a connected client</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerkicked'>OnPlayerKicked</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerKicked</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">reason</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerKicked works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called after the player is kicked from the server</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerland'>OnPlayerLand</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerLand</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">float</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerLand works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called just before the player lands on the ground</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerlanded'>OnPlayerLanded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerLanded</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">float</span> <span class="n">num</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerLanded works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player landed on the ground</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerlootend'>OnPlayerLootEnd</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerLootEnd</span><span class="p">(</span><span class="n">PlayerLoot</span> <span class="n">inventory</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerLootEnd works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player stops looting</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayermetabolize'>OnPlayerMetabolize</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerMetabolize</span><span class="p">(</span><span class="n">PlayerMetabolism</span> <span class="n">metabolism</span><span class="p">,</span> <span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="kt">float</span> <span class="n">delta</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerMetabolize works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called after the player&#39;s metabolism has been changed</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerrecover'>OnPlayerRecover</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerRecover</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerRecover works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is about to recover from the &#39;wounded&#39; state</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerrespawn'>OnPlayerRespawn</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerRespawn</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerRespawn works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is attempting to respawn</li>
+<li>Returning a BasePlayer.SpawnPoint (takes a position and rotation) overrides the respawn location</li>
+</ul>
+<h2 id='onplayerrespawned'>OnPlayerRespawned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerRespawned</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerRespawned works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has respawned (specifically when they click the &quot;Respawn&quot; button)</li>
+<li>ONLY called after the player has transitioned from dead to not-dead, so not when they&#39;re waking up</li>
+<li>This means it&#39;s possible for the player to connect and disconnect from a server without OnPlayerRespawned ever triggering for them</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayersleep'>OnPlayerSleep</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerSleep</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSleep works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is about to go to sleep</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayersleepended'>OnPlayerSleepEnded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSleepEnded</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSleepEnded works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player awakes</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerspawn'>OnPlayerSpawn</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerSpawn</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSpawn works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player spawns for the first time on the server</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerspectate'>OnPlayerSpectate</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerSpectate</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">spectateFilter</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSpectate works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts spectating</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerspectateend'>OnPlayerSpectateEnd</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerSpectateEnd</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">spectateFilter</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerSpectateEnd works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player stops spectating</li>
+<li>Returning a non-null value stops the spectate from ending</li>
+</ul>
+<h2 id='onplayertick'>OnPlayerTick</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerTick</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">PlayerTick</span> <span class="n">msg</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">wasPlayerStalled</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerTick works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerunbanned'>OnPlayerUnbanned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerUnbanned</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">ulong</span> <span class="n">id</span><span class="p">,</span> <span class="kt">string</span> <span class="n">address</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerUnbanned works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is unbanned (server ban only)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onplayerviolation'>OnPlayerViolation</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerViolation</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">AntiHackType</span> <span class="n">type</span><span class="p">,</span> <span class="kt">float</span> <span class="n">amount</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerViolation works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player triggers an anti-hack violation</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayervoice'>OnPlayerVoice</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerVoice</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Byte</span><span class="p">[]</span> <span class="n">data</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerVoice works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player uses the in-game voice chat</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onplayerwound'>OnPlayerWound</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnPlayerWound</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnPlayerWound works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player is about to go down to the &#39;wounded&#39; state</li>
+<li>Returning a non-null value cancels the wounded state</li>
+</ul>
+<h2 id='onrunplayermetabolism'>OnRunPlayerMetabolism</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnRunPlayerMetabolism</span><span class="p">(</span><span class="n">PlayerMetabolism</span> <span class="n">metabolism</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnRunPlayerMetabolism works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before a metabolism update occurs for the specified player</li>
+<li>Metabolism update consists of managing the player&#39;s temperature, health etc.</li>
+<li>You can use this to turn off or change certain aspects of the metabolism, either by editing values before returning, or taking complete control of the method</li>
+<li>Access the player object using metabolism:GetComponent(&quot;BasePlayer&quot;)</li>
+<li>Returning true cancels the update</li>
+</ul>
+<h2 id='onuserapprove'>OnUserApprove</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnUserApprove</span><span class="p">(</span><span class="n">Network</span><span class="p">.</span><span class="n">Connection</span> <span class="n">connection</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnUserApprove works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Used by RustCore and abstracted into CanClientLogin</li>
+<li>Returning a non-null value overrides default behavior, plugin should call Reject if it does this</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

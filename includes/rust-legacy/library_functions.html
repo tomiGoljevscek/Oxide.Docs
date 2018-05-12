@@ -1,0 +1,351 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Library Functions</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_rust-legacy includes_rust-legacy_library_functions" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#library-functions" class="toc-h1 toc-link" data-title="Library Functions">Library Functions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#broadcastchat" class="toc-h2 toc-link" data-title="BroadcastChat">BroadcastChat</a>
+                  </li>
+                  <li>
+                    <a href="#broadcastconsole" class="toc-h2 toc-link" data-title="BroadcastConsole">BroadcastConsole</a>
+                  </li>
+                  <li>
+                    <a href="#findplayer" class="toc-h2 toc-link" data-title="FindPlayer">FindPlayer</a>
+                  </li>
+                  <li>
+                    <a href="#privatebindingflag" class="toc-h2 toc-link" data-title="PrivateBindingFlag">PrivateBindingFlag</a>
+                  </li>
+                  <li>
+                    <a href="#quotesafe" class="toc-h2 toc-link" data-title="QuoteSafe">QuoteSafe</a>
+                  </li>
+                  <li>
+                    <a href="#sendchatmessage" class="toc-h2 toc-link" data-title="SendChatMessage">SendChatMessage</a>
+                  </li>
+                  <li>
+                    <a href="#sendconsolemessage" class="toc-h2 toc-link" data-title="SendConsoleMessage">SendConsoleMessage</a>
+                  </li>
+                  <li>
+                    <a href="#useridfromplayer" class="toc-h2 toc-link" data-title="UserIDFromPlayer">UserIDFromPlayer</a>
+                  </li>
+                  <li>
+                    <a href="#notice" class="toc-h2 toc-link" data-title="Notice">Notice</a>
+                  </li>
+                  <li>
+                    <a href="#inventorynotice" class="toc-h2 toc-link" data-title="InventoryNotice">InventoryNotice</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='library-functions'>Library Functions</h1>
+<p>There are a few functions that have been added to wrap Rust Legacy functions, creating aliases of sorts to make your life easier during initial coding as well as during upgrades.</p>
+<h2 id='broadcastchat'>BroadcastChat</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerConnected</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">PrintToChat</span><span class="p">(</span><span class="err">$</span><span class="s">"{netUser.displayName} has joined the server"</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+<p>Sends a chat message to all players.</p>
+
+<p><code>rust.BroadcastChat(string message, object[] args)</code></p>
+<h2 id='broadcastconsole'>BroadcastConsole</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerConnected</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">PrintToConsole</span><span class="p">(</span><span class="err">$</span><span class="s">"{netUser.displayName} has joined the server"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<p>Prints a message to all players&#39; in-game console</p>
+
+<p><code>rust.BroadcastConsole(string message, object[] args)</code></p>
+<h2 id='findplayer'>FindPlayer</h2><pre class="highlight csharp tab-csharp"><code><span class="p">[</span><span class="nf">ChatCommand</span><span class="p">(</span><span class="s">"ex"</span><span class="p">)</span>
+<span class="k">void</span> <span class="nf">Example</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">NetUser</span> <span class="n">target</span> <span class="p">=</span> <span class="n">rust</span><span class="p">.</span><span class="nf">FindPlayer</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+<span class="p">}</span>
+</code></pre>
+<p>Searches for an online player by name, steam id or ip. Returns a netUser if a player is found, otherwise null is returned.</p>
+
+<p><code>rust.FindPlayer(string nameOrSteamIdOrIp)</code></p>
+<h2 id='privatebindingflag'>PrivateBindingFlag</h2><pre class="highlight csharp tab-csharp"><code><span class="n">rust</span><span class="p">.</span><span class="nf">PrivateBindingFlag</span><span class="p">()</span>
+</code></pre>
+<p>This should not be used in C# plugins, Reflection should be used instead</p>
+
+<p>Used to get/set private methods, fields, and properties through Reflection.</p>
+
+<p><code>rust.PrivateBindingFlag()</code></p>
+<h2 id='quotesafe'>QuoteSafe</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="s">"Use /kick \"playername\" to kick player"</span><span class="p">;</span>
+<span class="n">message</span><span class="p">.</span><span class="nf">QuoteSafe</span><span class="p">();</span>
+</code></pre>
+<p>Used to safely save text or send a message that contains quotation marks.</p>
+
+<p><code>rust.QuoteSafe(message)</code></p>
+<h2 id='sendchatmessage'>SendChatMessage</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSpawn</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="s">"You've respawned from a terrible death"</span><span class="p">;</span>
+    <span class="n">rust</span><span class="p">.</span><span class="nf">SendChatMessage</span><span class="p">({</span> <span class="n">netUser</span><span class="p">,</span> <span class="n">message</span> <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+<p>Sends a chat message to specified player.</p>
+
+<p><code>rust.SendChatMessage(NetUser netUser, string message, object[] args)</code></p>
+<h2 id='sendconsolemessage'>SendConsoleMessage</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnPlayerSpawn</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="s">"You've respawned from a terrible death"</span><span class="p">;</span>
+    <span class="n">rust</span><span class="p">.</span><span class="nf">SendConsoleMessage</span><span class="p">({</span> <span class="n">netUser</span><span class="p">,</span> <span class="n">message</span> <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+<p>Sends a console message to specified player&#39;s console.</p>
+
+<p><code>rust.SendConsoleMessage(NetUser netUser, string message, object[] args)</code></p>
+<h2 id='useridfromplayer'>UserIDFromPlayer</h2><pre class="highlight csharp tab-csharp"><code><span class="na">[ChatCommand("id")]</span>
+<span class="k">void</span> <span class="nf">ChatId</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">SendReply</span><span class="p">(</span><span class="n">netUser</span><span class="p">,</span> <span class="s">"Your ID is: "</span> <span class="p">+</span> <span class="n">netUser</span><span class="p">.</span><span class="n">userID</span><span class="p">.</span><span class="nf">ToString</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre>
+<p>Gets the user ID (64-bit SteamID) as a string of an online player.</p>
+
+<p><code>rust.UserIDFromPlayer(NetUser netUser)</code></p>
+<h2 id='notice'>Notice</h2><pre class="highlight csharp tab-csharp"><code><span class="na">[ChatCommand("notice")]</span>
+<span class="k">void</span> <span class="nf">cmdNotice</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="s">"Notice Demo"</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">icon</span> <span class="p">=</span> <span class="s">"!"</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">duration</span> <span class="p">=</span> <span class="m">4f</span><span class="p">;</span>
+    <span class="n">rust</span><span class="p">.</span><span class="nf">Notice</span><span class="p">(</span><span class="n">netUser</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">icon</span><span class="p">,</span> <span class="n">duration</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<p>Sends a notice to the player at the top of the screen.</p>
+
+<p><code>rust.Notice(NetUser netUser, string message, string icon, float duration)</code></p>
+<h2 id='inventorynotice'>InventoryNotice</h2><pre class="highlight csharp tab-csharp"><code><span class="na">[ChatCommand("notice")]</span>
+<span class="k">void</span> <span class="nf">cmdNotice</span><span class="p">(</span><span class="n">NetUser</span> <span class="n">netUser</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="s">"InventoryNotice Demo"</span><span class="p">;</span>
+    <span class="n">rust</span><span class="p">.</span><span class="nf">InventoryNotice</span><span class="p">(</span><span class="n">netUser</span><span class="p">,</span> <span class="n">message</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<p>Sends a notice to the player on the right side of the screen right above the player&#39;s health bar.</p>
+
+<p><code>rust.InventoryNotice(NetUser netUser, string message)</code></p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

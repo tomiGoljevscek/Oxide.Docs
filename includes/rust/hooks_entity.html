@@ -1,0 +1,1011 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Entity Hooks</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_rust includes_rust_hooks_entity" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#entity-hooks" class="toc-h1 toc-link" data-title="Entity Hooks">Entity Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canbradleyapctarget" class="toc-h2 toc-link" data-title="CanBradleyApcTarget">CanBradleyApcTarget</a>
+                  </li>
+                  <li>
+                    <a href="#canhelicopterdropcrate" class="toc-h2 toc-link" data-title="CanHelicopterDropCrate">CanHelicopterDropCrate</a>
+                  </li>
+                  <li>
+                    <a href="#canhelicopterstrafe" class="toc-h2 toc-link" data-title="CanHelicopterStrafe">CanHelicopterStrafe</a>
+                  </li>
+                  <li>
+                    <a href="#canhelicopterstrafetarget" class="toc-h2 toc-link" data-title="CanHelicopterStrafeTarget">CanHelicopterStrafeTarget</a>
+                  </li>
+                  <li>
+                    <a href="#canhelicoptertarget" class="toc-h2 toc-link" data-title="CanHelicopterTarget">CanHelicopterTarget</a>
+                  </li>
+                  <li>
+                    <a href="#canhelicopterusenapalm" class="toc-h2 toc-link" data-title="CanHelicopterUseNapalm">CanHelicopterUseNapalm</a>
+                  </li>
+                  <li>
+                    <a href="#canlootentity-lootablecorpse" class="toc-h2 toc-link" data-title="CanLootEntity (LootableCorpse)">CanLootEntity (LootableCorpse)</a>
+                  </li>
+                  <li>
+                    <a href="#canlootentity-resourcecontainer" class="toc-h2 toc-link" data-title="CanLootEntity (ResourceContainer)">CanLootEntity (ResourceContainer)</a>
+                  </li>
+                  <li>
+                    <a href="#canlootentity-droppeditemcontainer" class="toc-h2 toc-link" data-title="CanLootEntity (DroppedItemContainer)">CanLootEntity (DroppedItemContainer)</a>
+                  </li>
+                  <li>
+                    <a href="#canlootentity-storagecontainer" class="toc-h2 toc-link" data-title="CanLootEntity (StorageContainer)">CanLootEntity (StorageContainer)</a>
+                  </li>
+                  <li>
+                    <a href="#cannetworkto" class="toc-h2 toc-link" data-title="CanNetworkTo">CanNetworkTo</a>
+                  </li>
+                  <li>
+                    <a href="#cannpcattack" class="toc-h2 toc-link" data-title="CanNpcAttack">CanNpcAttack</a>
+                  </li>
+                  <li>
+                    <a href="#cannpceat" class="toc-h2 toc-link" data-title="CanNpcEat">CanNpcEat</a>
+                  </li>
+                  <li>
+                    <a href="#canpickupentity" class="toc-h2 toc-link" data-title="CanPickupEntity">CanPickupEntity</a>
+                  </li>
+                  <li>
+                    <a href="#canrecycle" class="toc-h2 toc-link" data-title="CanRecycle">CanRecycle</a>
+                  </li>
+                  <li>
+                    <a href="#onairdrop" class="toc-h2 toc-link" data-title="OnAirdrop">OnAirdrop</a>
+                  </li>
+                  <li>
+                    <a href="#onbradleyapcinitialize" class="toc-h2 toc-link" data-title="OnBradleyApcInitialize">OnBradleyApcInitialize</a>
+                  </li>
+                  <li>
+                    <a href="#onbradleyapchunt" class="toc-h2 toc-link" data-title="OnBradleyApcHunt">OnBradleyApcHunt</a>
+                  </li>
+                  <li>
+                    <a href="#onbradleyapcpatrol" class="toc-h2 toc-link" data-title="OnBradleyApcPatrol">OnBradleyApcPatrol</a>
+                  </li>
+                  <li>
+                    <a href="#oncontainerdropitems" class="toc-h2 toc-link" data-title="OnContainerDropItems">OnContainerDropItems</a>
+                  </li>
+                  <li>
+                    <a href="#oncratedropped" class="toc-h2 toc-link" data-title="OnCrateDropped">OnCrateDropped</a>
+                  </li>
+                  <li>
+                    <a href="#oncratehack" class="toc-h2 toc-link" data-title="OnCrateHack">OnCrateHack</a>
+                  </li>
+                  <li>
+                    <a href="#oncratehackend" class="toc-h2 toc-link" data-title="OnCrateHackEnd">OnCrateHackEnd</a>
+                  </li>
+                  <li>
+                    <a href="#oncratelanded" class="toc-h2 toc-link" data-title="OnCrateLanded">OnCrateLanded</a>
+                  </li>
+                  <li>
+                    <a href="#onentitydeath" class="toc-h2 toc-link" data-title="OnEntityDeath">OnEntityDeath</a>
+                  </li>
+                  <li>
+                    <a href="#onentitydismounted" class="toc-h2 toc-link" data-title="OnEntityDismounted">OnEntityDismounted</a>
+                  </li>
+                  <li>
+                    <a href="#onentityenter" class="toc-h2 toc-link" data-title="OnEntityEnter">OnEntityEnter</a>
+                  </li>
+                  <li>
+                    <a href="#onentitygroundmissing" class="toc-h2 toc-link" data-title="OnEntityGroundMissing">OnEntityGroundMissing</a>
+                  </li>
+                  <li>
+                    <a href="#onentitykill" class="toc-h2 toc-link" data-title="OnEntityKill">OnEntityKill</a>
+                  </li>
+                  <li>
+                    <a href="#onentityleave" class="toc-h2 toc-link" data-title="OnEntityLeave">OnEntityLeave</a>
+                  </li>
+                  <li>
+                    <a href="#onentitymounted" class="toc-h2 toc-link" data-title="OnEntityMounted">OnEntityMounted</a>
+                  </li>
+                  <li>
+                    <a href="#onentityspawned" class="toc-h2 toc-link" data-title="OnEntitySpawned">OnEntitySpawned</a>
+                  </li>
+                  <li>
+                    <a href="#onentitytakedamage" class="toc-h2 toc-link" data-title="OnEntityTakeDamage">OnEntityTakeDamage</a>
+                  </li>
+                  <li>
+                    <a href="#onfireballdamage" class="toc-h2 toc-link" data-title="OnFireBallDamage">OnFireBallDamage</a>
+                  </li>
+                  <li>
+                    <a href="#onfireballspread" class="toc-h2 toc-link" data-title="OnFireBallSpread">OnFireBallSpread</a>
+                  </li>
+                  <li>
+                    <a href="#onflameexplosion" class="toc-h2 toc-link" data-title="OnFlameExplosion">OnFlameExplosion</a>
+                  </li>
+                  <li>
+                    <a href="#onhelicopterattacked" class="toc-h2 toc-link" data-title="OnHelicopterAttacked">OnHelicopterAttacked</a>
+                  </li>
+                  <li>
+                    <a href="#onhelicopterdropcrate" class="toc-h2 toc-link" data-title="OnHelicopterDropCrate">OnHelicopterDropCrate</a>
+                  </li>
+                  <li>
+                    <a href="#onhelicopterdropdooropen" class="toc-h2 toc-link" data-title="OnHelicopterDropDoorOpen">OnHelicopterDropDoorOpen</a>
+                  </li>
+                  <li>
+                    <a href="#onhelicopterkilled" class="toc-h2 toc-link" data-title="OnHelicopterKilled">OnHelicopterKilled</a>
+                  </li>
+                  <li>
+                    <a href="#onhelicopteroutofcrates" class="toc-h2 toc-link" data-title="OnHelicopterOutOfCrates">OnHelicopterOutOfCrates</a>
+                  </li>
+                  <li>
+                    <a href="#onhelicoptertarget" class="toc-h2 toc-link" data-title="OnHelicopterTarget">OnHelicopterTarget</a>
+                  </li>
+                  <li>
+                    <a href="#onliftuse-lift" class="toc-h2 toc-link" data-title="OnLiftUse (Lift)">OnLiftUse (Lift)</a>
+                  </li>
+                  <li>
+                    <a href="#onliftuse-procedurallift" class="toc-h2 toc-link" data-title="OnLiftUse (ProceduralLift)">OnLiftUse (ProceduralLift)</a>
+                  </li>
+                  <li>
+                    <a href="#onlootspawn" class="toc-h2 toc-link" data-title="OnLootSpawn">OnLootSpawn</a>
+                  </li>
+                  <li>
+                    <a href="#onnpcplayertarget" class="toc-h2 toc-link" data-title="OnNpcPlayerTarget">OnNpcPlayerTarget</a>
+                  </li>
+                  <li>
+                    <a href="#onnpctarget" class="toc-h2 toc-link" data-title="OnNpcTarget">OnNpcTarget</a>
+                  </li>
+                  <li>
+                    <a href="#onoventoggle" class="toc-h2 toc-link" data-title="OnOvenToggle">OnOvenToggle</a>
+                  </li>
+                  <li>
+                    <a href="#onrecycleitem" class="toc-h2 toc-link" data-title="OnRecycleItem">OnRecycleItem</a>
+                  </li>
+                  <li>
+                    <a href="#onrecyclertoggle" class="toc-h2 toc-link" data-title="OnRecyclerToggle">OnRecyclerToggle</a>
+                  </li>
+                  <li>
+                    <a href="#onresourcedepositcreated" class="toc-h2 toc-link" data-title="OnResourceDepositCreated">OnResourceDepositCreated</a>
+                  </li>
+                  <li>
+                    <a href="#onshopcompletetrade" class="toc-h2 toc-link" data-title="OnShopCompleteTrade">OnShopCompleteTrade</a>
+                  </li>
+                  <li>
+                    <a href="#onturretauthorize" class="toc-h2 toc-link" data-title="OnTurretAuthorize">OnTurretAuthorize</a>
+                  </li>
+                  <li>
+                    <a href="#onturretclearlist" class="toc-h2 toc-link" data-title="OnTurretClearList">OnTurretClearList</a>
+                  </li>
+                  <li>
+                    <a href="#onturretdeauthorize" class="toc-h2 toc-link" data-title="OnTurretDeauthorize">OnTurretDeauthorize</a>
+                  </li>
+                  <li>
+                    <a href="#onturretmodetoggle" class="toc-h2 toc-link" data-title="OnTurretModeToggle">OnTurretModeToggle</a>
+                  </li>
+                  <li>
+                    <a href="#onturretshutdown" class="toc-h2 toc-link" data-title="OnTurretShutdown">OnTurretShutdown</a>
+                  </li>
+                  <li>
+                    <a href="#onturretstartup" class="toc-h2 toc-link" data-title="OnTurretStartup">OnTurretStartup</a>
+                  </li>
+                  <li>
+                    <a href="#onturrettarget" class="toc-h2 toc-link" data-title="OnTurretTarget">OnTurretTarget</a>
+                  </li>
+                  <li>
+                    <a href="#onturrettoggle" class="toc-h2 toc-link" data-title="OnTurretToggle">OnTurretToggle</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='entity-hooks'>Entity Hooks</h1><h2 id='canbradleyapctarget'>CanBradleyApcTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanBradleyApcTarget</span><span class="p">(</span><span class="n">BradleyAPC</span> <span class="n">apc</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanBradleyApcTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an APC targets an entity</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canhelicopterdropcrate'>CanHelicopterDropCrate</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanHelicopterDropCrate</span><span class="p">(</span><span class="n">CH47HelicopterAIController</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHelicopterDropCrate works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a CH47 helicopter attempts to drop a crate</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canhelicopterstrafe'>CanHelicopterStrafe</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanHelicopterStrafe</span><span class="p">(</span><span class="n">PatrolHelicopterAI</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHelicopterStrafe works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a patrol helicopter attempts to strafe</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canhelicopterstrafetarget'>CanHelicopterStrafeTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanHelicopterStrafeTarget</span><span class="p">(</span><span class="n">PatrolHelicopterAI</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHelicopterStrafeTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a patrol helicopter attempts to target a player to attack while strafing</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canhelicoptertarget'>CanHelicopterTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanHelicopterTarget</span><span class="p">(</span><span class="n">PatrolHelicopterAI</span> <span class="n">heli</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHelicopterTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a patrol helicopter attempts to target a player to attack</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canhelicopterusenapalm'>CanHelicopterUseNapalm</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanHelicopterUseNapalm</span><span class="p">(</span><span class="n">PatrolHelicopterAI</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHelicopterUseNapalm works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a patrol helicopter attempts to use napalm</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canlootentity-lootablecorpse'>CanLootEntity (LootableCorpse)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanLootEntity</span><span class="p">(</span><span class="n">LootableCorpse</span> <span class="n">corpse</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanLootEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting a LootableCorpse entity
+
+<ul>
+<li>Returning a non-null value overrides default behavior</li>
+</ul></li>
+</ul>
+<h2 id='canlootentity-resourcecontainer'>CanLootEntity (ResourceContainer)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanLootEntity</span><span class="p">(</span><span class="n">ResourceContainer</span> <span class="n">container</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanLootEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting a ResourceContainer entity
+
+<ul>
+<li>Returning a non-null value overrides default behavior</li>
+</ul></li>
+</ul>
+<h2 id='canlootentity-droppeditemcontainer'>CanLootEntity (DroppedItemContainer)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanLootEntity</span><span class="p">(</span><span class="n">DroppedItemContainer</span> <span class="n">container</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanLootEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting a DroppedItemContainer entity
+
+<ul>
+<li>Returning a non-null value overrides default behavior</li>
+</ul></li>
+</ul>
+<h2 id='canlootentity-storagecontainer'>CanLootEntity (StorageContainer)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanLootEntity</span><span class="p">(</span><span class="n">StorageContainer</span> <span class="n">container</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanLootEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player starts looting a StorageContainer entity
+
+<ul>
+<li>Returning a non-null value overrides default behavior</li>
+</ul></li>
+</ul>
+<h2 id='cannetworkto'>CanNetworkTo</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanNetworkTo</span><span class="p">(</span><span class="n">BaseNetworkable</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanNetworkTo works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity attempts to network with a player</li>
+<li>For better performance, avoid using heavy calculations in this hook.</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='cannpcattack'>CanNpcAttack</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanNpcAttack</span><span class="p">(</span><span class="n">BaseNpc</span> <span class="n">npc</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanNpcAttack works!"</span><span class="p">);</span>
+    <span class="n">reture</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a NPC attempts to attack another entity</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='cannpceat'>CanNpcEat</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanNpcEat</span><span class="p">(</span><span class="n">BaseNpc</span> <span class="n">npc</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanNpcEat works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a NPC attempts to eat another entity</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canpickupentity'>CanPickupEntity</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanPickupEntity</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanPickupEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to pickup a deployed entity (BearTrap, DecorDeployable, Door, ReactiveTarget, SleepingBag, SpinnerWheel)</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canrecycle'>CanRecycle</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanRecycle</span><span class="p">(</span><span class="n">Recycler</span> <span class="n">recycler</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanRecycle works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the recycler attempts to recycle an item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onairdrop'>OnAirdrop</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnAirdrop</span><span class="p">(</span><span class="n">CargoPlane</span> <span class="n">plane</span><span class="p">,</span> <span class="n">Vector3</span> <span class="n">dropPosition</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnAirdrop works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an airdrop has been called</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onbradleyapcinitialize'>OnBradleyApcInitialize</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnBradleyApcInitialize</span><span class="p">(</span><span class="n">BradleyAPC</span> <span class="n">apc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnBradleyApcInitialize works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an APC initializes</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onbradleyapchunt'>OnBradleyApcHunt</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnBradleyApcHunt</span><span class="p">(</span><span class="n">BradleyAPC</span> <span class="n">apc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnBradleyApcHunt works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an APC starts hunting</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onbradleyapcpatrol'>OnBradleyApcPatrol</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnBradleyApcPatrol</span><span class="p">(</span><span class="n">BradleyAPC</span> <span class="n">apc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnBradleyApcPatrol works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an APC is starts patrolling</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='oncontainerdropitems'>OnContainerDropItems</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnContainerDropItems</span><span class="p">(</span><span class="n">ItemContainer</span> <span class="n">container</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnContainerDropItems works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a container is destroyed and all items are about to be dropped</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='oncratedropped'>OnCrateDropped</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnCrateDropped</span><span class="p">(</span><span class="n">HackableLockedCrate</span> <span class="n">crate</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCrateDropped works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a locked crate from the CH47 (Chinook) has dropped</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='oncratehack'>OnCrateHack</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnCrateHack</span><span class="p">(</span><span class="n">HackableLockedCrate</span> <span class="n">crate</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCrateHack works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a locked crate from the CH47 (Chinook) starts being hacked</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='oncratehackend'>OnCrateHackEnd</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnCrateHackEnd</span><span class="p">(</span><span class="n">HackableLockedCrate</span> <span class="n">crate</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCrateHackEnd works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a locked crate from the CH47 (Chinook) is no longer being hacked</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='oncratelanded'>OnCrateLanded</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnCrateLanded</span><span class="p">(</span><span class="n">HackableLockedCrate</span> <span class="n">crate</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCrateLanded works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a locked crate from the CH47 (Chinook) has landed</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitydeath'>OnEntityDeath</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityDeath</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityDeath works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>hitInfo might be null, check it before use</li>
+<li>Editing hitInfo has no effect because the death has already happened</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitydismounted'>OnEntityDismounted</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityDismounted</span><span class="p">(</span><span class="n">BaseMountable</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityDismounted works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity is dismounted by a player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentityenter'>OnEntityEnter</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityEnter</span><span class="p">(</span><span class="n">TriggerBase</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityEnter works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity enters a trigger (building privilege zone, water area, radiation zone, hurt zone, etc.)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitygroundmissing'>OnEntityGroundMissing</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnEntityGroundMissing</span><span class="p">(</span><span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityGroundMissing works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity (sleepingbag, sign, furnace,...) is going to be destroyed because the buildingblock it is on was removed</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onentitykill'>OnEntityKill</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityKill</span><span class="p">(</span><span class="n">BaseNetworkable</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityKill works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity is destroyed</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentityleave'>OnEntityLeave</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityLeave</span><span class="p">(</span><span class="n">TriggerBase</span> <span class="n">trigger</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityLeave works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity leaves a trigger (building privilege zone, water area, radiation zone, hurt zone, etc.)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitymounted'>OnEntityMounted</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityMounted</span><span class="p">(</span><span class="n">BaseMountable</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityMounted works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an entity is mounted by a player</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentityspawned'>OnEntitySpawned</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntitySpawned</span><span class="p">(</span><span class="n">BaseNetworkable</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntitySpawned works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called after any networked entity has spawned (including trees)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitytakedamage'>OnEntityTakeDamage</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnEntityTakeDamage</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityTakeDamage works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Alternatively, modify the HitInfo object to change the damage</li>
+<li>It should be okay to set the damage to 0, but if you don&#39;t return non-null, the player&#39;s client will receive a damage indicator (if entity is a BasePlayer)</li>
+<li>HitInfo has all kinds of useful things in it, such as Weapon, damageProperties or damageTypes</li>
+<li>Returning true overrides default behavior (useful for godmode etc.)</li>
+</ul>
+<h2 id='onfireballdamage'>OnFireBallDamage</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFireBallDamage</span><span class="p">(</span><span class="n">FireBall</span> <span class="n">fire</span><span class="p">,</span> <span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFireBallDamage works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a fire ball does damage to another entity</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onfireballspread'>OnFireBallSpread</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFireBallSpread</span><span class="p">(</span><span class="n">FireBall</span> <span class="n">ball</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">fire</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFireBallSpread works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a fire ball fire spreads</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onflameexplosion'>OnFlameExplosion</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnFlameExplosion</span><span class="p">(</span><span class="n">FlameExplosive</span> <span class="n">explosive</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">flame</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFlameExplosion works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a flame explodes</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onhelicopterattacked'>OnHelicopterAttacked</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnHelicopterAttacked</span><span class="p">(</span><span class="n">CH47HelicopterAIController</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHelicopterAttacked works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a CH47 helicopter is being attacked</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onhelicopterdropcrate'>OnHelicopterDropCrate</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnHelicopterDropCrate</span><span class="p">(</span><span class="n">CH47HelicopterAIController</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHelicopterDropCrate works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a CH47 helicopter is dropping a crate</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onhelicopterdropdooropen'>OnHelicopterDropDoorOpen</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnHelicopterDropDoorOpen</span><span class="p">(</span><span class="n">CH47HelicopterAIController</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHelicopterDropDoorOpen works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a CH47 helicopter is opening its drop door</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onhelicopterkilled'>OnHelicopterKilled</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnHelicopterKilled</span><span class="p">(</span><span class="n">CH47HelicopterAIController</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHelicopterKilled works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a CH47 helicopter is going to be killed</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onhelicopteroutofcrates'>OnHelicopterOutOfCrates</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">OnHelicopterOutOfCrates</span><span class="p">(</span><span class="n">CH47HelicopterAIController</span> <span class="n">heli</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHelicopterOutOfCrates works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a CH47 helicopter runs out of crates</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onhelicoptertarget'>OnHelicopterTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnHelicopterTarget</span><span class="p">(</span><span class="n">HelicopterTurret</span> <span class="n">turret</span><span class="p">,</span> <span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHelicopterTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a helicopter turret attempts to target an entity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onliftuse-lift'>OnLiftUse (Lift)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnLiftUse</span><span class="p">(</span><span class="n">Lift</span> <span class="n">lift</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLiftUse works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player calls a lift</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onliftuse-procedurallift'>OnLiftUse (ProceduralLift)</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnLiftUse</span><span class="p">(</span><span class="n">ProceduralLift</span> <span class="n">lift</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLiftUse works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player calls a procedural lift</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onlootspawn'>OnLootSpawn</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnLootSpawn</span><span class="p">(</span><span class="n">LootContainer</span> <span class="n">container</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLootSpawn works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when loot spawns in a container</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onnpcplayertarget'>OnNpcPlayerTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnNpcPlayerTarget</span><span class="p">(</span><span class="n">NPCPlayerApex</span> <span class="n">npcPlayer</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnNpcPlayerTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an NPC player targets another entity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onnpctarget'>OnNpcTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnNpcTarget</span><span class="p">(</span><span class="n">BaseNpc</span> <span class="n">npc</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnNpcTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an NPC targets another entity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onoventoggle'>OnOvenToggle</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnOvenToggle</span><span class="p">(</span><span class="n">BaseOven</span> <span class="n">oven</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnOvenToggle works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an oven (Campfire, Furnace,...) is turned on or off</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onrecycleitem'>OnRecycleItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnRecycleItem</span><span class="p">(</span><span class="n">Recycler</span> <span class="n">recycler</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnRecycleItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is recycled in a recycler</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onrecyclertoggle'>OnRecyclerToggle</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnRecyclerToggle</span><span class="p">(</span><span class="n">Recycler</span> <span class="n">recycler</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnRecyclerToggle works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a recycler is turned on or off</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onresourcedepositcreated'>OnResourceDepositCreated</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnResourceDepositCreated</span><span class="p">(</span><span class="n">ResourceDepositManager</span><span class="p">.</span><span class="n">ResourceDeposit</span> <span class="n">deposit</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnResourceDepositCreated works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a resource deposit has been created</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onshopcompletetrade'>OnShopCompleteTrade</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnShopCompleteTrade</span><span class="p">(</span><span class="n">ShopFront</span> <span class="n">shop</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">customer</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnShopCompleteTrade works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a shopfront trade is complete</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturretauthorize'>OnTurretAuthorize</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretAuthorize</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretAuthorize works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player is authorized on a turret</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturretclearlist'>OnTurretClearList</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretClearList</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretClearList works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to clear an autoturret&#39;s authorized list</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturretdeauthorize'>OnTurretDeauthorize</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretDeauthorize</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretDeauthorize works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player is deauthorized on an autoturret</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturretmodetoggle'>OnTurretModeToggle</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnTurretModeToggle</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretModeToggle works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the mode of an autoturrent is toggled</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onturretshutdown'>OnTurretShutdown</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretShutdown</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretShutdown works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an autoturret is shut down</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturretstartup'>OnTurretStartup</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretStartup</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretStartup works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an autoturret starts up</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturrettarget'>OnTurretTarget</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretTarget</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">,</span> <span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretTarget works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an autoturret attempts to target an entity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onturrettoggle'>OnTurretToggle</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTurretToggle</span><span class="p">(</span><span class="n">AutoTurret</span> <span class="n">turret</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTurretToggle works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an autoturret toggles powerstate (on/off)</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

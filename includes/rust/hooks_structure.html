@@ -1,0 +1,563 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Structure Hooks</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_rust includes_rust_hooks_structure" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#structure-hooks" class="toc-h1 toc-link" data-title="Structure Hooks">Structure Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canaffordupgrade" class="toc-h2 toc-link" data-title="CanAffordUpgrade">CanAffordUpgrade</a>
+                  </li>
+                  <li>
+                    <a href="#canassignbed" class="toc-h2 toc-link" data-title="CanAssignBed">CanAssignBed</a>
+                  </li>
+                  <li>
+                    <a href="#canbuild" class="toc-h2 toc-link" data-title="CanBuild">CanBuild</a>
+                  </li>
+                  <li>
+                    <a href="#canchangecode" class="toc-h2 toc-link" data-title="CanChangeCode">CanChangeCode</a>
+                  </li>
+                  <li>
+                    <a href="#canchangegrade" class="toc-h2 toc-link" data-title="CanChangeGrade">CanChangeGrade</a>
+                  </li>
+                  <li>
+                    <a href="#candemolish" class="toc-h2 toc-link" data-title="CanDemolish">CanDemolish</a>
+                  </li>
+                  <li>
+                    <a href="#canhidestash" class="toc-h2 toc-link" data-title="CanHideStash">CanHideStash</a>
+                  </li>
+                  <li>
+                    <a href="#canlock" class="toc-h2 toc-link" data-title="CanLock">CanLock</a>
+                  </li>
+                  <li>
+                    <a href="#canpickuplock" class="toc-h2 toc-link" data-title="CanPickupLock">CanPickupLock</a>
+                  </li>
+                  <li>
+                    <a href="#canseestash" class="toc-h2 toc-link" data-title="CanSeeStash">CanSeeStash</a>
+                  </li>
+                  <li>
+                    <a href="#cansetbedpublic" class="toc-h2 toc-link" data-title="CanSetBedPublic">CanSetBedPublic</a>
+                  </li>
+                  <li>
+                    <a href="#canunlock" class="toc-h2 toc-link" data-title="CanUnlock">CanUnlock</a>
+                  </li>
+                  <li>
+                    <a href="#canuselockedentity" class="toc-h2 toc-link" data-title="CanUseLockedEntity">CanUseLockedEntity</a>
+                  </li>
+                  <li>
+                    <a href="#oncodeentered" class="toc-h2 toc-link" data-title="OnCodeEntered">OnCodeEntered</a>
+                  </li>
+                  <li>
+                    <a href="#oncupboardauthorize" class="toc-h2 toc-link" data-title="OnCupboardAuthorize">OnCupboardAuthorize</a>
+                  </li>
+                  <li>
+                    <a href="#oncupboardclearlist" class="toc-h2 toc-link" data-title="OnCupboardClearList">OnCupboardClearList</a>
+                  </li>
+                  <li>
+                    <a href="#oncupboarddeauthorize" class="toc-h2 toc-link" data-title="OnCupboardDeauthorize">OnCupboardDeauthorize</a>
+                  </li>
+                  <li>
+                    <a href="#ondoorclosed" class="toc-h2 toc-link" data-title="OnDoorClosed">OnDoorClosed</a>
+                  </li>
+                  <li>
+                    <a href="#ondooropened" class="toc-h2 toc-link" data-title="OnDoorOpened">OnDoorOpened</a>
+                  </li>
+                  <li>
+                    <a href="#ondoorknocked" class="toc-h2 toc-link" data-title="OnDoorKnocked">OnDoorKnocked</a>
+                  </li>
+                  <li>
+                    <a href="#onentitybuilt" class="toc-h2 toc-link" data-title="OnEntityBuilt">OnEntityBuilt</a>
+                  </li>
+                  <li>
+                    <a href="#onhammerhit" class="toc-h2 toc-link" data-title="OnHammerHit">OnHammerHit</a>
+                  </li>
+                  <li>
+                    <a href="#onstructuredemolish" class="toc-h2 toc-link" data-title="OnStructureDemolish">OnStructureDemolish</a>
+                  </li>
+                  <li>
+                    <a href="#onstructurerepair" class="toc-h2 toc-link" data-title="OnStructureRepair">OnStructureRepair</a>
+                  </li>
+                  <li>
+                    <a href="#onstructurerotate" class="toc-h2 toc-link" data-title="OnStructureRotate">OnStructureRotate</a>
+                  </li>
+                  <li>
+                    <a href="#onstructureupgrade" class="toc-h2 toc-link" data-title="OnStructureUpgrade">OnStructureUpgrade</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='structure-hooks'>Structure Hooks</h1><h2 id='canaffordupgrade'>CanAffordUpgrade</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanAffordUpgrade</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BuildingBlock</span> <span class="n">block</span><span class="p">,</span> <span class="n">BuildingGrade</span><span class="p">.</span><span class="n">Enum</span> <span class="n">grade</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanAffordUpgrade works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the resources for an upgrade are checked</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canassignbed'>CanAssignBed</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanAssignBed</span><span class="p">(</span><span class="n">SleepingBag</span> <span class="n">bag</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">ulong</span> <span class="n">targetPlayerId</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanAssignBed works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to assign a bed or sleeping bag to another player</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canbuild'>CanBuild</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanBuild</span><span class="p">(</span><span class="n">Planner</span> <span class="n">planner</span><span class="p">,</span> <span class="n">Construction</span> <span class="n">prefab</span><span class="p">,</span> <span class="n">Construction</span><span class="p">.</span><span class="n">Target</span> <span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanBuild works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player tries to build something</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canchangecode'>CanChangeCode</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanChangeCode</span><span class="p">(</span><span class="n">CodeLock</span> <span class="n">codeLock</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">newCode</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">isGuestCode</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanChangeCode works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player tries to change the code on a codelock</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canchangegrade'>CanChangeGrade</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanChangeGrade</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BuildingBlock</span> <span class="n">block</span><span class="p">,</span> <span class="n">BuildingGrade</span><span class="p">.</span><span class="n">Enum</span> <span class="n">grade</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanChangeGrade works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player tries to change a building grade</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='candemolish'>CanDemolish</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanDemolish</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BuildingBlock</span> <span class="n">block</span><span class="p">,</span> <span class="n">BuildingGrade</span><span class="p">.</span><span class="n">Enum</span> <span class="n">grade</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanDemolish works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player tries to demolish a building block</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canhidestash'>CanHideStash</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanHideStash</span><span class="p">(</span><span class="n">StashContainer</span> <span class="n">stash</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanHideStash works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player tries to hide a stash</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canlock'>CanLock</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanLock</span><span class="p">(</span><span class="n">BaseLock</span> <span class="n">baseLock</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanLock works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player tries to lock a keylock or codelock</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canpickuplock'>CanPickupLock</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanPickupLock</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BaseLock</span> <span class="n">baseLock</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanPickupLock works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to pickup a lock</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canseestash'>CanSeeStash</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanSeeStash</span><span class="p">(</span><span class="n">StashContainer</span> <span class="n">stash</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanSeeStash works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player is looking at a hidden stash</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='cansetbedpublic'>CanSetBedPublic</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanSetBedPublic</span><span class="p">(</span><span class="n">SleepingBag</span> <span class="n">bed</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanSetBedPublic works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player tries to set a bed public</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canunlock'>CanUnlock</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanUnlock</span><span class="p">(</span><span class="n">BaseLock</span> <span class="n">baseLock</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUnlock works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player tries to unlock a keylock or codelock</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canuselockedentity'>CanUseLockedEntity</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanUseLockedEntity</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BaseLock</span> <span class="n">baseLock</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanUseLockedEntity works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player tries to use an entity that is locked</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='oncodeentered'>OnCodeEntered</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnCodeEntered</span><span class="p">(</span><span class="n">CodeLock</span> <span class="n">codeLock</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="kt">string</span> <span class="n">code</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCodeEntered works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has entered a code in a codelock</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='oncupboardauthorize'>OnCupboardAuthorize</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnCupboardAuthorize</span><span class="p">(</span><span class="n">BuildingPrivlidge</span> <span class="n">privilege</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCupboardAuthorize works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a cupboard attempts to authorize a player</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='oncupboardclearlist'>OnCupboardClearList</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnCupboardClearList</span><span class="p">(</span><span class="n">BuildingPrivlidge</span> <span class="n">privilege</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCupboardClearList works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an attempt is made to clear a cupboard authorized list</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='oncupboarddeauthorize'>OnCupboardDeauthorize</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnCupboardDeauthorize</span><span class="p">(</span><span class="n">BuildingPrivlidge</span> <span class="n">privilege</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnCupboardDeauthorize works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a cupboard attempts to deauthorize a player</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='ondoorclosed'>OnDoorClosed</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnDoorClosed</span><span class="p">(</span><span class="n">Door</span> <span class="n">door</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnDoorClosed works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player closed a door</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ondooropened'>OnDoorOpened</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnDoorOpened</span><span class="p">(</span><span class="n">Door</span> <span class="n">door</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnDoorOpened works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player opened a door</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ondoorknocked'>OnDoorKnocked</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnDoorKnocked</span><span class="p">(</span><span class="n">Door</span> <span class="n">door</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnDoorKnocked works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player knocks on a door</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onentitybuilt'>OnEntityBuilt</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnEntityBuilt</span><span class="p">(</span><span class="n">Planner</span> <span class="n">plan</span><span class="p">,</span> <span class="n">GameObject</span> <span class="n">go</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnEntityBuilt works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when any structure is built (walls, ceilings, stairs, etc.)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onhammerhit'>OnHammerHit</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnHammerHit</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">HitInfo</span> <span class="n">info</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHammerHit works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has hit something with a hammer</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onstructuredemolish'>OnStructureDemolish</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnStructureDemolish</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnStructureDemolish works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player selects DemolishImmediate from the BuildingBlock or BaseCombatEntity menu</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onstructurerepair'>OnStructureRepair</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnStructureRepair</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnStructureRepair works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player repairs a BuildingBlock or BaseCombatEntity</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onstructurerotate'>OnStructureRotate</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnStructureRotate</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnStructureRotate works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player rotates a BuildingBlock or BaseCombatEntity</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onstructureupgrade'>OnStructureUpgrade</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnStructureUpgrade</span><span class="p">(</span><span class="n">BaseCombatEntity</span> <span class="n">entity</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">BuildingGrade</span><span class="p">.</span><span class="n">Enum</span> <span class="n">grade</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnStructureUpgrade works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player upgrades the grade of a BuildingBlock or BaseCombatEntity</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

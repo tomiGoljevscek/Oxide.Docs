@@ -1,0 +1,334 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Server Hooks</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_rust includes_rust_hooks_general" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#server-hooks" class="toc-h1 toc-link" data-title="Server Hooks">Server Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#onmessageplayer" class="toc-h2 toc-link" data-title="OnMessagePlayer">OnMessagePlayer</a>
+                  </li>
+                  <li>
+                    <a href="#onnewsave" class="toc-h2 toc-link" data-title="OnNewSave">OnNewSave</a>
+                  </li>
+                  <li>
+                    <a href="#onrconcommand" class="toc-h2 toc-link" data-title="OnRconCommand">OnRconCommand</a>
+                  </li>
+                  <li>
+                    <a href="#onrconconnection" class="toc-h2 toc-link" data-title="OnRconConnection">OnRconConnection</a>
+                  </li>
+                  <li>
+                    <a href="#onsaveload" class="toc-h2 toc-link" data-title="OnSaveLoad">OnSaveLoad</a>
+                  </li>
+                  <li>
+                    <a href="#onservercommand" class="toc-h2 toc-link" data-title="OnServerCommand">OnServerCommand</a>
+                  </li>
+                  <li>
+                    <a href="#onservermessage" class="toc-h2 toc-link" data-title="OnServerMessage">OnServerMessage</a>
+                  </li>
+                  <li>
+                    <a href="#ontick" class="toc-h2 toc-link" data-title="OnTick">OnTick</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='server-hooks'>Server Hooks</h1><h2 id='onmessageplayer'>OnMessagePlayer</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnMessagePlayer</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnMessagePlayer works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for intercepting server messages before they get to their intended target</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onnewsave'>OnNewSave</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnNewSave</span><span class="p">(</span><span class="kt">string</span> <span class="n">filename</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnNewSave works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a new savefile is created (usually when map has wiped)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onrconcommand'>OnRconCommand</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnRconCommand</span><span class="p">(</span><span class="n">IPAddress</span> <span class="n">ip</span><span class="p">,</span> <span class="kt">string</span> <span class="n">command</span><span class="p">,</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnRconCommand works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an RCON command is run</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onrconconnection'>OnRconConnection</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnRconConnection</span><span class="p">(</span><span class="n">IPEndPoint</span> <span class="n">ip</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnRconConnection works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a new RCON connection is opened</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onsaveload'>OnSaveLoad</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnSaveLoad</span><span class="p">(</span><span class="n">Dictionary</span><span class="p">&lt;</span><span class="n">BaseEntity</span><span class="p">,</span> <span class="n">Entity</span><span class="p">&gt;</span> <span class="n">entities</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnSaveLoad works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a save file is loaded</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onservercommand'>OnServerCommand</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnServerCommand</span><span class="p">(</span><span class="n">ConsoleSystem</span><span class="p">.</span><span class="n">Arg</span> <span class="n">arg</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnServerCommand works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for intercepting commands before they get to their intended target</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onservermessage'>OnServerMessage</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnServerMessage</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">color</span><span class="p">,</span> <span class="kt">ulong</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnServerMessage works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Useful for intercepting server messages before they get to their intended target</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='ontick'>OnTick</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnTick</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTick works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called every tick (defined by the tick rate of the server)</li>
+<li>For better performance, avoid using heavy calculations in this hook.</li>
+<li>No return behavior</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

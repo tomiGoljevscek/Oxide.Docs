@@ -1,0 +1,622 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Item Hooks</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="includes includes_rust includes_rust_hooks_item" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <a href="/" id="logo">
+        <img src="../../images/logo.png" class="logo" alt="Logo" />
+      </a>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#item-hooks" class="toc-h1 toc-link" data-title="Item Hooks">Item Hooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#canacceptitem" class="toc-h2 toc-link" data-title="CanAcceptItem">CanAcceptItem</a>
+                  </li>
+                  <li>
+                    <a href="#cancombinedroppeditem" class="toc-h2 toc-link" data-title="CanCombineDroppedItem">CanCombineDroppedItem</a>
+                  </li>
+                  <li>
+                    <a href="#canmoveitem" class="toc-h2 toc-link" data-title="CanMoveItem">CanMoveItem</a>
+                  </li>
+                  <li>
+                    <a href="#canstackitem" class="toc-h2 toc-link" data-title="CanStackItem">CanStackItem</a>
+                  </li>
+                  <li>
+                    <a href="#onconsumefuel" class="toc-h2 toc-link" data-title="OnConsumeFuel">OnConsumeFuel</a>
+                  </li>
+                  <li>
+                    <a href="#oncontainerdropitems" class="toc-h2 toc-link" data-title="OnContainerDropItems">OnContainerDropItems</a>
+                  </li>
+                  <li>
+                    <a href="#onfindburnable" class="toc-h2 toc-link" data-title="OnFindBurnable">OnFindBurnable</a>
+                  </li>
+                  <li>
+                    <a href="#onhealingitemuse" class="toc-h2 toc-link" data-title="OnHealingItemUse">OnHealingItemUse</a>
+                  </li>
+                  <li>
+                    <a href="#onitemaction" class="toc-h2 toc-link" data-title="OnItemAction">OnItemAction</a>
+                  </li>
+                  <li>
+                    <a href="#onitemaddedtocontainer" class="toc-h2 toc-link" data-title="OnItemAddedToContainer">OnItemAddedToContainer</a>
+                  </li>
+                  <li>
+                    <a href="#onitemcraft" class="toc-h2 toc-link" data-title="OnItemCraft">OnItemCraft</a>
+                  </li>
+                  <li>
+                    <a href="#onitemcraftcancelled" class="toc-h2 toc-link" data-title="OnItemCraftCancelled">OnItemCraftCancelled</a>
+                  </li>
+                  <li>
+                    <a href="#onitemcraftfinished" class="toc-h2 toc-link" data-title="OnItemCraftFinished">OnItemCraftFinished</a>
+                  </li>
+                  <li>
+                    <a href="#onitemdeployed" class="toc-h2 toc-link" data-title="OnItemDeployed">OnItemDeployed</a>
+                  </li>
+                  <li>
+                    <a href="#onitemdropped" class="toc-h2 toc-link" data-title="OnItemDropped">OnItemDropped</a>
+                  </li>
+                  <li>
+                    <a href="#onitempickup" class="toc-h2 toc-link" data-title="OnItemPickup">OnItemPickup</a>
+                  </li>
+                  <li>
+                    <a href="#onitemremovedfromcontainer" class="toc-h2 toc-link" data-title="OnItemRemovedFromContainer">OnItemRemovedFromContainer</a>
+                  </li>
+                  <li>
+                    <a href="#onitemrepair" class="toc-h2 toc-link" data-title="OnItemRepair">OnItemRepair</a>
+                  </li>
+                  <li>
+                    <a href="#onitemresearch" class="toc-h2 toc-link" data-title="OnItemResearch">OnItemResearch</a>
+                  </li>
+                  <li>
+                    <a href="#onitemresearched" class="toc-h2 toc-link" data-title="OnItemResearched">OnItemResearched</a>
+                  </li>
+                  <li>
+                    <a href="#onitemresearchstart" class="toc-h2 toc-link" data-title="OnItemResearchStart">OnItemResearchStart</a>
+                  </li>
+                  <li>
+                    <a href="#onitemscrap" class="toc-h2 toc-link" data-title="OnItemScrap">OnItemScrap</a>
+                  </li>
+                  <li>
+                    <a href="#onitemsplit" class="toc-h2 toc-link" data-title="OnItemSplit">OnItemSplit</a>
+                  </li>
+                  <li>
+                    <a href="#onitemupgrade" class="toc-h2 toc-link" data-title="OnItemUpgrade">OnItemUpgrade</a>
+                  </li>
+                  <li>
+                    <a href="#onitemuse" class="toc-h2 toc-link" data-title="OnItemUse">OnItemUse</a>
+                  </li>
+                  <li>
+                    <a href="#onlosecondition" class="toc-h2 toc-link" data-title="OnLoseCondition">OnLoseCondition</a>
+                  </li>
+                  <li>
+                    <a href="#onmaxstackable" class="toc-h2 toc-link" data-title="OnMaxStackable">OnMaxStackable</a>
+                  </li>
+                  <li>
+                    <a href="#ontraparm" class="toc-h2 toc-link" data-title="OnTrapArm">OnTrapArm</a>
+                  </li>
+                  <li>
+                    <a href="#ontrapdisarm" class="toc-h2 toc-link" data-title="OnTrapDisarm">OnTrapDisarm</a>
+                  </li>
+                  <li>
+                    <a href="#ontrapsnapped" class="toc-h2 toc-link" data-title="OnTrapSnapped">OnTrapSnapped</a>
+                  </li>
+                  <li>
+                    <a href="#ontraptrigger" class="toc-h2 toc-link" data-title="OnTrapTrigger">OnTrapTrigger</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='item-hooks'>Item Hooks</h1><h2 id='canacceptitem'>CanAcceptItem</h2><pre class="highlight csharp tab-csharp"><code><span class="n">ItemContainer</span><span class="p">.</span><span class="n">CanAcceptResult</span> <span class="nf">CanAcceptItem</span><span class="p">(</span><span class="n">ItemContainer</span> <span class="n">container</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetPos</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanAcceptItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when attempting to put an item in a container</li>
+<li>Returning a CanAcceptResult enum value overrides default behavior</li>
+</ul>
+<h2 id='cancombinedroppeditem'>CanCombineDroppedItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanCombineDroppedItem</span><span class="p">(</span><span class="n">DroppedItem</span> <span class="n">item</span><span class="p">,</span> <span class="n">DroppedItem</span> <span class="n">targetItem</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanCombineDroppedItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is dropped on another item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='canmoveitem'>CanMoveItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">CanMoveItem</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="n">PlayerInventory</span> <span class="n">playerLoot</span><span class="p">,</span> <span class="kt">uint</span> <span class="n">targetContainer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">targetSlot</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanMoveItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when moving an item from one inventory slot to another</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='canstackitem'>CanStackItem</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">CanStackItem</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="n">Item</span> <span class="n">targetItem</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"CanStackItem works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when moving an item onto another item</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onconsumefuel'>OnConsumeFuel</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnConsumeFuel</span><span class="p">(</span><span class="n">BaseOven</span> <span class="n">oven</span><span class="p">,</span> <span class="n">Item</span> <span class="n">fuel</span><span class="p">,</span> <span class="n">ItemModBurnable</span> <span class="n">burnable</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnConsumeFuel works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before fuel is used (furnace, lanterns, camp fires, etc.)</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='oncontainerdropitems'>OnContainerDropItems</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnContainerDropItems</span><span class="p">(</span><span class="n">ItemContainer</span> <span class="n">container</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnContainerDropItems works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is dropped from a container</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onfindburnable'>OnFindBurnable</h2><pre class="highlight csharp tab-csharp"><code><span class="n">Item</span> <span class="nf">OnFindBurnable</span><span class="p">(</span><span class="n">BaseOven</span> <span class="n">oven</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnFindBurnable works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when looking for fuel for the oven</li>
+<li>Returning an Item overrides default behavior</li>
+</ul>
+<h2 id='onhealingitemuse'>OnHealingItemUse</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnHealingItemUse</span><span class="p">(</span><span class="n">MedicalTool</span> <span class="n">tool</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnHealingItemUse works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a player attempts to use a medical tool</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onitemaction'>OnItemAction</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnItemAction</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="kt">string</span> <span class="n">action</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemAction works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a button is clicked on an item in the inventory (drop, unwrap, ...)</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onitemaddedtocontainer'>OnItemAddedToContainer</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemAddedToContainer</span><span class="p">(</span><span class="n">ItemContainer</span> <span class="n">container</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemAddedToContainer works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item was added to a container</li>
+<li>An entire stack has to be created, not just adding more wood to a wood stack for example</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemcraft'>OnItemCraft</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">bool</span> <span class="nf">OnItemCraft</span><span class="p">(</span><span class="n">ItemCraftTask</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemCraft works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item is added to the crafting queue</li>
+<li>Returning true or false overrides default behavior</li>
+</ul>
+<h2 id='onitemcraftcancelled'>OnItemCraftCancelled</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemCraftCancelled</span><span class="p">(</span><span class="n">ItemCraftTask</span> <span class="n">task</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemCraftCancelled works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called before an item has been crafted</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemcraftfinished'>OnItemCraftFinished</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemCraftFinished</span><span class="p">(</span><span class="n">ItemCraftTask</span> <span class="n">task</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemCraftFinished works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item has been crafted</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemdeployed'>OnItemDeployed</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemDeployed</span><span class="p">(</span><span class="n">Deployer</span> <span class="n">deployer</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemDeployed works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item has been deployed</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemdropped'>OnItemDropped</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemDropped</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="n">BaseEntity</span> <span class="n">entity</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemDropped works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item has been dropped</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitempickup'>OnItemPickup</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnItemPickup</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemPickup works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item has been picked up</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onitemremovedfromcontainer'>OnItemRemovedFromContainer</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemRemovedFromContainer</span><span class="p">(</span><span class="n">ItemContainer</span> <span class="n">container</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemRemovedFromContainer works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right after an item was removed from a container</li>
+<li>The entire stack has to be removed for this to be called, not just a little bit</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemrepair'>OnItemRepair</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemRepair</span><span class="p">(</span><span class="n">BasePlayer</span> <span class="n">player</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemRepair works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before an item is repaired</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemresearch'>OnItemResearch</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemResearch</span><span class="p">(</span><span class="n">ResearchTable</span> <span class="n">table</span><span class="p">,</span> <span class="n">Item</span><span class="p">,</span> <span class="n">targetItem</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemResearch works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before a player begins to research an item</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemresearched'>OnItemResearched</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">float</span> <span class="nf">OnItemResearched</span><span class="p">(</span><span class="n">ResearchTable</span> <span class="n">table</span><span class="p">,</span> <span class="kt">float</span> <span class="n">chance</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemResearched works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before a player finishes researching an item</li>
+<li>Returning a float will affect if researching is successful or not</li>
+</ul>
+<h2 id='onitemresearchstart'>OnItemResearchStart</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemResearchStart</span><span class="p">(</span><span class="n">ResearchTable</span> <span class="n">table</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemResearchStart works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player has started researching an item</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemscrap'>OnItemScrap</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnItemScrap</span><span class="p">(</span><span class="n">ResearchTable</span> <span class="n">table</span><span class="p">,</span> <span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemResearchStart works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is being scrapped at a research table</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='onitemsplit'>OnItemSplit</h2><pre class="highlight csharp tab-csharp"><code><span class="n">Item</span> <span class="nf">OnItemSplit</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="kt">int</span> <span class="n">amount</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemSplit works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before an item is split into multiple stacks</li>
+<li>Returning an Item overrides default behavior</li>
+</ul>
+<h2 id='onitemupgrade'>OnItemUpgrade</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemUpgrade</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="n">Item</span> <span class="n">upgraded</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemUpgrade works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before an item is upgraded</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onitemuse'>OnItemUse</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnItemUse</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="kt">int</span> <span class="n">amountToUse</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnItemUse works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an item is used</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onlosecondition'>OnLoseCondition</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnLoseCondition</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">,</span> <span class="k">ref</span> <span class="kt">float</span> <span class="n">amount</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnLoseCondition works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called right before the condition of the item is modified</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='onmaxstackable'>OnMaxStackable</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">int</span> <span class="nf">OnMaxStackable</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnMaxStackable works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when an items max stackable is calculated</li>
+<li>Returning a numeric value (int) overrides the default value</li>
+</ul>
+<h2 id='ontraparm'>OnTrapArm</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTrapArm</span><span class="p">(</span><span class="n">BearTrap</span> <span class="n">trap</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTrapArm works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player arms a bear trap</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='ontrapdisarm'>OnTrapDisarm</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTrapDisarm</span><span class="p">(</span><span class="n">Landmine</span> <span class="n">trap</span><span class="p">,</span> <span class="n">BasePlayer</span> <span class="n">player</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTrapDisarm works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when the player disarms a land mine</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+<h2 id='ontrapsnapped'>OnTrapSnapped</h2><pre class="highlight csharp tab-csharp"><code><span class="k">void</span> <span class="nf">OnTrapSnapped</span><span class="p">(</span><span class="n">BaseTrapTrigger</span> <span class="n">trap</span><span class="p">,</span> <span class="n">GameObject</span> <span class="n">go</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTrapSnapped works!"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a trap is triggered by a game object</li>
+<li>No return behavior</li>
+</ul>
+<h2 id='ontraptrigger'>OnTrapTrigger</h2><pre class="highlight csharp tab-csharp"><code><span class="kt">object</span> <span class="nf">OnTrapTrigger</span><span class="p">(</span><span class="n">BaseTrap</span> <span class="n">trap</span><span class="p">,</span> <span class="n">GameObject</span> <span class="n">go</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nf">Puts</span><span class="p">(</span><span class="s">"OnTrapTrigger works!"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<ul>
+<li>Called when a trap is triggered by a game object</li>
+<li>Returning a non-null value overrides default behavior</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
