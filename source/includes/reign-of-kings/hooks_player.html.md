@@ -1,11 +1,25 @@
 # Player Hooks
 
+## OnChatCommand
+
+``` csharp
+object OnChatCommand(Player player, string command, string[] args)
+{
+    Puts("OnChatCommand works!");
+    return null;
+}
+```
+
+ * Called when a player runs a chat command
+ * Returning a non-null value overrides default behavior
+
 ## OnUserApprove
 
 ``` csharp
-void OnUserApprove(ConnectionLoginData data)
+object OnUserApprove(ConnectionLoginData data)
 {
     Puts("OnUserApprove works!");
+    return null;
 }
 ```
 
@@ -14,7 +28,7 @@ void OnUserApprove(ConnectionLoginData data)
 ## OnPlayerCapture
 
 ``` csharp
-void OnPlayerCapture(PlayerCaptureEvent e)
+void OnPlayerCapture(PlayerCaptureEvent evt)
 {
     Puts("OnPlayerCapture works!");
 }
@@ -25,7 +39,7 @@ void OnPlayerCapture(PlayerCaptureEvent e)
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(PlayerEvent e)
+object OnPlayerChat(PlayerEvent evt)
 {
     Puts("OnPlayerChat works!");
 }
@@ -43,8 +57,8 @@ void OnPlayerConnected(Player player)
 }
 ```
 
- * No return behavior
  * Called before the player object is created, but after the player has been approved
+ * No return behavior
 
 ## OnPlayerDisconnected
 
@@ -55,13 +69,13 @@ void OnPlayerDisconnected(Player player)
 }
 ```
 
- * No return behavior
  * Called after the player has disconnected from the server
+ * No return behavior
 
 ## OnPlayerEscape
 
 ``` csharp
-void OnPlayerEscape(PlayerEscapeEvent e)
+void OnPlayerEscape(PlayerEscapeEvent evt)
 {
     Puts("OnPlayerEscape works!");
 }
@@ -70,68 +84,67 @@ void OnPlayerEscape(PlayerEscapeEvent e)
 ## OnPlayerInteract
 
 ``` csharp
-void OnPlayerInteract(InteractEvent e)
+void OnPlayerInteract(InteractEvent evt)
 {
     Puts("OnPlayerInteract works!");
 }
 ```
 
- * Called when a player interacts with an object, like a crafting station, loot, chests, or anything with an inventory.
+ * Called when a player interacts with an object, like a crafting station, loot, chests, or anything with an inventory
 
 ## OnPlayerRelease
 
 ``` csharp
-void OnPlayerRelease(PlayerEscapeEvent e)
+void OnPlayerRelease(PlayerEscapeEvent evt)
 {
     Puts("OnPlayerRelease works!");
 }
 ```
 
- * Called when a roped player gets freed from the rope.
- * Called when a roped player escapes.
+ * Called when a roped player gets freed from the rope
 
 ## OnPlayerRespawn
 
 ``` csharp
-void OnPlayerRespawn(PlayerRespawnEvent e)
+void OnPlayerRespawn(PlayerRespawnEvent evt)
 {
     Puts("OnPlayerRespawn works!");
 }
 ```
 
- * No return behavior
  * Called when the player respawns
+ * No return behavior
 
  ## OnPlayerSleep
 
 ``` csharp
-void OnPlayerSleep(PlayerSleepEvent e)
+void OnPlayerSleep(PlayerSleepEvent evt)
 {
     Puts("OnPlayerSleep works!");
 }
 ```
 
- * Called when a player sleeps (logout).
+ * Called when a player sleeps (logout)
 
 ## OnPlayerSpawn
 
 ``` csharp
-void OnPlayerSpawn(PlayerFirstSpawnEvent e)
+void OnPlayerSpawn(PlayerFirstSpawnEvent evt)
 {
     Puts("OnPlayerSpawn works!");
 }
 ```
 
- * No return behavior
  * Called when the player spawns
+ * No return behavior
 
 ## OnPlayerUnlock
 
 ``` csharp
-void OnPlayerUnlock(ObjectUnlockEvent e)
+void OnPlayerUnlock(ObjectUnlockEvent evt)
 {
     Puts("OnPlayerUnlock works!");
 }
 ```
 
- * Called when a player unlocks a door or cage with a lockpick.
+ * Called when the player unlocks a door or cage with a lockpick

@@ -9,6 +9,7 @@ title: Server Hooks
 object OnServerCommand(string command, string[] args)
 {
     Puts("OnServerCommand works!");
+    return null;
 }
 ```
 

@@ -4,6 +4,18 @@ title: Player Hooks
 
 # Player Hooks
 
+## OnExperienceGained
+
+``` csharp
+void OnExperienceGained(ClientInfo client, uint exp)
+{
+    Puts("OnExperienceGained works!");
+}
+```
+
+ * Called when the player has gained experience
+ * No return behavior
+
 ## OnPlayerConnected
 
 ``` csharp
@@ -31,14 +43,15 @@ void OnPlayerDisconnected(ClientInfo client)
 ## OnPlayerChat
 
 ``` csharp
-void OnPlayerChat(ClientInfo client, string message)
+object OnPlayerChat(ClientInfo client, string message)
 {
     Puts("OnPlayerChat works!");
+    return null;
 }
 ```
 
  * Called when the player sends chat to the server
- * No return behavior
+ * Returning a non-null value overrides default behavior
 
 ## OnPlayerRespawned
 
@@ -52,14 +65,14 @@ void OnPlayerRespawned(ClientInfo client, string reason)
  * Called when the player has respawned
  * No return behavior
 
-## OnExperienceGained
+## OnPlayerSpawn
 
 ``` csharp
-void OnExperienceGained(ClientInfo client, uint exp)
+object OnPlayerSpawn(ClientInfo client)
 {
-    Puts("OnExperienceGained works!");
+    Puts("OnPlayerSpawn works!");
 }
 ```
 
- * Called when the player has gained experience
- * No return behavior
+ * Called when the player is spawning
+ * Returning a non-null value overrides default behavior

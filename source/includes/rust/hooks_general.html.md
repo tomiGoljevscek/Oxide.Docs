@@ -51,7 +51,7 @@ object OnRconConnection(IPEndPoint ip)
 }
 ```
 
- * Called when a new RCon connection is opened
+ * Called when a new RCON connection is opened
  * Returning a non-null value overrides default behavior
 
 ## OnSaveLoad
@@ -64,7 +64,7 @@ object OnSaveLoad(Dictionary<BaseEntity, Entity> entities)
 }
 ```
 
- * Called when a savefile is loaded
+ * Called when a save file is loaded
  * Returning a non-null value overrides default behavior
 
 ## OnServerCommand

@@ -9,7 +9,8 @@ void OnCubePlacement(CubePlaceEvent evt)
 }
 ```
 
- * Help! This is missing a description!
+ * Called when a cube is being placed
+ * No return behavior
 
 ## OnCubeTakeDamage
 
@@ -20,15 +21,17 @@ void OnCubeTakeDamage(CubeDamageEvent evt)
 }
 ```
 
- * Help! This is missing a description!
+ * Called when a cube is taking damage
+ * No return behavior
 
 ## OnCubeDestroyed
 
 ``` csharp
-void OnCubeDestroyed(CubeDestroyEvent evt)
+void OnCubeDestroy(CubeDestroyEvent evt)
 {
     Puts("OnCubeDestroyed works!");
 }
 ```
 
- * Help! This is missing a description!
+ * Called when a cube is going to be destroyed
+ * No return behavior

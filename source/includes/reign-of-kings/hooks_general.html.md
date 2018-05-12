@@ -1,13 +1,13 @@
 # Server Hooks
 
-## OnChatCommand
+## OnServerCommand
 
 ``` csharp
-void OnChatCommand(Player player, string command, string[] args)
+object OnServerCommand(string command, string[] args)
 {
-    Puts("OnChatCommand works!");
+    Puts("OnServerCommand works!");
 }
 ```
 
  * Useful for intercepting commands before they get to their intended target
- * No return behavior
+ * Returning a non-null value overrides default behavior

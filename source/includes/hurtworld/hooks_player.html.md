@@ -167,7 +167,7 @@ void OnPlayerVoice(PlayerSession session)
 }
 ```
 
- * Called when the player is using ingame voice communication
+ * Called when the player is using in-game voice communication
  * Returning a non-null value overrides default behavior
 
 ## OnUserApprove

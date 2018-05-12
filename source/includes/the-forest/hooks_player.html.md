@@ -10,6 +10,7 @@ title: Player Hooks
 bool CanClientLogin(BoltConnection connection)
 {
     Puts("CanClientLogin works!");
+    return true;
 }
 ```
 
@@ -71,6 +72,7 @@ void OnPlayerSpawn(BoltEntity entity)
 object OnUserApprove(BoltConnection connection)
 {
     Puts("OnUserApprove works!");
+    return null;
 }
 ```
 

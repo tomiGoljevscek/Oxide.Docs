@@ -3,21 +3,23 @@
 ## OnEntityHealthChange
 
 ``` csharp
-void OnEntityHealthChange(EntityDamageEvent e)
+void OnEntityHealthChange(EntityDamageEvent evt)
 {
     Puts("OnEntityHealthChange works!");
 }
 ```
 
- * Help! This is missing a description!
+ * Called when an entity's health changes
+ * No return behavior
 
 ## OnEntityDeath
 
 ``` csharp
-void OnEntityDeath(EntityDeathEvent e)
+void OnEntityDeath(EntityDeathEvent evt)
 {
     Puts("OnEntityDeath works!");
 }
 ```
 
- * Help! This is missing a description!
+ * Called when an entity dies
+ * No return behavior

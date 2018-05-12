@@ -4,12 +4,13 @@ title: Structure Hooks
 
 # Structure Hooks
 
-## OnDoorUse
+## CanUseDoor
 
 ``` csharp
-void OnDoorUse(TileEntitySecure door, string steamId)
+bool CanUseDoor(TileEntitySecure door)
 {
-    Puts("OnDoorUse works!");
+    Puts("CanUseDoor works!");
+    return true;
 }
 ```
 

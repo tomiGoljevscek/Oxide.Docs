@@ -4,14 +4,15 @@ title: Server Hooks
 
 # Server Hooks
 
-## OnRunCommand
+## OnServerCommand
 
 ``` csharp
-void OnRunCommand(ClientInfo client, string[] args)
+object OnServerCommand(ClientInfo client, string command)
 {
-    Puts("OnRunCommand works!");
+    Puts("OnServerCommand works!");
+    return null;
 }
 ```
 
  * Useful for intercepting commands before they get to their intended target
- * Return true to override the command handling system
+ * Returning a non-null value overrides default behavior
